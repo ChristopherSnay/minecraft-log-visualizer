@@ -3,8 +3,11 @@
  * deploy.js
  *
  * 1. Finds the rotated Minecraft logs (*.log.gz) and latest.log in LOGS_DIR.
- * 2. Runs the Python parser (mc_log_parser.py) to build site/index.html + stats.json.
- * 3. Publishes the site/ directory to the gh-pages branch via the `gh-pages` npm package.
+ * 2. Runs the Python parser (mc_log_parser.py) to build site/stats.json.
+ * 3. Runs render.js to turn stats.json into a self-contained site/index.html
+ *    (charts, timeline histogram, responsive table -- Chart.js is inlined,
+ *    no CDN needed).
+ * 4. Publishes the site/ directory to the gh-pages branch via the `gh-pages` npm package.
  *
  * CONFIG (env vars, all optional). Set these in a .env file in the project
  * root (see .env.example), or as real environment variables:
@@ -36,6 +39,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const ghpages = require('gh-pages');
+const { render } = require('./render.js');
 
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
@@ -102,6 +106,9 @@ async function main() {
   }
 
   runParser(logFiles, SITE_DIR);
+
+  console.log('Rendering dashboard...');
+  render(path.join(SITE_DIR, 'stats.json'), path.join(SITE_DIR, 'index.html'));
 
   console.log(`Publishing ${SITE_DIR} to ${BRANCH}...`);
   await publish(SITE_DIR);

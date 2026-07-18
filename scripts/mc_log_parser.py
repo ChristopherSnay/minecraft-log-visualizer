@@ -3,9 +3,8 @@
 mc_log_parser.py
 
 Parses vanilla Minecraft Java server logs (rotated .log.gz files + the live
-latest.log) into a single JSON stats file and a static, self-contained HTML
-dashboard (playtime, deaths, advancements) suitable for publishing on
-GitHub Pages.
+latest.log) into a single JSON stats file (playtime, deaths, advancements,
+and a time-bucketed activity timeline) for rendering into a dashboard.
 
 USAGE
     python mc_log_parser.py logs/*.log.gz logs/latest.log -o site/
@@ -22,8 +21,8 @@ WHAT IT READS
     midnight rollover), otherwise the same date. Override with --latest-date.
 
 OUTPUT
-    <outdir>/stats.json  -- structured data, safe to re-parse elsewhere
-    <outdir>/index.html  -- static dashboard, embeds the JSON, no server needed
+    <outdir>/stats.json  -- structured data. Render it into a dashboard with
+                             scripts/render.js (see package.json "deploy" script).
 """
 
 import argparse
@@ -47,9 +46,6 @@ ADVANCEMENT_RE = re.compile(r"^(\w{1,16}) has made the advancement \[(.+)\]$")
 CHALLENGE_RE = re.compile(r"^(\w{1,16}) has completed the challenge \[(.+)\]$")
 GOAL_RE = re.compile(r"^(\w{1,16}) has reached the goal \[(.+)\]$")
 
-# Substrings that identify a death message. Matched against the remainder of
-# the line after the leading player name. Not exhaustive of every possible
-# datapack/mod death message, but covers vanilla Java Edition.
 DEATH_MARKERS = [
     "was slain by", "was shot by", "was pummeled by", "was fireballed by",
     "was killed by", "was killed while", "was killed trying",
@@ -75,44 +71,39 @@ DEATH_LINE_RE = re.compile(r"^(\w{1,16}) (.+)$")
 DATED_FILENAME_RE = re.compile(r"(\d{4}-\d{2}-\d{2})-(\d+)_?log")
 
 
-def is_death_message(rest: str) -> bool:
+def is_death_message(rest):
     return any(marker in rest for marker in DEATH_MARKERS)
 
 
-def open_log(path: Path):
+def open_log(path):
     if path.suffix == ".gz":
         return gzip.open(path, "rt", encoding="utf-8", errors="replace")
     return open(path, "rt", encoding="utf-8", errors="replace")
 
 
-def file_sort_key(path: Path):
-    """Sort rotated logs by date+sequence; unmatched files (latest.log) sort last."""
+def file_sort_key(path):
     m = DATED_FILENAME_RE.search(path.name)
     if m:
         return (0, m.group(1), int(m.group(2)))
     return (1, "", 0)
 
 
-def infer_date_for_file(path: Path, prev_date: str | None, prev_last_time: str | None,
-                         first_event_time: str | None, latest_date_override: str | None):
+def infer_date_for_file(path, prev_date, prev_last_time, first_event_time, latest_date_override):
     m = DATED_FILENAME_RE.search(path.name)
     if m:
         return m.group(1)
     if latest_date_override:
         return latest_date_override
     if prev_date is None:
-        # No prior rotated log to anchor to -- fall back to today's date (UTC).
         return datetime.now(timezone.utc).strftime("%Y-%m-%d")
     if prev_last_time and first_event_time and first_event_time < prev_last_time:
-        # Looks like a midnight rollover: latest.log's first event is earlier
-        # in the clock than the previous log's last event.
         d = datetime.strptime(prev_date, "%Y-%m-%d") + timedelta(days=1)
         return d.strftime("%Y-%m-%d")
     return prev_date
 
 
-def parse_files(paths: list[Path], latest_date_override: str | None):
-    events = []  # list of dicts: {time: datetime, type, player, ...}
+def parse_files(paths, latest_date_override):
+    events = []
     files = sorted(paths, key=file_sort_key)
 
     prev_date = None
@@ -128,7 +119,6 @@ def parse_files(paths: list[Path], latest_date_override: str | None):
             for line in f:
                 raw_lines.append(line.rstrip("\r\n"))
 
-        # Peek first timestamp in this file to help infer date for undated files.
         first_event_time = None
         for line in raw_lines:
             m = LINE_RE.match(line)
@@ -182,10 +172,56 @@ def parse_files(paths: list[Path], latest_date_override: str | None):
 
 
 # ---------------------------------------------------------------------------
+# Timeline binning (for the activity histogram)
+# ---------------------------------------------------------------------------
+
+def compute_timeline(events, range_start, range_end):
+    """Bucket join/death/advancement events over time for a histogram.
+
+    Uses hourly buckets when the log range spans <= 48 hours, otherwise
+    falls back to daily buckets so the chart doesn't get overcrowded.
+    """
+    if not events:
+        return []
+
+    span_hours = (range_end - range_start).total_seconds() / 3600
+    if span_hours <= 48:
+        bucket_delta = timedelta(hours=1)
+        bucket_anchor = range_start.replace(minute=0, second=0, microsecond=0)
+    else:
+        bucket_delta = timedelta(days=1)
+        bucket_anchor = range_start.replace(hour=0, minute=0, second=0, microsecond=0)
+
+    bucket_seconds = bucket_delta.total_seconds()
+
+    def bucket_key(t):
+        idx = int((t - bucket_anchor).total_seconds() // bucket_seconds)
+        return bucket_anchor + idx * bucket_delta
+
+    bins = {}
+    for e in events:
+        if e["type"] not in ("join", "death", "advancement"):
+            continue
+        key = bucket_key(e["time"])
+        b = bins.setdefault(key, {"joins": 0, "deaths": 0, "advancements": 0})
+        if e["type"] == "join":
+            b["joins"] += 1
+        elif e["type"] == "death":
+            b["deaths"] += 1
+        elif e["type"] == "advancement":
+            b["advancements"] += 1
+
+    return [
+        {"bucket_start": key.isoformat(), **bins[key]}
+        for key in sorted(bins.keys())
+    ]
+
+
+# ---------------------------------------------------------------------------
 # Aggregation
 # ---------------------------------------------------------------------------
 
-def build_stats(events: list[dict]):
+def build_stats(events):
     players = defaultdict(lambda: {
         "playtime_seconds": 0,
         "sessions": [],
@@ -194,7 +230,7 @@ def build_stats(events: list[dict]):
         "first_seen": None,
         "last_seen": None,
     })
-    open_sessions = {}  # player -> join datetime
+    open_sessions = {}
 
     if events:
         range_start = events[0]["time"]
@@ -210,11 +246,9 @@ def build_stats(events: list[dict]):
             p["last_seen"] = t
 
     for e in events:
-        player, t = e["player"] if "player" in e else None, e["time"]
         if e["type"] == "join":
-            touch(e["player"], t)
-            # If there's already an open session (e.g. missed a leave/crash),
-            # close it out at this join time before starting a new one.
+            touch(e["player"], e["time"])
+            t = e["time"]
             if e["player"] in open_sessions:
                 start = open_sessions.pop(e["player"])
                 dur = int((t - start).total_seconds())
@@ -225,7 +259,8 @@ def build_stats(events: list[dict]):
                 players[e["player"]]["playtime_seconds"] += dur
             open_sessions[e["player"]] = t
         elif e["type"] == "leave":
-            touch(e["player"], t)
+            touch(e["player"], e["time"])
+            t = e["time"]
             if e["player"] in open_sessions:
                 start = open_sessions.pop(e["player"])
                 dur = int((t - start).total_seconds())
@@ -235,17 +270,16 @@ def build_stats(events: list[dict]):
                 })
                 players[e["player"]]["playtime_seconds"] += dur
         elif e["type"] == "advancement":
-            touch(e["player"], t)
+            touch(e["player"], e["time"])
             players[e["player"]]["advancements"].append({
-                "time": t.isoformat(), "name": e["name"], "kind": e["kind"],
+                "time": e["time"].isoformat(), "name": e["name"], "kind": e["kind"],
             })
         elif e["type"] == "death":
-            touch(e["player"], t)
+            touch(e["player"], e["time"])
             players[e["player"]]["deaths"].append({
-                "time": t.isoformat(), "message": e["message"],
+                "time": e["time"].isoformat(), "message": e["message"],
             })
 
-    # Close out any sessions still open at the end of the log range.
     for player, start in open_sessions.items():
         dur = int((range_end - start).total_seconds())
         players[player]["sessions"].append({
@@ -254,7 +288,6 @@ def build_stats(events: list[dict]):
         })
         players[player]["playtime_seconds"] += dur
 
-    # Finalize player dicts (convert datetimes to iso strings).
     final_players = {}
     for name, p in players.items():
         final_players[name] = {
@@ -270,6 +303,8 @@ def build_stats(events: list[dict]):
         "total_advancements": sum(len(p["advancements"]) for p in final_players.values()),
     }
 
+    timeline = compute_timeline(events, range_start, range_end)
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "date_range": {
@@ -277,261 +312,9 @@ def build_stats(events: list[dict]):
             "end": range_end.isoformat() if events else None,
         },
         "players": final_players,
+        "timeline": timeline,
         "totals": totals,
     }
-
-
-# ---------------------------------------------------------------------------
-# HTML rendering
-# ---------------------------------------------------------------------------
-
-HTML_TEMPLATE = r"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Minecraft Server Stats</title>
-<style>
-  :root {
-    --bg: #14171a;
-    --panel: #1c2023;
-    --panel-alt: #22272b;
-    --border: #2e3438;
-    --text: #e8eaed;
-    --text-dim: #9aa4ad;
-    --accent: #6cbf6c;
-    --accent-dim: #3f7d3f;
-    --red: #d97a7a;
-    --gold: #e0b24c;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.5;
-  }
-  header {
-    padding: 2rem 1.5rem 1rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  header h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
-  header p { margin: 0; color: var(--text-dim); font-size: 0.9rem; }
-  main { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 3rem; }
-
-  .totals {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 0.75rem;
-    margin: 1.5rem 0 2rem;
-  }
-  .stat-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-  }
-  .stat-card .value { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
-  .stat-card .label { font-size: 0.78rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em; }
-
-  h2 {
-    font-size: 1.1rem;
-    margin: 2rem 0 0.75rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  table { width: 100%; border-collapse: collapse; }
-  th, td { text-align: left; padding: 0.55rem 0.6rem; font-size: 0.9rem; }
-  th {
-    color: var(--text-dim); font-weight: 600; font-size: 0.78rem;
-    text-transform: uppercase; letter-spacing: 0.03em;
-    cursor: pointer; user-select: none;
-    border-bottom: 1px solid var(--border);
-  }
-  th:hover { color: var(--text); }
-  tbody tr { border-bottom: 1px solid var(--border); }
-  tbody tr:hover { background: var(--panel-alt); }
-  td.num { text-align: right; font-variant-numeric: tabular-nums; }
-
-  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 0.5rem 1rem; }
-
-  .feed { max-height: 420px; overflow-y: auto; }
-  .feed-item { display: flex; gap: 0.6rem; padding: 0.4rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
-  .feed-item:last-child { border-bottom: none; }
-  .feed-time { color: var(--text-dim); font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .feed-player { color: var(--accent); font-weight: 600; white-space: nowrap; }
-  .feed-death .feed-player { color: var(--red); }
-  .feed-adv .feed-player { color: var(--gold); }
-
-  .tabs { display: flex; gap: 0.4rem; margin-bottom: 0.75rem; }
-  .tab-btn {
-    background: var(--panel); border: 1px solid var(--border); color: var(--text-dim);
-    padding: 0.45rem 0.9rem; border-radius: 8px; cursor: pointer; font-size: 0.85rem;
-  }
-  .tab-btn.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 600; }
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
-
-  footer { text-align: center; color: var(--text-dim); font-size: 0.78rem; padding: 2rem 0 1rem; }
-</style>
-</head>
-<body>
-<header>
-  <h1>&#x26cf;&#xfe0f; Minecraft Server Stats</h1>
-  <p id="range-text"></p>
-</header>
-<main>
-  <div class="totals" id="totals"></div>
-
-  <h2>Leaderboard</h2>
-  <div class="panel">
-    <table id="leaderboard">
-      <thead>
-        <tr>
-          <th data-key="name">Player</th>
-          <th data-key="playtime_seconds" class="num">Playtime</th>
-          <th data-key="deaths" class="num">Deaths</th>
-          <th data-key="advancements" class="num">Advancements</th>
-          <th data-key="last_seen">Last Seen</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <h2>Activity</h2>
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="deaths">Deaths</button>
-    <button class="tab-btn" data-tab="advancements">Advancements</button>
-  </div>
-  <div class="panel">
-    <div class="tab-panel active feed" id="tab-deaths"></div>
-    <div class="tab-panel feed" id="tab-advancements"></div>
-  </div>
-
-  <footer>Generated <span id="generated-at"></span></footer>
-</main>
-
-<script id="stats-data" type="application/json">__DATA_JSON__</script>
-<script>
-const DATA = JSON.parse(document.getElementById('stats-data').textContent);
-
-function fmtDuration(sec) {
-  const h = Math.floor(sec / 3600);
-  const m = Math.floor((sec % 3600) / 60);
-  if (h > 0) return `${h}h ${m}m`;
-  return `${m}m`;
-}
-function fmtTime(iso) {
-  if (!iso) return '\u2014';
-  const d = new Date(iso);
-  return d.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-}
-function escapeHtml(s) {
-  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-}
-
-// Totals
-const totalsEl = document.getElementById('totals');
-const t = DATA.totals;
-const totalCards = [
-  ['Total Playtime', fmtDuration(t.total_playtime_seconds)],
-  ['Players', t.unique_players],
-  ['Deaths', t.total_deaths],
-  ['Advancements', t.total_advancements],
-];
-totalsEl.innerHTML = totalCards.map(([label, value]) =>
-  `<div class="stat-card"><div class="value">${value}</div><div class="label">${label}</div></div>`
-).join('');
-
-document.getElementById('range-text').textContent = DATA.date_range.start
-  ? `${fmtTime(DATA.date_range.start)} \u2192 ${fmtTime(DATA.date_range.end)}`
-  : 'No events found';
-document.getElementById('generated-at').textContent = fmtTime(DATA.generated_at);
-
-// Leaderboard
-let leaderboardRows = Object.entries(DATA.players).map(([name, p]) => ({
-  name,
-  playtime_seconds: p.playtime_seconds,
-  deaths: p.deaths.length,
-  advancements: p.advancements.length,
-  last_seen: p.last_seen,
-}));
-
-let sortKey = 'playtime_seconds', sortDir = -1;
-function renderLeaderboard() {
-  leaderboardRows.sort((a, b) => {
-    const av = a[sortKey], bv = b[sortKey];
-    if (typeof av === 'string') return sortDir * av.localeCompare(bv);
-    return sortDir * (av - bv);
-  });
-  const tbody = document.querySelector('#leaderboard tbody');
-  tbody.innerHTML = leaderboardRows.map(r => `
-    <tr>
-      <td>${escapeHtml(r.name)}</td>
-      <td class="num">${fmtDuration(r.playtime_seconds)}</td>
-      <td class="num">${r.deaths}</td>
-      <td class="num">${r.advancements}</td>
-      <td>${fmtTime(r.last_seen)}</td>
-    </tr>`).join('');
-}
-document.querySelectorAll('#leaderboard th').forEach(th => {
-  th.addEventListener('click', () => {
-    const key = th.dataset.key;
-    sortDir = (sortKey === key) ? -sortDir : -1;
-    sortKey = key;
-    renderLeaderboard();
-  });
-});
-renderLeaderboard();
-
-// Deaths feed
-let deaths = [];
-Object.entries(DATA.players).forEach(([name, p]) => {
-  p.deaths.forEach(d => deaths.push({ time: d.time, message: d.message }));
-});
-deaths.sort((a, b) => b.time.localeCompare(a.time));
-document.getElementById('tab-deaths').innerHTML = deaths.map(d => `
-  <div class="feed-item feed-death">
-    <span class="feed-time">${fmtTime(d.time)}</span>
-    <span>&#x1f480; ${escapeHtml(d.message)}</span>
-  </div>`).join('') || '<p style="color:var(--text-dim)">No deaths recorded.</p>';
-
-// Advancements feed
-let advs = [];
-Object.entries(DATA.players).forEach(([name, p]) => {
-  p.advancements.forEach(a => advs.push({ time: a.time, player: name, name: a.name, kind: a.kind }));
-});
-advs.sort((a, b) => b.time.localeCompare(a.time));
-const kindIcon = { advancement: '\u{1F3C6}', challenge: '\u2b50', goal: '\u{1F3AF}' };
-document.getElementById('tab-advancements').innerHTML = advs.map(a => `
-  <div class="feed-item feed-adv">
-    <span class="feed-time">${fmtTime(a.time)}</span>
-    <span class="feed-player">${escapeHtml(a.player)}</span>
-    <span>${kindIcon[a.kind] || ''} ${escapeHtml(a.name)}</span>
-  </div>`).join('') || '<p style="color:var(--text-dim)">No advancements recorded.</p>';
-
-// Tabs
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
-  });
-});
-</script>
-</body>
-</html>
-"""
-
-
-def render_html(stats: dict) -> str:
-    return HTML_TEMPLATE.replace("__DATA_JSON__", json.dumps(stats))
 
 
 # ---------------------------------------------------------------------------
@@ -560,14 +343,13 @@ def main():
     outdir.mkdir(parents=True, exist_ok=True)
 
     (outdir / "stats.json").write_text(json.dumps(stats, indent=2))
-    (outdir / "index.html").write_text(render_html(stats))
 
     print(f"Parsed {len(events)} events across {len(paths)} file(s).")
     print(f"Players: {stats['totals']['unique_players']}, "
           f"Deaths: {stats['totals']['total_deaths']}, "
-          f"Advancements: {stats['totals']['total_advancements']}")
+          f"Advancements: {stats['totals']['total_advancements']}, "
+          f"Timeline buckets: {len(stats['timeline'])}")
     print(f"Wrote {outdir / 'stats.json'}")
-    print(f"Wrote {outdir / 'index.html'}")
 
 
 if __name__ == "__main__":
