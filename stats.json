@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-18T17:37:20.210088+00:00",
+  "generated_at": "2026-07-18T17:51:53.531967+00:00",
   "date_range": {
     "start": "2026-07-18T18:41:21",
-    "end": "2026-07-19T12:41:06"
+    "end": "2026-07-19T13:51:43"
   },
   "players": {
     "Drewyknot": {
-      "playtime_seconds": 6134,
+      "playtime_seconds": 6249,
       "sessions": [
         {
           "join": "2026-07-18T18:41:21",
@@ -31,6 +31,12 @@
           "leave": "2026-07-18T21:05:39",
           "duration_seconds": 4958,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T13:49:48",
+          "leave": null,
+          "duration_seconds": 115,
+          "ongoing": true
         }
       ],
       "deaths": [],
@@ -72,10 +78,10 @@
         }
       ],
       "first_seen": "2026-07-18T18:41:21",
-      "last_seen": "2026-07-18T21:05:39"
+      "last_seen": "2026-07-19T13:49:48"
     },
     "PenelopeWhynot": {
-      "playtime_seconds": 24814,
+      "playtime_seconds": 29051,
       "sessions": [
         {
           "join": "2026-07-18T18:43:16",
@@ -110,7 +116,7 @@
         {
           "join": "2026-07-19T10:43:44",
           "leave": null,
-          "duration_seconds": 7042,
+          "duration_seconds": 11279,
           "ongoing": true
         }
       ],
@@ -277,7 +283,7 @@
       "last_seen": "2026-07-19T12:01:59"
     },
     "third_wheel": {
-      "playtime_seconds": 11224,
+      "playtime_seconds": 11504,
       "sessions": [
         {
           "join": "2026-07-18T19:04:13",
@@ -320,6 +326,12 @@
           "leave": "2026-07-19T12:41:06",
           "duration_seconds": 4884,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T13:47:03",
+          "leave": null,
+          "duration_seconds": 280,
+          "ongoing": true
         }
       ],
       "deaths": [
@@ -360,7 +372,7 @@
         }
       ],
       "first_seen": "2026-07-18T19:04:13",
-      "last_seen": "2026-07-19T12:41:06"
+      "last_seen": "2026-07-19T13:47:03"
     },
     "R3B3X": {
       "playtime_seconds": 13872,
@@ -510,6 +522,32 @@
       "advancements": [],
       "first_seen": "2026-07-19T11:38:19",
       "last_seen": "2026-07-19T11:38:19"
+    },
+    "Crazy_brosik": {
+      "playtime_seconds": 395,
+      "sessions": [
+        {
+          "join": "2026-07-19T13:45:08",
+          "leave": null,
+          "duration_seconds": 395,
+          "ongoing": true
+        }
+      ],
+      "deaths": [],
+      "advancements": [
+        {
+          "time": "2026-07-19T13:46:22",
+          "name": "A Seedy Place",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T13:51:43",
+          "name": "Sweet Dreams",
+          "kind": "advancement"
+        }
+      ],
+      "first_seen": "2026-07-19T13:45:08",
+      "last_seen": "2026-07-19T13:51:43"
     }
   },
   "timeline": [
@@ -578,12 +616,18 @@
       "joins": 0,
       "deaths": 0,
       "advancements": 1
+    },
+    {
+      "bucket_start": "2026-07-19T13:00:00",
+      "joins": 3,
+      "deaths": 0,
+      "advancements": 2
     }
   ],
   "totals": {
-    "total_playtime_seconds": 69124,
-    "unique_players": 6,
+    "total_playtime_seconds": 74151,
+    "unique_players": 7,
     "total_deaths": 7,
-    "total_advancements": 46
+    "total_advancements": 48
   }
 }
