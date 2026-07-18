@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-18T23:37:07.435691+00:00",
+  "generated_at": "2026-07-18T23:37:33.691750+00:00",
   "date_range": {
     "start": "2026-07-18T18:41:21",
-    "end": "2026-07-19T19:34:17"
+    "end": "2026-07-19T19:37:27"
   },
   "players": {
     "Drewyknot": {
-      "playtime_seconds": 17428,
+      "playtime_seconds": 17618,
       "sessions": [
         {
           "join": "2026-07-18T18:41:21",
@@ -59,7 +59,7 @@
         {
           "join": "2026-07-19T19:26:09",
           "leave": null,
-          "duration_seconds": 488,
+          "duration_seconds": 678,
           "ongoing": true
         }
       ],
@@ -130,7 +130,7 @@
       "last_seen": "2026-07-19T19:33:47"
     },
     "PenelopeWhynot": {
-      "playtime_seconds": 40176,
+      "playtime_seconds": 40366,
       "sessions": [
         {
           "join": "2026-07-18T18:43:16",
@@ -171,7 +171,7 @@
         {
           "join": "2026-07-19T17:03:37",
           "leave": null,
-          "duration_seconds": 9040,
+          "duration_seconds": 9230,
           "ongoing": true
         }
       ],
@@ -266,7 +266,7 @@
       "last_seen": "2026-07-19T19:01:00"
     },
     "Kimyknot": {
-      "playtime_seconds": 32341,
+      "playtime_seconds": 32531,
       "sessions": [
         {
           "join": "2026-07-18T18:52:00",
@@ -319,7 +319,7 @@
         {
           "join": "2026-07-19T16:52:35",
           "leave": null,
-          "duration_seconds": 9702,
+          "duration_seconds": 9892,
           "ongoing": true
         }
       ],
@@ -397,7 +397,7 @@
       "last_seen": "2026-07-19T19:11:29"
     },
     "third_wheel": {
-      "playtime_seconds": 22201,
+      "playtime_seconds": 22391,
       "sessions": [
         {
           "join": "2026-07-18T19:04:13",
@@ -504,7 +504,7 @@
         {
           "join": "2026-07-19T19:15:01",
           "leave": null,
-          "duration_seconds": 1156,
+          "duration_seconds": 1346,
           "ongoing": true
         }
       ],
@@ -572,7 +572,7 @@
       "last_seen": "2026-07-19T19:15:01"
     },
     "R3B3X": {
-      "playtime_seconds": 21915,
+      "playtime_seconds": 22105,
       "sessions": [
         {
           "join": "2026-07-18T19:10:53",
@@ -643,7 +643,7 @@
         {
           "join": "2026-07-19T18:13:35",
           "leave": null,
-          "duration_seconds": 4842,
+          "duration_seconds": 5032,
           "ongoing": true
         }
       ],
@@ -771,7 +771,7 @@
       "last_seen": "2026-07-19T18:48:04"
     },
     "Crazy_brosik": {
-      "playtime_seconds": 14400,
+      "playtime_seconds": 14581,
       "sessions": [
         {
           "join": "2026-07-19T13:45:08",
@@ -841,8 +841,14 @@
         },
         {
           "join": "2026-07-19T19:26:06",
+          "leave": "2026-07-19T19:37:18",
+          "duration_seconds": 672,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T19:37:27",
           "leave": null,
-          "duration_seconds": 491,
+          "duration_seconds": 0,
           "ongoing": true
         }
       ],
@@ -908,7 +914,7 @@
         }
       ],
       "first_seen": "2026-07-19T13:45:08",
-      "last_seen": "2026-07-19T19:26:06"
+      "last_seen": "2026-07-19T19:37:27"
     }
   },
   "timeline": [
@@ -1016,13 +1022,13 @@
     },
     {
       "bucket_start": "2026-07-19T19:00:00",
-      "joins": 7,
+      "joins": 8,
       "deaths": 2,
       "advancements": 5
     }
   ],
   "totals": {
-    "total_playtime_seconds": 148461,
+    "total_playtime_seconds": 149592,
     "unique_players": 7,
     "total_deaths": 21,
     "total_advancements": 69
