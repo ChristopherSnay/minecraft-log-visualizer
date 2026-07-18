@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-18T17:51:53.531967+00:00",
+  "generated_at": "2026-07-18T18:52:05.102887+00:00",
   "date_range": {
     "start": "2026-07-18T18:41:21",
-    "end": "2026-07-19T13:51:43"
+    "end": "2026-07-19T14:39:42"
   },
   "players": {
     "Drewyknot": {
-      "playtime_seconds": 6249,
+      "playtime_seconds": 8600,
       "sessions": [
         {
           "join": "2026-07-18T18:41:21",
@@ -34,9 +34,9 @@
         },
         {
           "join": "2026-07-19T13:49:48",
-          "leave": null,
-          "duration_seconds": 115,
-          "ongoing": true
+          "leave": "2026-07-19T14:30:54",
+          "duration_seconds": 2466,
+          "ongoing": false
         }
       ],
       "deaths": [],
@@ -75,13 +75,18 @@
           "time": "2026-07-18T20:25:38",
           "name": "Isn't It Iron Pick",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T13:57:32",
+          "name": "We Need to Go Deeper",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-18T18:41:21",
-      "last_seen": "2026-07-19T13:49:48"
+      "last_seen": "2026-07-19T14:30:54"
     },
     "PenelopeWhynot": {
-      "playtime_seconds": 29051,
+      "playtime_seconds": 31136,
       "sessions": [
         {
           "join": "2026-07-18T18:43:16",
@@ -115,9 +120,9 @@
         },
         {
           "join": "2026-07-19T10:43:44",
-          "leave": null,
-          "duration_seconds": 11279,
-          "ongoing": true
+          "leave": "2026-07-19T14:26:28",
+          "duration_seconds": 13364,
+          "ongoing": false
         }
       ],
       "deaths": [
@@ -204,10 +209,10 @@
         }
       ],
       "first_seen": "2026-07-18T18:43:16",
-      "last_seen": "2026-07-19T11:24:54"
+      "last_seen": "2026-07-19T14:26:28"
     },
     "Kimyknot": {
-      "playtime_seconds": 13080,
+      "playtime_seconds": 15846,
       "sessions": [
         {
           "join": "2026-07-18T18:52:00",
@@ -244,6 +249,12 @@
           "leave": "2026-07-19T12:01:59",
           "duration_seconds": 4930,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T13:53:36",
+          "leave": null,
+          "duration_seconds": 2766,
+          "ongoing": true
         }
       ],
       "deaths": [],
@@ -277,13 +288,18 @@
           "time": "2026-07-19T11:14:10",
           "name": "Best Friends Forever",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T14:01:28",
+          "name": "Acquire Hardware",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-18T18:52:00",
-      "last_seen": "2026-07-19T12:01:59"
+      "last_seen": "2026-07-19T14:01:28"
     },
     "third_wheel": {
-      "playtime_seconds": 11504,
+      "playtime_seconds": 13629,
       "sessions": [
         {
           "join": "2026-07-18T19:04:13",
@@ -329,8 +345,20 @@
         },
         {
           "join": "2026-07-19T13:47:03",
+          "leave": "2026-07-19T14:14:51",
+          "duration_seconds": 1668,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T14:15:09",
+          "leave": "2026-07-19T14:26:36",
+          "duration_seconds": 687,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T14:38:52",
           "leave": null,
-          "duration_seconds": 280,
+          "duration_seconds": 50,
           "ongoing": true
         }
       ],
@@ -342,6 +370,10 @@
         {
           "time": "2026-07-19T11:28:48",
           "message": "third_wheel was slain by Wolf"
+        },
+        {
+          "time": "2026-07-19T14:09:24",
+          "message": "third_wheel was blown up by Creeper"
         }
       ],
       "advancements": [
@@ -369,10 +401,20 @@
           "time": "2026-07-19T11:23:31",
           "name": "Getting an Upgrade",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T14:11:22",
+          "name": "Diamonds!",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T14:39:42",
+          "name": "What a Deal!",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-18T19:04:13",
-      "last_seen": "2026-07-19T13:47:03"
+      "last_seen": "2026-07-19T14:39:42"
     },
     "R3B3X": {
       "playtime_seconds": 13872,
@@ -524,12 +566,24 @@
       "last_seen": "2026-07-19T11:38:19"
     },
     "Crazy_brosik": {
-      "playtime_seconds": 395,
+      "playtime_seconds": 2902,
       "sessions": [
         {
           "join": "2026-07-19T13:45:08",
+          "leave": "2026-07-19T14:14:54",
+          "duration_seconds": 1786,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T14:15:11",
+          "leave": "2026-07-19T14:31:06",
+          "duration_seconds": 955,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T14:37:01",
           "leave": null,
-          "duration_seconds": 395,
+          "duration_seconds": 161,
           "ongoing": true
         }
       ],
@@ -544,10 +598,40 @@
           "time": "2026-07-19T13:51:43",
           "name": "Sweet Dreams",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T13:53:50",
+          "name": "Stone Age",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T14:00:17",
+          "name": "Getting an Upgrade",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T14:07:59",
+          "name": "Acquire Hardware",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T14:08:53",
+          "name": "Isn't It Iron Pick",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T14:10:00",
+          "name": "Monster Hunter",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T14:24:20",
+          "name": "Suit Up",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-19T13:45:08",
-      "last_seen": "2026-07-19T13:51:43"
+      "last_seen": "2026-07-19T14:37:01"
     }
   },
   "timeline": [
@@ -619,15 +703,21 @@
     },
     {
       "bucket_start": "2026-07-19T13:00:00",
-      "joins": 3,
+      "joins": 4,
       "deaths": 0,
-      "advancements": 2
+      "advancements": 4
+    },
+    {
+      "bucket_start": "2026-07-19T14:00:00",
+      "joins": 4,
+      "deaths": 1,
+      "advancements": 8
     }
   ],
   "totals": {
-    "total_playtime_seconds": 74151,
+    "total_playtime_seconds": 85985,
     "unique_players": 7,
-    "total_deaths": 7,
-    "total_advancements": 48
+    "total_deaths": 8,
+    "total_advancements": 58
   }
 }
