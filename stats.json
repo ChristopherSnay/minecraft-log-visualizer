@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-18T21:29:34.215254+00:00",
+  "generated_at": "2026-07-18T21:58:21.652679+00:00",
   "date_range": {
     "start": "2026-07-18T18:41:21",
-    "end": "2026-07-19T17:06:14"
+    "end": "2026-07-19T17:55:08"
   },
   "players": {
     "Drewyknot": {
-      "playtime_seconds": 8600,
+      "playtime_seconds": 11534,
       "sessions": [
         {
           "join": "2026-07-18T18:41:21",
@@ -41,7 +41,7 @@
         {
           "join": "2026-07-19T17:06:14",
           "leave": null,
-          "duration_seconds": 0,
+          "duration_seconds": 2934,
           "ongoing": true
         }
       ],
@@ -86,13 +86,23 @@
           "time": "2026-07-19T13:57:32",
           "name": "We Need to Go Deeper",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T17:29:38",
+          "name": "A Seedy Place",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T17:55:08",
+          "name": "The Parrots and the Bats",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-18T18:41:21",
-      "last_seen": "2026-07-19T17:06:14"
+      "last_seen": "2026-07-19T17:55:08"
     },
     "PenelopeWhynot": {
-      "playtime_seconds": 31293,
+      "playtime_seconds": 34227,
       "sessions": [
         {
           "join": "2026-07-18T18:43:16",
@@ -133,7 +143,7 @@
         {
           "join": "2026-07-19T17:03:37",
           "leave": null,
-          "duration_seconds": 157,
+          "duration_seconds": 3091,
           "ongoing": true
         }
       ],
@@ -224,7 +234,7 @@
       "last_seen": "2026-07-19T17:03:37"
     },
     "Kimyknot": {
-      "playtime_seconds": 23458,
+      "playtime_seconds": 26392,
       "sessions": [
         {
           "join": "2026-07-18T18:52:00",
@@ -277,7 +287,7 @@
         {
           "join": "2026-07-19T16:52:35",
           "leave": null,
-          "duration_seconds": 819,
+          "duration_seconds": 3753,
           "ongoing": true
         }
       ],
@@ -337,7 +347,7 @@
       "last_seen": "2026-07-19T16:52:35"
     },
     "third_wheel": {
-      "playtime_seconds": 16888,
+      "playtime_seconds": 18171,
       "sessions": [
         {
           "join": "2026-07-18T19:04:13",
@@ -404,6 +414,18 @@
           "leave": "2026-07-19T15:51:14",
           "duration_seconds": 1149,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T17:33:34",
+          "leave": "2026-07-19T17:35:39",
+          "duration_seconds": 125,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T17:35:50",
+          "leave": null,
+          "duration_seconds": 1158,
+          "ongoing": true
         }
       ],
       "deaths": [
@@ -458,10 +480,10 @@
         }
       ],
       "first_seen": "2026-07-18T19:04:13",
-      "last_seen": "2026-07-19T15:51:14"
+      "last_seen": "2026-07-19T17:35:50"
     },
     "R3B3X": {
-      "playtime_seconds": 16204,
+      "playtime_seconds": 17073,
       "sessions": [
         {
           "join": "2026-07-18T19:10:53",
@@ -521,6 +543,12 @@
           "join": "2026-07-19T15:32:50",
           "leave": "2026-07-19T15:44:29",
           "duration_seconds": 699,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T17:30:58",
+          "leave": "2026-07-19T17:45:27",
+          "duration_seconds": 869,
           "ongoing": false
         }
       ],
@@ -606,7 +634,7 @@
         }
       ],
       "first_seen": "2026-07-18T19:10:53",
-      "last_seen": "2026-07-19T15:44:29"
+      "last_seen": "2026-07-19T17:45:27"
     },
     "Villager": {
       "playtime_seconds": 0,
@@ -623,14 +651,18 @@
         {
           "time": "2026-07-19T15:26:57",
           "message": "Villager Villager['Farmer'/186278, l='ServerLevel[world]', x=-91.58, y=69.00, z=-195.52] died, message: 'Farmer was slain by Zombie'"
+        },
+        {
+          "time": "2026-07-19T17:41:45",
+          "message": "Villager Villager['Fisherman'/207146, l='ServerLevel[world]', x=43.70, y=63.00, z=-27.30] died, message: 'Fisherman was slain by third_wheel'"
         }
       ],
       "advancements": [],
       "first_seen": "2026-07-19T11:38:19",
-      "last_seen": "2026-07-19T15:26:57"
+      "last_seen": "2026-07-19T17:41:45"
     },
     "Crazy_brosik": {
-      "playtime_seconds": 7162,
+      "playtime_seconds": 8544,
       "sessions": [
         {
           "join": "2026-07-19T13:45:08",
@@ -649,6 +681,18 @@
           "leave": "2026-07-19T15:50:42",
           "duration_seconds": 4421,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T17:31:51",
+          "leave": "2026-07-19T17:35:39",
+          "duration_seconds": 228,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T17:35:54",
+          "leave": null,
+          "duration_seconds": 1154,
+          "ongoing": true
         }
       ],
       "deaths": [],
@@ -695,7 +739,7 @@
         }
       ],
       "first_seen": "2026-07-19T13:45:08",
-      "last_seen": "2026-07-19T15:50:42"
+      "last_seen": "2026-07-19T17:35:54"
     }
   },
   "timeline": [
@@ -791,15 +835,15 @@
     },
     {
       "bucket_start": "2026-07-19T17:00:00",
-      "joins": 2,
-      "deaths": 0,
-      "advancements": 0
+      "joins": 7,
+      "deaths": 1,
+      "advancements": 2
     }
   ],
   "totals": {
-    "total_playtime_seconds": 103605,
+    "total_playtime_seconds": 115941,
     "unique_players": 7,
-    "total_deaths": 12,
-    "total_advancements": 59
+    "total_deaths": 13,
+    "total_advancements": 61
   }
 }
