@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-18T18:52:05.102887+00:00",
+  "generated_at": "2026-07-18T21:29:34.215254+00:00",
   "date_range": {
     "start": "2026-07-18T18:41:21",
-    "end": "2026-07-19T14:39:42"
+    "end": "2026-07-19T17:06:14"
   },
   "players": {
     "Drewyknot": {
@@ -37,6 +37,12 @@
           "leave": "2026-07-19T14:30:54",
           "duration_seconds": 2466,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T17:06:14",
+          "leave": null,
+          "duration_seconds": 0,
+          "ongoing": true
         }
       ],
       "deaths": [],
@@ -83,10 +89,10 @@
         }
       ],
       "first_seen": "2026-07-18T18:41:21",
-      "last_seen": "2026-07-19T14:30:54"
+      "last_seen": "2026-07-19T17:06:14"
     },
     "PenelopeWhynot": {
-      "playtime_seconds": 31136,
+      "playtime_seconds": 31293,
       "sessions": [
         {
           "join": "2026-07-18T18:43:16",
@@ -123,6 +129,12 @@
           "leave": "2026-07-19T14:26:28",
           "duration_seconds": 13364,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T17:03:37",
+          "leave": null,
+          "duration_seconds": 157,
+          "ongoing": true
         }
       ],
       "deaths": [
@@ -209,10 +221,10 @@
         }
       ],
       "first_seen": "2026-07-18T18:43:16",
-      "last_seen": "2026-07-19T14:26:28"
+      "last_seen": "2026-07-19T17:03:37"
     },
     "Kimyknot": {
-      "playtime_seconds": 15846,
+      "playtime_seconds": 23458,
       "sessions": [
         {
           "join": "2026-07-18T18:52:00",
@@ -252,12 +264,33 @@
         },
         {
           "join": "2026-07-19T13:53:36",
+          "leave": "2026-07-19T15:06:09",
+          "duration_seconds": 4353,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T15:06:57",
+          "leave": "2026-07-19T16:33:43",
+          "duration_seconds": 5206,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T16:52:35",
           "leave": null,
-          "duration_seconds": 2766,
+          "duration_seconds": 819,
           "ongoing": true
         }
       ],
-      "deaths": [],
+      "deaths": [
+        {
+          "time": "2026-07-19T14:52:42",
+          "message": "Kimyknot was slain by Zombie"
+        },
+        {
+          "time": "2026-07-19T14:54:55",
+          "message": "Kimyknot was slain by Zombie"
+        }
+      ],
       "advancements": [
         {
           "time": "2026-07-18T19:47:43",
@@ -293,13 +326,18 @@
           "time": "2026-07-19T14:01:28",
           "name": "Acquire Hardware",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T16:04:06",
+          "name": "What a Deal!",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-18T18:52:00",
-      "last_seen": "2026-07-19T14:01:28"
+      "last_seen": "2026-07-19T16:52:35"
     },
     "third_wheel": {
-      "playtime_seconds": 13629,
+      "playtime_seconds": 16888,
       "sessions": [
         {
           "join": "2026-07-18T19:04:13",
@@ -357,9 +395,15 @@
         },
         {
           "join": "2026-07-19T14:38:52",
-          "leave": null,
-          "duration_seconds": 50,
-          "ongoing": true
+          "leave": "2026-07-19T15:14:52",
+          "duration_seconds": 2160,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T15:32:05",
+          "leave": "2026-07-19T15:51:14",
+          "duration_seconds": 1149,
+          "ongoing": false
         }
       ],
       "deaths": [
@@ -414,10 +458,10 @@
         }
       ],
       "first_seen": "2026-07-18T19:04:13",
-      "last_seen": "2026-07-19T14:39:42"
+      "last_seen": "2026-07-19T15:51:14"
     },
     "R3B3X": {
-      "playtime_seconds": 13872,
+      "playtime_seconds": 16204,
       "sessions": [
         {
           "join": "2026-07-18T19:10:53",
@@ -465,6 +509,18 @@
           "join": "2026-07-19T10:20:06",
           "leave": "2026-07-19T12:40:44",
           "duration_seconds": 8438,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T15:05:35",
+          "leave": "2026-07-19T15:32:48",
+          "duration_seconds": 1633,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T15:32:50",
+          "leave": "2026-07-19T15:44:29",
+          "duration_seconds": 699,
           "ongoing": false
         }
       ],
@@ -550,7 +606,7 @@
         }
       ],
       "first_seen": "2026-07-18T19:10:53",
-      "last_seen": "2026-07-19T12:40:44"
+      "last_seen": "2026-07-19T15:44:29"
     },
     "Villager": {
       "playtime_seconds": 0,
@@ -559,14 +615,22 @@
         {
           "time": "2026-07-19T11:38:19",
           "message": "Villager Villager['Villager'/115000, l='ServerLevel[world]', x=-153.23, y=62.02, z=-142.52] died, message: 'Villager drowned'"
+        },
+        {
+          "time": "2026-07-19T15:02:40",
+          "message": "Villager Villager['Nitwit'/160652, l='ServerLevel[world]', x=68.50, y=68.00, z=-24.48] died, message: 'Nitwit was slain by third_wheel'"
+        },
+        {
+          "time": "2026-07-19T15:26:57",
+          "message": "Villager Villager['Farmer'/186278, l='ServerLevel[world]', x=-91.58, y=69.00, z=-195.52] died, message: 'Farmer was slain by Zombie'"
         }
       ],
       "advancements": [],
       "first_seen": "2026-07-19T11:38:19",
-      "last_seen": "2026-07-19T11:38:19"
+      "last_seen": "2026-07-19T15:26:57"
     },
     "Crazy_brosik": {
-      "playtime_seconds": 2902,
+      "playtime_seconds": 7162,
       "sessions": [
         {
           "join": "2026-07-19T13:45:08",
@@ -582,9 +646,9 @@
         },
         {
           "join": "2026-07-19T14:37:01",
-          "leave": null,
-          "duration_seconds": 161,
-          "ongoing": true
+          "leave": "2026-07-19T15:50:42",
+          "duration_seconds": 4421,
+          "ongoing": false
         }
       ],
       "deaths": [],
@@ -631,7 +695,7 @@
         }
       ],
       "first_seen": "2026-07-19T13:45:08",
-      "last_seen": "2026-07-19T14:37:01"
+      "last_seen": "2026-07-19T15:50:42"
     }
   },
   "timeline": [
@@ -710,14 +774,32 @@
     {
       "bucket_start": "2026-07-19T14:00:00",
       "joins": 4,
-      "deaths": 1,
+      "deaths": 3,
       "advancements": 8
+    },
+    {
+      "bucket_start": "2026-07-19T15:00:00",
+      "joins": 4,
+      "deaths": 2,
+      "advancements": 0
+    },
+    {
+      "bucket_start": "2026-07-19T16:00:00",
+      "joins": 1,
+      "deaths": 0,
+      "advancements": 1
+    },
+    {
+      "bucket_start": "2026-07-19T17:00:00",
+      "joins": 2,
+      "deaths": 0,
+      "advancements": 0
     }
   ],
   "totals": {
-    "total_playtime_seconds": 85985,
+    "total_playtime_seconds": 103605,
     "unique_players": 7,
-    "total_deaths": 8,
-    "total_advancements": 58
+    "total_deaths": 12,
+    "total_advancements": 59
   }
 }
