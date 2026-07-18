@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-18T13:09:44.862604+00:00",
+  "generated_at": "2026-07-18T16:47:42.724938+00:00",
   "date_range": {
     "start": "2026-07-18T18:41:21",
-    "end": "2026-07-19T02:26:52"
+    "end": "2026-07-19T12:41:06"
   },
   "players": {
     "Drewyknot": {
@@ -75,7 +75,7 @@
       "last_seen": "2026-07-18T21:05:39"
     },
     "PenelopeWhynot": {
-      "playtime_seconds": 17772,
+      "playtime_seconds": 24814,
       "sessions": [
         {
           "join": "2026-07-18T18:43:16",
@@ -106,6 +106,12 @@
           "leave": "2026-07-19T02:26:52",
           "duration_seconds": 6455,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T10:43:44",
+          "leave": null,
+          "duration_seconds": 7042,
+          "ongoing": true
         }
       ],
       "deaths": [
@@ -184,13 +190,18 @@
           "time": "2026-07-19T01:42:30",
           "name": "Country Lode, Take Me Home",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T11:24:54",
+          "name": "Best Friends Forever",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-18T18:43:16",
-      "last_seen": "2026-07-19T02:26:52"
+      "last_seen": "2026-07-19T11:24:54"
     },
     "Kimyknot": {
-      "playtime_seconds": 8078,
+      "playtime_seconds": 13080,
       "sessions": [
         {
           "join": "2026-07-18T18:52:00",
@@ -202,6 +213,30 @@
           "join": "2026-07-18T19:39:17",
           "leave": "2026-07-18T21:50:22",
           "duration_seconds": 7865,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T10:34:06",
+          "leave": "2026-07-19T10:35:00",
+          "duration_seconds": 54,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T10:36:08",
+          "leave": "2026-07-19T10:36:16",
+          "duration_seconds": 8,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T10:37:00",
+          "leave": "2026-07-19T10:37:10",
+          "duration_seconds": 10,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-19T10:39:49",
+          "leave": "2026-07-19T12:01:59",
+          "duration_seconds": 4930,
           "ongoing": false
         }
       ],
@@ -226,13 +261,23 @@
           "time": "2026-07-18T20:28:24",
           "name": "The Parrots and the Bats",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T11:01:12",
+          "name": "Monster Hunter",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T11:14:10",
+          "name": "Best Friends Forever",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-18T18:52:00",
-      "last_seen": "2026-07-18T21:50:22"
+      "last_seen": "2026-07-19T12:01:59"
     },
     "third_wheel": {
-      "playtime_seconds": 6340,
+      "playtime_seconds": 11224,
       "sessions": [
         {
           "join": "2026-07-18T19:04:13",
@@ -269,12 +314,22 @@
           "leave": "2026-07-18T21:12:16",
           "duration_seconds": 280,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T11:19:42",
+          "leave": "2026-07-19T12:41:06",
+          "duration_seconds": 4884,
+          "ongoing": false
         }
       ],
       "deaths": [
         {
           "time": "2026-07-18T20:15:46",
           "message": "third_wheel drowned"
+        },
+        {
+          "time": "2026-07-19T11:28:48",
+          "message": "third_wheel was slain by Wolf"
         }
       ],
       "advancements": [
@@ -297,13 +352,18 @@
           "time": "2026-07-18T20:17:27",
           "name": "Acquire Hardware",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T11:23:31",
+          "name": "Getting an Upgrade",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-18T19:04:13",
-      "last_seen": "2026-07-18T21:12:16"
+      "last_seen": "2026-07-19T12:41:06"
     },
     "R3B3X": {
-      "playtime_seconds": 5434,
+      "playtime_seconds": 13872,
       "sessions": [
         {
           "join": "2026-07-18T19:10:53",
@@ -346,6 +406,12 @@
           "leave": "2026-07-18T21:11:50",
           "duration_seconds": 911,
           "ongoing": false
+        },
+        {
+          "join": "2026-07-19T10:20:06",
+          "leave": "2026-07-19T12:40:44",
+          "duration_seconds": 8438,
+          "ongoing": false
         }
       ],
       "deaths": [
@@ -356,6 +422,10 @@
         {
           "time": "2026-07-18T20:49:04",
           "message": "R3B3X burned to death"
+        },
+        {
+          "time": "2026-07-19T10:36:25",
+          "message": "R3B3X suffocated in a wall"
         }
       ],
       "advancements": [
@@ -408,16 +478,44 @@
           "time": "2026-07-18T20:48:43",
           "name": "We Need to Go Deeper",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T10:50:10",
+          "name": "A Seedy Place",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T11:38:12",
+          "name": "The Parrots and the Bats",
+          "kind": "advancement"
+        },
+        {
+          "time": "2026-07-19T12:27:26",
+          "name": "Voluntary Exile",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-18T19:10:53",
-      "last_seen": "2026-07-18T21:11:50"
+      "last_seen": "2026-07-19T12:40:44"
+    },
+    "Villager": {
+      "playtime_seconds": 0,
+      "sessions": [],
+      "deaths": [
+        {
+          "time": "2026-07-19T11:38:19",
+          "message": "Villager Villager['Villager'/115000, l='ServerLevel[world]', x=-153.23, y=62.02, z=-142.52] died, message: 'Villager drowned'"
+        }
+      ],
+      "advancements": [],
+      "first_seen": "2026-07-19T11:38:19",
+      "last_seen": "2026-07-19T11:38:19"
     }
   },
   "totals": {
-    "total_playtime_seconds": 43758,
-    "unique_players": 5,
-    "total_deaths": 4,
-    "total_advancements": 39
+    "total_playtime_seconds": 69124,
+    "unique_players": 6,
+    "total_deaths": 7,
+    "total_advancements": 46
   }
 }
