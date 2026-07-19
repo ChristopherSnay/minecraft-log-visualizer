@@ -1,11 +1,10 @@
 // src/components/PlayerOverview.tsx
 import { Box, Container, Paper, Tab, Tabs, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { ItemsCraftedChart } from '../charts/ItemsCraftedChart';
+import { ItemDataChart } from '../charts/ItemDataChart';
 import { MobsKilledChart } from '../charts/MobsKilledChart';
 import { PlayerComparisonChart } from '../charts/PlayerComparisonChart';
 import { PlayerRadarChart } from '../charts/PlayerRadarChart';
-import { TopBlocksChart } from '../charts/TopBlocksChart';
 import type { StatsJson } from '../types';
 import { getItemName } from '../utils/itemNames';
 import { PlaytimeStats } from './PlaytimeStats';
@@ -86,20 +85,29 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
       {/* Overview */}
       <ThemedSection title="Overview">
         <ResponsiveGrid columns={2}>
-          <PlayerRadarChart player={playerStats} allPlayers={Object.values(stats.stats.players)} />
+          <PlayerRadarChart
+            player={playerStats}
+            allPlayers={Object.values(stats.stats.players)}
+          />
           <PlaytimeStats customStats={playerStats.custom_stats} />
         </ResponsiveGrid>
-      </ThemedSection>
-
-      {/* Blocks Mined */}
-      <ThemedSection title="Blocks Mined">
-        <TopBlocksChart blocks={playerStats.blocks_mined} limit={15} />
       </ThemedSection>
 
       {/* Items & Crafting */}
       <ThemedSection title="Items & Crafting">
         <ResponsiveGrid columns={2}>
-          <ItemsCraftedChart items={playerStats.items_crafted || {}} limit={12} />
+          <ItemDataChart
+            data={playerStats.items_crafted || {}}
+            title="Items Crafted"
+            limit={10}
+            colorIndex={8}
+          />
+          <ItemDataChart
+            data={playerStats.blocks_mined || {}}
+            title="Blocks Mined"
+            limit={10}
+            colorIndex={9}
+          />
           <ThemedCard sx={{ p: 2 }}>
             <Typography variant="h6" gutterBottom>
               Top Items Used
@@ -142,11 +150,11 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
               {[
                 {
                   label: 'Damage Dealt',
-                  value: `${(playerStats.custom_stats['minecraft:damage_dealt'] / 2).toFixed(1)} ❤`
+                  value: `${(playerStats.custom_stats['minecraft:damage_dealt'] / 2).toFixed(1)}`
                 },
                 {
                   label: 'Damage Taken',
-                  value: `${(playerStats.custom_stats['minecraft:damage_taken'] / 2).toFixed(1)} ❤`
+                  value: `${(playerStats.custom_stats['minecraft:damage_taken'] / 2).toFixed(1)}`
                 },
                 {
                   label: 'Mob Kills',

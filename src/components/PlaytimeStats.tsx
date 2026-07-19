@@ -1,6 +1,6 @@
 import { Box, CardContent, CardHeader, Typography, useTheme } from '@mui/material';
-import { ThemedCard } from './ThemedCard';
 import React, { useMemo } from 'react';
+import { ThemedCard } from './ThemedCard';
 
 interface PlaytimeStatsProps {
   customStats: Record<string, number>;
@@ -52,13 +52,13 @@ export const PlaytimeStats: React.FC<PlaytimeStatsProps> = ({ customStats }) => 
         label: 'Damage Taken',
         key: 'minecraft:damage_taken',
         unit: 'half-hearts',
-        format: (val) => `${(val / 2).toFixed(1)}❤`
+        format: (val) => `${(val / 2).toFixed(1)}`
       },
       {
         label: 'Damage Dealt',
         key: 'minecraft:damage_dealt',
         unit: 'half-hearts',
-        format: (val) => `${(val / 2).toFixed(1)}❤`
+        format: (val) => `${(val / 2).toFixed(1)}`
       },
       {
         label: 'Deaths',
