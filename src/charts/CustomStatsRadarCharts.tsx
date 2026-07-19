@@ -1,8 +1,10 @@
-import { Box, CardContent, CardHeader, Typography } from '@mui/material';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import TableChartIcon from '@mui/icons-material/TableChart';
+import { Box, CardContent, CardHeader, IconButton, Tooltip, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { Radar } from 'react-chartjs-2';
 import type { ChartOptions } from 'chart.js';
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { ThemedCard } from '../components/ThemedCard';
 import { ResponsiveGrid } from '../components/SectionHeading';
 import { getDatasetColors } from '../config/chartColors';
@@ -14,11 +16,7 @@ interface CustomStatsRadarChartsProps {
   allPlayers: PlayerStats[];
 }
 
-// Radar charts share one radial scale across all stats in a category, so a
-// value like play_time (ticks) would dwarf small counts. We plot log10(value+1)
-// for the spoke radius, which compresses wide ranges far more evenly than a
-// square root, keeping the real value for tooltips and axis ticks.
-const transform = (value: number) => Math.log10(Math.max(value, 0) + 1);
+type ViewMode = 'normalized' | 'ratio';
 
 function serverAverage(key: string, allPlayers: PlayerStats[]): number {
   if (allPlayers.length === 0) return 0;
@@ -29,118 +27,175 @@ function serverAverage(key: string, allPlayers: PlayerStats[]): number {
   return sum / allPlayers.length;
 }
 
+function CategoryRadarChart({
+  category,
+  keys,
+  player,
+  allPlayers,
+  colorIndex
+}: {
+  category: string;
+  keys: string[];
+  player: PlayerStats;
+  allPlayers: PlayerStats[];
+  colorIndex: number;
+}) {
+  const theme = useTheme();
+  const [mode, setMode] = useState<ViewMode>('normalized');
+
+  const { data, options } = useMemo(() => {
+    const labels = keys.map(getStatLabel);
+    const playerValues = keys.map((k) => player.custom_stats[k] || 0);
+    const avgValues = keys.map((k) => serverAverage(k, allPlayers));
+
+    // Per-stat max used to normalize both series onto a 0..1 scale, so the
+    // shape reflects each stat's relative magnitude rather than its raw size.
+    const scaleMaxes = keys.map((_, i) => Math.max(playerValues[i], avgValues[i], 1e-9));
+
+    const playerData = keys.map((_, i) =>
+      mode === 'ratio'
+        ? avgValues[i] > 0
+          ? playerValues[i] / avgValues[i]
+          : playerValues[i] > 0
+            ? 2
+            : 0
+        : playerValues[i] / scaleMaxes[i]
+    );
+    // Server Avg is the reference ring: flat 1.0 in ratio mode, else its own
+    // normalized value.
+    const avgData = keys.map((_, i) =>
+      mode === 'ratio' ? 1 : avgValues[i] / scaleMaxes[i]
+    );
+
+    const playerColors = getDatasetColors(colorIndex % 10, 0.25);
+    const avgColors = getDatasetColors((colorIndex + 5) % 10, 0.15);
+
+    const chartData = {
+      labels,
+      datasets: [
+        {
+          label: player.name,
+          data: playerData,
+          backgroundColor: playerColors.backgroundColor,
+          borderColor: playerColors.borderColor,
+          borderWidth: 2,
+          pointBackgroundColor: playerColors.borderColor,
+          pointRadius: 3
+        },
+        {
+          label: mode === 'ratio' ? 'Server Avg (ref)' : 'Server Avg',
+          data: avgData,
+          backgroundColor: avgColors.backgroundColor,
+          borderColor: avgColors.borderColor,
+          borderWidth: 2,
+          pointBackgroundColor: avgColors.borderColor,
+          pointRadius: 3
+        }
+      ]
+    };
+
+    const isRatio = mode === 'ratio';
+    const maxValue = isRatio
+      ? Math.max(...playerData, 1) * 1.1
+      : 1;
+
+    const opts: ChartOptions<'radar'> = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            color: theme.palette.text.primary,
+            font: { family: theme.typography.fontFamily, size: 11 },
+            boxWidth: 12
+          }
+        },
+        tooltip: {
+          backgroundColor: theme.palette.background.paper,
+          titleColor: theme.palette.text.primary,
+          bodyColor: theme.palette.text.secondary,
+          borderColor: theme.palette.divider,
+          borderWidth: 1,
+          callbacks: {
+            label: (context) => {
+              const i = context.dataIndex;
+              const p = playerValues[i];
+              const a = avgValues[i];
+              if (isRatio) {
+                const mult = a > 0 ? (p / a).toFixed(2) : '∞';
+                return `${context.dataset.label}: ${mult}x avg`;
+              }
+              const pct = scaleMaxes[i] > 0 ? Math.round((p / scaleMaxes[i]) * 100) : 0;
+              const aPct = scaleMaxes[i] > 0 ? Math.round((a / scaleMaxes[i]) * 100) : 0;
+              return `${context.dataset.label}: ${context.dataset.label === player.name ? p.toLocaleString() : a.toLocaleString()} (${context.dataset.label === player.name ? pct : aPct}% of max)`;
+            }
+          }
+        }
+      },
+      scales: {
+        r: {
+          beginAtZero: true,
+          min: 0,
+          max: maxValue,
+          angleLines: { color: theme.palette.divider },
+          grid: { color: theme.palette.divider },
+          pointLabels: {
+            color: theme.palette.text.primary,
+            font: { size: 11, family: theme.typography.fontFamily }
+          },
+          ticks: {
+            color: theme.palette.text.secondary,
+            backdropColor: 'transparent',
+            font: { size: 9 },
+            maxTicksLimit: 5,
+            callback: (value) =>
+              isRatio
+                ? `${(value as number).toFixed(1)}x`
+                : `${Math.round((value as number) * 100)}%`
+          }
+        }
+      }
+    };
+
+    return { data: chartData, options: opts };
+  }, [keys, player, allPlayers, mode, theme, colorIndex]);
+
+  return (
+    <ThemedCard>
+      <CardHeader
+        title={category}
+        action={
+          <Tooltip title={mode === 'normalized' ? 'Show ratio (vs avg)' : 'Show normalized'}>
+            <IconButton
+              size="small"
+              sx={{ opacity: 0.5 }}
+              onClick={() => setMode(mode === 'normalized' ? 'ratio' : 'normalized')}
+            >
+              {mode === 'normalized' ? <TableChartIcon fontSize="small" /> : <BarChartIcon fontSize="small" />}
+            </IconButton>
+          </Tooltip>
+        }
+      />
+      <CardContent>
+        <Box sx={{ height: 320 }}>
+          <Radar data={data} options={options} />
+        </Box>
+      </CardContent>
+    </ThemedCard>
+  );
+}
+
 export const CustomStatsRadarCharts: React.FC<CustomStatsRadarChartsProps> = ({
   player,
   allPlayers
 }) => {
-  const theme = useTheme();
-
   const categories = useMemo(
     () => getPresentCategories(player.custom_stats || {}),
     [player.custom_stats]
   );
 
-  // Give each category chart a distinct color pair from the shared palette.
-  // The player series uses palette index N; the Server Avg series uses the
-  // palette color most opposite to it (N + 5 in a 10-color wheel) so the two
-  // series contrast strongly rather than sitting as adjacent hues.
-  const paletteSize = 10;
-  const opposite = (i: number) => (i + paletteSize / 2) % paletteSize;
-
-  const charts = useMemo(
-    () =>
-      Object.entries(categories).map(([category, keys], index) => {
-        const labels = keys.map(getStatLabel);
-        const playerValues = keys.map((k) => player.custom_stats[k] || 0);
-        const avgValues = keys.map((k) => serverAverage(k, allPlayers));
-
-        const playerColors = getDatasetColors(index % paletteSize, 0.25);
-        const avgColors = getDatasetColors(opposite(index) % paletteSize, 0.15);
-
-        const data = {
-          labels,
-          datasets: [
-            {
-              label: player.name,
-              data: playerValues.map(transform),
-              backgroundColor: playerColors.backgroundColor,
-              borderColor: playerColors.borderColor,
-              borderWidth: 2,
-              pointBackgroundColor: playerColors.borderColor,
-              pointRadius: 3
-            },
-            {
-              label: 'Server Avg',
-              data: avgValues.map(transform),
-              backgroundColor: avgColors.backgroundColor,
-              borderColor: avgColors.borderColor,
-              borderWidth: 2,
-              pointBackgroundColor: avgColors.borderColor,
-              pointRadius: 3
-            }
-          ]
-        };
-
-        const options: ChartOptions<'radar'> = {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: 'bottom',
-              labels: {
-                color: theme.palette.text.primary,
-                font: { family: theme.typography.fontFamily, size: 11 },
-                boxWidth: 12
-              }
-            },
-            tooltip: {
-              backgroundColor: theme.palette.background.paper,
-              titleColor: theme.palette.text.primary,
-              bodyColor: theme.palette.text.secondary,
-              borderColor: theme.palette.divider,
-              borderWidth: 1,
-              callbacks: {
-                label: (context) => {
-                  const isPlayer = context.dataset.label === player.name;
-                  const real = isPlayer
-                    ? playerValues[context.dataIndex]
-                    : avgValues[context.dataIndex];
-                  return `${context.dataset.label}: ${real.toLocaleString()}`;
-                }
-              }
-            }
-          },
-          scales: {
-            r: {
-              beginAtZero: true,
-              angleLines: { color: theme.palette.divider },
-              grid: { color: theme.palette.divider },
-              pointLabels: {
-                color: theme.palette.text.primary,
-                font: { size: 11, family: theme.typography.fontFamily }
-              },
-              ticks: {
-                color: theme.palette.text.secondary,
-                backdropColor: 'transparent',
-                font: { size: 9 },
-                maxTicksLimit: 5,
-                callback: (value) => {
-                  const original = Math.round(Math.pow(10, value as number) - 1);
-                  return original >= 1000
-                    ? `${(original / 1000).toFixed(0)}k`
-                    : `${original}`;
-                }
-              }
-            }
-          }
-        };
-
-        return { category, data, options };
-      }),
-    [categories, player, allPlayers, theme]
-  );
-
-  if (charts.length === 0) {
+  if (categories.length === 0) {
     return (
       <ThemedCard>
         <CardContent>
@@ -154,15 +209,15 @@ export const CustomStatsRadarCharts: React.FC<CustomStatsRadarChartsProps> = ({
 
   return (
     <ResponsiveGrid columns={2}>
-      {charts.map(({ category, data, options }) => (
-        <ThemedCard key={category}>
-          <CardHeader title={category} />
-          <CardContent>
-            <Box sx={{ height: 320 }}>
-              <Radar data={data} options={options} />
-            </Box>
-          </CardContent>
-        </ThemedCard>
+      {Object.entries(categories).map(([category, keys], index) => (
+        <CategoryRadarChart
+          key={category}
+          category={category}
+          keys={keys}
+          player={player}
+          allPlayers={allPlayers}
+          colorIndex={index}
+        />
       ))}
     </ResponsiveGrid>
   );

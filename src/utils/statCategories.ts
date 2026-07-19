@@ -54,7 +54,6 @@ export const CUSTOM_STAT_CATEGORIES: Record<string, string[]> = {
   ],
   'Time & Rest': [
     'minecraft:play_time',
-    'minecraft:total_world_time',
     'minecraft:leave_game',
     'minecraft:time_since_death',
     'minecraft:time_since_rest',
