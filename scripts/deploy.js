@@ -35,13 +35,17 @@
  *   See README.md for the exact crontab line.
  */
 
-const fs = require('fs');
-const path = require('path');
-const { execFileSync } = require('child_process');
-const ghpages = require('gh-pages');
-const { render } = require('./render.js');
+import fs from 'node:fs';
+import path from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import ghpages from 'gh-pages';
+import { render } from './render.js';
+import dotenv from 'dotenv';
 
-require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
 const LOGS_DIR = process.env.MC_LOGS_DIR || path.join(__dirname, '..', 'logs');
 const SITE_DIR = process.env.MC_SITE_DIR || path.join(__dirname, '..', 'site');
@@ -73,7 +77,7 @@ function findPythonCommand() {
     try {
       execFileSync(cmd, ['--version'], { stdio: 'ignore' });
       return cmd;
-    } catch (e) {
+    } catch {
       // try next candidate
     }
   }

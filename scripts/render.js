@@ -13,8 +13,11 @@
  *   node scripts/render.js site/stats.json site/index.html
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function loadChartJsBundle() {
   const candidates = [
@@ -455,9 +458,10 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 </html>
 `;
 
-module.exports = { render };
+export { render };
 
-if (require.main === module) {
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isMain) {
   const [, , statsArg, outArg] = process.argv;
   const statsPath = statsArg || path.join(__dirname, '..', 'site', 'stats.json');
   const outPath = outArg || path.join(__dirname, '..', 'site', 'index.html');
