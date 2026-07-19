@@ -19,6 +19,7 @@ export interface LogDeathEvent {
 }
 
 export interface StatsJson {
+  captured_at?: string;
   stats: {
     players: Record<string, PlayerStats>;
   };

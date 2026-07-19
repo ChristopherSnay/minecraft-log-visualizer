@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime, timezone
 
 from collectors.advancements import collect_advancements
 from collectors.level import collect_level
@@ -41,6 +42,9 @@ def parse_world(world_path):
     world["level"] = collect_level(world_path)
     world["logs"] = collect_logs()
     world["usercache"] = collect_usercache()
+
+    # Record when the stats were captured (UTC ISO 8601)
+    world["captured_at"] = datetime.now(timezone.utc).isoformat()
 
     # Merge player names into stats using usercache.json
     for uuid, name in world["usercache"].items():

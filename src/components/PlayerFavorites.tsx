@@ -22,6 +22,7 @@ import { getDatasetColors } from '../config/chartColors';
 import { getItemName } from '../utils/itemNames';
 import type { PlayerStats } from '../types';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
+import { PlayerLink } from './PlayerLink';
 
 interface PlayerFavoritesProps {
   allPlayers: Record<string, PlayerStats>;
@@ -32,6 +33,7 @@ interface PlayerFavoritesProps {
 }
 
 interface FavoriteEntry {
+  playerId: string;
   name: string;
   count: number;
   favorite: string;
@@ -61,6 +63,7 @@ export const PlayerFavorites: React.FC<PlayerFavoritesProps> = ({
         const formattedName = getItemName(itemId);
 
         return {
+          playerId,
           name: player.name || playerId.substring(0, 8),
           count: count as number,
           favorite: formattedName
@@ -166,7 +169,9 @@ export const PlayerFavorites: React.FC<PlayerFavoritesProps> = ({
               {playerFavorites.map((row) => (
                 <TableRow key={row.name} hover>
                   <TableCell>
-                    <Typography variant="body2">{row.name}</Typography>
+                    <Typography variant="body2">
+                      <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>
+                    </Typography>
                   </TableCell>
                   <TableCell>
                     <Typography variant="body2">{row.favorite}</Typography>

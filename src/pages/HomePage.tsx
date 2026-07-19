@@ -47,6 +47,10 @@ export default function HomePage() {
   const players = stats.stats.players;
   const totals = calculateTotals(players);
 
+  const capturedAt = stats.captured_at
+    ? new Date(stats.captured_at)
+    : null;
+
   const playerEntries = Object.entries(players);
 
   const getPlayerName = (playerId: string, player: PlayerStats) =>
@@ -287,6 +291,25 @@ export default function HomePage() {
           <ItemsPickedUpChart allPlayers={players} limit={10} />
         </ResponsiveGrid>
       </ThemedSection>
+
+      {/* Footer */}
+      <Box
+        component="footer"
+        sx={{
+          mt: 6,
+          pt: 2,
+          pb: 4,
+          textAlign: 'center',
+          borderTop: '1px solid',
+          borderColor: 'divider'
+        }}
+      >
+        <Typography variant="caption" color="text.secondary">
+          {capturedAt
+            ? `Stats captured ${capturedAt.toLocaleString()}`
+            : 'Stats captured time unknown'}
+        </Typography>
+      </Box>
     </Container>
   );
 }
