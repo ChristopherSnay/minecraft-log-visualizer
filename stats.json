@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-19T00:18:09.923966+00:00",
+  "generated_at": "2026-07-19T01:06:29.912903+00:00",
   "date_range": {
     "start": "2026-07-19T18:41:21",
-    "end": "2026-07-20T20:16:18"
+    "end": "2026-07-20T21:02:37"
   },
   "players": {
     "Drewyknot": {
@@ -130,7 +130,7 @@
       "last_seen": "2026-07-20T19:49:19"
     },
     "PenelopeWhynot": {
-      "playtime_seconds": 42697,
+      "playtime_seconds": 43631,
       "sessions": [
         {
           "join": "2026-07-19T18:43:16",
@@ -170,9 +170,9 @@
         },
         {
           "join": "2026-07-20T17:03:37",
-          "leave": null,
-          "duration_seconds": 11561,
-          "ongoing": true
+          "leave": "2026-07-20T20:31:52",
+          "duration_seconds": 12495,
+          "ongoing": false
         }
       ],
       "deaths": [
@@ -268,10 +268,10 @@
         }
       ],
       "first_seen": "2026-07-19T18:43:16",
-      "last_seen": "2026-07-20T19:47:42"
+      "last_seen": "2026-07-20T20:31:52"
     },
     "Kimyknot": {
-      "playtime_seconds": 34862,
+      "playtime_seconds": 37641,
       "sessions": [
         {
           "join": "2026-07-19T18:52:00",
@@ -324,7 +324,7 @@
         {
           "join": "2026-07-20T16:52:35",
           "leave": null,
-          "duration_seconds": 12223,
+          "duration_seconds": 15002,
           "ongoing": true
         }
       ],
@@ -402,7 +402,7 @@
       "last_seen": "2026-07-20T19:11:29"
     },
     "third_wheel": {
-      "playtime_seconds": 24071,
+      "playtime_seconds": 26210,
       "sessions": [
         {
           "join": "2026-07-19T19:04:13",
@@ -520,9 +520,15 @@
         },
         {
           "join": "2026-07-20T20:04:16",
-          "leave": null,
-          "duration_seconds": 722,
-          "ongoing": true
+          "leave": "2026-07-20T20:43:22",
+          "duration_seconds": 2346,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-20T20:51:55",
+          "leave": "2026-07-20T21:00:30",
+          "duration_seconds": 515,
+          "ongoing": false
         }
       ],
       "deaths": [
@@ -590,10 +596,10 @@
         }
       ],
       "first_seen": "2026-07-19T19:04:13",
-      "last_seen": "2026-07-20T20:16:18"
+      "last_seen": "2026-07-20T21:00:30"
     },
     "R3B3X": {
-      "playtime_seconds": 24177,
+      "playtime_seconds": 26769,
       "sessions": [
         {
           "join": "2026-07-19T19:10:53",
@@ -675,9 +681,15 @@
         },
         {
           "join": "2026-07-20T20:14:11",
-          "leave": null,
-          "duration_seconds": 127,
-          "ongoing": true
+          "leave": "2026-07-20T20:43:07",
+          "duration_seconds": 1736,
+          "ongoing": false
+        },
+        {
+          "join": "2026-07-20T20:44:02",
+          "leave": "2026-07-20T21:00:25",
+          "duration_seconds": 983,
+          "ongoing": false
         }
       ],
       "deaths": [
@@ -769,10 +781,15 @@
           "time": "2026-07-20T19:34:17",
           "name": "Cover Me with Diamonds",
           "kind": "advancement"
+        },
+        {
+          "time": "2026-07-20T20:34:46",
+          "name": "Take Aim",
+          "kind": "advancement"
         }
       ],
       "first_seen": "2026-07-19T19:10:53",
-      "last_seen": "2026-07-20T20:14:11"
+      "last_seen": "2026-07-20T21:00:25"
     },
     "Villager": {
       "playtime_seconds": 0,
@@ -801,14 +818,26 @@
         {
           "time": "2026-07-20T19:42:05",
           "message": "Villager Villager['Nitwit'/271280, l='ServerLevel[world]', x=-970.28, y=81.56, z=-862.37] died, message: 'Nitwit suffocated in a wall'"
+        },
+        {
+          "time": "2026-07-20T20:23:33",
+          "message": "Villager Villager['Villager'/289184, l='ServerLevel[world]', x=25.18, y=75.25, z=-2.58] died, message: 'Villager was slain by third_wheel'"
+        },
+        {
+          "time": "2026-07-20T20:35:43",
+          "message": "Villager Villager['Villager'/207201, l='ServerLevel[world]', x=-31.30, y=63.00, z=-165.53] died, message: 'Villager was slain by Ravager'"
+        },
+        {
+          "time": "2026-07-20T20:35:57",
+          "message": "Villager Villager['Mason'/279454, l='ServerLevel[world]', x=11.49, y=70.94, z=-7.96] died, message: 'Mason was shot by Pillager'"
         }
       ],
       "advancements": [],
       "first_seen": "2026-07-20T11:38:19",
-      "last_seen": "2026-07-20T19:42:05"
+      "last_seen": "2026-07-20T20:35:57"
     },
     "Crazy_brosik": {
-      "playtime_seconds": 16139,
+      "playtime_seconds": 18918,
       "sessions": [
         {
           "join": "2026-07-20T13:45:08",
@@ -902,9 +931,9 @@
         },
         {
           "join": "2026-07-20T20:10:53",
-          "leave": null,
-          "duration_seconds": 325,
-          "ongoing": true
+          "leave": "2026-07-20T21:02:37",
+          "duration_seconds": 3104,
+          "ongoing": false
         }
       ],
       "deaths": [
@@ -919,6 +948,10 @@
         {
           "time": "2026-07-20T19:01:43",
           "message": "Crazy_brosik burned to death"
+        },
+        {
+          "time": "2026-07-20T20:19:14",
+          "message": "Crazy_brosik fell from a high place"
         }
       ],
       "advancements": [
@@ -969,7 +1002,7 @@
         }
       ],
       "first_seen": "2026-07-20T13:45:08",
-      "last_seen": "2026-07-20T20:10:53"
+      "last_seen": "2026-07-20T21:02:37"
     },
     "DivineLight": {
       "playtime_seconds": 331,
@@ -1110,15 +1143,15 @@
     },
     {
       "bucket_start": "2026-07-20T20:00:00",
-      "joins": 4,
-      "deaths": 1,
-      "advancements": 0
+      "joins": 6,
+      "deaths": 5,
+      "advancements": 1
     }
   ],
   "totals": {
-    "total_playtime_seconds": 160607,
+    "total_playtime_seconds": 171830,
     "unique_players": 8,
-    "total_deaths": 23,
-    "total_advancements": 70
+    "total_deaths": 27,
+    "total_advancements": 71
   }
 }
