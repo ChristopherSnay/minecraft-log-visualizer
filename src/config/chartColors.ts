@@ -43,20 +43,6 @@ export const CHART_COLORS = {
     '#E91E63'  // Pink
   ],
 
-  // Mob kill colors (for pie chart)
-  mobs: [
-    '#FF6B6B',
-    '#FF8E72',
-    '#FFA726',
-    '#FFB74D',
-    '#FFC107',
-    '#FFCA28',
-    '#FFD54F',
-    '#FFE082',
-    '#FFEB3B',
-    '#FFF176'
-  ],
-
   // Combat effectiveness (for damage ratio)
   combatEffectiveness: (ratio: number) => {
     if (ratio > 2) return '#66BB6A'; // success - dominant

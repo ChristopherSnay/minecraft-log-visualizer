@@ -1,6 +1,7 @@
 // src/components/PlayerOverview.tsx
 import { Box, Container, Paper, Tab, Tabs, Typography } from '@mui/material';
 import React, { useState } from 'react';
+import { CustomStatsRadarCharts } from '../charts/CustomStatsRadarCharts';
 import { ItemDataChart } from '../charts/ItemDataChart';
 import { MobsKilledChart } from '../charts/MobsKilledChart';
 import { PlayerComparisonChart } from '../charts/PlayerComparisonChart';
@@ -198,6 +199,14 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
             </Box>
           </ThemedCard>
         </ResponsiveGrid>
+      </ThemedSection>
+
+      {/* Custom Stats by Category */}
+      <ThemedSection title="Player Compared to All Players">
+        <CustomStatsRadarCharts
+          player={playerStats}
+          allPlayers={Object.values(stats.stats.players)}
+        />
       </ThemedSection>
 
       {/* Player Comparison - only when browsing all players */}

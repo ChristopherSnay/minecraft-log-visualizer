@@ -10,6 +10,7 @@ import {
   LinearScale,
   LineElement,
   PointElement,
+  RadialLinearScale,
   Title,
   Tooltip
 } from 'chart.js';
@@ -27,6 +28,7 @@ ChartJS.register(
   LineElement,
   PointElement,
   ArcElement,
+  RadialLinearScale,
   Title,
   Tooltip,
   Legend,
