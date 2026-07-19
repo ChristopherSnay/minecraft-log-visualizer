@@ -1,9 +1,9 @@
 import { Card, type CardProps } from '@mui/material';
 
-export function ThemedCard({ sx, ...props }: CardProps) {
+export function ThemedCard({ elevation = 1, sx, ...props }: CardProps) {
   return (
     <Card
-      elevation={1}
+      elevation={elevation}
       sx={{
         border: (theme) => `1px solid ${theme.palette.divider}`,
         ...sx

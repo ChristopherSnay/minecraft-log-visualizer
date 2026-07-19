@@ -167,20 +167,12 @@ def collect_logs():
     if not os.path.isfile(latest):
         return {"events": [], "sessions": {}, "log_date": None}
 
-    # Infer the date from the most recent rotated log filename, falling back
-    # to the modification time of latest.log.
-    log_date = None
-    rotated = sorted(
-        (f for f in os.listdir(logs_dir) if re.match(r"\d{4}-\d{2}-\d{2}-\d+_?\.log(?:\.gz)?$", f)),
-        reverse=True,
-    )
-    if rotated:
-        m = re.match(r"(\d{4}-\d{2}-\d{2})", rotated[0])
-        if m:
-            log_date = m.group(1)
-    if not log_date:
-        mtime = os.path.getmtime(latest)
-        log_date = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
+    # latest.log has no date in its lines, only [HH:MM:SS]. It contains the
+    # current day's events, so its date must come from latest.log's own
+    # modification time -- NOT from a rotated filename, which is dated for the
+    # day it was rotated out (an earlier day). Using a rotated date here would
+    # stamp today's events with yesterday's date.
+    log_date = datetime.fromtimestamp(os.path.getmtime(latest)).strftime("%Y-%m-%d")
 
     events = []
     sessions = {}

@@ -86,16 +86,6 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
       <Card elevation={1} sx={{ border: (t) => `1px solid ${t.palette.divider}` }}>
         <CardHeader
           title={title}
-          titleTypographyProps={{
-            variant: 'subtitle2',
-            sx: {
-              fontSize: '0.85rem',
-              textTransform: 'uppercase',
-              letterSpacing: '0.03em',
-              fontWeight: 600,
-              color: 'text.secondary'
-            }
-          }}
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary">
@@ -113,16 +103,6 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
     <Card elevation={1} sx={{ border: (t) => `1px solid ${t.palette.divider}` }}>
       <CardHeader
         title={title}
-        titleTypographyProps={{
-          variant: 'subtitle2',
-          sx: {
-            fontSize: '0.85rem',
-            textTransform: 'uppercase',
-            letterSpacing: '0.03em',
-            fontWeight: 600,
-            color: 'text.secondary'
-          }
-        }}
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
             <IconButton

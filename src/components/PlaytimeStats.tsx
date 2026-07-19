@@ -1,6 +1,39 @@
-import { Box, CardContent, CardHeader, Typography, useTheme } from '@mui/material';
+import { Box, CardContent, CardHeader, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
 import { ThemedCard } from './ThemedCard';
+
+const StatCard = ({ label, value }: { label: string; value: string }) => (
+  <ThemedCard elevation={3}>
+    <CardContent
+      sx={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }}
+    >
+      <Typography
+        variant="body2"
+        color="textSecondary"
+        sx={{ textAlign: 'center' }}
+        gutterBottom
+      >
+        {label}
+      </Typography>
+      <Typography
+        variant="h5"
+        sx={{
+          color: 'primary.main',
+          fontWeight: 'bold',
+          mt: 'auto',
+          textAlign: 'center'
+        }}
+      >
+        {value}
+      </Typography>
+    </CardContent>
+  </ThemedCard>
+);
 
 interface PlaytimeStatsProps {
   customStats: Record<string, number>;
@@ -14,8 +47,6 @@ interface StatDisplay {
 }
 
 export const PlaytimeStats: React.FC<PlaytimeStatsProps> = ({ customStats }) => {
-  const theme = useTheme();
-
   const stats: StatDisplay[] = useMemo(
     () => [
       {
@@ -77,6 +108,18 @@ export const PlaytimeStats: React.FC<PlaytimeStatsProps> = ({ customStats }) => 
         key: 'minecraft:jump',
         unit: 'count',
         format: (val) => `${val}`
+      },
+      {
+        label: 'Items Enchanted',
+        key: 'minecraft:enchant_item',
+        unit: 'count',
+        format: (val) => `${val}`
+      },
+      {
+        label: 'Animals Bred',
+        key: 'minecraft:animals_bred',
+        unit: 'count',
+        format: (val) => `${val}`
       }
     ],
     []
@@ -90,33 +133,14 @@ export const PlaytimeStats: React.FC<PlaytimeStatsProps> = ({ customStats }) => 
           sx={{
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' },
+            alignItems: 'stretch',
             gap: 2
           }}
         >
           {stats.map((stat) => {
             const value = customStats[stat.key] ?? 0;
             return (
-              <Box
-                key={stat.key}
-                sx={{
-                  p: 2,
-                  backgroundColor:
-                    theme.palette.mode === 'dark'
-                      ? 'rgba(255, 255, 255, 0.05)'
-                      : 'rgba(0, 0, 0, 0.02)',
-                  borderRadius: 1
-                }}
-              >
-                <Typography variant="body2" color="textSecondary" gutterBottom>
-                  {stat.label}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  sx={{ color: theme.palette.primary.main, fontWeight: 'bold' }}
-                >
-                  {stat.format(value)}
-                </Typography>
-              </Box>
+              <StatCard key={stat.key} label={stat.label} value={stat.format(value)} />
             );
           })}
         </Box>

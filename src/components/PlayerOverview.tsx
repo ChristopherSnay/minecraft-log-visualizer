@@ -6,7 +6,6 @@ import { MobsKilledChart } from '../charts/MobsKilledChart';
 import { PlayerComparisonChart } from '../charts/PlayerComparisonChart';
 import { PlayerRadarChart } from '../charts/PlayerRadarChart';
 import type { StatsJson } from '../types';
-import { getItemName } from '../utils/itemNames';
 import { PlaytimeStats } from './PlaytimeStats';
 import { ResponsiveGrid } from './SectionHeading';
 import { ThemedCard } from './ThemedCard';
@@ -95,40 +94,43 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
 
       {/* Items & Crafting */}
       <ThemedSection title="Items & Crafting">
-        <ResponsiveGrid columns={2}>
+        <ResponsiveGrid columns={3}>
           <ItemDataChart
             data={playerStats.items_crafted || {}}
             title="Items Crafted"
             limit={10}
-            colorIndex={8}
+            colorIndex={9}
           />
           <ItemDataChart
             data={playerStats.blocks_mined || {}}
             title="Blocks Mined"
             limit={10}
-            colorIndex={9}
+            colorIndex={8}
           />
-          <ThemedCard sx={{ p: 2 }}>
-            <Typography variant="h6" gutterBottom>
-              Top Items Used
-            </Typography>
-            {playerStats.items_used && Object.keys(playerStats.items_used).length > 0 ? (
-              <Box component="ul" sx={{ fontSize: '0.9em' }}>
-                {Object.entries(playerStats.items_used)
-                  .sort(([, a], [, b]) => (b as number) - (a as number))
-                  .slice(0, 10)
-                  .map(([name, count]) => (
-                    <li key={name}>
-                      {getItemName(name)}: {count}
-                    </li>
-                  ))}
-              </Box>
-            ) : (
-              <Box sx={{ p: 2, textAlign: 'center', color: 'text.secondary' }}>
-                No items used data available
-              </Box>
-            )}
-          </ThemedCard>
+          <ItemDataChart
+            data={playerStats.items_used || {}}
+            title="Items Used"
+            limit={10}
+            colorIndex={7}
+          />
+          <ItemDataChart
+            data={playerStats.items_picked_up || {}}
+            title="Items Picked Up"
+            limit={10}
+            colorIndex={6}
+          />
+          <ItemDataChart
+            data={playerStats.items_dropped || {}}
+            title="Items Dropped"
+            limit={10}
+            colorIndex={5}
+          />
+          <ItemDataChart
+            data={playerStats.mobs_killed || {}}
+            title="Mobs Killed"
+            limit={10}
+            colorIndex={4}
+          />
         </ResponsiveGrid>
       </ThemedSection>
 
