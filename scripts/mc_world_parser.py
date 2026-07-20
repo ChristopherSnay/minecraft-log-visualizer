@@ -9,8 +9,6 @@ from collectors.playerdata import collect_playerdata
 # Collectors
 from collectors.stats import collect_stats
 from collectors.usercache import collect_usercache
-# Delta engine
-from delta import compute_deltas
 from dotenv import load_dotenv
 
 
@@ -19,7 +17,7 @@ def write_json(path, data):
         json.dump(data, f, indent=2)
 
 
-def parse_world(world_path):
+def parse_world(world_path, captured_at):
     """
     Runs all collectors and returns a unified world model:
 
@@ -28,7 +26,6 @@ def parse_world(world_path):
         "level": {...},
         "logs": {...},
         "usercache": {...},
-        "deltas": {...},
         "captured_at": "..."
     }
     """
@@ -43,8 +40,7 @@ def parse_world(world_path):
     world["logs"] = collect_logs()
     world["usercache"] = collect_usercache()
 
-    # Record when the stats were captured (UTC ISO 8601)
-    world["captured_at"] = datetime.now(timezone.utc).isoformat()
+    world["captured_at"] = captured_at
 
     # Merge player names into stats using usercache.json
     for uuid, name in world["usercache"].items():
@@ -68,10 +64,6 @@ def parse_world(world_path):
     # Remove now-redundant top-level collections
     world.pop("advancements", None)
     world.pop("playerdata", None)
-
-    # Compute deltas
-    cache_path = os.path.join("data", "cache.json")
-    world["deltas"] = compute_deltas(world, cache_path)
 
     # Apply EXCLUDE_DATA: remove unwanted top-level and per-player keys.
     # Use @name to exclude an entire player by name (e.g. @DivineLight).
@@ -112,7 +104,8 @@ def main():
     if not os.path.isdir(world_path):
         raise RuntimeError(f"World folder not found: {world_path}")
 
-    world = parse_world(world_path)
+    captured_at = datetime.now(timezone.utc).isoformat()
+    world = parse_world(world_path, captured_at)
 
     # Write unified world model into public/data for React
     output_dir = os.path.join("public", "data")
@@ -121,7 +114,16 @@ def main():
     output_path = os.path.join(output_dir, "stats.json")
     write_json(output_path, world)
 
+    # Write timestamped backup
+    backup_dir = os.path.join("data", "backups")
+    os.makedirs(backup_dir, exist_ok=True)
+
+    ts = captured_at.replace(":", "-").replace("+", "-").replace(".", "-")
+    backup_path = os.path.join(backup_dir, f"stats-{ts}.json")
+    write_json(backup_path, world)
+
     print(f"Generated {output_path}")
+    print(f"Backup  {backup_path}")
 
 
 load_dotenv()
