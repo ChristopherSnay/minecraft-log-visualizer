@@ -1,20 +1,19 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
-import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
+
+import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
-import { getPlayerDisplayName, ticksToMinutes } from '../utils/chartUtils';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
+import { getPlayerDisplayName, ticksToMinutes } from '../utils/chartUtils';
 
 interface ActivityMetricsChartProps {
   allPlayers: Record<string, PlayerStats>;
 }
 
-export const ActivityMetricsChart: React.FC<ActivityMetricsChartProps> = ({
-  allPlayers
-}) => {
+export const ActivityMetricsChart: React.FC<ActivityMetricsChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
 
   const { chartData, options } = useMemo(() => {
@@ -84,10 +83,16 @@ export const ActivityMetricsChart: React.FC<ActivityMetricsChartProps> = ({
 
   return (
     <ThemedCard>
-      <CardHeader title="Activity Metrics" subheader="Fun stats about player behavior" />
+      <CardHeader
+        title="Activity Metrics"
+        subheader="Fun stats about player behavior"
+      />
       <CardContent>
         <Box sx={{ height: 400 }}>
-          <Bar data={chartData} options={options} />
+          <Bar
+            data={chartData}
+            options={options}
+          />
         </Box>
       </CardContent>
     </ThemedCard>

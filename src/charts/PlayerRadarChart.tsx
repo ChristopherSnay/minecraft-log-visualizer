@@ -14,25 +14,22 @@ import {
   Typography
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import type { ChartOptions } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Radar } from 'react-chartjs-2';
+
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
-import { ChartEmptyState } from '../components/ChartEmptyState';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
-
-import type { ChartOptions } from 'chart.js';
 
 interface PlayerRadarChartProps {
   player: PlayerStats;
   allPlayers: PlayerStats[];
 }
 
-export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
-  player,
-  allPlayers
-}) => {
+export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allPlayers }) => {
   const theme = useTheme();
   const { viewMode, toggleViewMode } = useChartViewMode();
 
@@ -81,9 +78,7 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
     // Ratio: player / server average. >1 = above avg, <1 = below.
     // When server avg is 0, use the raw player value as the ratio so active
     // players still show a meaningful polygon.
-    const ratios = raw.map((v, i) =>
-      serverRaw[i] > 0 ? v / serverRaw[i] : v > 0 ? 1 : 0
-    );
+    const ratios = raw.map((v, i) => (serverRaw[i] > 0 ? v / serverRaw[i] : v > 0 ? 1 : 0));
 
     const maxRatio = Math.max(...ratios, 1) * 1.15;
     const labels = [
@@ -234,7 +229,10 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
       <CardContent>
         {viewMode === 'chart' ? (
           <Box sx={{ height: 350 }}>
-            <Radar data={chartData} options={options} />
+            <Radar
+              data={chartData}
+              options={options}
+            />
           </Box>
         ) : (
           <Box sx={{ overflowX: 'auto' }}>
@@ -252,7 +250,10 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
                   <TableRow key={row.label}>
                     <TableCell>
                       <Typography variant="body2">{row.label}</Typography>
-                      <Typography variant="caption" color="text.secondary">
+                      <Typography
+                        variant="caption"
+                        color="text.secondary"
+                      >
                         {row.description}
                       </Typography>
                     </TableCell>

@@ -14,17 +14,18 @@ import {
   Typography,
   useTheme
 } from '@mui/material';
-import { ThemedCard } from '../components/ThemedCard';
 import type { TooltipItem } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
-import { CHART_COLORS } from '../config/chartColors';
+
 import { ChartEmptyState } from '../components/ChartEmptyState';
-import { useChartViewMode } from '../hooks/useChartViewMode';
 import { PlayerLink } from '../components/PlayerLink';
+import { ThemedCard } from '../components/ThemedCard';
+import { CHART_COLORS } from '../config/chartColors';
+import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
-import { getPlayerDisplayName } from '../utils/chartUtils';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
+import { getPlayerDisplayName } from '../utils/chartUtils';
 
 interface DamageRatioChartProps {
   allPlayers: Record<string, PlayerStats>;
@@ -72,9 +73,7 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
         {
           label: 'Damage Ratio',
           data: playerData.map((p) => p.ratio),
-          backgroundColor: playerData.map((p) =>
-            CHART_COLORS.combatEffectiveness(p.ratio)
-          ),
+          backgroundColor: playerData.map((p) => CHART_COLORS.combatEffectiveness(p.ratio)),
           borderColor: playerData.map((p) => CHART_COLORS.combatEffectiveness(p.ratio))
         }
       ]
@@ -127,7 +126,12 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
         subheader="How effectively each player engages in combat"
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode} aria-label="Toggle chart/table view">
+            <IconButton
+              size="small"
+              sx={{ opacity: 0.5 }}
+              onClick={toggleViewMode}
+              aria-label="Toggle chart/table view"
+            >
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (
@@ -140,40 +144,65 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
       <CardContent sx={{ pt: 0 }}>
         {viewMode === 'chart' ? (
           <Box sx={{ height: 400 }}>
-            <Bar data={chartData} options={options} />
+            <Bar
+              data={chartData}
+              options={options}
+            />
           </Box>
         ) : (
           <Table size="small">
             <TableHead>
               <TableRow>
                 <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Player</TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }} align="right">Ratio</TableCell>
+                <TableCell
+                  sx={{ fontWeight: 600, color: 'text.secondary' }}
+                  align="right"
+                >
+                  Ratio
+                </TableCell>
                 <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Rating</TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary', width: '30%' }}></TableCell>
+                <TableCell
+                  sx={{ fontWeight: 600, color: 'text.secondary', width: '30%' }}
+                ></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {playerData.map((row) => (
-                <TableRow key={row.playerId} hover>
+                <TableRow
+                  key={row.playerId}
+                  hover
+                >
                   <TableCell>
                     <Typography variant="body2">
-                      <PlayerLink playerId={row.playerId}>
-                        {row.name}
-                      </PlayerLink>
+                      <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
-                    <Typography variant="body2" sx={{ fontFamily: 'monospace' }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ fontFamily: 'monospace' }}
+                    >
                       {row.ratio}:1
                     </Typography>
                   </TableCell>
                   <TableCell>
-                    <Typography variant="body2" sx={{ color: CHART_COLORS.combatEffectiveness(row.ratio) }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ color: CHART_COLORS.combatEffectiveness(row.ratio) }}
+                    >
                       {ratioLabel(row.ratio)}
                     </Typography>
                   </TableCell>
                   <TableCell>
-                    <Box sx={{ height: 8, borderRadius: 1, backgroundColor: CHART_COLORS.combatEffectiveness(row.ratio), width: `${(row.ratio / maxValue) * 100}%`, opacity: 0.8 }} />
+                    <Box
+                      sx={{
+                        height: 8,
+                        borderRadius: 1,
+                        backgroundColor: CHART_COLORS.combatEffectiveness(row.ratio),
+                        width: `${(row.ratio / maxValue) * 100}%`,
+                        opacity: 0.8
+                      }}
+                    />
                   </TableCell>
                 </TableRow>
               ))}

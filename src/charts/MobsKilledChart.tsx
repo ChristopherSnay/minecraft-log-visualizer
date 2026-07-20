@@ -1,11 +1,12 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
-import { ThemedCard } from '../components/ThemedCard';
-import { ChartEmptyState } from '../components/ChartEmptyState';
 import React, { useMemo } from 'react';
 import { Doughnut } from 'react-chartjs-2';
+
+import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
-import { getItemName } from '../utils/itemNames';
 import { getPieChartOptions } from '../utils/chartOptions';
+import { getItemName } from '../utils/itemNames';
 
 interface MobsKilledChartProps {
   mobs: Record<string, number>;
@@ -57,7 +58,10 @@ export const MobsKilledChart: React.FC<MobsKilledChartProps> = ({ mobs }) => {
       <CardHeader title="Mobs Killed" />
       <CardContent>
         <Box sx={{ height: 300 }}>
-          <Doughnut data={chartData} options={options} />
+          <Doughnut
+            data={chartData}
+            options={options}
+          />
         </Box>
       </CardContent>
     </ThemedCard>

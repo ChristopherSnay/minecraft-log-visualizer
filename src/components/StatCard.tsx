@@ -1,4 +1,5 @@
-import { Typography, type SxProps, type Theme } from '@mui/material';
+import { type SxProps, type Theme, Typography } from '@mui/material';
+
 import { ThemedCard } from './ThemedCard';
 
 interface StatCardProps {
@@ -19,9 +20,7 @@ export function StatCard({ value, label, onClick, sx, elevation = 2 }: StatCardP
         textAlign: 'center',
         cursor: onClick ? 'pointer' : 'default',
         transition: 'border-color 0.15s',
-        '&:hover': onClick
-          ? { borderColor: (theme) => theme.palette.primary.main }
-          : undefined,
+        '&:hover': onClick ? { borderColor: (theme) => theme.palette.primary.main } : undefined,
         ...sx
       }}
     >

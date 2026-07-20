@@ -2,6 +2,7 @@
 import { Box, createTheme, CssBaseline, ThemeProvider, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
 import { Outlet } from 'react-router-dom';
+
 import { StatsProvider, useStats } from './context/StatsContext';
 
 const AppInner: React.FC = () => {

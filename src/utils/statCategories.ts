@@ -92,9 +92,7 @@ export function getStatLabel(key: string): string {
  * Return only the categories that have at least one stat present in the
  * given custom_stats record, with their present stat keys.
  */
-export function getPresentCategories(
-  players: PlayerStats[]
-): Record<string, string[]> {
+export function getPresentCategories(players: PlayerStats[]): Record<string, string[]> {
   const result: Record<string, string[]> = {};
   for (const [category, keys] of Object.entries(CUSTOM_STAT_CATEGORIES)) {
     // Include a stat if ANY player has it, so the radar shows every axis for

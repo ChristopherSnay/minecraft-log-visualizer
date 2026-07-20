@@ -1,5 +1,6 @@
 import { Box, CircularProgress, Link, Typography } from '@mui/material';
-import { useParams, Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useParams } from 'react-router-dom';
+
 import { PlayerOverview } from '../components/PlayerOverview';
 import { useStats } from '../context/StatsContext';
 
@@ -41,7 +42,10 @@ export default function PlayerDetailPage() {
           ← Back to Dashboard
         </Link>
       </Box>
-      <PlayerOverview stats={stats} selectedPlayerId={playerId} />
+      <PlayerOverview
+        stats={stats}
+        selectedPlayerId={playerId}
+      />
     </>
   );
 }

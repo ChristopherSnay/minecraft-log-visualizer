@@ -1,6 +1,7 @@
 import { Box, Chip, Container, Typography } from '@mui/material';
 import { useCallback, useMemo, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+
 import { Activity24HourChart } from '../charts/Activity24HourChart';
 import { ActivityMetricsChart } from '../charts/ActivityMetricsChart';
 import { BlockCategoriesChart } from '../charts/BlockCategoriesChart';
@@ -40,10 +41,7 @@ export default function HomePage() {
     [stats]
   );
 
-  const playerEntries = useMemo(
-    () => (players ? Object.entries(players) : []),
-    [players]
-  );
+  const playerEntries = useMemo(() => (players ? Object.entries(players) : []), [players]);
 
   const comparisonData = useMemo(
     () => ({
@@ -129,12 +127,22 @@ export default function HomePage() {
 
   if (!players || !totals) {
     return (
-      <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Container
+        maxWidth="lg"
+        sx={{ py: 4 }}
+      >
         <Box sx={{ textAlign: 'center', py: 8 }}>
-          <Typography variant="h5" color="text.secondary">
+          <Typography
+            variant="h5"
+            color="text.secondary"
+          >
             No stats available
           </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ mt: 1 }}
+          >
             Check that /data/stats.json exists
           </Typography>
         </Box>
@@ -143,7 +151,10 @@ export default function HomePage() {
   }
 
   return (
-    <Container maxWidth="lg" sx={{ py: { xs: 2, md: 4 }, px: { xs: 1, sm: 2 } }}>
+    <Container
+      maxWidth="lg"
+      sx={{ py: { xs: 2, md: 4 }, px: { xs: 1, sm: 2 } }}
+    >
       {/* Stat Cards - always visible */}
       <StatCards
         totalPlaytimeSeconds={totals.totalPlaytimeSeconds}
@@ -307,7 +318,10 @@ export default function HomePage() {
       <ThemedSection title="Resources & Crafting">
         <ResponsiveGrid>
           <BlockCategoriesChart allPlayers={players} />
-          <ItemsPickedUpChart allPlayers={players} limit={10} />
+          <ItemsPickedUpChart
+            allPlayers={players}
+            limit={10}
+          />
         </ResponsiveGrid>
       </ThemedSection>
 
@@ -323,7 +337,10 @@ export default function HomePage() {
           borderColor: 'divider'
         }}
       >
-        <Typography variant="caption" color="text.secondary">
+        <Typography
+          variant="caption"
+          color="text.secondary"
+        >
           {capturedAt
             ? `Stats captured ${capturedAt.toLocaleString()}`
             : 'Stats captured time unknown'}

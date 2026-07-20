@@ -1,6 +1,7 @@
 // src/components/PlayerOverview.tsx
 import { Box, Container, Paper, Tab, Tabs, Typography } from '@mui/material';
 import React, { useState } from 'react';
+
 import { CustomStatsRadarCharts } from '../charts/CustomStatsRadarCharts';
 import { ItemDataChart } from '../charts/ItemDataChart';
 import { MobsKilledChart } from '../charts/MobsKilledChart';
@@ -20,10 +21,7 @@ interface PlayerOverviewProps {
   selectedPlayerId?: string;
 }
 
-export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
-  stats,
-  selectedPlayerId
-}) => {
+export const PlayerOverview: React.FC<PlayerOverviewProps> = ({ stats, selectedPlayerId }) => {
   const [selectedPlayerTab, setSelectedPlayerTab] = useState(0);
 
   const players = Object.entries(stats.stats.players);
@@ -52,10 +50,16 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
   };
 
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
+    <Container
+      maxWidth="lg"
+      sx={{ py: 4 }}
+    >
       {/* Player Selection - only show if no specific player selected */}
       {!selectedPlayerId && (
-        <Paper elevation={3} sx={{ mb: 3 }}>
+        <Paper
+          elevation={3}
+          sx={{ mb: 3 }}
+        >
           <Tabs
             value={selectedPlayerTab}
             onChange={handlePlayerChange}
@@ -63,7 +67,10 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
             scrollButtons="auto"
           >
             {players.map(([id, player]) => (
-              <Tab key={id} label={player.name} />
+              <Tab
+                key={id}
+                label={player.name}
+              />
             ))}
           </Tabs>
         </Paper>
@@ -80,7 +87,10 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
           >
             {playerStats.name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+          >
             Player Statistics
           </Typography>
         </Box>
@@ -144,7 +154,10 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
         <ResponsiveGrid columns={2}>
           <MobsKilledChart mobs={playerStats.mobs_killed} />
           <ThemedCard sx={{ p: 2 }}>
-            <Typography variant="h6" gutterBottom>
+            <Typography
+              variant="h6"
+              gutterBottom
+            >
               Combat Stats
             </Typography>
             <Box

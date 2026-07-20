@@ -1,21 +1,20 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
-import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
+import type { ChartOptions } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
+
+import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
-import type { ChartOptions } from 'chart.js';
 import type { PlayerStats } from '../types';
-import { cmToKm, getPlayerDisplayName } from '../utils/chartUtils';
 import { getBaseChartOptions } from '../utils/chartOptions';
+import { cmToKm, getPlayerDisplayName } from '../utils/chartUtils';
 
 interface EnhancedTravelChartProps {
   allPlayers: Record<string, PlayerStats>;
 }
 
-export const EnhancedTravelChart: React.FC<EnhancedTravelChartProps> = ({
-  allPlayers
-}) => {
+export const EnhancedTravelChart: React.FC<EnhancedTravelChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
 
   const { chartData, options } = useMemo(() => {
@@ -161,7 +160,10 @@ export const EnhancedTravelChart: React.FC<EnhancedTravelChartProps> = ({
       />
       <CardContent>
         <Box sx={{ height: 400 }}>
-          <Bar data={chartData} options={options} />
+          <Bar
+            data={chartData}
+            options={options}
+          />
         </Box>
       </CardContent>
     </ThemedCard>

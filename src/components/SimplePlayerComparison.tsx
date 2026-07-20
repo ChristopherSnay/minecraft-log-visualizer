@@ -17,10 +17,11 @@ import {
 import { useTheme } from '@mui/material/styles';
 import { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
-import { ChartEmptyState } from './ChartEmptyState';
+
 import { useChartViewMode } from '../hooks/useChartViewMode';
-import type { PlayerRow } from '../utils/chartUtils';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
+import type { PlayerRow } from '../utils/chartUtils';
+import { ChartEmptyState } from './ChartEmptyState';
 import { PlayerLink } from './PlayerLink';
 
 interface SimplePlayerComparisonProps {
@@ -83,12 +84,20 @@ export function SimplePlayerComparison({
   const maxValue = rows[0]?.value ?? 1;
 
   return (
-    <Card elevation={1} sx={{ border: (t) => `1px solid ${t.palette.divider}` }}>
+    <Card
+      elevation={1}
+      sx={{ border: (t) => `1px solid ${t.palette.divider}` }}
+    >
       <CardHeader
         title={title}
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode} aria-label="Toggle chart/table view">
+            <IconButton
+              size="small"
+              sx={{ opacity: 0.5 }}
+              onClick={toggleViewMode}
+              aria-label="Toggle chart/table view"
+            >
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (
@@ -101,15 +110,16 @@ export function SimplePlayerComparison({
       <CardContent sx={{ pt: 0 }}>
         {viewMode === 'chart' ? (
           <Box sx={{ height: 220 }}>
-            <Bar data={chartData} options={options} />
+            <Bar
+              data={chartData}
+              options={options}
+            />
           </Box>
         ) : (
           <Table size="small">
             <TableHead>
               <TableRow>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>
-                  Player
-                </TableCell>
+                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Player</TableCell>
                 <TableCell
                   sx={{ fontWeight: 600, color: 'text.secondary' }}
                   align="right"
@@ -123,14 +133,20 @@ export function SimplePlayerComparison({
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <TableRow key={row.playerId} hover>
+                <TableRow
+                  key={row.playerId}
+                  hover
+                >
                   <TableCell>
                     <Typography variant="body2">
                       <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
-                    <Typography variant="body2" sx={{ fontFamily: 'monospace' }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ fontFamily: 'monospace' }}
+                    >
                       {format(row.value)}
                     </Typography>
                   </TableCell>

@@ -86,7 +86,10 @@ export const getBaseChartOptions = (
   return {
     ...baseOptions,
     ...rest,
-    scales: mergeScales(baseOptions.scales as Record<string, ScaleOptions>, customScales as Record<string, ScaleOptions>)
+    scales: mergeScales(
+      baseOptions.scales as Record<string, ScaleOptions>,
+      customScales as Record<string, ScaleOptions>
+    )
   } as ChartOptions;
 };
 
@@ -106,7 +109,10 @@ export const getHorizontalBarOptions = (
     ...base,
     ...rest,
     indexAxis: 'y' as const,
-    scales: mergeScales(base.scales as Record<string, ScaleOptions>, customScales as Record<string, ScaleOptions>)
+    scales: mergeScales(
+      base.scales as Record<string, ScaleOptions>,
+      customScales as Record<string, ScaleOptions>
+    )
   } as ChartOptions<'bar'>;
 };
 
@@ -159,6 +165,9 @@ export const getLineChartOptions = (
   return {
     ...base,
     ...rest,
-    scales: mergeScales(base.scales as Record<string, ScaleOptions>, customScales as Record<string, ScaleOptions>)
+    scales: mergeScales(
+      base.scales as Record<string, ScaleOptions>,
+      customScales as Record<string, ScaleOptions>
+    )
   } as ChartOptions<'line'>;
 };

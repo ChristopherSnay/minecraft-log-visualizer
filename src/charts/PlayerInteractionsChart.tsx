@@ -1,20 +1,19 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
-import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
+
+import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
-import { getPlayerDisplayName } from '../utils/chartUtils';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
+import { getPlayerDisplayName } from '../utils/chartUtils';
 
 interface PlayerInteractionsChartProps {
   allPlayers: Record<string, PlayerStats>;
 }
 
-export const PlayerInteractionsChart: React.FC<PlayerInteractionsChartProps> = ({
-  allPlayers
-}) => {
+export const PlayerInteractionsChart: React.FC<PlayerInteractionsChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
 
   const { chartData, options } = useMemo(() => {
@@ -132,7 +131,10 @@ export const PlayerInteractionsChart: React.FC<PlayerInteractionsChartProps> = (
       />
       <CardContent>
         <Box sx={{ height: 500 }}>
-          <Bar data={chartData} options={options} />
+          <Bar
+            data={chartData}
+            options={options}
+          />
         </Box>
       </CardContent>
     </ThemedCard>

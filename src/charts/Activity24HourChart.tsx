@@ -1,12 +1,13 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
-import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Line } from 'react-chartjs-2';
+
+import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
 import type { PlayerStats } from '../types';
-import { seededRandom } from '../utils/chartUtils';
 import { getLineChartOptions } from '../utils/chartOptions';
+import { seededRandom } from '../utils/chartUtils';
 
 interface Activity24HourChartProps {
   allPlayers: Record<string, PlayerStats>;
@@ -17,9 +18,7 @@ interface ActivityDataPoint {
   activity: number;
 }
 
-export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({
-  allPlayers
-}) => {
+export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
 
   const { chartData, options } = useMemo(() => {
@@ -115,7 +114,10 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({
       <CardHeader title="Last 24 Hours Activity Level" />
       <CardContent>
         <Box sx={{ height: 300 }}>
-          <Line data={chartData} options={options} />
+          <Line
+            data={chartData}
+            options={options}
+          />
         </Box>
       </CardContent>
     </ThemedCard>

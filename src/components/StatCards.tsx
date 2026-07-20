@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+
 import { formatDuration } from '../utils/statsHelpers';
 import { StatCard } from './StatCard';
 

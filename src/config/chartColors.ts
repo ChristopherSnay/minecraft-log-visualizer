@@ -40,7 +40,7 @@ export const CHART_COLORS = {
     '#2196F3', // Blue
     '#3F51B5', // Indigo
     '#9C27B0', // Purple
-    '#E91E63'  // Pink
+    '#E91E63' // Pink
   ],
 
   // Combat effectiveness (for damage ratio)

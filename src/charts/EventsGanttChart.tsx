@@ -2,6 +2,7 @@ import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
 import type { ChartData, ChartOptions, Plugin } from 'chart.js';
 import React, { useCallback, useMemo, useRef } from 'react';
 import { Bar } from 'react-chartjs-2';
+
 import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
@@ -106,8 +107,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
           if (loginH > TIME_WINDOW || loginH < 0) return;
 
           if (leaveIdx < leaves.length) {
-            const logoutH =
-              (now.getTime() - leaves[leaveIdx]._time.getTime()) / (1000 * 60 * 60);
+            const logoutH = (now.getTime() - leaves[leaveIdx]._time.getTime()) / (1000 * 60 * 60);
             if (logoutH <= TIME_WINDOW && logoutH >= 0) {
               sessions.push({
                 player,
@@ -196,13 +196,10 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
     }
 
     const hasEvents = sessions.length > 0 || events.length > 0;
-    if (!hasEvents)
-      return { chartData: null, options: null, ganttEvents: [], hasEvents: false };
+    if (!hasEvents) return { chartData: null, options: null, ganttEvents: [], hasEvents: false };
 
     const hasVillagerDeaths = events.some((e) => e.type === 'villager_death');
-    const playerNames = [
-      ...new Set([...sessions.map((s) => s.player), ...events.map((e) => e.y)])
-    ]
+    const playerNames = [...new Set([...sessions.map((s) => s.player), ...events.map((e) => e.y)])]
       .filter((n) => n !== 'Villager')
       .sort();
     if (hasVillagerDeaths) playerNames.push('Villager');

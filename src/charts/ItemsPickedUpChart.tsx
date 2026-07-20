@@ -16,9 +16,10 @@ import {
 } from '@mui/material';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
+
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
-import { ChartEmptyState } from '../components/ChartEmptyState';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
@@ -42,11 +43,9 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
     // Aggregate items picked up from all players
     Object.values(allPlayers).forEach((player: PlayerStats) => {
       if (player.items_picked_up) {
-        Object.entries(player.items_picked_up).forEach(
-          ([item, count]: [string, number]) => {
-            itemCounts[item] = (itemCounts[item] || 0) + count;
-          }
-        );
+        Object.entries(player.items_picked_up).forEach(([item, count]: [string, number]) => {
+          itemCounts[item] = (itemCounts[item] || 0) + count;
+        });
       }
     });
 
@@ -93,7 +92,12 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
         title={`Top ${limit} Items Picked Up`}
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode} aria-label="Toggle chart/table view">
+            <IconButton
+              size="small"
+              sx={{ opacity: 0.5 }}
+              onClick={toggleViewMode}
+              aria-label="Toggle chart/table view"
+            >
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (
@@ -106,16 +110,17 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
       <CardContent sx={{ pt: 0 }}>
         {viewMode === 'chart' ? (
           <Box sx={{ height: Math.max(400, limit * 35) }}>
-            <Bar data={chartData} options={options} />
+            <Bar
+              data={chartData}
+              options={options}
+            />
           </Box>
         ) : (
           <Table size="small">
             <TableHead>
               <TableRow>
                 <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>#</TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>
-                  Item
-                </TableCell>
+                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Item</TableCell>
                 <TableCell
                   sx={{ fontWeight: 600, color: 'text.secondary' }}
                   align="right"
@@ -129,9 +134,15 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
             </TableHead>
             <TableBody>
               {itemData.map((row, i) => (
-                <TableRow key={row.name} hover>
+                <TableRow
+                  key={row.name}
+                  hover
+                >
                   <TableCell>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ color: 'text.secondary' }}
+                    >
                       {i + 1}
                     </Typography>
                   </TableCell>
@@ -139,7 +150,10 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
                     <Typography variant="body2">{row.name}</Typography>
                   </TableCell>
                   <TableCell align="right">
-                    <Typography variant="body2" sx={{ fontFamily: 'monospace' }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ fontFamily: 'monospace' }}
+                    >
                       {row.count.toLocaleString()}
                     </Typography>
                   </TableCell>

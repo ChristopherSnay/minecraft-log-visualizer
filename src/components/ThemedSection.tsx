@@ -2,6 +2,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Accordion, AccordionDetails, AccordionSummary, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import React, { useState } from 'react';
+
 import { SectionHeading } from './SectionHeading';
 
 interface ThemedSectionProps {
@@ -45,13 +46,9 @@ export const ThemedSection: React.FC<ThemedSectionProps> = ({
           }
         }}
       >
-        <SectionHeading sx={{ mt: 0, mb: 0, pb: 0, borderBottom: 0 }}>
-          {title}
-        </SectionHeading>
+        <SectionHeading sx={{ mt: 0, mb: 0, pb: 0, borderBottom: 0 }}>{title}</SectionHeading>
       </AccordionSummary>
-      <AccordionDetails sx={{ px: { xs: 1, sm: 3 }, pt: 0, pb: 3 }}>
-        {children}
-      </AccordionDetails>
+      <AccordionDetails sx={{ px: { xs: 1, sm: 3 }, pt: 0, pb: 3 }}>{children}</AccordionDetails>
     </Accordion>
   );
 };

@@ -18,6 +18,7 @@ import { useTheme } from '@mui/material/styles';
 import type { ChartOptions } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
+
 import { ChartEmptyState } from '../components/ChartEmptyState';
 import { getDatasetColors } from '../config/chartColors';
 import { useChartViewMode } from '../hooks/useChartViewMode';
@@ -91,7 +92,10 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
   const { backgroundColor } = getDatasetColors(colorIndex);
 
   return (
-    <Card elevation={1} sx={{ border: (t) => `1px solid ${t.palette.divider}` }}>
+    <Card
+      elevation={1}
+      sx={{ border: (t) => `1px solid ${t.palette.divider}` }}
+    >
       <CardHeader
         title={title}
         action={
@@ -114,15 +118,16 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
       <CardContent sx={{ pt: 0 }}>
         {viewMode === 'chart' ? (
           <Box sx={{ height: 280 }}>
-            <Bar data={chartData!} options={options!} />
+            <Bar
+              data={chartData!}
+              options={options!}
+            />
           </Box>
         ) : (
           <Table size="small">
             <TableHead>
               <TableRow>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>
-                  Item
-                </TableCell>
+                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Item</TableCell>
                 <TableCell
                   sx={{ fontWeight: 600, color: 'text.secondary' }}
                   align="right"
@@ -136,12 +141,18 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
             </TableHead>
             <TableBody>
               {items.map((row) => (
-                <TableRow key={row.name} hover>
+                <TableRow
+                  key={row.name}
+                  hover
+                >
                   <TableCell>
                     <Typography variant="body2">{row.name}</Typography>
                   </TableCell>
                   <TableCell align="right">
-                    <Typography variant="body2" sx={{ fontFamily: 'monospace' }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ fontFamily: 'monospace' }}
+                    >
                       {row.count.toLocaleString()}
                     </Typography>
                   </TableCell>

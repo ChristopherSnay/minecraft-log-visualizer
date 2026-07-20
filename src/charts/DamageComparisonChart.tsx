@@ -1,21 +1,20 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
-import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
 import type { ChartOptions, TooltipItem } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
+
+import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
 import type { PlayerStats } from '../types';
-import { damageToHearts, getPlayerDisplayName } from '../utils/chartUtils';
 import { getBaseChartOptions } from '../utils/chartOptions';
+import { damageToHearts, getPlayerDisplayName } from '../utils/chartUtils';
 
 interface DamageComparisonChartProps {
   allPlayers: Record<string, PlayerStats>;
 }
 
-export const DamageComparisonChart: React.FC<DamageComparisonChartProps> = ({
-  allPlayers
-}) => {
+export const DamageComparisonChart: React.FC<DamageComparisonChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
 
   const { chartData, options } = useMemo(() => {
@@ -95,7 +94,10 @@ export const DamageComparisonChart: React.FC<DamageComparisonChartProps> = ({
       />
       <CardContent>
         <Box sx={{ height: 350 }}>
-          <Bar data={chartData} options={options} />
+          <Bar
+            data={chartData}
+            options={options}
+          />
         </Box>
       </CardContent>
     </ThemedCard>

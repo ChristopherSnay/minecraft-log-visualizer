@@ -9,6 +9,7 @@ import {
   Typography
 } from '@mui/material';
 import React, { useMemo, useState } from 'react';
+
 import type { PlayerStats } from '../types';
 import { getAdvancementDisplayName } from '../utils/advancementNames';
 
@@ -19,9 +20,7 @@ interface PlayerAdvancementsProps {
   playerStats: PlayerStats;
 }
 
-export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({
-  playerStats
-}) => {
+export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({ playerStats }) => {
   const [sortColumn, setSortColumn] = useState<SortColumn>('date');
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
 
@@ -56,7 +55,10 @@ export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({
 
   if (advancements.length === 0) {
     return (
-      <Typography variant="body2" color="text.secondary">
+      <Typography
+        variant="body2"
+        color="text.secondary"
+      >
         No advancements completed yet.
       </Typography>
     );
@@ -77,8 +79,7 @@ export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({
         <TableHead>
           <TableRow
             sx={{
-              backgroundColor: (theme) =>
-                theme.palette.mode === 'dark' ? '#2a2a2a' : '#f5f5f5'
+              backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '#2a2a2a' : '#f5f5f5')
             }}
           >
             <TableCell
@@ -98,7 +99,10 @@ export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 Advancement
                 {sortColumn === 'advancement' && (
-                  <Typography variant="caption" sx={{ ml: 0.5 }}>
+                  <Typography
+                    variant="caption"
+                    sx={{ ml: 0.5 }}
+                  >
                     {sortOrder === 'asc' ? '↑' : '↓'}
                   </Typography>
                 )}
@@ -129,7 +133,10 @@ export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({
               >
                 Date Accomplished
                 {sortColumn === 'date' && (
-                  <Typography variant="caption" sx={{ ml: 0.5 }}>
+                  <Typography
+                    variant="caption"
+                    sx={{ ml: 0.5 }}
+                  >
                     {sortOrder === 'asc' ? '↑' : '↓'}
                   </Typography>
                 )}
@@ -141,12 +148,13 @@ export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({
           {advancements.map((adv) => (
             <TableRow key={adv.id}>
               <TableCell>
-                <Typography variant="body2">
-                  {getAdvancementDisplayName(adv.id)}
-                </Typography>
+                <Typography variant="body2">{getAdvancementDisplayName(adv.id)}</Typography>
               </TableCell>
               <TableCell align="right">
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                >
                   {formatDate(adv.time)}
                 </Typography>
               </TableCell>

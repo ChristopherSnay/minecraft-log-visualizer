@@ -1,8 +1,9 @@
 import { Box, CardContent, CardHeader } from '@mui/material';
 import React, { useMemo } from 'react';
+
+import { cmToKm, damageToHearts, ticksToHours } from '../utils/chartUtils';
 import { StatCard } from './StatCard';
 import { ThemedCard } from './ThemedCard';
-import { cmToKm, damageToHearts, ticksToHours } from '../utils/chartUtils';
 
 interface PlaytimeStatsProps {
   customStats: Record<string, number>;

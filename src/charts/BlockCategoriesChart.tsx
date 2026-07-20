@@ -14,11 +14,12 @@ import {
   Typography,
   useTheme
 } from '@mui/material';
-import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Doughnut } from 'react-chartjs-2';
-import { getPaletteColor } from '../config/chartColors';
+
 import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ThemedCard } from '../components/ThemedCard';
+import { getPaletteColor } from '../config/chartColors';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 import { getPieChartOptions } from '../utils/chartOptions';
@@ -123,9 +124,7 @@ const BLOCK_CATEGORIES: Record<string, string[]> = {
   ]
 };
 
-export const BlockCategoriesChart: React.FC<BlockCategoriesChartProps> = ({
-  allPlayers
-}) => {
+export const BlockCategoriesChart: React.FC<BlockCategoriesChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
   const { viewMode, toggleViewMode } = useChartViewMode();
 
@@ -189,7 +188,12 @@ export const BlockCategoriesChart: React.FC<BlockCategoriesChartProps> = ({
         title="Blocks Mined by Category"
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode} aria-label="Toggle chart/table view">
+            <IconButton
+              size="small"
+              sx={{ opacity: 0.5 }}
+              onClick={toggleViewMode}
+              aria-label="Toggle chart/table view"
+            >
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (
@@ -202,39 +206,79 @@ export const BlockCategoriesChart: React.FC<BlockCategoriesChartProps> = ({
       <CardContent sx={{ pt: 0 }}>
         {viewMode === 'chart' ? (
           <Box sx={{ height: 300 }}>
-            <Doughnut data={chartData} options={options} />
+            <Doughnut
+              data={chartData}
+              options={options}
+            />
           </Box>
         ) : (
           <Table size="small">
             <TableHead>
               <TableRow>
                 <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Category</TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }} align="right">Count</TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }} align="right">%</TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary', width: '30%' }}></TableCell>
+                <TableCell
+                  sx={{ fontWeight: 600, color: 'text.secondary' }}
+                  align="right"
+                >
+                  Count
+                </TableCell>
+                <TableCell
+                  sx={{ fontWeight: 600, color: 'text.secondary' }}
+                  align="right"
+                >
+                  %
+                </TableCell>
+                <TableCell
+                  sx={{ fontWeight: 600, color: 'text.secondary', width: '30%' }}
+                ></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {categoryData.map((cat, i) => (
-                <TableRow key={cat.name} hover>
+                <TableRow
+                  key={cat.name}
+                  hover
+                >
                   <TableCell>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <Box sx={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: getPaletteColor(i), flexShrink: 0 }} />
+                      <Box
+                        sx={{
+                          width: 12,
+                          height: 12,
+                          borderRadius: '50%',
+                          backgroundColor: getPaletteColor(i),
+                          flexShrink: 0
+                        }}
+                      />
                       <Typography variant="body2">{cat.name}</Typography>
                     </Box>
                   </TableCell>
                   <TableCell align="right">
-                    <Typography variant="body2" sx={{ fontFamily: 'monospace' }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ fontFamily: 'monospace' }}
+                    >
                       {cat.value.toLocaleString()}
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
-                    <Typography variant="body2" sx={{ fontFamily: 'monospace', color: 'text.secondary' }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ fontFamily: 'monospace', color: 'text.secondary' }}
+                    >
                       {((cat.value / totalBlocks) * 100).toFixed(1)}%
                     </Typography>
                   </TableCell>
                   <TableCell>
-                    <Box sx={{ height: 8, borderRadius: 1, backgroundColor: getPaletteColor(i), width: `${(cat.value / maxValue) * 100}%`, opacity: 0.8 }} />
+                    <Box
+                      sx={{
+                        height: 8,
+                        borderRadius: 1,
+                        backgroundColor: getPaletteColor(i),
+                        width: `${(cat.value / maxValue) * 100}%`,
+                        opacity: 0.8
+                      }}
+                    />
                   </TableCell>
                 </TableRow>
               ))}

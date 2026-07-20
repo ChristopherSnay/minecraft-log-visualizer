@@ -28,10 +28,7 @@ export function derivePlayerStats(player: PlayerStats): DerivedPlayerStats {
   const totalItemsUsed = player.items_used
     ? Object.values(player.items_used).reduce((sum, count) => sum + count, 0)
     : 0;
-  const totalMobsKilled = Object.values(player.mobs_killed).reduce(
-    (sum, count) => sum + count,
-    0
-  );
+  const totalMobsKilled = Object.values(player.mobs_killed).reduce((sum, count) => sum + count, 0);
 
   const damageTaken = player.custom_stats['minecraft:damage_taken'] || 0;
   const sessions = player.custom_stats['minecraft:leave_game'] || 0;
