@@ -1,5 +1,6 @@
 import json
 import os
+import zipfile
 from datetime import datetime, timezone
 
 from collectors.advancements import collect_advancements
@@ -119,8 +120,9 @@ def main():
     os.makedirs(backup_dir, exist_ok=True)
 
     ts = captured_at.replace(":", "-").replace("+", "-").replace(".", "-")
-    backup_path = os.path.join(backup_dir, f"stats-{ts}.json")
-    write_json(backup_path, world)
+    backup_path = os.path.join(backup_dir, f"stats-{ts}.zip")
+    with zipfile.ZipFile(backup_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        zf.writestr("stats.json", json.dumps(world, indent=2))
 
     print(f"Generated {output_path}")
     print(f"Backup  {backup_path}")
