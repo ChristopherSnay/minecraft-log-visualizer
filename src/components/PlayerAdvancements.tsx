@@ -31,19 +31,17 @@ export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({
     const filtered = playerStats.completed.filter((adv) => !adv.id.includes(':recipes/'));
 
     return filtered.sort((a, b) => {
-      let comparison = 0;
-
       if (sortColumn === 'advancement') {
         const nameA = getAdvancementDisplayName(a.id).toLowerCase();
         const nameB = getAdvancementDisplayName(b.id).toLowerCase();
-        comparison = nameA.localeCompare(nameB);
+        const comparison = nameA.localeCompare(nameB);
+        return sortOrder === 'desc' ? -comparison : comparison;
       } else {
         if (!a.time) return 1;
         if (!b.time) return -1;
-        comparison = new Date(b.time).getTime() - new Date(a.time).getTime();
+        const comparison = new Date(b.time).getTime() - new Date(a.time).getTime();
+        return sortOrder === 'desc' ? -comparison : comparison;
       }
-
-      return sortOrder === 'desc' ? -comparison : comparison;
     });
   }, [playerStats.completed, sortColumn, sortOrder]);
 
