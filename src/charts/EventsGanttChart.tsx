@@ -106,7 +106,8 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
           if (loginH > TIME_WINDOW || loginH < 0) return;
 
           if (leaveIdx < leaves.length) {
-            const logoutH = (now.getTime() - leaves[leaveIdx]._time.getTime()) / (1000 * 60 * 60);
+            const logoutH =
+              (now.getTime() - leaves[leaveIdx]._time.getTime()) / (1000 * 60 * 60);
             if (logoutH <= TIME_WINDOW && logoutH >= 0) {
               sessions.push({
                 player,
@@ -150,7 +151,9 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
                   time: adv.time
                 });
               }
-            } catch (_e) { /* skip */ }
+            } catch (_e) {
+              /* skip */
+            }
           }
         });
       }
@@ -185,19 +188,21 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
                 time: event.timestamp
               });
             }
-          } catch (_e) { /* skip */ }
+          } catch (_e) {
+            /* skip */
+          }
         }
       });
     }
 
     const hasEvents = sessions.length > 0 || events.length > 0;
-    if (!hasEvents) return { chartData: null, options: null, ganttEvents: [], hasEvents: false };
+    if (!hasEvents)
+      return { chartData: null, options: null, ganttEvents: [], hasEvents: false };
 
     const hasVillagerDeaths = events.some((e) => e.type === 'villager_death');
-    const playerNames = [...new Set([
-      ...sessions.map((s) => s.player),
-      ...events.map((e) => e.y)
-    ])]
+    const playerNames = [
+      ...new Set([...sessions.map((s) => s.player), ...events.map((e) => e.y)])
+    ]
       .filter((n) => n !== 'Villager')
       .sort();
     if (hasVillagerDeaths) playerNames.push('Villager');
@@ -267,17 +272,26 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
               return raw?.y ?? '';
             },
             label: (item) => {
-              const raw = item.raw as { x: [number, number]; y: string; loginTime?: string; logoutTime?: string };
+              const raw = item.raw as {
+                x: [number, number];
+                y: string;
+                loginTime?: string;
+                logoutTime?: string;
+              };
               if (raw?.x) {
                 const [start, end] = raw.x;
                 const duration = Math.round((end - start) * 10) / 10;
                 const h = Math.floor(duration);
                 const m = Math.round((duration - h) * 60);
                 const durationStr = h > 0 ? (m > 0 ? `${h}h ${m}m` : `${h}h`) : `${m}m`;
-                const loginStr = raw.loginTime ? formatTime(raw.loginTime) : `${Math.round(end * 10) / 10}h ago`;
+                const loginStr = raw.loginTime
+                  ? formatTime(raw.loginTime)
+                  : `${Math.round(end * 10) / 10}h ago`;
                 const logoutStr = raw.logoutTime
                   ? formatTime(raw.logoutTime)
-                  : (raw.x[0] === 0 ? 'now' : `${Math.round(start * 10) / 10}h ago`);
+                  : raw.x[0] === 0
+                    ? 'now'
+                    : `${Math.round(start * 10) / 10}h ago`;
                 return `${loginStr} → ${logoutStr} (${durationStr})`;
               }
               return '';
@@ -291,13 +305,17 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   }, [allPlayers, deathEvents, joinEvents, leaveEvents, theme]);
 
   const findNearestEvent = useCallback(
-    (chart: {
-      chartArea: { top: number; bottom: number; left: number; right: number };
-      scales: {
-        x: { getPixelForValue: (v: number) => number };
-        y: { getPixelForValue: (v: string | number) => number };
-      };
-    }, eventX: number, eventY: number): GanttEvent | null => {
+    (
+      chart: {
+        chartArea: { top: number; bottom: number; left: number; right: number };
+        scales: {
+          x: { getPixelForValue: (v: number) => number };
+          y: { getPixelForValue: (v: string | number) => number };
+        };
+      },
+      eventX: number,
+      eventY: number
+    ): GanttEvent | null => {
       const xScale = chart.scales.x;
       const yScale = chart.scales.y;
       let nearest: GanttEvent | null = null;
@@ -327,7 +345,9 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
     afterDatasetsDraw(chart) {
       const ctx = chart.ctx;
       const xScale = chart.scales.x;
-      const yScale = chart.scales.y as unknown as { getPixelForValue: (v: string | number) => number };
+      const yScale = chart.scales.y as unknown as {
+        getPixelForValue: (v: string | number) => number;
+      };
 
       ganttEvents.forEach((event) => {
         const x = xScale.getPixelForValue(event.x);
@@ -357,7 +377,9 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
       }
 
       const xScale = chart.scales.x;
-      const yScale = chart.scales.y as unknown as { getPixelForValue: (v: string | number) => number };
+      const yScale = chart.scales.y as unknown as {
+        getPixelForValue: (v: string | number) => number;
+      };
       const nearest = findNearestEvent(
         { scales: { x: xScale, y: yScale }, chartArea: chart.chartArea },
         evt.x,
@@ -376,7 +398,9 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
       tip.innerHTML = `<span style="color:${color};font-weight:600">${typeLabel}</span><br/>${nearest.detail}${timeStr ? `<br/><span style="opacity:0.7">${timeStr}</span>` : ''}`;
       tip.style.display = 'block';
 
-      const canvasRect = (chart as unknown as { canvas: HTMLCanvasElement }).canvas.getBoundingClientRect();
+      const canvasRect = (
+        chart as unknown as { canvas: HTMLCanvasElement }
+      ).canvas.getBoundingClientRect();
       const tipRect = tip.getBoundingClientRect();
       let left = canvasRect.left + evt.x + 12;
       let top = canvasRect.top + evt.y - tipRect.height / 2;
@@ -395,7 +419,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   };
 
   return (
-    <ThemedCard>
+    <ThemedCard elevation={0}>
       <CardHeader
         title={`Sessions & Events (Last ${TIME_WINDOW} Hours)`}
         subheader="Bars = session duration · Dots = events during session"
@@ -421,13 +445,15 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
           />
           <Bar
             data={chartData as unknown as ChartData<'bar'>}
-            options={{
-              ...options,
-              plugins: {
-                ...options.plugins,
-                eventDots: {}
-              }
-            } as ChartOptions<'bar'>}
+            options={
+              {
+                ...options,
+                plugins: {
+                  ...options.plugins,
+                  eventDots: {}
+                }
+              } as ChartOptions<'bar'>
+            }
             plugins={[eventDotsPlugin]}
           />
         </Box>

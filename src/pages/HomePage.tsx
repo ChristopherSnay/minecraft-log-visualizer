@@ -18,8 +18,14 @@ import { StatCards } from '../components/StatCards';
 import { ThemedSection } from '../components/ThemedSection';
 import { getPaletteColor } from '../config/chartColors';
 import { useStats } from '../context/StatsContext';
+import {
+  cmToKm,
+  damageToHearts,
+  getPlayerDisplayName,
+  sumRecord,
+  ticksToHours
+} from '../utils/chartUtils';
 import { calculateTotals } from '../utils/statsHelpers';
-import { cmToKm, damageToHearts, getPlayerDisplayName, sumRecord, ticksToHours } from '../utils/chartUtils';
 
 export default function HomePage() {
   const { stats, statsLoading } = useStats();
@@ -34,79 +40,88 @@ export default function HomePage() {
     [stats]
   );
 
-  const playerEntries = useMemo(() => players ? Object.entries(players) : [], [players]);
+  const playerEntries = useMemo(
+    () => (players ? Object.entries(players) : []),
+    [players]
+  );
 
-  const comparisonData = useMemo(() => ({
-    playtime: playerEntries
-      .map(([id, p]) => ({
-        playerId: id,
-        name: getPlayerDisplayName(p, id),
-        value: ticksToHours(p.custom_stats?.['minecraft:play_time'] ?? 0)
-      }))
-      .sort((a, b) => b.value - a.value),
-    blocks: playerEntries
-      .map(([id, p]) => ({
-        playerId: id,
-        name: getPlayerDisplayName(p, id),
-        value: sumRecord(p.blocks_mined)
-      }))
-      .sort((a, b) => b.value - a.value),
-    mobs: playerEntries
-      .map(([id, p]) => ({
-        playerId: id,
-        name: getPlayerDisplayName(p, id),
-        value: sumRecord(p.mobs_killed)
-      }))
-      .sort((a, b) => b.value - a.value),
-    itemsCrafted: playerEntries
-      .map(([id, p]) => ({
-        playerId: id,
-        name: getPlayerDisplayName(p, id),
-        value: sumRecord(p.items_crafted)
-      }))
-      .sort((a, b) => b.value - a.value),
-    itemsUsed: playerEntries
-      .map(([id, p]) => ({
-        playerId: id,
-        name: getPlayerDisplayName(p, id),
-        value: sumRecord(p.items_used)
-      }))
-      .sort((a, b) => b.value - a.value),
-    damageDealt: playerEntries
-      .map(([id, p]) => ({
-        playerId: id,
-        name: getPlayerDisplayName(p, id),
-        value: damageToHearts(p.custom_stats?.['minecraft:damage_dealt'] ?? 0)
-      }))
-      .sort((a, b) => b.value - a.value),
-    jumps: playerEntries
-      .map(([id, p]) => ({
-        playerId: id,
-        name: getPlayerDisplayName(p, id),
-        value: p.custom_stats?.['minecraft:jump'] ?? 0
-      }))
-      .sort((a, b) => b.value - a.value),
-    damageTaken: playerEntries
-      .map(([id, p]) => ({
-        playerId: id,
-        name: getPlayerDisplayName(p, id),
-        value: p.custom_stats?.['minecraft:damage_taken'] ?? 0
-      }))
-      .sort((a, b) => b.value - a.value),
-    distanceWalked: playerEntries
-      .map(([id, p]) => ({
-        playerId: id,
-        name: getPlayerDisplayName(p, id),
-        value: cmToKm(p.custom_stats?.['minecraft:walk_one_cm'] ?? 0)
-      }))
-      .sort((a, b) => b.value - a.value)
-  }), [playerEntries]);
+  const comparisonData = useMemo(
+    () => ({
+      playtime: playerEntries
+        .map(([id, p]) => ({
+          playerId: id,
+          name: getPlayerDisplayName(p, id),
+          value: ticksToHours(p.custom_stats?.['minecraft:play_time'] ?? 0)
+        }))
+        .sort((a, b) => b.value - a.value),
+      blocks: playerEntries
+        .map(([id, p]) => ({
+          playerId: id,
+          name: getPlayerDisplayName(p, id),
+          value: sumRecord(p.blocks_mined)
+        }))
+        .sort((a, b) => b.value - a.value),
+      mobs: playerEntries
+        .map(([id, p]) => ({
+          playerId: id,
+          name: getPlayerDisplayName(p, id),
+          value: sumRecord(p.mobs_killed)
+        }))
+        .sort((a, b) => b.value - a.value),
+      itemsCrafted: playerEntries
+        .map(([id, p]) => ({
+          playerId: id,
+          name: getPlayerDisplayName(p, id),
+          value: sumRecord(p.items_crafted)
+        }))
+        .sort((a, b) => b.value - a.value),
+      itemsUsed: playerEntries
+        .map(([id, p]) => ({
+          playerId: id,
+          name: getPlayerDisplayName(p, id),
+          value: sumRecord(p.items_used)
+        }))
+        .sort((a, b) => b.value - a.value),
+      damageDealt: playerEntries
+        .map(([id, p]) => ({
+          playerId: id,
+          name: getPlayerDisplayName(p, id),
+          value: damageToHearts(p.custom_stats?.['minecraft:damage_dealt'] ?? 0)
+        }))
+        .sort((a, b) => b.value - a.value),
+      jumps: playerEntries
+        .map(([id, p]) => ({
+          playerId: id,
+          name: getPlayerDisplayName(p, id),
+          value: p.custom_stats?.['minecraft:jump'] ?? 0
+        }))
+        .sort((a, b) => b.value - a.value),
+      damageTaken: playerEntries
+        .map(([id, p]) => ({
+          playerId: id,
+          name: getPlayerDisplayName(p, id),
+          value: p.custom_stats?.['minecraft:damage_taken'] ?? 0
+        }))
+        .sort((a, b) => b.value - a.value),
+      distanceWalked: playerEntries
+        .map(([id, p]) => ({
+          playerId: id,
+          name: getPlayerDisplayName(p, id),
+          value: cmToKm(p.custom_stats?.['minecraft:walk_one_cm'] ?? 0)
+        }))
+        .sort((a, b) => b.value - a.value)
+    }),
+    [playerEntries]
+  );
 
-  const { deathEvents, joinEvents, leaveEvents } = useMemo(() => ({
-    deathEvents: stats?.logs?.events?.filter((e) => e.type === 'death'),
-    joinEvents: stats?.logs?.events?.filter((e) => e.type === 'join'),
-    leaveEvents: stats?.logs?.events?.filter((e) => e.type === 'leave')
-  }), [stats?.logs?.events]);
+  const { deathEvents, joinEvents, leaveEvents } = useMemo(
+    () => ({
+      deathEvents: stats?.logs?.events?.filter((e) => e.type === 'death'),
+      joinEvents: stats?.logs?.events?.filter((e) => e.type === 'join'),
+      leaveEvents: stats?.logs?.events?.filter((e) => e.type === 'leave')
+    }),
+    [stats?.logs?.events]
+  );
 
   if (statsLoading) {
     return null;
@@ -160,6 +175,16 @@ export default function HomePage() {
           ))}
         </Box>
       )}
+
+      {/* Events Gantt */}
+      <Box sx={{ mb: 3 }}>
+        <EventsGanttChart
+          allPlayers={players}
+          deathEvents={deathEvents}
+          joinEvents={joinEvents}
+          leaveEvents={leaveEvents}
+        />
+      </Box>
 
       {/* Player Comparison */}
       <ThemedSection title="Player Comparison">
@@ -263,14 +288,6 @@ export default function HomePage() {
       <ThemedSection title="Activity & Efficiency">
         <Box sx={{ mb: 3 }}>
           <Activity24HourChart allPlayers={players} />
-        </Box>
-        <Box sx={{ mb: 3 }}>
-          <EventsGanttChart
-            allPlayers={players}
-            deathEvents={deathEvents}
-            joinEvents={joinEvents}
-            leaveEvents={leaveEvents}
-          />
         </Box>
         <Box sx={{ mb: 3 }}>
           <TimeAndSessionsChart allPlayers={players} />
