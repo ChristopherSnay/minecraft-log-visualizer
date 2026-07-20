@@ -267,6 +267,8 @@ export default function HomePage() {
           <EventsTimelineChart
             allPlayers={players}
             deathEvents={stats.logs?.events?.filter((e) => e.type === 'death')}
+            joinEvents={stats.logs?.events?.filter((e) => e.type === 'join')}
+            leaveEvents={stats.logs?.events?.filter((e) => e.type === 'leave')}
           />
         </Box>
         <Box sx={{ mb: 3 }}>

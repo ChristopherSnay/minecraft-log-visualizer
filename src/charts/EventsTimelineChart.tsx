@@ -1,10 +1,10 @@
 import { Box, CardContent, CardHeader, Typography, useTheme } from '@mui/material';
-import { ThemedCard } from '../components/ThemedCard';
 import type { ChartOptions } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Scatter } from 'react-chartjs-2';
+import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
-import type { LogDeathEvent, PlayerStats } from '../types';
+import type { LogDeathEvent, LogJoinEvent, LogLeaveEvent, PlayerStats } from '../types';
 import { getAdvancementDisplayName } from '../utils/advancementNames';
 import { getBaseChartOptions } from '../utils/chartOptions';
 
@@ -15,14 +15,26 @@ interface EventPoint {
   detail: string;
 }
 
+interface SessionLine {
+  player: string;
+  loginHoursAgo: number;
+  logoutHoursAgo: number;
+  loginIdx: number;
+  logoutIdx: number;
+}
+
 interface EventsTimelineChartProps {
   allPlayers: Record<string, PlayerStats>;
   deathEvents?: LogDeathEvent[];
+  joinEvents?: LogJoinEvent[];
+  leaveEvents?: LogLeaveEvent[];
 }
 
 export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
   allPlayers,
-  deathEvents
+  deathEvents,
+  joinEvents,
+  leaveEvents
 }) => {
   const theme = useTheme();
 
@@ -87,7 +99,109 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
       });
     }
 
-    const hasEvents = advancementPoints.length > 0 || playerDeathPoints.length > 0 || villagerDeathPoints.length > 0;
+    // Collect login timestamps (with index tracking for jitter alignment)
+    const loginPoints: Array<EventPoint & { _idx: number }> = [];
+    if (joinEvents) {
+      joinEvents.forEach((event, i) => {
+        if (event.timestamp) {
+          try {
+            const joinTime = new Date(event.timestamp);
+            const hoursAgo = (now.getTime() - joinTime.getTime()) / (1000 * 60 * 60);
+            if (hoursAgo <= 12 && hoursAgo >= 0) {
+              loginPoints.push({
+                x: hoursAgo,
+                y: 5,
+                player: event.player,
+                detail: 'joined',
+                _idx: i
+              });
+            }
+          } catch (_e) {
+            // Skip invalid timestamps
+          }
+        }
+      });
+    }
+
+    // Collect logout timestamps (with index tracking for jitter alignment)
+    const logoutPoints: Array<EventPoint & { _idx: number }> = [];
+    if (leaveEvents) {
+      leaveEvents.forEach((event, i) => {
+        if (event.timestamp) {
+          try {
+            const leaveTime = new Date(event.timestamp);
+            const hoursAgo = (now.getTime() - leaveTime.getTime()) / (1000 * 60 * 60);
+            if (hoursAgo <= 12 && hoursAgo >= 0) {
+              logoutPoints.push({
+                x: hoursAgo,
+                y: 7,
+                player: event.player,
+                detail: 'left',
+                _idx: i
+              });
+            }
+          } catch (_e) {
+            // Skip invalid timestamps
+          }
+        }
+      });
+    }
+
+    // Match join/leave events into sessions, tracking array indices
+    const sessions: SessionLine[] = [];
+    if (joinEvents && leaveEvents) {
+      const playerJoins: Record<string, LogJoinEvent[]> = {};
+      const playerLeaves: Record<string, LogLeaveEvent[]> = {};
+
+      joinEvents.forEach((event) => {
+        if (event.timestamp) {
+          if (!playerJoins[event.player]) playerJoins[event.player] = [];
+          playerJoins[event.player].push(event);
+        }
+      });
+
+      leaveEvents.forEach((event) => {
+        if (event.timestamp) {
+          if (!playerLeaves[event.player]) playerLeaves[event.player] = [];
+          playerLeaves[event.player].push(event);
+        }
+      });
+
+      Object.keys(playerJoins).forEach((player) => {
+        const joins = (playerJoins[player] || [])
+          .map((e) => ({ ...e, _time: new Date(e.timestamp!) }))
+          .sort((a, b) => a._time.getTime() - b._time.getTime());
+        const leaves = (playerLeaves[player] || [])
+          .map((e) => ({ ...e, _time: new Date(e.timestamp!) }))
+          .sort((a, b) => a._time.getTime() - b._time.getTime());
+
+        let leaveIdx = 0;
+        joins.forEach((join) => {
+          while (leaveIdx < leaves.length && leaves[leaveIdx]._time <= join._time) {
+            leaveIdx++;
+          }
+          if (leaveIdx < leaves.length) {
+            const loginHoursAgo = (now.getTime() - join._time.getTime()) / (1000 * 60 * 60);
+            const logoutHoursAgo = (now.getTime() - leaves[leaveIdx]._time.getTime()) / (1000 * 60 * 60);
+            if (loginHoursAgo <= 12 && loginHoursAgo >= 0 && logoutHoursAgo <= 12 && logoutHoursAgo >= 0) {
+              // Find the index in the filtered loginPoints/logoutPoints arrays
+              const loginIdx = loginPoints.findIndex(
+                (lp) => lp.player === player && Math.abs(lp.x - loginHoursAgo) < 0.001
+              );
+              const logoutIdx = logoutPoints.findIndex(
+                (lp) => lp.player === player && Math.abs(lp.x - logoutHoursAgo) < 0.001
+              );
+              if (loginIdx >= 0 && logoutIdx >= 0) {
+                sessions.push({ player, loginHoursAgo, logoutHoursAgo, loginIdx, logoutIdx });
+              }
+            }
+            leaveIdx++;
+          }
+        });
+      });
+    }
+
+    const hasEvents = advancementPoints.length > 0 || playerDeathPoints.length > 0 || villagerDeathPoints.length > 0 || loginPoints.length > 0 || logoutPoints.length > 0 || sessions.length > 0;
 
     // Seeded random for consistent jitter
     const seededRandom = (seed: number) => {
@@ -111,15 +225,52 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
       y: 3 + (seededRandom(i * 789 + 500) * 0.3 - 0.15)
     }));
 
+    const loginWithJitter = loginPoints.map((p) => ({
+      x: p.x,
+      y: 5 + (seededRandom(p._idx * 456) * 0.3 - 0.15),
+      player: p.player,
+      detail: p.detail
+    }));
+
+    const logoutWithJitter = logoutPoints.map((p) => ({
+      x: p.x,
+      y: 7 + (seededRandom(p._idx * 123) * 0.3 - 0.15),
+      player: p.player,
+      detail: p.detail
+    }));
+
+    // Build session line datasets using the same jitter as the dots they connect
+    const sessionColor = getPaletteColor(9);
+    const sessionDatasets = sessions.map((s) => {
+      const loginY = 5 + (seededRandom(loginPoints[s.loginIdx]._idx * 456) * 0.3 - 0.15);
+      const logoutY = 7 + (seededRandom(logoutPoints[s.logoutIdx]._idx * 123) * 0.3 - 0.15);
+      return {
+        data: [
+          { x: s.loginHoursAgo, y: loginY, player: s.player, detail: `${s.player} session` },
+          { x: s.logoutHoursAgo, y: logoutY, player: s.player, detail: `${s.player} session` }
+        ],
+        showLine: true,
+        borderColor: sessionColor,
+        backgroundColor: sessionColor,
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+        tension: 0,
+        order: 2
+      };
+    });
+
     const data = {
       datasets: [
+        ...sessionDatasets,
         {
           label: `Player Deaths (${playerDeathsWithJitter.length})`,
           data: playerDeathsWithJitter,
           backgroundColor: getPaletteColor(0),
           borderColor: getPaletteColor(0),
           pointRadius: 4,
-          pointHoverRadius: 6
+          pointHoverRadius: 6,
+          order: 1
         },
         {
           label: `Villager Deaths (${villagerDeathsWithJitter.length})`,
@@ -127,7 +278,8 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
           backgroundColor: getPaletteColor(7),
           borderColor: getPaletteColor(7),
           pointRadius: 4,
-          pointHoverRadius: 6
+          pointHoverRadius: 6,
+          order: 1
         },
         {
           label: `Advancements (${advWithJitter.length})`,
@@ -135,7 +287,26 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
           backgroundColor: getPaletteColor(2),
           borderColor: getPaletteColor(2),
           pointRadius: 4,
-          pointHoverRadius: 6
+          pointHoverRadius: 6,
+          order: 1
+        },
+        {
+          label: `Logins (${loginWithJitter.length})`,
+          data: loginWithJitter,
+          backgroundColor: getPaletteColor(3),
+          borderColor: getPaletteColor(3),
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          order: 1
+        },
+        {
+          label: `Logouts (${logoutWithJitter.length})`,
+          data: logoutWithJitter,
+          backgroundColor: getPaletteColor(5),
+          borderColor: getPaletteColor(5),
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          order: 1
         }
       ]
     };
@@ -158,18 +329,28 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
         },
         y: {
           min: 0,
-          max: 4,
+          max: 8,
           ticks: {
             stepSize: 2,
             callback: (value) => {
               if (value === 1) return 'Advancements';
               if (value === 3) return 'Deaths';
+              if (value === 5) return 'Logins';
+              if (value === 7) return 'Logouts';
               return '';
             }
           }
         }
       },
       plugins: {
+        legend: {
+          labels: {
+            filter: (item) => {
+              const ds = data.datasets[item.datasetIndex];
+              return !('showLine' in ds && ds.showLine);
+            }
+          }
+        },
         tooltip: {
           enabled: true,
           callbacks: {
@@ -190,7 +371,7 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
     }) as ChartOptions<'scatter'>;
 
     return { chartData: data, options: opts, hasEvents };
-  }, [allPlayers, deathEvents, theme]);
+  }, [allPlayers, deathEvents, joinEvents, leaveEvents, theme]);
 
   if (!hasEvents) {
     return (

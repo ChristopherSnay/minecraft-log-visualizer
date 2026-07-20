@@ -108,6 +108,17 @@ def _clean_villager_message(raw):
     return msg
 
 
+def _extract_time(line):
+    """Extract HH:MM:SS from the start of a log line.
+
+    Handles both formats:
+      [HH:MM:SS] [Server thread/INFO]: ...
+      [HH:MM:SS INFO]: ...
+    """
+    m = re.match(r"^\[(\d{2}:\d{2}:\d{2})", line)
+    return m.group(1) if m else None
+
+
 def _parse_log_lines(lines, log_date, death_markers, join_re, leave_re, death_re):
     """Parse log lines into events and session counts."""
     events = []
@@ -118,11 +129,15 @@ def _parse_log_lines(lines, log_date, death_markers, join_re, leave_re, death_re
         m = join_re.search(line)
         if m:
             player = m.group(1)
-            events.append({
+            time_str = _extract_time(line)
+            event = {
                 "type": "join",
                 "player": player,
                 "line": line
-            })
+            }
+            if time_str:
+                event["timestamp"] = f"{log_date}T{time_str}"
+            events.append(event)
             sessions.setdefault(player, {"joins": 0, "leaves": 0})
             sessions[player]["joins"] += 1
             continue
@@ -131,11 +146,15 @@ def _parse_log_lines(lines, log_date, death_markers, join_re, leave_re, death_re
         m = leave_re.search(line)
         if m:
             player = m.group(1)
-            events.append({
+            time_str = _extract_time(line)
+            event = {
                 "type": "leave",
                 "player": player,
                 "line": line
-            })
+            }
+            if time_str:
+                event["timestamp"] = f"{log_date}T{time_str}"
+            events.append(event)
             sessions.setdefault(player, {"joins": 0, "leaves": 0})
             sessions[player]["leaves"] += 1
             continue
@@ -182,7 +201,7 @@ def collect_logs():
     # Regex patterns for common server log events
     join_re = re.compile(r": ([A-Za-z0-9_]+) joined the game")
     leave_re = re.compile(r": ([A-Za-z0-9_]+) left the game")
-    death_re = re.compile(r"^\[(\d{2}:\d{2}:\d{2})\].*?: ([A-Za-z0-9_]+) (.+)$")
+    death_re = re.compile(r"^\[(\d{2}:\d{2}:\d{2})(?:\s+\w+)?\].*?: ([A-Za-z0-9_]+) (.+)$")
     death_markers = [
         "was slain by", "was shot by", "was pummeled by", "was fireballed by",
         "was killed by", "was killed while", "was killed trying",
