@@ -14,10 +14,11 @@ import {
   Typography,
   useTheme
 } from '@mui/material';
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
+import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
 import { getItemName } from '../utils/itemNames';
@@ -32,7 +33,7 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
   limit = 15
 }) => {
   const theme = useTheme();
-  const [viewMode, setViewMode] = useState<'chart' | 'table'>('chart');
+  const { viewMode, toggleViewMode } = useChartViewMode();
 
   const { chartData, options, itemData } = useMemo(() => {
     const itemCounts: Record<string, number> = {};
@@ -87,11 +88,7 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
         title={`Top ${limit} Items Picked Up`}
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton
-              size="small"
-              sx={{ opacity: 0.5 }}
-              onClick={() => setViewMode(viewMode === 'chart' ? 'table' : 'chart')}
-            >
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (

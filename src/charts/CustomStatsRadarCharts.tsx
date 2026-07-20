@@ -22,6 +22,7 @@ import { Radar } from 'react-chartjs-2';
 import { ResponsiveGrid } from '../components/SectionHeading';
 import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
+import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 import { getPresentCategories, getStatLabel } from '../utils/statCategories';
 
@@ -58,7 +59,7 @@ function CategoryRadarChart({
 }) {
   const theme = useTheme();
   const [mode, setMode] = useState<ViewMode>('normalized');
-  const [view, setView] = useState<'chart' | 'table'>('chart');
+  const { viewMode: view, toggleViewMode: toggleView } = useChartViewMode();
 
   const { data, options, tableRows } = useMemo(() => {
     const labels = keys.map(getStatLabel);
@@ -208,7 +209,7 @@ function CategoryRadarChart({
               <IconButton
                 size="small"
                 sx={{ opacity: 0.5 }}
-                onClick={() => setView(view === 'chart' ? 'table' : 'chart')}
+                onClick={toggleView}
               >
                 {view === 'chart' ? (
                   <TableChartIcon fontSize="small" />

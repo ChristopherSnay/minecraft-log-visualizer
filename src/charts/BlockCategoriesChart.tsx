@@ -15,9 +15,10 @@ import {
   useTheme
 } from '@mui/material';
 import { ThemedCard } from '../components/ThemedCard';
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { getPaletteColor } from '../config/chartColors';
+import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 import { getPieChartOptions } from '../utils/chartOptions';
 
@@ -125,7 +126,7 @@ export const BlockCategoriesChart: React.FC<BlockCategoriesChartProps> = ({
   allPlayers
 }) => {
   const theme = useTheme();
-  const [viewMode, setViewMode] = useState<'chart' | 'table'>('chart');
+  const { viewMode, toggleViewMode } = useChartViewMode();
 
   const { chartData, options, categoryData } = useMemo(() => {
     const categoryCounts: Record<string, number> = {};
@@ -198,11 +199,7 @@ export const BlockCategoriesChart: React.FC<BlockCategoriesChartProps> = ({
         title="Blocks Mined by Category"
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton
-              size="small"
-              sx={{ opacity: 0.5 }}
-              onClick={() => setViewMode(viewMode === 'chart' ? 'table' : 'chart')}
-            >
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (

@@ -5,6 +5,7 @@ import { Bar } from 'react-chartjs-2';
 import { getPaletteColor } from '../config/chartColors';
 import type { ChartOptions } from 'chart.js';
 import type { PlayerStats } from '../types';
+import { cmToKm, getPlayerDisplayName } from '../utils/chartUtils';
 import { getBaseChartOptions } from '../utils/chartOptions';
 
 interface EnhancedTravelChartProps {
@@ -23,32 +24,17 @@ export const EnhancedTravelChart: React.FC<EnhancedTravelChartProps> = ({
 
         // Convert cm to km for readability
         return {
-          name: player.name || playerId.substring(0, 8),
-          Walk:
-            Math.round(((customStats['minecraft:walk_one_cm'] || 0) / 100000) * 10) / 10,
-          Sprint:
-            Math.round(((customStats['minecraft:sprint_one_cm'] || 0) / 100000) * 10) /
-            10,
-          Boat:
-            Math.round(((customStats['minecraft:boat_one_cm'] || 0) / 100000) * 10) / 10,
-          Swim:
-            Math.round(((customStats['minecraft:swim_one_cm'] || 0) / 100000) * 10) / 10,
-          Fly:
-            Math.round(((customStats['minecraft:fly_one_cm'] || 0) / 100000) * 10) / 10,
-          Climb:
-            Math.round(((customStats['minecraft:climb_one_cm'] || 0) / 100000) * 10) / 10,
-          Fall:
-            Math.round(((customStats['minecraft:fall_one_cm'] || 0) / 100000) * 10) / 10,
-          'Walk on Water':
-            Math.round(
-              ((customStats['minecraft:walk_on_water_one_cm'] || 0) / 100000) * 10
-            ) / 10,
-          'Walk Underwater':
-            Math.round(
-              ((customStats['minecraft:walk_under_water_one_cm'] || 0) / 100000) * 10
-            ) / 10,
-          Crouch:
-            Math.round(((customStats['minecraft:crouch_one_cm'] || 0) / 100000) * 10) / 10
+          name: getPlayerDisplayName(player, playerId),
+          Walk: cmToKm(customStats['minecraft:walk_one_cm'] || 0),
+          Sprint: cmToKm(customStats['minecraft:sprint_one_cm'] || 0),
+          Boat: cmToKm(customStats['minecraft:boat_one_cm'] || 0),
+          Swim: cmToKm(customStats['minecraft:swim_one_cm'] || 0),
+          Fly: cmToKm(customStats['minecraft:fly_one_cm'] || 0),
+          Climb: cmToKm(customStats['minecraft:climb_one_cm'] || 0),
+          Fall: cmToKm(customStats['minecraft:fall_one_cm'] || 0),
+          'Walk on Water': cmToKm(customStats['minecraft:walk_on_water_one_cm'] || 0),
+          'Walk Underwater': cmToKm(customStats['minecraft:walk_under_water_one_cm'] || 0),
+          Crouch: cmToKm(customStats['minecraft:crouch_one_cm'] || 0)
         };
       })
       .sort((a, b) => {

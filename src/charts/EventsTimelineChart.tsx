@@ -6,6 +6,7 @@ import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
 import type { LogDeathEvent, LogJoinEvent, LogLeaveEvent, PlayerStats } from '../types';
 import { getAdvancementDisplayName } from '../utils/advancementNames';
+import { getPlayerDisplayName, seededRandom } from '../utils/chartUtils';
 import { getBaseChartOptions } from '../utils/chartOptions';
 
 interface EventPoint {
@@ -59,7 +60,7 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
                 advancementPoints.push({
                   x: hoursAgo,
                   y: 1,
-                  player: player.name || uuid.substring(0, 8),
+                  player: getPlayerDisplayName(player, uuid),
                   detail: advName,
                   time: adv.time
                 });
@@ -212,12 +213,6 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
     }
 
     const hasEvents = advancementPoints.length > 0 || playerDeathPoints.length > 0 || villagerDeathPoints.length > 0 || loginPoints.length > 0 || logoutPoints.length > 0 || sessions.length > 0;
-
-    // Seeded random for consistent jitter
-    const seededRandom = (seed: number) => {
-      const v = Math.sin(seed) * 10000;
-      return v - Math.floor(v);
-    };
 
     // Apply jitter to avoid overlapping points
     const advWithJitter = advancementPoints.map((p, i) => ({

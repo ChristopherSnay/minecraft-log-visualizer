@@ -15,16 +15,12 @@ import {
   Typography
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
+import { useChartViewMode } from '../hooks/useChartViewMode';
+import type { PlayerRow } from '../utils/chartUtils';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
 import { PlayerLink } from './PlayerLink';
-
-interface PlayerRow {
-  playerId: string;
-  name: string;
-  value: number;
-}
 
 interface SimplePlayerComparisonProps {
   title: string;
@@ -40,7 +36,7 @@ export function SimplePlayerComparison({
   format = (v) => v.toLocaleString()
 }: SimplePlayerComparisonProps) {
   const theme = useTheme();
-  const [viewMode, setViewMode] = useState<'chart' | 'table'>('chart');
+  const { viewMode, toggleViewMode } = useChartViewMode();
 
   const rows = useMemo(() => [...data].sort((a, b) => b.value - a.value), [data]);
 
@@ -87,11 +83,7 @@ export function SimplePlayerComparison({
         title={title}
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton
-              size="small"
-              sx={{ opacity: 0.5 }}
-              onClick={() => setViewMode(viewMode === 'chart' ? 'table' : 'chart')}
-            >
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (

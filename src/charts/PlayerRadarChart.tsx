@@ -22,10 +22,11 @@ import {
   RadarController,
   RadialLinearScale
 } from 'chart.js';
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Radar } from 'react-chartjs-2';
 import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
+import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 
 Chart.register(RadialLinearScale, RadarController, Filler, Legend, ChartTooltip);
@@ -42,7 +43,7 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
   allPlayers
 }) => {
   const theme = useTheme();
-  const [viewMode, setViewMode] = useState<'chart' | 'table'>('chart');
+  const { viewMode, toggleViewMode } = useChartViewMode();
 
   const { chartData, options, tableData } = useMemo(() => {
     const dims = (p: PlayerStats) => {
@@ -222,7 +223,7 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
         action={
           <Tooltip title={viewMode === 'chart' ? 'Show table' : 'Show chart'}>
             <IconButton
-              onClick={() => setViewMode(viewMode === 'chart' ? 'table' : 'chart')}
+              onClick={toggleViewMode}
               size="small"
               sx={{ opacity: 0.5 }}
             >

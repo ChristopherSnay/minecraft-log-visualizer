@@ -16,9 +16,10 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import type { ChartOptions } from 'chart.js';
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { getDatasetColors } from '../config/chartColors';
+import { useChartViewMode } from '../hooks/useChartViewMode';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
 import { getItemName } from '../utils/itemNames';
 
@@ -36,7 +37,7 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
   colorIndex = 0
 }) => {
   const theme = useTheme();
-  const [viewMode, setViewMode] = useState<'chart' | 'table'>('chart');
+  const { viewMode, toggleViewMode } = useChartViewMode();
 
   const { chartData, options, hasData, items } = useMemo(() => {
     if (!data || Object.keys(data).length === 0) {
@@ -108,7 +109,7 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
             <IconButton
               size="small"
               sx={{ opacity: 0.5 }}
-              onClick={() => setViewMode(viewMode === 'chart' ? 'table' : 'chart')}
+              onClick={toggleViewMode}
             >
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />

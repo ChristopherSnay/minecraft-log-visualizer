@@ -2,10 +2,10 @@
 import { Box, createTheme, CssBaseline, ThemeProvider, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
 import { Outlet } from 'react-router-dom';
-import { useWorldData } from './hooks/useWorldData';
+import { StatsProvider, useStats } from './context/StatsContext';
 
-const App: React.FC = () => {
-  const { stats } = useWorldData();
+const AppInner: React.FC = () => {
+  const { stats } = useStats();
 
   const theme = useMemo(
     () =>
@@ -72,5 +72,11 @@ const App: React.FC = () => {
     </ThemeProvider>
   );
 };
+
+const App: React.FC = () => (
+  <StatsProvider>
+    <AppInner />
+  </StatsProvider>
+);
 
 export default App;

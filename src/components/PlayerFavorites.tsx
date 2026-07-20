@@ -15,12 +15,14 @@ import {
   Typography
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import type { ChartOptions, TooltipItem } from 'chart.js';
 import { getDatasetColors } from '../config/chartColors';
+import { useChartViewMode } from '../hooks/useChartViewMode';
 import { getItemName } from '../utils/itemNames';
 import type { PlayerStats } from '../types';
+import { getPlayerDisplayName } from '../utils/chartUtils';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
 import { PlayerLink } from './PlayerLink';
 
@@ -47,7 +49,7 @@ export const PlayerFavorites: React.FC<PlayerFavoritesProps> = ({
   colorIndex = 0
 }) => {
   const theme = useTheme();
-  const [viewMode, setViewMode] = useState<'chart' | 'table'>('chart');
+  const { viewMode, toggleViewMode } = useChartViewMode();
 
   const { chartData, options, hasData, playerFavorites } = useMemo(() => {
     const playerFavorites = Object.entries(allPlayers)
@@ -64,7 +66,7 @@ export const PlayerFavorites: React.FC<PlayerFavoritesProps> = ({
 
         return {
           playerId,
-          name: player.name || playerId.substring(0, 8),
+          name: getPlayerDisplayName(player, playerId),
           count: count as number,
           favorite: formattedName
         };
@@ -136,11 +138,7 @@ export const PlayerFavorites: React.FC<PlayerFavoritesProps> = ({
         subheader={subtitle}
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton
-              size="small"
-              sx={{ opacity: 0.5 }}
-              onClick={() => setViewMode(viewMode === 'chart' ? 'table' : 'chart')}
-            >
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (

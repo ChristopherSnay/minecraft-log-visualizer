@@ -2,6 +2,7 @@ import { Box, CardContent, CardHeader } from '@mui/material';
 import React, { useMemo } from 'react';
 import { StatCard } from './StatCard';
 import { ThemedCard } from './ThemedCard';
+import { cmToKm, damageToHearts, ticksToHours } from '../utils/chartUtils';
 
 interface PlaytimeStatsProps {
   customStats: Record<string, number>;
@@ -21,43 +22,43 @@ export const PlaytimeStats: React.FC<PlaytimeStatsProps> = ({ customStats }) => 
         label: 'Playtime',
         key: 'minecraft:play_time',
         unit: 'ticks',
-        format: (val) => `${(val / 20 / 3600).toFixed(1)}h`
+        format: (val) => `${ticksToHours(val)}h`
       },
       {
         label: 'Distance Walked',
         key: 'minecraft:walk_one_cm',
         unit: 'cm',
-        format: (val) => `${(val / 100000).toFixed(1)}km`
+        format: (val) => `${cmToKm(val)}km`
       },
       {
         label: 'Distance Sprinted',
         key: 'minecraft:sprint_one_cm',
         unit: 'cm',
-        format: (val) => `${(val / 100000).toFixed(1)}km`
+        format: (val) => `${cmToKm(val)}km`
       },
       {
         label: 'Distance in Boats',
         key: 'minecraft:boat_one_cm',
         unit: 'cm',
-        format: (val) => `${(val / 100000).toFixed(1)}km`
+        format: (val) => `${cmToKm(val)}km`
       },
       {
         label: 'Distance Swimming',
         key: 'minecraft:swim_one_cm',
         unit: 'cm',
-        format: (val) => `${(val / 100000).toFixed(1)}km`
+        format: (val) => `${cmToKm(val)}km`
       },
       {
         label: 'Damage Taken',
         key: 'minecraft:damage_taken',
         unit: 'half-hearts',
-        format: (val) => `${(val / 2).toFixed(1)}`
+        format: (val) => `${damageToHearts(val)}`
       },
       {
         label: 'Damage Dealt',
         key: 'minecraft:damage_dealt',
         unit: 'half-hearts',
-        format: (val) => `${(val / 2).toFixed(1)}`
+        format: (val) => `${damageToHearts(val)}`
       },
       {
         label: 'Deaths',

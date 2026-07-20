@@ -3,8 +3,9 @@ import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { getPaletteColor } from '../config/chartColors';
-import { getHorizontalBarOptions } from '../utils/chartOptions';
 import type { PlayerStats } from '../types';
+import { getPlayerDisplayName, ticksToMinutes } from '../utils/chartUtils';
+import { getHorizontalBarOptions } from '../utils/chartOptions';
 
 interface ActivityMetricsChartProps {
   allPlayers: Record<string, PlayerStats>;
@@ -21,11 +22,9 @@ export const ActivityMetricsChart: React.FC<ActivityMetricsChartProps> = ({
         const customStats = player.custom_stats || {};
 
         return {
-          name: player.name || playerId.substring(0, 8),
+          name: getPlayerDisplayName(player, playerId),
           'Items Dropped': customStats['minecraft:drop'] || 0,
-          'Sneak Time (min)': Math.round(
-            (customStats['minecraft:sneak_time'] || 0) / 20 / 60
-          ),
+          'Sneak Time (min)': ticksToMinutes(customStats['minecraft:sneak_time'] || 0),
           'Times Slept': customStats['minecraft:sleep_in_bed'] || 0
         };
       })

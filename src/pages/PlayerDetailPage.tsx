@@ -1,11 +1,11 @@
 import { Box, CircularProgress, Link } from '@mui/material';
 import { useParams, Link as RouterLink } from 'react-router-dom';
 import { PlayerOverview } from '../components/PlayerOverview';
-import { useWorldData } from '../hooks/useWorldData';
+import { useStats } from '../context/StatsContext';
 
 export default function PlayerDetailPage() {
   const { playerId } = useParams<{ playerId: string }>();
-  const { stats, statsLoading } = useWorldData();
+  const { stats, statsLoading } = useStats();
 
   if (statsLoading || !stats) {
     return (

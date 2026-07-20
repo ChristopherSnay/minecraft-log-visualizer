@@ -7,6 +7,7 @@ import { MobsKilledChart } from '../charts/MobsKilledChart';
 import { PlayerComparisonChart } from '../charts/PlayerComparisonChart';
 import { PlayerRadarChart } from '../charts/PlayerRadarChart';
 import type { StatsJson } from '../types';
+import { damageToHearts } from '../utils/chartUtils';
 import { PlayerAdvancements } from './PlayerAdvancements';
 import { PlaytimeStats } from './PlaytimeStats';
 import { ResponsiveGrid } from './SectionHeading';
@@ -155,11 +156,11 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
               {[
                 {
                   label: 'Damage Dealt',
-                  value: `${(playerStats.custom_stats['minecraft:damage_dealt'] / 2).toFixed(1)}`
+                  value: `${damageToHearts(playerStats.custom_stats['minecraft:damage_dealt'])}`
                 },
                 {
                   label: 'Damage Taken',
-                  value: `${(playerStats.custom_stats['minecraft:damage_taken'] / 2).toFixed(1)}`
+                  value: `${damageToHearts(playerStats.custom_stats['minecraft:damage_taken'])}`
                 },
                 {
                   label: 'Mob Kills',

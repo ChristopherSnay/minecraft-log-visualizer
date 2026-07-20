@@ -3,8 +3,9 @@ import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { getPaletteColor } from '../config/chartColors';
-import { getHorizontalBarOptions } from '../utils/chartOptions';
 import type { PlayerStats } from '../types';
+import { getPlayerDisplayName } from '../utils/chartUtils';
+import { getHorizontalBarOptions } from '../utils/chartOptions';
 
 interface PlayerInteractionsChartProps {
   allPlayers: Record<string, PlayerStats>;
@@ -21,7 +22,7 @@ export const PlayerInteractionsChart: React.FC<PlayerInteractionsChartProps> = (
         const customStats = player.custom_stats || {};
 
         return {
-          name: player.name || playerId.substring(0, 8),
+          name: getPlayerDisplayName(player, playerId),
           Furnace: customStats['minecraft:interact_with_furnace'] || 0,
           'Crafting Table': customStats['minecraft:interact_with_crafting_table'] || 0,
           'Open Chest': customStats['minecraft:open_chest'] || 0,

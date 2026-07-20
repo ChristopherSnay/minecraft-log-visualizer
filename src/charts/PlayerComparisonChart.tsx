@@ -5,6 +5,7 @@ import { Bar } from 'react-chartjs-2';
 import { getDatasetColors } from '../config/chartColors';
 import type { ChartOptions } from 'chart.js';
 import type { PlayerStats } from '../types';
+import { getPlayerDisplayName } from '../utils/chartUtils';
 import { getBaseChartOptions } from '../utils/chartOptions';
 
 interface PlayerComparisonChartProps {
@@ -17,8 +18,8 @@ export const PlayerComparisonChart: React.FC<PlayerComparisonChartProps> = ({
   const theme = useTheme();
 
   const { chartData, options } = useMemo(() => {
-    const playerData = Object.entries(players).map(([, player]) => ({
-      name: player.name,
+    const playerData = Object.entries(players).map(([id, player]) => ({
+      name: getPlayerDisplayName(player, id),
       blocksMined: Object.values(player.blocks_mined).reduce((a, b) => a + b, 0),
       itemsCrafted: Object.values(player.items_crafted || {}).reduce((a, b) => a + b, 0),
       itemsUsed: Object.values(player.items_used || {}).reduce((a, b) => a + b, 0),

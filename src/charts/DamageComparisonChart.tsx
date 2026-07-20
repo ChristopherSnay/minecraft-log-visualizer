@@ -5,6 +5,7 @@ import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { getDatasetColors } from '../config/chartColors';
 import type { PlayerStats } from '../types';
+import { damageToHearts, getPlayerDisplayName } from '../utils/chartUtils';
 import { getBaseChartOptions } from '../utils/chartOptions';
 
 interface DamageComparisonChartProps {
@@ -22,13 +23,11 @@ export const DamageComparisonChart: React.FC<DamageComparisonChartProps> = ({
         const customStats = player.custom_stats || {};
 
         // Convert to half-hearts for readability
-        const dealt =
-          Math.round(((customStats['minecraft:damage_dealt'] || 0) / 2) * 10) / 10;
-        const taken =
-          Math.round(((customStats['minecraft:damage_taken'] || 0) / 2) * 10) / 10;
+        const dealt = damageToHearts(customStats['minecraft:damage_dealt'] || 0);
+        const taken = damageToHearts(customStats['minecraft:damage_taken'] || 0);
 
         return {
-          name: player.name || playerId.substring(0, 8),
+          name: getPlayerDisplayName(player, playerId),
           'Damage Dealt': dealt,
           'Damage Taken': taken,
           ratio: dealt > 0 ? (dealt / (taken || 1)).toFixed(2) : '0.00',

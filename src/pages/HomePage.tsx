@@ -17,12 +17,12 @@ import { SimplePlayerComparison } from '../components/SimplePlayerComparison';
 import { StatCards } from '../components/StatCards';
 import { ThemedSection } from '../components/ThemedSection';
 import { getPaletteColor } from '../config/chartColors';
-import { useWorldData } from '../hooks/useWorldData';
-import type { PlayerStats } from '../types';
+import { useStats } from '../context/StatsContext';
 import { calculateTotals } from '../utils/statsHelpers';
+import { cmToKm, damageToHearts, getPlayerDisplayName, sumRecord, ticksToHours } from '../utils/chartUtils';
 
 export default function HomePage() {
-  const { stats, statsLoading } = useWorldData();
+  const { stats, statsLoading } = useStats();
   const [playersExpanded, setPlayersExpanded] = useState(false);
 
   if (statsLoading) {
@@ -53,75 +53,68 @@ export default function HomePage() {
 
   const playerEntries = Object.entries(players);
 
-  const getPlayerName = (playerId: string, player: PlayerStats) =>
-    player.name || playerId.substring(0, 8);
-
-  const sumRecord = (record: Record<string, number> | undefined) =>
-    record ? Object.values(record).reduce((a, b) => a + b, 0) : 0;
-
   const comparisonData = {
     playtime: playerEntries
       .map(([id, p]) => ({
         playerId: id,
-        name: getPlayerName(id, p),
-        value: +((p.custom_stats?.['minecraft:play_time'] ?? 0) / 20 / 3600).toFixed(2)
+        name: getPlayerDisplayName(p, id),
+        value: ticksToHours(p.custom_stats?.['minecraft:play_time'] ?? 0)
       }))
       .sort((a, b) => b.value - a.value),
     blocks: playerEntries
       .map(([id, p]) => ({
         playerId: id,
-        name: getPlayerName(id, p),
+        name: getPlayerDisplayName(p, id),
         value: sumRecord(p.blocks_mined)
       }))
       .sort((a, b) => b.value - a.value),
     mobs: playerEntries
       .map(([id, p]) => ({
         playerId: id,
-        name: getPlayerName(id, p),
+        name: getPlayerDisplayName(p, id),
         value: sumRecord(p.mobs_killed)
       }))
       .sort((a, b) => b.value - a.value),
     itemsCrafted: playerEntries
       .map(([id, p]) => ({
         playerId: id,
-        name: getPlayerName(id, p),
+        name: getPlayerDisplayName(p, id),
         value: sumRecord(p.items_crafted)
       }))
       .sort((a, b) => b.value - a.value),
     itemsUsed: playerEntries
       .map(([id, p]) => ({
         playerId: id,
-        name: getPlayerName(id, p),
+        name: getPlayerDisplayName(p, id),
         value: sumRecord(p.items_used)
       }))
       .sort((a, b) => b.value - a.value),
     damageDealt: playerEntries
       .map(([id, p]) => ({
         playerId: id,
-        name: getPlayerName(id, p),
-        value:
-          Math.round(((p.custom_stats?.['minecraft:damage_dealt'] ?? 0) / 2) * 10) / 10
+        name: getPlayerDisplayName(p, id),
+        value: damageToHearts(p.custom_stats?.['minecraft:damage_dealt'] ?? 0)
       }))
       .sort((a, b) => b.value - a.value),
     jumps: playerEntries
       .map(([id, p]) => ({
         playerId: id,
-        name: getPlayerName(id, p),
+        name: getPlayerDisplayName(p, id),
         value: p.custom_stats?.['minecraft:jump'] ?? 0
       }))
       .sort((a, b) => b.value - a.value),
     damageTaken: playerEntries
       .map(([id, p]) => ({
         playerId: id,
-        name: getPlayerName(id, p),
+        name: getPlayerDisplayName(p, id),
         value: p.custom_stats?.['minecraft:damage_taken'] ?? 0
       }))
       .sort((a, b) => b.value - a.value),
     distanceWalked: playerEntries
       .map(([id, p]) => ({
         playerId: id,
-        name: getPlayerName(id, p),
-        value: +((p.custom_stats?.['minecraft:walk_one_cm'] ?? 0) / 100000).toFixed(1)
+        name: getPlayerDisplayName(p, id),
+        value: cmToKm(p.custom_stats?.['minecraft:walk_one_cm'] ?? 0)
       }))
       .sort((a, b) => b.value - a.value)
   };
@@ -145,7 +138,7 @@ export default function HomePage() {
               key={id}
               component={RouterLink}
               to={`/player/${id}`}
-              label={getPlayerName(id, p)}
+              label={getPlayerDisplayName(p, id)}
               clickable
               variant="outlined"
               sx={{

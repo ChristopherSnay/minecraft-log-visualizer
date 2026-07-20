@@ -16,11 +16,13 @@ import {
 } from '@mui/material';
 import { ThemedCard } from '../components/ThemedCard';
 import type { TooltipItem } from 'chart.js';
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { CHART_COLORS } from '../config/chartColors';
+import { useChartViewMode } from '../hooks/useChartViewMode';
 import { PlayerLink } from '../components/PlayerLink';
 import type { PlayerStats } from '../types';
+import { getPlayerDisplayName } from '../utils/chartUtils';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
 
 interface DamageRatioChartProps {
@@ -34,7 +36,7 @@ interface CombatPlayer {
 
 export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
-  const [viewMode, setViewMode] = useState<'chart' | 'table'>('chart');
+  const { viewMode, toggleViewMode } = useChartViewMode();
 
   const { chartData, options, playerData } = useMemo(() => {
     const playerData = Object.entries(allPlayers)
@@ -50,7 +52,7 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
         }
 
         return {
-          name: player.name || playerId.substring(0, 8),
+          name: getPlayerDisplayName(player, playerId),
           ratio: Math.round(ratio * 100) / 100
         };
       })
@@ -129,11 +131,7 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
         subheader="How effectively each player engages in combat"
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton
-              size="small"
-              sx={{ opacity: 0.5 }}
-              onClick={() => setViewMode(viewMode === 'chart' ? 'table' : 'chart')}
-            >
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (

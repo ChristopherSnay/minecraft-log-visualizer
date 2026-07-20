@@ -4,6 +4,7 @@ import React, { useMemo } from 'react';
 import { Line } from 'react-chartjs-2';
 import { getDatasetColors } from '../config/chartColors';
 import type { PlayerStats } from '../types';
+import { seededRandom } from '../utils/chartUtils';
 import { getLineChartOptions } from '../utils/chartOptions';
 
 interface Activity24HourChartProps {
@@ -31,12 +32,6 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({
     // Create 24-hour activity based on playtime distribution
     const activityData: ActivityDataPoint[] = [];
     const now = new Date();
-
-    // Seeded random for deterministic output
-    const seededRandom = (seed: number) => {
-      const x = Math.sin(seed) * 10000;
-      return x - Math.floor(x);
-    };
 
     for (let i = 23; i >= 0; i--) {
       const hour = new Date(now.getTime() - i * 60 * 60 * 1000);

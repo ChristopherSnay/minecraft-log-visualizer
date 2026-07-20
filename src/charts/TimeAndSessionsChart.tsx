@@ -3,8 +3,9 @@ import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { getPaletteColor } from '../config/chartColors';
-import { getHorizontalBarOptions } from '../utils/chartOptions';
 import type { PlayerStats } from '../types';
+import { getPlayerDisplayName, ticksToHours } from '../utils/chartUtils';
+import { getHorizontalBarOptions } from '../utils/chartOptions';
 
 interface TimeAndSessionsChartProps {
   allPlayers: Record<string, PlayerStats>;
@@ -20,22 +21,13 @@ export const TimeAndSessionsChart: React.FC<TimeAndSessionsChartProps> = ({
       .map(([playerId, player]: [string, PlayerStats]) => {
         const customStats = player.custom_stats || {};
 
-        const playTimeHours =
-          Math.round(((customStats['minecraft:play_time'] || 0) / 20 / 3600) * 10) / 10;
-        const totalWorldTimeHours =
-          Math.round(
-            ((customStats['minecraft:total_world_time'] || 0) / 20 / 3600) * 10
-          ) / 10;
-        const timeSinceRestHours =
-          Math.round(((customStats['minecraft:time_since_rest'] || 0) / 20 / 3600) * 10) /
-          10;
-        const timeSinceDeathHours =
-          Math.round(
-            ((customStats['minecraft:time_since_death'] || 0) / 20 / 3600) * 10
-          ) / 10;
+        const playTimeHours = ticksToHours(customStats['minecraft:play_time'] || 0);
+        const totalWorldTimeHours = ticksToHours(customStats['minecraft:total_world_time'] || 0);
+        const timeSinceRestHours = ticksToHours(customStats['minecraft:time_since_rest'] || 0);
+        const timeSinceDeathHours = ticksToHours(customStats['minecraft:time_since_death'] || 0);
 
         return {
-          name: player.name || playerId.substring(0, 8),
+          name: getPlayerDisplayName(player, playerId),
           'Play Time (hrs)': playTimeHours,
           'World Time (hrs)': totalWorldTimeHours,
           Sessions: customStats['minecraft:leave_game'] || 0,
