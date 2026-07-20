@@ -4,7 +4,7 @@ import type { ChartOptions } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Scatter } from 'react-chartjs-2';
 import { getPaletteColor } from '../config/chartColors';
-import type { LogDeathEvent, PlayerStats, StatsJson } from '../types';
+import type { LogDeathEvent, PlayerStats } from '../types';
 import { getAdvancementDisplayName } from '../utils/advancementNames';
 import { getBaseChartOptions } from '../utils/chartOptions';
 
@@ -17,13 +17,11 @@ interface EventPoint {
 
 interface EventsTimelineChartProps {
   allPlayers: Record<string, PlayerStats>;
-  advancements?: StatsJson['advancements'];
   deathEvents?: LogDeathEvent[];
 }
 
 export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
   allPlayers,
-  advancements,
   deathEvents
 }) => {
   const theme = useTheme();
@@ -34,32 +32,30 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
     // Collect advancement timestamps with player names
     const advancementPoints: EventPoint[] = [];
 
-    if (advancements?.players) {
-      Object.entries(advancements.players).forEach(([uuid, playerAdv]) => {
-        const playerName = allPlayers[uuid]?.name || uuid.substring(0, 8);
-        if (playerAdv.completed && Array.isArray(playerAdv.completed)) {
-          playerAdv.completed.forEach((adv) => {
-            if (adv.time && !adv.id.includes(':recipes/')) {
-              try {
-                const advTime = new Date(adv.time);
-                const hoursAgo = (now.getTime() - advTime.getTime()) / (1000 * 60 * 60);
-                if (hoursAgo <= 12 && hoursAgo >= 0) {
-                  const advName = getAdvancementDisplayName(adv.id);
-                  advancementPoints.push({
-                    x: hoursAgo,
-                    y: 1,
-                    player: playerName,
-                    detail: advName
-                  });
-                }
-              } catch (_e) {
-                // Skip invalid timestamps
+    Object.entries(allPlayers).forEach(([uuid, player]) => {
+      const completed = player.completed;
+      if (completed && Array.isArray(completed)) {
+        completed.forEach((adv) => {
+          if (adv.time && !adv.id.includes(':recipes/')) {
+            try {
+              const advTime = new Date(adv.time);
+              const hoursAgo = (now.getTime() - advTime.getTime()) / (1000 * 60 * 60);
+              if (hoursAgo <= 12 && hoursAgo >= 0) {
+                const advName = getAdvancementDisplayName(adv.id);
+                advancementPoints.push({
+                  x: hoursAgo,
+                  y: 1,
+                  player: player.name || uuid.substring(0, 8),
+                  detail: advName
+                });
               }
+            } catch (_e) {
+              // Skip invalid timestamps
             }
-          });
-        }
-      });
-    }
+          }
+        });
+      }
+    });
 
     // Collect death timestamps from log events, split villagers from players
     const playerDeathPoints: EventPoint[] = [];
@@ -194,7 +190,7 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
     }) as ChartOptions<'scatter'>;
 
     return { chartData: data, options: opts, hasEvents };
-  }, [allPlayers, advancements, deathEvents, theme]);
+  }, [allPlayers, deathEvents, theme]);
 
   if (!hasEvents) {
     return (

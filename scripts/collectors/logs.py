@@ -159,9 +159,11 @@ def _parse_log_lines(lines, log_date, death_markers, join_re, leave_re, death_re
 
 
 def collect_logs():
-    logs_dir = os.getenv("MC_LOGS_DIR")
-    if not logs_dir:
+    mc_root = os.getenv("MC_ROOT")
+    if not mc_root:
         return {"events": [], "sessions": {}, "log_date": None}
+
+    logs_dir = os.path.join(mc_root, "logs")
 
     latest = os.path.join(logs_dir, "latest.log")
     if not os.path.isfile(latest):

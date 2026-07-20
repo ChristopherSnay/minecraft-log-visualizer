@@ -13,18 +13,18 @@ import {
   Tooltip,
   Typography
 } from '@mui/material';
-import { ThemedCard } from '../components/ThemedCard';
 import { useTheme } from '@mui/material/styles';
 import {
   Chart,
+  Tooltip as ChartTooltip,
   Filler,
   Legend,
   RadarController,
-  RadialLinearScale,
-  Tooltip as ChartTooltip
+  RadialLinearScale
 } from 'chart.js';
 import React, { useMemo, useState } from 'react';
 import { Radar } from 'react-chartjs-2';
+import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
 
@@ -37,69 +37,102 @@ interface PlayerRadarChartProps {
   allPlayers: PlayerStats[];
 }
 
-export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allPlayers }) => {
+export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
+  player,
+  allPlayers
+}) => {
   const theme = useTheme();
   const [viewMode, setViewMode] = useState<'chart' | 'table'>('chart');
 
   const { chartData, options, tableData } = useMemo(() => {
-    const cs = player.custom_stats || {};
+    const dims = (p: PlayerStats) => {
+      const cs = p.custom_stats || {};
+      const combat =
+        (cs['minecraft:mob_kills'] || 0) +
+        (cs['minecraft:damage_dealt'] || 0) / 100 +
+        (cs['minecraft:damage_taken'] || 0) / 100;
+      const playtimeHours = (cs['minecraft:play_time'] || 0) / 20 / 3600;
+      const deaths = cs['minecraft:deaths'] || 0;
+      const survival = deaths > 0 ? (playtimeHours / deaths) * 100 : playtimeHours * 100;
+      const exploration =
+        ((cs['minecraft:walk_one_cm'] || 0) +
+          (cs['minecraft:sprint_one_cm'] || 0) +
+          (cs['minecraft:fly_one_cm'] || 0) +
+          (cs['minecraft:swim_one_cm'] || 0) +
+          (cs['minecraft:boat_one_cm'] || 0) +
+          (cs['minecraft:climb_one_cm'] || 0) +
+          (cs['minecraft:elytra_one_cm'] || 0) +
+          (cs['minecraft:minecart_one_cm'] || 0) +
+          (cs['minecraft:strider_one_cm'] || 0) +
+          (cs['minecraft:walk_on_water_one_cm'] || 0)) /
+        100000;
+      const industry =
+        (cs['minecraft:interact_with_furnace'] || 0) +
+        (cs['minecraft:interact_with_crafting_table'] || 0) +
+        (cs['minecraft:enchant_item'] || 0) +
+        Object.values(p.items_crafted || {}).reduce((a, b) => a + b, 0);
+      const building = Object.values(p.items_used || {}).reduce((a, b) => a + b, 0);
+      const mining = Object.values(p.blocks_mined || {}).reduce((a, b) => a + b, 0);
+      return [combat, survival, exploration, industry, building, playtimeHours, mining];
+    };
 
-    const combat =
-      (cs['minecraft:mob_kills'] || 0) + (cs['minecraft:damage_dealt'] || 0) / 100;
-    const playtimeHours = (cs['minecraft:play_time'] || 0) / 20 / 3600;
-    const deaths = cs['minecraft:deaths'] || 0;
-    const survival = (playtimeHours / (deaths + 1)) * 100;
-    const exploration =
-      ((cs['minecraft:walk_one_cm'] || 0) +
-        (cs['minecraft:sprint_one_cm'] || 0) +
-        (cs['minecraft:fly_one_cm'] || 0) +
-        (cs['minecraft:swim_one_cm'] || 0)) /
-      100000;
-    const industry =
-      (cs['minecraft:interact_with_furnace'] || 0) +
-      (cs['minecraft:interact_with_crafting_table'] || 0) +
-      (cs['minecraft:enchant_item'] || 0);
-    const building = Object.values(player.items_crafted || {}).reduce((a, b) => a + b, 0);
+    const raw = dims(player);
 
-    const maxPlaytime = Math.max(...allPlayers.map(p => (p.custom_stats?.['minecraft:play_time'] || 0) / 20 / 3600), 1);
-    const playtimePercent = (playtimeHours / maxPlaytime) * 100;
+    const others = allPlayers.filter((p) => p !== player);
+    const serverRaw = others.length
+      ? others
+          .map(dims)
+          .reduce((acc, d) => d.map((v, i) => acc[i] + v), [0, 0, 0, 0, 0, 0, 0])
+          .map((sum) => sum / others.length)
+      : raw.map(() => 0);
 
-    const raw = [combat, survival, exploration, industry, building, playtimePercent];
-    const max = Math.max(...raw, 1);
-    const logMax = Math.log10(max + 1);
-    const normalized = raw.map((v) =>
-      v <= 0 ? 0 : Math.round((Math.log10(v + 1) / logMax) * 100)
+    // Ratio: player / server average. >1 = above avg, <1 = below.
+    // When server avg is 0, use the raw player value as the ratio so active
+    // players still show a meaningful polygon.
+    const ratios = raw.map((v, i) =>
+      serverRaw[i] > 0 ? v / serverRaw[i] : v > 0 ? 1 : 0
     );
 
+    const maxRatio = Math.max(...ratios, 1) * 1.15;
     const labels = [
       'Combat',
       'Survival',
       'Exploration',
       'Industry',
       'Building',
-      'Playtime vs Others'
+      'Playtime',
+      'Mining'
     ];
-
     const descriptions = [
-      'Mob kills + damage dealt',
-      'Playtime per death — how long they stay alive',
-      'Distance traveled (km)',
-      'Furnace, crafting table & enchanting usage',
-      'Total items crafted',
-      'Percentage of most active player\'s playtime'
+      'Mob kills, damage dealt & taken',
+      'Playtime per death, how long they stay alive',
+      'Distance traveled by any method (km)',
+      'Crafting, enchanting, and item production',
+      'Items placed / used in the world',
+      'Total playtime (hours)',
+      'Blocks broken / mined'
     ];
-
+    const paletteColor = getPaletteColor(6);
     const data = {
       labels,
       datasets: [
         {
           label: player.name,
-          data: normalized,
-          backgroundColor: `${getPaletteColor(0)}33`,
-          borderColor: getPaletteColor(0),
+          data: ratios,
+          backgroundColor: `${paletteColor}33`,
+          borderColor: paletteColor,
           borderWidth: 2,
-          pointBackgroundColor: getPaletteColor(0),
+          pointBackgroundColor: paletteColor,
           pointRadius: 4
+        },
+        {
+          label: 'Server Avg (1.0)',
+          data: Array(labels.length).fill(1),
+          backgroundColor: 'transparent',
+          borderColor: getPaletteColor(1),
+          borderWidth: 1.5,
+          borderDash: [6, 3],
+          pointRadius: 0
         }
       ]
     };
@@ -108,7 +141,15 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allP
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { display: false },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            color: theme.palette.text.primary,
+            font: { family: theme.typography.fontFamily, size: 11 },
+            boxWidth: 12
+          }
+        },
         tooltip: {
           callbacks: {
             title: (items) => {
@@ -116,17 +157,19 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allP
               return idx !== undefined ? labels[idx] : '';
             },
             label: (context) => {
-              const rawValues = [
-                combat,
-                survival,
-                exploration,
-                industry,
-                building,
-                playtimePercent
+              const idx = context.dataIndex;
+              const units = ['pts', 'h/death', 'km', 'interactions', 'items', 'h', 'blocks'];
+              const isServer = context.datasetIndex === 1;
+              if (isServer) {
+                return `Server Avg: ${serverRaw[idx].toFixed(1)} ${units[idx]}`;
+              }
+              const ratio = ratios[idx];
+              const ratioStr = ratio === 0 ? 'N/A' : `${ratio.toFixed(2)}x`;
+              return [
+                `${player.name}: ${raw[idx].toFixed(1)} ${units[idx]}`,
+                `Server Avg: ${serverRaw[idx].toFixed(1)} ${units[idx]}`,
+                `Ratio: ${ratioStr}`
               ];
-              const raw = rawValues[context.dataIndex];
-              const units = ['pts', 'h/death', 'km', 'interactions', 'items', '%'];
-              return `${raw.toFixed(1)} ${units[context.dataIndex]} (log-scale)`;
             },
             afterLabel: (context) => {
               const idx = context.dataIndex;
@@ -138,12 +181,14 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allP
       scales: {
         r: {
           beginAtZero: true,
-          max: 100,
+          min: 0,
+          max: maxRatio,
           ticks: {
-            stepSize: 25,
+            stepSize: 1,
             color: theme.palette.text.secondary,
             backdropColor: 'transparent',
-            font: { size: 10 }
+            font: { size: 10 },
+            callback: (value) => `${(value as number).toFixed(1)}x`
           },
           grid: { color: theme.palette.divider },
           angleLines: { color: theme.palette.divider },
@@ -155,15 +200,15 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allP
       }
     };
 
-    const rawValues = [combat, survival, exploration, industry, building, playtimePercent];
-    const units = ['pts', 'h/death', 'km', 'interactions', 'items', '%'];
+    const units = ['pts', 'h/death', 'km', 'interactions', 'items', 'h', 'blocks'];
 
     const tableRows = labels.map((label, idx) => ({
       label,
       description: descriptions[idx],
-      raw: rawValues[idx],
+      raw: raw[idx],
+      serverRaw: serverRaw[idx],
       unit: units[idx],
-      normalized: normalized[idx]
+      ratio: ratios[idx]
     }));
 
     return { chartData: data, options: opts, tableData: tableRows };
@@ -173,11 +218,19 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allP
     <ThemedCard>
       <CardHeader
         title="Playstyle Profile"
-        subheader="Normalized comparison across dimensions"
+        subheader="Ratio to server average (1.0x is average)"
         action={
           <Tooltip title={viewMode === 'chart' ? 'Show table' : 'Show chart'}>
-            <IconButton onClick={() => setViewMode(viewMode === 'chart' ? 'table' : 'chart')} size="small" sx={{ opacity: 0.5 }}>
-              {viewMode === 'chart' ? <TableChartIcon fontSize="small" /> : <BarChartIcon fontSize="small" />}
+            <IconButton
+              onClick={() => setViewMode(viewMode === 'chart' ? 'table' : 'chart')}
+              size="small"
+              sx={{ opacity: 0.5 }}
+            >
+              {viewMode === 'chart' ? (
+                <TableChartIcon fontSize="small" />
+              ) : (
+                <BarChartIcon fontSize="small" />
+              )}
             </IconButton>
           </Tooltip>
         }
@@ -188,27 +241,49 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allP
             <Radar data={chartData} options={options} />
           </Box>
         ) : (
-          <Table size="small">
-            <TableHead>
-              <TableRow>
-                <TableCell>Dimension</TableCell>
-                <TableCell align="right">Raw Value</TableCell>
-                <TableCell align="right">Score</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {tableData.map((row) => (
-                <TableRow key={row.label}>
-                  <TableCell>
-                    <Typography variant="body2">{row.label}</Typography>
-                    <Typography variant="caption" color="text.secondary">{row.description}</Typography>
-                  </TableCell>
-                  <TableCell align="right">{row.raw.toFixed(1)} {row.unit}</TableCell>
-                  <TableCell align="right">{row.normalized}</TableCell>
+          <Box sx={{ overflowX: 'auto' }}>
+            <Table size="small">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Dimension</TableCell>
+                  <TableCell align="right">{player.name}</TableCell>
+                  <TableCell align="right">Server Avg</TableCell>
+                  <TableCell align="right">Ratio</TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+              </TableHead>
+              <TableBody>
+                {tableData.map((row) => (
+                  <TableRow key={row.label}>
+                    <TableCell>
+                      <Typography variant="body2">{row.label}</Typography>
+                      <Typography variant="caption" color="text.secondary">
+                        {row.description}
+                      </Typography>
+                    </TableCell>
+                    <TableCell align="right">
+                      {row.raw.toFixed(1)} {row.unit}
+                    </TableCell>
+                    <TableCell align="right">
+                      {row.serverRaw.toFixed(1)} {row.unit}
+                    </TableCell>
+                    <TableCell
+                      align="right"
+                      sx={{
+                        color:
+                          row.ratio > 1
+                            ? 'success.main'
+                            : row.ratio < 1
+                              ? 'error.main'
+                              : 'text.secondary'
+                      }}
+                    >
+                      {row.ratio === 0 ? 'N/A' : `${row.ratio.toFixed(2)}x`}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Box>
         )}
       </CardContent>
     </ThemedCard>

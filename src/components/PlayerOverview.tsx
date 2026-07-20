@@ -9,6 +9,7 @@ import { PlayerRadarChart } from '../charts/PlayerRadarChart';
 import type { StatsJson } from '../types';
 import { PlaytimeStats } from './PlaytimeStats';
 import { ResponsiveGrid } from './SectionHeading';
+import { StatCard } from './StatCard';
 import { ThemedCard } from './ThemedCard';
 import { ThemedSection } from './ThemedSection';
 
@@ -165,36 +166,12 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
                 },
                 { label: 'Deaths', value: playerStats.custom_stats['minecraft:deaths'] }
               ].map((stat) => (
-                <ThemedCard
+                <StatCard
                   key={stat.label}
-                  sx={{
-                    p: 1.5,
-                    textAlign: 'center'
-                  }}
-                >
-                  <Typography
-                    variant="h4"
-                    sx={{
-                      fontSize: '1.4rem',
-                      fontWeight: 700,
-                      color: (theme) => theme.palette.primary.main,
-                      mb: 0.5
-                    }}
-                  >
-                    {stat.value}
-                  </Typography>
-                  <Typography
-                    variant="caption"
-                    sx={{
-                      fontSize: '0.72rem',
-                      color: 'text.secondary',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.04em'
-                    }}
-                  >
-                    {stat.label}
-                  </Typography>
-                </ThemedCard>
+                  label={stat.label}
+                  value={stat.value}
+                  elevation={0}
+                />
               ))}
             </Box>
           </ThemedCard>

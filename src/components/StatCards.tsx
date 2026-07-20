@@ -1,5 +1,6 @@
-import { Box, Card, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { formatDuration } from '../utils/statsHelpers';
+import { StatCard } from './StatCard';
 
 interface StatCardsProps {
   totalPlaytimeSeconds: number;
@@ -17,7 +18,10 @@ export function StatCards({
   onPlayersClick
 }: StatCardsProps) {
   const stats = [
-    { label: 'Total Playtime', value: formatDuration(totalPlaytimeSeconds) },
+    {
+      label: 'Total Playtime',
+      value: formatDuration(totalPlaytimeSeconds)
+    },
     {
       label: 'Players',
       value: uniquePlayers.toString(),
@@ -37,45 +41,13 @@ export function StatCards({
       }}
     >
       {stats.map((stat) => (
-        <Card
+        <StatCard
           key={stat.label}
-          elevation={1}
+          label={stat.label}
+          value={stat.value}
+          elevation={0}
           onClick={stat.clickable ? onPlayersClick : undefined}
-          sx={{
-            p: 1.5,
-            textAlign: 'center',
-            background: (theme) => theme.palette.background.paper,
-            border: (theme) => `1px solid ${theme.palette.divider}`,
-            cursor: stat.clickable ? 'pointer' : 'default',
-            transition: 'border-color 0.15s',
-            '&:hover': stat.clickable
-              ? { borderColor: (theme) => theme.palette.primary.main }
-              : undefined
-          }}
-        >
-          <Typography
-            variant="h4"
-            sx={{
-              fontSize: '1.4rem',
-              fontWeight: 700,
-              color: (theme) => theme.palette.primary.main,
-              mb: 0.5
-            }}
-          >
-            {stat.value}
-          </Typography>
-          <Typography
-            variant="caption"
-            sx={{
-              fontSize: '0.72rem',
-              color: 'text.secondary',
-              textTransform: 'uppercase',
-              letterSpacing: '0.04em'
-            }}
-          >
-            {stat.label}
-          </Typography>
-        </Card>
+        />
       ))}
     </Box>
   );

@@ -24,12 +24,12 @@ def parse_world(world_path):
     Runs all collectors and returns a unified world model:
 
     {
-        "stats": {...},
-        "advancements": {...},
-        "playerdata": {...},
+        "stats": { "players": { "uuid": { ...all player data... } } },
         "level": {...},
         "logs": {...},
-        "deltas": {...}
+        "usercache": {...},
+        "deltas": {...},
+        "captured_at": "..."
     }
     """
 
@@ -51,20 +51,63 @@ def parse_world(world_path):
         if uuid in world["stats"]["players"]:
             world["stats"]["players"][uuid]["name"] = name
 
+    # Merge advancements and playerdata into each player's stats object
+    adv_players = world.get("advancements", {}).get("players", {})
+    pd_players = world.get("playerdata", {}).get("players", {})
+    for uuid, player in world["stats"]["players"].items():
+        if uuid in adv_players:
+            adv = adv_players[uuid]
+            player["completed"] = adv.get("completed", [])
+            player["in_progress"] = adv.get("in_progress", [])
+        if uuid in pd_players:
+            pd = pd_players[uuid]
+            for key in ("position", "dimension", "xp", "health", "food", "saturation", "inventory", "effects"):
+                if key in pd:
+                    player[key] = pd[key]
 
+    # Remove now-redundant top-level collections
+    world.pop("advancements", None)
+    world.pop("playerdata", None)
 
     # Compute deltas
     cache_path = os.path.join("data", "cache.json")
     world["deltas"] = compute_deltas(world, cache_path)
 
+    # Apply EXCLUDE_DATA: remove unwanted top-level and per-player keys.
+    # Use @name to exclude an entire player by name (e.g. @DivineLight).
+    exclude_raw = os.getenv("EXCLUDE_DATA", "")
+    excludes = {k.strip() for k in exclude_raw.split(",") if k.strip()}
+    excluded_names = {k[1:] for k in excludes if k.startswith("@")}
+    key_excludes = {k for k in excludes if not k.startswith("@")}
+
+    if key_excludes:
+        for key in list(key_excludes):
+            if key in world:
+                del world[key]
+
+        for player in world.get("stats", {}).get("players", {}).values():
+            for key in key_excludes:
+                player.pop(key, None)
+
+    if excluded_names:
+        players = world.get("stats", {}).get("players", {})
+        to_remove = [uuid for uuid, p in players.items() if p.get("name") in excluded_names]
+        for uuid in to_remove:
+            del players[uuid]
+
     return world
 
 
 def main():
-    world_path = os.getenv("WORLD_PATH")
+    mc_root = os.getenv("MC_ROOT")
 
-    if not world_path:
-        raise RuntimeError("WORLD_PATH is not set in .env")
+    if not mc_root:
+        raise RuntimeError("MC_ROOT is not set in .env")
+
+    if not os.path.isdir(mc_root):
+        raise RuntimeError(f"Server root not found: {mc_root}")
+
+    world_path = os.path.join(mc_root, "world")
 
     if not os.path.isdir(world_path):
         raise RuntimeError(f"World folder not found: {world_path}")

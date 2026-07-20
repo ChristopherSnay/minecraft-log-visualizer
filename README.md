@@ -62,10 +62,8 @@ Add a cron job on the server to re-deploy periodically, e.g. every 15 minutes:
 
 | Var | Default | Purpose |
 |---|---|---|
-| `MC_LOGS_DIR` | `../logs` | Where to find `*.log.gz` and `latest.log` |
-| `MC_SITE_DIR` | `./site` | Where the parser writes output before publishing |
-| `MC_REPO` | (local git origin) | Override the git remote to publish to |
-| `MC_BRANCH` | `gh-pages` | Branch to publish to |
+| `MC_ROOT` | (required) | Server root directory; world folder and logs are derived from this |
+| `EXCLUDE_DATA` | | Comma-separated keys to exclude from stats.json |
 
 ## Notes on date inference
 

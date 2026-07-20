@@ -1,8 +1,10 @@
 /**
  * Groupings of Minecraft custom_stats into meaningful categories, plus
- * helpers for rendering friendly labels. Used by the per-player polar area
+ * helpers for rendering friendly labels. Used by the per-player radar
  * charts that compare a player's stats against the server average.
  */
+
+import type { PlayerStats } from '../types';
 
 export const CUSTOM_STAT_CATEGORIES: Record<string, string[]> = {
   Movement: [
@@ -91,11 +93,15 @@ export function getStatLabel(key: string): string {
  * given custom_stats record, with their present stat keys.
  */
 export function getPresentCategories(
-  customStats: Record<string, number>
+  players: PlayerStats[]
 ): Record<string, string[]> {
   const result: Record<string, string[]> = {};
   for (const [category, keys] of Object.entries(CUSTOM_STAT_CATEGORIES)) {
-    const present = keys.filter((key) => key in customStats);
+    // Include a stat if ANY player has it, so the radar shows every axis for
+    // the category (and the server average for stats the viewed player lacks).
+    const present = keys.filter((key) =>
+      players.some((p) => p.custom_stats && key in p.custom_stats)
+    );
     if (present.length > 0) {
       result[category] = present;
     }

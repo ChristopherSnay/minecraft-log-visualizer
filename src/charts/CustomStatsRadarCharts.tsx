@@ -1,12 +1,26 @@
 import BarChartIcon from '@mui/icons-material/BarChart';
+import InsightsIcon from '@mui/icons-material/Insights';
+import PercentIcon from '@mui/icons-material/Percent';
 import TableChartIcon from '@mui/icons-material/TableChart';
-import { Box, CardContent, CardHeader, IconButton, Tooltip, Typography } from '@mui/material';
+import {
+  Box,
+  CardContent,
+  CardHeader,
+  IconButton,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Tooltip,
+  Typography
+} from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { Radar } from 'react-chartjs-2';
 import type { ChartOptions } from 'chart.js';
 import React, { useMemo, useState } from 'react';
-import { ThemedCard } from '../components/ThemedCard';
+import { Radar } from 'react-chartjs-2';
 import { ResponsiveGrid } from '../components/SectionHeading';
+import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
 import type { PlayerStats } from '../types';
 import { getPresentCategories, getStatLabel } from '../utils/statCategories';
@@ -18,13 +32,15 @@ interface CustomStatsRadarChartsProps {
 
 type ViewMode = 'normalized' | 'ratio';
 
-function serverAverage(key: string, allPlayers: PlayerStats[]): number {
-  if (allPlayers.length === 0) return 0;
-  const sum = allPlayers.reduce(
-    (acc, p) => acc + (p.custom_stats?.[key] || 0),
-    0
-  );
-  return sum / allPlayers.length;
+function serverAverage(
+  key: string,
+  allPlayers: PlayerStats[],
+  exclude: PlayerStats
+): number {
+  const others = allPlayers.filter((p) => p !== exclude);
+  if (others.length === 0) return 0;
+  const sum = others.reduce((acc, p) => acc + (p.custom_stats?.[key] || 0), 0);
+  return sum / others.length;
 }
 
 function CategoryRadarChart({
@@ -42,11 +58,12 @@ function CategoryRadarChart({
 }) {
   const theme = useTheme();
   const [mode, setMode] = useState<ViewMode>('normalized');
+  const [view, setView] = useState<'chart' | 'table'>('chart');
 
-  const { data, options } = useMemo(() => {
+  const { data, options, tableRows } = useMemo(() => {
     const labels = keys.map(getStatLabel);
     const playerValues = keys.map((k) => player.custom_stats[k] || 0);
-    const avgValues = keys.map((k) => serverAverage(k, allPlayers));
+    const avgValues = keys.map((k) => serverAverage(k, allPlayers, player));
 
     // Per-stat max used to normalize both series onto a 0..1 scale, so the
     // shape reflects each stat's relative magnitude rather than its raw size.
@@ -95,9 +112,7 @@ function CategoryRadarChart({
     };
 
     const isRatio = mode === 'ratio';
-    const maxValue = isRatio
-      ? Math.max(...playerData, 1) * 1.1
-      : 1;
+    const maxValue = isRatio ? Math.max(...playerData, 1) * 1.1 : 1;
 
     const opts: ChartOptions<'radar'> = {
       responsive: true,
@@ -158,7 +173,14 @@ function CategoryRadarChart({
       }
     };
 
-    return { data: chartData, options: opts };
+    const tableRows = keys.map((k, i) => ({
+      label: getStatLabel(k),
+      player: playerValues[i],
+      avg: avgValues[i],
+      ratio: avgValues[i] > 0 ? playerValues[i] / avgValues[i] : null
+    }));
+
+    return { data: chartData, options: opts, tableRows };
   }, [keys, player, allPlayers, mode, theme, colorIndex]);
 
   return (
@@ -166,21 +188,80 @@ function CategoryRadarChart({
       <CardHeader
         title={category}
         action={
-          <Tooltip title={mode === 'normalized' ? 'Show ratio (vs avg)' : 'Show normalized'}>
-            <IconButton
-              size="small"
-              sx={{ opacity: 0.5 }}
-              onClick={() => setMode(mode === 'normalized' ? 'ratio' : 'normalized')}
+          <>
+            <Tooltip
+              title={mode === 'normalized' ? 'Show ratio (vs avg)' : 'Show normalized'}
             >
-              {mode === 'normalized' ? <TableChartIcon fontSize="small" /> : <BarChartIcon fontSize="small" />}
-            </IconButton>
-          </Tooltip>
+              <IconButton
+                size="small"
+                sx={{ opacity: 0.5 }}
+                onClick={() => setMode(mode === 'normalized' ? 'ratio' : 'normalized')}
+              >
+                {mode === 'normalized' ? (
+                  <PercentIcon fontSize="small" />
+                ) : (
+                  <InsightsIcon fontSize="small" />
+                )}
+              </IconButton>
+            </Tooltip>
+            <Tooltip title={view === 'chart' ? 'Show table' : 'Show chart'}>
+              <IconButton
+                size="small"
+                sx={{ opacity: 0.5 }}
+                onClick={() => setView(view === 'chart' ? 'table' : 'chart')}
+              >
+                {view === 'chart' ? (
+                  <TableChartIcon fontSize="small" />
+                ) : (
+                  <BarChartIcon fontSize="small" />
+                )}
+              </IconButton>
+            </Tooltip>
+          </>
         }
       />
       <CardContent>
-        <Box sx={{ height: 320 }}>
-          <Radar data={data} options={options} />
-        </Box>
+        {view === 'chart' ? (
+          <Box sx={{ height: 320 }}>
+            <Radar key={`${player.name}-${mode}`} data={data} options={options} />
+          </Box>
+        ) : (
+          <Box sx={{ overflowX: 'auto' }}>
+          <Table size="small">
+            <TableHead>
+              <TableRow>
+                <TableCell>Stat</TableCell>
+                <TableCell align="right">{player.name}</TableCell>
+                <TableCell align="right">Server Avg</TableCell>
+                <TableCell align="right">Ratio</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {tableRows.map((row) => (
+                <TableRow key={row.label} hover>
+                  <TableCell>
+                    <Typography variant="body2">{row.label}</Typography>
+                  </TableCell>
+                  <TableCell align="right">
+                    <Typography variant="body2">{row.player.toLocaleString()}</Typography>
+                  </TableCell>
+                  <TableCell align="right">
+                    <Typography variant="body2">{row.avg.toLocaleString()}</Typography>
+                  </TableCell>
+                  <TableCell align="right">
+                    <Typography
+                      variant="body2"
+                      sx={{ color: theme.palette.primary.main }}
+                    >
+                      {row.ratio === null ? '∞' : `${row.ratio.toFixed(2)}x`}
+                    </Typography>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+          </Box>
+        )}
       </CardContent>
     </ThemedCard>
   );
@@ -190,12 +271,9 @@ export const CustomStatsRadarCharts: React.FC<CustomStatsRadarChartsProps> = ({
   player,
   allPlayers
 }) => {
-  const categories = useMemo(
-    () => getPresentCategories(player.custom_stats || {}),
-    [player.custom_stats]
-  );
+  const categories = useMemo(() => getPresentCategories(allPlayers), [allPlayers]);
 
-  if (categories.length === 0) {
+  if (Object.keys(categories).length === 0) {
     return (
       <ThemedCard>
         <CardContent>

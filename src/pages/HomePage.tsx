@@ -266,7 +266,6 @@ export default function HomePage() {
         <Box sx={{ mb: 3 }}>
           <EventsTimelineChart
             allPlayers={players}
-            advancements={stats.advancements}
             deathEvents={stats.logs?.events?.filter((e) => e.type === 'death')}
           />
         </Box>

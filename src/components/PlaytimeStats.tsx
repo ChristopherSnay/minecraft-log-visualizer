@@ -1,39 +1,7 @@
-import { Box, CardContent, CardHeader, Typography } from '@mui/material';
+import { Box, CardContent, CardHeader } from '@mui/material';
 import React, { useMemo } from 'react';
+import { StatCard } from './StatCard';
 import { ThemedCard } from './ThemedCard';
-
-const StatCard = ({ label, value }: { label: string; value: string }) => (
-  <ThemedCard elevation={3}>
-    <CardContent
-      sx={{
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-      }}
-    >
-      <Typography
-        variant="body2"
-        color="textSecondary"
-        sx={{ textAlign: 'center' }}
-        gutterBottom
-      >
-        {label}
-      </Typography>
-      <Typography
-        variant="h5"
-        sx={{
-          color: 'primary.main',
-          fontWeight: 'bold',
-          mt: 'auto',
-          textAlign: 'center'
-        }}
-      >
-        {value}
-      </Typography>
-    </CardContent>
-  </ThemedCard>
-);
 
 interface PlaytimeStatsProps {
   customStats: Record<string, number>;
@@ -140,7 +108,12 @@ export const PlaytimeStats: React.FC<PlaytimeStatsProps> = ({ customStats }) => 
           {stats.map((stat) => {
             const value = customStats[stat.key] ?? 0;
             return (
-              <StatCard key={stat.key} label={stat.label} value={stat.format(value)} />
+              <StatCard
+                key={stat.key}
+                label={stat.label}
+                value={stat.format(value)}
+                elevation={0}
+              />
             );
           })}
         </Box>
