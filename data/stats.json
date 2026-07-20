@@ -14972,6 +14972,31 @@
   "logs": {
     "events": [
       {
+        "type": "join",
+        "player": "third_wheel",
+        "line": "[18:55:07] [Server thread/INFO]: third_wheel joined the game",
+        "timestamp": "2026-07-20T18:55:07"
+      },
+      {
+        "type": "join",
+        "player": "Crazy_brosik",
+        "line": "[18:55:24] [Server thread/INFO]: Crazy_brosik joined the game",
+        "timestamp": "2026-07-20T18:55:24"
+      },
+      {
+        "type": "join",
+        "player": "PenelopeWhynot",
+        "line": "[18:55:37] [Server thread/INFO]: PenelopeWhynot joined the game",
+        "timestamp": "2026-07-20T18:55:37"
+      },
+      {
+        "type": "death",
+        "player": "Crazy_brosik",
+        "message": "fell from a high place",
+        "timestamp": "2026-07-20T18:55:48",
+        "line": "[18:55:48] [Server thread/INFO]: Crazy_brosik fell from a high place"
+      },
+      {
         "type": "leave",
         "player": "PenelopeWhynot",
         "line": "[00:58:58] [Server thread/INFO]: PenelopeWhynot left the game",
@@ -17273,8 +17298,16 @@
       }
     ],
     "sessions": {
+      "third_wheel": {
+        "joins": 34,
+        "leaves": 33
+      },
+      "Crazy_brosik": {
+        "joins": 40,
+        "leaves": 38
+      },
       "PenelopeWhynot": {
-        "joins": 29,
+        "joins": 30,
         "leaves": 29
       },
       "Drewyknot": {
@@ -17284,14 +17317,6 @@
       "Kimyknot": {
         "joins": 18,
         "leaves": 18
-      },
-      "Crazy_brosik": {
-        "joins": 39,
-        "leaves": 38
-      },
-      "third_wheel": {
-        "joins": 33,
-        "leaves": 33
       },
       "R3B3X": {
         "joins": 24,
@@ -17305,14 +17330,14 @@
     "log_date": "2026-07-20"
   },
   "usercache": {
-    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
-    "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "PenelopeWhynot",
-    "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
+    "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "third_wheel",
+    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
+    "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "DivineLight",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-20T22:55:01.101915+00:00"
+  "captured_at": "2026-07-20T23:00:00.938330+00:00"
 }
