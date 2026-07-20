@@ -102,10 +102,12 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
           while (leaveIdx < leaves.length && leaves[leaveIdx]._time <= join._time) {
             leaveIdx++;
           }
+          const loginH = (now.getTime() - join._time.getTime()) / (1000 * 60 * 60);
+          if (loginH > TIME_WINDOW || loginH < 0) return;
+
           if (leaveIdx < leaves.length) {
-            const loginH = (now.getTime() - join._time.getTime()) / (1000 * 60 * 60);
             const logoutH = (now.getTime() - leaves[leaveIdx]._time.getTime()) / (1000 * 60 * 60);
-            if (loginH <= TIME_WINDOW && loginH >= 0 && logoutH <= TIME_WINDOW && logoutH >= 0) {
+            if (logoutH <= TIME_WINDOW && logoutH >= 0) {
               sessions.push({
                 player,
                 loginHoursAgo: loginH,
@@ -115,6 +117,15 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
               });
             }
             leaveIdx++;
+          } else {
+            // No matching leave — player is still online
+            sessions.push({
+              player,
+              loginHoursAgo: loginH,
+              logoutHoursAgo: 0,
+              loginTime: join.timestamp,
+              logoutTime: undefined
+            });
           }
         });
       });
@@ -264,7 +275,9 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
                 const m = Math.round((duration - h) * 60);
                 const durationStr = h > 0 ? (m > 0 ? `${h}h ${m}m` : `${h}h`) : `${m}m`;
                 const loginStr = raw.loginTime ? formatTime(raw.loginTime) : `${Math.round(end * 10) / 10}h ago`;
-                const logoutStr = raw.logoutTime ? formatTime(raw.logoutTime) : `${Math.round(start * 10) / 10}h ago`;
+                const logoutStr = raw.logoutTime
+                  ? formatTime(raw.logoutTime)
+                  : (raw.x[0] === 0 ? 'now' : `${Math.round(start * 10) / 10}h ago`);
                 return `${loginStr} → ${logoutStr} (${durationStr})`;
               }
               return '';

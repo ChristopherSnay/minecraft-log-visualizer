@@ -74,9 +74,7 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({
           data: activityData.map((d) => d.activity),
           ...getDatasetColors(3, 0.2),
           fill: true,
-          tension: 0.4,
-          pointRadius: 2,
-          pointHoverRadius: 5
+          tension: 0.4
         }
       ]
     };

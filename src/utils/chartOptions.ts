@@ -153,8 +153,12 @@ export const getLineChartOptions = (
   theme: Theme,
   customOptions?: Partial<ChartOptions<'line'>>
 ): ChartOptions<'line'> => {
+  const base = getBaseChartOptions(theme);
+  if (!customOptions) return base as ChartOptions<'line'>;
+  const { scales: customScales, ...rest } = customOptions;
   return {
-    ...getBaseChartOptions(theme),
-    ...customOptions
+    ...base,
+    ...rest,
+    scales: mergeScales(base.scales as Record<string, ScaleOptions>, customScales as Record<string, ScaleOptions>)
   } as ChartOptions<'line'>;
 };
