@@ -7,7 +7,7 @@ import { BlockCategoriesChart } from '../charts/BlockCategoriesChart';
 import { DamageComparisonChart } from '../charts/DamageComparisonChart';
 import { DamageRatioChart } from '../charts/DamageRatioChart';
 import { EnhancedTravelChart } from '../charts/EnhancedTravelChart';
-import { EventsTimelineChart } from '../charts/EventsTimelineChart';
+import { EventsGanttChart } from '../charts/EventsGanttChart';
 import { ItemsPickedUpChart } from '../charts/ItemsPickedUpChart';
 import { PlayerInteractionsChart } from '../charts/PlayerInteractionsChart';
 import { TimeAndSessionsChart } from '../charts/TimeAndSessionsChart';
@@ -265,7 +265,7 @@ export default function HomePage() {
           <Activity24HourChart allPlayers={players} />
         </Box>
         <Box sx={{ mb: 3 }}>
-          <EventsTimelineChart
+          <EventsGanttChart
             allPlayers={players}
             deathEvents={deathEvents}
             joinEvents={joinEvents}
