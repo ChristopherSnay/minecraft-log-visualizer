@@ -27,13 +27,14 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
   const [selectedPlayerTab, setSelectedPlayerTab] = useState(0);
 
   const players = Object.entries(stats.stats.players);
+  const allPlayersArray = Object.values(stats.stats.players);
 
   // If selectedPlayerId is provided, find it; otherwise use the tab index
   let selectedPlayer;
   if (selectedPlayerId) {
     const player = stats.stats.players[selectedPlayerId];
     if (!player) {
-      return <Box>Player not found</Box>;
+      return <Typography>Player not found</Typography>;
     }
     selectedPlayer = [selectedPlayerId, player] as const;
   } else {
@@ -41,7 +42,7 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
   }
 
   if (!selectedPlayer) {
-    return <Box>No players found</Box>;
+    return <Typography>No players found</Typography>;
   }
 
   const [, playerStats] = selectedPlayer;
@@ -90,7 +91,7 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
         <ResponsiveGrid columns={2}>
           <PlayerRadarChart
             player={playerStats}
-            allPlayers={Object.values(stats.stats.players)}
+            allPlayers={allPlayersArray}
           />
           <PlaytimeStats customStats={playerStats.custom_stats} />
         </ResponsiveGrid>

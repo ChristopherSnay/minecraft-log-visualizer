@@ -14,22 +14,13 @@ import {
   Typography
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import {
-  Chart,
-  Tooltip as ChartTooltip,
-  Filler,
-  Legend,
-  RadarController,
-  RadialLinearScale
-} from 'chart.js';
 import React, { useMemo } from 'react';
 import { Radar } from 'react-chartjs-2';
 import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
-
-Chart.register(RadialLinearScale, RadarController, Filler, Legend, ChartTooltip);
 
 import type { ChartOptions } from 'chart.js';
 
@@ -159,7 +150,6 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
             },
             label: (context) => {
               const idx = context.dataIndex;
-              const units = ['pts', 'h/death', 'km', 'interactions', 'items', 'h', 'blocks'];
               const isServer = context.datasetIndex === 1;
               if (isServer) {
                 return `Server Avg: ${serverRaw[idx].toFixed(1)} ${units[idx]}`;
@@ -215,6 +205,10 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
     return { chartData: data, options: opts, tableData: tableRows };
   }, [player, allPlayers, theme]);
 
+  if (allPlayers.length === 0) {
+    return <ChartEmptyState title="Playstyle Profile" />;
+  }
+
   return (
     <ThemedCard>
       <CardHeader
@@ -226,6 +220,7 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({
               onClick={toggleViewMode}
               size="small"
               sx={{ opacity: 0.5 }}
+              aria-label="Toggle chart/table view"
             >
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />

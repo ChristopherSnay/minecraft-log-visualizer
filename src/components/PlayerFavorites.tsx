@@ -19,6 +19,7 @@ import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import type { ChartOptions, TooltipItem } from 'chart.js';
 import { getDatasetColors } from '../config/chartColors';
+import { ChartEmptyState } from './ChartEmptyState';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import { getItemName } from '../utils/itemNames';
 import type { PlayerStats } from '../types';
@@ -113,19 +114,7 @@ export const PlayerFavorites: React.FC<PlayerFavoritesProps> = ({
   }, [allPlayers, dataKey, colorIndex, theme]);
 
   if (!hasData) {
-    return (
-      <Card elevation={1} sx={{ border: (t) => `1px solid ${t.palette.divider}` }}>
-        <CardHeader
-          title={title}
-          subheader={subtitle}
-        />
-        <CardContent>
-          <Typography variant="body2" color="textSecondary">
-            No data available
-          </Typography>
-        </CardContent>
-      </Card>
-    );
+    return <ChartEmptyState title={title} />;
   }
 
   const maxValue = playerFavorites[0]?.count ?? 1;
@@ -138,7 +127,7 @@ export const PlayerFavorites: React.FC<PlayerFavoritesProps> = ({
         subheader={subtitle}
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode} aria-label="Toggle chart/table view">
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (
@@ -165,7 +154,7 @@ export const PlayerFavorites: React.FC<PlayerFavoritesProps> = ({
             </TableHead>
             <TableBody>
               {playerFavorites.map((row) => (
-                <TableRow key={row.name} hover>
+                <TableRow key={row.playerId} hover>
                   <TableCell>
                     <Typography variant="body2">
                       <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>

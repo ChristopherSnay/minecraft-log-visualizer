@@ -1,4 +1,5 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
@@ -118,6 +119,10 @@ export const PlayerInteractionsChart: React.FC<PlayerInteractionsChartProps> = (
 
     return { chartData: data, options: opts };
   }, [allPlayers, theme]);
+
+  if (Object.keys(allPlayers).length === 0) {
+    return <ChartEmptyState title="Player Interactions" />;
+  }
 
   return (
     <ThemedCard>

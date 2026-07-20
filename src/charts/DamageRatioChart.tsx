@@ -19,6 +19,7 @@ import type { TooltipItem } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { CHART_COLORS } from '../config/chartColors';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import { PlayerLink } from '../components/PlayerLink';
 import type { PlayerStats } from '../types';
@@ -30,6 +31,7 @@ interface DamageRatioChartProps {
 }
 
 interface CombatPlayer {
+  playerId: string;
   name: string;
   ratio: number;
 }
@@ -52,6 +54,7 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
         }
 
         return {
+          playerId,
           name: getPlayerDisplayName(player, playerId),
           ratio: Math.round(ratio * 100) / 100
         };
@@ -105,14 +108,7 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
   }, [allPlayers, theme]);
 
   if (!chartData) {
-    return (
-      <ThemedCard>
-        <CardHeader title="Damage Ratio (Dealt : Taken)" />
-        <CardContent>
-          <Typography variant="body2" color="textSecondary">No combat data available</Typography>
-        </CardContent>
-      </ThemedCard>
-    );
+    return <ChartEmptyState title="Damage Ratio (Dealt : Taken)" />;
   }
 
   const maxValue = Math.max(...playerData.map((p) => p.ratio), 1);
@@ -131,7 +127,7 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
         subheader="How effectively each player engages in combat"
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode} aria-label="Toggle chart/table view">
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (
@@ -158,10 +154,10 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
             </TableHead>
             <TableBody>
               {playerData.map((row) => (
-                <TableRow key={row.name} hover>
+                <TableRow key={row.playerId} hover>
                   <TableCell>
                     <Typography variant="body2">
-                      <PlayerLink playerId={Object.entries(allPlayers).find(([, p]) => (p.name || '') === row.name)?.[0] ?? ''}>
+                      <PlayerLink playerId={row.playerId}>
                         {row.name}
                       </PlayerLink>
                     </Typography>

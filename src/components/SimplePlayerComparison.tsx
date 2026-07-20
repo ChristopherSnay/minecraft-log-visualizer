@@ -17,6 +17,7 @@ import {
 import { useTheme } from '@mui/material/styles';
 import { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
+import { ChartEmptyState } from './ChartEmptyState';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerRow } from '../utils/chartUtils';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
@@ -75,6 +76,10 @@ export function SimplePlayerComparison({
     return { chartData: d, options: opts };
   }, [rows, color, theme, format]);
 
+  if (data.length === 0) {
+    return <ChartEmptyState title={title} />;
+  }
+
   const maxValue = rows[0]?.value ?? 1;
 
   return (
@@ -83,7 +88,7 @@ export function SimplePlayerComparison({
         title={title}
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode} aria-label="Toggle chart/table view">
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (
@@ -118,7 +123,7 @@ export function SimplePlayerComparison({
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <TableRow key={row.name} hover>
+                <TableRow key={row.playerId} hover>
                   <TableCell>
                     <Typography variant="body2">
                       <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>

@@ -19,6 +19,7 @@ import { useTheme } from '@mui/material/styles';
 import type { ChartOptions } from 'chart.js';
 import React, { useMemo, useState } from 'react';
 import { Radar } from 'react-chartjs-2';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ResponsiveGrid } from '../components/SectionHeading';
 import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
@@ -197,6 +198,7 @@ function CategoryRadarChart({
                 size="small"
                 sx={{ opacity: 0.5 }}
                 onClick={() => setMode(mode === 'normalized' ? 'ratio' : 'normalized')}
+                aria-label="Toggle normalized/ratio view"
               >
                 {mode === 'normalized' ? (
                   <PercentIcon fontSize="small" />
@@ -210,6 +212,7 @@ function CategoryRadarChart({
                 size="small"
                 sx={{ opacity: 0.5 }}
                 onClick={toggleView}
+                aria-label="Toggle chart/table view"
               >
                 {view === 'chart' ? (
                   <TableChartIcon fontSize="small" />
@@ -275,15 +278,7 @@ export const CustomStatsRadarCharts: React.FC<CustomStatsRadarChartsProps> = ({
   const categories = useMemo(() => getPresentCategories(allPlayers), [allPlayers]);
 
   if (Object.keys(categories).length === 0) {
-    return (
-      <ThemedCard>
-        <CardContent>
-          <Typography variant="body2" color="textSecondary">
-            No custom stats recorded yet.
-          </Typography>
-        </CardContent>
-      </ThemedCard>
-    );
+    return <ChartEmptyState title="Player Compared to All Players" />;
   }
 
   return (

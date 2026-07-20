@@ -18,6 +18,7 @@ import { useTheme } from '@mui/material/styles';
 import type { ChartOptions } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { getDatasetColors } from '../config/chartColors';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
@@ -83,18 +84,7 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
   }, [data, limit, colorIndex, theme]);
 
   if (!hasData) {
-    return (
-      <Card elevation={1} sx={{ border: (t) => `1px solid ${t.palette.divider}` }}>
-        <CardHeader
-          title={title}
-        />
-        <CardContent>
-          <Typography variant="body2" color="textSecondary">
-            No data available
-          </Typography>
-        </CardContent>
-      </Card>
-    );
+    return <ChartEmptyState title={title} />;
   }
 
   const maxValue = items[0]?.count ?? 1;
@@ -110,6 +100,7 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
               size="small"
               sx={{ opacity: 0.5 }}
               onClick={toggleViewMode}
+              aria-label="Toggle chart/table view"
             >
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />

@@ -18,6 +18,7 @@ import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
@@ -50,7 +51,7 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
     });
 
     const itemData = Object.entries(itemCounts)
-      .sort(([, a], [, b]) => (b as number) - (a as number))
+      .sort(([, a], [, b]) => b - a)
       .slice(0, limit)
       .map(([name, count]) => ({
         name: getItemName(name),
@@ -79,8 +80,12 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
     return { chartData: data, options: opts, itemData };
   }, [allPlayers, limit, theme]);
 
+  if (itemData.length === 0) {
+    return <ChartEmptyState title={`Top ${limit} Items Picked Up`} />;
+  }
+
   const maxValue = itemData[0]?.count ?? 1;
-  const { backgroundColor } = getDatasetColors(0);
+  const { backgroundColor } = getDatasetColors(9);
 
   return (
     <ThemedCard>
@@ -88,7 +93,7 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
         title={`Top ${limit} Items Picked Up`}
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode} aria-label="Toggle chart/table view">
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (

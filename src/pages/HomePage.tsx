@@ -1,5 +1,5 @@
 import { Box, Chip, Container, Typography } from '@mui/material';
-import { useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Activity24HourChart } from '../charts/Activity24HourChart';
 import { ActivityMetricsChart } from '../charts/ActivityMetricsChart';
@@ -24,36 +24,19 @@ import { cmToKm, damageToHearts, getPlayerDisplayName, sumRecord, ticksToHours }
 export default function HomePage() {
   const { stats, statsLoading } = useStats();
   const [playersExpanded, setPlayersExpanded] = useState(false);
+  const togglePlayers = useCallback(() => setPlayersExpanded((prev) => !prev), []);
 
-  if (statsLoading) {
-    return null;
-  }
+  const players = stats?.stats?.players;
+  const totals = players ? calculateTotals(players) : null;
 
-  if (!stats?.stats?.players) {
-    return (
-      <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Box sx={{ textAlign: 'center', py: 8 }}>
-          <Typography variant="h5" color="text.secondary">
-            No stats available
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-            Check that /data/stats.json exists
-          </Typography>
-        </Box>
-      </Container>
-    );
-  }
+  const capturedAt = useMemo(
+    () => (stats?.captured_at ? new Date(stats.captured_at) : null),
+    [stats]
+  );
 
-  const players = stats.stats.players;
-  const totals = calculateTotals(players);
+  const playerEntries = useMemo(() => players ? Object.entries(players) : [], [players]);
 
-  const capturedAt = stats.captured_at
-    ? new Date(stats.captured_at)
-    : null;
-
-  const playerEntries = Object.entries(players);
-
-  const comparisonData = {
+  const comparisonData = useMemo(() => ({
     playtime: playerEntries
       .map(([id, p]) => ({
         playerId: id,
@@ -117,7 +100,32 @@ export default function HomePage() {
         value: cmToKm(p.custom_stats?.['minecraft:walk_one_cm'] ?? 0)
       }))
       .sort((a, b) => b.value - a.value)
-  };
+  }), [playerEntries]);
+
+  const { deathEvents, joinEvents, leaveEvents } = useMemo(() => ({
+    deathEvents: stats?.logs?.events?.filter((e) => e.type === 'death'),
+    joinEvents: stats?.logs?.events?.filter((e) => e.type === 'join'),
+    leaveEvents: stats?.logs?.events?.filter((e) => e.type === 'leave')
+  }), [stats?.logs?.events]);
+
+  if (statsLoading) {
+    return null;
+  }
+
+  if (!players || !totals) {
+    return (
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Box sx={{ textAlign: 'center', py: 8 }}>
+          <Typography variant="h5" color="text.secondary">
+            No stats available
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+            Check that /data/stats.json exists
+          </Typography>
+        </Box>
+      </Container>
+    );
+  }
 
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 2, md: 4 }, px: { xs: 1, sm: 2 } }}>
@@ -127,7 +135,7 @@ export default function HomePage() {
         uniquePlayers={totals.uniquePlayers}
         totalBlocksMined={totals.totalBlocksMined}
         totalMobsKilled={totals.totalMobsKilled}
-        onPlayersClick={() => setPlayersExpanded(!playersExpanded)}
+        onPlayersClick={togglePlayers}
       />
 
       {/* Player Chips - toggled by Players stat card */}
@@ -259,9 +267,9 @@ export default function HomePage() {
         <Box sx={{ mb: 3 }}>
           <EventsTimelineChart
             allPlayers={players}
-            deathEvents={stats.logs?.events?.filter((e) => e.type === 'death')}
-            joinEvents={stats.logs?.events?.filter((e) => e.type === 'join')}
-            leaveEvents={stats.logs?.events?.filter((e) => e.type === 'leave')}
+            deathEvents={deathEvents}
+            joinEvents={joinEvents}
+            leaveEvents={leaveEvents}
           />
         </Box>
         <Box sx={{ mb: 3 }}>

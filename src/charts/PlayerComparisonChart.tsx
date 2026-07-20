@@ -1,4 +1,5 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
@@ -62,6 +63,10 @@ export const PlayerComparisonChart: React.FC<PlayerComparisonChartProps> = ({
 
     return { chartData: data, options: opts };
   }, [players, theme]);
+
+  if (Object.keys(players).length === 0) {
+    return <ChartEmptyState title="Player Activity Comparison" />;
+  }
 
   return (
     <ThemedCard>

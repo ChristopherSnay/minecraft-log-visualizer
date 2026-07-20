@@ -1,4 +1,4 @@
-import { Box, CircularProgress, Link } from '@mui/material';
+import { Box, CircularProgress, Link, Typography } from '@mui/material';
 import { useParams, Link as RouterLink } from 'react-router-dom';
 import { PlayerOverview } from '../components/PlayerOverview';
 import { useStats } from '../context/StatsContext';
@@ -25,7 +25,7 @@ export default function PlayerDetailPage() {
   if (!playerId || !stats.stats.players[playerId]) {
     return (
       <Box sx={{ p: 2 }}>
-        <p>Player not found</p>
+        <Typography>Player not found</Typography>
       </Box>
     );
   }

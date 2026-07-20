@@ -1,4 +1,5 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Line } from 'react-chartjs-2';
@@ -106,6 +107,10 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({
 
     return { chartData: data, options: opts };
   }, [allPlayers, theme]);
+
+  if (Object.keys(allPlayers).length === 0) {
+    return <ChartEmptyState title="Last 24 Hours Activity Level" />;
+  }
 
   return (
     <ThemedCard>

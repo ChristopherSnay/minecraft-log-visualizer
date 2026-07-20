@@ -18,6 +18,7 @@ import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { getPaletteColor } from '../config/chartColors';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 import { getPieChartOptions } from '../utils/chartOptions';
@@ -175,19 +176,8 @@ export const BlockCategoriesChart: React.FC<BlockCategoriesChartProps> = ({
     return { chartData: data, options: opts, categoryData };
   }, [allPlayers, theme]);
 
-  if (!chartData) {
-    return (
-      <ThemedCard>
-        <CardHeader title="Blocks Mined by Category" />
-        <CardContent>
-          <Box sx={{ p: 2, textAlign: 'center' }}>
-            <Typography variant="body2" color="textSecondary">
-              No data available
-            </Typography>
-          </Box>
-        </CardContent>
-      </ThemedCard>
-    );
+  if (categoryData.length === 0) {
+    return <ChartEmptyState title="Blocks Mined by Category" />;
   }
 
   const totalBlocks = categoryData.reduce((sum, c) => sum + c.value, 0);
@@ -199,7 +189,7 @@ export const BlockCategoriesChart: React.FC<BlockCategoriesChartProps> = ({
         title="Blocks Mined by Category"
         action={
           <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode}>
+            <IconButton size="small" sx={{ opacity: 0.5 }} onClick={toggleViewMode} aria-label="Toggle chart/table view">
               {viewMode === 'chart' ? (
                 <TableChartIcon fontSize="small" />
               ) : (

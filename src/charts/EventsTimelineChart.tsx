@@ -1,7 +1,8 @@
-import { Box, CardContent, CardHeader, Typography, useTheme } from '@mui/material';
-import type { ChartOptions } from 'chart.js';
+import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import type { ChartData, ChartOptions } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Scatter } from 'react-chartjs-2';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
 import type { LogDeathEvent, LogJoinEvent, LogLeaveEvent, PlayerStats } from '../types';
@@ -401,16 +402,7 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
   }, [allPlayers, deathEvents, joinEvents, leaveEvents, theme]);
 
   if (!hasEvents) {
-    return (
-      <ThemedCard>
-        <CardHeader title="Recent Events (Last 12 Hours)" />
-        <CardContent>
-          <Typography variant="body2" color="textSecondary">
-            No events recorded yet.
-          </Typography>
-        </CardContent>
-      </ThemedCard>
-    );
+    return <ChartEmptyState title="Recent Events (Last 12 Hours)" />;
   }
 
   return (
@@ -421,7 +413,7 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
       />
       <CardContent>
         <Box sx={{ height: 300 }}>
-          <Scatter data={chartData as any} options={options} />
+          <Scatter data={chartData as ChartData<'scatter'>} options={options} />
         </Box>
       </CardContent>
     </ThemedCard>

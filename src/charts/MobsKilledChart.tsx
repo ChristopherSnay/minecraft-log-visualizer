@@ -1,5 +1,6 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
 import { ThemedCard } from '../components/ThemedCard';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import React, { useMemo } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { getPaletteColor } from '../config/chartColors';
@@ -48,16 +49,7 @@ export const MobsKilledChart: React.FC<MobsKilledChartProps> = ({ mobs }) => {
   }, [mobs, theme]);
 
   if (!chartData) {
-    return (
-      <ThemedCard>
-        <CardHeader title="Mobs Killed" />
-        <CardContent>
-          <Box sx={{ p: 2, textAlign: 'center', color: theme.palette.text.secondary }}>
-            No mobs killed data available
-          </Box>
-        </CardContent>
-      </ThemedCard>
-    );
+    return <ChartEmptyState title="Mobs Killed" />;
   }
 
   return (

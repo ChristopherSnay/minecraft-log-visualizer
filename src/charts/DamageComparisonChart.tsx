@@ -1,4 +1,5 @@
 import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import type { ChartOptions, TooltipItem } from 'chart.js';
 import React, { useMemo } from 'react';
@@ -81,6 +82,10 @@ export const DamageComparisonChart: React.FC<DamageComparisonChartProps> = ({
 
     return { chartData: data, options: opts };
   }, [allPlayers, theme]);
+
+  if (Object.keys(allPlayers).length === 0) {
+    return <ChartEmptyState title="Combat Engagement" />;
+  }
 
   return (
     <ThemedCard>
