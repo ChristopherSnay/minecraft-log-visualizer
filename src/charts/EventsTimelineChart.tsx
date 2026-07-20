@@ -272,9 +272,10 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
         backgroundColor: sessionColor,
         borderWidth: 2,
         pointRadius: 0,
-        pointHoverRadius: 4,
+        pointHoverRadius: 0,
         tension: 0,
-        order: 2
+        order: 2,
+        tooltip: { enabled: false }
       };
     });
 
@@ -371,6 +372,10 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
         },
         tooltip: {
           enabled: true,
+          filter: (item) => {
+            const ds = item.datasetIndex != null ? data.datasets[item.datasetIndex] : undefined;
+            return !(ds && 'showLine' in ds && ds.showLine);
+          },
           callbacks: {
             title: (items) => {
               const raw = items[0]?.raw as EventPoint;
@@ -421,7 +426,7 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
       />
       <CardContent>
         <Box sx={{ height: 300 }}>
-          <Scatter data={chartData} options={options} />
+          <Scatter data={chartData as any} options={options} />
         </Box>
       </CardContent>
     </ThemedCard>
