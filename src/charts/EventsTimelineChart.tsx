@@ -13,6 +13,7 @@ interface EventPoint {
   y: number;
   player: string;
   detail: string;
+  time?: string;
 }
 
 interface SessionLine {
@@ -21,6 +22,7 @@ interface SessionLine {
   logoutHoursAgo: number;
   loginIdx: number;
   logoutIdx: number;
+  deathIdxs: number[];
 }
 
 interface EventsTimelineChartProps {
@@ -58,7 +60,8 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
                   x: hoursAgo,
                   y: 1,
                   player: player.name || uuid.substring(0, 8),
-                  detail: advName
+                  detail: advName,
+                  time: adv.time
                 });
               }
             } catch (_e) {
@@ -84,7 +87,8 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
                 x: hoursAgo,
                 y: 3,
                 player: event.player,
-                detail: event.message
+                detail: event.message,
+                time: event.timestamp
               };
               if (event.player === 'Villager') {
                 villagerDeathPoints.push(point);
@@ -113,7 +117,8 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
                 y: 5,
                 player: event.player,
                 detail: 'joined',
-                _idx: i
+                _idx: i,
+                time: event.timestamp
               });
             }
           } catch (_e) {
@@ -137,7 +142,8 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
                 y: 7,
                 player: event.player,
                 detail: 'left',
-                _idx: i
+                _idx: i,
+                time: event.timestamp
               });
             }
           } catch (_e) {
@@ -184,15 +190,19 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
             const loginHoursAgo = (now.getTime() - join._time.getTime()) / (1000 * 60 * 60);
             const logoutHoursAgo = (now.getTime() - leaves[leaveIdx]._time.getTime()) / (1000 * 60 * 60);
             if (loginHoursAgo <= 12 && loginHoursAgo >= 0 && logoutHoursAgo <= 12 && logoutHoursAgo >= 0) {
-              // Find the index in the filtered loginPoints/logoutPoints arrays
               const loginIdx = loginPoints.findIndex(
                 (lp) => lp.player === player && Math.abs(lp.x - loginHoursAgo) < 0.001
               );
               const logoutIdx = logoutPoints.findIndex(
                 (lp) => lp.player === player && Math.abs(lp.x - logoutHoursAgo) < 0.001
               );
+              // Find player deaths (not villagers) within this session window
+              const deathIdxs = playerDeathPoints
+                .map((dp, i) => ({ dp, i }))
+                .filter(({ dp }) => dp.player === player && dp.x <= loginHoursAgo && dp.x >= logoutHoursAgo)
+                .map(({ i }) => i);
               if (loginIdx >= 0 && logoutIdx >= 0) {
-                sessions.push({ player, loginHoursAgo, logoutHoursAgo, loginIdx, logoutIdx });
+                sessions.push({ player, loginHoursAgo, logoutHoursAgo, loginIdx, logoutIdx, deathIdxs });
               }
             }
             leaveIdx++;
@@ -229,14 +239,16 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
       x: p.x,
       y: 5 + (seededRandom(p._idx * 456) * 0.3 - 0.15),
       player: p.player,
-      detail: p.detail
+      detail: p.detail,
+      time: p.time
     }));
 
     const logoutWithJitter = logoutPoints.map((p) => ({
       x: p.x,
       y: 7 + (seededRandom(p._idx * 123) * 0.3 - 0.15),
       player: p.player,
-      detail: p.detail
+      detail: p.detail,
+      time: p.time
     }));
 
     // Build session line datasets using the same jitter as the dots they connect
@@ -244,11 +256,17 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
     const sessionDatasets = sessions.map((s) => {
       const loginY = 5 + (seededRandom(loginPoints[s.loginIdx]._idx * 456) * 0.3 - 0.15);
       const logoutY = 7 + (seededRandom(logoutPoints[s.logoutIdx]._idx * 123) * 0.3 - 0.15);
+      const points: Array<{ x: number; y: number; player: string; detail: string; time?: string }> = [
+        { x: s.loginHoursAgo, y: loginY, player: s.player, detail: 'joined', time: loginPoints[s.loginIdx].time }
+      ];
+      s.deathIdxs.forEach((di) => {
+        const dp = playerDeathPoints[di];
+        const deathY = 3 + (seededRandom(di * 789) * 0.3 - 0.15);
+        points.push({ x: dp.x, y: deathY, player: dp.player, detail: dp.detail, time: dp.time });
+      });
+      points.push({ x: s.logoutHoursAgo, y: logoutY, player: s.player, detail: 'left', time: logoutPoints[s.logoutIdx].time });
       return {
-        data: [
-          { x: s.loginHoursAgo, y: loginY, player: s.player, detail: `${s.player} session` },
-          { x: s.logoutHoursAgo, y: logoutY, player: s.player, detail: `${s.player} session` }
-        ],
+        data: points,
         showLine: true,
         borderColor: sessionColor,
         backgroundColor: sessionColor,
@@ -346,8 +364,8 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
         legend: {
           labels: {
             filter: (item) => {
-              const ds = data.datasets[item.datasetIndex];
-              return !('showLine' in ds && ds.showLine);
+              const ds = item.datasetIndex != null ? data.datasets[item.datasetIndex] : undefined;
+              return !(ds && 'showLine' in ds && ds.showLine);
             }
           }
         },
@@ -355,6 +373,15 @@ export const EventsTimelineChart: React.FC<EventsTimelineChartProps> = ({
           enabled: true,
           callbacks: {
             title: (items) => {
+              const raw = items[0]?.raw as EventPoint;
+              if (raw?.time) {
+                try {
+                  const d = new Date(raw.time);
+                  return d.toLocaleTimeString();
+                } catch {
+                  return raw.time;
+                }
+              }
               const hoursAgo = items[0]?.parsed.x ?? 0;
               return `${Math.round(hoursAgo * 10) / 10}h ago`;
             },
