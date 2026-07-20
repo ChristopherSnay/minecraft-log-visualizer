@@ -7,6 +7,7 @@ import { MobsKilledChart } from '../charts/MobsKilledChart';
 import { PlayerComparisonChart } from '../charts/PlayerComparisonChart';
 import { PlayerRadarChart } from '../charts/PlayerRadarChart';
 import type { StatsJson } from '../types';
+import { PlayerAdvancements } from './PlayerAdvancements';
 import { PlaytimeStats } from './PlaytimeStats';
 import { ResponsiveGrid } from './SectionHeading';
 import { StatCard } from './StatCard';
@@ -184,6 +185,11 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({
           player={playerStats}
           allPlayers={Object.values(stats.stats.players)}
         />
+      </ThemedSection>
+
+      {/* Advancements */}
+      <ThemedSection title="Advancements">
+        <PlayerAdvancements playerStats={playerStats} />
       </ThemedSection>
 
       {/* Player Comparison - only when browsing all players */}

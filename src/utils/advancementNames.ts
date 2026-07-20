@@ -84,7 +84,6 @@ const ADVANCEMENT_NAMES: Record<string, string> = {
   'adventure/avoid_vibration': 'Sneak 100',
   'adventure/fall_from_world_height': 'Caves & Cliffs',
   'adventure/under_lock_and_key': 'Under Lock and Key',
-  'adventure/under_lock_and_key': 'Under Lock and Key',
   'adventure/revaulting': 'Revaulting',
   'adventure/use_lodestone': 'Country Lode, Take Me Home',
   'adventure/salvage_sherd': 'Respecting the Remnants',

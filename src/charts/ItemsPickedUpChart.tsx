@@ -14,13 +14,13 @@ import {
   Typography,
   useTheme
 } from '@mui/material';
-import { ThemedCard } from '../components/ThemedCard';
 import React, { useMemo, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
+import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
-import { getItemName } from '../utils/itemNames';
-import { getHorizontalBarOptions } from '../utils/chartOptions';
 import type { PlayerStats } from '../types';
+import { getHorizontalBarOptions } from '../utils/chartOptions';
+import { getItemName } from '../utils/itemNames';
 
 interface ItemsPickedUpChartProps {
   allPlayers: Record<string, PlayerStats>;
@@ -40,9 +40,11 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
     // Aggregate items picked up from all players
     Object.values(allPlayers).forEach((player: PlayerStats) => {
       if (player.items_picked_up) {
-        Object.entries(player.items_picked_up).forEach(([item, count]: [string, number]) => {
-          itemCounts[item] = (itemCounts[item] || 0) + count;
-        });
+        Object.entries(player.items_picked_up).forEach(
+          ([item, count]: [string, number]) => {
+            itemCounts[item] = (itemCounts[item] || 0) + count;
+          }
+        );
       }
     });
 
@@ -60,7 +62,7 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
         {
           label: 'Count',
           data: itemData.map((i) => i.count),
-          ...getDatasetColors(0)
+          ...getDatasetColors(9)
         }
       ]
     };
@@ -109,16 +111,27 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
             <TableHead>
               <TableRow>
                 <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>#</TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Item</TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }} align="right">Count</TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary', width: '30%' }}></TableCell>
+                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>
+                  Item
+                </TableCell>
+                <TableCell
+                  sx={{ fontWeight: 600, color: 'text.secondary' }}
+                  align="right"
+                >
+                  Count
+                </TableCell>
+                <TableCell
+                  sx={{ fontWeight: 600, color: 'text.secondary', width: '30%' }}
+                ></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {itemData.map((row, i) => (
                 <TableRow key={row.name} hover>
                   <TableCell>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>{i + 1}</Typography>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      {i + 1}
+                    </Typography>
                   </TableCell>
                   <TableCell>
                     <Typography variant="body2">{row.name}</Typography>
@@ -129,7 +142,15 @@ export const ItemsPickedUpChart: React.FC<ItemsPickedUpChartProps> = ({
                     </Typography>
                   </TableCell>
                   <TableCell>
-                    <Box sx={{ height: 8, borderRadius: 1, backgroundColor, width: `${(row.count / maxValue) * 100}%`, opacity: 0.8 }} />
+                    <Box
+                      sx={{
+                        height: 8,
+                        borderRadius: 1,
+                        backgroundColor,
+                        width: `${(row.count / maxValue) * 100}%`,
+                        opacity: 0.8
+                      }}
+                    />
                   </TableCell>
                 </TableRow>
               ))}
