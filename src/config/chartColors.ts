@@ -37,8 +37,8 @@ export const getDatasetColors = (index: number, opacity = 1) => {
     backgroundColor:
       opacity < 1
         ? `${baseColor}${Math.round(opacity * 255)
-          .toString(16)
-          .padStart(2, '0')}`
+            .toString(16)
+            .padStart(2, '0')}`
         : baseColor,
     borderColor: baseColor
   };

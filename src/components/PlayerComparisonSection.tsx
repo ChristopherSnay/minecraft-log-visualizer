@@ -1,5 +1,5 @@
-import { Box, Tab, Tabs } from '@mui/material';
-import React, { useMemo, useState } from 'react';
+import { Box, Pagination, Tab, Tabs } from '@mui/material';
+import React, { useMemo, useState, type ReactElement } from 'react';
 
 import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
@@ -70,8 +70,20 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
 
   const changePage = (page: number) => {
     setPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const paginator = (): ReactElement => (
+    <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
+      <Pagination
+        count={totalPages}
+        page={page}
+        onChange={(_e, newPage) => changePage(newPage)}
+        color="primary"
+        size="large"
+        shape="rounded"
+      />
+    </Box>
+  );
 
   return (
     <ThemedSection title="Player Comparison">
@@ -93,35 +105,7 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
           ))}
         </Tabs>
       </Box>
-      {visibleStats.length > itemsPerPage && (
-        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mb: 2 }}>
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
-            <Box
-              key={pageNumber}
-              onClick={() => changePage(pageNumber)}
-              sx={{
-                width: 32,
-                height: 32,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                backgroundColor: page === pageNumber ? 'primary.main' : 'background.paper',
-                color: page === pageNumber ? 'primary.contrastText' : 'text.primary',
-                border: '1px solid',
-                borderColor: page === pageNumber ? 'primary.main' : 'divider',
-                transition: 'all 0.2s',
-                '&:hover': {
-                  backgroundColor: page === pageNumber ? 'primary.dark' : 'action.hover'
-                }
-              }}
-            >
-              {pageNumber}
-            </Box>
-          ))}
-        </Box>
-      )}
+      {visibleStats.length > itemsPerPage && paginator()}
       <ResponsiveGrid columns={3}>
         {paginatedStats
           .map((stat, i) => {
@@ -145,6 +129,7 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
           })
           .filter(Boolean)}
       </ResponsiveGrid>
+      {visibleStats.length > itemsPerPage && paginator()}
     </ThemedSection>
   );
 };
