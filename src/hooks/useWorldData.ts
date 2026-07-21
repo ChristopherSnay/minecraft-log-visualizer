@@ -12,8 +12,8 @@ export function useWorldData() {
         const res = await fetch(`${import.meta.env.BASE_URL}data/stats.json`);
         const json = await res.json();
         setStats(json);
-      } catch (err) {
-        console.error('Failed to load stats:', err);
+      } catch {
+        // stats will remain null
       }
 
       setStatsLoading(false);
