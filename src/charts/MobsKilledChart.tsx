@@ -7,7 +7,7 @@ import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ChartWithTable } from '../components/ChartWithTable';
 import { getPaletteColor } from '../config/chartColors';
 import { getPieChartOptions } from '../utils/chartOptions';
-import { getItemName } from '../utils/itemNames';
+import { translateId } from '../utils/minecraftTranslations';
 
 interface MobsKilledChartProps {
   mobs: Record<string, number>;
@@ -25,7 +25,7 @@ export const MobsKilledChart: React.FC<MobsKilledChartProps> = ({ mobs }) => {
       .filter(([, count]) => count > 0)
       .sort(([, a], [, b]) => b - a)
       .map(([name, count]) => ({
-        name: getItemName(name),
+        name: translateId(name),
         value: count
       }));
 

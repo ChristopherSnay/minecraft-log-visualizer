@@ -8,7 +8,7 @@ import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ChartWithTable } from '../components/ChartWithTable';
 import { getDatasetColors } from '../config/chartColors';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
-import { getItemName } from '../utils/itemNames';
+import { translateId } from '../utils/minecraftTranslations';
 
 interface ItemDataChartProps {
   data: Record<string, number>;
@@ -35,7 +35,7 @@ export const ItemDataChart: React.FC<ItemDataChartProps> = ({
       .sort(([, a], [, b]) => b - a)
       .slice(0, limit)
       .map(([itemId, count]) => ({
-        name: getItemName(itemId),
+        name: translateId(itemId),
         count
       }));
 

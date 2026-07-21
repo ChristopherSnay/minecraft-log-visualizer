@@ -11,7 +11,7 @@ import {
 import React, { useMemo, useState } from 'react';
 
 import type { PlayerStats } from '../types';
-import { getAdvancementDisplayName } from '../utils/advancementNames';
+import { translateId } from '../utils/minecraftTranslations';
 
 type SortColumn = 'advancement' | 'date';
 type SortOrder = 'asc' | 'desc';
@@ -31,8 +31,8 @@ export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({ playerSt
 
     return filtered.sort((a, b) => {
       if (sortColumn === 'advancement') {
-        const nameA = getAdvancementDisplayName(a.id).toLowerCase();
-        const nameB = getAdvancementDisplayName(b.id).toLowerCase();
+        const nameA = translateId(a.id).toLowerCase();
+        const nameB = translateId(b.id).toLowerCase();
         const comparison = nameA.localeCompare(nameB);
         return sortOrder === 'desc' ? -comparison : comparison;
       } else {
@@ -148,7 +148,7 @@ export const PlayerAdvancements: React.FC<PlayerAdvancementsProps> = ({ playerSt
           {advancements.map((adv) => (
             <TableRow key={adv.id}>
               <TableCell>
-                <Typography variant="body2">{getAdvancementDisplayName(adv.id)}</Typography>
+                <Typography variant="body2">{translateId(adv.id)}</Typography>
               </TableCell>
               <TableCell align="right">
                 <Typography

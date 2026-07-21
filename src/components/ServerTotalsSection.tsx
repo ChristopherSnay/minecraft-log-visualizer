@@ -2,10 +2,8 @@ import React, { useMemo } from 'react';
 
 import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
-import { getAdvancementDisplayName } from '../utils/advancementNames';
 import { mergeRecordsTopN } from '../utils/chartUtils';
-import { getItemName } from '../utils/itemNames';
-import { getStatLabel } from '../utils/statCategories';
+import { translateId } from '../utils/minecraftTranslations';
 import { ResponsiveGrid } from './SectionHeading';
 import { SimplePlayerComparison } from './SimplePlayerComparison';
 import { ThemedSection } from './ThemedSection';
@@ -50,19 +48,19 @@ export const ServerTotalsSection: React.FC<ServerTotalsSectionProps> = ({
     const advancements = Object.entries(advancementCounts)
       .sort(([, a], [, b]) => b - a)
       .slice(0, 5)
-      .map(([id, value]) => ({ name: getAdvancementDisplayName(id), value }));
+      .map(([id, value]) => ({ name: translateId(id), value }));
     const customStats = Object.entries(customStatsMerged)
       .sort(([, a], [, b]) => b - a)
       .slice(0, 5)
-      .map(([key, value]) => ({ name: getStatLabel(key), value }));
+      .map(([key, value]) => ({ name: translateId(key), value }));
 
     return {
-      blocks: mergeRecordsTopN(players, 'blocks_mined', 5, getItemName),
-      mobs: mergeRecordsTopN(players, 'mobs_killed', 5, getItemName),
-      itemsCrafted: mergeRecordsTopN(players, 'items_crafted', 5, getItemName),
-      itemsUsed: mergeRecordsTopN(players, 'items_used', 5, getItemName),
-      itemsPickedUp: mergeRecordsTopN(players, 'items_picked_up', 5, getItemName),
-      itemsDropped: mergeRecordsTopN(players, 'items_dropped', 5, getItemName),
+      blocks: mergeRecordsTopN(players, 'blocks_mined', 5, translateId),
+      mobs: mergeRecordsTopN(players, 'mobs_killed', 5, translateId),
+      itemsCrafted: mergeRecordsTopN(players, 'items_crafted', 5, translateId),
+      itemsUsed: mergeRecordsTopN(players, 'items_used', 5, translateId),
+      itemsPickedUp: mergeRecordsTopN(players, 'items_picked_up', 5, translateId),
+      itemsDropped: mergeRecordsTopN(players, 'items_dropped', 5, translateId),
       advancements,
       customStats
     };
@@ -72,49 +70,49 @@ export const ServerTotalsSection: React.FC<ServerTotalsSectionProps> = ({
     <ThemedSection title="Server Totals">
       <ResponsiveGrid columns={3}>
         <SimplePlayerComparison
-          title="Top Blocks Mined"
+          title="Blocks Mined"
           data={data.blocks}
           color={getPaletteColor(0)}
         />
         <SimplePlayerComparison
-          title="Top Mobs Killed"
+          title="Mobs Killed"
           data={data.mobs}
           color={getPaletteColor(1)}
         />
         <SimplePlayerComparison
-          title="Top Items Crafted"
+          title="Items Crafted"
           data={data.itemsCrafted}
           color={getPaletteColor(2)}
         />
         <SimplePlayerComparison
-          title="Top Items Used"
+          title="Items Used"
           data={data.itemsUsed}
           color={getPaletteColor(3)}
         />
         <SimplePlayerComparison
-          title="Top Items Picked Up"
+          title="Items Picked Up"
           data={data.itemsPickedUp}
           color={getPaletteColor(4)}
         />
         <SimplePlayerComparison
-          title="Top Items Dropped"
+          title="Items Dropped"
           data={data.itemsDropped}
           color={getPaletteColor(5)}
         />
         <SimplePlayerComparison
-          title="Top Death Causes"
+          title="Death Causes"
           data={topDeathCauses}
           color={getPaletteColor(6)}
           nameLabel="Cause"
         />
         <SimplePlayerComparison
-          title="Top Advancements"
+          title="Advancements"
           data={data.advancements}
           color={getPaletteColor(7)}
           nameLabel="Advancement"
         />
         <SimplePlayerComparison
-          title="Top Misc Stats"
+          title="Misc Stats"
           data={data.customStats}
           color={getPaletteColor(8)}
           nameLabel="Stat"

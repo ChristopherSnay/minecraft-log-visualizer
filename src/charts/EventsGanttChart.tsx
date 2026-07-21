@@ -14,9 +14,9 @@ import type {
   PlayerStats,
   ServerSession
 } from '../types';
-import { getAdvancementDisplayName } from '../utils/advancementNames';
 import { getBaseChartOptions } from '../utils/chartOptions';
 import { getPlayerDisplayName } from '../utils/chartUtils';
+import { translateId } from '../utils/minecraftTranslations';
 
 interface GanttSession {
   player: string;
@@ -160,7 +160,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
                   x: hoursAgo,
                   y: getPlayerDisplayName(player, uuid),
                   type: 'advancement',
-                  detail: getAdvancementDisplayName(adv.id),
+                  detail: translateId(adv.id),
                   time: adv.time
                 });
               }

@@ -8,7 +8,7 @@ import { getDatasetColors } from '../config/chartColors';
 import type { PlayerStats } from '../types';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
 import { getPlayerDisplayName } from '../utils/chartUtils';
-import { getItemName } from '../utils/itemNames';
+import { translateId } from '../utils/minecraftTranslations';
 import { ChartEmptyState } from './ChartEmptyState';
 import { ChartWithTable } from './ChartWithTable';
 import { PlayerLink } from './PlayerLink';
@@ -48,7 +48,7 @@ export const PlayerFavorites: React.FC<PlayerFavoritesProps> = ({
         const sorted = entries.sort((a, b) => b[1] - a[1]);
         const [itemId, count] = sorted[0];
 
-        const formattedName = getItemName(itemId);
+        const formattedName = translateId(itemId);
 
         return {
           playerId,

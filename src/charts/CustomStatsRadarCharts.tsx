@@ -21,7 +21,8 @@ import { ChartWithTable } from '../components/ChartWithTable';
 import { ResponsiveGrid } from '../components/SectionHeading';
 import { getDatasetColors } from '../config/chartColors';
 import type { PlayerStats } from '../types';
-import { getPresentCategories, getStatLabel } from '../utils/statCategories';
+import { translateId } from '../utils/minecraftTranslations';
+import { getPresentCategories } from '../utils/statCategories';
 
 interface CustomStatsRadarChartsProps {
   player: PlayerStats;
@@ -54,7 +55,7 @@ function CategoryRadarChart({
   const [mode, setMode] = useState<ViewMode>('normalized');
 
   const { data, options, tableRows } = useMemo(() => {
-    const labels = keys.map(getStatLabel);
+    const labels = keys.map(translateId);
     const playerValues = keys.map((k) => player.custom_stats[k] || 0);
     const avgValues = keys.map((k) => serverAverage(k, allPlayers, player));
 
@@ -161,7 +162,7 @@ function CategoryRadarChart({
     };
 
     const tableRows = keys.map((k, i) => ({
-      label: getStatLabel(k),
+      label: translateId(k),
       player: playerValues[i],
       avg: avgValues[i],
       ratio: avgValues[i] > 0 ? playerValues[i] / avgValues[i] : null

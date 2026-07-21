@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import type { StatsJson } from '../types';
+import { loadTranslations } from '../utils/minecraftTranslations';
 
 export function useWorldData() {
   const [stats, setStats] = useState<StatsJson | null>(null);
@@ -9,8 +10,11 @@ export function useWorldData() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch(`${import.meta.env.BASE_URL}data/stats.json`);
-        const json = await res.json();
+        const [statsRes] = await Promise.all([
+          fetch(`${import.meta.env.BASE_URL}data/stats.json`),
+          loadTranslations()
+        ]);
+        const json = await statsRes.json();
         setStats(json);
       } catch {
         // stats will remain null

@@ -79,15 +79,6 @@ export const CUSTOM_STAT_CATEGORIES: Record<string, string[]> = {
   ]
 };
 
-/** Convert a stat key like "minecraft:walk_one_cm" into "Walk One Cm". */
-export function getStatLabel(key: string): string {
-  const name = key.replace(/^minecraft:/, '');
-  return name
-    .split('_')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
 /**
  * Return only the categories that have at least one stat present in the
  * given custom_stats record, with their present stat keys.

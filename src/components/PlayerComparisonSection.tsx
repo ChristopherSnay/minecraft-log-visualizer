@@ -1,14 +1,10 @@
-import React, { useMemo } from 'react';
+import { Box, Tab, Tabs } from '@mui/material';
+import React, { useMemo, useState } from 'react';
 
 import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
-import {
-  cmToKm,
-  damageToHearts,
-  getPlayerDisplayName,
-  sumRecord,
-  ticksToHours
-} from '../utils/chartUtils';
+import { cmToKm, damageToHearts, getPlayerDisplayName, ticksToHours } from '../utils/chartUtils';
+import { buildComparisonCategories } from '../utils/playerComparisonCategories';
 import { ResponsiveGrid } from './SectionHeading';
 import { SimplePlayerComparison } from './SimplePlayerComparison';
 import { ThemedSection } from './ThemedSection';
@@ -17,129 +13,137 @@ interface PlayerComparisonSectionProps {
   players: Record<string, PlayerStats>;
 }
 
+function getCustomStatValue(key: string, p: PlayerStats): number {
+  const raw = p.custom_stats?.[`minecraft:${key}`] ?? 0;
+  if (key.endsWith('_one_cm')) return cmToKm(raw);
+  if (key === 'play_time' || key.startsWith('time_since_')) return ticksToHours(raw);
+  if (key.startsWith('damage_')) return damageToHearts(raw);
+  return raw;
+}
+
+function getStatValue(statKey: string, p: PlayerStats): number {
+  if (statKey.startsWith('blocks:')) {
+    return p.blocks_mined?.[`minecraft:${statKey.slice(7)}`] ?? 0;
+  }
+  if (statKey.startsWith('crafted:')) {
+    return p.items_crafted?.[`minecraft:${statKey.slice(8)}`] ?? 0;
+  }
+  if (statKey.startsWith('using:')) {
+    return p.items_used?.[`minecraft:${statKey.slice(6)}`] ?? 0;
+  }
+  if (statKey.startsWith('killed:')) {
+    return p.mobs_killed?.[`minecraft:${statKey.slice(7)}`] ?? 0;
+  }
+  if (statKey.startsWith('took:')) {
+    return p.items_picked_up?.[`minecraft:${statKey.slice(5)}`] ?? 0;
+  }
+  if (statKey.startsWith('dropped:')) {
+    return p.items_dropped?.[`minecraft:${statKey.slice(8)}`] ?? 0;
+  }
+  if (statKey.startsWith('advancing:')) {
+    const fullId = `minecraft:${statKey.slice(10)}`;
+    return (p.completed ?? []).some((a) => a.id === fullId) ? 1 : 0;
+  }
+  if (statKey.startsWith('custom:')) {
+    return getCustomStatValue(statKey.slice(7), p);
+  }
+  return 0;
+}
+
 export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = ({ players }) => {
   const playerEntries = useMemo(() => Object.entries(players), [players]);
+  const categories = useMemo(() => buildComparisonCategories(players), [players]);
+  const [categoryIndex, setCategoryIndex] = useState(0);
+  const [page, setPage] = useState(1);
 
-  const data = useMemo(
-    () => ({
-      playtime: playerEntries
-        .map(([id, p]) => ({
-          playerId: id,
-          name: getPlayerDisplayName(p, id),
-          value: ticksToHours(p.custom_stats?.['minecraft:play_time'] ?? 0)
-        }))
-        .sort((a, b) => b.value - a.value),
-      blocks: playerEntries
-        .map(([id, p]) => ({
-          playerId: id,
-          name: getPlayerDisplayName(p, id),
-          value: sumRecord(p.blocks_mined)
-        }))
-        .sort((a, b) => b.value - a.value),
-      mobs: playerEntries
-        .map(([id, p]) => ({
-          playerId: id,
-          name: getPlayerDisplayName(p, id),
-          value: sumRecord(p.mobs_killed)
-        }))
-        .sort((a, b) => b.value - a.value),
-      itemsCrafted: playerEntries
-        .map(([id, p]) => ({
-          playerId: id,
-          name: getPlayerDisplayName(p, id),
-          value: sumRecord(p.items_crafted)
-        }))
-        .sort((a, b) => b.value - a.value),
-      itemsUsed: playerEntries
-        .map(([id, p]) => ({
-          playerId: id,
-          name: getPlayerDisplayName(p, id),
-          value: sumRecord(p.items_used)
-        }))
-        .sort((a, b) => b.value - a.value),
-      damageDealt: playerEntries
-        .map(([id, p]) => ({
-          playerId: id,
-          name: getPlayerDisplayName(p, id),
-          value: damageToHearts(p.custom_stats?.['minecraft:damage_dealt'] ?? 0)
-        }))
-        .sort((a, b) => b.value - a.value),
-      jumps: playerEntries
-        .map(([id, p]) => ({
-          playerId: id,
-          name: getPlayerDisplayName(p, id),
-          value: p.custom_stats?.['minecraft:jump'] ?? 0
-        }))
-        .sort((a, b) => b.value - a.value),
-      damageTaken: playerEntries
-        .map(([id, p]) => ({
-          playerId: id,
-          name: getPlayerDisplayName(p, id),
-          value: p.custom_stats?.['minecraft:damage_taken'] ?? 0
-        }))
-        .sort((a, b) => b.value - a.value),
-      distanceWalked: playerEntries
-        .map(([id, p]) => ({
-          playerId: id,
-          name: getPlayerDisplayName(p, id),
-          value: cmToKm(p.custom_stats?.['minecraft:walk_one_cm'] ?? 0)
-        }))
-        .sort((a, b) => b.value - a.value)
-    }),
-    [playerEntries]
-  );
+  const category = categories[categoryIndex];
+
+  const visibleStats = useMemo(() => category?.stats ?? [], [category]);
+
+  const itemsPerPage = 12;
+  const totalPages = Math.ceil(visibleStats.length / itemsPerPage);
+
+  const paginatedStats = useMemo(() => {
+    const startIndex = (page - 1) * itemsPerPage;
+    return visibleStats.slice(startIndex, startIndex + itemsPerPage);
+  }, [visibleStats, page]);
+
+  const changePage = (page: number) => {
+    setPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <ThemedSection title="Player Comparison">
+      <Box sx={{ mb: 2 }}>
+        <Tabs
+          value={categoryIndex}
+          onChange={(_e, i) => {
+            setCategoryIndex(i);
+            setPage(1);
+          }}
+          variant="scrollable"
+          scrollButtons="auto"
+        >
+          {categories.map((c) => (
+            <Tab
+              key={c.label}
+              label={c.label}
+            />
+          ))}
+        </Tabs>
+      </Box>
+      {visibleStats.length > itemsPerPage && (
+        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mb: 2 }}>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
+            <Box
+              key={pageNumber}
+              onClick={() => changePage(pageNumber)}
+              sx={{
+                width: 32,
+                height: 32,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                backgroundColor: page === pageNumber ? 'primary.main' : 'background.paper',
+                color: page === pageNumber ? 'primary.contrastText' : 'text.primary',
+                border: '1px solid',
+                borderColor: page === pageNumber ? 'primary.main' : 'divider',
+                transition: 'all 0.2s',
+                '&:hover': {
+                  backgroundColor: page === pageNumber ? 'primary.dark' : 'action.hover'
+                }
+              }}
+            >
+              {pageNumber}
+            </Box>
+          ))}
+        </Box>
+      )}
       <ResponsiveGrid columns={3}>
-        <SimplePlayerComparison
-          title="Playtime"
-          data={data.playtime}
-          color={getPaletteColor(0)}
-          format={(v) => `${v.toFixed(1)}h`}
-        />
-        <SimplePlayerComparison
-          title="Blocks Mined"
-          data={data.blocks}
-          color={getPaletteColor(1)}
-        />
-        <SimplePlayerComparison
-          title="Mobs Killed"
-          data={data.mobs}
-          color={getPaletteColor(2)}
-        />
-        <SimplePlayerComparison
-          title="Items Crafted"
-          data={data.itemsCrafted}
-          color={getPaletteColor(3)}
-        />
-        <SimplePlayerComparison
-          title="Items Used"
-          data={data.itemsUsed}
-          color={getPaletteColor(4)}
-        />
-        <SimplePlayerComparison
-          title="Distance Walked"
-          data={data.distanceWalked}
-          color={getPaletteColor(5)}
-          format={(v) => `${v.toFixed(1)}km`}
-        />
-        <SimplePlayerComparison
-          title="Jump Count"
-          data={data.jumps}
-          color={getPaletteColor(6)}
-        />
-        <SimplePlayerComparison
-          title="Damage Taken"
-          data={data.damageTaken}
-          color={getPaletteColor(7)}
-        />
-        <SimplePlayerComparison
-          title="Damage Dealt"
-          data={data.damageDealt}
-          color={getPaletteColor(8)}
-          format={(v) => `${v.toFixed(1)}`}
-        />
+        {paginatedStats
+          .map((stat, i) => {
+            const rows = playerEntries
+              .map(([id, p]) => ({
+                playerId: id,
+                name: getPlayerDisplayName(p, id),
+                value: getStatValue(stat.key, p)
+              }))
+              .sort((a, b) => b.value - a.value);
+            if (rows.every((r) => r.value === 0)) return null;
+            return (
+              <SimplePlayerComparison
+                key={stat.key}
+                title={stat.title}
+                data={rows}
+                color={getPaletteColor(i)}
+                format={stat.format}
+              />
+            );
+          })
+          .filter(Boolean)}
       </ResponsiveGrid>
     </ThemedSection>
   );

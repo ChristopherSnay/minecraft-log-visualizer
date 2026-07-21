@@ -13,8 +13,6 @@ interface SimplePlayerComparisonProps {
   data: PlayerRow[];
   color: string;
   format?: (value: number) => string;
-  nameLabel?: string;
-  valueLabel?: string;
 }
 
 export function SimplePlayerComparison({
