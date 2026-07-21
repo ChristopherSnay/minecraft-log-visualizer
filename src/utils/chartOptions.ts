@@ -121,8 +121,8 @@ export const getHorizontalBarOptions = (
  */
 export const getPieChartOptions = (
   theme: Theme,
-  customOptions?: Partial<ChartOptions<'pie'>>
-): ChartOptions<'pie'> => {
+  customOptions?: Partial<ChartOptions<'doughnut'>>
+): ChartOptions<'doughnut'> => {
   const textColor = theme.palette.text.primary;
   const bgColor = theme.palette.background.paper;
   const gridColor = theme.palette.divider;
@@ -149,7 +149,7 @@ export const getPieChartOptions = (
       }
     },
     ...customOptions
-  } as ChartOptions<'pie'>;
+  } as ChartOptions<'doughnut'>;
 };
 
 /**
