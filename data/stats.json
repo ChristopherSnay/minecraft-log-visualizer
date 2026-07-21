@@ -10904,9 +10904,9 @@
           "minecraft:coal_ore": 14,
           "minecraft:cobblestone": 10,
           "minecraft:spruce_trapdoor": 21,
-          "minecraft:white_bed": 9,
+          "minecraft:white_bed": 10,
           "minecraft:gravel": 12,
-          "minecraft:short_grass": 144,
+          "minecraft:short_grass": 145,
           "minecraft:oak_leaves": 47,
           "minecraft:dirt_path": 1,
           "minecraft:birch_log": 33,
@@ -10914,15 +10914,17 @@
           "minecraft:oxeye_daisy": 1,
           "minecraft:copper_ore": 4,
           "minecraft:tall_grass": 15,
-          "minecraft:dirt": 95,
-          "minecraft:andesite": 16,
+          "minecraft:dirt": 102,
           "minecraft:birch_leaves": 3,
-          "minecraft:grass_block": 414,
-          "minecraft:spruce_leaves": 56,
+          "minecraft:andesite": 16,
+          "minecraft:grass_block": 430,
+          "minecraft:oak_fence": 7,
+          "minecraft:spruce_leaves": 61,
           "minecraft:cobbled_deepslate": 32,
           "minecraft:ladder": 1,
           "minecraft:spruce_door": 4,
           "minecraft:wall_torch": 4,
+          "minecraft:sand": 59,
           "minecraft:cherry_planks": 1,
           "minecraft:cobblestone_slab": 2,
           "minecraft:poppy": 1,
@@ -10933,52 +10935,56 @@
         },
         "items_crafted": {
           "minecraft:copper_boots": 1,
-          "minecraft:stone_shovel": 2,
+          "minecraft:stone_shovel": 3,
           "minecraft:birch_planks": 8,
           "minecraft:stone_pickaxe": 6,
           "minecraft:spruce_door": 3,
           "minecraft:iron_chestplate": 1,
-          "minecraft:stick": 44,
+          "minecraft:stick": 60,
           "minecraft:oak_door": 3,
           "minecraft:stone_brick_slab": 12,
-          "minecraft:stone_bricks": 308,
+          "minecraft:oak_fence": 24,
+          "minecraft:stone_bricks": 436,
           "minecraft:chest": 1,
           "minecraft:air": 0,
+          "minecraft:stone_brick_stairs": 10,
           "minecraft:furnace": 2,
           "minecraft:ladder": 9,
-          "minecraft:spruce_trapdoor": 20,
+          "minecraft:spruce_trapdoor": 24,
           "minecraft:copper_ingot": 8,
-          "minecraft:stone": 310,
+          "minecraft:stone": 481,
           "minecraft:cobblestone_slab": 6,
           "minecraft:crafting_table": 1,
           "minecraft:torch": 16,
           "minecraft:stone_axe": 2,
-          "minecraft:oak_planks": 156,
-          "minecraft:spruce_planks": 96,
+          "minecraft:oak_planks": 328,
+          "minecraft:spruce_planks": 136,
           "minecraft:iron_shovel": 1,
           "minecraft:chiseled_stone_bricks": 6,
           "minecraft:iron_leggings": 1,
-          "minecraft:cobblestone_stairs": 16
+          "minecraft:cobblestone_stairs": 24
         },
         "items_used": {
-          "minecraft:stone_axe": 238,
-          "minecraft:cobblestone_stairs": 21,
+          "minecraft:stone_axe": 246,
+          "minecraft:oak_fence": 9,
+          "minecraft:cobblestone_stairs": 24,
           "minecraft:cobblestone_slab": 2,
           "minecraft:spruce_door": 7,
           "minecraft:cobblestone": 22,
-          "minecraft:stone_shovel": 265,
+          "minecraft:stone_shovel": 346,
+          "minecraft:stone_brick_stairs": 2,
           "minecraft:carrot": 16,
           "minecraft:crafting_table": 1,
           "minecraft:chest": 1,
           "minecraft:ladder": 7,
-          "minecraft:spruce_trapdoor": 41,
-          "minecraft:stone_bricks": 198,
+          "minecraft:spruce_trapdoor": 44,
+          "minecraft:stone_bricks": 303,
           "minecraft:furnace": 2,
           "minecraft:spruce_sapling": 13,
-          "minecraft:white_bed": 9,
+          "minecraft:white_bed": 10,
           "minecraft:torch": 35,
           "minecraft:stone_pickaxe": 631,
-          "minecraft:dirt": 280,
+          "minecraft:dirt": 289,
           "minecraft:chiseled_stone_bricks": 4,
           "minecraft:iron_shovel": 259
         },
@@ -10987,37 +10993,37 @@
           "minecraft:cow": 4
         },
         "custom_stats": {
-          "minecraft:interact_with_crafting_table": 28,
-          "minecraft:time_since_rest": 12840,
-          "minecraft:walk_one_cm": 672640,
-          "minecraft:leave_game": 2,
-          "minecraft:walk_under_water_one_cm": 38,
+          "minecraft:interact_with_crafting_table": 37,
+          "minecraft:time_since_rest": 2089,
+          "minecraft:walk_one_cm": 758626,
+          "minecraft:leave_game": 4,
+          "minecraft:walk_under_water_one_cm": 2099,
           "minecraft:damage_taken": 130,
           "minecraft:mob_kills": 5,
-          "minecraft:play_time": 158941,
+          "minecraft:play_time": 177844,
           "minecraft:damage_dealt": 530,
-          "minecraft:jump": 961,
-          "minecraft:time_since_death": 158941,
+          "minecraft:jump": 1036,
+          "minecraft:time_since_death": 177844,
           "minecraft:drop": 1,
-          "minecraft:interact_with_furnace": 33,
-          "minecraft:sprint_one_cm": 206497,
-          "minecraft:open_chest": 40,
-          "minecraft:sleep_in_bed": 10,
+          "minecraft:interact_with_furnace": 39,
+          "minecraft:sprint_one_cm": 224068,
+          "minecraft:open_chest": 41,
+          "minecraft:sleep_in_bed": 11,
           "minecraft:fall_one_cm": 7222,
           "minecraft:happy_ghast_one_cm": 24595,
-          "minecraft:total_world_time": 158941,
-          "minecraft:fly_one_cm": 26147,
-          "minecraft:walk_on_water_one_cm": 864,
+          "minecraft:total_world_time": 177844,
+          "minecraft:fly_one_cm": 29990,
+          "minecraft:walk_on_water_one_cm": 5371,
           "minecraft:crouch_one_cm": 337,
           "minecraft:sneak_time": 188,
           "minecraft:climb_one_cm": 2293
         },
         "items_picked_up": {
           "minecraft:spruce_sapling": 13,
-          "minecraft:dirt": 491,
+          "minecraft:dirt": 514,
           "minecraft:cobblestone": 519,
           "minecraft:flint": 4,
-          "minecraft:white_bed": 9,
+          "minecraft:white_bed": 10,
           "minecraft:gravel": 8,
           "minecraft:chiseled_stone_bricks": 1,
           "minecraft:leather": 4,
@@ -11029,6 +11035,8 @@
           "minecraft:coal": 30,
           "minecraft:stone_pickaxe": 1,
           "minecraft:oak_log": 82,
+          "minecraft:oak_fence": 7,
+          "minecraft:sand": 54,
           "minecraft:birch_log": 33,
           "minecraft:diamond": 3,
           "minecraft:wheat_seeds": 26,
@@ -11670,84 +11678,8 @@
             "time": "2026-07-21 13:54:07 -0400"
           },
           {
-            "id": "minecraft:recipes/combat/leather_helmet",
-            "time": "2026-07-21 14:04:57 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/coarse_dirt",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/light_gray_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/leather_leggings",
-            "time": "2026-07-21 14:04:57 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/pink_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/stone_brick_wall",
-            "time": "2026-07-21 13:57:29 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/fletching_table",
-            "time": "2026-07-21 14:38:27 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_stonecutting",
             "time": "2026-07-21 13:54:07 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/birch_button",
-            "time": "2026-07-21 13:57:08 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/red_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/brown_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/cracked_stone_bricks",
-            "time": "2026-07-21 13:57:29 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_bricks_stonecutting",
-            "time": "2026-07-21 13:57:29 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/light_blue_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/andesite_stairs",
-            "time": "2026-07-21 14:32:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/green_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/birch_door",
-            "time": "2026-07-21 13:57:08 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/birch_fence",
-            "time": "2026-07-21 13:57:08 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/stone_brick_stairs",
-            "time": "2026-07-21 13:57:29 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/spruce_sign",
-            "time": "2026-07-21 13:59:57 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/stone_bricks_from_stone_stonecutting",
@@ -11758,60 +11690,16 @@
             "time": "2026-07-21 13:54:07 -0400"
           },
           {
-            "id": "minecraft:recipes/combat/arrow",
-            "time": "2026-07-21 14:38:27 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/blue_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/leather_chestplate",
-            "time": "2026-07-21 14:04:57 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/andesite_wall_from_andesite_stonecutting",
-            "time": "2026-07-21 14:32:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/chiseled_stone_bricks",
-            "time": "2026-07-21 13:57:29 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/stone_stairs_from_stone_stonecutting",
             "time": "2026-07-21 13:54:07 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/polished_andesite_slab_from_andesite_stonecutting",
-            "time": "2026-07-21 14:32:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/birch_sign",
-            "time": "2026-07-21 13:57:08 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/white_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/birch_wood",
-            "time": "2026-07-21 13:56:21 -0400"
           },
           {
             "id": "minecraft:recipes/decorations/stone_brick_wall_from_stone_stonecutting",
             "time": "2026-07-21 13:54:07 -0400"
           },
           {
-            "id": "minecraft:recipes/misc/yellow_dye_from_dandelion",
-            "time": "2026-07-21 13:56:45 -0400"
-          },
-          {
             "id": "minecraft:recipes/decorations/cobblestone_wall_from_stone_stonecutting",
             "time": "2026-07-21 13:54:07 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/birch_fence_gate",
-            "time": "2026-07-21 13:57:08 -0400"
           },
           {
             "id": "minecraft:recipes/redstone/stone_button",
@@ -11830,16 +11718,208 @@
             "time": "2026-07-21 13:54:07 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/golden_dandelion",
-            "time": "2026-07-21 13:56:45 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/cobblestone_slab_from_stone_stonecutting",
             "time": "2026-07-21 13:54:07 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_stonecutting",
+            "time": "2026-07-21 13:54:07 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_stonecutting",
+            "time": "2026-07-21 13:54:07 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/cobblestone_stairs_from_stone_stonecutting",
+            "time": "2026-07-21 13:54:07 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting",
+            "time": "2026-07-21 13:54:07 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/cobblestone_from_stone_stonecutting",
+            "time": "2026-07-21 13:54:07 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/stone_stairs",
+            "time": "2026-07-21 13:54:07 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/birch_wood",
+            "time": "2026-07-21 13:56:21 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/birch_planks",
+            "time": "2026-07-21 13:56:21 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/suspicious_stew_from_oxeye_daisy",
+            "time": "2026-07-21 13:56:42 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/flower_banner_pattern",
+            "time": "2026-07-21 13:56:42 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/light_gray_dye_from_oxeye_daisy",
+            "time": "2026-07-21 13:56:42 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/yellow_dye_from_dandelion",
+            "time": "2026-07-21 13:56:45 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/golden_dandelion",
+            "time": "2026-07-21 13:56:45 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/suspicious_stew_from_dandelion",
+            "time": "2026-07-21 13:56:45 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/suspicious_stew_from_cornflower",
+            "time": "2026-07-21 13:56:45 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/blue_dye_from_cornflower",
+            "time": "2026-07-21 13:56:45 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/birch_button",
+            "time": "2026-07-21 13:57:08 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/birch_door",
+            "time": "2026-07-21 13:57:08 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/birch_fence",
+            "time": "2026-07-21 13:57:08 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/birch_sign",
+            "time": "2026-07-21 13:57:08 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/birch_fence_gate",
+            "time": "2026-07-21 13:57:08 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/birch_slab",
             "time": "2026-07-21 13:57:08 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/birch_stairs",
+            "time": "2026-07-21 13:57:08 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/birch_trapdoor",
+            "time": "2026-07-21 13:57:08 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/birch_pressure_plate",
+            "time": "2026-07-21 13:57:08 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/stone_brick_wall",
+            "time": "2026-07-21 13:57:29 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/cracked_stone_bricks",
+            "time": "2026-07-21 13:57:29 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_bricks_stonecutting",
+            "time": "2026-07-21 13:57:29 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/stone_brick_stairs",
+            "time": "2026-07-21 13:57:29 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/chiseled_stone_bricks",
+            "time": "2026-07-21 13:57:29 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/stone_brick_wall_from_stone_bricks_stonecutting",
+            "time": "2026-07-21 13:57:29 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_bricks_stonecutting",
+            "time": "2026-07-21 13:57:29 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/stone_brick_slab",
+            "time": "2026-07-21 13:57:29 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_bricks_stonecutting",
+            "time": "2026-07-21 13:57:29 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/spruce_sign",
+            "time": "2026-07-21 13:59:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/spruce_fence",
+            "time": "2026-07-21 13:59:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/spruce_slab",
+            "time": "2026-07-21 13:59:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/spruce_button",
+            "time": "2026-07-21 13:59:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/spruce_pressure_plate",
+            "time": "2026-07-21 13:59:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/spruce_trapdoor",
+            "time": "2026-07-21 13:59:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/spruce_door",
+            "time": "2026-07-21 13:59:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/spruce_fence_gate",
+            "time": "2026-07-21 13:59:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/spruce_stairs",
+            "time": "2026-07-21 13:59:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/cooked_beef_from_smoking",
+            "time": "2026-07-21 14:04:51 -0400"
+          },
+          {
+            "id": "minecraft:adventure/root",
+            "time": "2026-07-21 14:04:51 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/cooked_beef",
+            "time": "2026-07-21 14:04:51 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/cooked_beef_from_campfire_cooking",
+            "time": "2026-07-21 14:04:51 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/leather_helmet",
+            "time": "2026-07-21 14:04:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/leather_leggings",
+            "time": "2026-07-21 14:04:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/leather_chestplate",
+            "time": "2026-07-21 14:04:57 -0400"
           },
           {
             "id": "minecraft:recipes/misc/leather_horse_armor",
@@ -11850,156 +11930,40 @@
             "time": "2026-07-21 14:04:57 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/spruce_fence",
-            "time": "2026-07-21 13:59:57 -0400"
+            "id": "minecraft:recipes/decorations/item_frame",
+            "time": "2026-07-21 14:04:57 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/stone_brick_wall_from_stone_bricks_stonecutting",
-            "time": "2026-07-21 13:57:29 -0400"
+            "id": "minecraft:recipes/combat/leather_boots",
+            "time": "2026-07-21 14:04:57 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/andesite_stairs",
+            "time": "2026-07-21 14:32:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/andesite_wall_from_andesite_stonecutting",
+            "time": "2026-07-21 14:32:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/polished_andesite_slab_from_andesite_stonecutting",
+            "time": "2026-07-21 14:32:12 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/andesite_slab_from_andesite_stonecutting",
             "time": "2026-07-21 14:32:12 -0400"
           },
           {
-            "id": "minecraft:recipes/food/suspicious_stew_from_oxeye_daisy",
-            "time": "2026-07-21 13:56:42 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/spruce_slab",
-            "time": "2026-07-21 13:59:57 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/birch_stairs",
-            "time": "2026-07-21 13:57:08 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/lime_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/spruce_button",
-            "time": "2026-07-21 13:59:57 -0400"
-          },
-          {
-            "id": "minecraft:recipes/food/suspicious_stew_from_dandelion",
-            "time": "2026-07-21 13:56:45 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_stonecutting",
-            "time": "2026-07-21 13:54:07 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/flower_banner_pattern",
-            "time": "2026-07-21 13:56:42 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/andesite_stairs_from_andesite_stonecutting",
             "time": "2026-07-21 14:32:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_stonecutting",
-            "time": "2026-07-21 13:54:07 -0400"
-          },
-          {
-            "id": "minecraft:recipes/food/cooked_beef_from_smoking",
-            "time": "2026-07-21 14:04:51 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/orange_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/cobblestone_stairs_from_stone_stonecutting",
-            "time": "2026-07-21 13:54:07 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/birch_planks",
-            "time": "2026-07-21 13:56:21 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/spruce_pressure_plate",
-            "time": "2026-07-21 13:59:57 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/magenta_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_bricks_stonecutting",
-            "time": "2026-07-21 13:57:29 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting",
-            "time": "2026-07-21 13:54:07 -0400"
-          },
-          {
-            "id": "minecraft:recipes/tools/flint_and_steel",
-            "time": "2026-07-21 14:38:27 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/stone_brick_slab",
-            "time": "2026-07-21 13:57:29 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/polished_andesite_from_andesite_stonecutting",
             "time": "2026-07-21 14:32:12 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/item_frame",
-            "time": "2026-07-21 14:04:57 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_bricks_stonecutting",
-            "time": "2026-07-21 13:57:29 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/polished_andesite",
             "time": "2026-07-21 14:32:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/birch_trapdoor",
-            "time": "2026-07-21 13:57:08 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/spruce_trapdoor",
-            "time": "2026-07-21 13:59:57 -0400"
-          },
-          {
-            "id": "minecraft:recipes/food/suspicious_stew_from_cornflower",
-            "time": "2026-07-21 13:56:45 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/spruce_door",
-            "time": "2026-07-21 13:59:57 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/yellow_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/spruce_fence_gate",
-            "time": "2026-07-21 13:59:57 -0400"
-          },
-          {
-            "id": "minecraft:adventure/root",
-            "time": "2026-07-21 14:04:51 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/blue_dye_from_cornflower",
-            "time": "2026-07-21 13:56:45 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/gray_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/black_concrete_powder",
-            "time": "2026-07-21 14:38:24 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/leather_boots",
-            "time": "2026-07-21 14:04:57 -0400"
           },
           {
             "id": "minecraft:recipes/decorations/andesite_wall",
@@ -12010,67 +11974,111 @@
             "time": "2026-07-21 14:32:12 -0400"
           },
           {
-            "id": "minecraft:recipes/misc/light_gray_dye_from_oxeye_daisy",
-            "time": "2026-07-21 13:56:42 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/polished_andesite_stairs_from_andesite_stonecutting",
             "time": "2026-07-21 14:32:12 -0400"
           },
           {
-            "id": "minecraft:recipes/redstone/birch_pressure_plate",
-            "time": "2026-07-21 13:57:08 -0400"
+            "id": "minecraft:recipes/building_blocks/coarse_dirt",
+            "time": "2026-07-21 14:38:24 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/cobblestone_from_stone_stonecutting",
-            "time": "2026-07-21 13:54:07 -0400"
+            "id": "minecraft:recipes/building_blocks/light_gray_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/pink_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/red_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/brown_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/light_blue_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/green_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/blue_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/white_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/lime_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/orange_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/magenta_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/yellow_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/gray_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/black_concrete_powder",
+            "time": "2026-07-21 14:38:24 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/purple_concrete_powder",
             "time": "2026-07-21 14:38:24 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/spruce_stairs",
-            "time": "2026-07-21 13:59:57 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/cyan_concrete_powder",
             "time": "2026-07-21 14:38:24 -0400"
           },
           {
-            "id": "minecraft:recipes/food/cooked_beef",
-            "time": "2026-07-21 14:04:51 -0400"
+            "id": "minecraft:recipes/decorations/fletching_table",
+            "time": "2026-07-21 14:38:27 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/stone_stairs",
-            "time": "2026-07-21 13:54:07 -0400"
+            "id": "minecraft:recipes/combat/arrow",
+            "time": "2026-07-21 14:38:27 -0400"
           },
           {
-            "id": "minecraft:recipes/food/cooked_beef_from_campfire_cooking",
-            "time": "2026-07-21 14:04:51 -0400"
+            "id": "minecraft:recipes/tools/flint_and_steel",
+            "time": "2026-07-21 14:38:27 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/glass",
+            "time": "2026-07-21 15:38:05 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/sandstone",
+            "time": "2026-07-21 15:38:05 -0400"
           }
         ],
         "position": [
-          52.16338476030375,
+          50.58980161915098,
           74.0,
-          -78.44559381589077
+          -86.37187039790058
         ],
         "dimension": "minecraft:overworld",
-        "xp": 5,
+        "xp": 6,
         "health": 20.0,
-        "food": 20,
-        "saturation": 3.40000057220459,
+        "food": 17,
+        "saturation": 0.0,
         "inventory": [
           {
             "id": "minecraft:carrot",
-            "count": 1
-          },
-          {
-            "id": "minecraft:stone_pickaxe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:spruce_door",
             "count": 1
           },
           {
@@ -12078,11 +12086,19 @@
             "count": 1
           },
           {
-            "id": "minecraft:stone_bricks",
+            "id": "minecraft:stone_pickaxe",
             "count": 1
           },
           {
-            "id": "minecraft:cobblestone",
+            "id": "minecraft:spruce_trapdoor",
+            "count": 1
+          },
+          {
+            "id": "minecraft:stone_brick_stairs",
+            "count": 1
+          },
+          {
+            "id": "minecraft:stone_bricks",
             "count": 1
           },
           {
@@ -12094,15 +12110,19 @@
             "count": 1
           },
           {
+            "id": "minecraft:stone_shovel",
+            "count": 1
+          },
+          {
+            "id": "minecraft:oak_planks",
+            "count": 1
+          },
+          {
+            "id": "minecraft:spruce_door",
+            "count": 1
+          },
+          {
             "id": "minecraft:spruce_planks",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cobblestone",
-            "count": 1
-          },
-          {
-            "id": "minecraft:spruce_log",
             "count": 1
           },
           {
@@ -12110,15 +12130,11 @@
             "count": 1
           },
           {
+            "id": "minecraft:cobblestone",
+            "count": 1
+          },
+          {
             "id": "minecraft:birch_log",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dirt",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dirt",
             "count": 1
           },
           {
@@ -12126,19 +12142,19 @@
             "count": 1
           },
           {
+            "id": "minecraft:dirt",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dirt",
+            "count": 1
+          },
+          {
             "id": "minecraft:cobblestone_slab",
             "count": 1
           },
           {
-            "id": "minecraft:cobblestone",
-            "count": 1
-          },
-          {
             "id": "minecraft:stone",
-            "count": 1
-          },
-          {
-            "id": "minecraft:oak_planks",
             "count": 1
           },
           {
@@ -12154,6 +12170,10 @@
             "count": 1
           },
           {
+            "id": "minecraft:oak_fence",
+            "count": 1
+          },
+          {
             "id": "minecraft:stone_pickaxe",
             "count": 1
           },
@@ -12162,7 +12182,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:oak_log",
+            "id": "minecraft:stone_bricks",
             "count": 1
           },
           {
@@ -14971,14 +14991,15 @@
           "minecraft:gravel": 11,
           "minecraft:short_grass": 3410,
           "minecraft:light_blue_bed": 4,
-          "minecraft:acacia_leaves": 113,
+          "minecraft:acacia_leaves": 115,
           "minecraft:dirt_path": 993,
-          "minecraft:crafting_table": 38,
-          "minecraft:leaf_litter": 30,
+          "minecraft:crafting_table": 40,
+          "minecraft:leaf_litter": 34,
           "minecraft:oxeye_daisy": 2,
-          "minecraft:lilac": 13,
+          "minecraft:lilac": 24,
           "minecraft:black_wool": 27,
           "minecraft:farmland": 7,
+          "minecraft:coarse_dirt": 11,
           "minecraft:red_wool": 99,
           "minecraft:copper_ore": 17,
           "minecraft:cave_vines": 1,
@@ -14988,6 +15009,7 @@
           "minecraft:birch_leaves": 29,
           "minecraft:andesite": 11,
           "minecraft:oak_fence": 42,
+          "minecraft:dark_oak_leaves": 54,
           "minecraft:wall_torch": 7,
           "minecraft:yellow_bed": 3,
           "minecraft:poppy": 18,
@@ -14998,15 +15020,17 @@
           "minecraft:azure_bluet": 3,
           "minecraft:iron_ore": 34,
           "minecraft:acacia_log": 27,
-          "minecraft:stone": 227,
+          "minecraft:stone": 228,
           "minecraft:stripped_acacia_log": 1,
           "minecraft:beetroots": 114,
           "minecraft:glass_pane": 6,
+          "minecraft:dark_oak_log": 137,
+          "minecraft:blue_orchid": 2,
           "minecraft:granite": 11,
           "minecraft:diorite_stairs": 2,
           "minecraft:bush": 66,
           "minecraft:dandelion": 17,
-          "minecraft:coal_ore": 108,
+          "minecraft:coal_ore": 123,
           "minecraft:diorite": 16,
           "minecraft:lily_of_the_valley": 4,
           "minecraft:wheat": 732,
@@ -15020,18 +15044,19 @@
           "minecraft:lantern": 2,
           "minecraft:oak_wall_sign": 1,
           "minecraft:cherry_leaves": 154,
-          "minecraft:oak_leaves": 2230,
+          "minecraft:oak_leaves": 2231,
           "minecraft:furnace": 1,
           "minecraft:yellow_carpet": 1,
           "minecraft:clay": 27,
           "minecraft:white_carpet": 1,
           "minecraft:tall_grass": 365,
           "minecraft:wildflowers": 16,
-          "minecraft:purple_bed": 12,
+          "minecraft:purple_bed": 15,
+          "minecraft:lily_pad": 17,
           "minecraft:oak_stairs": 77,
           "minecraft:dirt": 628,
           "minecraft:potted_dandelion": 2,
-          "minecraft:grass_block": 1722,
+          "minecraft:grass_block": 1723,
           "minecraft:flower_pot": 2,
           "minecraft:peony": 3,
           "minecraft:white_wool": 25,
@@ -15039,7 +15064,7 @@
           "minecraft:deepslate": 20,
           "minecraft:sand": 141,
           "minecraft:white_banner": 2,
-          "minecraft:cornflower": 8,
+          "minecraft:cornflower": 9,
           "minecraft:oak_pressure_plate": 1,
           "minecraft:oak_log": 356
         },
@@ -15083,7 +15108,7 @@
           "minecraft:lantern": 2,
           "minecraft:yellow_dye": 2,
           "minecraft:cherry_stairs": 4,
-          "minecraft:stone_pickaxe": 3,
+          "minecraft:stone_pickaxe": 4,
           "minecraft:light_gray_carpet": 3,
           "minecraft:wooden_pickaxe": 1,
           "minecraft:oak_fence_gate": 3,
@@ -15113,12 +15138,12 @@
           "minecraft:diorite_slab": 6,
           "minecraft:torch": 132,
           "minecraft:white_bed": 4,
-          "minecraft:stone_axe": 6,
+          "minecraft:stone_axe": 7,
           "minecraft:saddle": 1,
           "minecraft:copper_pickaxe": 3
         },
         "items_used": {
-          "minecraft:stone_axe": 765,
+          "minecraft:stone_axe": 930,
           "minecraft:oak_trapdoor": 39,
           "minecraft:oak_fence": 168,
           "minecraft:leaf_litter": 3,
@@ -15127,19 +15152,20 @@
           "minecraft:white_banner": 4,
           "minecraft:cherry_planks": 38,
           "minecraft:potato": 290,
-          "minecraft:oak_boat": 4,
+          "minecraft:oak_boat": 8,
           "minecraft:wheat_seeds": 1151,
           "minecraft:acacia_log": 1,
           "minecraft:diorite_stairs": 2,
           "minecraft:milk_bucket": 1,
           "minecraft:cherry_sapling": 4,
           "minecraft:peony": 2,
-          "minecraft:purple_bed": 12,
+          "minecraft:purple_bed": 15,
           "minecraft:copper_shovel": 405,
           "minecraft:copper_pickaxe": 129,
           "minecraft:ladder": 3,
           "minecraft:glass_pane": 47,
           "minecraft:lantern": 4,
+          "minecraft:coarse_dirt": 3,
           "minecraft:allium": 6,
           "minecraft:iron_shovel": 1311,
           "minecraft:red_bed": 15,
@@ -15155,21 +15181,21 @@
           "minecraft:light_gray_bed": 2,
           "minecraft:carrot": 385,
           "minecraft:cherry_stairs": 5,
-          "minecraft:crafting_table": 20,
+          "minecraft:crafting_table": 22,
           "minecraft:poppy": 6,
-          "minecraft:pumpkin_pie": 5,
+          "minecraft:pumpkin_pie": 6,
           "minecraft:beetroot_seeds": 158,
           "minecraft:oak_fence_gate": 3,
           "minecraft:dandelion": 8,
           "minecraft:white_bed": 96,
-          "minecraft:stone_pickaxe": 399,
+          "minecraft:stone_pickaxe": 424,
           "minecraft:bow": 1,
           "minecraft:oak_door": 7,
           "minecraft:baked_potato": 7,
           "minecraft:lilac": 3,
           "minecraft:apple": 22,
           "minecraft:yellow_bed": 6,
-          "minecraft:diamond_shovel": 724,
+          "minecraft:diamond_shovel": 732,
           "minecraft:stone_hoe": 399,
           "minecraft:stone_shovel": 1585,
           "minecraft:water_bucket": 15,
@@ -15218,46 +15244,47 @@
           "minecraft:wolf": 2
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 12153,
+          "minecraft:time_since_rest": 9303,
           "minecraft:talked_to_villager": 22,
           "minecraft:leave_game": 22,
-          "minecraft:damage_taken": 2608,
+          "minecraft:damage_taken": 2638,
           "minecraft:mob_kills": 75,
-          "minecraft:boat_one_cm": 329494,
-          "minecraft:time_since_death": 140164,
+          "minecraft:boat_one_cm": 425614,
+          "minecraft:time_since_death": 176164,
           "minecraft:interact_with_furnace": 49,
-          "minecraft:sleep_in_bed": 133,
+          "minecraft:sleep_in_bed": 136,
           "minecraft:happy_ghast_one_cm": 21073,
           "minecraft:swim_one_cm": 16217,
-          "minecraft:total_world_time": 1683963,
+          "minecraft:total_world_time": 1719963,
           "minecraft:pot_flower": 10,
-          "minecraft:crouch_one_cm": 2877,
+          "minecraft:crouch_one_cm": 2952,
           "minecraft:climb_one_cm": 5997,
           "minecraft:deaths": 5,
           "minecraft:animals_bred": 73,
           "minecraft:traded_with_villager": 68,
-          "minecraft:interact_with_crafting_table": 230,
-          "minecraft:walk_one_cm": 7721068,
-          "minecraft:walk_under_water_one_cm": 7863,
+          "minecraft:interact_with_crafting_table": 232,
+          "minecraft:walk_one_cm": 7869403,
+          "minecraft:walk_under_water_one_cm": 10448,
           "minecraft:horse_one_cm": 121215,
           "minecraft:damage_dealt": 3905,
-          "minecraft:play_time": 1683963,
-          "minecraft:jump": 8768,
-          "minecraft:drop": 250,
+          "minecraft:play_time": 1719963,
+          "minecraft:jump": 9030,
+          "minecraft:drop": 252,
           "minecraft:bell_ring": 1,
           "minecraft:open_barrel": 87,
-          "minecraft:sprint_one_cm": 1960460,
+          "minecraft:sprint_one_cm": 1965396,
           "minecraft:open_chest": 256,
           "minecraft:fill_cauldron": 1,
-          "minecraft:fall_one_cm": 67044,
-          "minecraft:fly_one_cm": 200418,
-          "minecraft:walk_on_water_one_cm": 63596,
-          "minecraft:sneak_time": 2901
+          "minecraft:fall_one_cm": 68619,
+          "minecraft:fly_one_cm": 201332,
+          "minecraft:walk_on_water_one_cm": 84144,
+          "minecraft:sneak_time": 2973
         },
         "items_picked_up": {
+          "minecraft:tropical_fish": 2,
           "minecraft:poisonous_potato": 6,
           "minecraft:shears": 4,
-          "minecraft:cobblestone": 299,
+          "minecraft:cobblestone": 300,
           "minecraft:brick": 34,
           "minecraft:saddle": 3,
           "minecraft:sugar_cane": 29,
@@ -15272,8 +15299,9 @@
           "minecraft:firefly_bush": 15,
           "minecraft:white_banner": 4,
           "minecraft:granite": 26,
+          "minecraft:dark_oak_sapling": 17,
           "minecraft:emerald": 20,
-          "minecraft:lily_pad": 3,
+          "minecraft:lily_pad": 30,
           "minecraft:salmon": 3,
           "minecraft:ink_sac": 1,
           "minecraft:light_blue_wool": 48,
@@ -15282,7 +15310,7 @@
           "minecraft:stone_shovel": 4,
           "minecraft:arrow": 5,
           "minecraft:iron_ingot": 21,
-          "minecraft:lilac": 13,
+          "minecraft:lilac": 23,
           "minecraft:cactus": 4,
           "minecraft:light_blue_bed": 5,
           "minecraft:cherry_stairs": 1,
@@ -15293,7 +15321,7 @@
           "minecraft:guster_pottery_sherd": 1,
           "minecraft:copper_sword": 2,
           "minecraft:beetroot": 105,
-          "minecraft:dirt": 3583,
+          "minecraft:dirt": 3584,
           "minecraft:blue_wool": 11,
           "minecraft:azure_bluet": 7,
           "minecraft:torch": 138,
@@ -15303,7 +15331,7 @@
           "minecraft:bread": 8,
           "minecraft:oxeye_daisy": 7,
           "minecraft:oak_stairs": 78,
-          "minecraft:coal": 170,
+          "minecraft:coal": 185,
           "minecraft:oak_log": 392,
           "minecraft:copper_helmet": 4,
           "minecraft:oak_fence": 42,
@@ -15329,7 +15357,7 @@
           "minecraft:oak_sign": 1,
           "minecraft:string": 1,
           "minecraft:sandstone": 20,
-          "minecraft:cornflower": 11,
+          "minecraft:cornflower": 12,
           "minecraft:vine": 6,
           "minecraft:oak_fence_gate": 5,
           "minecraft:carrot": 810,
@@ -15346,7 +15374,7 @@
           "minecraft:oak_leaves": 558,
           "minecraft:oak_pressure_plate": 1,
           "minecraft:oak_trapdoor": 10,
-          "minecraft:stick": 132,
+          "minecraft:stick": 142,
           "minecraft:black_wool": 127,
           "minecraft:leather_chestplate": 2,
           "minecraft:acacia_leaves": 14,
@@ -15355,42 +15383,44 @@
           "minecraft:cobbled_deepslate": 19,
           "minecraft:allium": 26,
           "minecraft:pumpkin_seeds": 3,
-          "minecraft:stone_axe": 2,
+          "minecraft:stone_axe": 3,
           "minecraft:wheat": 756,
           "minecraft:leather_helmet": 3,
           "minecraft:chest": 7,
-          "minecraft:blue_orchid": 6,
+          "minecraft:blue_orchid": 8,
           "minecraft:yellow_bed": 3,
           "minecraft:diorite_stairs": 2,
           "minecraft:red_wool": 228,
           "minecraft:copper_pickaxe": 6,
+          "minecraft:coarse_dirt": 11,
           "minecraft:short_grass": 16,
           "minecraft:gravel": 10,
           "minecraft:smooth_stone": 2,
           "minecraft:light_gray_wool": 62,
           "minecraft:lodestone": 1,
-          "minecraft:leaf_litter": 88,
+          "minecraft:leaf_litter": 98,
           "minecraft:potato": 733,
           "minecraft:compass": 3,
           "minecraft:bone_meal": 7,
+          "minecraft:dark_oak_log": 137,
           "minecraft:pink_wool": 43,
           "minecraft:ominous_bottle": 1,
           "minecraft:diorite": 24,
           "minecraft:wooden_pickaxe": 3,
-          "minecraft:oak_boat": 4,
+          "minecraft:oak_boat": 8,
           "minecraft:flower_pot": 4,
           "minecraft:copper_horse_armor": 1,
           "minecraft:cherry_sapling": 16,
           "minecraft:oak_planks": 151,
-          "minecraft:crafting_table": 39,
+          "minecraft:crafting_table": 41,
           "minecraft:decorated_pot": 2,
           "minecraft:copper_chestplate": 4,
           "minecraft:raw_copper": 69,
           "minecraft:oak_sapling": 202,
-          "minecraft:purple_bed": 12,
+          "minecraft:purple_bed": 15,
           "minecraft:beef": 10,
           "minecraft:rotten_flesh": 23,
-          "minecraft:apple": 45,
+          "minecraft:apple": 46,
           "minecraft:yellow_wool": 18,
           "minecraft:oak_slab": 42,
           "minecraft:purple_wool": 6,
@@ -15408,7 +15438,7 @@
           "minecraft:white_wool": 3,
           "minecraft:dirt": 72,
           "minecraft:egg": 21,
-          "minecraft:wheat_seeds": 529,
+          "minecraft:wheat_seeds": 530,
           "minecraft:chest": 2,
           "minecraft:shears": 1,
           "minecraft:stone_pickaxe": 1,
@@ -15423,6 +15453,7 @@
           "minecraft:short_grass": 11,
           "minecraft:white_bed": 1,
           "minecraft:bread": 14,
+          "minecraft:stone_axe": 1,
           "minecraft:gray_wool": 1
         },
         "name": "Kimyknot",
@@ -17208,6 +17239,10 @@
             "time": "2026-07-21 15:01:29 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/dark_oak_planks",
+            "time": "2026-07-21 15:36:25 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/sandstone_stairs",
             "time": "2026-07-21 15:10:38 -0400"
           },
@@ -17244,6 +17279,10 @@
             "time": "2026-07-21 15:10:38 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/dark_oak_wood",
+            "time": "2026-07-21 15:36:25 -0400"
+          },
+          {
             "id": "minecraft:recipes/redstone/mangrove_trapdoor",
             "time": "2026-07-21 14:45:14 -0400"
           },
@@ -17277,14 +17316,14 @@
           }
         ],
         "position": [
-          -2919.6261097146976,
-          73.0,
-          -1982.5534668144103
+          -2097.6472655031043,
+          67.0,
+          -1453.5777901270505
         ],
         "dimension": "minecraft:overworld",
-        "xp": 11,
+        "xp": 12,
         "health": 20.0,
-        "food": 14,
+        "food": 16,
         "saturation": 0.0,
         "inventory": [
           {
@@ -17292,7 +17331,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:oak_boat",
+            "id": "minecraft:blue_orchid",
             "count": 1
           },
           {
@@ -17300,11 +17339,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:stone_pickaxe",
+            "id": "minecraft:oak_boat",
             "count": 1
           },
           {
-            "id": "minecraft:oak_leaves",
+            "id": "minecraft:coarse_dirt",
             "count": 1
           },
           {
@@ -17336,7 +17375,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:wheat_seeds",
+            "id": "minecraft:dirt",
             "count": 1
           },
           {
@@ -17373,6 +17412,54 @@
           },
           {
             "id": "minecraft:acacia_sapling",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dark_oak_sapling",
+            "count": 1
+          },
+          {
+            "id": "minecraft:lily_pad",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dark_oak_log",
+            "count": 1
+          },
+          {
+            "id": "minecraft:leaf_litter",
+            "count": 1
+          },
+          {
+            "id": "minecraft:apple",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dark_oak_log",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dark_oak_log",
+            "count": 1
+          },
+          {
+            "id": "minecraft:tropical_fish",
+            "count": 1
+          },
+          {
+            "id": "minecraft:stone_pickaxe",
+            "count": 1
+          },
+          {
+            "id": "minecraft:oak_leaves",
+            "count": 1
+          },
+          {
+            "id": "minecraft:lilac",
+            "count": 1
+          },
+          {
+            "id": "minecraft:cornflower",
             "count": 1
           },
           {
@@ -17614,7 +17701,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 3741528,
+    "time": 3777528,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -17928,6 +18015,30 @@
         "player": "Drewyknot",
         "line": "[15:09:01] [Server thread/INFO]: Drewyknot left the game",
         "timestamp": "2026-07-21T15:09:01"
+      },
+      {
+        "type": "join",
+        "player": "I_AM_GAY__",
+        "line": "[15:37:06] [Server thread/INFO]: I_AM_GAY__ joined the game",
+        "timestamp": "2026-07-21T15:37:06"
+      },
+      {
+        "type": "leave",
+        "player": "I_AM_GAY__",
+        "line": "[15:40:23] [Server thread/INFO]: I_AM_GAY__ left the game",
+        "timestamp": "2026-07-21T15:40:23"
+      },
+      {
+        "type": "join",
+        "player": "I_AM_GAY__",
+        "line": "[15:40:34] [Server thread/INFO]: I_AM_GAY__ joined the game",
+        "timestamp": "2026-07-21T15:40:34"
+      },
+      {
+        "type": "leave",
+        "player": "I_AM_GAY__",
+        "line": "[15:53:02] [Server thread/INFO]: I_AM_GAY__ left the game",
+        "timestamp": "2026-07-21T15:53:02"
       },
       {
         "type": "join",
@@ -20608,8 +20719,8 @@
         "leaves": 39
       },
       "I_AM_GAY__": {
-        "joins": 2,
-        "leaves": 2
+        "joins": 4,
+        "leaves": 4
       },
       "BobEvansSausage": {
         "joins": 0,
@@ -20675,15 +20786,15 @@
     ]
   },
   "usercache": {
+    "73e692ec-cc2e-4306-a40d-755b9781c7e1": "I_AM_GAY__",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
-    "73e692ec-cc2e-4306-a40d-755b9781c7e1": "I_AM_GAY__",
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "third_wheel",
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "PenelopeWhynot",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-21T19:30:01.308729+00:00"
+  "captured_at": "2026-07-21T20:00:01.349050+00:00"
 }
