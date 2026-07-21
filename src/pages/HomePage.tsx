@@ -23,10 +23,14 @@ import {
   cmToKm,
   damageToHearts,
   getPlayerDisplayName,
+  mergeRecordsTopN,
   sumRecord,
   ticksToHours
 } from '../utils/chartUtils';
+import { getItemName } from '../utils/itemNames';
+import { getAdvancementDisplayName } from '../utils/advancementNames';
 import { calculateTotals } from '../utils/statsHelpers';
+import { getStatLabel } from '../utils/statCategories';
 
 export default function HomePage() {
   const { stats, statsLoading } = useStats();
@@ -112,6 +116,57 @@ export default function HomePage() {
     [playerEntries]
   );
 
+  const serverTotalsData = useMemo(() => {
+    if (!players) return null;
+
+    const advancementCounts: Record<string, number> = {};
+    const customStatsMerged: Record<string, number> = {};
+    Object.values(players).forEach((player) => {
+      if (player.completed) {
+        player.completed.forEach((a) => {
+          if (!a.id.includes(':recipes/')) {
+            advancementCounts[a.id] = (advancementCounts[a.id] || 0) + 1;
+          }
+        });
+      }
+      if (player.custom_stats) {
+        Object.entries(player.custom_stats)
+          .filter(
+            ([key]) =>
+              ![
+                'minecraft:play_time',
+                'minecraft:total_world_time',
+                'minecraft:time_since_death',
+                'minecraft:time_since_rest',
+                'minecraft:leave_game'
+              ].includes(key)
+          )
+          .forEach(([key, val]) => {
+            customStatsMerged[key] = (customStatsMerged[key] || 0) + val;
+          });
+      }
+    });
+    const advancements = Object.entries(advancementCounts)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 5)
+      .map(([id, value]) => ({ name: getAdvancementDisplayName(id), value }));
+    const customStats = Object.entries(customStatsMerged)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 5)
+      .map(([key, value]) => ({ name: getStatLabel(key), value }));
+
+    return {
+      blocks: mergeRecordsTopN(players, 'blocks_mined', 5, getItemName),
+      mobs: mergeRecordsTopN(players, 'mobs_killed', 5, getItemName),
+      itemsCrafted: mergeRecordsTopN(players, 'items_crafted', 5, getItemName),
+      itemsUsed: mergeRecordsTopN(players, 'items_used', 5, getItemName),
+      itemsPickedUp: mergeRecordsTopN(players, 'items_picked_up', 5, getItemName),
+      itemsDropped: mergeRecordsTopN(players, 'items_dropped', 5, getItemName),
+      advancements,
+      customStats
+    };
+  }, [players]);
+
   const { deathEvents, joinEvents, leaveEvents, crashEvents, serverSessions } = useMemo(
     () => ({
       deathEvents: stats?.logs?.events?.filter((e) => e.type === 'death'),
@@ -122,6 +177,19 @@ export default function HomePage() {
     }),
     [stats?.logs]
   );
+
+  const topDeathCauses = useMemo(() => {
+    if (!deathEvents || deathEvents.length === 0) return [];
+    const causeCounts: Record<string, number> = {};
+    deathEvents.forEach((e) => {
+      const msg = e.message;
+      causeCounts[msg] = (causeCounts[msg] || 0) + 1;
+    });
+    return Object.entries(causeCounts)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 5)
+      .map(([cause, count]) => ({ name: cause, value: count }));
+  }, [deathEvents]);
 
   if (statsLoading) {
     return null;
@@ -190,7 +258,7 @@ export default function HomePage() {
       )}
 
       {/* Events Gantt */}
-      <Box sx={{ mb: 3 }}>
+      <ThemedSection title="Events Timeline">
         <EventsGanttChart
           allPlayers={players}
           deathEvents={deathEvents}
@@ -199,7 +267,7 @@ export default function HomePage() {
           crashEvents={crashEvents}
           serverSessions={serverSessions}
         />
-      </Box>
+      </ThemedSection>
 
       {/* Player Comparison */}
       <ThemedSection title="Player Comparison">
@@ -254,6 +322,62 @@ export default function HomePage() {
           />
         </ResponsiveGrid>
       </ThemedSection>
+
+      {/* Server Totals */}
+      {serverTotalsData && (
+        <ThemedSection title="Server Totals">
+          <ResponsiveGrid columns={3}>
+            <SimplePlayerComparison
+              title="Top Blocks Mined"
+              data={serverTotalsData.blocks}
+              color={getPaletteColor(0)}
+            />
+            <SimplePlayerComparison
+              title="Top Mobs Killed"
+              data={serverTotalsData.mobs}
+              color={getPaletteColor(1)}
+            />
+            <SimplePlayerComparison
+              title="Top Items Crafted"
+              data={serverTotalsData.itemsCrafted}
+              color={getPaletteColor(2)}
+            />
+            <SimplePlayerComparison
+              title="Top Items Used"
+              data={serverTotalsData.itemsUsed}
+              color={getPaletteColor(3)}
+            />
+            <SimplePlayerComparison
+              title="Top Items Picked Up"
+              data={serverTotalsData.itemsPickedUp}
+              color={getPaletteColor(4)}
+            />
+            <SimplePlayerComparison
+              title="Top Items Dropped"
+              data={serverTotalsData.itemsDropped}
+              color={getPaletteColor(5)}
+            />
+            <SimplePlayerComparison
+              title="Top Death Causes"
+              data={topDeathCauses}
+              color={getPaletteColor(6)}
+              nameLabel="Cause"
+            />
+            <SimplePlayerComparison
+              title="Top Advancements"
+              data={serverTotalsData.advancements}
+              color={getPaletteColor(7)}
+              nameLabel="Advancement"
+            />
+            <SimplePlayerComparison
+              title="Top Misc Stats"
+              data={serverTotalsData.customStats}
+              color={getPaletteColor(8)}
+              nameLabel="Stat"
+            />
+          </ResponsiveGrid>
+        </ThemedSection>
+      )}
 
       {/* Player Favorites */}
       <ThemedSection title="Player Favorites">

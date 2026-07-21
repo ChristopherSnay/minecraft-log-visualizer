@@ -30,7 +30,7 @@ export function seededRandom(seed: number): number {
 }
 
 export interface PlayerRow {
-  playerId: string;
+  playerId?: string;
   name: string;
   value: number;
 }
@@ -47,4 +47,36 @@ export function buildPlayerRows(
     value: getValue(player, playerId)
   }));
   return sortDesc ? rows.sort((a, b) => b.value - a.value) : rows;
+}
+
+export function mergeRecordsTopN(
+  allPlayers: Record<string, PlayerStats>,
+  recordKey: keyof Pick<
+    PlayerStats,
+    | 'blocks_mined'
+    | 'items_crafted'
+    | 'items_used'
+    | 'mobs_killed'
+    | 'items_picked_up'
+    | 'items_dropped'
+  >,
+  limit: number,
+  labelFn?: (key: string) => string
+): PlayerRow[] {
+  const merged: Record<string, number> = {};
+  Object.values(allPlayers).forEach((player) => {
+    const record = player[recordKey];
+    if (record) {
+      Object.entries(record).forEach(([key, count]) => {
+        merged[key] = (merged[key] || 0) + count;
+      });
+    }
+  });
+  return Object.entries(merged)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, limit)
+    .map(([key, value]) => ({
+      name: labelFn ? labelFn(key) : key,
+      value
+    }));
 }

@@ -1,3 +1,5 @@
+import { getItemName } from './itemNames';
+
 // Mapping from advancement ID suffix to display name
 // Extracted from Minecraft 26.2 client JAR (assets/minecraft/lang/en_us.json)
 const ADVANCEMENT_NAMES: Record<string, string> = {
@@ -147,5 +149,10 @@ const ADVANCEMENT_NAMES: Record<string, string> = {
  */
 export function getAdvancementDisplayName(id: string): string {
   const suffix = id.replace('minecraft:', '');
+  if (suffix.startsWith('recipes/')) {
+    const parts = suffix.split('/');
+    const itemKey = parts[parts.length - 1];
+    return getItemName(`minecraft:${itemKey}`);
+  }
   return ADVANCEMENT_NAMES[suffix] ?? suffix.replace(/_/g, ' ');
 }

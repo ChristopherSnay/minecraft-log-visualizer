@@ -29,6 +29,8 @@ interface SimplePlayerComparisonProps {
   data: PlayerRow[];
   color: string;
   format?: (value: number) => string;
+  nameLabel?: string;
+  valueLabel?: string;
 }
 
 export function SimplePlayerComparison({
@@ -134,12 +136,16 @@ export function SimplePlayerComparison({
             <TableBody>
               {rows.map((row) => (
                 <TableRow
-                  key={row.playerId}
+                  key={row.playerId ?? row.name}
                   hover
                 >
                   <TableCell>
                     <Typography variant="body2">
-                      <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>
+                      {row.playerId ? (
+                        <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>
+                      ) : (
+                        row.name
+                      )}
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
