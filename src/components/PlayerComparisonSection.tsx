@@ -58,7 +58,16 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
 
   const category = categories[categoryIndex];
 
-  const visibleStats = useMemo(() => category?.stats ?? [], [category]);
+  const allStats = useMemo(() => category?.stats ?? [], [category]);
+
+  const visibleStats = useMemo(() => {
+    return allStats.filter((stat) => {
+      const rows = playerEntries.map(([_id, p]) => ({
+        value: getStatValue(stat.key, p)
+      }));
+      return !rows.every((r) => r.value === 0);
+    });
+  }, [allStats, playerEntries]);
 
   const itemsPerPage = 12;
   const totalPages = Math.ceil(visibleStats.length / itemsPerPage);
@@ -116,7 +125,6 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
                 value: getStatValue(stat.key, p)
               }))
               .sort((a, b) => b.value - a.value);
-            if (rows.every((r) => r.value === 0)) return null;
             return (
               <SimplePlayerComparison
                 key={stat.key}
