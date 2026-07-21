@@ -5,35 +5,38 @@
         "blocks_mined": {
           "minecraft:torch": 30,
           "minecraft:dispenser": 14,
-          "minecraft:spruce_log": 25,
+          "minecraft:spruce_log": 33,
           "minecraft:nether_quartz_ore": 14,
           "minecraft:chest": 8,
           "minecraft:smooth_basalt": 139,
           "minecraft:netherrack": 227,
           "minecraft:white_terracotta": 6,
-          "minecraft:bone_block": 17,
           "minecraft:spruce_sapling": 2,
-          "minecraft:waxed_oxidized_cut_copper": 1,
+          "minecraft:waxed_oxidized_cut_copper_stairs": 12,
+          "minecraft:bone_block": 17,
+          "minecraft:waxed_oxidized_cut_copper": 30,
           "minecraft:amethyst_block": 236,
           "minecraft:oak_button": 13,
           "minecraft:spruce_planks": 10,
           "minecraft:birch_log": 14,
           "minecraft:oxeye_daisy": 1,
-          "minecraft:obsidian": 12,
+          "minecraft:magma_block": 4,
           "minecraft:farmland": 25,
+          "minecraft:obsidian": 12,
           "minecraft:dark_oak_planks": 24,
-          "minecraft:waxed_oxidized_copper": 9,
+          "minecraft:waxed_oxidized_copper": 24,
           "minecraft:cave_vines": 2,
           "minecraft:melon": 2,
-          "minecraft:oak_fence": 4,
+          "minecraft:birch_leaves": 1,
+          "minecraft:oak_fence": 8,
           "minecraft:jungle_planks": 19,
           "minecraft:moss_block": 18,
-          "minecraft:bamboo": 10,
           "minecraft:gold_block": 6,
-          "minecraft:mushroom_stem": 2,
+          "minecraft:mushroom_stem": 3,
+          "minecraft:bamboo": 10,
           "minecraft:wall_torch": 38,
-          "minecraft:fern": 3,
           "minecraft:decorated_pot": 35,
+          "minecraft:fern": 3,
           "minecraft:yellow_bed": 4,
           "minecraft:fire": 87,
           "minecraft:stone_brick_stairs": 3,
@@ -44,44 +47,46 @@
           "minecraft:mangrove_propagule": 1,
           "minecraft:azalea": 2,
           "minecraft:azure_bluet": 2,
-          "minecraft:iron_ore": 144,
+          "minecraft:stripped_oak_wood": 1,
+          "minecraft:iron_ore": 146,
           "minecraft:acacia_log": 18,
           "minecraft:beetroots": 1,
-          "minecraft:dark_oak_log": 32,
+          "minecraft:dark_oak_log": 167,
           "minecraft:podzol": 1,
           "minecraft:dandelion": 4,
           "minecraft:glass": 1,
           "minecraft:gray_bed": 4,
           "minecraft:oak_planks": 27,
-          "minecraft:cobblestone": 242,
+          "minecraft:cobblestone": 243,
           "minecraft:sugar_cane": 7,
           "minecraft:brown_wall_banner": 2,
           "minecraft:lantern": 43,
           "minecraft:kelp": 5,
           "minecraft:light_gray_bed": 1,
           "minecraft:mangrove_leaves": 3,
-          "minecraft:red_mushroom_block": 10,
-          "minecraft:cherry_leaves": 26,
-          "minecraft:oak_leaves": 145,
+          "minecraft:red_mushroom_block": 13,
+          "minecraft:cherry_leaves": 28,
+          "minecraft:oak_leaves": 152,
           "minecraft:furnace": 3,
-          "minecraft:yellow_terracotta": 2,
           "minecraft:brewing_stand": 1,
+          "minecraft:yellow_terracotta": 2,
           "minecraft:waxed_oxidized_chiseled_copper": 1,
+          "minecraft:dark_oak_button": 12,
           "minecraft:muddy_mangrove_roots": 2,
-          "minecraft:tall_grass": 11,
-          "minecraft:waxed_copper_block": 56,
           "minecraft:waxed_cut_copper": 1,
           "minecraft:wildflowers": 2,
+          "minecraft:tall_grass": 11,
+          "minecraft:waxed_copper_block": 101,
           "minecraft:pointed_dripstone": 12,
           "minecraft:emerald_ore": 7,
           "minecraft:tall_seagrass": 1,
-          "minecraft:dirt": 725,
+          "minecraft:dirt": 825,
           "minecraft:sulfur": 90,
           "minecraft:hopper": 12,
           "minecraft:soul_fire": 8,
           "minecraft:ladder": 4,
+          "minecraft:sand": 147,
           "minecraft:deepslate": 307,
-          "minecraft:sand": 127,
           "minecraft:cherry_planks": 44,
           "minecraft:seagrass": 1,
           "minecraft:cinnabar": 78,
@@ -94,16 +99,16 @@
           "minecraft:spawner": 4,
           "minecraft:vine": 4,
           "minecraft:carrots": 9,
-          "minecraft:gravel": 6,
-          "minecraft:short_grass": 154,
+          "minecraft:gravel": 8,
+          "minecraft:short_grass": 157,
           "minecraft:waxed_copper_grate": 1,
           "minecraft:acacia_leaves": 13,
           "minecraft:red_carpet": 3,
           "minecraft:dirt_path": 128,
-          "minecraft:crafting_table": 10,
+          "minecraft:crafting_table": 11,
           "minecraft:flowering_azalea": 4,
           "minecraft:deepslate_redstone_ore": 7,
-          "minecraft:leaf_litter": 8,
+          "minecraft:leaf_litter": 9,
           "minecraft:lilac": 9,
           "minecraft:jungle_log": 19,
           "minecraft:coarse_dirt": 4,
@@ -112,11 +117,12 @@
           "minecraft:waxed_exposed_copper_bulb": 6,
           "minecraft:chiseled_tuff": 3,
           "minecraft:andesite": 40,
-          "minecraft:packed_ice": 9,
+          "minecraft:packed_ice": 10,
           "minecraft:cave_vines_plant": 10,
           "minecraft:cherry_pressure_plate": 1,
           "minecraft:dark_oak_slab": 1,
           "minecraft:budding_amethyst": 21,
+          "minecraft:dark_oak_leaves": 5,
           "minecraft:poppy": 3,
           "minecraft:deepslate_lapis_ore": 7,
           "minecraft:cactus": 7,
@@ -124,44 +130,46 @@
           "minecraft:waxed_copper_bulb": 61,
           "minecraft:sulfur_spike": 3,
           "minecraft:jungle_leaves": 2,
-          "minecraft:stone": 1229,
-          "minecraft:stone_bricks": 1,
+          "minecraft:stone": 1369,
           "minecraft:frosted_ice": 3,
+          "minecraft:stone_bricks": 1,
           "minecraft:orange_terracotta": 4,
           "minecraft:granite": 65,
           "minecraft:cobblestone_stairs": 17,
           "minecraft:bush": 6,
-          "minecraft:coal_ore": 695,
+          "minecraft:coal_ore": 696,
           "minecraft:diorite": 68,
           "minecraft:wheat": 8,
           "minecraft:red_sand": 1,
           "minecraft:cherry_stairs": 3,
-          "minecraft:hay_block": 187,
+          "minecraft:hay_block": 262,
           "minecraft:dried_ghast": 1,
-          "minecraft:white_bed": 33,
+          "minecraft:white_bed": 36,
           "minecraft:bee_nest": 1,
           "minecraft:cherry_sapling": 4,
           "minecraft:composter": 2,
-          "minecraft:soul_sand": 156,
           "minecraft:cobbled_deepslate_stairs": 2,
+          "minecraft:soul_sand": 156,
           "minecraft:soul_soil": 37,
           "minecraft:glow_lichen": 1,
           "minecraft:dark_oak_fence": 3,
-          "minecraft:powder_snow": 27,
-          "minecraft:waxed_chiseled_copper": 1,
+          "minecraft:powder_snow": 55,
+          "minecraft:snow_block": 5,
+          "minecraft:waxed_chiseled_copper": 2,
           "minecraft:barrel": 4,
-          "minecraft:potent_sulfur": 2,
+          "minecraft:cinnabar_brick_wall": 6,
+          "minecraft:potent_sulfur": 9,
           "minecraft:oak_stairs": 69,
           "minecraft:mossy_cobblestone": 6,
-          "minecraft:grass_block": 660,
+          "minecraft:grass_block": 775,
           "minecraft:cobweb": 7,
           "minecraft:stone_brick_slab": 2,
-          "minecraft:spruce_leaves": 26,
-          "minecraft:chiseled_tuff_bricks": 40,
+          "minecraft:spruce_leaves": 28,
+          "minecraft:chiseled_tuff_bricks": 69,
           "minecraft:cobbled_deepslate": 28,
           "minecraft:tuff": 34,
-          "minecraft:polished_tuff": 23,
-          "minecraft:tuff_bricks": 247,
+          "minecraft:polished_tuff": 25,
+          "minecraft:tuff_bricks": 335,
           "minecraft:iron_chain": 5,
           "minecraft:cherry_button": 5,
           "minecraft:nether_gold_ore": 4,
@@ -182,14 +190,14 @@
           "minecraft:stick": 608,
           "minecraft:compass": 6,
           "minecraft:cherry_sign": 3,
-          "minecraft:copper_chestplate": 1,
           "minecraft:oak_fence": 30,
+          "minecraft:copper_chestplate": 1,
           "minecraft:stone_bricks": 31,
           "minecraft:cherry_slab": 36,
           "minecraft:iron_helmet": 2,
-          "minecraft:iron_block": 3,
           "minecraft:diamond_pickaxe": 6,
           "minecraft:chest": 14,
+          "minecraft:iron_block": 3,
           "minecraft:cobblestone_wall": 42,
           "minecraft:air": 0,
           "minecraft:bow": 3,
@@ -197,26 +205,29 @@
           "minecraft:copper_hoe": 1,
           "minecraft:bucket": 11,
           "minecraft:flint_and_steel": 1,
+          "minecraft:dark_oak_button": 6,
           "minecraft:bone_meal": 12,
           "minecraft:jungle_planks": 76,
           "minecraft:ladder": 45,
           "minecraft:oak_stairs": 32,
-          "minecraft:dark_oak_planks": 104,
+          "minecraft:dark_oak_planks": 120,
           "minecraft:diamond_shovel": 2,
+          "minecraft:cinnabar_brick_wall": 31,
           "minecraft:waxed_copper_grate": 36,
-          "minecraft:glass": 56,
+          "minecraft:glass": 91,
           "minecraft:oak_sign": 3,
           "minecraft:cobblestone_slab": 30,
           "minecraft:quartz_block": 2,
+          "minecraft:polished_cinnabar": 4,
           "minecraft:spruce_fence": 6,
           "minecraft:oak_button": 1,
-          "minecraft:oak_planks": 460,
+          "minecraft:oak_planks": 484,
           "minecraft:cherry_pressure_plate": 2,
           "minecraft:cherry_door": 3,
           "minecraft:cobbled_deepslate_stairs": 80,
           "minecraft:campfire": 4,
-          "minecraft:iron_shovel": 3,
           "minecraft:iron_sword": 4,
+          "minecraft:iron_shovel": 3,
           "minecraft:copper_boots": 1,
           "minecraft:lantern": 39,
           "minecraft:birch_planks": 48,
@@ -225,6 +236,7 @@
           "minecraft:stone_pickaxe": 1,
           "minecraft:iron_boots": 1,
           "minecraft:anvil": 1,
+          "minecraft:dark_oak_boat": 1,
           "minecraft:charcoal": 4,
           "minecraft:wooden_pickaxe": 1,
           "minecraft:cherry_planks": 588,
@@ -235,17 +247,17 @@
           "minecraft:iron_nugget": 297,
           "minecraft:dark_oak_door": 3,
           "minecraft:wheat": 1920,
-          "minecraft:furnace": 5,
+          "minecraft:furnace": 7,
           "minecraft:birch_boat": 1,
           "minecraft:acacia_boat": 1,
-          "minecraft:iron_ingot": 263,
+          "minecraft:iron_ingot": 267,
           "minecraft:golden_boots": 1,
           "minecraft:copper_ingot": 89,
           "minecraft:diamond_helmet": 2,
           "minecraft:bread": 637,
           "minecraft:stone": 49,
           "minecraft:tnt": 6,
-          "minecraft:crafting_table": 12,
+          "minecraft:crafting_table": 14,
           "minecraft:diamond_leggings": 1,
           "minecraft:torch": 1520,
           "minecraft:tuff_brick_stairs": 20,
@@ -253,51 +265,53 @@
           "minecraft:spruce_planks": 76,
           "minecraft:iron_pickaxe": 4,
           "minecraft:copper_block": 1,
-          "minecraft:iron_axe": 3,
-          "minecraft:iron_leggings": 1,
+          "minecraft:iron_axe": 4,
           "minecraft:chiseled_stone_bricks": 10,
-          "minecraft:cobblestone_stairs": 12
+          "minecraft:cobblestone_stairs": 12,
+          "minecraft:iron_leggings": 1
         },
         "items_used": {
           "minecraft:acacia_boat": 14,
-          "minecraft:iron_axe": 703,
+          "minecraft:iron_axe": 899,
           "minecraft:cactus": 7,
           "minecraft:mud": 29,
-          "minecraft:diamond_sword": 803,
+          "minecraft:diamond_sword": 811,
           "minecraft:cherry_planks": 72,
           "minecraft:campfire": 4,
           "minecraft:wheat_seeds": 6,
           "minecraft:glow_berries": 12,
-          "minecraft:glass": 34,
+          "minecraft:glass": 66,
           "minecraft:jungle_planks": 52,
           "minecraft:oak_sign": 4,
           "minecraft:cherry_pressure_plate": 3,
           "minecraft:lantern": 78,
+          "minecraft:dark_oak_button": 12,
           "minecraft:quartz_block": 2,
           "minecraft:iron_shovel": 643,
-          "minecraft:chiseled_tuff_bricks": 12,
+          "minecraft:chiseled_tuff_bricks": 38,
           "minecraft:cherry_boat": 18,
           "minecraft:red_carpet": 3,
           "minecraft:firefly_bush": 7,
           "minecraft:stonecutter": 1,
           "minecraft:flowering_azalea": 2,
           "minecraft:light_gray_bed": 2,
+          "minecraft:potent_sulfur": 9,
           "minecraft:cherry_slab": 28,
           "minecraft:beetroot_seeds": 1,
           "minecraft:moss_block": 4,
           "minecraft:jungle_boat": 15,
-          "minecraft:calcite": 377,
           "minecraft:stone_pickaxe": 44,
+          "minecraft:calcite": 377,
           "minecraft:bow": 197,
           "minecraft:cobbled_deepslate_stairs": 78,
           "minecraft:cherry_button": 5,
-          "minecraft:cobbled_deepslate": 190,
           "minecraft:acacia_planks": 1,
+          "minecraft:cobbled_deepslate": 190,
           "minecraft:netherrack": 117,
           "minecraft:yellow_bed": 3,
           "minecraft:chiseled_tuff": 10,
           "minecraft:mossy_cobblestone": 2,
-          "minecraft:diamond_shovel": 867,
+          "minecraft:diamond_shovel": 1133,
           "minecraft:birch_planks": 7,
           "minecraft:experience_bottle": 2,
           "minecraft:bone_meal": 4,
@@ -305,7 +319,7 @@
           "minecraft:anvil": 1,
           "minecraft:goat_horn": 7,
           "minecraft:acacia_sapling": 4,
-          "minecraft:dirt": 670,
+          "minecraft:dirt": 755,
           "minecraft:compass": 3,
           "minecraft:obsidian": 13,
           "minecraft:sand": 14,
@@ -313,9 +327,10 @@
           "minecraft:spruce_planks": 66,
           "minecraft:dark_oak_door": 2,
           "minecraft:orange_terracotta": 2,
-          "minecraft:waxed_copper_bulb": 25,
+          "minecraft:waxed_copper_bulb": 37,
           "minecraft:shears": 1,
-          "minecraft:bucket": 26,
+          "minecraft:bucket": 36,
+          "minecraft:polished_cinnabar": 4,
           "minecraft:dripstone_block": 35,
           "minecraft:oak_planks": 70,
           "minecraft:trial_key": 4,
@@ -325,20 +340,22 @@
           "minecraft:wildflowers": 5,
           "minecraft:iron_pickaxe": 1157,
           "minecraft:andesite": 7,
-          "minecraft:bamboo": 89,
           "minecraft:copper_hoe": 4,
-          "minecraft:tnt": 6,
-          "minecraft:waxed_copper_block": 23,
+          "minecraft:bamboo": 89,
+          "minecraft:waxed_copper_block": 43,
           "minecraft:iron_sword": 387,
+          "minecraft:tnt": 6,
           "minecraft:cherry_sapling": 29,
           "minecraft:cactus_flower": 1,
           "minecraft:brown_banner": 1,
-          "minecraft:diamond_pickaxe": 4095,
+          "minecraft:diamond_pickaxe": 4487,
           "minecraft:ladder": 35,
           "minecraft:stone_bricks": 25,
+          "minecraft:magma_block": 4,
           "minecraft:tuff_brick_stairs": 11,
           "minecraft:cobbled_deepslate_wall": 16,
           "minecraft:tuff": 1,
+          "minecraft:cinnabar_brick_wall": 32,
           "minecraft:stone_sword": 76,
           "minecraft:red_bed": 17,
           "minecraft:cobblestone_wall": 36,
@@ -347,116 +364,119 @@
           "minecraft:wooden_pickaxe": 57,
           "minecraft:tropical_fish_bucket": 1,
           "minecraft:copper_block": 1,
-          "minecraft:cobblestone": 1281,
+          "minecraft:cobblestone": 1287,
           "minecraft:cherry_sign": 1,
           "minecraft:hopper": 14,
           "minecraft:waxed_copper_grate": 2,
           "minecraft:carrot": 10,
           "minecraft:cherry_stairs": 185,
-          "minecraft:crafting_table": 21,
+          "minecraft:crafting_table": 23,
           "minecraft:birch_boat": 5,
-          "minecraft:tuff_bricks": 96,
-          "minecraft:white_bed": 32,
+          "minecraft:tuff_bricks": 167,
+          "minecraft:white_bed": 35,
           "minecraft:gold_block": 2,
           "minecraft:bone_block": 14,
           "minecraft:apple": 3,
           "minecraft:soul_soil": 1,
           "minecraft:spruce_log": 11,
           "minecraft:pumpkin": 1,
-          "minecraft:water_bucket": 23,
+          "minecraft:water_bucket": 33,
           "minecraft:soul_sand": 105,
           "minecraft:cherry_door": 1,
           "minecraft:smooth_basalt": 113,
-          "minecraft:furnace": 6,
+          "minecraft:furnace": 8,
+          "minecraft:bread": 575,
           "minecraft:barrel": 4,
-          "minecraft:torch": 1436,
-          "minecraft:bread": 547,
+          "minecraft:torch": 1438,
           "minecraft:chiseled_stone_bricks": 3,
           "minecraft:cobblestone_stairs": 18,
-          "minecraft:oak_button": 14,
           "minecraft:yellow_terracotta": 1,
+          "minecraft:oak_button": 14,
           "minecraft:cobblestone_slab": 33,
           "minecraft:cooked_chicken": 1,
           "minecraft:oak_stairs": 22,
           "minecraft:cherry_log": 52,
+          "minecraft:waxed_oxidized_cut_copper": 25,
           "minecraft:flint_and_steel": 34,
           "minecraft:amethyst_block": 70,
+          "minecraft:dark_oak_boat": 3,
           "minecraft:chest": 20,
           "minecraft:spruce_sapling": 4,
           "minecraft:egg": 1,
           "minecraft:golden_shovel": 81
         },
         "mobs_killed": {
-          "minecraft:slime": 70,
+          "minecraft:slime": 73,
           "minecraft:pillager": 18,
           "minecraft:stray": 61,
-          "minecraft:skeleton": 83,
+          "minecraft:skeleton": 85,
           "minecraft:iron_golem": 4,
           "minecraft:witch": 2,
           "minecraft:villager": 1,
           "minecraft:bat": 1,
-          "minecraft:wandering_trader": 1,
           "minecraft:spider": 29,
-          "minecraft:salmon": 6,
+          "minecraft:wandering_trader": 1,
+          "minecraft:salmon": 7,
           "minecraft:zombie": 122,
           "minecraft:trader_llama": 2,
           "minecraft:cave_spider": 1,
           "minecraft:creeper": 21,
           "minecraft:zombie_villager": 4,
           "minecraft:chicken": 1,
-          "minecraft:enderman": 1,
           "minecraft:sheep": 1,
+          "minecraft:enderman": 1,
           "minecraft:breeze": 3
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 10912,
           "minecraft:talked_to_villager": 10,
-          "minecraft:leave_game": 31,
-          "minecraft:damage_taken": 15215,
-          "minecraft:mob_kills": 440,
-          "minecraft:boat_one_cm": 2128272,
-          "minecraft:time_since_death": 714109,
-          "minecraft:interact_with_furnace": 196,
-          "minecraft:sleep_in_bed": 124,
-          "minecraft:swim_one_cm": 105043,
-          "minecraft:total_world_time": 1746696,
-          "minecraft:crouch_one_cm": 72061,
-          "minecraft:climb_one_cm": 27679,
+          "minecraft:time_since_rest": 11806,
+          "minecraft:leave_game": 32,
+          "minecraft:damage_taken": 15466,
+          "minecraft:mob_kills": 446,
+          "minecraft:boat_one_cm": 2204109,
+          "minecraft:time_since_death": 817387,
+          "minecraft:interact_with_furnace": 216,
+          "minecraft:sleep_in_bed": 132,
+          "minecraft:swim_one_cm": 115489,
+          "minecraft:total_world_time": 1849974,
+          "minecraft:crouch_one_cm": 73307,
+          "minecraft:climb_one_cm": 27903,
           "minecraft:deaths": 4,
-          "minecraft:interact_with_stonecutter": 3,
+          "minecraft:interact_with_stonecutter": 5,
           "minecraft:player_kills": 1,
           "minecraft:enchant_item": 12,
-          "minecraft:interact_with_crafting_table": 157,
-          "minecraft:walk_one_cm": 2292709,
-          "minecraft:walk_under_water_one_cm": 65518,
+          "minecraft:interact_with_crafting_table": 160,
+          "minecraft:walk_one_cm": 2437564,
+          "minecraft:walk_under_water_one_cm": 74947,
           "minecraft:horse_one_cm": 239,
-          "minecraft:damage_dealt": 55792,
-          "minecraft:play_time": 1746696,
-          "minecraft:jump": 18807,
-          "minecraft:drop": 413,
+          "minecraft:damage_dealt": 56062,
+          "minecraft:play_time": 1849974,
+          "minecraft:jump": 20076,
+          "minecraft:drop": 439,
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 40,
-          "minecraft:sprint_one_cm": 10272512,
-          "minecraft:open_chest": 508,
+          "minecraft:sprint_one_cm": 10962400,
+          "minecraft:open_chest": 534,
           "minecraft:inspect_hopper": 1,
-          "minecraft:fall_one_cm": 308054,
-          "minecraft:fly_one_cm": 1844947,
+          "minecraft:fall_one_cm": 329466,
+          "minecraft:fly_one_cm": 1982836,
           "minecraft:interact_with_anvil": 5,
-          "minecraft:walk_on_water_one_cm": 168421,
-          "minecraft:sneak_time": 26830,
+          "minecraft:walk_on_water_one_cm": 175754,
+          "minecraft:sneak_time": 27576,
           "minecraft:interact_with_grindstone": 2
         },
         "items_picked_up": {
+          "minecraft:cherry_sign": 2,
+          "minecraft:cobblestone": 1675,
           "minecraft:shears": 1,
-          "minecraft:cobblestone": 1598,
           "minecraft:brick": 130,
           "minecraft:sugar_cane": 10,
-          "minecraft:bone": 128,
+          "minecraft:bone": 129,
           "minecraft:acacia_sapling": 2,
           "minecraft:diamond_shovel": 4,
-          "minecraft:iron_sword": 5,
           "minecraft:cinnabar": 78,
+          "minecraft:iron_sword": 5,
           "minecraft:white_banner": 1,
           "minecraft:white_terracotta": 4,
           "minecraft:emerald": 25,
@@ -464,12 +484,12 @@
           "minecraft:wildflowers": 15,
           "minecraft:bow": 5,
           "minecraft:birch_boat": 6,
+          "minecraft:arrow": 243,
           "minecraft:smooth_basalt": 136,
-          "minecraft:arrow": 238,
           "minecraft:iron_ingot": 45,
           "minecraft:lilac": 24,
-          "minecraft:spruce_slab": 8,
           "minecraft:cactus": 10,
+          "minecraft:spruce_slab": 8,
           "minecraft:cherry_stairs": 2,
           "minecraft:azalea": 3,
           "minecraft:golden_leggings": 1,
@@ -483,9 +503,9 @@
           "minecraft:oak_stairs": 39,
           "minecraft:oak_log": 128,
           "minecraft:lingering_potion": 3,
-          "minecraft:sand": 120,
+          "minecraft:sand": 140,
           "minecraft:furnace": 5,
-          "minecraft:wheat_seeds": 54,
+          "minecraft:wheat_seeds": 55,
           "minecraft:sulfur_spike": 4,
           "minecraft:quartz": 11,
           "minecraft:egg": 29,
@@ -493,8 +513,9 @@
           "minecraft:red_bed": 19,
           "minecraft:iron_chain": 3,
           "minecraft:copper_boots": 1,
-          "minecraft:red_mushroom": 17,
-          "minecraft:chiseled_tuff_bricks": 37,
+          "minecraft:red_mushroom": 19,
+          "minecraft:snowball": 20,
+          "minecraft:chiseled_tuff_bricks": 65,
           "minecraft:oak_button": 21,
           "minecraft:beetroot_seeds": 3,
           "minecraft:string": 73,
@@ -504,16 +525,16 @@
           "minecraft:cornflower": 1,
           "minecraft:iron_helmet": 2,
           "minecraft:enchanted_book": 2,
-          "minecraft:spruce_sapling": 7,
+          "minecraft:spruce_sapling": 12,
           "minecraft:yellow_terracotta": 2,
           "minecraft:flowering_azalea": 4,
-          "minecraft:white_bed": 33,
+          "minecraft:white_bed": 36,
           "minecraft:bucket": 21,
           "minecraft:leather": 2,
           "minecraft:lead": 4,
           "minecraft:sulfur": 87,
           "minecraft:music_disc_precipice": 1,
-          "minecraft:stick": 193,
+          "minecraft:stick": 208,
           "minecraft:polished_tuff": 8,
           "minecraft:bamboo": 115,
           "minecraft:moss_block": 20,
@@ -532,7 +553,7 @@
           "minecraft:waxed_oxidized_chiseled_copper": 1,
           "minecraft:waxed_exposed_copper_bulb": 6,
           "minecraft:stone": 1,
-          "minecraft:gravel": 64,
+          "minecraft:gravel": 66,
           "minecraft:jungle_planks": 79,
           "minecraft:jungle_boat": 14,
           "minecraft:tuff": 27,
@@ -540,6 +561,7 @@
           "minecraft:jungle_log": 41,
           "minecraft:ominous_bottle": 2,
           "minecraft:trial_key": 4,
+          "minecraft:waxed_oxidized_cut_copper_stairs": 11,
           "minecraft:cherry_sapling": 55,
           "minecraft:oak_planks": 70,
           "minecraft:flint_and_steel": 5,
@@ -558,68 +580,72 @@
           "minecraft:gray_bed": 4,
           "minecraft:orange_terracotta": 4,
           "minecraft:glow_berries": 12,
-          "minecraft:lantern": 83,
           "minecraft:firefly_bush": 14,
+          "minecraft:lantern": 83,
           "minecraft:melon_slice": 18,
-          "minecraft:slime_ball": 41,
           "minecraft:diamond": 78,
+          "minecraft:slime_ball": 47,
           "minecraft:granite": 48,
+          "minecraft:dark_oak_sapling": 9,
           "minecraft:stone_brick_slab": 2,
           "minecraft:lily_pad": 4,
-          "minecraft:salmon": 6,
+          "minecraft:salmon": 7,
           "minecraft:cobbled_deepslate_stairs": 2,
           "minecraft:gold_block": 6,
+          "minecraft:dark_oak_button": 12,
           "minecraft:red_sand": 1,
-          "minecraft:dark_oak_planks": 22,
-          "minecraft:hay_block": 210,
+          "minecraft:dark_oak_planks": 25,
+          "minecraft:hay_block": 285,
           "minecraft:raw_gold": 2,
           "minecraft:stone_sword": 1,
           "minecraft:acacia_log": 18,
           "minecraft:acacia_planks": 32,
           "minecraft:spruce_planks": 10,
-          "minecraft:dirt": 1707,
+          "minecraft:dirt": 1886,
           "minecraft:rail": 4,
           "minecraft:bone_block": 17,
           "minecraft:diamond_helmet": 2,
           "minecraft:iron_shovel": 1,
           "minecraft:golden_boots": 4,
-          "minecraft:torch": 156,
+          "minecraft:torch": 159,
           "minecraft:diamond_pickaxe": 8,
           "minecraft:dripstone_block": 59,
           "minecraft:cherry_log": 201,
           "minecraft:bread": 225,
-          "minecraft:spruce_log": 25,
+          "minecraft:spruce_log": 33,
           "minecraft:cactus_flower": 1,
-          "minecraft:coal": 739,
+          "minecraft:coal": 740,
           "minecraft:acacia_boat": 13,
           "minecraft:oak_fence": 4,
           "minecraft:splash_potion": 2,
           "minecraft:iron_pickaxe": 4,
           "minecraft:hopper": 12,
-          "minecraft:waxed_copper_block": 59,
+          "minecraft:waxed_copper_block": 103,
           "minecraft:poppy": 7,
+          "minecraft:sunflower": 18,
           "minecraft:white_wool": 1,
           "minecraft:potion": 6,
           "minecraft:light_gray_bed": 2,
           "minecraft:andesite": 27,
           "minecraft:mangrove_planks": 1,
           "minecraft:copper_ingot": 43,
-          "minecraft:ladder": 5,
+          "minecraft:ladder": 7,
           "minecraft:waxed_chiseled_copper": 1,
           "minecraft:soul_sand": 157,
           "minecraft:carrot": 17,
           "minecraft:soul_soil": 28,
           "minecraft:breeze_rod": 4,
-          "minecraft:potent_sulfur": 2,
+          "minecraft:potent_sulfur": 9,
           "minecraft:flow_pottery_sherd": 1,
           "minecraft:gold_nugget": 12,
           "minecraft:stone_pickaxe": 2,
           "minecraft:chiseled_tuff": 1,
+          "minecraft:cinnabar_brick_wall": 5,
           "minecraft:baked_potato": 2,
           "minecraft:melon_seeds": 5,
           "minecraft:glow_ink_sac": 3,
           "minecraft:golden_apple": 5,
-          "minecraft:waxed_oxidized_cut_copper": 1,
+          "minecraft:waxed_oxidized_cut_copper": 29,
           "minecraft:fire_charge": 2,
           "minecraft:cooked_chicken": 2,
           "minecraft:kelp": 180,
@@ -628,37 +654,40 @@
           "minecraft:stone_axe": 1,
           "minecraft:amethyst_block": 198,
           "minecraft:wheat": 12,
-          "minecraft:tuff_bricks": 232,
+          "minecraft:tuff_bricks": 314,
           "minecraft:gunpowder": 16,
           "minecraft:brown_banner": 2,
+          "minecraft:magma_block": 4,
           "minecraft:short_grass": 1,
           "minecraft:lodestone": 1,
-          "minecraft:leaf_litter": 54,
+          "minecraft:leaf_litter": 73,
           "minecraft:birch_log": 14,
           "minecraft:mud": 42,
           "minecraft:compass": 4,
           "minecraft:spider_eye": 4,
           "minecraft:bone_meal": 1,
-          "minecraft:dark_oak_log": 54,
+          "minecraft:dark_oak_log": 186,
           "minecraft:tipped_arrow": 21,
           "minecraft:diorite": 65,
-          "minecraft:crafting_table": 9,
           "minecraft:cherry_pressure_plate": 1,
+          "minecraft:crafting_table": 9,
           "minecraft:decorated_pot": 3,
           "minecraft:copper_chestplate": 2,
           "minecraft:oak_sapling": 12,
           "minecraft:bundle": 1,
           "minecraft:wind_charge": 1,
           "minecraft:cobblestone_slab": 45,
+          "minecraft:dark_oak_boat": 3,
           "minecraft:glass_bottle": 2,
+          "minecraft:waxed_oxidized_copper": 15,
           "minecraft:barrel": 4
         },
         "items_dropped": {
           "minecraft:soul_soil": 1,
           "minecraft:andesite": 15,
           "minecraft:waxed_oxidized_chiseled_copper": 1,
-          "minecraft:gravel": 8,
-          "minecraft:bone": 51,
+          "minecraft:gravel": 10,
+          "minecraft:bone": 52,
           "minecraft:glass": 22,
           "minecraft:brick": 12,
           "minecraft:poppy": 2,
@@ -666,6 +695,7 @@
           "minecraft:tuff_bricks": 30,
           "minecraft:enchanted_book": 1,
           "minecraft:soul_sand": 21,
+          "minecraft:filled_map": 1,
           "minecraft:cooked_chicken": 1,
           "minecraft:name_tag": 1,
           "minecraft:muddy_mangrove_roots": 2,
@@ -678,6 +708,8 @@
           "minecraft:iron_leggings": 1,
           "minecraft:acacia_planks": 4,
           "minecraft:arrow": 71,
+          "minecraft:spruce_sapling": 5,
+          "minecraft:spruce_log": 8,
           "minecraft:gunpowder": 8,
           "minecraft:smooth_basalt": 6,
           "minecraft:iron_pickaxe": 1,
@@ -686,17 +718,18 @@
           "minecraft:rotten_flesh": 56,
           "minecraft:iron_helmet": 1,
           "minecraft:iron_chestplate": 1,
-          "minecraft:stone_sword": 2,
           "minecraft:torch": 24,
+          "minecraft:stone_sword": 2,
           "minecraft:bow": 2,
           "minecraft:smooth_sandstone": 1,
-          "minecraft:lantern": 4,
+          "minecraft:lantern": 5,
           "minecraft:bucket": 1,
-          "minecraft:dirt": 451,
+          "minecraft:dirt": 454,
           "minecraft:red_sand": 1,
           "minecraft:stone": 1,
           "minecraft:melon_slice": 9,
           "minecraft:stone_brick_stairs": 3,
+          "minecraft:cherry_sign": 4,
           "minecraft:shears": 1,
           "minecraft:rail": 2,
           "minecraft:decorated_pot": 1,
@@ -706,19 +739,20 @@
           "minecraft:copper_horse_armor": 1,
           "minecraft:copper_hoe": 1,
           "minecraft:copper_chestplate": 1,
-          "minecraft:slime_ball": 18,
+          "minecraft:slime_ball": 24,
+          "minecraft:dark_oak_button": 4,
           "minecraft:netherrack": 83,
           "minecraft:mutton": 3,
           "minecraft:glow_ink_sac": 2,
           "minecraft:iron_axe": 2,
           "minecraft:diamond_shovel": 3,
-          "minecraft:oak_planks": 38,
+          "minecraft:oak_planks": 58,
           "minecraft:wheat": 64,
           "minecraft:lead": 1,
           "minecraft:kelp": 1,
           "minecraft:cobbled_deepslate": 21,
           "minecraft:egg": 12,
-          "minecraft:wheat_seeds": 10,
+          "minecraft:wheat_seeds": 11,
           "minecraft:iron_ingot": 22,
           "minecraft:flint_and_steel": 3,
           "minecraft:compass": 1,
@@ -736,21 +770,23 @@
           "minecraft:dandelion": 1,
           "minecraft:string": 8,
           "minecraft:golden_boots": 2,
-          "minecraft:stick": 33,
+          "minecraft:stick": 34,
           "minecraft:iron_spear": 1,
-          "minecraft:white_terracotta": 4,
           "minecraft:bread": 20,
+          "minecraft:white_terracotta": 4,
           "minecraft:spider_eye": 1,
           "minecraft:iron_boots": 1,
+          "minecraft:snowball": 4,
+          "minecraft:ladder": 1,
           "minecraft:oak_button": 7,
           "minecraft:melon_seeds": 3,
-          "minecraft:cobblestone": 136,
+          "minecraft:cobblestone": 164,
           "minecraft:cherry_boat": 1,
           "minecraft:pointed_dripstone": 16,
           "minecraft:jungle_log": 3,
-          "minecraft:red_mushroom": 12,
-          "minecraft:potion": 1,
+          "minecraft:red_mushroom": 14,
           "minecraft:golden_axe": 1,
+          "minecraft:potion": 1,
           "minecraft:copper_boots": 1,
           "minecraft:splash_potion": 1,
           "minecraft:quartz": 1,
@@ -762,14 +798,15 @@
           "minecraft:orange_terracotta": 2,
           "minecraft:water_bucket": 1,
           "minecraft:chiseled_tuff_bricks": 1,
-          "minecraft:leaf_litter": 25,
+          "minecraft:leaf_litter": 44,
           "minecraft:furnace": 2,
           "minecraft:diamond_sword": 2,
           "minecraft:iron_sword": 4,
           "minecraft:golden_leggings": 2,
           "minecraft:lodestone": 2,
-          "minecraft:salmon": 1,
+          "minecraft:salmon": 2,
           "minecraft:copper_leggings": 4,
+          "minecraft:dark_oak_planks": 3,
           "minecraft:waxed_copper_bulb": 39
         },
         "name": "PenelopeWhynot",
@@ -3099,6 +3136,18 @@
             "time": "2026-07-20 23:23:31 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/polished_cinnabar_stairs",
+            "time": "2026-07-21 00:49:20 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_stairs_from_waxed_oxidized_copper_stonecutting",
+            "time": "2026-07-21 00:16:36 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/polished_cinnabar_stairs_from_polished_cinnabar_stonecutting",
+            "time": "2026-07-21 00:49:20 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/polished_cinnabar_from_cinnabar_stonecutting",
             "time": "2026-07-20 23:24:24 -0400"
           },
@@ -3107,8 +3156,28 @@
             "time": "2026-07-20 23:24:24 -0400"
           },
           {
+            "id": "minecraft:recipes/decorations/polished_cinnabar_wall_from_polished_cinnabar_stonecutting",
+            "time": "2026-07-21 00:49:20 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/polished_cinnabar_slab",
+            "time": "2026-07-21 00:49:20 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/snow",
+            "time": "2026-07-20 23:50:08 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/cinnabar_slab",
             "time": "2026-07-20 23:24:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/cinnabar_brick_stairs_from_polished_cinnabar_stonecutting",
+            "time": "2026-07-21 00:49:20 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/cinnabar_brick_slab_from_polished_cinnabar_stonecutting",
+            "time": "2026-07-21 00:49:20 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/polished_sulfur",
@@ -3117,6 +3186,18 @@
           {
             "id": "minecraft:recipes/building_blocks/polished_cinnabar",
             "time": "2026-07-20 23:24:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/polished_cinnabar_slab_from_polished_cinnabar_stonecutting",
+            "time": "2026-07-21 00:49:20 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/cinnabar_brick_wall_from_polished_cinnabar_stonecutting",
+            "time": "2026-07-21 00:49:20 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/polished_cinnabar_wall",
+            "time": "2026-07-21 00:49:20 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/potent_sulfur",
@@ -3129,6 +3210,14 @@
           {
             "id": "minecraft:recipes/decorations/cinnabar_wall",
             "time": "2026-07-20 23:24:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/cinnabar_bricks",
+            "time": "2026-07-21 00:49:20 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/cinnabar_bricks_from_polished_cinnabar_stonecutting",
+            "time": "2026-07-21 00:49:20 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/cinnabar_brick_stairs_from_cinnabar_stonecutting",
@@ -3145,6 +3234,10 @@
           {
             "id": "minecraft:recipes/building_blocks/cinnabar_bricks_from_cinnabar_stonecutting",
             "time": "2026-07-20 23:24:24 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_from_waxed_oxidized_copper_stonecutting",
+            "time": "2026-07-21 00:16:36 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/sulfur_bricks_from_sulfur_stonecutting",
@@ -3183,6 +3276,18 @@
             "time": "2026-07-20 23:24:24 -0400"
           },
           {
+            "id": "minecraft:recipes/misc/yellow_dye_from_sunflower",
+            "time": "2026-07-20 23:54:22 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_copper_grate",
+            "time": "2026-07-21 00:16:36 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper",
+            "time": "2026-07-21 00:16:36 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/sulfur_slab_from_sulfur_stonecutting",
             "time": "2026-07-20 23:23:31 -0400"
           },
@@ -3215,12 +3320,32 @@
             "time": "2026-07-20 23:24:24 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_slab_from_waxed_oxidized_copper_stonecutting",
+            "time": "2026-07-21 00:16:36 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/waxed_oxidized_copper_bulb",
+            "time": "2026-07-21 00:16:36 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/cinnabar_stairs_from_cinnabar_stonecutting",
             "time": "2026-07-20 23:24:24 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_chiseled_copper_from_waxed_oxidized_copper_stonecutting",
+            "time": "2026-07-21 00:16:36 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/sulfur_brick_stairs_from_sulfur_stonecutting",
             "time": "2026-07-20 23:23:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_copper_grate_from_waxed_oxidized_copper_stonecutting",
+            "time": "2026-07-21 00:16:36 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/snow_block",
+            "time": "2026-07-20 23:50:08 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/cinnabar_brick_slab_from_cinnabar_stonecutting",
@@ -3232,15 +3357,15 @@
           }
         ],
         "position": [
-          -651.2493541445272,
-          94.0,
-          207.51186811582988
+          15.34009644257768,
+          79.0,
+          -70.7429052247425
         ],
         "dimension": "minecraft:overworld",
-        "xp": 17,
+        "xp": 18,
         "health": 20.0,
-        "food": 18,
-        "saturation": 0.0,
+        "food": 20,
+        "saturation": 4.0,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -3251,15 +3376,19 @@
             "count": 1
           },
           {
-            "id": "minecraft:iron_axe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:torch",
-            "count": 1
-          },
-          {
             "id": "minecraft:diamond_shovel",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dirt",
+            "count": 1
+          },
+          {
+            "id": "minecraft:glass",
+            "count": 1
+          },
+          {
+            "id": "minecraft:tuff_bricks",
             "count": 1
           },
           {
@@ -3267,15 +3396,31 @@
             "count": 1
           },
           {
-            "id": "minecraft:white_bed",
+            "id": "minecraft:waxed_oxidized_cut_copper",
             "count": 1
           },
           {
-            "id": "minecraft:golden_axe",
+            "id": "minecraft:dark_oak_button",
             "count": 1
           },
           {
-            "id": "minecraft:compass",
+            "id": "minecraft:dark_oak_log",
+            "count": 1
+          },
+          {
+            "id": "minecraft:cinnabar",
+            "count": 1
+          },
+          {
+            "id": "minecraft:iron_axe",
+            "count": 1
+          },
+          {
+            "id": "minecraft:waxed_oxidized_copper",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dark_oak_boat",
             "count": 1
           },
           {
@@ -3283,35 +3428,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:bucket",
+            "id": "minecraft:dark_oak_planks",
             "count": 1
           },
           {
-            "id": "minecraft:coal",
+            "id": "minecraft:waxed_copper_bulb",
             "count": 1
           },
           {
-            "id": "minecraft:stick",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cherry_sign",
-            "count": 1
-          },
-          {
-            "id": "minecraft:sulfur",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond",
-            "count": 1
-          },
-          {
-            "id": "minecraft:oak_log",
-            "count": 1
-          },
-          {
-            "id": "minecraft:iron_nugget",
+            "id": "minecraft:torch",
             "count": 1
           },
           {
@@ -3323,31 +3448,31 @@
             "count": 1
           },
           {
-            "id": "minecraft:potent_sulfur",
+            "id": "minecraft:waxed_copper_block",
             "count": 1
           },
           {
-            "id": "minecraft:cinnabar",
+            "id": "minecraft:white_bed",
             "count": 1
           },
           {
-            "id": "minecraft:sulfur_spike",
+            "id": "minecraft:arrow",
             "count": 1
           },
           {
-            "id": "minecraft:sulfur",
+            "id": "minecraft:cobblestone",
             "count": 1
           },
           {
-            "id": "minecraft:coal",
+            "id": "minecraft:cinnabar_brick_wall",
             "count": 1
           },
           {
-            "id": "minecraft:cinnabar",
+            "id": "minecraft:compass",
             "count": 1
           },
           {
-            "id": "minecraft:filled_map",
+            "id": "minecraft:sunflower",
             "count": 1
           },
           {
@@ -3359,7 +3484,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:lantern",
+            "id": "minecraft:dark_oak_log",
             "count": 1
           },
           {
@@ -3367,15 +3492,19 @@
             "count": 1
           },
           {
-            "id": "minecraft:dirt",
+            "id": "minecraft:bucket",
             "count": 1
           },
           {
-            "id": "minecraft:redstone",
+            "id": "minecraft:waxed_oxidized_cut_copper_stairs",
             "count": 1
           },
           {
-            "id": "minecraft:cobblestone",
+            "id": "minecraft:chiseled_tuff_bricks",
+            "count": 1
+          },
+          {
+            "id": "minecraft:golden_axe",
             "count": 1
           },
           {
@@ -15748,7 +15877,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 3280947,
+    "time": 3385425,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -15771,250 +15900,6 @@
   },
   "logs": {
     "events": [
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[18:55:07] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T18:55:07"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[18:55:24] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-20T18:55:24"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[18:55:37] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T18:55:37"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-20T18:55:48",
-        "line": "[18:55:48] [Server thread/INFO]: Crazy_brosik fell from a high place"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:02:05] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T19:02:05"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:02:44] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T19:02:44"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:03:00] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T19:03:00"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:04:01] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T19:04:01"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:05:39] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-20T19:05:39"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:06:28] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-20T19:06:28"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:06:32] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-20T19:06:32"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[19:07:29] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-20T19:07:29"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[19:13:08] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-20T19:13:08"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[19:15:23] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-20T19:15:23"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager was slain by PenelopeWhynot",
-        "timestamp": "2026-07-20T19:18:44",
-        "line": "[19:18:44] [Server thread/INFO]: Villager Villager['Villager'/35, l='ServerLevel[world]', x=-35.97, y=68.00, z=-8.33] died, message: 'Villager was slain by PenelopeWhynot'"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Farmer was slain by third_wheel",
-        "timestamp": "2026-07-20T19:19:34",
-        "line": "[19:19:34] [Server thread/INFO]: Villager Villager['Farmer'/433, l='ServerLevel[world]', x=-104.81, y=67.00, z=22.85] died, message: 'Farmer was slain by third_wheel'"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Toolsmith was slain by third_wheel",
-        "timestamp": "2026-07-20T19:19:57",
-        "line": "[19:19:57] [Server thread/INFO]: Villager Villager['Toolsmith'/431, l='ServerLevel[world]', x=-117.30, y=70.00, z=35.59] died, message: 'Toolsmith was slain by third_wheel'"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was shot by PenelopeWhynot",
-        "timestamp": "2026-07-20T19:21:07",
-        "line": "[19:21:07] [Server thread/INFO]: third_wheel was shot by PenelopeWhynot"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[19:22:20] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T19:22:20"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-20T19:22:59",
-        "line": "[19:22:59] [Server thread/INFO]: Crazy_brosik was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Mason was slain by third_wheel",
-        "timestamp": "2026-07-20T19:28:51",
-        "line": "[19:28:51] [Server thread/INFO]: Villager Villager['Mason'/145, l='ServerLevel[world]', x=-34.15, y=68.60, z=-9.70] died, message: 'Mason was slain by third_wheel'"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "tried to swim in lava",
-        "timestamp": "2026-07-20T19:34:31",
-        "line": "[19:34:31] [Server thread/INFO]: third_wheel tried to swim in lava"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:40:42] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T19:40:42"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:41:20] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T19:41:20"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:47:46] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T19:47:46"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:48:28] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-20T19:48:28"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[19:58:27] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-20T19:58:27"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:58:27] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-20T19:58:27"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[19:59:35] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T19:59:35"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-20T20:02:58",
-        "line": "[20:02:58] [Server thread/INFO]: Villager Villager['Villager'/25464, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.37] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "death",
-        "player": "Kimyknot",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-20T20:23:38",
-        "line": "[20:23:38] [Server thread/INFO]: Kimyknot was slain by Iron Golem"
-      },
-      {
-        "type": "join",
-        "player": "DivineLight",
-        "line": "[20:44:14] [Server thread/INFO]: DivineLight joined the game",
-        "timestamp": "2026-07-20T20:44:14"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[20:48:46] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T20:48:46"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[20:48:53] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-20T20:48:53"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[20:53:32] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-20T20:53:32"
-      },
-      {
-        "type": "leave",
-        "player": "DivineLight",
-        "line": "[20:56:33] [Server thread/INFO]: DivineLight left the game",
-        "timestamp": "2026-07-20T20:56:33"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[21:52:35] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-20T21:52:35"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[22:09:21] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-20T22:09:21"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[23:08:35] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T23:08:35"
-      },
       {
         "type": "join",
         "player": "Drewyknot",
@@ -18335,39 +18220,310 @@
         "timestamp": "2026-07-20T18:52:22",
         "synthetic": true,
         "reason": "server_crash"
+      },
+      {
+        "type": "join",
+        "player": "third_wheel",
+        "line": "[18:55:07] [Server thread/INFO]: third_wheel joined the game",
+        "timestamp": "2026-07-20T18:55:07"
+      },
+      {
+        "type": "join",
+        "player": "Crazy_brosik",
+        "line": "[18:55:24] [Server thread/INFO]: Crazy_brosik joined the game",
+        "timestamp": "2026-07-20T18:55:24"
+      },
+      {
+        "type": "join",
+        "player": "PenelopeWhynot",
+        "line": "[18:55:37] [Server thread/INFO]: PenelopeWhynot joined the game",
+        "timestamp": "2026-07-20T18:55:37"
+      },
+      {
+        "type": "death",
+        "player": "Crazy_brosik",
+        "message": "fell from a high place",
+        "timestamp": "2026-07-20T18:55:48",
+        "line": "[18:55:48] [Server thread/INFO]: Crazy_brosik fell from a high place"
+      },
+      {
+        "type": "leave",
+        "player": "third_wheel",
+        "line": "[19:02:05] [Server thread/INFO]: third_wheel left the game",
+        "timestamp": "2026-07-20T19:02:05"
+      },
+      {
+        "type": "join",
+        "player": "third_wheel",
+        "line": "[19:02:44] [Server thread/INFO]: third_wheel joined the game",
+        "timestamp": "2026-07-20T19:02:44"
+      },
+      {
+        "type": "leave",
+        "player": "third_wheel",
+        "line": "[19:03:00] [Server thread/INFO]: third_wheel left the game",
+        "timestamp": "2026-07-20T19:03:00"
+      },
+      {
+        "type": "join",
+        "player": "third_wheel",
+        "line": "[19:04:01] [Server thread/INFO]: third_wheel joined the game",
+        "timestamp": "2026-07-20T19:04:01"
+      },
+      {
+        "type": "join",
+        "player": "R3B3X",
+        "line": "[19:05:39] [Server thread/INFO]: R3B3X joined the game",
+        "timestamp": "2026-07-20T19:05:39"
+      },
+      {
+        "type": "leave",
+        "player": "Crazy_brosik",
+        "line": "[19:06:28] [Server thread/INFO]: Crazy_brosik left the game",
+        "timestamp": "2026-07-20T19:06:28"
+      },
+      {
+        "type": "join",
+        "player": "Crazy_brosik",
+        "line": "[19:06:32] [Server thread/INFO]: Crazy_brosik joined the game",
+        "timestamp": "2026-07-20T19:06:32"
+      },
+      {
+        "type": "join",
+        "player": "Kimyknot",
+        "line": "[19:07:29] [Server thread/INFO]: Kimyknot joined the game",
+        "timestamp": "2026-07-20T19:07:29"
+      },
+      {
+        "type": "leave",
+        "player": "Kimyknot",
+        "line": "[19:13:08] [Server thread/INFO]: Kimyknot left the game",
+        "timestamp": "2026-07-20T19:13:08"
+      },
+      {
+        "type": "join",
+        "player": "Kimyknot",
+        "line": "[19:15:23] [Server thread/INFO]: Kimyknot joined the game",
+        "timestamp": "2026-07-20T19:15:23"
+      },
+      {
+        "type": "death",
+        "player": "Villager",
+        "message": "Villager was slain by PenelopeWhynot",
+        "timestamp": "2026-07-20T19:18:44",
+        "line": "[19:18:44] [Server thread/INFO]: Villager Villager['Villager'/35, l='ServerLevel[world]', x=-35.97, y=68.00, z=-8.33] died, message: 'Villager was slain by PenelopeWhynot'"
+      },
+      {
+        "type": "death",
+        "player": "Villager",
+        "message": "Farmer was slain by third_wheel",
+        "timestamp": "2026-07-20T19:19:34",
+        "line": "[19:19:34] [Server thread/INFO]: Villager Villager['Farmer'/433, l='ServerLevel[world]', x=-104.81, y=67.00, z=22.85] died, message: 'Farmer was slain by third_wheel'"
+      },
+      {
+        "type": "death",
+        "player": "Villager",
+        "message": "Toolsmith was slain by third_wheel",
+        "timestamp": "2026-07-20T19:19:57",
+        "line": "[19:19:57] [Server thread/INFO]: Villager Villager['Toolsmith'/431, l='ServerLevel[world]', x=-117.30, y=70.00, z=35.59] died, message: 'Toolsmith was slain by third_wheel'"
+      },
+      {
+        "type": "death",
+        "player": "third_wheel",
+        "message": "was shot by PenelopeWhynot",
+        "timestamp": "2026-07-20T19:21:07",
+        "line": "[19:21:07] [Server thread/INFO]: third_wheel was shot by PenelopeWhynot"
+      },
+      {
+        "type": "leave",
+        "player": "PenelopeWhynot",
+        "line": "[19:22:20] [Server thread/INFO]: PenelopeWhynot left the game",
+        "timestamp": "2026-07-20T19:22:20"
+      },
+      {
+        "type": "death",
+        "player": "Crazy_brosik",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-20T19:22:59",
+        "line": "[19:22:59] [Server thread/INFO]: Crazy_brosik was slain by Iron Golem"
+      },
+      {
+        "type": "death",
+        "player": "Villager",
+        "message": "Mason was slain by third_wheel",
+        "timestamp": "2026-07-20T19:28:51",
+        "line": "[19:28:51] [Server thread/INFO]: Villager Villager['Mason'/145, l='ServerLevel[world]', x=-34.15, y=68.60, z=-9.70] died, message: 'Mason was slain by third_wheel'"
+      },
+      {
+        "type": "death",
+        "player": "third_wheel",
+        "message": "tried to swim in lava",
+        "timestamp": "2026-07-20T19:34:31",
+        "line": "[19:34:31] [Server thread/INFO]: third_wheel tried to swim in lava"
+      },
+      {
+        "type": "leave",
+        "player": "third_wheel",
+        "line": "[19:40:42] [Server thread/INFO]: third_wheel left the game",
+        "timestamp": "2026-07-20T19:40:42"
+      },
+      {
+        "type": "join",
+        "player": "third_wheel",
+        "line": "[19:41:20] [Server thread/INFO]: third_wheel joined the game",
+        "timestamp": "2026-07-20T19:41:20"
+      },
+      {
+        "type": "leave",
+        "player": "third_wheel",
+        "line": "[19:47:46] [Server thread/INFO]: third_wheel left the game",
+        "timestamp": "2026-07-20T19:47:46"
+      },
+      {
+        "type": "leave",
+        "player": "Crazy_brosik",
+        "line": "[19:48:28] [Server thread/INFO]: Crazy_brosik left the game",
+        "timestamp": "2026-07-20T19:48:28"
+      },
+      {
+        "type": "leave",
+        "player": "R3B3X",
+        "line": "[19:58:27] [Server thread/INFO]: R3B3X left the game",
+        "timestamp": "2026-07-20T19:58:27"
+      },
+      {
+        "type": "join",
+        "player": "R3B3X",
+        "line": "[19:58:27] [Server thread/INFO]: R3B3X joined the game",
+        "timestamp": "2026-07-20T19:58:27"
+      },
+      {
+        "type": "join",
+        "player": "PenelopeWhynot",
+        "line": "[19:59:35] [Server thread/INFO]: PenelopeWhynot joined the game",
+        "timestamp": "2026-07-20T19:59:35"
+      },
+      {
+        "type": "death",
+        "player": "Villager",
+        "message": "Villager drowned",
+        "timestamp": "2026-07-20T20:02:58",
+        "line": "[20:02:58] [Server thread/INFO]: Villager Villager['Villager'/25464, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.37] died, message: 'Villager drowned'"
+      },
+      {
+        "type": "death",
+        "player": "Kimyknot",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-20T20:23:38",
+        "line": "[20:23:38] [Server thread/INFO]: Kimyknot was slain by Iron Golem"
+      },
+      {
+        "type": "join",
+        "player": "DivineLight",
+        "line": "[20:44:14] [Server thread/INFO]: DivineLight joined the game",
+        "timestamp": "2026-07-20T20:44:14"
+      },
+      {
+        "type": "leave",
+        "player": "PenelopeWhynot",
+        "line": "[20:48:46] [Server thread/INFO]: PenelopeWhynot left the game",
+        "timestamp": "2026-07-20T20:48:46"
+      },
+      {
+        "type": "leave",
+        "player": "R3B3X",
+        "line": "[20:48:53] [Server thread/INFO]: R3B3X left the game",
+        "timestamp": "2026-07-20T20:48:53"
+      },
+      {
+        "type": "leave",
+        "player": "Kimyknot",
+        "line": "[20:53:32] [Server thread/INFO]: Kimyknot left the game",
+        "timestamp": "2026-07-20T20:53:32"
+      },
+      {
+        "type": "leave",
+        "player": "DivineLight",
+        "line": "[20:56:33] [Server thread/INFO]: DivineLight left the game",
+        "timestamp": "2026-07-20T20:56:33"
+      },
+      {
+        "type": "join",
+        "player": "R3B3X",
+        "line": "[21:52:35] [Server thread/INFO]: R3B3X joined the game",
+        "timestamp": "2026-07-20T21:52:35"
+      },
+      {
+        "type": "leave",
+        "player": "R3B3X",
+        "line": "[22:09:21] [Server thread/INFO]: R3B3X left the game",
+        "timestamp": "2026-07-20T22:09:21"
+      },
+      {
+        "type": "join",
+        "player": "PenelopeWhynot",
+        "line": "[23:08:35] [Server thread/INFO]: PenelopeWhynot joined the game",
+        "timestamp": "2026-07-20T23:08:35"
+      },
+      {
+        "type": "leave",
+        "player": "PenelopeWhynot",
+        "timestamp": "2026-07-20T23:51:50",
+        "synthetic": true,
+        "reason": "server_crash"
+      },
+      {
+        "type": "death",
+        "player": "Villager",
+        "message": "Villager drowned",
+        "timestamp": "2026-07-21T00:28:37",
+        "line": "[00:28:37] [Server thread/INFO]: Villager Villager['Villager'/70372, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.62] died, message: 'Villager drowned'"
+      },
+      {
+        "type": "death",
+        "player": "Villager",
+        "message": "Villager drowned",
+        "timestamp": "2026-07-21T00:40:05",
+        "line": "[00:40:05] [Server thread/INFO]: Villager Villager['Villager'/70371, l='ServerLevel[world]', x=8.30, y=61.04, z=-189.14] died, message: 'Villager drowned'"
+      },
+      {
+        "type": "leave",
+        "player": "PenelopeWhynot",
+        "line": "[00:54:39] [Server thread/INFO]: PenelopeWhynot left the game",
+        "timestamp": "2026-07-21T00:54:39"
       }
     ],
     "sessions": {
-      "third_wheel": {
-        "joins": 37,
-        "leaves": 37
-      },
-      "Crazy_brosik": {
-        "joins": 41,
-        "leaves": 41
+      "Drewyknot": {
+        "joins": 15,
+        "leaves": 15
       },
       "PenelopeWhynot": {
         "joins": 32,
-        "leaves": 33
-      },
-      "R3B3X": {
-        "joins": 27,
-        "leaves": 27
+        "leaves": 35
       },
       "Kimyknot": {
         "joins": 20,
         "leaves": 20
       },
+      "third_wheel": {
+        "joins": 37,
+        "leaves": 37
+      },
+      "R3B3X": {
+        "joins": 27,
+        "leaves": 27
+      },
+      "Crazy_brosik": {
+        "joins": 41,
+        "leaves": 41
+      },
       "DivineLight": {
         "joins": 6,
         "leaves": 6
-      },
-      "Drewyknot": {
-        "joins": 15,
-        "leaves": 15
       }
     },
-    "log_date": "2026-07-20",
+    "log_date": "2026-07-21",
     "crashes": [
       {
         "type": "crash",
@@ -18380,6 +18536,10 @@
       {
         "type": "crash",
         "timestamp": "2026-07-20T18:52:22"
+      },
+      {
+        "type": "crash",
+        "timestamp": "2026-07-20T23:51:50"
       }
     ],
     "server_sessions": [
@@ -18407,5 +18567,5 @@
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-21T03:30:01.189003+00:00"
+  "captured_at": "2026-07-21T11:04:54.548556+00:00"
 }
