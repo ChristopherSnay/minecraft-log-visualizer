@@ -9,7 +9,7 @@
           "minecraft:nether_quartz_ore": 33,
           "minecraft:chest": 8,
           "minecraft:smooth_basalt": 139,
-          "minecraft:netherrack": 942,
+          "minecraft:netherrack": 948,
           "minecraft:white_terracotta": 6,
           "minecraft:spruce_sapling": 2,
           "minecraft:waxed_oxidized_cut_copper_stairs": 12,
@@ -19,7 +19,7 @@
           "minecraft:oak_button": 13,
           "minecraft:spruce_planks": 10,
           "minecraft:birch_log": 14,
-          "minecraft:pale_hanging_moss": 2,
+          "minecraft:pale_hanging_moss": 4,
           "minecraft:oxeye_daisy": 1,
           "minecraft:magma_block": 4,
           "minecraft:farmland": 25,
@@ -28,9 +28,10 @@
           "minecraft:waxed_oxidized_copper": 24,
           "minecraft:cave_vines": 2,
           "minecraft:melon": 2,
-          "minecraft:birch_leaves": 1,
+          "minecraft:birch_leaves": 2,
           "minecraft:oak_fence": 8,
           "minecraft:jungle_planks": 19,
+          "minecraft:dark_oak_sapling": 1,
           "minecraft:moss_block": 18,
           "minecraft:gold_block": 6,
           "minecraft:mushroom_stem": 3,
@@ -52,7 +53,7 @@
           "minecraft:iron_ore": 146,
           "minecraft:acacia_log": 18,
           "minecraft:beetroots": 1,
-          "minecraft:pale_moss_block": 9,
+          "minecraft:pale_moss_block": 14,
           "minecraft:dark_oak_log": 167,
           "minecraft:podzol": 1,
           "minecraft:dandelion": 4,
@@ -146,7 +147,7 @@
           "minecraft:cherry_stairs": 3,
           "minecraft:hay_block": 262,
           "minecraft:dried_ghast": 1,
-          "minecraft:white_bed": 37,
+          "minecraft:white_bed": 38,
           "minecraft:bee_nest": 1,
           "minecraft:cherry_sapling": 4,
           "minecraft:composter": 2,
@@ -163,7 +164,7 @@
           "minecraft:potent_sulfur": 9,
           "minecraft:oak_stairs": 69,
           "minecraft:mossy_cobblestone": 6,
-          "minecraft:grass_block": 780,
+          "minecraft:grass_block": 783,
           "minecraft:cobweb": 7,
           "minecraft:stone_brick_slab": 2,
           "minecraft:spruce_leaves": 28,
@@ -174,13 +175,14 @@
           "minecraft:tuff_bricks": 335,
           "minecraft:iron_chain": 5,
           "minecraft:cherry_button": 5,
-          "minecraft:pale_oak_log": 90,
+          "minecraft:pale_oak_log": 92,
           "minecraft:nether_gold_ore": 10,
-          "minecraft:pale_oak_leaves": 28,
+          "minecraft:pale_oak_leaves": 76,
           "minecraft:calcite": 422,
           "minecraft:spruce_slab": 2,
           "minecraft:cobblestone_slab": 18,
           "minecraft:cornflower": 1,
+          "minecraft:cherry_sign": 1,
           "minecraft:dead_bush": 1
         },
         "items_crafted": {
@@ -276,7 +278,7 @@
         },
         "items_used": {
           "minecraft:acacia_boat": 14,
-          "minecraft:iron_axe": 1034,
+          "minecraft:iron_axe": 1048,
           "minecraft:cactus": 7,
           "minecraft:white_banner": 1,
           "minecraft:mud": 29,
@@ -307,12 +309,12 @@
           "minecraft:jungle_boat": 15,
           "minecraft:stone_pickaxe": 44,
           "minecraft:calcite": 377,
-          "minecraft:bow": 205,
+          "minecraft:bow": 212,
           "minecraft:cobbled_deepslate_stairs": 78,
           "minecraft:cherry_button": 5,
           "minecraft:cobbled_deepslate": 190,
           "minecraft:acacia_planks": 1,
-          "minecraft:netherrack": 201,
+          "minecraft:netherrack": 207,
           "minecraft:yellow_bed": 3,
           "minecraft:chiseled_tuff": 10,
           "minecraft:mossy_cobblestone": 2,
@@ -328,7 +330,7 @@
           "minecraft:compass": 3,
           "minecraft:obsidian": 23,
           "minecraft:sand": 14,
-          "minecraft:dark_oak_sapling": 8,
+          "minecraft:dark_oak_sapling": 9,
           "minecraft:lodestone": 2,
           "minecraft:spruce_planks": 66,
           "minecraft:dark_oak_door": 2,
@@ -346,6 +348,7 @@
           "minecraft:wildflowers": 5,
           "minecraft:iron_pickaxe": 1343,
           "minecraft:andesite": 7,
+          "minecraft:pale_oak_sapling": 12,
           "minecraft:copper_hoe": 4,
           "minecraft:bamboo": 89,
           "minecraft:waxed_copper_block": 43,
@@ -354,7 +357,7 @@
           "minecraft:cherry_sapling": 29,
           "minecraft:cactus_flower": 1,
           "minecraft:brown_banner": 1,
-          "minecraft:diamond_pickaxe": 5171,
+          "minecraft:diamond_pickaxe": 5178,
           "minecraft:ladder": 35,
           "minecraft:stone_bricks": 25,
           "minecraft:magma_block": 4,
@@ -379,7 +382,7 @@
           "minecraft:crafting_table": 23,
           "minecraft:birch_boat": 5,
           "minecraft:tuff_bricks": 168,
-          "minecraft:white_bed": 36,
+          "minecraft:white_bed": 37,
           "minecraft:gold_block": 2,
           "minecraft:bone_block": 14,
           "minecraft:apple": 3,
@@ -391,10 +394,11 @@
           "minecraft:cherry_door": 1,
           "minecraft:smooth_basalt": 113,
           "minecraft:furnace": 8,
-          "minecraft:bread": 590,
+          "minecraft:bread": 596,
           "minecraft:barrel": 4,
           "minecraft:torch": 1527,
           "minecraft:chiseled_stone_bricks": 3,
+          "minecraft:pale_moss_block": 1,
           "minecraft:cobblestone_stairs": 18,
           "minecraft:yellow_terracotta": 1,
           "minecraft:oak_button": 14,
@@ -436,46 +440,46 @@
         },
         "custom_stats": {
           "minecraft:talked_to_villager": 10,
-          "minecraft:time_since_rest": 878,
-          "minecraft:leave_game": 32,
-          "minecraft:damage_taken": 15851,
+          "minecraft:time_since_rest": 4234,
+          "minecraft:leave_game": 33,
+          "minecraft:damage_taken": 15882,
           "minecraft:mob_kills": 461,
           "minecraft:boat_one_cm": 2204109,
-          "minecraft:time_since_death": 891394,
+          "minecraft:time_since_death": 907651,
           "minecraft:interact_with_furnace": 216,
-          "minecraft:sleep_in_bed": 136,
+          "minecraft:sleep_in_bed": 137,
           "minecraft:swim_one_cm": 115489,
-          "minecraft:total_world_time": 1923981,
+          "minecraft:total_world_time": 1940238,
           "minecraft:crouch_one_cm": 76913,
-          "minecraft:climb_one_cm": 27903,
+          "minecraft:climb_one_cm": 28895,
           "minecraft:deaths": 4,
           "minecraft:interact_with_stonecutter": 5,
           "minecraft:player_kills": 1,
           "minecraft:enchant_item": 12,
           "minecraft:interact_with_crafting_table": 160,
-          "minecraft:walk_one_cm": 2511757,
+          "minecraft:walk_one_cm": 2537987,
           "minecraft:walk_under_water_one_cm": 74947,
           "minecraft:horse_one_cm": 239,
           "minecraft:damage_dealt": 56362,
-          "minecraft:play_time": 1923981,
-          "minecraft:jump": 20553,
-          "minecraft:drop": 459,
+          "minecraft:play_time": 1940238,
+          "minecraft:jump": 20807,
+          "minecraft:drop": 535,
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 40,
-          "minecraft:sprint_one_cm": 11309655,
-          "minecraft:open_chest": 558,
+          "minecraft:sprint_one_cm": 11450549,
+          "minecraft:open_chest": 559,
           "minecraft:inspect_hopper": 1,
-          "minecraft:fall_one_cm": 337096,
-          "minecraft:fly_one_cm": 2030058,
+          "minecraft:fall_one_cm": 341435,
+          "minecraft:fly_one_cm": 2052585,
           "minecraft:interact_with_anvil": 5,
-          "minecraft:walk_on_water_one_cm": 175754,
-          "minecraft:sneak_time": 29705,
+          "minecraft:walk_on_water_one_cm": 176617,
+          "minecraft:sneak_time": 29805,
           "minecraft:interact_with_grindstone": 2
         },
         "items_picked_up": {
-          "minecraft:pale_oak_log": 90,
-          "minecraft:cherry_sign": 2,
+          "minecraft:pale_oak_log": 99,
+          "minecraft:cherry_sign": 3,
           "minecraft:cobblestone": 1785,
           "minecraft:shears": 1,
           "minecraft:brick": 130,
@@ -488,7 +492,7 @@
           "minecraft:white_banner": 1,
           "minecraft:white_terracotta": 4,
           "minecraft:emerald": 25,
-          "minecraft:pale_oak_sapling": 6,
+          "minecraft:pale_oak_sapling": 12,
           "minecraft:cherry_button": 5,
           "minecraft:wildflowers": 15,
           "minecraft:bow": 5,
@@ -538,13 +542,13 @@
           "minecraft:spruce_sapling": 12,
           "minecraft:yellow_terracotta": 2,
           "minecraft:flowering_azalea": 4,
-          "minecraft:white_bed": 37,
+          "minecraft:white_bed": 38,
           "minecraft:bucket": 21,
           "minecraft:leather": 2,
           "minecraft:lead": 4,
           "minecraft:sulfur": 87,
           "minecraft:music_disc_precipice": 1,
-          "minecraft:stick": 222,
+          "minecraft:stick": 225,
           "minecraft:polished_tuff": 8,
           "minecraft:bamboo": 115,
           "minecraft:moss_block": 20,
@@ -558,7 +562,7 @@
           "minecraft:cherry_planks": 46,
           "minecraft:chest": 9,
           "minecraft:yellow_bed": 3,
-          "minecraft:netherrack": 962,
+          "minecraft:netherrack": 1066,
           "minecraft:red_wool": 1,
           "minecraft:waxed_oxidized_chiseled_copper": 1,
           "minecraft:waxed_exposed_copper_bulb": 6,
@@ -596,7 +600,7 @@
           "minecraft:diamond": 78,
           "minecraft:slime_ball": 47,
           "minecraft:granite": 48,
-          "minecraft:dark_oak_sapling": 9,
+          "minecraft:dark_oak_sapling": 10,
           "minecraft:stone_brick_slab": 2,
           "minecraft:lily_pad": 4,
           "minecraft:salmon": 7,
@@ -611,7 +615,7 @@
           "minecraft:acacia_log": 18,
           "minecraft:acacia_planks": 32,
           "minecraft:spruce_planks": 10,
-          "minecraft:dirt": 1894,
+          "minecraft:dirt": 1897,
           "minecraft:rail": 4,
           "minecraft:bone_block": 17,
           "minecraft:diamond_helmet": 2,
@@ -668,7 +672,7 @@
           "minecraft:tuff_bricks": 314,
           "minecraft:gunpowder": 16,
           "minecraft:brown_banner": 2,
-          "minecraft:pale_moss_carpet": 2,
+          "minecraft:pale_moss_carpet": 4,
           "minecraft:magma_block": 4,
           "minecraft:short_grass": 1,
           "minecraft:lodestone": 1,
@@ -681,7 +685,7 @@
           "minecraft:dark_oak_log": 186,
           "minecraft:tipped_arrow": 21,
           "minecraft:diorite": 65,
-          "minecraft:pale_moss_block": 9,
+          "minecraft:pale_moss_block": 14,
           "minecraft:cherry_pressure_plate": 1,
           "minecraft:crafting_table": 9,
           "minecraft:decorated_pot": 3,
@@ -754,7 +758,7 @@
           "minecraft:copper_chestplate": 1,
           "minecraft:slime_ball": 24,
           "minecraft:dark_oak_button": 4,
-          "minecraft:netherrack": 759,
+          "minecraft:netherrack": 823,
           "minecraft:mutton": 3,
           "minecraft:glow_ink_sac": 2,
           "minecraft:iron_axe": 2,
@@ -814,6 +818,7 @@
           "minecraft:chiseled_tuff_bricks": 1,
           "minecraft:leaf_litter": 46,
           "minecraft:furnace": 2,
+          "minecraft:pale_oak_log": 12,
           "minecraft:diamond_sword": 2,
           "minecraft:iron_sword": 4,
           "minecraft:golden_leggings": 2,
@@ -3383,14 +3388,14 @@
           }
         ],
         "position": [
-          487.30000001192093,
-          89.0,
-          2844.300000011921
+          3.819001124181604,
+          78.5625,
+          -71.30221518876276
         ],
         "dimension": "minecraft:overworld",
         "xp": 21,
-        "health": 16.19999885559082,
-        "food": 11,
+        "health": 20.0,
+        "food": 19,
         "saturation": 0.0,
         "inventory": [
           {
@@ -3402,11 +3407,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:iron_axe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:white_bed",
+            "id": "minecraft:cherry_sign",
             "count": 1
           },
           {
@@ -3414,7 +3415,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:torch",
+            "id": "minecraft:white_bed",
+            "count": 1
+          },
+          {
+            "id": "minecraft:netherrack",
             "count": 1
           },
           {
@@ -3426,7 +3431,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:flint_and_steel",
+            "id": "minecraft:pale_moss_carpet",
             "count": 1
           },
           {
@@ -3439,10 +3444,6 @@
           },
           {
             "id": "minecraft:stick",
-            "count": 1
-          },
-          {
-            "id": "minecraft:pale_oak_sapling",
             "count": 1
           },
           {
@@ -3470,10 +3471,6 @@
             "count": 1
           },
           {
-            "id": "minecraft:pale_moss_carpet",
-            "count": 1
-          },
-          {
             "id": "minecraft:dark_oak_planks",
             "count": 1
           },
@@ -3483,6 +3480,10 @@
           },
           {
             "id": "minecraft:gold_nugget",
+            "count": 1
+          },
+          {
+            "id": "minecraft:torch",
             "count": 1
           },
           {
@@ -3524,6 +3525,10 @@
           {
             "id": "minecraft:torch",
             "count": 1
+          },
+          {
+            "id": "minecraft:flint_and_steel",
+            "count": 1
           }
         ],
         "effects": []
@@ -3534,7 +3539,7 @@
           "minecraft:torch": 10,
           "minecraft:redstone_ore": 2,
           "minecraft:mangrove_roots": 1,
-          "minecraft:spruce_log": 69,
+          "minecraft:spruce_log": 71,
           "minecraft:vine": 10,
           "minecraft:chest": 3,
           "minecraft:oak_sign": 1,
@@ -3556,6 +3561,7 @@
           "minecraft:jungle_log": 84,
           "minecraft:copper_ore": 58,
           "minecraft:melon": 4,
+          "minecraft:stripped_spruce_log": 6,
           "minecraft:birch_leaves": 2,
           "minecraft:andesite": 167,
           "minecraft:oak_fence": 4,
@@ -3564,7 +3570,7 @@
           "minecraft:deepslate_gold_ore": 9,
           "minecraft:bamboo": 14,
           "minecraft:budding_amethyst": 11,
-          "minecraft:dark_oak_leaves": 10,
+          "minecraft:dark_oak_leaves": 37,
           "minecraft:diamond_ore": 1,
           "minecraft:wall_torch": 17,
           "minecraft:yellow_bed": 2,
@@ -3582,7 +3588,7 @@
           "minecraft:stone": 1169,
           "minecraft:beetroots": 71,
           "minecraft:stone_bricks": 5,
-          "minecraft:dark_oak_log": 41,
+          "minecraft:dark_oak_log": 94,
           "minecraft:granite": 55,
           "minecraft:bush": 1,
           "minecraft:coal_ore": 197,
@@ -3593,14 +3599,14 @@
           "minecraft:cobblestone": 68,
           "minecraft:sugar_cane": 13,
           "minecraft:oak_trapdoor": 3,
-          "minecraft:white_bed": 59,
+          "minecraft:white_bed": 60,
           "minecraft:lantern": 8,
           "minecraft:light_gray_bed": 2,
           "minecraft:mangrove_leaves": 3,
-          "minecraft:scaffolding": 39,
+          "minecraft:scaffolding": 73,
           "minecraft:oak_leaves": 91,
           "minecraft:jungle_trapdoor": 1,
-          "minecraft:spruce_stairs": 1,
+          "minecraft:spruce_stairs": 6,
           "minecraft:composter": 3,
           "minecraft:deepslate_copper_ore": 37,
           "minecraft:deepslate_coal_ore": 4,
@@ -3689,13 +3695,13 @@
           "minecraft:stone_axe": 134,
           "minecraft:oak_trapdoor": 13,
           "minecraft:oak_fence": 4,
-          "minecraft:iron_axe": 336,
+          "minecraft:iron_axe": 422,
           "minecraft:grass_block": 1,
           "minecraft:spruce_fence": 31,
           "minecraft:golden_pickaxe": 32,
           "minecraft:mud_brick_stairs": 2,
           "minecraft:iron_pickaxe": 1931,
-          "minecraft:spruce_stairs": 10,
+          "minecraft:spruce_stairs": 12,
           "minecraft:andesite": 153,
           "minecraft:bamboo": 12,
           "minecraft:dark_oak_log": 2,
@@ -3712,7 +3718,7 @@
           "minecraft:jungle_stairs": 6,
           "minecraft:tuff": 2,
           "minecraft:diorite": 3,
-          "minecraft:oak_slab": 4,
+          "minecraft:oak_slab": 7,
           "minecraft:wooden_pickaxe": 46,
           "minecraft:jungle_log": 5,
           "minecraft:spruce_door": 1,
@@ -3727,13 +3733,13 @@
           "minecraft:pumpkin_pie": 21,
           "minecraft:beetroot_seeds": 136,
           "minecraft:jungle_slab": 3,
-          "minecraft:white_bed": 61,
+          "minecraft:white_bed": 62,
           "minecraft:stone_pickaxe": 388,
           "minecraft:cobbled_deepslate": 6,
           "minecraft:apple": 1,
           "minecraft:yellow_bed": 2,
-          "minecraft:scaffolding": 87,
-          "minecraft:spruce_log": 10,
+          "minecraft:scaffolding": 137,
+          "minecraft:spruce_log": 16,
           "minecraft:iron_hoe": 222,
           "minecraft:water_bucket": 1,
           "minecraft:bone_meal": 1,
@@ -3742,6 +3748,7 @@
           "minecraft:bread": 32,
           "minecraft:dirt": 234,
           "minecraft:compass": 1,
+          "minecraft:stripped_spruce_log": 1,
           "minecraft:jungle_sapling": 12,
           "minecraft:golden_axe": 34,
           "minecraft:dark_oak_sapling": 9,
@@ -3773,37 +3780,38 @@
           "minecraft:spider": 3
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 878,
+          "minecraft:time_since_rest": 5977,
           "minecraft:talked_to_villager": 35,
           "minecraft:leave_game": 17,
           "minecraft:damage_taken": 1583,
           "minecraft:mob_kills": 25,
           "minecraft:boat_one_cm": 687129,
-          "minecraft:time_since_death": 861548,
+          "minecraft:time_since_death": 879548,
           "minecraft:interact_with_furnace": 93,
-          "minecraft:sleep_in_bed": 63,
-          "minecraft:total_world_time": 861548,
+          "minecraft:sleep_in_bed": 64,
+          "minecraft:total_world_time": 879548,
           "minecraft:crouch_one_cm": 1347,
-          "minecraft:climb_one_cm": 14391,
+          "minecraft:climb_one_cm": 23753,
           "minecraft:interact_with_stonecutter": 5,
           "minecraft:animals_bred": 3,
           "minecraft:traded_with_villager": 32,
           "minecraft:interact_with_crafting_table": 78,
-          "minecraft:walk_one_cm": 4206270,
+          "minecraft:walk_one_cm": 4266284,
           "minecraft:walk_under_water_one_cm": 30597,
           "minecraft:damage_dealt": 4594,
-          "minecraft:play_time": 861548,
-          "minecraft:jump": 7768,
+          "minecraft:play_time": 879548,
+          "minecraft:jump": 8009,
           "minecraft:drop": 244,
           "minecraft:sprint_one_cm": 491613,
-          "minecraft:open_chest": 218,
-          "minecraft:fall_one_cm": 80198,
-          "minecraft:fly_one_cm": 123447,
+          "minecraft:open_chest": 222,
+          "minecraft:fall_one_cm": 81398,
+          "minecraft:fly_one_cm": 123525,
           "minecraft:walk_on_water_one_cm": 75204,
-          "minecraft:sneak_time": 2188
+          "minecraft:sneak_time": 2473
         },
         "items_picked_up": {
           "minecraft:poisonous_potato": 1,
+          "minecraft:pale_oak_log": 5,
           "minecraft:cobblestone": 1231,
           "minecraft:glass": 22,
           "minecraft:composter": 3,
@@ -3813,10 +3821,11 @@
           "minecraft:redstone": 14,
           "minecraft:bone": 4,
           "minecraft:lantern": 8,
+          "minecraft:stripped_spruce_log": 6,
           "minecraft:melon_slice": 17,
           "minecraft:diamond": 5,
           "minecraft:granite": 55,
-          "minecraft:dark_oak_sapling": 10,
+          "minecraft:dark_oak_sapling": 16,
           "minecraft:ink_sac": 7,
           "minecraft:arrow": 7,
           "minecraft:iron_ingot": 2,
@@ -3830,7 +3839,7 @@
           "minecraft:torch": 31,
           "minecraft:dripstone_block": 13,
           "minecraft:cherry_log": 1,
-          "minecraft:spruce_log": 114,
+          "minecraft:spruce_log": 116,
           "minecraft:coal": 201,
           "minecraft:oak_log": 229,
           "minecraft:oak_fence": 3,
@@ -3856,13 +3865,13 @@
           "minecraft:carrot": 394,
           "minecraft:spruce_sapling": 24,
           "minecraft:mangrove_roots": 1,
-          "minecraft:white_bed": 59,
+          "minecraft:white_bed": 60,
           "minecraft:bucket": 1,
           "minecraft:leather": 1,
           "minecraft:stone_pickaxe": 1,
-          "minecraft:scaffolding": 79,
+          "minecraft:scaffolding": 117,
           "minecraft:oak_trapdoor": 3,
-          "minecraft:stick": 80,
+          "minecraft:stick": 84,
           "minecraft:bamboo": 184,
           "minecraft:chicken": 2,
           "minecraft:raw_iron": 137,
@@ -3875,6 +3884,7 @@
           "minecraft:gunpowder": 2,
           "minecraft:chest": 3,
           "minecraft:yellow_bed": 2,
+          "minecraft:netherrack": 64,
           "minecraft:gravel": 95,
           "minecraft:light_gray_wool": 24,
           "minecraft:jungle_planks": 1,
@@ -3891,9 +3901,9 @@
           "minecraft:pumpkin": 3,
           "minecraft:spider_eye": 1,
           "minecraft:jungle_log": 87,
-          "minecraft:spruce_stairs": 1,
+          "minecraft:spruce_stairs": 6,
           "minecraft:bone_meal": 1,
-          "minecraft:dark_oak_log": 41,
+          "minecraft:dark_oak_log": 94,
           "minecraft:diorite": 85,
           "minecraft:oak_boat": 14,
           "minecraft:oak_planks": 11,
@@ -5720,8 +5730,16 @@
             "time": "2026-07-21 16:53:19 -0400"
           },
           {
+            "id": "minecraft:recipes/decorations/spruce_shelf",
+            "time": "2026-07-21 17:21:33 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/stripped_dark_oak_wood",
             "time": "2026-07-21 17:02:36 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/spruce_hanging_sign",
+            "time": "2026-07-21 17:21:33 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/dark_oak_stairs",
@@ -5730,6 +5748,10 @@
           {
             "id": "minecraft:recipes/redstone/dark_oak_pressure_plate",
             "time": "2026-07-21 16:53:19 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/stripped_spruce_wood",
+            "time": "2026-07-21 17:21:33 -0400"
           },
           {
             "id": "minecraft:recipes/decorations/dark_oak_fence",
@@ -5760,20 +5782,32 @@
             "time": "2026-07-21 17:02:36 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/pale_oak_planks",
+            "time": "2026-07-21 17:22:39 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/pale_oak_wood",
+            "time": "2026-07-21 17:22:39 -0400"
+          },
+          {
             "id": "minecraft:recipes/decorations/dark_oak_sign",
             "time": "2026-07-21 16:53:19 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/nether_brick",
+            "time": "2026-07-21 17:22:01 -0400"
           }
         ],
         "position": [
-          -174.62735962626036,
-          77.0,
-          10.076779043844356
+          -145.56584515377105,
+          72.0,
+          21.171305923467894
         ],
         "dimension": "minecraft:overworld",
         "xp": 22,
         "health": 20.0,
-        "food": 20,
-        "saturation": 2.0,
+        "food": 18,
+        "saturation": 0.0,
         "inventory": [
           {
             "id": "minecraft:iron_pickaxe",
@@ -5792,7 +5826,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:iron_axe",
+            "id": "minecraft:cobblestone",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dark_oak_sapling",
             "count": 1
           },
           {
@@ -5832,11 +5870,19 @@
             "count": 1
           },
           {
-            "id": "minecraft:oak_slab",
+            "id": "minecraft:dark_oak_log",
             "count": 1
           },
           {
             "id": "minecraft:dark_oak_planks",
+            "count": 1
+          },
+          {
+            "id": "minecraft:diorite",
+            "count": 1
+          },
+          {
+            "id": "minecraft:netherrack",
             "count": 1
           },
           {
@@ -5864,11 +5910,19 @@
             "count": 1
           },
           {
+            "id": "minecraft:stripped_spruce_log",
+            "count": 1
+          },
+          {
             "id": "minecraft:iron_pickaxe",
             "count": 1
           },
           {
-            "id": "minecraft:dark_oak_sapling",
+            "id": "minecraft:diorite",
+            "count": 1
+          },
+          {
+            "id": "minecraft:iron_axe",
             "count": 1
           },
           {
@@ -5889,6 +5943,10 @@
           },
           {
             "id": "minecraft:spruce_fence",
+            "count": 1
+          },
+          {
+            "id": "minecraft:oak_slab",
             "count": 1
           }
         ],
@@ -15239,15 +15297,15 @@
           "minecraft:oak_slab": 22,
           "minecraft:carrots": 232,
           "minecraft:gravel": 11,
-          "minecraft:short_grass": 3422,
-          "minecraft:stripped_dark_oak_log": 7,
+          "minecraft:short_grass": 3429,
+          "minecraft:stripped_dark_oak_log": 15,
           "minecraft:light_blue_bed": 4,
-          "minecraft:acacia_leaves": 115,
+          "minecraft:acacia_leaves": 147,
           "minecraft:dirt_path": 994,
           "minecraft:crafting_table": 40,
           "minecraft:leaf_litter": 35,
           "minecraft:oxeye_daisy": 2,
-          "minecraft:stripped_oak_log": 4,
+          "minecraft:stripped_oak_log": 8,
           "minecraft:lilac": 24,
           "minecraft:black_wool": 27,
           "minecraft:farmland": 7,
@@ -15269,16 +15327,16 @@
           "minecraft:poppy": 18,
           "minecraft:potatoes": 206,
           "minecraft:dripstone_block": 3,
-          "minecraft:oak_sapling": 4,
+          "minecraft:oak_sapling": 5,
           "minecraft:allium": 27,
           "minecraft:azure_bluet": 3,
           "minecraft:iron_ore": 34,
-          "minecraft:acacia_log": 27,
+          "minecraft:acacia_log": 35,
           "minecraft:stone": 229,
-          "minecraft:stripped_acacia_log": 7,
+          "minecraft:stripped_acacia_log": 11,
           "minecraft:beetroots": 114,
           "minecraft:glass_pane": 6,
-          "minecraft:dark_oak_log": 137,
+          "minecraft:dark_oak_log": 142,
           "minecraft:blue_orchid": 2,
           "minecraft:granite": 11,
           "minecraft:diorite_stairs": 2,
@@ -15291,27 +15349,27 @@
           "minecraft:oak_planks": 36,
           "minecraft:cherry_stairs": 1,
           "minecraft:hay_block": 11,
-          "minecraft:cobblestone": 61,
+          "minecraft:cobblestone": 65,
           "minecraft:sugar_cane": 9,
           "minecraft:oak_trapdoor": 10,
           "minecraft:white_bed": 92,
           "minecraft:lantern": 2,
           "minecraft:oak_wall_sign": 1,
           "minecraft:cherry_leaves": 154,
-          "minecraft:oak_leaves": 2241,
+          "minecraft:oak_leaves": 2321,
           "minecraft:furnace": 1,
           "minecraft:yellow_carpet": 1,
           "minecraft:clay": 27,
           "minecraft:white_carpet": 1,
           "minecraft:tall_grass": 365,
           "minecraft:wildflowers": 16,
-          "minecraft:purple_bed": 21,
+          "minecraft:purple_bed": 22,
           "minecraft:lily_pad": 17,
           "minecraft:oak_stairs": 77,
-          "minecraft:mossy_cobblestone": 1,
-          "minecraft:dirt": 637,
+          "minecraft:mossy_cobblestone": 2,
+          "minecraft:dirt": 638,
           "minecraft:potted_dandelion": 2,
-          "minecraft:grass_block": 1756,
+          "minecraft:grass_block": 1757,
           "minecraft:flower_pot": 2,
           "minecraft:peony": 12,
           "minecraft:white_wool": 25,
@@ -15321,7 +15379,7 @@
           "minecraft:white_banner": 2,
           "minecraft:cornflower": 9,
           "minecraft:oak_pressure_plate": 1,
-          "minecraft:oak_log": 367
+          "minecraft:oak_log": 378
         },
         "items_crafted": {
           "minecraft:copper_leggings": 2,
@@ -15357,7 +15415,7 @@
           "minecraft:oak_planks": 1400,
           "minecraft:red_bed": 5,
           "minecraft:iron_shovel": 5,
-          "minecraft:shears": 5,
+          "minecraft:shears": 6,
           "minecraft:copper_boots": 1,
           "minecraft:stone_shovel": 11,
           "minecraft:blue_bed": 1,
@@ -15399,7 +15457,7 @@
           "minecraft:copper_pickaxe": 3
         },
         "items_used": {
-          "minecraft:stone_axe": 981,
+          "minecraft:stone_axe": 1076,
           "minecraft:oak_trapdoor": 39,
           "minecraft:oak_fence": 168,
           "minecraft:leaf_litter": 3,
@@ -15407,21 +15465,21 @@
           "minecraft:cherry_leaves": 77,
           "minecraft:white_banner": 4,
           "minecraft:cherry_planks": 38,
-          "minecraft:dark_oak_log": 9,
+          "minecraft:dark_oak_log": 25,
           "minecraft:potato": 290,
           "minecraft:oak_boat": 14,
           "minecraft:wheat_seeds": 1151,
-          "minecraft:acacia_log": 5,
+          "minecraft:acacia_log": 15,
           "minecraft:diorite_stairs": 2,
           "minecraft:milk_bucket": 1,
           "minecraft:cherry_sapling": 4,
           "minecraft:peony": 2,
-          "minecraft:purple_bed": 21,
+          "minecraft:purple_bed": 22,
           "minecraft:copper_shovel": 405,
           "minecraft:copper_pickaxe": 129,
           "minecraft:ladder": 3,
           "minecraft:glass_pane": 47,
-          "minecraft:stripped_dark_oak_log": 6,
+          "minecraft:stripped_dark_oak_log": 14,
           "minecraft:lantern": 4,
           "minecraft:coarse_dirt": 11,
           "minecraft:allium": 6,
@@ -15433,12 +15491,12 @@
           "minecraft:light_gray_carpet": 2,
           "minecraft:wooden_pickaxe": 5,
           "minecraft:pumpkin_seeds": 3,
-          "minecraft:oak_log": 10,
-          "minecraft:cobblestone": 159,
+          "minecraft:oak_log": 25,
+          "minecraft:cobblestone": 166,
           "minecraft:wooden_shovel": 1377,
           "minecraft:light_gray_bed": 2,
           "minecraft:carrot": 385,
-          "minecraft:stripped_oak_log": 4,
+          "minecraft:stripped_oak_log": 8,
           "minecraft:cherry_stairs": 5,
           "minecraft:crafting_table": 22,
           "minecraft:poppy": 6,
@@ -15447,15 +15505,15 @@
           "minecraft:oak_fence_gate": 3,
           "minecraft:dandelion": 9,
           "minecraft:white_bed": 96,
-          "minecraft:stone_pickaxe": 484,
+          "minecraft:stone_pickaxe": 489,
           "minecraft:bow": 1,
           "minecraft:oak_door": 7,
           "minecraft:baked_potato": 7,
-          "minecraft:stripped_acacia_log": 6,
+          "minecraft:stripped_acacia_log": 11,
           "minecraft:lilac": 3,
           "minecraft:apple": 22,
           "minecraft:yellow_bed": 6,
-          "minecraft:diamond_shovel": 901,
+          "minecraft:diamond_shovel": 902,
           "minecraft:stone_hoe": 399,
           "minecraft:stone_shovel": 1585,
           "minecraft:water_bucket": 15,
@@ -15463,12 +15521,12 @@
           "minecraft:item_frame": 8,
           "minecraft:melon_seeds": 4,
           "minecraft:furnace": 2,
-          "minecraft:acacia_sapling": 9,
+          "minecraft:acacia_sapling": 11,
           "minecraft:barrel": 8,
           "minecraft:torch": 153,
           "minecraft:bread": 56,
           "minecraft:blue_bed": 1,
-          "minecraft:dirt": 2806,
+          "minecraft:dirt": 2814,
           "minecraft:compass": 1,
           "minecraft:black_bed": 8,
           "minecraft:sand": 5,
@@ -15490,7 +15548,7 @@
           "minecraft:cauldron": 1,
           "minecraft:oak_planks": 108,
           "minecraft:light_blue_bed": 7,
-          "minecraft:oak_sapling": 94,
+          "minecraft:oak_sapling": 101,
           "minecraft:egg": 44,
           "minecraft:azure_bluet": 1,
           "minecraft:flower_pot": 12
@@ -15506,39 +15564,39 @@
           "minecraft:wolf": 2
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 878,
+          "minecraft:time_since_rest": 5977,
           "minecraft:talked_to_villager": 22,
           "minecraft:leave_game": 23,
           "minecraft:damage_taken": 2666,
           "minecraft:mob_kills": 75,
           "minecraft:boat_one_cm": 591158,
-          "minecraft:time_since_death": 249631,
-          "minecraft:interact_with_furnace": 49,
-          "minecraft:sleep_in_bed": 142,
+          "minecraft:time_since_death": 267631,
+          "minecraft:interact_with_furnace": 50,
+          "minecraft:sleep_in_bed": 144,
           "minecraft:happy_ghast_one_cm": 21073,
           "minecraft:swim_one_cm": 16217,
-          "minecraft:total_world_time": 1793430,
+          "minecraft:total_world_time": 1811430,
           "minecraft:pot_flower": 10,
           "minecraft:crouch_one_cm": 2952,
           "minecraft:climb_one_cm": 5997,
           "minecraft:deaths": 5,
           "minecraft:animals_bred": 73,
           "minecraft:traded_with_villager": 68,
-          "minecraft:interact_with_crafting_table": 234,
-          "minecraft:walk_one_cm": 8191916,
+          "minecraft:interact_with_crafting_table": 235,
+          "minecraft:walk_one_cm": 8263486,
           "minecraft:walk_under_water_one_cm": 10448,
           "minecraft:horse_one_cm": 121215,
           "minecraft:damage_dealt": 3905,
-          "minecraft:play_time": 1793430,
-          "minecraft:jump": 9587,
-          "minecraft:drop": 268,
+          "minecraft:play_time": 1811430,
+          "minecraft:jump": 9680,
+          "minecraft:drop": 269,
           "minecraft:bell_ring": 1,
-          "minecraft:open_barrel": 93,
-          "minecraft:sprint_one_cm": 2161603,
-          "minecraft:open_chest": 276,
+          "minecraft:open_barrel": 94,
+          "minecraft:sprint_one_cm": 2181475,
+          "minecraft:open_chest": 279,
           "minecraft:fill_cauldron": 1,
           "minecraft:fall_one_cm": 71169,
-          "minecraft:fly_one_cm": 229021,
+          "minecraft:fly_one_cm": 231693,
           "minecraft:walk_on_water_one_cm": 85108,
           "minecraft:sneak_time": 3000
         },
@@ -15546,15 +15604,15 @@
           "minecraft:tropical_fish": 2,
           "minecraft:poisonous_potato": 6,
           "minecraft:shears": 4,
-          "minecraft:cobblestone": 357,
+          "minecraft:cobblestone": 361,
           "minecraft:brick": 34,
           "minecraft:saddle": 3,
-          "minecraft:stripped_dark_oak_log": 7,
+          "minecraft:stripped_dark_oak_log": 15,
           "minecraft:sugar_cane": 29,
           "minecraft:candle": 3,
           "minecraft:redstone": 1,
           "minecraft:bone": 7,
-          "minecraft:acacia_sapling": 10,
+          "minecraft:acacia_sapling": 12,
           "minecraft:diamond_shovel": 1,
           "minecraft:glow_berries": 2,
           "minecraft:clay_ball": 100,
@@ -15578,13 +15636,13 @@
           "minecraft:light_blue_bed": 5,
           "minecraft:cherry_stairs": 1,
           "minecraft:hay_block": 11,
-          "minecraft:acacia_log": 27,
+          "minecraft:acacia_log": 35,
           "minecraft:dandelion": 56,
           "minecraft:mutton": 3,
           "minecraft:guster_pottery_sherd": 1,
           "minecraft:copper_sword": 2,
           "minecraft:beetroot": 105,
-          "minecraft:dirt": 3627,
+          "minecraft:dirt": 3629,
           "minecraft:blue_wool": 11,
           "minecraft:azure_bluet": 7,
           "minecraft:torch": 138,
@@ -15595,13 +15653,13 @@
           "minecraft:oxeye_daisy": 7,
           "minecraft:oak_stairs": 78,
           "minecraft:coal": 185,
-          "minecraft:oak_log": 403,
+          "minecraft:oak_log": 414,
           "minecraft:copper_helmet": 4,
           "minecraft:oak_fence": 42,
           "minecraft:sand": 212,
           "minecraft:furnace": 1,
           "minecraft:oak_door": 3,
-          "minecraft:wheat_seeds": 2597,
+          "minecraft:wheat_seeds": 2599,
           "minecraft:black_bed": 1,
           "minecraft:cherry_leaves": 92,
           "minecraft:egg": 144,
@@ -15628,7 +15686,7 @@
           "minecraft:yellow_terracotta": 1,
           "minecraft:yellow_carpet": 1,
           "minecraft:white_bed": 96,
-          "minecraft:stripped_oak_log": 4,
+          "minecraft:stripped_oak_log": 8,
           "minecraft:flow_pottery_sherd": 1,
           "minecraft:bucket": 1,
           "minecraft:leather": 10,
@@ -15639,7 +15697,7 @@
           "minecraft:oak_leaves": 558,
           "minecraft:oak_pressure_plate": 1,
           "minecraft:oak_trapdoor": 10,
-          "minecraft:stick": 142,
+          "minecraft:stick": 150,
           "minecraft:black_wool": 127,
           "minecraft:leather_chestplate": 2,
           "minecraft:acacia_leaves": 14,
@@ -15649,6 +15707,7 @@
           "minecraft:allium": 26,
           "minecraft:pumpkin_seeds": 3,
           "minecraft:stone_axe": 4,
+          "minecraft:mossy_cobblestone": 1,
           "minecraft:wheat": 756,
           "minecraft:leather_helmet": 3,
           "minecraft:chest": 7,
@@ -15667,7 +15726,7 @@
           "minecraft:potato": 733,
           "minecraft:compass": 3,
           "minecraft:bone_meal": 7,
-          "minecraft:dark_oak_log": 137,
+          "minecraft:dark_oak_log": 143,
           "minecraft:pink_wool": 43,
           "minecraft:ominous_bottle": 1,
           "minecraft:diorite": 24,
@@ -15681,16 +15740,16 @@
           "minecraft:decorated_pot": 2,
           "minecraft:copper_chestplate": 4,
           "minecraft:raw_copper": 69,
-          "minecraft:oak_sapling": 205,
-          "minecraft:purple_bed": 21,
+          "minecraft:oak_sapling": 211,
+          "minecraft:purple_bed": 22,
           "minecraft:beef": 10,
           "minecraft:rotten_flesh": 23,
-          "minecraft:apple": 46,
+          "minecraft:apple": 48,
           "minecraft:yellow_wool": 18,
           "minecraft:oak_slab": 42,
           "minecraft:purple_wool": 6,
           "minecraft:gray_wool": 3,
-          "minecraft:stripped_acacia_log": 7
+          "minecraft:stripped_acacia_log": 11
         },
         "items_dropped": {
           "minecraft:oak_planks": 18,
@@ -15720,7 +15779,8 @@
           "minecraft:white_bed": 1,
           "minecraft:bread": 14,
           "minecraft:stone_axe": 2,
-          "minecraft:gray_wool": 1
+          "minecraft:gray_wool": 1,
+          "minecraft:dark_oak_log": 1
         },
         "name": "Kimyknot",
         "completed": [
@@ -17589,6 +17649,10 @@
             "time": "2026-07-21 16:28:46 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/mossy_cobblestone_stairs_from_mossy_cobblestone_stonecutting",
+            "time": "2026-07-21 17:22:01 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/stripped_dark_oak_wood",
             "time": "2026-07-21 17:02:10 -0400"
           },
@@ -17597,12 +17661,28 @@
             "time": "2026-07-21 17:03:14 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/mossy_cobblestone_slab",
+            "time": "2026-07-21 17:22:01 -0400"
+          },
+          {
             "id": "minecraft:recipes/decorations/oak_shelf",
             "time": "2026-07-21 17:03:14 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/mossy_cobblestone_stairs",
+            "time": "2026-07-21 17:22:01 -0400"
+          },
+          {
             "id": "minecraft:recipes/decorations/dark_oak_shelf",
             "time": "2026-07-21 17:02:10 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/mossy_cobblestone_wall",
+            "time": "2026-07-21 17:22:01 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/mossy_cobblestone_slab_from_mossy_cobblestone_stonecutting",
+            "time": "2026-07-21 17:22:01 -0400"
           },
           {
             "id": "minecraft:recipes/decorations/dark_oak_hanging_sign",
@@ -17611,17 +17691,21 @@
           {
             "id": "minecraft:recipes/building_blocks/stripped_oak_wood",
             "time": "2026-07-21 17:03:14 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/mossy_cobblestone_wall_from_mossy_cobblestone_stonecutting",
+            "time": "2026-07-21 17:22:01 -0400"
           }
         ],
         "position": [
-          11.66327236297606,
-          71.0,
-          -150.99109553531775
+          63.11625828545836,
+          74.0,
+          -173.67861266228357
         ],
         "dimension": "minecraft:overworld",
         "xp": 12,
         "health": 20.0,
-        "food": 20,
+        "food": 13,
         "saturation": 0.0,
         "inventory": [
           {
@@ -17633,7 +17717,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:stripped_acacia_log",
+            "id": "minecraft:acacia_log",
+            "count": 1
+          },
+          {
+            "id": "minecraft:stone_pickaxe",
             "count": 1
           },
           {
@@ -17645,11 +17733,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:acacia_log",
+            "id": "minecraft:cherry_leaves",
             "count": 1
           },
           {
-            "id": "minecraft:pumpkin_pie",
+            "id": "minecraft:shears",
             "count": 1
           },
           {
@@ -17673,7 +17761,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:oak_sapling",
+            "id": "minecraft:apple",
             "count": 1
           },
           {
@@ -17693,7 +17781,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:cobblestone",
+            "id": "minecraft:mossy_cobblestone",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dirt",
             "count": 1
           },
           {
@@ -17709,6 +17801,10 @@
             "count": 1
           },
           {
+            "id": "minecraft:iron_ingot",
+            "count": 1
+          },
+          {
             "id": "minecraft:oak_fence_gate",
             "count": 1
           },
@@ -17717,27 +17813,19 @@
             "count": 1
           },
           {
-            "id": "minecraft:oak_planks",
-            "count": 1
-          },
-          {
             "id": "minecraft:tropical_fish",
             "count": 1
           },
           {
-            "id": "minecraft:dirt",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dark_oak_log",
-            "count": 1
-          },
-          {
-            "id": "minecraft:stone_pickaxe",
+            "id": "minecraft:cobblestone",
             "count": 1
           },
           {
             "id": "minecraft:oak_leaves",
+            "count": 1
+          },
+          {
+            "id": "minecraft:pumpkin_pie",
             "count": 1
           },
           {
@@ -17975,7 +18063,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 3867528,
+    "time": 3885528,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -18423,6 +18511,12 @@
         "player": "I_AM_GAY__",
         "line": "[16:58:10] [Server thread/INFO]: I_AM_GAY__ left the game",
         "timestamp": "2026-07-21T16:58:10"
+      },
+      {
+        "type": "leave",
+        "player": "PenelopeWhynot",
+        "line": "[17:27:36] [Server thread/INFO]: PenelopeWhynot left the game",
+        "timestamp": "2026-07-21T17:27:36"
       },
       {
         "type": "join",
@@ -21120,7 +21214,7 @@
       },
       "PenelopeWhynot": {
         "joins": 33,
-        "leaves": 35
+        "leaves": 36
       },
       "DivineLight": {
         "joins": 6,
@@ -21180,5 +21274,5 @@
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-21T21:15:01.429589+00:00"
+  "captured_at": "2026-07-21T21:30:01.422883+00:00"
 }
