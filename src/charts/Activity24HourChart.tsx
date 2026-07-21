@@ -79,6 +79,9 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({ allPla
         },
         y: {
           beginAtZero: true,
+          ticks: {
+            maxTicksLimit: 5
+          },
           title: {
             display: true,
             text: 'Activity Level',
@@ -98,7 +101,7 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({ allPla
   return (
     <ChartWithTable
       title="Last 24 Hours Activity Level"
-      chartHeight={300}
+      chartHeight={200}
       chartContent={
         <Line
           data={chartData}

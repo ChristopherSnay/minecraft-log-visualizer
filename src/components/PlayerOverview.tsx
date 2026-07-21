@@ -8,12 +8,9 @@ import { MobsKilledChart } from '../charts/MobsKilledChart';
 import { PlayerComparisonChart } from '../charts/PlayerComparisonChart';
 import { PlayerRadarChart } from '../charts/PlayerRadarChart';
 import type { StatsJson } from '../types';
-import { damageToHearts } from '../utils/chartUtils';
 import { PlayerAdvancements } from './PlayerAdvancements';
 import { PlaytimeStats } from './PlaytimeStats';
 import { ResponsiveGrid } from './SectionHeading';
-import { StatCard } from './StatCard';
-import { ThemedCard } from './ThemedCard';
 import { ThemedSection } from './ThemedSection';
 
 interface PlayerOverviewProps {
@@ -151,47 +148,7 @@ export const PlayerOverview: React.FC<PlayerOverviewProps> = ({ stats, selectedP
 
       {/* Combat */}
       <ThemedSection title="Combat">
-        <ResponsiveGrid columns={2}>
-          <MobsKilledChart mobs={playerStats.mobs_killed} />
-          <ThemedCard sx={{ p: 2 }}>
-            <Typography
-              variant="h6"
-              gutterBottom
-            >
-              Combat Stats
-            </Typography>
-            <Box
-              sx={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: 1
-              }}
-            >
-              {[
-                {
-                  label: 'Damage Dealt',
-                  value: `${damageToHearts(playerStats.custom_stats['minecraft:damage_dealt'])}`
-                },
-                {
-                  label: 'Damage Taken',
-                  value: `${damageToHearts(playerStats.custom_stats['minecraft:damage_taken'])}`
-                },
-                {
-                  label: 'Mob Kills',
-                  value: playerStats.custom_stats['minecraft:mob_kills']
-                },
-                { label: 'Deaths', value: playerStats.custom_stats['minecraft:deaths'] }
-              ].map((stat) => (
-                <StatCard
-                  key={stat.label}
-                  label={stat.label}
-                  value={stat.value}
-                  elevation={0}
-                />
-              ))}
-            </Box>
-          </ThemedCard>
-        </ResponsiveGrid>
+        <MobsKilledChart mobs={playerStats.mobs_killed} />
       </ThemedSection>
 
       {/* Custom Stats by Category */}

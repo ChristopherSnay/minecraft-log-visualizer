@@ -266,6 +266,9 @@ export default function HomePage() {
           crashEvents={crashEvents}
           serverSessions={serverSessions}
         />
+        <Box sx={{ mt: 3 }}>
+          <Activity24HourChart allPlayers={players} />
+        </Box>
       </ThemedSection>
 
       {/* Player Comparison */}
@@ -412,38 +415,15 @@ export default function HomePage() {
         </ResponsiveGrid>
       </ThemedSection>
 
-      {/* Combat & Survival */}
-      <ThemedSection title="Combat & Survival">
-        <Box sx={{ mb: 3 }}>
+      {/* Player Stats */}
+      <ThemedSection title="Player Stats">
+        <ResponsiveGrid columns={2}>
           <DamageRatioChart allPlayers={players} />
-        </Box>
-        <Box sx={{ mb: 3 }}>
           <DamageComparisonChart allPlayers={players} />
-        </Box>
-      </ThemedSection>
-
-      {/* Activity & Efficiency */}
-      <ThemedSection title="Activity & Efficiency">
-        <Box sx={{ mb: 3 }}>
-          <Activity24HourChart allPlayers={players} />
-        </Box>
-        <Box sx={{ mb: 3 }}>
           <TimeAndSessionsChart allPlayers={players} />
-        </Box>
-        <ResponsiveGrid>
           <ActivityMetricsChart allPlayers={players} />
-        </ResponsiveGrid>
-        <Box sx={{ mb: 3 }}>
           <EnhancedTravelChart allPlayers={players} />
-        </Box>
-        <Box sx={{ mb: 3 }}>
           <PlayerInteractionsChart allPlayers={players} />
-        </Box>
-      </ThemedSection>
-
-      {/* Resources & Crafting */}
-      <ThemedSection title="Resources & Crafting">
-        <ResponsiveGrid>
           <BlockCategoriesChart allPlayers={players} />
         </ResponsiveGrid>
       </ThemedSection>
