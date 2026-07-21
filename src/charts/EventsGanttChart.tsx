@@ -503,7 +503,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   };
 
   return (
-    <ThemedCard elevation={0}>
+    <ThemedCard elevation={1}>
       <CardHeader
         title={`Sessions & Events (Last ${TIME_WINDOW} Hours)`}
         subheader="Bars = session duration · Dots = events during session"
