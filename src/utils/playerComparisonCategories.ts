@@ -53,19 +53,22 @@ export function buildComparisonCategories(
 
   const categories: ComparisonCategory[] = [];
 
-  if (blockKeys.size > 0) categories.push({ label: 'Mining', stats: toStats(blockKeys, 'blocks') });
+  if (blockKeys.size > 0)
+    categories.push({ label: 'Blocks Mined', stats: toStats(blockKeys, 'blocks') });
   if (craftedKeys.size > 0)
-    categories.push({ label: 'Crafting', stats: toStats(craftedKeys, 'crafted') });
-  if (usingKeys.size > 0) categories.push({ label: 'Using', stats: toStats(usingKeys, 'using') });
+    categories.push({ label: 'Items Crafted', stats: toStats(craftedKeys, 'crafted') });
+  if (usingKeys.size > 0)
+    categories.push({ label: 'Items Used', stats: toStats(usingKeys, 'using') });
   if (killedKeys.size > 0)
-    categories.push({ label: 'Killing', stats: toStats(killedKeys, 'killed') });
-  if (tookKeys.size > 0) categories.push({ label: 'Taking', stats: toStats(tookKeys, 'took') });
+    categories.push({ label: 'Mob Kills', stats: toStats(killedKeys, 'killed') });
+  if (tookKeys.size > 0)
+    categories.push({ label: 'Items Picked Up', stats: toStats(tookKeys, 'took') });
   if (droppedKeys.size > 0)
-    categories.push({ label: 'Dropping', stats: toStats(droppedKeys, 'dropped') });
+    categories.push({ label: 'Items Dropped', stats: toStats(droppedKeys, 'dropped') });
   if (advancingKeys.size > 0)
-    categories.push({ label: 'Advancing', stats: toStats(advancingKeys, 'advancing') });
+    categories.push({ label: 'Advancements', stats: toStats(advancingKeys, 'advancing') });
   if (customKeys.size > 0)
-    categories.push({ label: 'Custom Stats', stats: toStats(customKeys, 'custom') });
+    categories.push({ label: 'Other', stats: toStats(customKeys, 'custom') });
 
   return categories;
 }

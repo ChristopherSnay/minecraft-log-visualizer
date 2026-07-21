@@ -294,11 +294,9 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
         {
           label: 'Sessions',
           data: barData,
-          backgroundColor: barColors.map((c) => c + '80'),
-          borderColor: barColors,
-          borderWidth: 1,
+          backgroundColor: barColors,
           borderSkipped: false,
-          barPercentage: 0.7,
+          barPercentage: 0.8,
           categoryPercentage: 0.9
         }
       ]
@@ -510,7 +508,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
         subheader="Bars = session duration · Dots = events during session"
       />
       <CardContent>
-        <Box sx={{ height: 400, position: 'relative' }}>
+        <Box sx={{ height: 350, position: 'relative' }}>
           <div
             ref={tooltipRef}
             style={{

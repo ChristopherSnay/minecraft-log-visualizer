@@ -1,5 +1,5 @@
 import { Box, Pagination, Tab, Tabs } from '@mui/material';
-import React, { useMemo, useState, type ReactElement } from 'react';
+import React, { type ReactElement, useMemo, useState } from 'react';
 
 import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
