@@ -5,10 +5,10 @@ import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ChartWithTable } from '../components/ChartWithTable';
 import { getDatasetColors } from '../config/chartColors';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
 import { getItemName } from '../utils/itemNames';
-import { ChartWithTable } from '../components/ChartWithTable';
 
 interface ItemDataChartProps {
   data: Record<string, number>;

@@ -4,10 +4,10 @@ import React, { useMemo } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ChartWithTable } from '../components/ChartWithTable';
 import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
 import { getPieChartOptions } from '../utils/chartOptions';
-import { ChartWithTable } from '../components/ChartWithTable';
 
 interface BlockCategoriesChartProps {
   allPlayers: Record<string, PlayerStats>;

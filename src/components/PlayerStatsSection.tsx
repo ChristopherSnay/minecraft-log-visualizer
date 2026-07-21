@@ -7,9 +7,9 @@ import { DamageRatioChart } from '../charts/DamageRatioChart';
 import { EnhancedTravelChart } from '../charts/EnhancedTravelChart';
 import { PlayerInteractionsChart } from '../charts/PlayerInteractionsChart';
 import { TimeAndSessionsChart } from '../charts/TimeAndSessionsChart';
+import type { PlayerStats } from '../types';
 import { ResponsiveGrid } from './SectionHeading';
 import { ThemedSection } from './ThemedSection';
-import type { PlayerStats } from '../types';
 
 interface PlayerStatsSectionProps {
   players: Record<string, PlayerStats>;

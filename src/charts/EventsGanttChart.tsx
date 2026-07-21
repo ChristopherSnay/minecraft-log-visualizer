@@ -262,11 +262,12 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
 
     const hasVillagerDeaths = events.some((e) => e.type === 'villager_death');
     const hasServerDowntime = serverDowntimeData.length > 0;
+    const hasCrashEvents = events.some((e) => e.type === 'crash');
     const playerNames = [...new Set([...sessions.map((s) => s.player), ...events.map((e) => e.y)])]
       .filter((n) => n !== 'Villager' && n !== 'Server')
       .sort();
     if (hasVillagerDeaths) playerNames.push('Villager');
-    if (hasServerDowntime) playerNames.push('Server');
+    if (hasServerDowntime || hasCrashEvents) playerNames.push('Server');
 
     const playerColorMap: Record<string, string> = {};
     playerNames.forEach((name, i) => {

@@ -3,8 +3,8 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 import { getPaletteColor } from '../config/chartColors';
-import { getPlayerDisplayName } from '../utils/chartUtils';
 import type { PlayerStats } from '../types';
+import { getPlayerDisplayName } from '../utils/chartUtils';
 
 interface PlayerChipsProps {
   players: Record<string, PlayerStats>;

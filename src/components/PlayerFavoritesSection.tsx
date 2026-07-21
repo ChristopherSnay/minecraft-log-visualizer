@@ -1,9 +1,9 @@
 import React from 'react';
 
+import type { PlayerStats } from '../types';
 import { PlayerFavorites } from './PlayerFavorites';
 import { ResponsiveGrid } from './SectionHeading';
 import { ThemedSection } from './ThemedSection';
-import type { PlayerStats } from '../types';
 
 interface PlayerFavoritesSectionProps {
   players: Record<string, PlayerStats>;

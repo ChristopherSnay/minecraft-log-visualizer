@@ -5,12 +5,12 @@ import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ChartWithTable } from '../components/ChartWithTable';
 import { PlayerLink } from '../components/PlayerLink';
 import { CHART_COLORS } from '../config/chartColors';
 import type { PlayerStats } from '../types';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
 import { getPlayerDisplayName } from '../utils/chartUtils';
-import { ChartWithTable } from '../components/ChartWithTable';
 
 interface DamageRatioChartProps {
   allPlayers: Record<string, PlayerStats>;

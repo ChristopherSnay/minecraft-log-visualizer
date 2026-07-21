@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react';
 
-import { SimplePlayerComparison } from './SimplePlayerComparison';
-import { ResponsiveGrid } from './SectionHeading';
-import { ThemedSection } from './ThemedSection';
 import { getPaletteColor } from '../config/chartColors';
+import type { PlayerStats } from '../types';
 import { getAdvancementDisplayName } from '../utils/advancementNames';
-import { getPlayerDisplayName, mergeRecordsTopN } from '../utils/chartUtils';
+import { mergeRecordsTopN } from '../utils/chartUtils';
 import { getItemName } from '../utils/itemNames';
 import { getStatLabel } from '../utils/statCategories';
-import type { PlayerStats } from '../types';
+import { ResponsiveGrid } from './SectionHeading';
+import { SimplePlayerComparison } from './SimplePlayerComparison';
+import { ThemedSection } from './ThemedSection';
 
 interface ServerTotalsSectionProps {
   players: Record<string, PlayerStats>;

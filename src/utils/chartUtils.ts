@@ -1,5 +1,5 @@
-import type { PlayerStats } from '../types';
 import { getPaletteColor } from '../config/chartColors';
+import type { PlayerStats } from '../types';
 
 export function getPlayerDisplayName(player: PlayerStats, playerId: string): string {
   return player.name || playerId.substring(0, 8);

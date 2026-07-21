@@ -5,9 +5,9 @@ import React, { useMemo } from 'react';
 import { Radar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ChartWithTable } from '../components/ChartWithTable';
 import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
-import { ChartWithTable } from '../components/ChartWithTable';
 
 interface PlayerRadarChartProps {
   player: PlayerStats;

@@ -17,11 +17,11 @@ import React, { useMemo, useState } from 'react';
 import { Radar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
+import { ChartWithTable } from '../components/ChartWithTable';
 import { ResponsiveGrid } from '../components/SectionHeading';
 import { getDatasetColors } from '../config/chartColors';
 import type { PlayerStats } from '../types';
 import { getPresentCategories, getStatLabel } from '../utils/statCategories';
-import { ChartWithTable } from '../components/ChartWithTable';
 
 interface CustomStatsRadarChartsProps {
   player: PlayerStats;
