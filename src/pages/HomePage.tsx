@@ -18,6 +18,7 @@ import { StatCards } from '../components/StatCards';
 import { ThemedSection } from '../components/ThemedSection';
 import { getPaletteColor } from '../config/chartColors';
 import { useStats } from '../context/StatsContext';
+import { getAdvancementDisplayName } from '../utils/advancementNames';
 import {
   cmToKm,
   damageToHearts,
@@ -27,9 +28,8 @@ import {
   ticksToHours
 } from '../utils/chartUtils';
 import { getItemName } from '../utils/itemNames';
-import { getAdvancementDisplayName } from '../utils/advancementNames';
-import { calculateTotals } from '../utils/statsHelpers';
 import { getStatLabel } from '../utils/statCategories';
+import { calculateTotals } from '../utils/statsHelpers';
 
 export default function HomePage() {
   const { stats, statsLoading } = useStats();
