@@ -112,13 +112,15 @@ export default function HomePage() {
     [playerEntries]
   );
 
-  const { deathEvents, joinEvents, leaveEvents } = useMemo(
+  const { deathEvents, joinEvents, leaveEvents, crashEvents, serverSessions } = useMemo(
     () => ({
       deathEvents: stats?.logs?.events?.filter((e) => e.type === 'death'),
       joinEvents: stats?.logs?.events?.filter((e) => e.type === 'join'),
-      leaveEvents: stats?.logs?.events?.filter((e) => e.type === 'leave')
+      leaveEvents: stats?.logs?.events?.filter((e) => e.type === 'leave'),
+      crashEvents: stats?.logs?.crashes,
+      serverSessions: stats?.logs?.server_sessions
     }),
-    [stats?.logs?.events]
+    [stats?.logs]
   );
 
   if (statsLoading) {
@@ -194,6 +196,8 @@ export default function HomePage() {
           deathEvents={deathEvents}
           joinEvents={joinEvents}
           leaveEvents={leaveEvents}
+          crashEvents={crashEvents}
+          serverSessions={serverSessions}
         />
       </Box>
 

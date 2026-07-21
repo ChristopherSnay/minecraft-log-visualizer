@@ -6,7 +6,14 @@ import { Bar } from 'react-chartjs-2';
 import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
-import type { LogDeathEvent, LogJoinEvent, LogLeaveEvent, PlayerStats } from '../types';
+import type {
+  LogCrashEvent,
+  LogDeathEvent,
+  LogJoinEvent,
+  LogLeaveEvent,
+  PlayerStats,
+  ServerSession
+} from '../types';
 import { getAdvancementDisplayName } from '../utils/advancementNames';
 import { getBaseChartOptions } from '../utils/chartOptions';
 import { getPlayerDisplayName } from '../utils/chartUtils';
@@ -22,7 +29,7 @@ interface GanttSession {
 interface GanttEvent {
   x: number;
   y: string;
-  type: 'death' | 'advancement' | 'villager_death';
+  type: 'death' | 'advancement' | 'villager_death' | 'crash';
   detail: string;
   time?: string;
 }
@@ -32,6 +39,8 @@ interface EventsGanttChartProps {
   deathEvents?: LogDeathEvent[];
   joinEvents?: LogJoinEvent[];
   leaveEvents?: LogLeaveEvent[];
+  crashEvents?: LogCrashEvent[];
+  serverSessions?: ServerSession[];
 }
 
 const TIME_WINDOW = 12;
@@ -41,13 +50,15 @@ const HIT_RADIUS = 8;
 const EVENT_COLORS: Record<GanttEvent['type'], string> = {
   death: getPaletteColor(0),
   advancement: getPaletteColor(2),
-  villager_death: getPaletteColor(7)
+  villager_death: getPaletteColor(7),
+  crash: '#ff4444'
 };
 
 const EVENT_TYPE_LABEL: Record<GanttEvent['type'], string> = {
   death: 'Player Death',
   advancement: 'Advancement',
-  villager_death: 'Villager Death'
+  villager_death: 'Villager Death',
+  crash: 'Server Crash'
 };
 
 function formatTime(time?: string): string {
@@ -63,7 +74,9 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   allPlayers,
   deathEvents,
   joinEvents,
-  leaveEvents
+  leaveEvents,
+  crashEvents,
+  serverSessions
 }) => {
   const theme = useTheme();
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -195,28 +208,85 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
       });
     }
 
-    const hasEvents = sessions.length > 0 || events.length > 0;
+    // Add crash events as dots on the Server row
+    if (crashEvents) {
+      crashEvents.forEach((event) => {
+        try {
+          const crashTime = new Date(event.timestamp);
+          const hoursAgo = (now.getTime() - crashTime.getTime()) / (1000 * 60 * 60);
+          if (hoursAgo <= TIME_WINDOW && hoursAgo >= 0) {
+            events.push({
+              x: hoursAgo,
+              y: 'Server',
+              type: 'crash',
+              detail: 'Server crashed',
+              time: event.timestamp
+            });
+          }
+        } catch (_e) {
+          /* skip */
+        }
+      });
+    }
+
+    // Build server downtime bars
+    const serverDowntimeData: Array<{
+      x: [number, number];
+      y: string;
+      startTime?: string;
+      endTime?: string;
+    }> = [];
+    if (serverSessions) {
+      serverSessions.forEach((ss) => {
+        try {
+          const start = new Date(ss.startTime);
+          const end = new Date(ss.endTime);
+          const startH = (now.getTime() - start.getTime()) / (1000 * 60 * 60);
+          const endH = (now.getTime() - end.getTime()) / (1000 * 60 * 60);
+          if (startH <= TIME_WINDOW && startH >= 0) {
+            serverDowntimeData.push({
+              x: [Math.max(endH, 0), startH],
+              y: 'Server',
+              startTime: ss.startTime,
+              endTime: ss.endTime
+            });
+          }
+        } catch (_e) {
+          /* skip */
+        }
+      });
+    }
+
+    const hasEvents = sessions.length > 0 || events.length > 0 || serverDowntimeData.length > 0;
     if (!hasEvents) return { chartData: null, options: null, ganttEvents: [], hasEvents: false };
 
     const hasVillagerDeaths = events.some((e) => e.type === 'villager_death');
+    const hasServerDowntime = serverDowntimeData.length > 0;
     const playerNames = [...new Set([...sessions.map((s) => s.player), ...events.map((e) => e.y)])]
-      .filter((n) => n !== 'Villager')
+      .filter((n) => n !== 'Villager' && n !== 'Server')
       .sort();
     if (hasVillagerDeaths) playerNames.push('Villager');
+    if (hasServerDowntime) playerNames.push('Server');
 
     const playerColorMap: Record<string, string> = {};
     playerNames.forEach((name, i) => {
       playerColorMap[name] = getPaletteColor(i);
     });
 
-    const barData = sessions.map((s) => ({
-      x: [s.logoutHoursAgo, s.loginHoursAgo] as [number, number],
-      y: s.player,
-      loginTime: s.loginTime,
-      logoutTime: s.logoutTime
-    }));
+    const barData = [
+      ...sessions.map((s) => ({
+        x: [s.logoutHoursAgo, s.loginHoursAgo] as [number, number],
+        y: s.player,
+        loginTime: s.loginTime,
+        logoutTime: s.logoutTime
+      })),
+      ...serverDowntimeData
+    ];
 
-    const barColors = sessions.map((s) => playerColorMap[s.player]);
+    const barColors = [
+      ...sessions.map((s) => playerColorMap[s.player]),
+      ...serverDowntimeData.map(() => playerColorMap['Server'])
+    ];
 
     const data = {
       datasets: [
@@ -265,8 +335,12 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
           filter: (item) => item.datasetIndex === 0,
           callbacks: {
             title: (items) => {
-              const raw = items[0]?.raw as { x: [number, number]; y: string };
-              return raw?.y ?? '';
+              const raw = items[0]?.raw as {
+                x: [number, number];
+                y: string;
+                startTime?: string;
+              };
+              return raw?.startTime ? `Server Downtime` : (raw?.y ?? '');
             },
             label: (item) => {
               const raw = item.raw as {
@@ -274,7 +348,20 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
                 y: string;
                 loginTime?: string;
                 logoutTime?: string;
+                startTime?: string;
+                endTime?: string;
               };
+              if (raw?.startTime) {
+                // Server downtime
+                const [start, end] = raw.x;
+                const duration = Math.round((start - end) * 10) / 10;
+                const h = Math.floor(duration);
+                const m = Math.round((duration - h) * 60);
+                const durationStr = h > 0 ? (m > 0 ? `${h}h ${m}m` : `${h}h`) : `${m}m`;
+                const startStr = raw.startTime ? formatTime(raw.startTime) : '';
+                const endStr = raw.endTime ? formatTime(raw.endTime) : '';
+                return `${startStr} → ${endStr} (${durationStr})`;
+              }
               if (raw?.x) {
                 const [start, end] = raw.x;
                 const duration = Math.round((end - start) * 10) / 10;
@@ -299,7 +386,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
     }) as ChartOptions;
 
     return { chartData: data, options: opts, ganttEvents: events, hasEvents };
-  }, [allPlayers, deathEvents, joinEvents, leaveEvents, theme]);
+  }, [allPlayers, deathEvents, joinEvents, leaveEvents, crashEvents, serverSessions, theme]);
 
   const findNearestEvent = useCallback(
     (
@@ -422,7 +509,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
         subheader="Bars = session duration · Dots = events during session"
       />
       <CardContent>
-        <Box sx={{ height: 300, position: 'relative' }}>
+        <Box sx={{ height: 400, position: 'relative' }}>
           <div
             ref={tooltipRef}
             style={{

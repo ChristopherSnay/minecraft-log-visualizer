@@ -31,7 +31,9 @@ export interface LogLeaveEvent {
   type: 'leave';
   player: string;
   timestamp?: string;
-  line: string;
+  line?: string;
+  synthetic?: boolean;
+  reason?: string;
 }
 
 export interface LogDeathEvent {
@@ -40,6 +42,16 @@ export interface LogDeathEvent {
   message: string;
   timestamp: string;
   line: string;
+}
+
+export interface LogCrashEvent {
+  type: 'crash';
+  timestamp: string;
+}
+
+export interface ServerSession {
+  startTime: string;
+  endTime: string;
 }
 
 export type LogEvent = LogJoinEvent | LogLeaveEvent | LogDeathEvent;
@@ -51,5 +63,7 @@ export interface StatsJson {
   };
   logs?: {
     events: LogEvent[];
+    crashes?: LogCrashEvent[];
+    server_sessions?: ServerSession[];
   };
 }
