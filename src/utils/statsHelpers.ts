@@ -1,6 +1,6 @@
 import type { PlayerStats } from '../types';
 
-export interface DerivedPlayerStats {
+interface DerivedPlayerStats {
   name: string;
   playtimeSeconds: number;
   playtimeHours: number;
@@ -12,7 +12,7 @@ export interface DerivedPlayerStats {
   sessions: number;
 }
 
-export function derivePlayerStats(player: PlayerStats): DerivedPlayerStats {
+function derivePlayerStats(player: PlayerStats): DerivedPlayerStats {
   // Playtime in ticks (20 ticks = 1 second)
   const playtimeTicks = player.custom_stats['minecraft:total_world_time'] || 0;
   const playtimeSeconds = Math.floor(playtimeTicks / 20);

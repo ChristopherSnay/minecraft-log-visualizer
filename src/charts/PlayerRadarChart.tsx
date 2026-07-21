@@ -1,28 +1,13 @@
-import BarChartIcon from '@mui/icons-material/BarChart';
-import TableChartIcon from '@mui/icons-material/TableChart';
-import {
-  Box,
-  CardContent,
-  CardHeader,
-  IconButton,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Tooltip,
-  Typography
-} from '@mui/material';
+import { Box, Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import type { ChartOptions } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Radar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
-import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
+import { ChartWithTable } from '../components/ChartWithTable';
 
 interface PlayerRadarChartProps {
   player: PlayerStats;
@@ -31,7 +16,6 @@ interface PlayerRadarChartProps {
 
 export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allPlayers }) => {
   const theme = useTheme();
-  const { viewMode, toggleViewMode } = useChartViewMode();
 
   const { chartData, options, tableData } = useMemo(() => {
     const dims = (p: PlayerStats) => {
@@ -75,9 +59,6 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allP
           .map((sum) => sum / others.length)
       : raw.map(() => 0);
 
-    // Ratio: player / server average. >1 = above avg, <1 = below.
-    // When server avg is 0, use the raw player value as the ratio so active
-    // players still show a meaningful polygon.
     const ratios = raw.map((v, i) => (serverRaw[i] > 0 ? v / serverRaw[i] : v > 0 ? 1 : 0));
 
     const maxRatio = Math.max(...ratios, 1) * 1.15;
@@ -205,84 +186,64 @@ export const PlayerRadarChart: React.FC<PlayerRadarChartProps> = ({ player, allP
   }
 
   return (
-    <ThemedCard>
-      <CardHeader
-        title="Playstyle Profile"
-        subheader="Ratio to server average (1.0x is average)"
-        action={
-          <Tooltip title={viewMode === 'chart' ? 'Show table' : 'Show chart'}>
-            <IconButton
-              onClick={toggleViewMode}
-              size="small"
-              sx={{ opacity: 0.5 }}
-              aria-label="Toggle chart/table view"
-            >
-              {viewMode === 'chart' ? (
-                <TableChartIcon fontSize="small" />
-              ) : (
-                <BarChartIcon fontSize="small" />
-              )}
-            </IconButton>
-          </Tooltip>
-        }
-      />
-      <CardContent>
-        {viewMode === 'chart' ? (
-          <Box sx={{ height: 350 }}>
-            <Radar
-              data={chartData}
-              options={options}
-            />
-          </Box>
-        ) : (
-          <Box sx={{ overflowX: 'auto' }}>
-            <Table size="small">
-              <TableHead>
-                <TableRow>
-                  <TableCell>Dimension</TableCell>
-                  <TableCell align="right">{player.name}</TableCell>
-                  <TableCell align="right">Server Avg</TableCell>
-                  <TableCell align="right">Ratio</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {tableData.map((row) => (
-                  <TableRow key={row.label}>
-                    <TableCell>
-                      <Typography variant="body2">{row.label}</Typography>
-                      <Typography
-                        variant="caption"
-                        color="text.secondary"
-                      >
-                        {row.description}
-                      </Typography>
-                    </TableCell>
-                    <TableCell align="right">
-                      {row.raw.toFixed(1)} {row.unit}
-                    </TableCell>
-                    <TableCell align="right">
-                      {row.serverRaw.toFixed(1)} {row.unit}
-                    </TableCell>
-                    <TableCell
-                      align="right"
-                      sx={{
-                        color:
-                          row.ratio > 1
-                            ? 'success.main'
-                            : row.ratio < 1
-                              ? 'error.main'
-                              : 'text.secondary'
-                      }}
+    <ChartWithTable
+      title="Playstyle Profile"
+      subheader="Ratio to server average (1.0x is average)"
+      chartHeight={350}
+      chartContent={
+        <Radar
+          data={chartData}
+          options={options}
+        />
+      }
+      tableContent={
+        <Box sx={{ overflowX: 'auto' }}>
+          <Table size="small">
+            <TableHead>
+              <TableRow>
+                <TableCell>Dimension</TableCell>
+                <TableCell align="right">{player.name}</TableCell>
+                <TableCell align="right">Server Avg</TableCell>
+                <TableCell align="right">Ratio</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {tableData.map((row) => (
+                <TableRow key={row.label}>
+                  <TableCell>
+                    <Typography variant="body2">{row.label}</Typography>
+                    <Typography
+                      variant="caption"
+                      color="text.secondary"
                     >
-                      {row.ratio === 0 ? 'N/A' : `${row.ratio.toFixed(2)}x`}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </Box>
-        )}
-      </CardContent>
-    </ThemedCard>
+                      {row.description}
+                    </Typography>
+                  </TableCell>
+                  <TableCell align="right">
+                    {row.raw.toFixed(1)} {row.unit}
+                  </TableCell>
+                  <TableCell align="right">
+                    {row.serverRaw.toFixed(1)} {row.unit}
+                  </TableCell>
+                  <TableCell
+                    align="right"
+                    sx={{
+                      color:
+                        row.ratio > 1
+                          ? 'success.main'
+                          : row.ratio < 1
+                            ? 'error.main'
+                            : 'text.secondary'
+                    }}
+                  >
+                    {row.ratio === 0 ? 'N/A' : `${row.ratio.toFixed(2)}x`}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </Box>
+      }
+    />
   );
 };

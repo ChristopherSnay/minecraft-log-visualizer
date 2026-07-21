@@ -1,31 +1,16 @@
-import BarChartIcon from '@mui/icons-material/BarChart';
-import TableChartIcon from '@mui/icons-material/TableChart';
-import {
-  Box,
-  CardContent,
-  CardHeader,
-  IconButton,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Tooltip,
-  Typography,
-  useTheme
-} from '@mui/material';
+import { Box, Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import type { TooltipItem } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
 import { PlayerLink } from '../components/PlayerLink';
-import { ThemedCard } from '../components/ThemedCard';
 import { CHART_COLORS } from '../config/chartColors';
-import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
 import { getPlayerDisplayName } from '../utils/chartUtils';
+import { ChartWithTable } from '../components/ChartWithTable';
 
 interface DamageRatioChartProps {
   allPlayers: Record<string, PlayerStats>;
@@ -39,7 +24,6 @@ interface CombatPlayer {
 
 export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
-  const { viewMode, toggleViewMode } = useChartViewMode();
 
   const { chartData, options, playerData } = useMemo(() => {
     const playerData = Object.entries(allPlayers)
@@ -49,7 +33,6 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
         const taken = customStats['minecraft:damage_taken'] || 0;
         const ratio = dealt > 0 ? dealt / (taken || 1) : 0;
 
-        // Skip players with no combat
         if (dealt === 0 && taken === 0) {
           return null;
         }
@@ -120,96 +103,76 @@ export const DamageRatioChart: React.FC<DamageRatioChartProps> = ({ allPlayers }
   };
 
   return (
-    <ThemedCard>
-      <CardHeader
-        title="Damage Ratio (Dealt : Taken)"
-        subheader="How effectively each player engages in combat"
-        action={
-          <Tooltip title={viewMode === 'chart' ? 'Table view' : 'Chart view'}>
-            <IconButton
-              size="small"
-              sx={{ opacity: 0.5 }}
-              onClick={toggleViewMode}
-              aria-label="Toggle chart/table view"
-            >
-              {viewMode === 'chart' ? (
-                <TableChartIcon fontSize="small" />
-              ) : (
-                <BarChartIcon fontSize="small" />
-              )}
-            </IconButton>
-          </Tooltip>
-        }
-      />
-      <CardContent sx={{ pt: 0 }}>
-        {viewMode === 'chart' ? (
-          <Box sx={{ height: 400 }}>
-            <Bar
-              data={chartData}
-              options={options}
-            />
-          </Box>
-        ) : (
-          <Table size="small">
-            <TableHead>
-              <TableRow>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Player</TableCell>
-                <TableCell
-                  sx={{ fontWeight: 600, color: 'text.secondary' }}
-                  align="right"
-                >
-                  Ratio
+    <ChartWithTable
+      title="Damage Ratio (Dealt : Taken)"
+      subheader="How effectively each player engages in combat"
+      chartHeight={400}
+      chartContent={
+        <Bar
+          data={chartData}
+          options={options}
+        />
+      }
+      tableContent={
+        <Table size="small">
+          <TableHead>
+            <TableRow>
+              <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Player</TableCell>
+              <TableCell
+                sx={{ fontWeight: 600, color: 'text.secondary' }}
+                align="right"
+              >
+                Ratio
+              </TableCell>
+              <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Rating</TableCell>
+              <TableCell
+                sx={{ fontWeight: 600, color: 'text.secondary', width: '30%' }}
+              ></TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {playerData.map((row) => (
+              <TableRow
+                key={row.playerId}
+                hover
+              >
+                <TableCell>
+                  <Typography variant="body2">
+                    <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>
+                  </Typography>
                 </TableCell>
-                <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Rating</TableCell>
-                <TableCell
-                  sx={{ fontWeight: 600, color: 'text.secondary', width: '30%' }}
-                ></TableCell>
+                <TableCell align="right">
+                  <Typography
+                    variant="body2"
+                    sx={{ fontFamily: 'monospace' }}
+                  >
+                    {row.ratio}:1
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: CHART_COLORS.combatEffectiveness(row.ratio) }}
+                  >
+                    {ratioLabel(row.ratio)}
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  <Box
+                    sx={{
+                      height: 8,
+                      borderRadius: 1,
+                      backgroundColor: CHART_COLORS.combatEffectiveness(row.ratio),
+                      width: `${(row.ratio / maxValue) * 100}%`,
+                      opacity: 0.8
+                    }}
+                  />
+                </TableCell>
               </TableRow>
-            </TableHead>
-            <TableBody>
-              {playerData.map((row) => (
-                <TableRow
-                  key={row.playerId}
-                  hover
-                >
-                  <TableCell>
-                    <Typography variant="body2">
-                      <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>
-                    </Typography>
-                  </TableCell>
-                  <TableCell align="right">
-                    <Typography
-                      variant="body2"
-                      sx={{ fontFamily: 'monospace' }}
-                    >
-                      {row.ratio}:1
-                    </Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography
-                      variant="body2"
-                      sx={{ color: CHART_COLORS.combatEffectiveness(row.ratio) }}
-                    >
-                      {ratioLabel(row.ratio)}
-                    </Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Box
-                      sx={{
-                        height: 8,
-                        borderRadius: 1,
-                        backgroundColor: CHART_COLORS.combatEffectiveness(row.ratio),
-                        width: `${(row.ratio / maxValue) * 100}%`,
-                        opacity: 0.8
-                      }}
-                    />
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        )}
-      </CardContent>
-    </ThemedCard>
+            ))}
+          </TableBody>
+        </Table>
+      }
+    />
   );
 };

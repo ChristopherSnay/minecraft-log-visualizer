@@ -9,7 +9,6 @@ import { DamageComparisonChart } from '../charts/DamageComparisonChart';
 import { DamageRatioChart } from '../charts/DamageRatioChart';
 import { EnhancedTravelChart } from '../charts/EnhancedTravelChart';
 import { EventsGanttChart } from '../charts/EventsGanttChart';
-import { ItemsPickedUpChart } from '../charts/ItemsPickedUpChart';
 import { PlayerInteractionsChart } from '../charts/PlayerInteractionsChart';
 import { TimeAndSessionsChart } from '../charts/TimeAndSessionsChart';
 import { PlayerFavorites } from '../components/PlayerFavorites';
@@ -446,10 +445,6 @@ export default function HomePage() {
       <ThemedSection title="Resources & Crafting">
         <ResponsiveGrid>
           <BlockCategoriesChart allPlayers={players} />
-          <ItemsPickedUpChart
-            allPlayers={players}
-            limit={10}
-          />
         </ResponsiveGrid>
       </ThemedSection>
 

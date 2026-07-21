@@ -1,9 +1,10 @@
-import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import { Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import React, { useMemo } from 'react';
 import { Line } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
+import { ChartWithTable } from '../components/ChartWithTable';
 import { getDatasetColors } from '../config/chartColors';
 import type { PlayerStats } from '../types';
 import { getLineChartOptions } from '../utils/chartOptions';
@@ -21,15 +22,13 @@ interface ActivityDataPoint {
 export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
 
-  const { chartData, options } = useMemo(() => {
-    // Calculate total playtime
+  const { chartData, options, activityData } = useMemo(() => {
     const totalPlayTime = Object.values(allPlayers).reduce((sum, player: PlayerStats) => {
       return sum + (player.custom_stats?.['minecraft:play_time'] || 0);
     }, 0);
 
     const playerCount = Object.keys(allPlayers).length;
 
-    // Create 24-hour activity based on playtime distribution
     const activityData: ActivityDataPoint[] = [];
     const now = new Date();
 
@@ -41,20 +40,14 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({ allPla
         hour12: true
       });
 
-      // Simulate activity with natural peaks
       const hourOfDay = hour.getHours();
       let baseLine: number;
 
-      // Morning: low activity
       if (hourOfDay >= 0 && hourOfDay < 6) baseLine = 0.3;
-      // Morning peak: medium activity
       else if (hourOfDay >= 6 && hourOfDay < 12) baseLine = 0.6;
-      // Afternoon: high activity
       else if (hourOfDay >= 12 && hourOfDay < 18) baseLine = 0.9;
-      // Evening: medium-high activity
       else baseLine = 0.7;
 
-      // Add some variation using seeded random
       const activityLevel = Math.round(
         baseLine * (totalPlayTime / 24 / playerCount) * (0.8 + seededRandom(i) * 0.4)
       );
@@ -79,17 +72,10 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({ allPla
     };
 
     const opts = getLineChartOptions(theme, {
-      plugins: {
-        legend: {
-          display: false
-        }
-      },
+      plugins: { legend: { display: false } },
       scales: {
         x: {
-          ticks: {
-            maxRotation: 0,
-            autoSkipPadding: 20
-          }
+          ticks: { maxRotation: 0, autoSkipPadding: 20 }
         },
         y: {
           beginAtZero: true,
@@ -102,7 +88,7 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({ allPla
       }
     });
 
-    return { chartData: data, options: opts };
+    return { chartData: data, options: opts, activityData };
   }, [allPlayers, theme]);
 
   if (Object.keys(allPlayers).length === 0) {
@@ -110,16 +96,50 @@ export const Activity24HourChart: React.FC<Activity24HourChartProps> = ({ allPla
   }
 
   return (
-    <ThemedCard>
-      <CardHeader title="Last 24 Hours Activity Level" />
-      <CardContent>
-        <Box sx={{ height: 300 }}>
-          <Line
-            data={chartData}
-            options={options}
-          />
-        </Box>
-      </CardContent>
-    </ThemedCard>
+    <ChartWithTable
+      title="Last 24 Hours Activity Level"
+      chartHeight={300}
+      chartContent={
+        <Line
+          data={chartData}
+          options={options}
+        />
+      }
+      tableContent={
+        <Table size="small">
+          <TableHead>
+            <TableRow>
+              <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Hour</TableCell>
+              <TableCell
+                sx={{ fontWeight: 600, color: 'text.secondary' }}
+                align="right"
+              >
+                Activity Level
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {activityData.map((row) => (
+              <TableRow
+                key={row.hour}
+                hover
+              >
+                <TableCell>
+                  <Typography variant="body2">{row.hour}</Typography>
+                </TableCell>
+                <TableCell align="right">
+                  <Typography
+                    variant="body2"
+                    sx={{ fontFamily: 'monospace' }}
+                  >
+                    {row.activity.toLocaleString()}
+                  </Typography>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      }
+    />
   );
 };

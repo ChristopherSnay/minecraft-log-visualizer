@@ -1,9 +1,10 @@
-import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import { Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import React, { useMemo } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
+import { ChartWithTable } from '../components/ChartWithTable';
 import { getPaletteColor } from '../config/chartColors';
 import { getPieChartOptions } from '../utils/chartOptions';
 import { getItemName } from '../utils/itemNames';
@@ -15,9 +16,9 @@ interface MobsKilledChartProps {
 export const MobsKilledChart: React.FC<MobsKilledChartProps> = ({ mobs }) => {
   const theme = useTheme();
 
-  const { chartData, options } = useMemo(() => {
+  const { chartData, options, mobData } = useMemo(() => {
     if (!mobs || Object.keys(mobs).length === 0) {
-      return { chartData: null, options: null };
+      return { chartData: null, options: null, mobData: [] };
     }
 
     const mobData = Object.entries(mobs)
@@ -29,7 +30,7 @@ export const MobsKilledChart: React.FC<MobsKilledChartProps> = ({ mobs }) => {
       }));
 
     if (mobData.length === 0) {
-      return { chartData: null, options: null };
+      return { chartData: null, options: null, mobData: [] };
     }
 
     const data = {
@@ -46,7 +47,7 @@ export const MobsKilledChart: React.FC<MobsKilledChartProps> = ({ mobs }) => {
 
     const opts = getPieChartOptions(theme, {});
 
-    return { chartData: data, options: opts };
+    return { chartData: data, options: opts, mobData };
   }, [mobs, theme]);
 
   if (!chartData) {
@@ -54,16 +55,50 @@ export const MobsKilledChart: React.FC<MobsKilledChartProps> = ({ mobs }) => {
   }
 
   return (
-    <ThemedCard>
-      <CardHeader title="Mobs Killed" />
-      <CardContent>
-        <Box sx={{ height: 300 }}>
-          <Doughnut
-            data={chartData}
-            options={options}
-          />
-        </Box>
-      </CardContent>
-    </ThemedCard>
+    <ChartWithTable
+      title="Mobs Killed"
+      chartHeight={300}
+      chartContent={
+        <Doughnut
+          data={chartData}
+          options={options}
+        />
+      }
+      tableContent={
+        <Table size="small">
+          <TableHead>
+            <TableRow>
+              <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Mob</TableCell>
+              <TableCell
+                sx={{ fontWeight: 600, color: 'text.secondary' }}
+                align="right"
+              >
+                Kills
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {mobData.map((row) => (
+              <TableRow
+                key={row.name}
+                hover
+              >
+                <TableCell>
+                  <Typography variant="body2">{row.name}</Typography>
+                </TableCell>
+                <TableCell align="right">
+                  <Typography
+                    variant="body2"
+                    sx={{ fontFamily: 'monospace' }}
+                  >
+                    {row.value.toLocaleString()}
+                  </Typography>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      }
+    />
   );
 };

@@ -1,122 +1,68 @@
-import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import { Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
-import { getPaletteColor } from '../config/chartColors';
+import { ChartWithTable } from '../components/ChartWithTable';
+import { PlayerLink } from '../components/PlayerLink';
 import type { PlayerStats } from '../types';
 import { getHorizontalBarOptions } from '../utils/chartOptions';
-import { getPlayerDisplayName } from '../utils/chartUtils';
+import {
+  buildSortedPlayerRows,
+  buildStackedBarDatasets,
+  getPlayerDisplayName
+} from '../utils/chartUtils';
 
 interface PlayerInteractionsChartProps {
   allPlayers: Record<string, PlayerStats>;
 }
 
+const FIELDS = [
+  'Furnace',
+  'Crafting Table',
+  'Open Chest',
+  'Open Barrel',
+  'Enchant',
+  'Villager',
+  'Bell'
+] as const;
+
 export const PlayerInteractionsChart: React.FC<PlayerInteractionsChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
 
-  const { chartData, options } = useMemo(() => {
-    const playerData = Object.entries(allPlayers)
-      .map(([playerId, player]: [string, PlayerStats]) => {
-        const customStats = player.custom_stats || {};
-
-        return {
-          name: getPlayerDisplayName(player, playerId),
-          Furnace: customStats['minecraft:interact_with_furnace'] || 0,
-          'Crafting Table': customStats['minecraft:interact_with_crafting_table'] || 0,
-          'Open Chest': customStats['minecraft:open_chest'] || 0,
-          'Open Barrel': customStats['minecraft:open_barrel'] || 0,
-          Enchant: customStats['minecraft:enchant_item'] || 0,
-          Villager: customStats['minecraft:talked_to_villager'] || 0,
-          Bell: customStats['minecraft:bell_ring'] || 0
-        };
-      })
-      .sort((a, b) => {
-        const aTotal =
-          a.Furnace +
-          a['Crafting Table'] +
-          a['Open Chest'] +
-          a['Open Barrel'] +
-          a.Enchant +
-          a.Villager +
-          a.Bell;
-        const bTotal =
-          b.Furnace +
-          b['Crafting Table'] +
-          b['Open Chest'] +
-          b['Open Barrel'] +
-          b.Enchant +
-          b.Villager +
-          b.Bell;
-        return bTotal - aTotal;
-      });
+  const { chartData, options, playerData } = useMemo(() => {
+    const playerData = buildSortedPlayerRows(allPlayers, (player, playerId) => {
+      const cs = player.custom_stats || {};
+      return {
+        playerId,
+        name: getPlayerDisplayName(player, playerId),
+        Furnace: cs['minecraft:interact_with_furnace'] || 0,
+        'Crafting Table': cs['minecraft:interact_with_crafting_table'] || 0,
+        'Open Chest': cs['minecraft:open_chest'] || 0,
+        'Open Barrel': cs['minecraft:open_barrel'] || 0,
+        Enchant: cs['minecraft:enchant_item'] || 0,
+        Villager: cs['minecraft:talked_to_villager'] || 0,
+        Bell: cs['minecraft:bell_ring'] || 0
+      };
+    });
 
     const data = {
       labels: playerData.map((p) => p.name),
-      datasets: [
-        {
-          label: 'Furnace',
-          data: playerData.map((p) => p.Furnace),
-          backgroundColor: getPaletteColor(0),
-          stack: 'stack0'
-        },
-        {
-          label: 'Crafting Table',
-          data: playerData.map((p) => p['Crafting Table']),
-          backgroundColor: getPaletteColor(1),
-          stack: 'stack0'
-        },
-        {
-          label: 'Open Chest',
-          data: playerData.map((p) => p['Open Chest']),
-          backgroundColor: getPaletteColor(2),
-          stack: 'stack0'
-        },
-        {
-          label: 'Open Barrel',
-          data: playerData.map((p) => p['Open Barrel']),
-          backgroundColor: getPaletteColor(3),
-          stack: 'stack0'
-        },
-        {
-          label: 'Enchant',
-          data: playerData.map((p) => p.Enchant),
-          backgroundColor: getPaletteColor(4),
-          stack: 'stack0'
-        },
-        {
-          label: 'Villager',
-          data: playerData.map((p) => p.Villager),
-          backgroundColor: getPaletteColor(5),
-          stack: 'stack0'
-        },
-        {
-          label: 'Bell',
-          data: playerData.map((p) => p.Bell),
-          backgroundColor: getPaletteColor(6),
-          stack: 'stack0'
-        }
-      ]
+      datasets: buildStackedBarDatasets(playerData, FIELDS)
     };
 
     const opts = getHorizontalBarOptions(theme, {
       scales: {
         x: {
           stacked: true,
-          title: {
-            display: true,
-            text: 'Interactions',
-            color: theme.palette.text.secondary
-          }
+          title: { display: true, text: 'Interactions', color: theme.palette.text.secondary }
         },
-        y: {
-          stacked: true
-        }
+        y: { stacked: true }
       }
     });
 
-    return { chartData: data, options: opts };
+    return { chartData: data, options: opts, playerData };
   }, [allPlayers, theme]);
 
   if (Object.keys(allPlayers).length === 0) {
@@ -124,19 +70,59 @@ export const PlayerInteractionsChart: React.FC<PlayerInteractionsChartProps> = (
   }
 
   return (
-    <ThemedCard>
-      <CardHeader
-        title="Player Interactions"
-        subheader="How players interact with game objects"
-      />
-      <CardContent>
-        <Box sx={{ height: 500 }}>
-          <Bar
-            data={chartData}
-            options={options}
-          />
-        </Box>
-      </CardContent>
-    </ThemedCard>
+    <ChartWithTable
+      title="Player Interactions"
+      subheader="How players interact with game objects"
+      chartHeight={500}
+      chartContent={
+        <Bar
+          data={chartData}
+          options={options}
+        />
+      }
+      tableContent={
+        <Table size="small">
+          <TableHead>
+            <TableRow>
+              <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Player</TableCell>
+              {FIELDS.map((f) => (
+                <TableCell
+                  key={f}
+                  sx={{ fontWeight: 600, color: 'text.secondary' }}
+                  align="right"
+                >
+                  {f}
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {playerData.map((row) => (
+              <TableRow
+                key={row.name}
+                hover
+              >
+                <TableCell>
+                  <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>
+                </TableCell>
+                {FIELDS.map((f) => (
+                  <TableCell
+                    key={f}
+                    align="right"
+                  >
+                    <Typography
+                      variant="body2"
+                      sx={{ fontFamily: 'monospace' }}
+                    >
+                      {row[f].toLocaleString()}
+                    </Typography>
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      }
+    />
   );
 };

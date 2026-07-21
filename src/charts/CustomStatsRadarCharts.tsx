@@ -1,11 +1,7 @@
-import BarChartIcon from '@mui/icons-material/BarChart';
 import InsightsIcon from '@mui/icons-material/Insights';
 import PercentIcon from '@mui/icons-material/Percent';
-import TableChartIcon from '@mui/icons-material/TableChart';
 import {
   Box,
-  CardContent,
-  CardHeader,
   IconButton,
   Table,
   TableBody,
@@ -22,11 +18,10 @@ import { Radar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ResponsiveGrid } from '../components/SectionHeading';
-import { ThemedCard } from '../components/ThemedCard';
 import { getDatasetColors } from '../config/chartColors';
-import { useChartViewMode } from '../hooks/useChartViewMode';
 import type { PlayerStats } from '../types';
 import { getPresentCategories, getStatLabel } from '../utils/statCategories';
+import { ChartWithTable } from '../components/ChartWithTable';
 
 interface CustomStatsRadarChartsProps {
   player: PlayerStats;
@@ -57,15 +52,12 @@ function CategoryRadarChart({
 }) {
   const theme = useTheme();
   const [mode, setMode] = useState<ViewMode>('normalized');
-  const { viewMode: view, toggleViewMode: toggleView } = useChartViewMode();
 
   const { data, options, tableRows } = useMemo(() => {
     const labels = keys.map(getStatLabel);
     const playerValues = keys.map((k) => player.custom_stats[k] || 0);
     const avgValues = keys.map((k) => serverAverage(k, allPlayers, player));
 
-    // Per-stat max used to normalize both series onto a 0..1 scale, so the
-    // shape reflects each stat's relative magnitude rather than its raw size.
     const scaleMaxes = keys.map((_, i) => Math.max(playerValues[i], avgValues[i], 1e-9));
 
     const playerData = keys.map((_, i) =>
@@ -77,8 +69,6 @@ function CategoryRadarChart({
             : 0
         : playerValues[i] / scaleMaxes[i]
     );
-    // Server Avg is the reference ring: flat 1.0 in ratio mode, else its own
-    // normalized value.
     const avgData = keys.map((_, i) => (mode === 'ratio' ? 1 : avgValues[i] / scaleMaxes[i]));
 
     const playerColors = getDatasetColors(colorIndex % 10, 0.25);
@@ -181,93 +171,73 @@ function CategoryRadarChart({
   }, [keys, player, allPlayers, mode, theme, colorIndex]);
 
   return (
-    <ThemedCard>
-      <CardHeader
-        title={category}
-        action={
-          <>
-            <Tooltip title={mode === 'normalized' ? 'Show ratio (vs avg)' : 'Show normalized'}>
-              <IconButton
-                size="small"
-                sx={{ opacity: 0.5 }}
-                onClick={() => setMode(mode === 'normalized' ? 'ratio' : 'normalized')}
-                aria-label="Toggle normalized/ratio view"
-              >
-                {mode === 'normalized' ? (
-                  <PercentIcon fontSize="small" />
-                ) : (
-                  <InsightsIcon fontSize="small" />
-                )}
-              </IconButton>
-            </Tooltip>
-            <Tooltip title={view === 'chart' ? 'Show table' : 'Show chart'}>
-              <IconButton
-                size="small"
-                sx={{ opacity: 0.5 }}
-                onClick={toggleView}
-                aria-label="Toggle chart/table view"
-              >
-                {view === 'chart' ? (
-                  <TableChartIcon fontSize="small" />
-                ) : (
-                  <BarChartIcon fontSize="small" />
-                )}
-              </IconButton>
-            </Tooltip>
-          </>
-        }
-      />
-      <CardContent>
-        {view === 'chart' ? (
-          <Box sx={{ height: 320 }}>
-            <Radar
-              key={`${player.name}-${mode}`}
-              data={data}
-              options={options}
-            />
-          </Box>
-        ) : (
-          <Box sx={{ overflowX: 'auto' }}>
-            <Table size="small">
-              <TableHead>
-                <TableRow>
-                  <TableCell>Stat</TableCell>
-                  <TableCell align="right">{player.name}</TableCell>
-                  <TableCell align="right">Server Avg</TableCell>
-                  <TableCell align="right">Ratio</TableCell>
+    <ChartWithTable
+      title={category}
+      chartHeight={320}
+      actions={
+        <Tooltip title={mode === 'normalized' ? 'Show ratio (vs avg)' : 'Show normalized'}>
+          <IconButton
+            size="small"
+            sx={{ opacity: 0.5 }}
+            onClick={() => setMode(mode === 'normalized' ? 'ratio' : 'normalized')}
+            aria-label="Toggle normalized/ratio view"
+          >
+            {mode === 'normalized' ? (
+              <PercentIcon fontSize="small" />
+            ) : (
+              <InsightsIcon fontSize="small" />
+            )}
+          </IconButton>
+        </Tooltip>
+      }
+      chartContent={
+        <Radar
+          key={`${player.name}-${mode}`}
+          data={data}
+          options={options}
+        />
+      }
+      tableContent={
+        <Box sx={{ overflowX: 'auto' }}>
+          <Table size="small">
+            <TableHead>
+              <TableRow>
+                <TableCell>Stat</TableCell>
+                <TableCell align="right">{player.name}</TableCell>
+                <TableCell align="right">Server Avg</TableCell>
+                <TableCell align="right">Ratio</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {tableRows.map((row) => (
+                <TableRow
+                  key={row.label}
+                  hover
+                >
+                  <TableCell>
+                    <Typography variant="body2">{row.label}</Typography>
+                  </TableCell>
+                  <TableCell align="right">
+                    <Typography variant="body2">{row.player.toLocaleString()}</Typography>
+                  </TableCell>
+                  <TableCell align="right">
+                    <Typography variant="body2">{row.avg.toLocaleString()}</Typography>
+                  </TableCell>
+                  <TableCell align="right">
+                    <Typography
+                      variant="body2"
+                      sx={{ color: theme.palette.primary.main }}
+                    >
+                      {row.ratio === null ? '∞' : `${row.ratio.toFixed(2)}x`}
+                    </Typography>
+                  </TableCell>
                 </TableRow>
-              </TableHead>
-              <TableBody>
-                {tableRows.map((row) => (
-                  <TableRow
-                    key={row.label}
-                    hover
-                  >
-                    <TableCell>
-                      <Typography variant="body2">{row.label}</Typography>
-                    </TableCell>
-                    <TableCell align="right">
-                      <Typography variant="body2">{row.player.toLocaleString()}</Typography>
-                    </TableCell>
-                    <TableCell align="right">
-                      <Typography variant="body2">{row.avg.toLocaleString()}</Typography>
-                    </TableCell>
-                    <TableCell align="right">
-                      <Typography
-                        variant="body2"
-                        sx={{ color: theme.palette.primary.main }}
-                      >
-                        {row.ratio === null ? '∞' : `${row.ratio.toFixed(2)}x`}
-                      </Typography>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </Box>
-        )}
-      </CardContent>
-    </ThemedCard>
+              ))}
+            </TableBody>
+          </Table>
+        </Box>
+      }
+    />
   );
 }
 

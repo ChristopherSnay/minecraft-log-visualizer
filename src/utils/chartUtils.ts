@@ -1,4 +1,5 @@
 import type { PlayerStats } from '../types';
+import { getPaletteColor } from '../config/chartColors';
 
 export function getPlayerDisplayName(player: PlayerStats, playerId: string): string {
   return player.name || playerId.substring(0, 8);
@@ -35,20 +36,6 @@ export interface PlayerRow {
   value: number;
 }
 
-export function buildPlayerRows(
-  allPlayers: Record<string, PlayerStats>,
-  getValue: (player: PlayerStats, playerId: string) => number,
-  opts?: { sortDescending?: boolean }
-): PlayerRow[] {
-  const sortDesc = opts?.sortDescending !== false;
-  const rows = Object.entries(allPlayers).map(([playerId, player]: [string, PlayerStats]) => ({
-    playerId,
-    name: getPlayerDisplayName(player, playerId),
-    value: getValue(player, playerId)
-  }));
-  return sortDesc ? rows.sort((a, b) => b.value - a.value) : rows;
-}
-
 export function mergeRecordsTopN(
   allPlayers: Record<string, PlayerStats>,
   recordKey: keyof Pick<
@@ -79,4 +66,40 @@ export function mergeRecordsTopN(
       name: labelFn ? labelFn(key) : key,
       value
     }));
+}
+
+export function buildSortedPlayerRows<T extends Record<string, unknown>>(
+  allPlayers: Record<string, PlayerStats>,
+  extractor: (player: PlayerStats, playerId: string) => T | null,
+  comparator?: (a: T, b: T) => number
+): T[] {
+  const rows = Object.entries(allPlayers)
+    .map(([playerId, player]) => extractor(player, playerId))
+    .filter((row): row is T => row !== null);
+
+  if (comparator) {
+    rows.sort(comparator);
+  } else {
+    rows.sort((a, b) => {
+      const sum = (obj: Record<string, unknown>) =>
+        Object.values(obj)
+          .filter((v): v is number => typeof v === 'number')
+          .reduce((s, v) => s + v, 0);
+      return sum(b) - sum(a);
+    });
+  }
+
+  return rows;
+}
+
+export function buildStackedBarDatasets<T extends Record<string, number>>(
+  playerData: T[],
+  fields: (keyof T & string)[]
+) {
+  return fields.map((field, i) => ({
+    label: field,
+    data: playerData.map((p) => p[field]),
+    backgroundColor: getPaletteColor(i),
+    stack: 'stack0'
+  }));
 }

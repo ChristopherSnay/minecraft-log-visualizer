@@ -1,151 +1,76 @@
-import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import { Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import type { ChartOptions } from 'chart.js';
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
-import { ThemedCard } from '../components/ThemedCard';
-import { getPaletteColor } from '../config/chartColors';
+import { ChartWithTable } from '../components/ChartWithTable';
+import { PlayerLink } from '../components/PlayerLink';
 import type { PlayerStats } from '../types';
 import { getBaseChartOptions } from '../utils/chartOptions';
-import { cmToKm, getPlayerDisplayName } from '../utils/chartUtils';
+import {
+  buildSortedPlayerRows,
+  buildStackedBarDatasets,
+  cmToKm,
+  getPlayerDisplayName
+} from '../utils/chartUtils';
 
 interface EnhancedTravelChartProps {
   allPlayers: Record<string, PlayerStats>;
 }
 
+const FIELDS = [
+  'Walk',
+  'Sprint',
+  'Boat',
+  'Swim',
+  'Fly',
+  'Climb',
+  'Fall',
+  'Walk on Water',
+  'Walk Underwater',
+  'Crouch'
+] as const;
+
 export const EnhancedTravelChart: React.FC<EnhancedTravelChartProps> = ({ allPlayers }) => {
   const theme = useTheme();
 
-  const { chartData, options } = useMemo(() => {
-    const playerData = Object.entries(allPlayers)
-      .map(([playerId, player]: [string, PlayerStats]) => {
-        const customStats = player.custom_stats || {};
-
-        // Convert cm to km for readability
-        return {
-          name: getPlayerDisplayName(player, playerId),
-          Walk: cmToKm(customStats['minecraft:walk_one_cm'] || 0),
-          Sprint: cmToKm(customStats['minecraft:sprint_one_cm'] || 0),
-          Boat: cmToKm(customStats['minecraft:boat_one_cm'] || 0),
-          Swim: cmToKm(customStats['minecraft:swim_one_cm'] || 0),
-          Fly: cmToKm(customStats['minecraft:fly_one_cm'] || 0),
-          Climb: cmToKm(customStats['minecraft:climb_one_cm'] || 0),
-          Fall: cmToKm(customStats['minecraft:fall_one_cm'] || 0),
-          'Walk on Water': cmToKm(customStats['minecraft:walk_on_water_one_cm'] || 0),
-          'Walk Underwater': cmToKm(customStats['minecraft:walk_under_water_one_cm'] || 0),
-          Crouch: cmToKm(customStats['minecraft:crouch_one_cm'] || 0)
-        };
-      })
-      .sort((a, b) => {
-        const aTotal =
-          a.Walk +
-          a.Sprint +
-          a.Boat +
-          a.Swim +
-          a.Fly +
-          a.Climb +
-          a.Fall +
-          a['Walk on Water'] +
-          a['Walk Underwater'] +
-          a.Crouch;
-        const bTotal =
-          b.Walk +
-          b.Sprint +
-          b.Boat +
-          b.Swim +
-          b.Fly +
-          b.Climb +
-          b.Fall +
-          b['Walk on Water'] +
-          b['Walk Underwater'] +
-          b.Crouch;
-        return bTotal - aTotal;
-      });
+  const { chartData, options, playerData } = useMemo(() => {
+    const playerData = buildSortedPlayerRows(allPlayers, (player, playerId) => {
+      const cs = player.custom_stats || {};
+      return {
+        playerId,
+        name: getPlayerDisplayName(player, playerId),
+        Walk: cmToKm(cs['minecraft:walk_one_cm'] || 0),
+        Sprint: cmToKm(cs['minecraft:sprint_one_cm'] || 0),
+        Boat: cmToKm(cs['minecraft:boat_one_cm'] || 0),
+        Swim: cmToKm(cs['minecraft:swim_one_cm'] || 0),
+        Fly: cmToKm(cs['minecraft:fly_one_cm'] || 0),
+        Climb: cmToKm(cs['minecraft:climb_one_cm'] || 0),
+        Fall: cmToKm(cs['minecraft:fall_one_cm'] || 0),
+        'Walk on Water': cmToKm(cs['minecraft:walk_on_water_one_cm'] || 0),
+        'Walk Underwater': cmToKm(cs['minecraft:walk_under_water_one_cm'] || 0),
+        Crouch: cmToKm(cs['minecraft:crouch_one_cm'] || 0)
+      };
+    });
 
     const data = {
       labels: playerData.map((p) => p.name),
-      datasets: [
-        {
-          label: 'Walk',
-          data: playerData.map((p) => p.Walk),
-          backgroundColor: getPaletteColor(0),
-          stack: 'stack0'
-        },
-        {
-          label: 'Sprint',
-          data: playerData.map((p) => p.Sprint),
-          backgroundColor: getPaletteColor(1),
-          stack: 'stack0'
-        },
-        {
-          label: 'Boat',
-          data: playerData.map((p) => p.Boat),
-          backgroundColor: getPaletteColor(2),
-          stack: 'stack0'
-        },
-        {
-          label: 'Swim',
-          data: playerData.map((p) => p.Swim),
-          backgroundColor: getPaletteColor(3),
-          stack: 'stack0'
-        },
-        {
-          label: 'Fly',
-          data: playerData.map((p) => p.Fly),
-          backgroundColor: getPaletteColor(4),
-          stack: 'stack0'
-        },
-        {
-          label: 'Climb',
-          data: playerData.map((p) => p.Climb),
-          backgroundColor: getPaletteColor(5),
-          stack: 'stack0'
-        },
-        {
-          label: 'Fall',
-          data: playerData.map((p) => p.Fall),
-          backgroundColor: getPaletteColor(6),
-          stack: 'stack0'
-        },
-        {
-          label: 'Walk on Water',
-          data: playerData.map((p) => p['Walk on Water']),
-          backgroundColor: getPaletteColor(7),
-          stack: 'stack0'
-        },
-        {
-          label: 'Walk Underwater',
-          data: playerData.map((p) => p['Walk Underwater']),
-          backgroundColor: getPaletteColor(8),
-          stack: 'stack0'
-        },
-        {
-          label: 'Crouch',
-          data: playerData.map((p) => p.Crouch),
-          backgroundColor: getPaletteColor(9),
-          stack: 'stack0'
-        }
-      ]
+      datasets: buildStackedBarDatasets(playerData, FIELDS)
     };
 
     const opts = getBaseChartOptions(theme, {
       scales: {
-        x: {
-          stacked: true
-        },
+        x: { stacked: true },
         y: {
           stacked: true,
-          title: {
-            display: true,
-            text: 'Distance (km)',
-            color: theme.palette.text.secondary
-          }
+          title: { display: true, text: 'Distance (km)', color: theme.palette.text.secondary }
         }
       }
     }) as ChartOptions<'bar'>;
 
-    return { chartData: data, options: opts };
+    return { chartData: data, options: opts, playerData };
   }, [allPlayers, theme]);
 
   if (Object.keys(allPlayers).length === 0) {
@@ -153,19 +78,59 @@ export const EnhancedTravelChart: React.FC<EnhancedTravelChartProps> = ({ allPla
   }
 
   return (
-    <ThemedCard>
-      <CardHeader
-        title="Complete Travel Breakdown (km)"
-        subheader="All methods of movement tracked"
-      />
-      <CardContent>
-        <Box sx={{ height: 400 }}>
-          <Bar
-            data={chartData}
-            options={options}
-          />
-        </Box>
-      </CardContent>
-    </ThemedCard>
+    <ChartWithTable
+      title="Complete Travel Breakdown (km)"
+      subheader="All methods of movement tracked"
+      chartHeight={400}
+      chartContent={
+        <Bar
+          data={chartData}
+          options={options}
+        />
+      }
+      tableContent={
+        <Table size="small">
+          <TableHead>
+            <TableRow>
+              <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Player</TableCell>
+              {FIELDS.map((f) => (
+                <TableCell
+                  key={f}
+                  sx={{ fontWeight: 600, color: 'text.secondary' }}
+                  align="right"
+                >
+                  {f}
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {playerData.map((row) => (
+              <TableRow
+                key={row.name}
+                hover
+              >
+                <TableCell>
+                  <PlayerLink playerId={row.playerId}>{row.name}</PlayerLink>
+                </TableCell>
+                {FIELDS.map((f) => (
+                  <TableCell
+                    key={f}
+                    align="right"
+                  >
+                    <Typography
+                      variant="body2"
+                      sx={{ fontFamily: 'monospace' }}
+                    >
+                      {row[f].toFixed(1)}
+                    </Typography>
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      }
+    />
   );
 };
