@@ -13,13 +13,15 @@ interface SimplePlayerComparisonProps {
   data: PlayerRow[];
   color: string;
   format?: (value: number) => string;
+  category?: string;
 }
 
 export function SimplePlayerComparison({
   title,
   data,
   color,
-  format = (v) => v.toLocaleString()
+  format = (v) => v.toLocaleString(),
+  category
 }: SimplePlayerComparisonProps) {
   const theme = useTheme();
 
@@ -64,6 +66,7 @@ export function SimplePlayerComparison({
     return (
       <ChartWithTable
         title={title}
+        subheader={category}
         chartContent={null}
         tableContent={null}
       />
@@ -75,6 +78,7 @@ export function SimplePlayerComparison({
   return (
     <ChartWithTable
       title={title}
+      subheader={category}
       chartHeight={220}
       chartContent={
         <Bar
