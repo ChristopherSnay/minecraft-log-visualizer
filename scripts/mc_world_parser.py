@@ -116,6 +116,13 @@ def main():
     output_path = os.path.join(output_dir, "stats.json")
     write_json(output_path, world)
 
+    # Filter events/sessions to the last 24h and drop raw data
+    build_sessions()
+
+    # Re-read the cleaned stats.json for the backup
+    with open(output_path) as f:
+        cleaned = json.load(f)
+
     # Write timestamped backup
     backup_dir = os.path.join("data", "backups")
     os.makedirs(backup_dir, exist_ok=True)
@@ -123,12 +130,10 @@ def main():
     ts = captured_at.replace(":", "-").replace("+", "-").replace(".", "-")
     backup_path = os.path.join(backup_dir, f"stats-{ts}.zip")
     with zipfile.ZipFile(backup_path, "w", zipfile.ZIP_DEFLATED) as zf:
-        zf.writestr("stats.json", json.dumps(world, indent=2))
+        zf.writestr("stats.json", json.dumps(cleaned, indent=2))
 
     print(f"Generated {output_path}")
     print(f"Backup  {backup_path}")
-
-    build_sessions()
 
 
 load_dotenv()
