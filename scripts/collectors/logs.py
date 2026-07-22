@@ -60,6 +60,22 @@ def _parse_log_file(path, log_date, death_markers, join_re, leave_re, death_re):
             player = m.group(1)
             time_str = _extract_time(line)
             ts = f"{log_date}T{time_str}" if time_str else None
+
+            # If the player is already tracked as online, their previous
+            # session ended without a leave (e.g. crash disconnect).
+            # Close it first so joins and leaves stay balanced.
+            if player in online_players and ts:
+                synth_event = {
+                    "type": "leave",
+                    "player": player,
+                    "timestamp": ts,
+                    "synthetic": True,
+                    "reason": "reconnect",
+                }
+                events.append(synth_event)
+                sessions.setdefault(player, {"joins": 0, "leaves": 0})
+                sessions[player]["leaves"] += 1
+
             event = {"type": "join", "player": player, "line": line}
             if ts:
                 event["timestamp"] = ts
