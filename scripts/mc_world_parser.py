@@ -10,6 +10,7 @@ from collectors.playerdata import collect_playerdata
 # Collectors
 from collectors.stats import collect_stats
 from collectors.usercache import collect_usercache
+from build_sessions import main as build_sessions
 from dotenv import load_dotenv
 
 
@@ -126,6 +127,8 @@ def main():
 
     print(f"Generated {output_path}")
     print(f"Backup  {backup_path}")
+
+    build_sessions()
 
 
 load_dotenv()
