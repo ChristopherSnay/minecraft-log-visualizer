@@ -16749,7 +16749,7 @@
           "minecraft:iron_bars": 3,
           "minecraft:tall_grass": 365,
           "minecraft:wildflowers": 70,
-          "minecraft:purple_bed": 40,
+          "minecraft:purple_bed": 41,
           "minecraft:pink_terracotta": 5,
           "minecraft:lily_pad": 17,
           "minecraft:cobblestone_wall": 1,
@@ -16965,7 +16965,7 @@
           "minecraft:milk_bucket": 1,
           "minecraft:cherry_sapling": 15,
           "minecraft:peony": 2,
-          "minecraft:purple_bed": 40,
+          "minecraft:purple_bed": 41,
           "minecraft:copper_shovel": 405,
           "minecraft:copper_pickaxe": 129,
           "minecraft:ladder": 3,
@@ -17008,7 +17008,7 @@
           "minecraft:cornflower": 1,
           "minecraft:cauldron": 1,
           "minecraft:light_blue_bed": 7,
-          "minecraft:egg": 44,
+          "minecraft:egg": 64,
           "minecraft:azure_bluet": 1
         },
         "mobs_killed": {
@@ -17022,36 +17022,36 @@
           "minecraft:wolf": 2
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 4993,
+          "minecraft:time_since_rest": 166,
           "minecraft:talked_to_villager": 27,
-          "minecraft:leave_game": 25,
+          "minecraft:leave_game": 26,
           "minecraft:damage_taken": 2878,
           "minecraft:mob_kills": 93,
           "minecraft:boat_one_cm": 591158,
-          "minecraft:time_since_death": 542409,
+          "minecraft:time_since_death": 550271,
           "minecraft:interact_with_furnace": 68,
-          "minecraft:sleep_in_bed": 165,
+          "minecraft:sleep_in_bed": 166,
           "minecraft:happy_ghast_one_cm": 21073,
           "minecraft:swim_one_cm": 16217,
-          "minecraft:total_world_time": 2086208,
+          "minecraft:total_world_time": 2094070,
           "minecraft:pot_flower": 10,
           "minecraft:crouch_one_cm": 3163,
           "minecraft:climb_one_cm": 5997,
           "minecraft:deaths": 5,
           "minecraft:animals_bred": 73,
           "minecraft:traded_with_villager": 68,
-          "minecraft:interact_with_crafting_table": 268,
-          "minecraft:walk_one_cm": 9302903,
+          "minecraft:interact_with_crafting_table": 269,
+          "minecraft:walk_one_cm": 9303705,
           "minecraft:walk_under_water_one_cm": 13231,
           "minecraft:horse_one_cm": 121215,
           "minecraft:damage_dealt": 4016,
-          "minecraft:play_time": 2086208,
-          "minecraft:jump": 11143,
-          "minecraft:drop": 379,
+          "minecraft:play_time": 2094070,
+          "minecraft:jump": 11144,
+          "minecraft:drop": 382,
           "minecraft:bell_ring": 1,
           "minecraft:open_barrel": 128,
           "minecraft:sprint_one_cm": 2845966,
-          "minecraft:open_chest": 335,
+          "minecraft:open_chest": 349,
           "minecraft:fill_cauldron": 1,
           "minecraft:inspect_hopper": 1,
           "minecraft:fall_one_cm": 80355,
@@ -17217,7 +17217,7 @@
           "minecraft:copper_chestplate": 4,
           "minecraft:raw_copper": 69,
           "minecraft:oak_sapling": 223,
-          "minecraft:purple_bed": 43,
+          "minecraft:purple_bed": 44,
           "minecraft:beef": 10,
           "minecraft:rotten_flesh": 25,
           "minecraft:apple": 50,
@@ -17252,7 +17252,7 @@
           "minecraft:beetroot_seeds": 24,
           "minecraft:apple": 11,
           "minecraft:cornflower": 1,
-          "minecraft:leaf_litter": 57,
+          "minecraft:leaf_litter": 60,
           "minecraft:stick": 2,
           "minecraft:short_grass": 14,
           "minecraft:white_bed": 1,
@@ -19348,9 +19348,9 @@
           }
         ],
         "position": [
-          47.49613173770077,
+          47.36511261631012,
           73.0,
-          -120.1753251573014
+          -118.97904139147992
         ],
         "dimension": "minecraft:overworld",
         "xp": 16,
@@ -19371,11 +19371,19 @@
             "count": 1
           },
           {
-            "id": "minecraft:bone_meal",
+            "id": "minecraft:egg",
             "count": 1
           },
           {
             "id": "minecraft:purple_bed",
+            "count": 1
+          },
+          {
+            "id": "minecraft:wheat_seeds",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dirt",
             "count": 1
           },
           {
@@ -19399,23 +19407,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:apple",
-            "count": 1
-          },
-          {
-            "id": "minecraft:light_blue_wool",
-            "count": 1
-          },
-          {
             "id": "minecraft:stick",
             "count": 1
           },
           {
             "id": "minecraft:torch",
-            "count": 1
-          },
-          {
-            "id": "minecraft:rotten_flesh",
             "count": 1
           },
           {
@@ -19431,11 +19427,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:beef",
-            "count": 1
-          },
-          {
-            "id": "minecraft:blue_wool",
+            "id": "minecraft:dark_oak_planks",
             "count": 1
           },
           {
@@ -19447,7 +19439,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:cactus",
+            "id": "minecraft:flow_pottery_sherd",
+            "count": 1
+          },
+          {
+            "id": "minecraft:brick",
             "count": 1
           },
           {
@@ -19459,19 +19455,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:tropical_fish",
+            "id": "minecraft:firefly_bush",
             "count": 1
           },
           {
-            "id": "minecraft:egg",
+            "id": "minecraft:decorated_pot",
             "count": 1
           },
           {
-            "id": "minecraft:red_wool",
-            "count": 1
-          },
-          {
-            "id": "minecraft:blue_dye",
+            "id": "minecraft:guster_pottery_sherd",
             "count": 1
           },
           {
@@ -20701,7 +20693,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 4518174,
+    "time": 4527236,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -20748,7 +20740,7 @@
       {
         "player": "Kimyknot",
         "login_time": "2026-07-22T08:14:58",
-        "logout_time": null
+        "logout_time": "2026-07-22T08:36:31"
       },
       {
         "player": "Drewyknot",
@@ -21094,34 +21086,9 @@
         "player": "Crazy_brosik",
         "login_time": "2026-07-21T12:54:41",
         "logout_time": "2026-07-21T13:16:38"
-      },
-      {
-        "player": "I_AM_GAY__",
-        "login_time": "2026-07-21T12:44:17",
-        "logout_time": "2026-07-21T13:52:17"
-      },
-      {
-        "player": "third_wheel",
-        "login_time": "2026-07-21T12:39:22",
-        "logout_time": "2026-07-21T13:38:36"
-      },
-      {
-        "player": "R3B3X",
-        "login_time": "2026-07-21T12:32:13",
-        "logout_time": "2026-07-21T13:16:11"
       }
     ],
     "deaths": [
-      {
-        "player": "Villager",
-        "message": "Farmer drowned",
-        "timestamp": "2026-07-21T12:32:33"
-      },
-      {
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-21T12:36:57"
-      },
       {
         "player": "Crazy_brosik",
         "message": "fell from a high place",
@@ -21370,5 +21337,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "third_wheel",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-22T12:30:01.805896+00:00"
+  "captured_at": "2026-07-22T12:45:01.789877+00:00"
 }
