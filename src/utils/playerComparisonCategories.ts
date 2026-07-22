@@ -6,6 +6,7 @@ export interface ComparisonCategory {
   stats: {
     key: string;
     title: string;
+    category: string;
     format?: (v: number) => string;
   }[];
 }
@@ -45,30 +46,52 @@ export function buildComparisonCategories(
     for (const k of collectKeys(p.custom_stats)) customKeys.add(k);
   }
 
-  function toStats(keys: Set<string>, prefix: string) {
+  function toStats(keys: Set<string>, prefix: string, categoryLabel: string) {
     return [...keys]
-      .map((k) => ({ key: `${prefix}:${k}`, title: translateId(`minecraft:${k}`) }))
+      .map((k) => ({
+        key: `${prefix}:${k}`,
+        title: translateId(`minecraft:${k}`),
+        category: categoryLabel
+      }))
       .sort((a, b) => a.title.localeCompare(b.title));
   }
 
   const categories: ComparisonCategory[] = [];
 
   if (blockKeys.size > 0)
-    categories.push({ label: 'Blocks Mined', stats: toStats(blockKeys, 'blocks') });
+    categories.push({ label: 'Blocks Mined', stats: toStats(blockKeys, 'blocks', 'Blocks Mined') });
   if (craftedKeys.size > 0)
-    categories.push({ label: 'Items Crafted', stats: toStats(craftedKeys, 'crafted') });
+    categories.push({
+      label: 'Items Crafted',
+      stats: toStats(craftedKeys, 'crafted', 'Items Crafted')
+    });
   if (usingKeys.size > 0)
-    categories.push({ label: 'Items Used', stats: toStats(usingKeys, 'using') });
+    categories.push({
+      label: 'Items Used',
+      stats: toStats(usingKeys, 'using', 'Items Used')
+    });
   if (killedKeys.size > 0)
-    categories.push({ label: 'Mob Kills', stats: toStats(killedKeys, 'killed') });
+    categories.push({
+      label: 'Mob Kills',
+      stats: toStats(killedKeys, 'killed', 'Mob Kills')
+    });
   if (tookKeys.size > 0)
-    categories.push({ label: 'Items Picked Up', stats: toStats(tookKeys, 'took') });
+    categories.push({
+      label: 'Items Picked Up',
+      stats: toStats(tookKeys, 'took', 'Items Picked Up')
+    });
   if (droppedKeys.size > 0)
-    categories.push({ label: 'Items Dropped', stats: toStats(droppedKeys, 'dropped') });
+    categories.push({
+      label: 'Items Dropped',
+      stats: toStats(droppedKeys, 'dropped', 'Items Dropped')
+    });
   if (advancingKeys.size > 0)
-    categories.push({ label: 'Advancements', stats: toStats(advancingKeys, 'advancing') });
+    categories.push({
+      label: 'Advancements',
+      stats: toStats(advancingKeys, 'advancing', 'Advancements')
+    });
   if (customKeys.size > 0)
-    categories.push({ label: 'Other', stats: toStats(customKeys, 'custom') });
+    categories.push({ label: 'Other', stats: toStats(customKeys, 'custom', 'Other') });
 
   return categories;
 }
