@@ -83,7 +83,7 @@
           "minecraft:pointed_dripstone": 24,
           "minecraft:emerald_ore": 7,
           "minecraft:tall_seagrass": 1,
-          "minecraft:dirt": 921,
+          "minecraft:dirt": 937,
           "minecraft:sulfur": 90,
           "minecraft:hopper": 12,
           "minecraft:soul_fire": 11,
@@ -134,7 +134,7 @@
           "minecraft:waxed_copper_bulb": 61,
           "minecraft:sulfur_spike": 5,
           "minecraft:jungle_leaves": 2,
-          "minecraft:stone": 1650,
+          "minecraft:stone": 1708,
           "minecraft:frosted_ice": 3,
           "minecraft:stone_bricks": 1,
           "minecraft:orange_terracotta": 4,
@@ -165,7 +165,7 @@
           "minecraft:potent_sulfur": 13,
           "minecraft:oak_stairs": 69,
           "minecraft:mossy_cobblestone": 6,
-          "minecraft:grass_block": 821,
+          "minecraft:grass_block": 825,
           "minecraft:cobweb": 7,
           "minecraft:stone_brick_slab": 2,
           "minecraft:spruce_leaves": 41,
@@ -326,7 +326,7 @@
           "minecraft:yellow_bed": 3,
           "minecraft:chiseled_tuff": 10,
           "minecraft:mossy_cobblestone": 2,
-          "minecraft:diamond_shovel": 1291,
+          "minecraft:diamond_shovel": 1308,
           "minecraft:birch_planks": 7,
           "minecraft:experience_bottle": 2,
           "minecraft:bone_meal": 4,
@@ -334,7 +334,7 @@
           "minecraft:anvil": 1,
           "minecraft:goat_horn": 7,
           "minecraft:acacia_sapling": 4,
-          "minecraft:dirt": 775,
+          "minecraft:dirt": 788,
           "minecraft:compass": 3,
           "minecraft:obsidian": 23,
           "minecraft:sand": 14,
@@ -365,7 +365,7 @@
           "minecraft:cherry_sapling": 29,
           "minecraft:cactus_flower": 1,
           "minecraft:brown_banner": 1,
-          "minecraft:diamond_pickaxe": 5290,
+          "minecraft:diamond_pickaxe": 5349,
           "minecraft:ladder": 35,
           "minecraft:stone_bricks": 25,
           "minecraft:magma_block": 7,
@@ -403,9 +403,9 @@
           "minecraft:smooth_basalt": 113,
           "minecraft:pale_oak_log": 2,
           "minecraft:furnace": 8,
-          "minecraft:bread": 639,
+          "minecraft:bread": 642,
           "minecraft:barrel": 4,
-          "minecraft:torch": 1624,
+          "minecraft:torch": 1630,
           "minecraft:black_bed": 1,
           "minecraft:chiseled_stone_bricks": 3,
           "minecraft:pale_moss_block": 1,
@@ -450,40 +450,41 @@
         },
         "custom_stats": {
           "minecraft:talked_to_villager": 14,
-          "minecraft:time_since_rest": 3710,
+          "minecraft:time_since_rest": 9710,
           "minecraft:leave_game": 38,
           "minecraft:damage_taken": 16385,
           "minecraft:mob_kills": 502,
           "minecraft:boat_one_cm": 2338414,
-          "minecraft:time_since_death": 1073911,
+          "minecraft:time_since_death": 1079911,
           "minecraft:interact_with_furnace": 218,
           "minecraft:sleep_in_bed": 150,
           "minecraft:happy_ghast_one_cm": 67356,
           "minecraft:swim_one_cm": 134543,
-          "minecraft:total_world_time": 2106498,
+          "minecraft:total_world_time": 2112498,
           "minecraft:crouch_one_cm": 77780,
           "minecraft:climb_one_cm": 31071,
           "minecraft:deaths": 4,
           "minecraft:interact_with_stonecutter": 5,
           "minecraft:player_kills": 2,
           "minecraft:enchant_item": 12,
+          "minecraft:animals_bred": 2,
           "minecraft:interact_with_crafting_table": 172,
-          "minecraft:walk_one_cm": 2769457,
+          "minecraft:walk_one_cm": 2793020,
           "minecraft:walk_under_water_one_cm": 87605,
           "minecraft:horse_one_cm": 239,
           "minecraft:damage_dealt": 57534,
-          "minecraft:play_time": 2106498,
-          "minecraft:jump": 22527,
+          "minecraft:play_time": 2112498,
+          "minecraft:jump": 22567,
           "minecraft:play_record": 2,
           "minecraft:drop": 702,
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 40,
-          "minecraft:sprint_one_cm": 12655918,
+          "minecraft:sprint_one_cm": 12673909,
           "minecraft:open_chest": 618,
           "minecraft:inspect_hopper": 1,
           "minecraft:fall_one_cm": 370341,
-          "minecraft:fly_one_cm": 2265680,
+          "minecraft:fly_one_cm": 2268449,
           "minecraft:interact_with_anvil": 8,
           "minecraft:walk_on_water_one_cm": 199070,
           "minecraft:sneak_time": 30636,
@@ -492,7 +493,7 @@
         "items_picked_up": {
           "minecraft:pale_oak_log": 123,
           "minecraft:cherry_sign": 3,
-          "minecraft:cobblestone": 1903,
+          "minecraft:cobblestone": 1961,
           "minecraft:shears": 1,
           "minecraft:brick": 130,
           "minecraft:sugar_cane": 10,
@@ -558,7 +559,7 @@
           "minecraft:white_bed": 45,
           "minecraft:bucket": 21,
           "minecraft:leather": 2,
-          "minecraft:lead": 4,
+          "minecraft:lead": 5,
           "minecraft:stripped_cherry_log": 11,
           "minecraft:sulfur": 87,
           "minecraft:music_disc_precipice": 2,
@@ -630,7 +631,7 @@
           "minecraft:acacia_log": 18,
           "minecraft:acacia_planks": 32,
           "minecraft:spruce_planks": 10,
-          "minecraft:dirt": 2036,
+          "minecraft:dirt": 2056,
           "minecraft:rail": 4,
           "minecraft:bone_block": 17,
           "minecraft:diamond_helmet": 2,
@@ -3429,20 +3430,24 @@
             "time": "2026-07-21 23:07:07 -0400"
           },
           {
+            "id": "minecraft:husbandry/breed_an_animal",
+            "time": "2026-07-21 23:30:41 -0400"
+          },
+          {
             "id": "minecraft:recipes/decorations/cartography_table",
             "time": "2026-07-21 23:07:07 -0400"
           }
         ],
         "position": [
-          11.578146797871327,
-          66.0,
-          -10.818511911056579
+          1.9855837996253451,
+          71.0,
+          -80.28054626532453
         ],
         "dimension": "minecraft:overworld",
         "xp": 22,
-        "health": 17.719999313354492,
-        "food": 12,
-        "saturation": 0.0,
+        "health": 20.0,
+        "food": 20,
+        "saturation": 14.0,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -3453,7 +3458,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:black_bed",
+            "id": "minecraft:dirt",
             "count": 1
           },
           {
@@ -3469,7 +3474,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:bow",
+            "id": "minecraft:torch",
             "count": 1
           },
           {
@@ -3513,7 +3518,15 @@
             "count": 1
           },
           {
+            "id": "minecraft:black_bed",
+            "count": 1
+          },
+          {
             "id": "minecraft:flint",
+            "count": 1
+          },
+          {
+            "id": "minecraft:cobblestone",
             "count": 1
           },
           {
@@ -3541,10 +3554,6 @@
             "count": 1
           },
           {
-            "id": "minecraft:dirt",
-            "count": 1
-          },
-          {
             "id": "minecraft:bucket",
             "count": 1
           },
@@ -3557,7 +3566,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:torch",
+            "id": "minecraft:bow",
             "count": 1
           },
           {
@@ -20389,7 +20398,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 4228983,
+    "time": 4234983,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -20411,3931 +20420,14 @@
     }
   },
   "logs": {
-    "events": [
-      {
-        "type": "join",
-        "player": "BobEvansSausage",
-        "line": "[21:30:04] [Server thread/INFO]: BobEvansSausage joined the game",
-        "timestamp": "2026-07-21T21:30:04"
-      },
-      {
-        "type": "leave",
-        "player": "BobEvansSausage",
-        "line": "[21:38:57] [Server thread/INFO]: BobEvansSausage left the game",
-        "timestamp": "2026-07-21T21:38:57"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[21:41:27] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-21T21:41:27"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[21:41:55] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T21:41:55"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[21:49:36] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-21T21:49:36"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Mason was slain by Zombie",
-        "timestamp": "2026-07-21T21:52:34",
-        "line": "[21:52:34] [Server thread/INFO]: Villager Villager['Mason'/1324, l='ServerLevel[world]', x=-73.50, y=68.06, z=19.51] died, message: 'Mason was slain by Zombie'"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[21:55:59] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T21:55:59"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[23:03:46] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-21T23:03:46"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[18:41:21] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-17T18:41:21"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[18:43:16] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-17T18:43:16"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[18:44:40] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-17T18:44:40"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[18:52:00] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-17T18:52:00"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[18:55:27] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-17T18:55:27"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[18:55:33] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-17T18:55:33"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[18:57:47] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-17T18:57:47"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[19:01:09] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-17T19:01:09"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:04:13] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-17T19:04:13"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:10:53] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-17T19:10:53"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[19:12:56] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-17T19:12:56"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:14:50] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-17T19:14:50"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[19:15:06] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-17T19:15:06"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[19:15:06] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-17T19:15:06"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[19:15:50] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-17T19:15:50"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:21:22] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-17T19:21:22"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:34:40] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-17T19:34:40"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:38:24] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-17T19:38:24"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[19:39:17] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-17T19:39:17"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[19:43:01] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-17T19:43:01"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[19:44:04] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-17T19:44:04"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:47:56] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-17T19:47:56"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:48:48] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-17T19:48:48"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[19:52:30] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-17T19:52:30"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[20:00:13] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-17T20:00:13"
-      },
-      {
-        "type": "death",
-        "player": "R3B3X",
-        "message": "drowned",
-        "timestamp": "2026-07-17T20:00:15",
-        "line": "[20:00:15] [Server thread/INFO]: R3B3X drowned"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[20:00:22] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-17T20:00:22"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[20:04:17] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-17T20:04:17"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[20:11:04] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-17T20:11:04"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[20:11:46] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-17T20:11:46"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "drowned",
-        "timestamp": "2026-07-17T20:15:46",
-        "line": "[20:15:46] [Server thread/INFO]: third_wheel drowned"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[20:21:49] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-17T20:21:49"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[20:21:52] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-17T20:21:52"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[20:22:10] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-17T20:22:10"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[20:22:20] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-17T20:22:20"
-      },
-      {
-        "type": "death",
-        "player": "R3B3X",
-        "message": "burned to death",
-        "timestamp": "2026-07-17T20:49:04",
-        "line": "[20:49:04] [Server thread/INFO]: R3B3X burned to death"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[20:55:56] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-17T20:55:56"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[20:56:29] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-17T20:56:29"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[20:56:39] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-17T20:56:39"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[20:56:49] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-17T20:56:49"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[21:05:39] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-17T21:05:39"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[21:07:10] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-17T21:07:10"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[21:07:22] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-17T21:07:22"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[21:07:36] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-17T21:07:36"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[21:11:50] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-17T21:11:50"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[21:12:16] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-17T21:12:16"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[21:50:22] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-17T21:50:22"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[22:20:22] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-17T22:20:22"
-      },
-      {
-        "type": "death",
-        "player": "PenelopeWhynot",
-        "message": "burned to death",
-        "timestamp": "2026-07-17T23:01:07",
-        "line": "[23:01:07] [Server thread/INFO]: PenelopeWhynot burned to death"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[23:34:21] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-17T23:34:21"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[00:39:17] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T00:39:17"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[02:26:52] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T02:26:52"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[10:20:06] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-18T10:20:06"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[10:34:06] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-18T10:34:06"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[10:35:00] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-18T10:35:00"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[10:36:08] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-18T10:36:08"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[10:36:16] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-18T10:36:16"
-      },
-      {
-        "type": "death",
-        "player": "R3B3X",
-        "message": "suffocated in a wall",
-        "timestamp": "2026-07-18T10:36:25",
-        "line": "[10:36:25] [Server thread/INFO]: R3B3X suffocated in a wall"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[10:37:00] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-18T10:37:00"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[10:37:10] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-18T10:37:10"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[10:39:49] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-18T10:39:49"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[10:43:44] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T10:43:44"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[11:19:42] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T11:19:42"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Wolf",
-        "timestamp": "2026-07-18T11:28:48",
-        "line": "[11:28:48] [Server thread/INFO]: third_wheel was slain by Wolf"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-18T11:38:19",
-        "line": "[11:38:19] [Server thread/INFO]: Villager Villager['Villager'/115000, l='ServerLevel[world]', x=-153.23, y=62.02, z=-142.52] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[12:01:59] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-18T12:01:59"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[12:40:44] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-18T12:40:44"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[12:41:06] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T12:41:06"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[13:45:08] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T13:45:08"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[13:47:03] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T13:47:03"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[13:49:48] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-18T13:49:48"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[13:53:36] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-18T13:53:36"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was blown up by Creeper",
-        "timestamp": "2026-07-18T14:09:24",
-        "line": "[14:09:24] [Server thread/INFO]: third_wheel was blown up by Creeper"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[14:14:51] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T14:14:51"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[14:14:54] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T14:14:54"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[14:15:09] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T14:15:09"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[14:15:11] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T14:15:11"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[14:26:28] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T14:26:28"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[14:26:36] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T14:26:36"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[14:30:54] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-18T14:30:54"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[14:31:06] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T14:31:06"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[14:37:01] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T14:37:01"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[14:38:52] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T14:38:52"
-      },
-      {
-        "type": "death",
-        "player": "Kimyknot",
-        "message": "was slain by Zombie",
-        "timestamp": "2026-07-18T14:52:42",
-        "line": "[14:52:42] [Server thread/INFO]: Kimyknot was slain by Zombie"
-      },
-      {
-        "type": "death",
-        "player": "Kimyknot",
-        "message": "was slain by Zombie",
-        "timestamp": "2026-07-18T14:54:55",
-        "line": "[14:54:55] [Server thread/INFO]: Kimyknot was slain by Zombie"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Nitwit was slain by third_wheel",
-        "timestamp": "2026-07-18T15:02:40",
-        "line": "[15:02:40] [Server thread/INFO]: Villager Villager['Nitwit'/160652, l='ServerLevel[world]', x=68.50, y=68.00, z=-24.48] died, message: 'Nitwit was slain by third_wheel'"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[15:05:35] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-18T15:05:35"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[15:06:09] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-18T15:06:09"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[15:06:57] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-18T15:06:57"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[15:14:52] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T15:14:52"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Farmer was slain by Zombie",
-        "timestamp": "2026-07-18T15:26:57",
-        "line": "[15:26:57] [Server thread/INFO]: Villager Villager['Farmer'/186278, l='ServerLevel[world]', x=-91.58, y=69.00, z=-195.52] died, message: 'Farmer was slain by Zombie'"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[15:32:05] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T15:32:05"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[15:32:48] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-18T15:32:48"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[15:32:50] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-18T15:32:50"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[15:44:29] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-18T15:44:29"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[15:50:42] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T15:50:42"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[15:51:14] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T15:51:14"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[16:33:43] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-18T16:33:43"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[16:52:35] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-18T16:52:35"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[17:03:37] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T17:03:37"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[17:06:14] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-18T17:06:14"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[17:30:58] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-18T17:30:58"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[17:31:51] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T17:31:51"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[17:33:34] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T17:33:34"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[17:35:39] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T17:35:39"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[17:35:39] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T17:35:39"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[17:35:50] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T17:35:50"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[17:35:54] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T17:35:54"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Fisherman was slain by third_wheel",
-        "timestamp": "2026-07-18T17:41:45",
-        "line": "[17:41:45] [Server thread/INFO]: Villager Villager['Fisherman'/207146, l='ServerLevel[world]', x=43.70, y=63.00, z=-27.30] died, message: 'Fisherman was slain by third_wheel'"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[17:45:27] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-18T17:45:27"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[17:58:45] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T17:58:45"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[17:58:49] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T17:58:49"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[17:59:02] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T17:59:02"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[17:59:43] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T17:59:43"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[18:01:32] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T18:01:32"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[18:03:40] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T18:03:40"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[18:03:45] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T18:03:45"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was blown up by Creeper",
-        "timestamp": "2026-07-18T18:08:49",
-        "line": "[18:08:49] [Server thread/INFO]: Crazy_brosik was blown up by Creeper"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[18:09:48] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T18:09:48"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[18:09:57] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T18:09:57"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[18:12:50] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T18:12:50"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "hit the ground too hard",
-        "timestamp": "2026-07-18T18:13:15",
-        "line": "[18:13:15] [Server thread/INFO]: Crazy_brosik hit the ground too hard"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[18:13:35] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-18T18:13:35"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "burned to death",
-        "timestamp": "2026-07-18T18:16:11",
-        "line": "[18:16:11] [Server thread/INFO]: third_wheel burned to death"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[18:21:33] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T18:21:33"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[18:21:39] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T18:21:39"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[18:33:01] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T18:33:01"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[18:33:32] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T18:33:32"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[18:34:33] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T18:34:33"
-      },
-      {
-        "type": "death",
-        "player": "Kimyknot",
-        "message": "was slain by Zombie",
-        "timestamp": "2026-07-18T18:44:38",
-        "line": "[18:44:38] [Server thread/INFO]: Kimyknot was slain by Zombie"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager was slain by Zombie",
-        "timestamp": "2026-07-18T18:48:04",
-        "line": "[18:48:04] [Server thread/INFO]: Villager Villager['Villager'/207259, l='ServerLevel[world]', x=63.61, y=71.00, z=-2.54] died, message: 'Villager was slain by Zombie'"
-      },
-      {
-        "type": "death",
-        "player": "Kimyknot",
-        "message": "was shot by Skeleton",
-        "timestamp": "2026-07-18T18:49:14",
-        "line": "[18:49:14] [Server thread/INFO]: Kimyknot was shot by Skeleton"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[18:53:36] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T18:53:36"
-      },
-      {
-        "type": "death",
-        "player": "PenelopeWhynot",
-        "message": "tried to swim in lava to escape Skeleton",
-        "timestamp": "2026-07-18T19:01:00",
-        "line": "[19:01:00] [Server thread/INFO]: PenelopeWhynot tried to swim in lava to escape Skeleton"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "burned to death",
-        "timestamp": "2026-07-18T19:01:43",
-        "line": "[19:01:43] [Server thread/INFO]: Crazy_brosik burned to death"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:03:31] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T19:03:31"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[19:03:35] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-18T19:03:35"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[19:03:56] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-18T19:03:56"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:03:58] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T19:03:58"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:14:43] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T19:14:43"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:14:48] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T19:14:48"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[19:14:52] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-18T19:14:52"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:14:59] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T19:14:59"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:15:01] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T19:15:01"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[19:15:01] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-18T19:15:01"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[19:25:44] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-18T19:25:44"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:25:53] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T19:25:53"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:26:06] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T19:26:06"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[19:26:09] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-18T19:26:09"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:37:18] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T19:37:18"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:37:27] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T19:37:27"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Nitwit suffocated in a wall",
-        "timestamp": "2026-07-18T19:42:05",
-        "line": "[19:42:05] [Server thread/INFO]: Villager Villager['Nitwit'/271280, l='ServerLevel[world]', x=-970.28, y=81.56, z=-862.37] died, message: 'Nitwit suffocated in a wall'"
-      },
-      {
-        "type": "join",
-        "player": "DivineLight",
-        "line": "[19:45:02] [Server thread/INFO]: DivineLight joined the game",
-        "timestamp": "2026-07-18T19:45:02"
-      },
-      {
-        "type": "leave",
-        "player": "DivineLight",
-        "line": "[19:48:12] [Server thread/INFO]: DivineLight left the game",
-        "timestamp": "2026-07-18T19:48:12"
-      },
-      {
-        "type": "join",
-        "player": "DivineLight",
-        "line": "[19:48:21] [Server thread/INFO]: DivineLight joined the game",
-        "timestamp": "2026-07-18T19:48:21"
-      },
-      {
-        "type": "leave",
-        "player": "DivineLight",
-        "line": "[19:48:28] [Server thread/INFO]: DivineLight left the game",
-        "timestamp": "2026-07-18T19:48:28"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:48:31] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T19:48:31"
-      },
-      {
-        "type": "join",
-        "player": "DivineLight",
-        "line": "[19:48:35] [Server thread/INFO]: DivineLight joined the game",
-        "timestamp": "2026-07-18T19:48:35"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:48:37] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T19:48:37"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[19:49:19] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-18T19:49:19"
-      },
-      {
-        "type": "leave",
-        "player": "DivineLight",
-        "line": "[19:50:49] [Server thread/INFO]: DivineLight left the game",
-        "timestamp": "2026-07-18T19:50:49"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:50:57] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T19:50:57"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:52:14] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T19:52:14"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:54:04] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T19:54:04"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:54:42] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T19:54:42"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[19:56:46] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-18T19:56:46"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:58:39] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-18T19:58:39"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[20:04:16] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T20:04:16"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[20:06:08] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T20:06:08"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[20:10:10] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T20:10:10"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[20:10:53] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-18T20:10:53"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[20:11:45] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-18T20:11:45"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[20:14:11] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-18T20:14:11"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-18T20:16:18",
-        "line": "[20:16:18] [Server thread/INFO]: third_wheel fell from a high place"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-18T20:19:14",
-        "line": "[20:19:14] [Server thread/INFO]: Crazy_brosik fell from a high place"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager was slain by third_wheel",
-        "timestamp": "2026-07-18T20:23:33",
-        "line": "[20:23:33] [Server thread/INFO]: Villager Villager['Villager'/289184, l='ServerLevel[world]', x=25.18, y=75.25, z=-2.58] died, message: 'Villager was slain by third_wheel'"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[20:31:52] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T20:31:52"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager was slain by Ravager",
-        "timestamp": "2026-07-18T20:35:43",
-        "line": "[20:35:43] [Server thread/INFO]: Villager Villager['Villager'/207201, l='ServerLevel[world]', x=-31.30, y=63.00, z=-165.53] died, message: 'Villager was slain by Ravager'"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Mason was shot by Pillager",
-        "timestamp": "2026-07-18T20:35:57",
-        "line": "[20:35:57] [Server thread/INFO]: Villager Villager['Mason'/279454, l='ServerLevel[world]', x=11.49, y=70.94, z=-7.96] died, message: 'Mason was shot by Pillager'"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[20:43:07] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-18T20:43:07"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[20:43:22] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T20:43:22"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[20:44:02] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-18T20:44:02"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[20:51:55] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-18T20:51:55"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[21:00:25] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-18T21:00:25"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[21:00:30] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-18T21:00:30"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[21:02:37] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-18T21:02:37"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[21:22:11] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T21:22:11"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[21:32:07] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T21:32:07"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[21:42:57] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-18T21:42:57"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[22:23:49] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T22:23:49"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[22:24:45] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T22:24:45"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[22:26:14] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T22:26:14"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[22:27:29] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T22:27:29"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[22:37:11] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T22:37:11"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[22:39:28] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T22:39:28"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[22:41:51] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T22:41:51"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[22:42:01] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T22:42:01"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[22:43:27] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T22:43:27"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[23:02:54] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T23:02:54"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[23:08:11] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T23:08:11"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[23:20:11] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-18T23:20:11"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[23:45:51] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-18T23:45:51"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "timestamp": "2026-07-18T23:45:51",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[00:43:39] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-19T00:43:39"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[06:09:46] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-19T06:09:46"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[06:48:35] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-19T06:48:35"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[07:14:41] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-19T07:14:41"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[07:20:24] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T07:20:24"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "suffocated in a wall",
-        "timestamp": "2026-07-19T07:20:32",
-        "line": "[07:20:32] [Server thread/INFO]: Crazy_brosik suffocated in a wall"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[07:39:40] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-19T07:39:40"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[07:41:08] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T07:41:08"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[07:45:10] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T07:45:10"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[08:19:48] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T08:19:48"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[08:28:28] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-19T08:28:28"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[08:46:39] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T08:46:39"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[08:46:44] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T08:46:44"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[08:46:49] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T08:46:49"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[08:47:00] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T08:47:00"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[08:57:58] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T08:57:58"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[08:58:01] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T08:58:01"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[08:58:05] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T08:58:05"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[08:58:07] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T08:58:07"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[09:08:37] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T09:08:37"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[09:08:56] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T09:08:56"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[09:19:43] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T09:19:43"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[09:19:44] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T09:19:44"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[09:19:50] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T09:19:50"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[09:19:58] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T09:19:58"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-19T09:20:00",
-        "line": "[09:20:00] [Server thread/INFO]: third_wheel fell from a high place"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[09:21:58] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T09:21:58"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[09:30:39] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-19T09:30:39"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[09:32:29] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T09:32:29"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was slain by Zombie",
-        "timestamp": "2026-07-19T09:33:20",
-        "line": "[09:33:20] [Server thread/INFO]: Crazy_brosik was slain by Zombie"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[09:34:55] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T09:34:55"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[09:34:59] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T09:34:59"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[09:39:37] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-19T09:39:37"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[09:44:48] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-19T09:44:48"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[09:57:57] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-19T09:57:57"
-      },
-      {
-        "type": "death",
-        "player": "PenelopeWhynot",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-19T10:01:40",
-        "line": "[10:01:40] [Server thread/INFO]: PenelopeWhynot fell from a high place"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[10:07:56] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-19T10:07:56"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[10:12:33] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-19T10:12:33"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[10:20:23] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-19T10:20:23"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[10:23:52] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-19T10:23:52"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[10:47:45] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-19T10:47:45"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[10:48:21] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-19T10:48:21"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[11:42:49] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-19T11:42:49"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Farmer discovered the floor was lava",
-        "timestamp": "2026-07-19T11:43:02",
-        "line": "[11:43:02] [Server thread/INFO]: Villager Villager['Farmer'/410692, l='ServerLevel[world]', x=-26.48, y=54.00, z=-71.49] died, message: 'Farmer discovered the floor was lava'"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[12:00:24] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-19T12:00:24"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[12:01:59] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-19T12:01:59"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[12:45:28] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-19T12:45:28"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[12:49:35] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-19T12:49:35"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[13:09:42] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T13:09:42"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[13:10:33] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T13:10:33"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[13:10:50] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-19T13:10:50"
-      },
-      {
-        "type": "death",
-        "player": "PenelopeWhynot",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-19T13:12:32",
-        "line": "[13:12:32] [Server thread/INFO]: PenelopeWhynot fell from a high place"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[13:52:03] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-19T13:52:03"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[14:54:27] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-19T14:54:27"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[14:57:26] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-19T14:57:26"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[15:10:28] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-19T15:10:28"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[16:07:29] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-19T16:07:29"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[16:07:59] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-19T16:07:59"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[16:34:49] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-19T16:34:49"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[16:52:18] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T16:52:18"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[17:12:49] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-19T17:12:49"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was shot by Skeleton",
-        "timestamp": "2026-07-19T17:14:04",
-        "line": "[17:14:04] [Server thread/INFO]: Crazy_brosik was shot by Skeleton"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[17:26:29] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T17:26:29"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[17:32:37] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T17:32:37"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[17:32:44] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T17:32:44"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[17:44:02] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T17:44:02"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[17:44:30] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T17:44:30"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[17:51:12] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-19T17:51:12"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[17:56:11] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T17:56:11"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[17:56:25] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T17:56:25"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[18:03:30] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-19T18:03:30"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[18:07:11] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T18:07:11"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[18:07:19] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T18:07:19"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[18:07:24] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T18:07:24"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[18:07:24] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T18:07:24"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[18:07:26] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T18:07:26"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[18:07:31] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T18:07:31"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[18:10:36] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T18:10:36"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[18:11:00] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T18:11:00"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[18:28:21] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-19T18:28:21"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[18:54:35] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-19T18:54:35"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[18:56:24] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-19T18:56:24"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:18:43] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T19:18:43"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:23:04] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T19:23:04"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:23:10] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T19:23:10"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:33:41] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T19:33:41"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:33:58] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T19:33:58"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[19:45:08] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-19T19:45:08"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:47:56] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T19:47:56"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:48:02] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T19:48:02"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:57:15] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-19T19:57:15"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[19:58:31] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-19T19:58:31"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[20:06:18] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T20:06:18"
-      },
-      {
-        "type": "death",
-        "player": "Named",
-        "message": "entity Wolf['wazsxedrcftgyhujf'/499929, l='ServerLevel[world]', x=139.49, y=58.15, z=66.41] died: wazsxedrcftgyhujf drowned",
-        "timestamp": "2026-07-19T20:17:24",
-        "line": "[20:17:24] [Server thread/INFO]: Named entity Wolf['wazsxedrcftgyhujf'/499929, l='ServerLevel[world]', x=139.49, y=58.15, z=66.41] died: wazsxedrcftgyhujf drowned"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-19T20:25:46",
-        "line": "[20:25:46] [Server thread/INFO]: Villager Villager['Villager'/500055, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.56] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Slime",
-        "timestamp": "2026-07-19T20:26:57",
-        "line": "[20:26:57] [Server thread/INFO]: third_wheel was slain by Slime"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was shot by Stray",
-        "timestamp": "2026-07-19T20:32:20",
-        "line": "[20:32:20] [Server thread/INFO]: Crazy_brosik was shot by Stray"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was shot by Stray",
-        "timestamp": "2026-07-19T20:33:03",
-        "line": "[20:33:03] [Server thread/INFO]: third_wheel was shot by Stray"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Spider",
-        "timestamp": "2026-07-19T20:34:40",
-        "line": "[20:34:40] [Server thread/INFO]: third_wheel was slain by Spider"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Farmer drowned",
-        "timestamp": "2026-07-19T20:44:50",
-        "line": "[20:44:50] [Server thread/INFO]: Villager Villager['Farmer'/500056, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.61] died, message: 'Farmer drowned'"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Slime",
-        "timestamp": "2026-07-19T20:46:04",
-        "line": "[20:46:04] [Server thread/INFO]: third_wheel was slain by Slime"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[20:52:43] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T20:52:43"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[20:52:52] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T20:52:52"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[20:52:58] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T20:52:58"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[20:54:19] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-19T20:54:19"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[21:03:28] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-19T21:03:28"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[21:04:21] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-19T21:04:21"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[21:06:50] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T21:06:50"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[21:06:59] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-19T21:06:59"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[21:07:32] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-19T21:07:32"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[21:07:43] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-19T21:07:43"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[21:08:38] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-19T21:08:38"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[22:35:06] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-19T22:35:06"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[22:38:06] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-19T22:38:06"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[22:38:47] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-19T22:38:47"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[22:39:14] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-19T22:39:14"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[23:14:23] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-19T23:14:23"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "timestamp": "2026-07-19T23:38:36",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[00:58:58] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T00:58:58"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[06:25:47] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-20T06:25:47"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[07:37:38] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-20T07:37:38"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[07:39:29] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-20T07:39:29"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[08:01:46] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-20T08:01:46"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[08:08:21] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-20T08:08:21"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[08:10:38] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-20T08:10:38"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[08:31:27] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T08:31:27"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[08:31:35] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T08:31:35"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[08:55:00] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T08:55:00"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[09:53:14] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T09:53:14"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[10:01:03] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-20T10:01:03"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[10:06:47] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T10:06:47"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[10:23:16] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T10:23:16"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[10:23:22] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T10:23:22"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[10:23:44] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T10:23:44"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[11:24:29] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-20T11:24:29"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[11:56:49] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T11:56:49"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[12:05:02] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-20T12:05:02"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[12:15:54] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T12:15:54"
-      },
-      {
-        "type": "join",
-        "player": "DivineLight",
-        "line": "[12:29:02] [Server thread/INFO]: DivineLight joined the game",
-        "timestamp": "2026-07-20T12:29:02"
-      },
-      {
-        "type": "leave",
-        "player": "DivineLight",
-        "line": "[12:29:22] [Server thread/INFO]: DivineLight left the game",
-        "timestamp": "2026-07-20T12:29:22"
-      },
-      {
-        "type": "join",
-        "player": "DivineLight",
-        "line": "[12:29:25] [Server thread/INFO]: DivineLight joined the game",
-        "timestamp": "2026-07-20T12:29:25"
-      },
-      {
-        "type": "leave",
-        "player": "DivineLight",
-        "line": "[12:38:38] [Server thread/INFO]: DivineLight left the game",
-        "timestamp": "2026-07-20T12:38:38"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[12:40:04] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-20T12:40:04"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-20T13:02:14",
-        "line": "[13:02:14] [Server thread/INFO]: Villager Villager['Villager'/649961, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.56] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[13:14:00] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-20T13:14:00"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[13:29:27] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-20T13:29:27"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[13:30:58] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-20T13:30:58"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[13:32:06] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-20T13:32:06"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[13:34:55] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-20T13:34:55"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Farmer drowned",
-        "timestamp": "2026-07-20T13:35:41",
-        "line": "[13:35:41] [Server thread/INFO]: Villager Villager['Farmer'/662290, l='ServerLevel[world]', x=8.65, y=61.05, z=-189.13] died, message: 'Farmer drowned'"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[13:45:24] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-20T13:45:24"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[13:45:30] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-20T13:45:30"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[13:48:03] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T13:48:03"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[13:59:17] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T13:59:17"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[14:25:01] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-20T14:25:01"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[14:25:07] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-20T14:25:07"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[14:26:47] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-20T14:26:47"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[14:28:09] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-20T14:28:09"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[14:28:13] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-20T14:28:13"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[14:34:50] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-20T14:34:50"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-20T14:50:06",
-        "line": "[14:50:06] [Server thread/INFO]: Villager Villager['Villager'/689904, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.69] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[14:53:10] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-20T14:53:10"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[16:01:52] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T16:01:52"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[16:03:26] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T16:03:26"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[16:10:38] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T16:10:38"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[16:40:44] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-20T16:40:44"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-20T16:49:16",
-        "line": "[16:49:16] [Server thread/INFO]: Villager Villager['Villager'/700696, l='ServerLevel[world]', x=8.69, y=61.04, z=-188.90] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[17:27:51] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-20T17:27:51"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-20T17:28:47",
-        "line": "[17:28:47] [Server thread/INFO]: Villager Villager['Villager'/705536, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.54] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[17:33:06] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T17:33:06"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-20T17:52:24",
-        "line": "[17:52:24] [Server thread/INFO]: Crazy_brosik was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-20T18:15:01",
-        "line": "[18:15:01] [Server thread/INFO]: Crazy_brosik was slain by Iron Golem"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[18:24:21] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-20T18:24:21"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-20T18:52:22",
-        "line": "[18:52:22] [Server thread/INFO]: Crazy_brosik was slain by Iron Golem"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "timestamp": "2026-07-20T18:52:22",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[18:55:07] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T18:55:07"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[18:55:24] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-20T18:55:24"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[18:55:37] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T18:55:37"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-20T18:55:48",
-        "line": "[18:55:48] [Server thread/INFO]: Crazy_brosik fell from a high place"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:02:05] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T19:02:05"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:02:44] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T19:02:44"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:03:00] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T19:03:00"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:04:01] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T19:04:01"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:05:39] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-20T19:05:39"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:06:28] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-20T19:06:28"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:06:32] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-20T19:06:32"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[19:07:29] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-20T19:07:29"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[19:13:08] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-20T19:13:08"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[19:15:23] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-20T19:15:23"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager was slain by PenelopeWhynot",
-        "timestamp": "2026-07-20T19:18:44",
-        "line": "[19:18:44] [Server thread/INFO]: Villager Villager['Villager'/35, l='ServerLevel[world]', x=-35.97, y=68.00, z=-8.33] died, message: 'Villager was slain by PenelopeWhynot'"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Farmer was slain by third_wheel",
-        "timestamp": "2026-07-20T19:19:34",
-        "line": "[19:19:34] [Server thread/INFO]: Villager Villager['Farmer'/433, l='ServerLevel[world]', x=-104.81, y=67.00, z=22.85] died, message: 'Farmer was slain by third_wheel'"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Toolsmith was slain by third_wheel",
-        "timestamp": "2026-07-20T19:19:57",
-        "line": "[19:19:57] [Server thread/INFO]: Villager Villager['Toolsmith'/431, l='ServerLevel[world]', x=-117.30, y=70.00, z=35.59] died, message: 'Toolsmith was slain by third_wheel'"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was shot by PenelopeWhynot",
-        "timestamp": "2026-07-20T19:21:07",
-        "line": "[19:21:07] [Server thread/INFO]: third_wheel was shot by PenelopeWhynot"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[19:22:20] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T19:22:20"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-20T19:22:59",
-        "line": "[19:22:59] [Server thread/INFO]: Crazy_brosik was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Mason was slain by third_wheel",
-        "timestamp": "2026-07-20T19:28:51",
-        "line": "[19:28:51] [Server thread/INFO]: Villager Villager['Mason'/145, l='ServerLevel[world]', x=-34.15, y=68.60, z=-9.70] died, message: 'Mason was slain by third_wheel'"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "tried to swim in lava",
-        "timestamp": "2026-07-20T19:34:31",
-        "line": "[19:34:31] [Server thread/INFO]: third_wheel tried to swim in lava"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:40:42] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T19:40:42"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[19:41:20] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-20T19:41:20"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[19:47:46] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-20T19:47:46"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:48:28] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-20T19:48:28"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[19:58:27] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-20T19:58:27"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:58:27] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-20T19:58:27"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[19:59:35] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T19:59:35"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-20T20:02:58",
-        "line": "[20:02:58] [Server thread/INFO]: Villager Villager['Villager'/25464, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.37] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "death",
-        "player": "Kimyknot",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-20T20:23:38",
-        "line": "[20:23:38] [Server thread/INFO]: Kimyknot was slain by Iron Golem"
-      },
-      {
-        "type": "join",
-        "player": "DivineLight",
-        "line": "[20:44:14] [Server thread/INFO]: DivineLight joined the game",
-        "timestamp": "2026-07-20T20:44:14"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[20:48:46] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-20T20:48:46"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[20:48:53] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-20T20:48:53"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[20:53:32] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-20T20:53:32"
-      },
-      {
-        "type": "leave",
-        "player": "DivineLight",
-        "line": "[20:56:33] [Server thread/INFO]: DivineLight left the game",
-        "timestamp": "2026-07-20T20:56:33"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[21:52:35] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-20T21:52:35"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[22:09:21] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-20T22:09:21"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[23:08:35] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-20T23:08:35"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "timestamp": "2026-07-20T23:51:50",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[07:49:24] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-21T07:49:24"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[07:58:02] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-21T07:58:02"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[08:12:21] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-21T08:12:21"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[08:16:27] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T08:16:27"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[08:20:41] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T08:20:41"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[08:21:08] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T08:21:08"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[08:57:04] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-21T08:57:04"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[09:03:19] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T09:03:19"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[09:47:33] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-21T09:47:33"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[10:15:07] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-21T10:15:07"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[11:41:32] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-21T11:41:32"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[11:45:47] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-21T11:45:47"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[12:24:03] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-21T12:24:03"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[12:24:18] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-21T12:24:18"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[12:24:58] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T12:24:58"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[12:27:45] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T12:27:45"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[12:27:49] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T12:27:49"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[12:32:13] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-21T12:32:13"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Farmer drowned",
-        "timestamp": "2026-07-21T12:32:33",
-        "line": "[12:32:33] [Server thread/INFO]: Villager Villager['Farmer'/1891, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.53] died, message: 'Farmer drowned'"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-21T12:36:57",
-        "line": "[12:36:57] [Server thread/INFO]: Villager Villager['Villager'/1894, l='ServerLevel[world]', x=8.31, y=61.05, z=-189.00] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[12:39:22] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-21T12:39:22"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[12:44:17] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T12:44:17"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-21T12:49:50",
-        "line": "[12:49:50] [Server thread/INFO]: Crazy_brosik fell from a high place"
-      },
-      {
-        "type": "leave",
-        "player": "BobEvansSausage",
-        "line": "[12:49:51] [Server thread/INFO]: BobEvansSausage left the game",
-        "timestamp": "2026-07-21T12:49:51"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Zombie",
-        "timestamp": "2026-07-21T12:51:10",
-        "line": "[12:51:10] [Server thread/INFO]: third_wheel was slain by Zombie"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[12:54:36] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T12:54:36"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[12:54:41] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T12:54:41"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was impaled on a stalagmite",
-        "timestamp": "2026-07-21T12:56:30",
-        "line": "[12:56:30] [Server thread/INFO]: third_wheel was impaled on a stalagmite"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Librarian was slain by third_wheel",
-        "timestamp": "2026-07-21T13:08:27",
-        "line": "[13:08:27] [Server thread/INFO]: Villager Villager['Librarian'/1533, l='ServerLevel[world]', x=-22.82, y=63.00, z=-31.38] died, message: 'Librarian was slain by third_wheel'"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-21T13:09:53",
-        "line": "[13:09:53] [Server thread/INFO]: Villager Villager['Villager'/4568, l='ServerLevel[world]', x=8.45, y=61.05, z=-188.85] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T13:14:39",
-        "line": "[13:14:39] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[13:16:11] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-21T13:16:11"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[13:16:38] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T13:16:38"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[13:16:43] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T13:16:43"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[13:16:46] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T13:16:46"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[13:16:51] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T13:16:51"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[13:19:15] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-21T13:19:15"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Mason was slain by third_wheel",
-        "timestamp": "2026-07-21T13:20:43",
-        "line": "[13:20:43] [Server thread/INFO]: Villager Villager['Mason'/1665, l='ServerLevel[world]', x=74.62, y=67.00, z=-32.71] died, message: 'Mason was slain by third_wheel'"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T13:24:51",
-        "line": "[13:24:51] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T13:26:14",
-        "line": "[13:26:14] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T13:26:44",
-        "line": "[13:26:44] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T13:27:21",
-        "line": "[13:27:21] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "drowned",
-        "timestamp": "2026-07-21T13:29:02",
-        "line": "[13:29:02] [Server thread/INFO]: third_wheel drowned"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[13:38:36] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-21T13:38:36"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[13:38:49] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-21T13:38:49"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-21T13:39:54",
-        "line": "[13:39:54] [Server thread/INFO]: Villager Villager['Villager'/2633, l='ServerLevel[world]', x=8.70, y=61.05, z=-189.13] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[13:40:36] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-21T13:40:36"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[13:50:39] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T13:50:39"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "line": "[13:52:17] [Server thread/INFO]: I_AM_GAY__ left the game",
-        "timestamp": "2026-07-21T13:52:17"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[13:52:54] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T13:52:54"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[14:20:34] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-21T14:20:34"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[14:20:39] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-21T14:20:39"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[14:23:44] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-21T14:23:44"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[14:26:42] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-21T14:26:42"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "line": "[14:57:22] [Server thread/INFO]: I_AM_GAY__ left the game",
-        "timestamp": "2026-07-21T14:57:22"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[14:59:19] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-21T14:59:19"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager drowned",
-        "timestamp": "2026-07-21T15:03:09",
-        "line": "[15:03:09] [Server thread/INFO]: Villager Villager['Villager'/4571, l='ServerLevel[world]', x=8.30, y=61.05, z=-188.88] died, message: 'Villager drowned'"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[15:09:01] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-21T15:09:01"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[15:37:06] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T15:37:06"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "line": "[15:40:23] [Server thread/INFO]: I_AM_GAY__ left the game",
-        "timestamp": "2026-07-21T15:40:23"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[15:40:34] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T15:40:34"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "line": "[15:53:02] [Server thread/INFO]: I_AM_GAY__ left the game",
-        "timestamp": "2026-07-21T15:53:02"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Villager suffocated in a wall",
-        "timestamp": "2026-07-21T16:01:25",
-        "line": "[16:01:25] [Server thread/INFO]: Villager Villager['Villager'/75485, l='ServerLevel[world]', x=-1413.72, y=72.56, z=-921.63] died, message: 'Villager suffocated in a wall'"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[16:03:23] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T16:03:23"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[16:04:14] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T16:04:14"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[16:04:16] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T16:04:16"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[16:04:17] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T16:04:17"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[16:04:18] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T16:04:18"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[16:12:23] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-21T16:12:23"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[16:19:21] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T16:19:21"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[16:19:26] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T16:19:26"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[16:19:28] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T16:19:28"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[16:19:32] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T16:19:32"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[16:27:36] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T16:27:36"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[16:29:06] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T16:29:06"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[16:39:46] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-21T16:39:46"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[16:39:47] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-21T16:39:47"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Farmer drowned",
-        "timestamp": "2026-07-21T16:43:58",
-        "line": "[16:43:58] [Server thread/INFO]: Villager Villager['Farmer'/88256, l='ServerLevel[world]', x=8.30, y=61.05, z=-189.24] died, message: 'Farmer drowned'"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[16:53:33] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-21T16:53:33"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "line": "[16:58:10] [Server thread/INFO]: I_AM_GAY__ left the game",
-        "timestamp": "2026-07-21T16:58:10"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[17:27:36] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-21T17:27:36"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[17:31:06] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T17:31:06"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[17:58:52] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-21T17:58:52"
-      },
-      {
-        "type": "join",
-        "player": "BobEvansSausage",
-        "line": "[18:02:33] [Server thread/INFO]: BobEvansSausage joined the game",
-        "timestamp": "2026-07-21T18:02:33"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[18:07:34] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-21T18:07:34"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[18:08:23] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T18:08:23"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[18:09:00] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-21T18:09:00"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "fell off some vines",
-        "timestamp": "2026-07-21T18:16:52",
-        "line": "[18:16:52] [Server thread/INFO]: third_wheel fell off some vines"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "line": "[18:17:40] [Server thread/INFO]: I_AM_GAY__ left the game",
-        "timestamp": "2026-07-21T18:17:40"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[18:19:27] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T18:19:27"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[18:29:33] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-21T18:29:33"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[18:31:58] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-21T18:31:58"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "drowned",
-        "timestamp": "2026-07-21T18:36:06",
-        "line": "[18:36:06] [Server thread/INFO]: third_wheel drowned"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[18:36:38] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-21T18:36:38"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-21T18:40:59",
-        "line": "[18:40:59] [Server thread/INFO]: third_wheel fell from a high place"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[18:41:14] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-21T18:41:14"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[18:41:58] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-21T18:41:58"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:52:00",
-        "line": "[18:52:00] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:52:31",
-        "line": "[18:52:31] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[18:53:22] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-21T18:53:22"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:54:58",
-        "line": "[18:54:58] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:55:10",
-        "line": "[18:55:10] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:55:24",
-        "line": "[18:55:24] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:55:33",
-        "line": "[18:55:33] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:55:46",
-        "line": "[18:55:46] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:55:53",
-        "line": "[18:55:53] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:56:02",
-        "line": "[18:56:02] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:56:08",
-        "line": "[18:56:08] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:56:17",
-        "line": "[18:56:17] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:56:24",
-        "line": "[18:56:24] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:56:51",
-        "line": "[18:56:51] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:57:01",
-        "line": "[18:57:01] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:57:19",
-        "line": "[18:57:19] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T18:58:16",
-        "line": "[18:58:16] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-21T19:00:37",
-        "line": "[19:00:37] [Server thread/INFO]: third_wheel fell from a high place"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "was slain by Iron Golem",
-        "timestamp": "2026-07-21T19:00:52",
-        "line": "[19:00:52] [Server thread/INFO]: third_wheel was slain by Iron Golem"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:04:39] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T19:04:39"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:04:45] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T19:04:45"
-      },
-      {
-        "type": "leave",
-        "player": "BobEvansSausage",
-        "line": "[19:04:51] [Server thread/INFO]: BobEvansSausage left the game",
-        "timestamp": "2026-07-21T19:04:51"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:04:52] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T19:04:52"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:05:02] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T19:05:02"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:05:06] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T19:05:06"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:05:20] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T19:05:20"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:05:22] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T19:05:22"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:05:27] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T19:05:27"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:05:30] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T19:05:30"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:05:41] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T19:05:41"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[19:05:44] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T19:05:44"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:05:51] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T19:05:51"
-      },
-      {
-        "type": "death",
-        "player": "Villager",
-        "message": "Toolsmith was slain by Zombie",
-        "timestamp": "2026-07-21T19:06:07",
-        "line": "[19:06:07] [Server thread/INFO]: Villager Villager['Toolsmith'/82440, l='ServerLevel[world]', x=-22.18, y=68.00, z=44.18] died, message: 'Toolsmith was slain by Zombie'"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "drowned",
-        "timestamp": "2026-07-21T19:06:45",
-        "line": "[19:06:45] [Server thread/INFO]: third_wheel drowned"
-      },
-      {
-        "type": "join",
-        "player": "BobEvansSausage",
-        "line": "[19:08:25] [Server thread/INFO]: BobEvansSausage joined the game",
-        "timestamp": "2026-07-21T19:08:25"
-      },
-      {
-        "type": "leave",
-        "player": "BobEvansSausage",
-        "line": "[19:16:44] [Server thread/INFO]: BobEvansSausage left the game",
-        "timestamp": "2026-07-21T19:16:44"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was slain by Drowned",
-        "timestamp": "2026-07-21T19:17:07",
-        "line": "[19:17:07] [Server thread/INFO]: Crazy_brosik was slain by Drowned"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "timestamp": "2026-07-21T19:17:14",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "timestamp": "2026-07-21T19:17:14",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "timestamp": "2026-07-21T19:17:14",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "timestamp": "2026-07-21T19:17:14",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "timestamp": "2026-07-21T19:17:14",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "timestamp": "2026-07-21T19:17:14",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "timestamp": "2026-07-21T19:17:14",
-        "synthetic": true,
-        "reason": "server_crash"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[19:18:43] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-21T19:18:43"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:18:43] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T19:18:43"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[19:19:00] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-21T19:19:00"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[19:19:17] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-21T19:19:17"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:19:19] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-21T19:19:19"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[19:19:22] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T19:19:22"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[19:19:23] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T19:19:23"
-      },
-      {
-        "type": "join",
-        "player": "Kimyknot",
-        "line": "[19:19:38] [Server thread/INFO]: Kimyknot joined the game",
-        "timestamp": "2026-07-21T19:19:38"
-      },
-      {
-        "type": "join",
-        "player": "BobEvansSausage",
-        "line": "[19:20:21] [Server thread/INFO]: BobEvansSausage joined the game",
-        "timestamp": "2026-07-21T19:20:21"
-      },
-      {
-        "type": "join",
-        "player": "Drewyknot",
-        "line": "[19:21:06] [Server thread/INFO]: Drewyknot joined the game",
-        "timestamp": "2026-07-21T19:21:06"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[19:21:07] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-21T19:21:07"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[19:21:43] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-21T19:21:43"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[19:25:14] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-21T19:25:14"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was doomed to fall by BobEvansSausage",
-        "timestamp": "2026-07-21T19:32:23",
-        "line": "[19:32:23] [Server thread/INFO]: Crazy_brosik was doomed to fall by BobEvansSausage"
-      },
-      {
-        "type": "death",
-        "player": "BobEvansSausage",
-        "message": "was slain by Crazy_brosik",
-        "timestamp": "2026-07-21T19:33:59",
-        "line": "[19:33:59] [Server thread/INFO]: BobEvansSausage was slain by Crazy_brosik"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "line": "[19:41:07] [Server thread/INFO]: I_AM_GAY__ left the game",
-        "timestamp": "2026-07-21T19:41:07"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[19:41:27] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T19:41:27"
-      },
-      {
-        "type": "join",
-        "player": "PenelopeWhynot",
-        "line": "[19:59:20] [Server thread/INFO]: PenelopeWhynot joined the game",
-        "timestamp": "2026-07-21T19:59:20"
-      },
-      {
-        "type": "leave",
-        "player": "Drewyknot",
-        "line": "[20:03:31] [Server thread/INFO]: Drewyknot left the game",
-        "timestamp": "2026-07-21T20:03:31"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was doomed to fall by PenelopeWhynot",
-        "timestamp": "2026-07-21T20:09:44",
-        "line": "[20:09:44] [Server thread/INFO]: Crazy_brosik was doomed to fall by PenelopeWhynot"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[20:15:17] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T20:15:17"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[20:15:22] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T20:15:22"
-      },
-      {
-        "type": "death",
-        "player": "Crazy_brosik",
-        "message": "was slain by PenelopeWhynot",
-        "timestamp": "2026-07-21T20:17:25",
-        "line": "[20:17:25] [Server thread/INFO]: Crazy_brosik was slain by PenelopeWhynot"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[20:25:32] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T20:25:32"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[20:25:40] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T20:25:40"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[20:25:44] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T20:25:44"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[20:25:50] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T20:25:50"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[20:25:55] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T20:25:55"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[20:25:58] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T20:25:58"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[20:34:53] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-21T20:34:53"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[20:47:51] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T20:47:51"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "line": "[20:47:53] [Server thread/INFO]: I_AM_GAY__ left the game",
-        "timestamp": "2026-07-21T20:47:53"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[20:47:56] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-21T20:47:56"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[20:47:59] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T20:47:59"
-      },
-      {
-        "type": "join",
-        "player": "I_AM_GAY__",
-        "line": "[20:48:00] [Server thread/INFO]: I_AM_GAY__ joined the game",
-        "timestamp": "2026-07-21T20:48:00"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[20:48:04] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-21T20:48:04"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[20:59:04] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-21T20:59:04"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[20:59:10] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T20:59:10"
-      },
-      {
-        "type": "join",
-        "player": "third_wheel",
-        "line": "[20:59:13] [Server thread/INFO]: third_wheel joined the game",
-        "timestamp": "2026-07-21T20:59:13"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[20:59:13] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T20:59:13"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[21:00:19] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-21T21:00:19"
-      },
-      {
-        "type": "join",
-        "player": "R3B3X",
-        "line": "[21:00:19] [Server thread/INFO]: R3B3X joined the game",
-        "timestamp": "2026-07-21T21:00:19"
-      },
-      {
-        "type": "leave",
-        "player": "Kimyknot",
-        "line": "[21:05:11] [Server thread/INFO]: Kimyknot left the game",
-        "timestamp": "2026-07-21T21:05:11"
-      },
-      {
-        "type": "leave",
-        "player": "I_AM_GAY__",
-        "line": "[21:05:45] [Server thread/INFO]: I_AM_GAY__ left the game",
-        "timestamp": "2026-07-21T21:05:45"
-      },
-      {
-        "type": "leave",
-        "player": "PenelopeWhynot",
-        "line": "[21:09:42] [Server thread/INFO]: PenelopeWhynot left the game",
-        "timestamp": "2026-07-21T21:09:42"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[21:11:03] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T21:11:03"
-      },
-      {
-        "type": "leave",
-        "player": "BobEvansSausage",
-        "line": "[21:11:07] [Server thread/INFO]: BobEvansSausage left the game",
-        "timestamp": "2026-07-21T21:11:07"
-      },
-      {
-        "type": "join",
-        "player": "Crazy_brosik",
-        "line": "[21:11:11] [Server thread/INFO]: Crazy_brosik joined the game",
-        "timestamp": "2026-07-21T21:11:11"
-      },
-      {
-        "type": "join",
-        "player": "BobEvansSausage",
-        "line": "[21:11:17] [Server thread/INFO]: BobEvansSausage joined the game",
-        "timestamp": "2026-07-21T21:11:17"
-      },
-      {
-        "type": "leave",
-        "player": "Crazy_brosik",
-        "line": "[21:14:19] [Server thread/INFO]: Crazy_brosik left the game",
-        "timestamp": "2026-07-21T21:14:19"
-      },
-      {
-        "type": "death",
-        "player": "third_wheel",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-21T21:18:50",
-        "line": "[21:18:50] [Server thread/INFO]: third_wheel fell from a high place"
-      },
-      {
-        "type": "leave",
-        "player": "R3B3X",
-        "line": "[21:19:58] [Server thread/INFO]: R3B3X left the game",
-        "timestamp": "2026-07-21T21:19:58"
-      },
-      {
-        "type": "leave",
-        "player": "third_wheel",
-        "line": "[21:22:12] [Server thread/INFO]: third_wheel left the game",
-        "timestamp": "2026-07-21T21:22:12"
-      },
-      {
-        "type": "leave",
-        "player": "BobEvansSausage",
-        "line": "[21:23:43] [Server thread/INFO]: BobEvansSausage left the game",
-        "timestamp": "2026-07-21T21:23:43"
-      }
-    ],
-    "sessions": {
-      "BobEvansSausage": {
-        "joins": 5,
-        "leaves": 6
-      },
-      "PenelopeWhynot": {
-        "joins": 40,
-        "leaves": 41
-      },
-      "Crazy_brosik": {
-        "joins": 70,
-        "leaves": 69
-      },
-      "Drewyknot": {
-        "joins": 21,
-        "leaves": 21
-      },
-      "Kimyknot": {
-        "joins": 25,
-        "leaves": 25
-      },
-      "third_wheel": {
-        "joins": 43,
-        "leaves": 43
-      },
-      "R3B3X": {
-        "joins": 36,
-        "leaves": 36
-      },
-      "DivineLight": {
-        "joins": 6,
-        "leaves": 6
-      },
-      "I_AM_GAY__": {
-        "joins": 10,
-        "leaves": 10
-      }
-    },
     "log_date": "2026-07-21",
     "crashes": [
-      {
-        "type": "crash",
-        "timestamp": "2026-07-18T23:45:51"
-      },
-      {
-        "type": "crash",
-        "timestamp": "2026-07-19T23:38:36"
-      },
-      {
-        "type": "crash",
-        "timestamp": "2026-07-20T18:52:22"
-      },
-      {
-        "type": "crash",
-        "timestamp": "2026-07-20T23:51:50"
-      },
       {
         "type": "crash",
         "timestamp": "2026-07-21T19:17:14"
       }
     ],
     "server_sessions": [
-      {
-        "startTime": "2026-07-17T16:54:28",
-        "endTime": "2026-07-17T16:56:31"
-      },
-      {
-        "startTime": "2026-07-17T16:57:24",
-        "endTime": "2026-07-17T16:57:50"
-      },
-      {
-        "startTime": "2026-07-20T18:52:22",
-        "endTime": "2026-07-20T18:55:03"
-      },
-      {
-        "startTime": "2026-07-20T23:51:50",
-        "endTime": "2026-07-21T07:04:06"
-      },
       {
         "startTime": "2026-07-21T12:05:04",
         "endTime": "2026-07-21T12:05:34"
@@ -24356,6 +20448,640 @@
         "startTime": "2026-07-21T21:28:18",
         "endTime": "2026-07-21T21:28:30"
       }
+    ],
+    "player_sessions": [
+      {
+        "player": "PenelopeWhynot",
+        "login_time": "2026-07-21T23:03:46",
+        "logout_time": null
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T21:41:55",
+        "logout_time": "2026-07-21T21:55:59"
+      },
+      {
+        "player": "PenelopeWhynot",
+        "login_time": "2026-07-21T21:41:27",
+        "logout_time": "2026-07-21T21:49:36"
+      },
+      {
+        "player": "BobEvansSausage",
+        "login_time": "2026-07-21T21:30:04",
+        "logout_time": "2026-07-21T21:38:57"
+      },
+      {
+        "player": "BobEvansSausage",
+        "login_time": "2026-07-21T21:11:17",
+        "logout_time": "2026-07-21T21:23:43"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T21:11:11",
+        "logout_time": "2026-07-21T21:14:19"
+      },
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-21T21:00:19",
+        "logout_time": "2026-07-21T21:19:58"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T20:59:13",
+        "logout_time": "2026-07-21T21:11:03"
+      },
+      {
+        "player": "third_wheel",
+        "login_time": "2026-07-21T20:59:13",
+        "logout_time": "2026-07-21T21:22:12"
+      },
+      {
+        "player": "third_wheel",
+        "login_time": "2026-07-21T20:48:04",
+        "logout_time": "2026-07-21T20:59:04"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T20:48:00",
+        "logout_time": "2026-07-21T21:05:45"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T20:47:59",
+        "logout_time": "2026-07-21T20:59:10"
+      },
+      {
+        "player": "third_wheel",
+        "login_time": "2026-07-21T20:34:53",
+        "logout_time": "2026-07-21T20:47:56"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T20:25:58",
+        "logout_time": "2026-07-21T20:47:51"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T20:25:50",
+        "logout_time": "2026-07-21T20:25:55"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T20:25:40",
+        "logout_time": "2026-07-21T20:25:44"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T20:15:22",
+        "logout_time": "2026-07-21T20:25:32"
+      },
+      {
+        "player": "PenelopeWhynot",
+        "login_time": "2026-07-21T19:59:20",
+        "logout_time": "2026-07-21T21:09:42"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T19:41:27",
+        "logout_time": "2026-07-21T20:47:53"
+      },
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-21T19:21:43",
+        "logout_time": "2026-07-21T21:00:19"
+      },
+      {
+        "player": "Drewyknot",
+        "login_time": "2026-07-21T19:21:06",
+        "logout_time": "2026-07-21T20:03:31"
+      },
+      {
+        "player": "BobEvansSausage",
+        "login_time": "2026-07-21T19:20:21",
+        "logout_time": "2026-07-21T21:11:07"
+      },
+      {
+        "player": "Kimyknot",
+        "login_time": "2026-07-21T19:19:38",
+        "logout_time": "2026-07-21T21:05:11"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T19:19:23",
+        "logout_time": "2026-07-21T20:15:17"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T19:19:22",
+        "logout_time": "2026-07-21T19:41:07"
+      },
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-21T19:19:19",
+        "logout_time": "2026-07-21T19:21:07"
+      },
+      {
+        "player": "PenelopeWhynot",
+        "login_time": "2026-07-21T19:19:17",
+        "logout_time": "2026-07-21T19:25:14"
+      },
+      {
+        "player": "PenelopeWhynot",
+        "login_time": "2026-07-21T19:18:43",
+        "logout_time": "2026-07-21T19:19:00"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T19:18:43",
+        "logout_time": "2026-07-21T19:19:23"
+      },
+      {
+        "player": "BobEvansSausage",
+        "login_time": "2026-07-21T19:08:25",
+        "logout_time": "2026-07-21T19:16:44"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T19:05:51",
+        "logout_time": "2026-07-21T19:17:14"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T19:05:41",
+        "logout_time": "2026-07-21T19:05:44"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T19:05:27",
+        "logout_time": "2026-07-21T19:05:30"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T19:05:20",
+        "logout_time": "2026-07-21T19:05:22"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T19:05:02",
+        "logout_time": "2026-07-21T19:05:06"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T19:04:45",
+        "logout_time": "2026-07-21T19:04:52"
+      },
+      {
+        "player": "PenelopeWhynot",
+        "login_time": "2026-07-21T18:53:22",
+        "logout_time": "2026-07-21T19:17:14"
+      },
+      {
+        "player": "Drewyknot",
+        "login_time": "2026-07-21T18:41:58",
+        "logout_time": "2026-07-21T19:17:14"
+      },
+      {
+        "player": "PenelopeWhynot",
+        "login_time": "2026-07-21T18:31:58",
+        "logout_time": "2026-07-21T18:36:38"
+      },
+      {
+        "player": "Drewyknot",
+        "login_time": "2026-07-21T18:29:33",
+        "logout_time": "2026-07-21T18:41:14"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T18:19:27",
+        "logout_time": "2026-07-21T19:17:14"
+      },
+      {
+        "player": "third_wheel",
+        "login_time": "2026-07-21T18:09:00",
+        "logout_time": "2026-07-21T19:17:14"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T18:08:23",
+        "logout_time": "2026-07-21T19:04:39"
+      },
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-21T18:07:34",
+        "logout_time": "2026-07-21T19:17:14"
+      },
+      {
+        "player": "BobEvansSausage",
+        "login_time": "2026-07-21T18:02:33",
+        "logout_time": "2026-07-21T19:04:51"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T17:31:06",
+        "logout_time": "2026-07-21T18:17:40"
+      },
+      {
+        "player": "Kimyknot",
+        "login_time": "2026-07-21T16:53:33",
+        "logout_time": "2026-07-21T19:17:14"
+      },
+      {
+        "player": "Drewyknot",
+        "login_time": "2026-07-21T16:39:47",
+        "logout_time": "2026-07-21T17:58:52"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T16:29:06",
+        "logout_time": "2026-07-21T16:58:10"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T16:19:32",
+        "logout_time": "2026-07-21T16:27:36"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T16:19:26",
+        "logout_time": "2026-07-21T16:19:28"
+      },
+      {
+        "player": "PenelopeWhynot",
+        "login_time": "2026-07-21T16:12:23",
+        "logout_time": "2026-07-21T17:27:36"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T16:04:18",
+        "logout_time": "2026-07-21T16:19:21"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T16:04:16",
+        "logout_time": "2026-07-21T16:04:17"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T16:03:23",
+        "logout_time": "2026-07-21T16:04:14"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T15:40:34",
+        "logout_time": "2026-07-21T15:53:02"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T15:37:06",
+        "logout_time": "2026-07-21T15:40:23"
+      },
+      {
+        "player": "Drewyknot",
+        "login_time": "2026-07-21T14:26:42",
+        "logout_time": "2026-07-21T15:09:01"
+      },
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-21T14:23:44",
+        "logout_time": "2026-07-21T14:59:19"
+      },
+      {
+        "player": "Kimyknot",
+        "login_time": "2026-07-21T14:20:34",
+        "logout_time": "2026-07-21T16:39:46"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T13:52:54",
+        "logout_time": "2026-07-21T14:57:22"
+      },
+      {
+        "player": "third_wheel",
+        "login_time": "2026-07-21T13:38:49",
+        "logout_time": "2026-07-21T13:40:36"
+      },
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-21T13:19:15",
+        "logout_time": "2026-07-21T14:20:39"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T13:16:51",
+        "logout_time": "2026-07-21T13:50:39"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T13:16:43",
+        "logout_time": "2026-07-21T13:16:46"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T12:54:41",
+        "logout_time": "2026-07-21T13:16:38"
+      },
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-21T12:44:17",
+        "logout_time": "2026-07-21T13:52:17"
+      },
+      {
+        "player": "third_wheel",
+        "login_time": "2026-07-21T12:39:22",
+        "logout_time": "2026-07-21T13:38:36"
+      },
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-21T12:32:13",
+        "logout_time": "2026-07-21T13:16:11"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T12:27:49",
+        "logout_time": "2026-07-21T12:54:36"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T12:24:58",
+        "logout_time": "2026-07-21T12:27:45"
+      },
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-21T12:24:03",
+        "logout_time": "2026-07-21T12:24:18"
+      },
+      {
+        "player": "Kimyknot",
+        "login_time": "2026-07-21T11:41:32",
+        "logout_time": "2026-07-21T11:45:47"
+      },
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-21T09:47:33",
+        "logout_time": "2026-07-21T10:15:07"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T08:21:08",
+        "logout_time": "2026-07-21T09:03:19"
+      },
+      {
+        "player": "Crazy_brosik",
+        "login_time": "2026-07-21T08:16:27",
+        "logout_time": "2026-07-21T08:20:41"
+      },
+      {
+        "player": "Kimyknot",
+        "login_time": "2026-07-21T07:58:02",
+        "logout_time": "2026-07-21T08:12:21"
+      },
+      {
+        "player": "Drewyknot",
+        "login_time": "2026-07-21T07:49:24",
+        "logout_time": "2026-07-21T08:57:04"
+      }
+    ],
+    "deaths": [
+      {
+        "player": "Villager",
+        "message": "Farmer drowned",
+        "timestamp": "2026-07-21T12:32:33"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager drowned",
+        "timestamp": "2026-07-21T12:36:57"
+      },
+      {
+        "player": "Crazy_brosik",
+        "message": "fell from a high place",
+        "timestamp": "2026-07-21T12:49:50"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Zombie",
+        "timestamp": "2026-07-21T12:51:10"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was impaled on a stalagmite",
+        "timestamp": "2026-07-21T12:56:30"
+      },
+      {
+        "player": "Villager",
+        "message": "Librarian was slain by third_wheel",
+        "timestamp": "2026-07-21T13:08:27"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager drowned",
+        "timestamp": "2026-07-21T13:09:53"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T13:14:39"
+      },
+      {
+        "player": "Villager",
+        "message": "Mason was slain by third_wheel",
+        "timestamp": "2026-07-21T13:20:43"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T13:24:51"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T13:26:14"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T13:26:44"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T13:27:21"
+      },
+      {
+        "player": "third_wheel",
+        "message": "drowned",
+        "timestamp": "2026-07-21T13:29:02"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager drowned",
+        "timestamp": "2026-07-21T13:39:54"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager drowned",
+        "timestamp": "2026-07-21T15:03:09"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager suffocated in a wall",
+        "timestamp": "2026-07-21T16:01:25"
+      },
+      {
+        "player": "Villager",
+        "message": "Farmer drowned",
+        "timestamp": "2026-07-21T16:43:58"
+      },
+      {
+        "player": "third_wheel",
+        "message": "fell off some vines",
+        "timestamp": "2026-07-21T18:16:52"
+      },
+      {
+        "player": "third_wheel",
+        "message": "drowned",
+        "timestamp": "2026-07-21T18:36:06"
+      },
+      {
+        "player": "third_wheel",
+        "message": "fell from a high place",
+        "timestamp": "2026-07-21T18:40:59"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:52:00"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:52:31"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:54:58"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:55:10"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:55:24"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:55:33"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:55:46"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:55:53"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:56:02"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:56:08"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:56:17"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:56:24"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:56:51"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:57:01"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:57:19"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T18:58:16"
+      },
+      {
+        "player": "third_wheel",
+        "message": "fell from a high place",
+        "timestamp": "2026-07-21T19:00:37"
+      },
+      {
+        "player": "third_wheel",
+        "message": "was slain by Iron Golem",
+        "timestamp": "2026-07-21T19:00:52"
+      },
+      {
+        "player": "Villager",
+        "message": "Toolsmith was slain by Zombie",
+        "timestamp": "2026-07-21T19:06:07"
+      },
+      {
+        "player": "third_wheel",
+        "message": "drowned",
+        "timestamp": "2026-07-21T19:06:45"
+      },
+      {
+        "player": "Crazy_brosik",
+        "message": "was slain by Drowned",
+        "timestamp": "2026-07-21T19:17:07"
+      },
+      {
+        "player": "Crazy_brosik",
+        "message": "was doomed to fall by BobEvansSausage",
+        "timestamp": "2026-07-21T19:32:23"
+      },
+      {
+        "player": "BobEvansSausage",
+        "message": "was slain by Crazy_brosik",
+        "timestamp": "2026-07-21T19:33:59"
+      },
+      {
+        "player": "Crazy_brosik",
+        "message": "was doomed to fall by PenelopeWhynot",
+        "timestamp": "2026-07-21T20:09:44"
+      },
+      {
+        "player": "Crazy_brosik",
+        "message": "was slain by PenelopeWhynot",
+        "timestamp": "2026-07-21T20:17:25"
+      },
+      {
+        "player": "third_wheel",
+        "message": "fell from a high place",
+        "timestamp": "2026-07-21T21:18:50"
+      },
+      {
+        "player": "Villager",
+        "message": "Mason was slain by Zombie",
+        "timestamp": "2026-07-21T21:52:34"
+      }
     ]
   },
   "usercache": {
@@ -24369,5 +21095,5 @@
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-22T03:30:01.583115+00:00"
+  "captured_at": "2026-07-22T03:36:27.885039+00:00"
 }
