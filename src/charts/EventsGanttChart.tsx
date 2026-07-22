@@ -7,10 +7,9 @@ import { ChartEmptyState } from '../components/ChartEmptyState';
 import { ThemedCard } from '../components/ThemedCard';
 import { getPaletteColor } from '../config/chartColors';
 import type {
+  DeathEvent,
   LogCrashEvent,
-  LogDeathEvent,
-  LogJoinEvent,
-  LogLeaveEvent,
+  PlayerSession,
   PlayerStats,
   ServerSession
 } from '../types';
@@ -36,14 +35,13 @@ interface GanttEvent {
 
 interface EventsGanttChartProps {
   allPlayers: Record<string, PlayerStats>;
-  deathEvents?: LogDeathEvent[];
-  joinEvents?: LogJoinEvent[];
-  leaveEvents?: LogLeaveEvent[];
+  playerSessions?: PlayerSession[];
+  deaths?: DeathEvent[];
   crashEvents?: LogCrashEvent[];
   serverSessions?: ServerSession[];
 }
 
-const TIME_WINDOW = 12;
+const TIME_WINDOW = 8;
 const DOT_RADIUS = 5;
 const HIT_RADIUS = 8;
 
@@ -72,9 +70,8 @@ function formatTime(time?: string): string {
 
 export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   allPlayers,
-  deathEvents,
-  joinEvents,
-  leaveEvents,
+  playerSessions,
+  deaths,
   crashEvents,
   serverSessions
 }) => {
@@ -84,66 +81,29 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   const { chartData, options, ganttEvents, hasEvents } = useMemo(() => {
     const now = new Date();
 
-    const sessions: GanttSession[] = [];
-    if (joinEvents && leaveEvents) {
-      const playerJoins: Record<string, LogJoinEvent[]> = {};
-      const playerLeaves: Record<string, LogLeaveEvent[]> = {};
+    // Build GanttSession list from pre-computed player_sessions
+    const sessions: GanttSession[] = (playerSessions || [])
+      .map((s) => {
+        const loginDate = new Date(s.login_time);
+        const loginH = (now.getTime() - loginDate.getTime()) / (1000 * 60 * 60);
+        if (loginH > TIME_WINDOW || loginH < 0) return null;
 
-      joinEvents.forEach((event) => {
-        if (event.timestamp) {
-          if (!playerJoins[event.player]) playerJoins[event.player] = [];
-          playerJoins[event.player].push(event);
+        let logoutH = 0;
+        if (s.logout_time) {
+          const logoutDate = new Date(s.logout_time);
+          logoutH = (now.getTime() - logoutDate.getTime()) / (1000 * 60 * 60);
+          if (logoutH > TIME_WINDOW || logoutH < 0) return null;
         }
-      });
 
-      leaveEvents.forEach((event) => {
-        if (event.timestamp) {
-          if (!playerLeaves[event.player]) playerLeaves[event.player] = [];
-          playerLeaves[event.player].push(event);
-        }
-      });
-
-      Object.keys(playerJoins).forEach((player) => {
-        const joins = (playerJoins[player] || [])
-          .map((e) => ({ ...e, _time: new Date(e.timestamp!) }))
-          .sort((a, b) => a._time.getTime() - b._time.getTime());
-        const leaves = (playerLeaves[player] || [])
-          .map((e) => ({ ...e, _time: new Date(e.timestamp!) }))
-          .sort((a, b) => a._time.getTime() - b._time.getTime());
-
-        let leaveIdx = 0;
-        joins.forEach((join) => {
-          while (leaveIdx < leaves.length && leaves[leaveIdx]._time <= join._time) {
-            leaveIdx++;
-          }
-          const loginH = (now.getTime() - join._time.getTime()) / (1000 * 60 * 60);
-          if (loginH > TIME_WINDOW || loginH < 0) return;
-
-          if (leaveIdx < leaves.length) {
-            const logoutH = (now.getTime() - leaves[leaveIdx]._time.getTime()) / (1000 * 60 * 60);
-            if (logoutH <= TIME_WINDOW && logoutH >= 0) {
-              sessions.push({
-                player,
-                loginHoursAgo: loginH,
-                logoutHoursAgo: logoutH,
-                loginTime: join.timestamp,
-                logoutTime: leaves[leaveIdx].timestamp
-              });
-            }
-            leaveIdx++;
-          } else {
-            // No matching leave — player is still online
-            sessions.push({
-              player,
-              loginHoursAgo: loginH,
-              logoutHoursAgo: 0,
-              loginTime: join.timestamp,
-              logoutTime: undefined
-            });
-          }
-        });
-      });
-    }
+        return {
+          player: s.player,
+          loginHoursAgo: loginH,
+          logoutHoursAgo: logoutH,
+          loginTime: s.login_time,
+          logoutTime: s.logout_time
+        };
+      })
+      .filter((s): s is GanttSession => s !== null);
 
     const events: GanttEvent[] = [];
 
@@ -172,12 +132,12 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
       }
     });
 
-    if (deathEvents) {
+    if (deaths) {
       const knownPlayers = new Set([
         ...Object.entries(allPlayers).map(([uuid, p]) => getPlayerDisplayName(p, uuid))
       ]);
 
-      deathEvents.forEach((event) => {
+      deaths.forEach((event) => {
         if (event.timestamp) {
           try {
             const deathTime = new Date(event.timestamp);
@@ -385,7 +345,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
     }) as ChartOptions;
 
     return { chartData: data, options: opts, ganttEvents: events, hasEvents };
-  }, [allPlayers, deathEvents, joinEvents, leaveEvents, crashEvents, serverSessions, theme]);
+  }, [allPlayers, playerSessions, deaths, crashEvents, serverSessions, theme]);
 
   const findNearestEvent = useCallback(
     (

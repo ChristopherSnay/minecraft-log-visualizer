@@ -10,10 +10,7 @@ export function useWorldData() {
   useEffect(() => {
     (async () => {
       try {
-        const [statsRes] = await Promise.all([
-          fetch(`${import.meta.env.BASE_URL}data/stats.json`),
-          loadTranslations()
-        ]);
+        const statsRes = await fetch(`${import.meta.env.BASE_URL}data/stats.json`);
         const json = await statsRes.json();
         setStats(json);
       } catch {
@@ -22,6 +19,10 @@ export function useWorldData() {
 
       setStatsLoading(false);
     })();
+
+    loadTranslations().catch(() => {
+      // translations will remain empty, translateId falls back to title-case
+    });
   }, []);
 
   return { stats, statsLoading };

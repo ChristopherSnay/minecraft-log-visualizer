@@ -25,11 +25,10 @@ export default function HomePage() {
     [stats]
   );
 
-  const { deathEvents, joinEvents, leaveEvents, crashEvents, serverSessions } = useMemo(
+  const { playerSessions, deaths, crashEvents, serverSessions } = useMemo(
     () => ({
-      deathEvents: stats?.logs?.events?.filter((e) => e.type === 'death'),
-      joinEvents: stats?.logs?.events?.filter((e) => e.type === 'join'),
-      leaveEvents: stats?.logs?.events?.filter((e) => e.type === 'leave'),
+      playerSessions: stats?.logs?.player_sessions,
+      deaths: stats?.logs?.deaths,
       crashEvents: stats?.logs?.crashes,
       serverSessions: stats?.logs?.server_sessions
     }),
@@ -37,9 +36,9 @@ export default function HomePage() {
   );
 
   const topDeathCauses = useMemo(() => {
-    if (!deathEvents || deathEvents.length === 0) return [];
+    if (!deaths || deaths.length === 0) return [];
     const causeCounts: Record<string, number> = {};
-    deathEvents.forEach((e) => {
+    deaths.forEach((e) => {
       const msg = e.message;
       causeCounts[msg] = (causeCounts[msg] || 0) + 1;
     });
@@ -47,7 +46,7 @@ export default function HomePage() {
       .sort(([, a], [, b]) => b - a)
       .slice(0, 5)
       .map(([cause, count]) => ({ name: cause, value: count }));
-  }, [deathEvents]);
+  }, [deaths]);
 
   if (statsLoading) {
     return null;
@@ -102,9 +101,8 @@ export default function HomePage() {
       <ThemedSection title="Events Timeline">
         <EventsGanttChart
           allPlayers={players}
-          deathEvents={deathEvents}
-          joinEvents={joinEvents}
-          leaveEvents={leaveEvents}
+          playerSessions={playerSessions}
+          deaths={deaths}
           crashEvents={crashEvents}
           serverSessions={serverSessions}
         />

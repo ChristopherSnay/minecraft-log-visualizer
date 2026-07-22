@@ -20,28 +20,16 @@ export interface PlayerStats {
   effects?: Array<{ id: string; amplifier: number; duration: number }>;
 }
 
-export interface LogJoinEvent {
-  type: 'join';
+export interface PlayerSession {
   player: string;
-  timestamp?: string;
-  line: string;
+  login_time: string;
+  logout_time: string | null;
 }
 
-export interface LogLeaveEvent {
-  type: 'leave';
-  player: string;
-  timestamp?: string;
-  line?: string;
-  synthetic?: boolean;
-  reason?: string;
-}
-
-export interface LogDeathEvent {
-  type: 'death';
+export interface DeathEvent {
   player: string;
   message: string;
   timestamp: string;
-  line: string;
 }
 
 export interface LogCrashEvent {
@@ -54,15 +42,14 @@ export interface ServerSession {
   endTime: string;
 }
 
-export type LogEvent = LogJoinEvent | LogLeaveEvent | LogDeathEvent;
-
 export interface StatsJson {
   captured_at?: string;
   stats: {
     players: Record<string, PlayerStats>;
   };
   logs?: {
-    events: LogEvent[];
+    player_sessions?: PlayerSession[];
+    deaths?: DeathEvent[];
     crashes?: LogCrashEvent[];
     server_sessions?: ServerSession[];
   };
