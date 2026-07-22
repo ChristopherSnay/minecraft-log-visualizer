@@ -103,7 +103,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
           logoutTime: s.logout_time
         };
       })
-      .filter((s): s is GanttSession => s !== null);
+      .filter((s) => s !== null) as GanttSession[];
 
     const events: GanttEvent[] = [];
 
