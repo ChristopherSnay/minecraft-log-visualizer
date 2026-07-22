@@ -11824,7 +11824,7 @@
         },
         "items_used": {
           "minecraft:stone_axe": 918,
-          "minecraft:stone_brick_wall": 53,
+          "minecraft:stone_brick_wall": 59,
           "minecraft:birch_sapling": 5,
           "minecraft:oak_trapdoor": 12,
           "minecraft:oak_fence": 12,
@@ -11865,7 +11865,7 @@
           "minecraft:cherry_door": 24,
           "minecraft:furnace": 4,
           "minecraft:torch": 47,
-          "minecraft:dirt": 903,
+          "minecraft:dirt": 908,
           "minecraft:chiseled_stone_bricks": 8,
           "minecraft:cobblestone_stairs": 34,
           "minecraft:dark_oak_sapling": 2,
@@ -11888,32 +11888,32 @@
           "minecraft:cow": 4
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 12022,
+          "minecraft:time_since_rest": 1752,
           "minecraft:talked_to_villager": 2,
-          "minecraft:leave_game": 12,
+          "minecraft:leave_game": 13,
           "minecraft:damage_taken": 1861,
           "minecraft:mob_kills": 41,
-          "minecraft:time_since_death": 663288,
+          "minecraft:time_since_death": 665198,
           "minecraft:interact_with_furnace": 181,
-          "minecraft:sleep_in_bed": 46,
+          "minecraft:sleep_in_bed": 47,
           "minecraft:happy_ghast_one_cm": 24595,
           "minecraft:swim_one_cm": 629,
-          "minecraft:total_world_time": 663288,
+          "minecraft:total_world_time": 665198,
           "minecraft:crouch_one_cm": 54972,
           "minecraft:climb_one_cm": 22393,
           "minecraft:interact_with_stonecutter": 8,
           "minecraft:interact_with_crafting_table": 150,
-          "minecraft:walk_one_cm": 2590880,
+          "minecraft:walk_one_cm": 2591831,
           "minecraft:walk_under_water_one_cm": 27044,
           "minecraft:damage_dealt": 2570,
-          "minecraft:play_time": 663288,
-          "minecraft:jump": 3059,
+          "minecraft:play_time": 665198,
+          "minecraft:jump": 3065,
           "minecraft:drop": 5,
           "minecraft:open_barrel": 8,
-          "minecraft:sprint_one_cm": 1329879,
+          "minecraft:sprint_one_cm": 1335484,
           "minecraft:open_chest": 203,
           "minecraft:fall_one_cm": 59543,
-          "minecraft:fly_one_cm": 119313,
+          "minecraft:fly_one_cm": 119341,
           "minecraft:walk_on_water_one_cm": 36705,
           "minecraft:sneak_time": 21770
         },
@@ -13712,10 +13712,6 @@
             "time": "2026-07-22 13:50:29 -0400"
           },
           {
-            "id": "minecraft:recipes/food/cooked_mutton_from_smoking",
-            "time": "2026-07-22 15:09:45 -0400"
-          },
-          {
             "id": "minecraft:recipes/decorations/painting",
             "time": "2026-07-22 15:09:40 -0400"
           },
@@ -13724,20 +13720,28 @@
             "time": "2026-07-22 15:09:40 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/light_gray_bed",
-            "time": "2026-07-22 15:09:54 -0400"
+            "id": "minecraft:recipes/decorations/white_banner",
+            "time": "2026-07-22 15:09:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/white_bed",
+            "time": "2026-07-22 15:09:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/cooked_mutton_from_smoking",
+            "time": "2026-07-22 15:09:45 -0400"
           },
           {
             "id": "minecraft:recipes/food/cooked_mutton",
             "time": "2026-07-22 15:09:45 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/white_banner",
-            "time": "2026-07-22 15:09:40 -0400"
-          },
-          {
             "id": "minecraft:recipes/food/cooked_mutton_from_campfire_cooking",
             "time": "2026-07-22 15:09:45 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/light_gray_bed",
+            "time": "2026-07-22 15:09:54 -0400"
           },
           {
             "id": "minecraft:recipes/decorations/light_gray_banner",
@@ -13746,21 +13750,17 @@
           {
             "id": "minecraft:recipes/decorations/light_gray_carpet",
             "time": "2026-07-22 15:09:54 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/white_bed",
-            "time": "2026-07-22 15:09:40 -0400"
           }
         ],
         "position": [
-          51.084485403106164,
-          74.0,
-          -81.72613236461252
+          54.567385117988714,
+          80.0,
+          -78.56651789537526
         ],
         "dimension": "minecraft:overworld",
         "xp": 16,
         "health": 20.0,
-        "food": 18,
+        "food": 17,
         "saturation": 0.0,
         "inventory": [
           {
@@ -20892,7 +20892,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 5001118,
+    "time": 5004228,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -20923,6 +20923,11 @@
       }
     ],
     "player_sessions": [
+      {
+        "player": "I_AM_GAY__",
+        "login_time": "2026-07-22T17:11:12",
+        "logout_time": "2026-07-22T17:12:48"
+      },
       {
         "player": "Crazy_brosik",
         "login_time": "2026-07-22T15:16:25",
@@ -21027,21 +21032,6 @@
         "player": "BobEvansSausage",
         "login_time": "2026-07-21T21:30:04",
         "logout_time": "2026-07-21T21:38:57"
-      },
-      {
-        "player": "BobEvansSausage",
-        "login_time": "2026-07-21T21:11:17",
-        "logout_time": "2026-07-21T21:23:43"
-      },
-      {
-        "player": "Crazy_brosik",
-        "login_time": "2026-07-21T21:11:11",
-        "logout_time": "2026-07-21T21:14:19"
-      },
-      {
-        "player": "R3B3X",
-        "login_time": "2026-07-21T21:00:19",
-        "logout_time": "2026-07-21T21:19:58"
       }
     ],
     "deaths": [
@@ -21103,8 +21093,8 @@
     ]
   },
   "usercache": {
-    "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "I_AM_GAY__",
+    "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "PenelopeWhynot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
@@ -21113,5 +21103,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "third_wheel",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-22T21:00:01.265906+00:00"
+  "captured_at": "2026-07-22T21:15:01.193378+00:00"
 }
