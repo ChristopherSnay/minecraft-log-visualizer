@@ -279,6 +279,7 @@
           "minecraft:polished_cinnabar": 4,
           "minecraft:oak_button": 2,
           "minecraft:oak_planks": 484,
+          "minecraft:polished_sulfur": 20,
           "minecraft:cherry_pressure_plate": 4,
           "minecraft:iron_sword": 5,
           "minecraft:iron_shovel": 3,
@@ -452,7 +453,7 @@
           "minecraft:smooth_basalt": 113,
           "minecraft:pale_oak_log": 2,
           "minecraft:furnace": 9,
-          "minecraft:bread": 755,
+          "minecraft:bread": 757,
           "minecraft:barrel": 4,
           "minecraft:torch": 1988,
           "minecraft:black_bed": 4,
@@ -503,43 +504,43 @@
         },
         "custom_stats": {
           "minecraft:talked_to_villager": 15,
-          "minecraft:time_since_rest": 5629,
+          "minecraft:time_since_rest": 11629,
           "minecraft:leave_game": 45,
           "minecraft:damage_taken": 19851,
           "minecraft:mob_kills": 572,
           "minecraft:boat_one_cm": 2338414,
-          "minecraft:time_since_death": 167743,
+          "minecraft:time_since_death": 173743,
           "minecraft:interact_with_furnace": 251,
           "minecraft:sleep_in_bed": 163,
           "minecraft:happy_ghast_one_cm": 67356,
           "minecraft:swim_one_cm": 161597,
-          "minecraft:total_world_time": 2512313,
+          "minecraft:total_world_time": 2518313,
           "minecraft:crouch_one_cm": 84763,
           "minecraft:climb_one_cm": 37348,
           "minecraft:deaths": 6,
-          "minecraft:interact_with_stonecutter": 8,
+          "minecraft:interact_with_stonecutter": 11,
           "minecraft:player_kills": 3,
           "minecraft:enchant_item": 16,
           "minecraft:animals_bred": 28,
           "minecraft:interact_with_crafting_table": 207,
-          "minecraft:walk_one_cm": 3793675,
+          "minecraft:walk_one_cm": 3801507,
           "minecraft:walk_under_water_one_cm": 99009,
           "minecraft:horse_one_cm": 239,
           "minecraft:damage_dealt": 66298,
-          "minecraft:play_time": 2512313,
-          "minecraft:jump": 26529,
+          "minecraft:play_time": 2518313,
+          "minecraft:jump": 26540,
           "minecraft:play_record": 2,
-          "minecraft:drop": 778,
+          "minecraft:drop": 779,
           "minecraft:use_cauldron": 4,
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 40,
-          "minecraft:sprint_one_cm": 14959342,
-          "minecraft:open_chest": 785,
+          "minecraft:sprint_one_cm": 14984857,
+          "minecraft:open_chest": 804,
           "minecraft:inspect_hopper": 1,
-          "minecraft:fall_one_cm": 436736,
-          "minecraft:fly_one_cm": 2631612,
-          "minecraft:interact_with_anvil": 21,
+          "minecraft:fall_one_cm": 437186,
+          "minecraft:fly_one_cm": 2634394,
+          "minecraft:interact_with_anvil": 24,
           "minecraft:walk_on_water_one_cm": 221567,
           "minecraft:sneak_time": 34065,
           "minecraft:interact_with_grindstone": 2
@@ -825,7 +826,7 @@
           "minecraft:golden_carrot": 4,
           "minecraft:tuff": 14,
           "minecraft:fire_charge": 2,
-          "minecraft:iron_leggings": 2,
+          "minecraft:iron_leggings": 3,
           "minecraft:acacia_planks": 4,
           "minecraft:arrow": 71,
           "minecraft:spruce_sapling": 6,
@@ -3738,18 +3739,62 @@
           {
             "id": "minecraft:recipes/misc/brick",
             "time": "2026-07-22 20:34:42 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/sulfur_bricks",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/polished_sulfur_slab",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/sulfur_bricks_from_polished_sulfur_stonecutting",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/sulfur_brick_stairs_from_polished_sulfur_stonecutting",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/sulfur_brick_slab_from_polished_sulfur_stonecutting",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/polished_sulfur_stairs",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/polished_sulfur_wall_from_polished_sulfur_stonecutting",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/sulfur_brick_wall_from_polished_sulfur_stonecutting",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/polished_sulfur_slab_from_polished_sulfur_stonecutting",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/polished_sulfur_stairs_from_polished_sulfur_stonecutting",
+            "time": "2026-07-23 12:40:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/polished_sulfur_wall",
+            "time": "2026-07-23 12:40:31 -0400"
           }
         ],
         "position": [
-          10.478713498911558,
-          72.0,
-          -73.80259994524367
+          -17.016609867942158,
+          64.25220334025373,
+          -30.895040082526908
         ],
         "dimension": "minecraft:overworld",
-        "xp": 13,
-        "health": 17.993423461914062,
-        "food": 17,
-        "saturation": 0.0,
+        "xp": 12,
+        "health": 20.0,
+        "food": 20,
+        "saturation": 7.0,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -3761,6 +3806,10 @@
           },
           {
             "id": "minecraft:diamond_sword",
+            "count": 1
+          },
+          {
+            "id": "minecraft:polished_sulfur_stairs",
             "count": 1
           },
           {
@@ -3784,7 +3833,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:diamond_chestplate",
+            "id": "minecraft:tuff_bricks",
             "count": 1
           },
           {
@@ -3808,7 +3857,15 @@
             "count": 1
           },
           {
+            "id": "minecraft:cinnabar_brick_slab",
+            "count": 1
+          },
+          {
             "id": "minecraft:bucket",
+            "count": 1
+          },
+          {
+            "id": "minecraft:bone_block",
             "count": 1
           },
           {
@@ -3820,11 +3877,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:diamond_shovel",
+            "id": "minecraft:polished_sulfur",
             "count": 1
           },
           {
-            "id": "minecraft:iron_leggings",
+            "id": "minecraft:diamond_shovel",
             "count": 1
           },
           {
@@ -3832,7 +3889,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:cobblestone",
+            "id": "minecraft:chiseled_tuff_bricks",
             "count": 1
           },
           {
@@ -21913,7 +21970,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 5600324,
+    "time": 5606324,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -21944,6 +22001,11 @@
       }
     ],
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-07-23T12:39:52",
+        "logout_time": null
+      },
       {
         "player": "PnelloP",
         "login_time": "2026-07-23T10:06:58",
@@ -22134,8 +22196,8 @@
     ]
   },
   "usercache": {
-    "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
+    "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
@@ -22145,5 +22207,5 @@
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-23T16:30:01.678748+00:00"
+  "captured_at": "2026-07-23T16:45:03.352627+00:00"
 }
