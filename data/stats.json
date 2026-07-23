@@ -21751,7 +21751,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 5400018,
+    "time": 5402416,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -21775,7 +21775,12 @@
   "logs": {
     "log_date": "2026-07-23",
     "crashes": [],
-    "server_sessions": [],
+    "server_sessions": [
+      {
+        "startTime": "2026-07-23T06:09:39",
+        "endTime": "2026-07-23T06:09:55"
+      }
+    ],
     "player_sessions": [
       {
         "player": "Spenc4r_",
@@ -22032,6 +22037,7 @@
     ]
   },
   "usercache": {
+    "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
@@ -22042,5 +22048,5 @@
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-23T10:00:01.478012+00:00"
+  "captured_at": "2026-07-23T10:15:01.471541+00:00"
 }
