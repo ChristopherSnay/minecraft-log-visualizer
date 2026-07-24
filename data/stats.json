@@ -21836,6 +21836,7 @@
           "minecraft:stone_axe": 2,
           "minecraft:oak_planks": 216,
           "minecraft:iron_pickaxe": 1,
+          "minecraft:iron_sword": 2,
           "minecraft:chiseled_stone_bricks": 8
         },
         "items_used": {
@@ -21899,37 +21900,37 @@
           "minecraft:bat": 4
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 1953,
-          "minecraft:talked_to_villager": 34,
+          "minecraft:time_since_rest": 7953,
+          "minecraft:talked_to_villager": 36,
           "minecraft:leave_game": 14,
           "minecraft:damage_taken": 2607,
           "minecraft:mob_kills": 78,
-          "minecraft:time_since_death": 531796,
-          "minecraft:interact_with_furnace": 107,
+          "minecraft:time_since_death": 537796,
+          "minecraft:interact_with_furnace": 111,
           "minecraft:sleep_in_bed": 22,
           "minecraft:interact_with_smithing_table": 2,
           "minecraft:happy_ghast_one_cm": 31529,
           "minecraft:swim_one_cm": 305,
-          "minecraft:total_world_time": 668764,
+          "minecraft:total_world_time": 674764,
           "minecraft:crouch_one_cm": 47122,
           "minecraft:deaths": 1,
           "minecraft:climb_one_cm": 3312,
-          "minecraft:interact_with_stonecutter": 26,
+          "minecraft:interact_with_stonecutter": 28,
           "minecraft:player_kills": 1,
-          "minecraft:traded_with_villager": 19,
-          "minecraft:interact_with_crafting_table": 35,
-          "minecraft:walk_one_cm": 3320803,
+          "minecraft:traded_with_villager": 21,
+          "minecraft:interact_with_crafting_table": 36,
+          "minecraft:walk_one_cm": 3330836,
           "minecraft:walk_under_water_one_cm": 16290,
           "minecraft:damage_dealt": 8507,
-          "minecraft:play_time": 668764,
+          "minecraft:play_time": 674764,
           "minecraft:jump": 3281,
           "minecraft:drop": 57,
           "minecraft:use_cauldron": 5,
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:bell_ring": 146,
           "minecraft:open_barrel": 1,
-          "minecraft:sprint_one_cm": 791238,
-          "minecraft:open_chest": 233,
+          "minecraft:sprint_one_cm": 793282,
+          "minecraft:open_chest": 247,
           "minecraft:interact_with_smoker": 1,
           "minecraft:fall_one_cm": 30275,
           "minecraft:fly_one_cm": 53931,
@@ -21958,8 +21959,8 @@
           "minecraft:stone_pickaxe": 2,
           "minecraft:firefly_bush": 2,
           "minecraft:clay_ball": 84,
-          "minecraft:slime_ball": 36,
           "minecraft:diamond": 13,
+          "minecraft:slime_ball": 36,
           "minecraft:granite": 518,
           "minecraft:white_banner": 2,
           "minecraft:emerald": 7,
@@ -23234,32 +23235,56 @@
             "time": "2026-07-22 20:37:57 -0400"
           },
           {
-            "id": "minecraft:recipes/misc/leather_helmet_dyed",
-            "time": "2026-07-23 21:34:18 -0400"
+            "id": "minecraft:husbandry/place_dried_ghast_in_water",
+            "time": "2026-07-23 20:02:59 -0400"
           },
           {
-            "id": "minecraft:recipes/food/cake",
-            "time": "2026-07-23 20:53:36 -0400"
+            "id": "minecraft:recipes/misc/red_dye_from_poppy",
+            "time": "2026-07-23 20:07:15 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_stairs_from_waxed_oxidized_copper_stonecutting",
-            "time": "2026-07-23 21:10:55 -0400"
+            "id": "minecraft:recipes/food/suspicious_stew_from_poppy",
+            "time": "2026-07-23 20:07:15 -0400"
           },
           {
-            "id": "minecraft:recipes/combat/diamond_leggings",
-            "time": "2026-07-23 22:13:40 -0400"
+            "id": "minecraft:recipes/misc/black_dye",
+            "time": "2026-07-23 20:09:50 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/lime_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
+            "id": "minecraft:recipes/combat/dye_black_harness",
+            "time": "2026-07-23 20:10:21 -0400"
           },
           {
-            "id": "minecraft:adventure/minecraft_trials_edition",
-            "time": "2026-07-23 20:56:59 -0400"
+            "id": "minecraft:recipes/decorations/dye_black_bed",
+            "time": "2026-07-23 20:10:21 -0400"
           },
           {
-            "id": "minecraft:recipes/misc/blue_dye",
-            "time": "2026-07-23 22:04:09 -0400"
+            "id": "minecraft:recipes/tools/black_bundle",
+            "time": "2026-07-23 20:10:21 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/dye_black_carpet",
+            "time": "2026-07-23 20:10:21 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/black_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:10:21 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/gray_dye",
+            "time": "2026-07-23 20:10:21 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/light_gray_dye_from_black_white_dye",
+            "time": "2026-07-23 20:10:21 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/black_candle",
+            "time": "2026-07-23 20:10:21 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/dye_black_wool",
+            "time": "2026-07-23 20:10:21 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/light_blue_stained_glass",
@@ -23270,76 +23295,16 @@
             "time": "2026-07-23 20:18:18 -0400"
           },
           {
-            "id": "minecraft:story/iron_tools",
-            "time": "2026-07-23 21:59:12 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/brown_stained_glass",
             "time": "2026-07-23 20:18:18 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/purple_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/lapis_block",
-            "time": "2026-07-23 22:04:09 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/blue_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/diamond_sword",
-            "time": "2026-07-23 22:13:40 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/blue_stained_glass",
             "time": "2026-07-23 20:18:18 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/jukebox",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/dye_black_harness",
-            "time": "2026-07-23 20:10:21 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/diamond_chestplate",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/redstone_torch",
-            "time": "2026-07-23 22:00:31 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/gold_ingot_from_blasting_raw_gold",
-            "time": "2026-07-23 21:59:23 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/orange_stained_glass",
             "time": "2026-07-23 20:18:18 -0400"
-          },
-          {
-            "id": "minecraft:recipes/tools/clock",
-            "time": "2026-07-23 22:00:31 -0400"
-          },
-          {
-            "id": "minecraft:adventure/shoot_arrow",
-            "time": "2026-07-23 21:04:56 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/light_gray_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/leather_chestplate_dyed",
-            "time": "2026-07-23 21:34:18 -0400"
-          },
-          {
-            "id": "minecraft:adventure/under_lock_and_key",
-            "time": "2026-07-23 21:02:22 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/pink_stained_glass",
@@ -23354,80 +23319,8 @@
             "time": "2026-07-23 20:18:18 -0400"
           },
           {
-            "id": "minecraft:recipes/tools/spyglass",
-            "time": "2026-07-23 22:18:31 -0400"
-          },
-          {
-            "id": "minecraft:recipes/tools/diamond_pickaxe",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/diamond_spear",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/lime_stained_glass",
             "time": "2026-07-23 20:18:18 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/red_dye_from_poppy",
-            "time": "2026-07-23 20:07:15 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/sugar_from_honey_bottle",
-            "time": "2026-07-23 21:03:53 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/orange_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/light_blue_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/honey_block",
-            "time": "2026-07-23 21:03:53 -0400"
-          },
-          {
-            "id": "minecraft:recipes/food/bread",
-            "time": "2026-07-23 20:24:49 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/dye_black_bed",
-            "time": "2026-07-23 20:10:21 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/mace",
-            "time": "2026-07-23 21:07:39 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/note_block",
-            "time": "2026-07-23 22:00:31 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/green_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/hay_block",
-            "time": "2026-07-23 20:24:49 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/target",
-            "time": "2026-07-23 22:00:31 -0400"
-          },
-          {
-            "id": "minecraft:recipes/tools/diamond_hoe",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
-            "id": "minecraft:recipes/tools/diamond_shovel",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/pink_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
           },
           {
             "id": "minecraft:recipes/decorations/glass_pane",
@@ -23442,112 +23335,20 @@
             "time": "2026-07-23 20:18:18 -0400"
           },
           {
-            "id": "minecraft:recipes/food/suspicious_stew_from_oxeye_daisy",
-            "time": "2026-07-23 21:43:38 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/white_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/tools/compass",
-            "time": "2026-07-23 22:00:31 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/gray_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/diamond_boots",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/flower_banner_pattern",
-            "time": "2026-07-23 21:43:38 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/calibrated_sculk_sensor",
-            "time": "2026-07-23 22:18:31 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_from_waxed_oxidized_copper_stonecutting",
-            "time": "2026-07-23 21:10:55 -0400"
-          },
-          {
-            "id": "minecraft:recipes/tools/black_bundle",
-            "time": "2026-07-23 20:10:21 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/gold_ingot_from_smelting_raw_gold",
-            "time": "2026-07-23 21:59:23 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/tinted_glass",
-            "time": "2026-07-23 22:18:31 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/red_stained_glass",
             "time": "2026-07-23 20:18:18 -0400"
-          },
-          {
-            "id": "minecraft:story/lava_bucket",
-            "time": "2026-07-23 20:33:42 -0400"
-          },
-          {
-            "id": "minecraft:husbandry/place_dried_ghast_in_water",
-            "time": "2026-07-23 20:02:59 -0400"
-          },
-          {
-            "id": "minecraft:recipes/food/cooked_beef_from_smoking",
-            "time": "2026-07-23 20:24:09 -0400"
           },
           {
             "id": "minecraft:recipes/brewing/glass_bottle",
             "time": "2026-07-23 20:18:18 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/raw_gold_block",
-            "time": "2026-07-23 21:59:23 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/sticky_piston",
-            "time": "2026-07-23 20:36:53 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/wind_charge",
-            "time": "2026-07-23 21:07:39 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/black_dye",
-            "time": "2026-07-23 20:09:50 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/light_gray_stained_glass",
             "time": "2026-07-23 20:18:18 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/dye_black_carpet",
-            "time": "2026-07-23 20:10:21 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/black_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:10:21 -0400"
-          },
-          {
-            "id": "minecraft:recipes/combat/diamond_helmet",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/cyan_stained_glass",
             "time": "2026-07-23 20:18:18 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/dropper",
-            "time": "2026-07-23 22:00:31 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/yellow_stained_glass_pane_from_glass_pane",
-            "time": "2026-07-23 20:19:12 -0400"
           },
           {
             "id": "minecraft:recipes/building_blocks/purple_stained_glass",
@@ -23558,16 +23359,48 @@
             "time": "2026-07-23 20:18:18 -0400"
           },
           {
-            "id": "minecraft:recipes/food/suspicious_stew_from_poppy",
-            "time": "2026-07-23 20:07:15 -0400"
+            "id": "minecraft:recipes/decorations/lime_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/waxed_oxidized_copper_grate",
-            "time": "2026-07-23 21:10:55 -0400"
+            "id": "minecraft:recipes/decorations/purple_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
           },
           {
-            "id": "minecraft:recipes/redstone/redstone_block",
-            "time": "2026-07-23 22:00:31 -0400"
+            "id": "minecraft:recipes/decorations/blue_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/light_gray_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/orange_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/light_blue_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/green_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/pink_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/white_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/gray_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/yellow_stained_glass_pane_from_glass_pane",
+            "time": "2026-07-23 20:19:12 -0400"
           },
           {
             "id": "minecraft:recipes/decorations/brown_stained_glass_pane_from_glass_pane",
@@ -23582,90 +23415,258 @@
             "time": "2026-07-23 20:19:12 -0400"
           },
           {
-            "id": "minecraft:recipes/redstone/slime_block",
-            "time": "2026-07-23 20:36:53 -0400"
-          },
-          {
             "id": "minecraft:recipes/decorations/cyan_stained_glass_pane_from_glass_pane",
             "time": "2026-07-23 20:19:12 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper",
-            "time": "2026-07-23 21:10:55 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/amethyst_block",
-            "time": "2026-07-23 22:18:31 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/gray_dye",
-            "time": "2026-07-23 20:10:21 -0400"
-          },
-          {
-            "id": "minecraft:husbandry/plant_seed",
-            "time": "2026-07-23 20:26:21 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/diamond_block",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/light_gray_dye_from_oxeye_daisy",
-            "time": "2026-07-23 21:43:38 -0400"
-          },
-          {
-            "id": "minecraft:recipes/misc/light_gray_dye_from_black_white_dye",
-            "time": "2026-07-23 20:10:21 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_slab_from_waxed_oxidized_copper_stonecutting",
-            "time": "2026-07-23 21:10:55 -0400"
-          },
-          {
-            "id": "minecraft:story/mine_diamond",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/black_candle",
-            "time": "2026-07-23 20:10:21 -0400"
-          },
-          {
-            "id": "minecraft:recipes/redstone/waxed_oxidized_copper_bulb",
-            "time": "2026-07-23 21:10:55 -0400"
-          },
-          {
-            "id": "minecraft:recipes/tools/diamond_axe",
-            "time": "2026-07-23 22:13:40 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/waxed_oxidized_chiseled_copper_from_waxed_oxidized_copper_stonecutting",
-            "time": "2026-07-23 21:10:55 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/dye_black_wool",
-            "time": "2026-07-23 20:10:21 -0400"
+            "id": "minecraft:recipes/food/cooked_beef_from_smoking",
+            "time": "2026-07-23 20:24:09 -0400"
           },
           {
             "id": "minecraft:recipes/food/cooked_beef",
             "time": "2026-07-23 20:24:09 -0400"
           },
           {
+            "id": "minecraft:recipes/food/cooked_beef_from_campfire_cooking",
+            "time": "2026-07-23 20:24:09 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/bread",
+            "time": "2026-07-23 20:24:49 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/hay_block",
+            "time": "2026-07-23 20:24:49 -0400"
+          },
+          {
+            "id": "minecraft:husbandry/plant_seed",
+            "time": "2026-07-23 20:26:21 -0400"
+          },
+          {
+            "id": "minecraft:story/lava_bucket",
+            "time": "2026-07-23 20:33:42 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/sticky_piston",
+            "time": "2026-07-23 20:36:53 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/slime_block",
+            "time": "2026-07-23 20:36:53 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/cake",
+            "time": "2026-07-23 20:53:36 -0400"
+          },
+          {
+            "id": "minecraft:adventure/minecraft_trials_edition",
+            "time": "2026-07-23 20:56:59 -0400"
+          },
+          {
+            "id": "minecraft:adventure/under_lock_and_key",
+            "time": "2026-07-23 21:02:22 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/sugar_from_honey_bottle",
+            "time": "2026-07-23 21:03:53 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/honey_block",
+            "time": "2026-07-23 21:03:53 -0400"
+          },
+          {
+            "id": "minecraft:adventure/shoot_arrow",
+            "time": "2026-07-23 21:04:56 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/mace",
+            "time": "2026-07-23 21:07:39 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/wind_charge",
+            "time": "2026-07-23 21:07:39 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_stairs_from_waxed_oxidized_copper_stonecutting",
+            "time": "2026-07-23 21:10:55 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_from_waxed_oxidized_copper_stonecutting",
+            "time": "2026-07-23 21:10:55 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_copper_grate",
+            "time": "2026-07-23 21:10:55 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper",
+            "time": "2026-07-23 21:10:55 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_cut_copper_slab_from_waxed_oxidized_copper_stonecutting",
+            "time": "2026-07-23 21:10:55 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/waxed_oxidized_copper_bulb",
+            "time": "2026-07-23 21:10:55 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/waxed_oxidized_chiseled_copper_from_waxed_oxidized_copper_stonecutting",
+            "time": "2026-07-23 21:10:55 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/waxed_oxidized_copper_grate_from_waxed_oxidized_copper_stonecutting",
             "time": "2026-07-23 21:10:55 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/leather_helmet_dyed",
+            "time": "2026-07-23 21:34:18 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/leather_chestplate_dyed",
+            "time": "2026-07-23 21:34:18 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/suspicious_stew_from_oxeye_daisy",
+            "time": "2026-07-23 21:43:38 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/flower_banner_pattern",
+            "time": "2026-07-23 21:43:38 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/light_gray_dye_from_oxeye_daisy",
+            "time": "2026-07-23 21:43:38 -0400"
+          },
+          {
+            "id": "minecraft:story/iron_tools",
+            "time": "2026-07-23 21:59:12 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/gold_ingot_from_blasting_raw_gold",
+            "time": "2026-07-23 21:59:23 -0400"
+          },
+          {
+            "id": "minecraft:recipes/misc/gold_ingot_from_smelting_raw_gold",
+            "time": "2026-07-23 21:59:23 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/raw_gold_block",
+            "time": "2026-07-23 21:59:23 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/redstone_torch",
+            "time": "2026-07-23 22:00:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/tools/clock",
+            "time": "2026-07-23 22:00:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/note_block",
+            "time": "2026-07-23 22:00:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/target",
+            "time": "2026-07-23 22:00:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/tools/compass",
+            "time": "2026-07-23 22:00:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/dropper",
+            "time": "2026-07-23 22:00:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/redstone_block",
+            "time": "2026-07-23 22:00:31 -0400"
           },
           {
             "id": "minecraft:recipes/redstone/piston",
             "time": "2026-07-23 22:00:31 -0400"
           },
           {
-            "id": "minecraft:recipes/food/cooked_beef_from_campfire_cooking",
-            "time": "2026-07-23 20:24:09 -0400"
+            "id": "minecraft:recipes/misc/blue_dye",
+            "time": "2026-07-23 22:04:09 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/lapis_block",
+            "time": "2026-07-23 22:04:09 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/diamond_leggings",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/diamond_sword",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/jukebox",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/diamond_chestplate",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/tools/diamond_pickaxe",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/diamond_spear",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/tools/diamond_hoe",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/tools/diamond_shovel",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/diamond_boots",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/combat/diamond_helmet",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/diamond_block",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:story/mine_diamond",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/tools/diamond_axe",
+            "time": "2026-07-23 22:13:40 -0400"
+          },
+          {
+            "id": "minecraft:recipes/tools/spyglass",
+            "time": "2026-07-23 22:18:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/redstone/calibrated_sculk_sensor",
+            "time": "2026-07-23 22:18:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/tinted_glass",
+            "time": "2026-07-23 22:18:31 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/amethyst_block",
+            "time": "2026-07-23 22:18:31 -0400"
           }
         ],
         "position": [
-          -64.76249998807907,
+          -62.489978795893954,
           72.0,
-          -192.58680386089233
+          -190.95243592875232
         ],
         "dimension": "minecraft:overworld",
         "xp": 30,
@@ -23678,7 +23679,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:dirt",
+            "id": "minecraft:iron_sword",
+            "count": 1
+          },
+          {
+            "id": "minecraft:cobbled_deepslate",
             "count": 1
           },
           {
@@ -23686,7 +23691,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:cobblestone",
+            "id": "minecraft:stone_pickaxe",
+            "count": 1
+          },
+          {
+            "id": "minecraft:coal",
             "count": 1
           },
           {
@@ -23694,7 +23703,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:cobblestone",
+            "id": "minecraft:stone_pickaxe",
             "count": 1
           },
           {
@@ -23702,15 +23711,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:diorite",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cobbled_deepslate",
-            "count": 1
-          },
-          {
-            "id": "minecraft:pointed_dripstone",
+            "id": "minecraft:emerald",
             "count": 1
           },
           {
@@ -23718,14 +23719,6 @@
             "count": 1
           },
           {
-            "id": "minecraft:granite",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cobbled_deepslate",
-            "count": 1
-          },
-          {
             "id": "minecraft:oak_planks",
             "count": 1
           },
@@ -23734,23 +23727,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:dirt",
-            "count": 1
-          },
-          {
-            "id": "minecraft:stone_pickaxe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:calcite",
-            "count": 1
-          },
-          {
-            "id": "minecraft:stone_pickaxe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:oak_planks",
+            "id": "minecraft:iron_sword",
             "count": 1
           }
         ],
@@ -23763,7 +23740,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 6252684,
+    "time": 6258684,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -23794,6 +23771,11 @@
       }
     ],
     "player_sessions": [
+      {
+        "player": "BobEvansSausage",
+        "login_time": "2026-07-23T23:23:34",
+        "logout_time": null
+      },
       {
         "player": "R3B3X",
         "login_time": "2026-07-23T22:08:43",
@@ -23959,16 +23941,16 @@
     ]
   },
   "usercache": {
+    "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
-    "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-24T03:15:00.968791+00:00"
+  "captured_at": "2026-07-24T03:30:01.005329+00:00"
 }
