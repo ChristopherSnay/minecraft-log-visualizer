@@ -78,7 +78,13 @@ function averageValue(statKey: string, playerEntries: [string, PlayerStats][]): 
 }
 
 export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = ({ players }) => {
-  const playerEntries = useMemo(() => Object.entries(players), [players]);
+  const playerEntries = useMemo(
+    () =>
+      Object.entries(players).sort((a, b) =>
+        getPlayerDisplayName(a[1], a[0]).localeCompare(getPlayerDisplayName(b[1], b[0]))
+      ),
+    [players]
+  );
   const categories = useMemo(() => buildComparisonCategories(players), [players]);
   const [page, setPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
