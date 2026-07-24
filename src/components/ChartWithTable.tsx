@@ -30,7 +30,7 @@ export function ChartWithTable({
   return (
     <ThemedCard>
       <CardHeader
-        avatar={avatar ? <Avatar variant='rounded'>{avatar}</Avatar> : undefined}
+        avatar={avatar ? <Avatar variant="rounded">{avatar}</Avatar> : undefined}
         title={title}
         subheader={subheader}
         action={

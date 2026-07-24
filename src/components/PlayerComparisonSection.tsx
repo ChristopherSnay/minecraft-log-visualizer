@@ -406,7 +406,7 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
               data={rows}
               color={getPaletteColor(i)}
               avatar={
-                <Avatar variant='rounded'>
+                <Avatar variant="rounded">
                   {CATEGORY_ICONS[stat.category] ?? <HelpOutlineIcon />}
                 </Avatar>
               }
