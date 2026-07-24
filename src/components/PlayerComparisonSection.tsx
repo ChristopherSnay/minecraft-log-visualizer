@@ -13,7 +13,9 @@ import {
   Select,
   TextField,
   Tooltip,
-  Typography
+  Typography,
+  useMediaQuery,
+  useTheme
 } from '@mui/material';
 import React, { type ReactElement, useMemo, useState } from 'react';
 
@@ -78,6 +80,8 @@ function averageValue(statKey: string, playerEntries: [string, PlayerStats][]): 
 }
 
 export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = ({ players }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const playerEntries = useMemo(
     () =>
       Object.entries(players).sort((a, b) =>
@@ -217,8 +221,8 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
         page={page}
         onChange={(_e, newPage) => setPage(newPage)}
         color="primary"
-        size="large"
         shape="rounded"
+        siblingCount={isMobile ? 0 : 1}
       />
     </Box>
   );
