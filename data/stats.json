@@ -524,19 +524,19 @@
           "minecraft:breeze": 6
         },
         "custom_stats": {
-          "minecraft:talked_to_villager": 28,
-          "minecraft:time_since_rest": 35703,
+          "minecraft:talked_to_villager": 29,
+          "minecraft:time_since_rest": 41703,
           "minecraft:leave_game": 50,
           "minecraft:damage_taken": 22254,
           "minecraft:mob_kills": 675,
           "minecraft:boat_one_cm": 2539060,
-          "minecraft:time_since_death": 438957,
+          "minecraft:time_since_death": 444957,
           "minecraft:interact_with_furnace": 277,
           "minecraft:sleep_in_bed": 171,
           "minecraft:inspect_dispenser": 1,
           "minecraft:happy_ghast_one_cm": 122568,
           "minecraft:swim_one_cm": 181502,
-          "minecraft:total_world_time": 2783527,
+          "minecraft:total_world_time": 2789527,
           "minecraft:crouch_one_cm": 102546,
           "minecraft:climb_one_cm": 55435,
           "minecraft:deaths": 6,
@@ -546,23 +546,23 @@
           "minecraft:animals_bred": 35,
           "minecraft:traded_with_villager": 4,
           "minecraft:interact_with_crafting_table": 232,
-          "minecraft:walk_one_cm": 4117112,
+          "minecraft:walk_one_cm": 4121242,
           "minecraft:walk_under_water_one_cm": 104633,
           "minecraft:horse_one_cm": 239,
           "minecraft:damage_dealt": 78460,
-          "minecraft:play_time": 2783527,
-          "minecraft:jump": 28992,
+          "minecraft:play_time": 2789527,
+          "minecraft:jump": 28996,
           "minecraft:play_record": 2,
           "minecraft:drop": 872,
           "minecraft:use_cauldron": 4,
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 44,
-          "minecraft:sprint_one_cm": 16734036,
-          "minecraft:open_chest": 967,
+          "minecraft:sprint_one_cm": 16737160,
+          "minecraft:open_chest": 968,
           "minecraft:inspect_hopper": 1,
           "minecraft:fall_one_cm": 485297,
-          "minecraft:fly_one_cm": 2903856,
+          "minecraft:fly_one_cm": 2904096,
           "minecraft:interact_with_anvil": 35,
           "minecraft:walk_on_water_one_cm": 235523,
           "minecraft:sneak_time": 40424,
@@ -3860,14 +3860,14 @@
           }
         ],
         "position": [
-          32.936520982487366,
-          69.0,
-          -71.33675421357356
+          -34.51456521213112,
+          63.0,
+          -58.15519812102008
         ],
         "dimension": "minecraft:overworld",
         "xp": 3,
         "health": 20.0,
-        "food": 12,
+        "food": 11,
         "saturation": 0.0,
         "inventory": [
           {
@@ -3939,15 +3939,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:diamond_pickaxe",
-            "count": 1
-          },
-          {
             "id": "minecraft:diamond",
-            "count": 1
-          },
-          {
-            "id": "minecraft:string",
             "count": 1
           },
           {
@@ -3988,6 +3980,10 @@
           },
           {
             "id": "minecraft:cherry_planks",
+            "count": 1
+          },
+          {
+            "id": "minecraft:string",
             "count": 1
           },
           {
@@ -23844,7 +23840,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 6414715,
+    "time": 6420715,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -23875,6 +23871,11 @@
     ],
     "server_sessions": [],
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-07-24T08:50:26",
+        "logout_time": null
+      },
       {
         "player": "Kimyknot",
         "login_time": "2026-07-24T07:51:29",
@@ -24055,10 +24056,10 @@
     ]
   },
   "usercache": {
+    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
-    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
@@ -24066,5 +24067,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-24T12:45:01.326064+00:00"
+  "captured_at": "2026-07-24T13:00:01.348294+00:00"
 }
