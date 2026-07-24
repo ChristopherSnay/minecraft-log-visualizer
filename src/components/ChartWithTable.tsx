@@ -1,6 +1,6 @@
 import BarChartIcon from '@mui/icons-material/BarChart';
 import TableChartIcon from '@mui/icons-material/TableChart';
-import { Box, CardContent, CardHeader, IconButton, Tooltip } from '@mui/material';
+import { Avatar, Box, CardContent, CardHeader, IconButton, Tooltip } from '@mui/material';
 import type { ReactNode } from 'react';
 
 import { useChartViewMode } from '../hooks/useChartViewMode';
@@ -9,6 +9,7 @@ import { ThemedCard } from './ThemedCard';
 interface ChartWithTableProps {
   title: string;
   subheader?: string;
+  avatar?: ReactNode;
   chartContent: ReactNode;
   tableContent: ReactNode;
   chartHeight?: number;
@@ -18,6 +19,7 @@ interface ChartWithTableProps {
 export function ChartWithTable({
   title,
   subheader,
+  avatar,
   chartContent,
   tableContent,
   chartHeight = 300,
@@ -28,6 +30,7 @@ export function ChartWithTable({
   return (
     <ThemedCard>
       <CardHeader
+        avatar={avatar ? <Avatar variant='rounded'>{avatar}</Avatar> : undefined}
         title={title}
         subheader={subheader}
         action={

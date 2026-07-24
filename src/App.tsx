@@ -14,7 +14,7 @@ const AppInner: React.FC = () => {
         palette: {
           mode: 'dark',
           primary: {
-            main: '#1976d2'
+            main: '#2196F3'
           },
           success: {
             main: '#2e7d32'

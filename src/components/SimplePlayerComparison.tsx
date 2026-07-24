@@ -4,14 +4,20 @@ import { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import { getHorizontalBarOptions } from '../utils/chartOptions';
-import type { PlayerRow } from '../utils/chartUtils';
 import { ChartWithTable } from './ChartWithTable';
 import { PlayerLink } from './PlayerLink';
+
+interface PlayerRow {
+  playerId: string;
+  name: string;
+  value: number;
+}
 
 interface SimplePlayerComparisonProps {
   title: string;
   data: PlayerRow[];
   color: string;
+  avatar?: React.ReactNode;
   format?: (value: number) => string;
   category?: string;
 }
@@ -20,6 +26,7 @@ export function SimplePlayerComparison({
   title,
   data,
   color,
+  avatar,
   format = (v) => v.toLocaleString(),
   category
 }: SimplePlayerComparisonProps) {
@@ -67,6 +74,7 @@ export function SimplePlayerComparison({
       <ChartWithTable
         title={title}
         subheader={category}
+        avatar={avatar}
         chartContent={null}
         tableContent={null}
       />
@@ -79,6 +87,7 @@ export function SimplePlayerComparison({
     <ChartWithTable
       title={title}
       subheader={category}
+      avatar={avatar}
       chartHeight={220}
       chartContent={
         <Bar

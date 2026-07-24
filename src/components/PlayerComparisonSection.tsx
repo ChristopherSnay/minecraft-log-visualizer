@@ -1,7 +1,16 @@
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import BuildIcon from '@mui/icons-material/Build';
+import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import GridOnIcon from '@mui/icons-material/GridOn';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutlined';
+import PanToolIcon from '@mui/icons-material/PanTool';
 import {
   Autocomplete,
+  Avatar,
   Box,
   Chip,
   FormControl,
@@ -78,6 +87,17 @@ function averageValue(statKey: string, playerEntries: [string, PlayerStats][]): 
   if (playerEntries.length === 0) return 0;
   return totalValue(statKey, playerEntries) / playerEntries.length;
 }
+
+const CATEGORY_ICONS: Record<string, React.ReactNode> = {
+  'Blocks Mined': <GridOnIcon />,
+  'Items Crafted': <BuildIcon />,
+  'Items Used': <PanToolIcon />,
+  'Mob Kills': <BugReportIcon />,
+  'Items Picked Up': <AddShoppingCartIcon />,
+  'Items Dropped': <DeleteSweepIcon />,
+  Advancements: <EmojiEventsIcon />,
+  Other: <HelpOutlineIcon />
+};
 
 export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = ({ players }) => {
   const theme = useTheme();
@@ -385,6 +405,11 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
               title={stat.title}
               data={rows}
               color={getPaletteColor(i)}
+              avatar={
+                <Avatar variant='rounded'>
+                  {CATEGORY_ICONS[stat.category] ?? <HelpOutlineIcon />}
+                </Avatar>
+              }
               format={stat.format}
               category={stat.category}
             />
