@@ -17,15 +17,33 @@ def _read_lines(path):
 
 
 def _clean_villager_message(raw):
-    """Extract job and clean message from villager death log."""
+    """Extract job and clean message from villager death log.
+
+    Returns (message, entity_type) tuple.
+    """
     job_match = re.search(r"Villager\['(\w+)/", raw)
     job = job_match.group(1) if job_match else None
     msg_match = re.search(r"message: '(.+?)'", raw)
     msg = msg_match.group(1) if msg_match else raw
     if job:
         msg = re.sub(rf"^{re.escape(job)}\s+", "", msg)
-        return f"{job} {msg}"
-    return msg
+        return f"{job} {msg}", "Villager"
+    return msg, "Villager"
+
+
+def _clean_entity_message(raw):
+    """Extract entity name and type from named entity death log.
+
+    Returns (message, entity_type) tuple.
+    """
+    entity_match = re.search(r"entity (\w+)\['(\w+)'/", raw)
+    if not entity_match:
+        return raw, None
+    entity_type = entity_match.group(1)
+    # Extract the death message after "died: "
+    msg_match = re.search(r"died:\s*(.+)$", raw)
+    msg = msg_match.group(1) if msg_match else raw
+    return msg, entity_type
 
 
 def _extract_time(line):
@@ -106,15 +124,24 @@ def _parse_log_file(path, log_date, death_markers, join_re, leave_re, death_re):
         if m:
             time_str, player, rest = m.groups()
             if any(marker in rest for marker in death_markers):
-                message = _clean_villager_message(rest) if player == "Villager" else rest
+                entity_type = None
+                if player == "Villager":
+                    message, entity_type = _clean_villager_message(rest)
+                elif re.search(r"^entity \w+\['\w+'/", rest):
+                    message, entity_type = _clean_entity_message(rest)
+                else:
+                    message = rest
                 ts = f"{log_date}T{time_str}"
-                events.append({
+                event = {
                     "type": "death",
                     "player": player,
                     "message": message,
                     "timestamp": ts,
                     "line": line,
-                })
+                }
+                if entity_type:
+                    event["entity_type"] = entity_type
+                events.append(event)
                 last_timestamp = ts
                 continue
 

@@ -30,6 +30,7 @@ export interface DeathEvent {
   player: string;
   message: string;
   timestamp: string;
+  entity_type?: string;
 }
 
 export interface LogCrashEvent {

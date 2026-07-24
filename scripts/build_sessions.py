@@ -103,6 +103,7 @@ def build_deaths(events):
                 "player": e["player"],
                 "message": e["message"],
                 "timestamp": e["timestamp"],
+                **({"entity_type": e["entity_type"]} if e.get("entity_type") else {}),
             }
             for e in events
             if e["type"] == "death" and e.get("timestamp")

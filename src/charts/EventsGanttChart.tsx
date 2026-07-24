@@ -28,8 +28,9 @@ interface GanttSession {
 interface GanttEvent {
   x: number;
   y: string;
-  type: 'death' | 'advancement' | 'villager_death' | 'crash';
+  type: 'death' | 'advancement' | 'npc_death' | 'crash';
   detail: string;
+  color: string;
   time?: string;
 }
 
@@ -45,17 +46,17 @@ const TIME_WINDOW = 8;
 const DOT_RADIUS = 5;
 const HIT_RADIUS = 8;
 
-const EVENT_COLORS: Record<GanttEvent['type'], string> = {
-  death: getPaletteColor(0),
-  advancement: getPaletteColor(2),
-  villager_death: getPaletteColor(7),
-  crash: '#ff4444'
+const DOT_COLORS: Record<GanttEvent['type'], string> = {
+  death: '#F44336',
+  advancement: '#FFC107',
+  npc_death: '',
+  crash: ''
 };
 
 const EVENT_TYPE_LABEL: Record<GanttEvent['type'], string> = {
   death: 'Player Death',
   advancement: 'Advancement',
-  villager_death: 'Villager Death',
+  npc_death: 'NPC Death',
   crash: 'Server Crash'
 };
 
@@ -105,7 +106,22 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
       })
       .filter((s) => s !== null) as GanttSession[];
 
+    // Determine which NPC/Server rows are needed before building color map
+    const hasNpcDeaths = deaths?.some((e) => !!e.entity_type) ?? false;
+    const hasServerDowntime = (serverSessions?.length ?? 0) > 0;
+    const hasCrashEvents = (crashEvents?.length ?? 0) > 0;
+
+    const playerNames = [...new Set(sessions.map((s) => s.player))].sort();
+    if (hasNpcDeaths) playerNames.push('NPC');
+    if (hasServerDowntime || hasCrashEvents) playerNames.push('Server');
+
+    const playerColorMap: Record<string, string> = {};
+    playerNames.forEach((name, i) => {
+      playerColorMap[name] = getPaletteColor(i);
+    });
+
     const events: GanttEvent[] = [];
+    const dotColor = (type: GanttEvent['type'], rowColor: string) => DOT_COLORS[type] || rowColor;
 
     Object.entries(allPlayers).forEach(([uuid, player]) => {
       const completed = player.completed;
@@ -116,11 +132,13 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
               const advTime = new Date(adv.time);
               const hoursAgo = (now.getTime() - advTime.getTime()) / (1000 * 60 * 60);
               if (hoursAgo <= TIME_WINDOW && hoursAgo >= 0) {
+                const name = getPlayerDisplayName(player, uuid);
                 events.push({
                   x: hoursAgo,
-                  y: getPlayerDisplayName(player, uuid),
+                  y: name,
                   type: 'advancement',
                   detail: translateId(adv.id),
+                  color: dotColor('advancement', playerColorMap[name] ?? getPaletteColor(0)),
                   time: adv.time
                 });
               }
@@ -133,31 +151,29 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
     });
 
     if (deaths) {
-      const knownPlayers = new Set([
-        ...Object.entries(allPlayers).map(([uuid, p]) => getPlayerDisplayName(p, uuid))
-      ]);
-
       deaths.forEach((event) => {
         if (event.timestamp) {
           try {
             const deathTime = new Date(event.timestamp);
             const hoursAgo = (now.getTime() - deathTime.getTime()) / (1000 * 60 * 60);
             if (hoursAgo <= TIME_WINDOW && hoursAgo >= 0) {
-              const isVillager = event.player === 'Villager';
+              const isNpc = !!event.entity_type;
               let targetPlayer = event.player;
-              if (isVillager) {
-                const byMatch = event.message.match(/\bby\s+(\w+)$/);
-                if (byMatch && knownPlayers.has(byMatch[1])) {
-                  targetPlayer = byMatch[1];
-                } else {
-                  targetPlayer = 'Villager';
-                }
+              let eventType: GanttEvent['type'] = 'death';
+              let detail = event.message;
+
+              if (isNpc) {
+                targetPlayer = 'NPC';
+                eventType = 'npc_death';
+                detail = `${event.entity_type}: ${event.message}`;
               }
+
               events.push({
                 x: hoursAgo,
                 y: targetPlayer,
-                type: isVillager ? 'villager_death' : 'death',
-                detail: event.message,
+                type: eventType,
+                detail,
+                color: dotColor(eventType, playerColorMap[targetPlayer] ?? getPaletteColor(0)),
                 time: event.timestamp
               });
             }
@@ -180,6 +196,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
               y: 'Server',
               type: 'crash',
               detail: 'Server crashed',
+              color: dotColor('crash', playerColorMap['Server'] ?? getPaletteColor(0)),
               time: event.timestamp
             });
           }
@@ -219,20 +236,6 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
 
     const hasEvents = sessions.length > 0 || events.length > 0 || serverDowntimeData.length > 0;
     if (!hasEvents) return { chartData: null, options: null, ganttEvents: [], hasEvents: false };
-
-    const hasVillagerDeaths = events.some((e) => e.type === 'villager_death');
-    const hasServerDowntime = serverDowntimeData.length > 0;
-    const hasCrashEvents = events.some((e) => e.type === 'crash');
-    const playerNames = [...new Set([...sessions.map((s) => s.player), ...events.map((e) => e.y)])]
-      .filter((n) => n !== 'Villager' && n !== 'Server')
-      .sort();
-    if (hasVillagerDeaths) playerNames.push('Villager');
-    if (hasServerDowntime || hasCrashEvents) playerNames.push('Server');
-
-    const playerColorMap: Record<string, string> = {};
-    playerNames.forEach((name, i) => {
-      playerColorMap[name] = getPaletteColor(i);
-    });
 
     const barData = [
       ...sessions.map((s) => ({
@@ -396,12 +399,11 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
         const x = xScale.getPixelForValue(event.x);
         const y = yScale.getPixelForValue(event.y);
         if (isNaN(x) || isNaN(y)) return;
-        const color = EVENT_COLORS[event.type];
 
         ctx.save();
         ctx.beginPath();
         ctx.arc(x, y, DOT_RADIUS, 0, Math.PI * 2);
-        ctx.fillStyle = color;
+        ctx.fillStyle = event.color;
         ctx.fill();
         ctx.strokeStyle = theme.palette.background.paper;
         ctx.lineWidth = 1.5;
@@ -435,10 +437,9 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
 
       const tip = tooltipRef.current;
       const timeStr = formatTime(nearest.time);
-      const color = EVENT_COLORS[nearest.type];
       const typeLabel = EVENT_TYPE_LABEL[nearest.type];
 
-      tip.innerHTML = `<span style="color:${color};font-weight:600">${typeLabel}</span><br/>${nearest.detail}${timeStr ? `<br/><span style="opacity:0.7">${timeStr}</span>` : ''}`;
+      tip.innerHTML = `<span style="color:${nearest.color};font-weight:600">${typeLabel}</span><br/>${nearest.detail}${timeStr ? `<br/><span style="opacity:0.7">${timeStr}</span>` : ''}`;
       tip.style.display = 'block';
 
       const canvasRect = (
