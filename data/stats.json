@@ -19781,7 +19781,7 @@
           "minecraft:clay": 76,
           "minecraft:pink_wool": 56,
           "minecraft:rose_bush": 29,
-          "minecraft:crimson_roots": 6,
+          "minecraft:crimson_roots": 8,
           "minecraft:iron_bars": 3,
           "minecraft:wildflowers": 72,
           "minecraft:tall_grass": 522,
@@ -19860,10 +19860,11 @@
           "minecraft:pink_tulip": 13,
           "minecraft:yellow_carpet": 1,
           "minecraft:composter": 3,
-          "minecraft:soul_sand": 5,
+          "minecraft:soul_sand": 9,
           "minecraft:white_carpet": 1,
           "minecraft:stripped_jungle_log": 6,
           "minecraft:crimson_nylium": 4,
+          "minecraft:soul_soil": 3,
           "minecraft:oak_stairs": 77,
           "minecraft:mossy_cobblestone": 22,
           "minecraft:big_dripleaf": 1,
@@ -19892,7 +19893,7 @@
           "minecraft:diorite_stairs": 4,
           "minecraft:chest": 7,
           "minecraft:bookshelf": 5,
-          "minecraft:acacia_planks": 4,
+          "minecraft:acacia_planks": 68,
           "minecraft:bucket": 4,
           "minecraft:light_blue_bed": 6,
           "minecraft:jungle_planks": 84,
@@ -19915,7 +19916,7 @@
           "minecraft:pink_terracotta": 56,
           "minecraft:terracotta": 59,
           "minecraft:smooth_stone": 10,
-          "minecraft:cooked_beef": 16,
+          "minecraft:cooked_beef": 34,
           "minecraft:blue_dye": 3,
           "minecraft:oak_slab": 552,
           "minecraft:yellow_bed": 3,
@@ -19978,7 +19979,7 @@
           "minecraft:black_bed": 7,
           "minecraft:orange_dye": 6,
           "minecraft:golden_boots": 1,
-          "minecraft:copper_ingot": 68,
+          "minecraft:copper_ingot": 73,
           "minecraft:purple_bed": 3,
           "minecraft:bread": 170,
           "minecraft:crafting_table": 25,
@@ -20117,6 +20118,7 @@
           "minecraft:smoker": 1,
           "minecraft:cherry_trapdoor": 25,
           "minecraft:moss_carpet": 9,
+          "minecraft:soul_soil": 3,
           "minecraft:stone_hoe": 399,
           "minecraft:water_bucket": 15,
           "minecraft:golden_sword": 32,
@@ -20166,40 +20168,40 @@
         },
         "custom_stats": {
           "minecraft:talked_to_villager": 74,
-          "minecraft:time_since_rest": 9016,
+          "minecraft:time_since_rest": 12103,
           "minecraft:leave_game": 40,
-          "minecraft:damage_taken": 3964,
+          "minecraft:damage_taken": 4234,
           "minecraft:mob_kills": 234,
           "minecraft:boat_one_cm": 591158,
-          "minecraft:time_since_death": 345159,
-          "minecraft:interact_with_furnace": 75,
-          "minecraft:sleep_in_bed": 210,
+          "minecraft:time_since_death": 12820,
+          "minecraft:interact_with_furnace": 77,
+          "minecraft:sleep_in_bed": 211,
           "minecraft:happy_ghast_one_cm": 21073,
           "minecraft:swim_one_cm": 17315,
-          "minecraft:total_world_time": 3113447,
+          "minecraft:total_world_time": 3131447,
           "minecraft:pot_flower": 12,
           "minecraft:crouch_one_cm": 3163,
           "minecraft:climb_one_cm": 24082,
-          "minecraft:deaths": 6,
+          "minecraft:deaths": 7,
           "minecraft:fish_caught": 3,
           "minecraft:animals_bred": 148,
           "minecraft:traded_with_villager": 149,
-          "minecraft:interact_with_crafting_table": 361,
-          "minecraft:walk_one_cm": 14669108,
+          "minecraft:interact_with_crafting_table": 363,
+          "minecraft:walk_one_cm": 14772415,
           "minecraft:walk_under_water_one_cm": 29053,
           "minecraft:horse_one_cm": 121215,
           "minecraft:damage_dealt": 7614,
-          "minecraft:play_time": 3113447,
-          "minecraft:jump": 17800,
+          "minecraft:play_time": 3131447,
+          "minecraft:jump": 17930,
           "minecraft:drop": 707,
           "minecraft:bell_ring": 1,
-          "minecraft:open_barrel": 307,
-          "minecraft:sprint_one_cm": 4721985,
+          "minecraft:open_barrel": 316,
+          "minecraft:sprint_one_cm": 4743538,
           "minecraft:open_chest": 619,
           "minecraft:fill_cauldron": 1,
           "minecraft:inspect_hopper": 1,
-          "minecraft:fall_one_cm": 130537,
-          "minecraft:fly_one_cm": 488959,
+          "minecraft:fall_one_cm": 131587,
+          "minecraft:fly_one_cm": 490996,
           "minecraft:walk_on_water_one_cm": 159946,
           "minecraft:sneak_time": 3621,
           "minecraft:interact_with_blast_furnace": 1,
@@ -20308,7 +20310,7 @@
           "minecraft:yellow_bed": 3,
           "minecraft:diorite_stairs": 2,
           "minecraft:dark_oak_trapdoor": 4,
-          "minecraft:netherrack": 2,
+          "minecraft:netherrack": 17,
           "minecraft:red_wool": 251,
           "minecraft:gravel": 10,
           "minecraft:potato": 1264,
@@ -20343,7 +20345,7 @@
           "minecraft:granite": 26,
           "minecraft:dark_oak_sapling": 21,
           "minecraft:lily_pad": 30,
-          "minecraft:crimson_roots": 6,
+          "minecraft:crimson_roots": 8,
           "minecraft:salmon": 5,
           "minecraft:jungle_sign": 1,
           "minecraft:light_blue_bed": 16,
@@ -20381,9 +20383,10 @@
           "minecraft:jungle_trapdoor": 1,
           "minecraft:sandstone": 20,
           "minecraft:vine": 26,
-          "minecraft:soul_sand": 5,
+          "minecraft:soul_sand": 13,
           "minecraft:carrot": 1453,
           "minecraft:orange_wool": 7,
+          "minecraft:soul_soil": 7,
           "minecraft:yellow_carpet": 1,
           "minecraft:flow_pottery_sherd": 1,
           "minecraft:stone_pickaxe": 3,
@@ -22917,74 +22920,26 @@
           }
         ],
         "position": [
-          -61.04217671674843,
-          63.875,
-          -76.8060056747386
+          64.18921363369114,
+          74.0,
+          -172.6588456247097
         ],
-        "dimension": "minecraft:the_nether",
-        "xp": 21,
+        "dimension": "minecraft:overworld",
+        "xp": 1,
         "health": 20.0,
-        "food": 20,
-        "saturation": 2.0,
+        "food": 14,
+        "saturation": 0.0,
         "inventory": [
           {
-            "id": "minecraft:copper_sword",
+            "id": "minecraft:crimson_roots",
             "count": 1
           },
           {
-            "id": "minecraft:iron_sword",
+            "id": "minecraft:cooked_beef",
             "count": 1
           },
           {
-            "id": "minecraft:iron_pickaxe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:purple_bed",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_shovel",
-            "count": 1
-          },
-          {
-            "id": "minecraft:soul_sand",
-            "count": 1
-          },
-          {
-            "id": "minecraft:bread",
-            "count": 1
-          },
-          {
-            "id": "minecraft:stone_shovel",
-            "count": 1
-          },
-          {
-            "id": "minecraft:shears",
-            "count": 1
-          },
-          {
-            "id": "minecraft:jungle_planks",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dark_oak_planks",
-            "count": 1
-          },
-          {
-            "id": "minecraft:apple",
-            "count": 1
-          },
-          {
-            "id": "minecraft:stick",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dirt",
-            "count": 1
-          },
-          {
-            "id": "minecraft:fishing_rod",
+            "id": "minecraft:acacia_planks",
             "count": 1
           }
         ],
@@ -25557,7 +25512,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 7593700,
+    "time": 7611700,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -25874,6 +25829,17 @@
         "message": "Mason hit the ground too hard",
         "timestamp": "2026-07-25T10:28:40",
         "entity_type": "Villager"
+      },
+      {
+        "player": "Kimyknot",
+        "message": "was fireballed by Ghast",
+        "timestamp": "2026-07-25T11:03:15"
+      },
+      {
+        "player": "Villager",
+        "message": "Toolsmith was slain by Zombie",
+        "timestamp": "2026-07-25T11:04:20",
+        "entity_type": "Villager"
       }
     ]
   },
@@ -25889,5 +25855,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-25T15:00:01.179940+00:00"
+  "captured_at": "2026-07-25T15:15:01.295563+00:00"
 }
