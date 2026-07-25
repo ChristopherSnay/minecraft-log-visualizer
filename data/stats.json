@@ -574,19 +574,19 @@
         },
         "custom_stats": {
           "minecraft:talked_to_villager": 102,
-          "minecraft:time_since_rest": 10517,
+          "minecraft:time_since_rest": 16517,
           "minecraft:leave_game": 65,
-          "minecraft:damage_taken": 25186,
+          "minecraft:damage_taken": 25193,
           "minecraft:mob_kills": 981,
           "minecraft:boat_one_cm": 2596038,
           "minecraft:damage_absorbed": 84,
-          "minecraft:time_since_death": 291478,
+          "minecraft:time_since_death": 297478,
           "minecraft:interact_with_furnace": 351,
           "minecraft:sleep_in_bed": 183,
           "minecraft:inspect_dispenser": 1,
           "minecraft:happy_ghast_one_cm": 427562,
-          "minecraft:swim_one_cm": 235900,
-          "minecraft:total_world_time": 3430422,
+          "minecraft:swim_one_cm": 236365,
+          "minecraft:total_world_time": 3436422,
           "minecraft:pot_flower": 1,
           "minecraft:crouch_one_cm": 104573,
           "minecraft:climb_one_cm": 176941,
@@ -597,25 +597,25 @@
           "minecraft:animals_bred": 35,
           "minecraft:traded_with_villager": 79,
           "minecraft:interact_with_crafting_table": 277,
-          "minecraft:walk_one_cm": 4903098,
-          "minecraft:walk_under_water_one_cm": 261976,
+          "minecraft:walk_one_cm": 4909079,
+          "minecraft:walk_under_water_one_cm": 271355,
           "minecraft:horse_one_cm": 239,
           "minecraft:damage_dealt": 113681,
-          "minecraft:play_time": 3430422,
-          "minecraft:jump": 33410,
+          "minecraft:play_time": 3436422,
+          "minecraft:jump": 33438,
           "minecraft:play_record": 2,
           "minecraft:drop": 1174,
           "minecraft:use_cauldron": 6,
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 60,
-          "minecraft:sprint_one_cm": 19932664,
-          "minecraft:open_chest": 1240,
+          "minecraft:sprint_one_cm": 19964516,
+          "minecraft:open_chest": 1251,
           "minecraft:inspect_hopper": 3,
-          "minecraft:fall_one_cm": 564294,
-          "minecraft:fly_one_cm": 3366898,
+          "minecraft:fall_one_cm": 564694,
+          "minecraft:fly_one_cm": 3369427,
           "minecraft:interact_with_anvil": 50,
-          "minecraft:walk_on_water_one_cm": 298042,
+          "minecraft:walk_on_water_one_cm": 298096,
           "minecraft:sneak_time": 42891,
           "minecraft:interact_with_grindstone": 2
         },
@@ -4154,15 +4154,15 @@
           }
         ],
         "position": [
-          -144.6847976510325,
-          -46.5,
-          -11.167226825778892
+          3.042063625888478,
+          72.0,
+          -97.70472332787323
         ],
         "dimension": "minecraft:overworld",
         "xp": 25,
         "health": 20.0,
-        "food": 20,
-        "saturation": 2.0,
+        "food": 11,
+        "saturation": 0.0,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -4201,35 +4201,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:coal",
-            "count": 1
-          },
-          {
             "id": "minecraft:compass",
             "count": 1
           },
           {
-            "id": "minecraft:coal",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
             "id": "minecraft:flint_and_steel",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:bone",
             "count": 1
           },
           {
@@ -4245,23 +4221,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:bone",
-            "count": 1
-          },
-          {
             "id": "minecraft:iron_ingot",
             "count": 1
           },
           {
-            "id": "minecraft:bone",
-            "count": 1
-          },
-          {
             "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:bone",
             "count": 1
           },
           {
@@ -4285,14 +4249,6 @@
             "count": 1
           },
           {
-            "id": "minecraft:bone",
-            "count": 1
-          },
-          {
-            "id": "minecraft:glowstone",
-            "count": 1
-          },
-          {
             "id": "minecraft:coal",
             "count": 1
           },
@@ -4301,7 +4257,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:diamond",
+            "id": "minecraft:spruce_planks",
             "count": 1
           },
           {
@@ -25888,7 +25844,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 7931359,
+    "time": 7937359,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -25914,6 +25870,11 @@
     "crashes": [],
     "server_sessions": [],
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-07-25T19:07:48",
+        "logout_time": null
+      },
       {
         "player": "Spenc4r_",
         "login_time": "2026-07-25T16:41:30",
@@ -26006,12 +25967,6 @@
       }
     ],
     "deaths": [
-      {
-        "player": "Villager",
-        "message": "Villager was squished too much",
-        "timestamp": "2026-07-24T23:05:33",
-        "entity_type": "Villager"
-      },
       {
         "player": "Villager",
         "message": "Farmer hit the ground too hard",
@@ -26134,8 +26089,8 @@
     ]
   },
   "usercache": {
-    "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
+    "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
@@ -26145,5 +26100,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-25T23:00:01.535785+00:00"
+  "captured_at": "2026-07-25T23:15:01.583291+00:00"
 }
