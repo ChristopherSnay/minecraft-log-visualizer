@@ -8490,7 +8490,7 @@
           "minecraft:iron_shovel": 2561,
           "minecraft:chiseled_tuff_bricks": 1,
           "minecraft:azalea_leaves": 71,
-          "minecraft:cherry_boat": 23,
+          "minecraft:cherry_boat": 26,
           "minecraft:firefly_bush": 9,
           "minecraft:smithing_table": 1,
           "minecraft:oak_log": 1,
@@ -8644,19 +8644,19 @@
           "minecraft:magma_cube": 2
         },
         "custom_stats": {
-          "minecraft:talked_to_villager": 447,
-          "minecraft:time_since_rest": 41628,
-          "minecraft:leave_game": 55,
+          "minecraft:talked_to_villager": 450,
+          "minecraft:time_since_rest": 45224,
+          "minecraft:leave_game": 56,
           "minecraft:damage_taken": 9896,
           "minecraft:mob_kills": 276,
-          "minecraft:boat_one_cm": 290793,
-          "minecraft:time_since_death": 2489239,
+          "minecraft:boat_one_cm": 296678,
+          "minecraft:time_since_death": 2492835,
           "minecraft:interact_with_furnace": 335,
           "minecraft:sleep_in_bed": 148,
           "minecraft:swim_one_cm": 40321,
-          "minecraft:total_world_time": 2617752,
+          "minecraft:total_world_time": 2621348,
           "minecraft:pot_flower": 6,
-          "minecraft:crouch_one_cm": 115226,
+          "minecraft:crouch_one_cm": 115239,
           "minecraft:climb_one_cm": 17654,
           "minecraft:deaths": 3,
           "minecraft:interact_with_stonecutter": 28,
@@ -8664,12 +8664,12 @@
           "minecraft:animals_bred": 2,
           "minecraft:traded_with_villager": 220,
           "minecraft:interact_with_crafting_table": 368,
-          "minecraft:walk_one_cm": 14434488,
+          "minecraft:walk_one_cm": 14451451,
           "minecraft:walk_under_water_one_cm": 133490,
           "minecraft:horse_one_cm": 2240,
           "minecraft:damage_dealt": 28439,
-          "minecraft:play_time": 2617752,
-          "minecraft:jump": 15514,
+          "minecraft:play_time": 2621348,
+          "minecraft:jump": 15531,
           "minecraft:play_record": 3,
           "minecraft:drop": 269,
           "minecraft:open_barrel": 28,
@@ -8677,10 +8677,10 @@
           "minecraft:open_chest": 1111,
           "minecraft:inspect_hopper": 2,
           "minecraft:fall_one_cm": 234470,
-          "minecraft:fly_one_cm": 40623,
+          "minecraft:fly_one_cm": 40649,
           "minecraft:interact_with_anvil": 14,
           "minecraft:walk_on_water_one_cm": 325198,
-          "minecraft:sneak_time": 52496
+          "minecraft:sneak_time": 52502
         },
         "items_picked_up": {
           "minecraft:cobblestone_wall": 1,
@@ -8773,7 +8773,7 @@
           "minecraft:raw_iron": 377,
           "minecraft:dead_bush": 3,
           "minecraft:mossy_cobblestone": 12,
-          "minecraft:cherry_boat": 23,
+          "minecraft:cherry_boat": 25,
           "minecraft:spruce_door": 1,
           "minecraft:cherry_planks": 153,
           "minecraft:chest": 23,
@@ -11606,9 +11606,9 @@
           }
         ],
         "position": [
-          -28.001385545485647,
-          64.0,
-          -25.69999998807907
+          -13.675377697973262,
+          65.0,
+          -56.81217641482229
         ],
         "dimension": "minecraft:overworld",
         "xp": 7,
@@ -11674,10 +11674,6 @@
           },
           {
             "id": "minecraft:cherry_planks",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cherry_boat",
             "count": 1
           },
           {
@@ -26511,7 +26507,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 8934277,
+    "time": 8939073,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -26542,6 +26538,11 @@
     ],
     "server_sessions": [],
     "player_sessions": [
+      {
+        "player": "R3B3X",
+        "login_time": "2026-07-26T19:39:53",
+        "logout_time": "2026-07-26T19:42:53"
+      },
       {
         "player": "Kimyknot",
         "login_time": "2026-07-26T17:14:50",
@@ -26666,29 +26667,9 @@
         "player": "Spenc4r_",
         "login_time": "2026-07-26T00:21:10",
         "logout_time": "2026-07-26T00:52:14"
-      },
-      {
-        "player": "BobEvansSausage",
-        "login_time": "2026-07-25T23:30:15",
-        "logout_time": "2026-07-25T23:51:12"
-      },
-      {
-        "player": "ZodiacalLight",
-        "login_time": "2026-07-25T23:30:06",
-        "logout_time": "2026-07-25T23:51:12"
       }
     ],
     "deaths": [
-      {
-        "player": "BobEvansSausage",
-        "message": "was slain by Zombie",
-        "timestamp": "2026-07-25T23:37:40"
-      },
-      {
-        "player": "BobEvansSausage",
-        "message": "fell from a high place",
-        "timestamp": "2026-07-25T23:40:41"
-      },
       {
         "player": "Villager",
         "message": "Villager was squished too much",
@@ -26763,8 +26744,8 @@
     ]
   },
   "usercache": {
-    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
+    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
@@ -26774,5 +26755,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-26T23:30:01.278714+00:00"
+  "captured_at": "2026-07-26T23:45:01.320370+00:00"
 }
