@@ -112,7 +112,7 @@ export const ServerTotalsSection: React.FC<ServerTotalsSectionProps> = ({
           nameLabel="Advancement"
           avatar={
             <img
-              src="/images/mc_trophy.png"
+              src={`${import.meta.env.BASE_URL}images/mc_trophy.png`}
               alt=""
               width={32}
               height={32}

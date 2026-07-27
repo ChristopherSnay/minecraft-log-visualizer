@@ -13,7 +13,7 @@
     "build": "vite build",
     "prebuild": "eslint . --fix",
     "predeploy": "npm run parse && npm run build && cpy dist/index.html dist/404.html",
-    "deploy": "gh-pages -d dist"
+    "deploy": "node scripts/deploy.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
