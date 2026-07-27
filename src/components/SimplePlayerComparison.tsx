@@ -8,7 +8,7 @@ import { ChartWithTable } from './ChartWithTable';
 import { PlayerLink } from './PlayerLink';
 
 interface PlayerRow {
-  playerId: string;
+  playerId?: string;
   name: string;
   value: number;
 }
@@ -20,6 +20,7 @@ interface SimplePlayerComparisonProps {
   avatar?: React.ReactNode;
   format?: (value: number) => string;
   category?: string;
+  nameLabel?: string;
 }
 
 export function SimplePlayerComparison({
@@ -28,7 +29,8 @@ export function SimplePlayerComparison({
   color,
   avatar,
   format = (v) => v.toLocaleString(),
-  category
+  category,
+  nameLabel = 'Player'
 }: SimplePlayerComparisonProps) {
   const theme = useTheme();
 
@@ -99,7 +101,7 @@ export function SimplePlayerComparison({
         <Table size="small">
           <TableHead>
             <TableRow>
-              <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>Player</TableCell>
+              <TableCell sx={{ fontWeight: 600, color: 'text.secondary' }}>{nameLabel}</TableCell>
               <TableCell
                 sx={{ fontWeight: 600, color: 'text.secondary' }}
                 align="right"

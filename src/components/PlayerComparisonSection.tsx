@@ -10,7 +10,6 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutlined';
 import PanToolIcon from '@mui/icons-material/PanTool';
 import {
   Autocomplete,
-  Avatar,
   Box,
   Chip,
   FormControl,
@@ -32,6 +31,7 @@ import { getPaletteColor } from '../config/chartColors';
 import type { PlayerStats } from '../types';
 import { cmToKm, damageToHearts, getPlayerDisplayName, ticksToHours } from '../utils/chartUtils';
 import { buildComparisonCategories } from '../utils/playerComparisonCategories';
+import { MinecraftIcon } from './MinecraftIcon';
 import { ResponsiveGrid } from './SectionHeading';
 import { SimplePlayerComparison } from './SimplePlayerComparison';
 import { ThemedSection } from './ThemedSection';
@@ -406,9 +406,10 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
               data={rows}
               color={getPaletteColor(i)}
               avatar={
-                <Avatar variant='rounded'>
-                  {CATEGORY_ICONS[stat.category] ?? <HelpOutlineIcon />}
-                </Avatar>
+                <MinecraftIcon
+                  statKey={stat.key}
+                  fallback={CATEGORY_ICONS[stat.category] ?? <HelpOutlineIcon />}
+                />
               }
               format={stat.format}
               category={stat.category}
