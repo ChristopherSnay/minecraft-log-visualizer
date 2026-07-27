@@ -10,6 +10,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutlined';
 import PanToolIcon from '@mui/icons-material/PanTool';
 import {
   Autocomplete,
+  Avatar,
   Box,
   Chip,
   FormControl,
