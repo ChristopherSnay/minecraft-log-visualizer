@@ -91,6 +91,15 @@ def build_sessions(events):
                 "logout_time": logout_time,
             })
 
+    by_name = {}
+    for s in sessions:
+        by_name.setdefault(s["player"], []).append(s)
+    for player_sessions in by_name.values():
+        player_sessions.sort(key=lambda s: s["login_time"])
+        for i in range(len(player_sessions) - 1):
+            if player_sessions[i]["logout_time"] is None:
+                player_sessions[i]["logout_time"] = player_sessions[i + 1]["login_time"]
+
     sessions.sort(key=lambda s: s["login_time"], reverse=True)
     return sessions
 
