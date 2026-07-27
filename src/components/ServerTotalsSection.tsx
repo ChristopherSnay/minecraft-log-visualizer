@@ -110,6 +110,15 @@ export const ServerTotalsSection: React.FC<ServerTotalsSectionProps> = ({
           data={data.advancements}
           color={getPaletteColor(7)}
           nameLabel="Advancement"
+          avatar={
+            <img
+              src="/images/mc_trophy.png"
+              alt=""
+              width={32}
+              height={32}
+              style={{ imageRendering: 'pixelated' }}
+            />
+          }
         />
         <SimplePlayerComparison
           title="Misc Stats"

@@ -75,3 +75,13 @@ when deploys run at least once a day, but if you notice the date is off
 (e.g. deploying right after a fresh server start with no prior rotated log
 same day), you can hardcode it by editing `deploy.js` to pass
 `--latest-date YYYY-MM-DD` through to the parser.
+
+## Assets
+
+Item and mob icons in `public/images/` are sourced from [MC Item Gallery](https://mcitemgallery.com/). Some versions are missing assets that appear in older versions. And some icons are missing altogether (cinnabar). I've pulled icons in this priority order:
+
+- Enhanced (v2) Latest
+- Legacy (v1) 1.21.10
+- Legacy (v1) 1.21.5
+
+
