@@ -105,6 +105,7 @@ export default function HomePage() {
           deaths={deaths}
           crashEvents={crashEvents}
           serverSessions={serverSessions}
+          capturedAt={capturedAt}
         />
         <Box sx={{ mt: 3 }}>
           <Activity24HourChart allPlayers={players} />

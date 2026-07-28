@@ -78,7 +78,7 @@ def build_sessions(events):
         leaves = sorted(data["leaves"])
         leave_idx = 0
         for login_time in joins:
-            while leave_idx < len(leaves) and leaves[leave_idx] <= login_time:
+            while leave_idx < len(leaves) and leaves[leave_idx] < login_time:
                 leave_idx += 1
             if leave_idx < len(leaves):
                 logout_time = leaves[leave_idx]
@@ -97,8 +97,12 @@ def build_sessions(events):
     for player_sessions in by_name.values():
         player_sessions.sort(key=lambda s: s["login_time"])
         for i in range(len(player_sessions) - 1):
-            if player_sessions[i]["logout_time"] is None:
-                player_sessions[i]["logout_time"] = player_sessions[i + 1]["login_time"]
+            cur = player_sessions[i]
+            nxt = player_sessions[i + 1]
+            if cur["logout_time"] is None:
+                cur["logout_time"] = nxt["login_time"]
+            elif cur["logout_time"] > nxt["login_time"]:
+                cur["logout_time"] = nxt["login_time"]
 
     sessions.sort(key=lambda s: s["login_time"], reverse=True)
     return sessions

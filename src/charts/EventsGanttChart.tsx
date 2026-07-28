@@ -40,6 +40,7 @@ interface EventsGanttChartProps {
   deaths?: DeathEvent[];
   crashEvents?: LogCrashEvent[];
   serverSessions?: ServerSession[];
+  capturedAt?: Date | null;
 }
 
 const TIME_WINDOW = 8;
@@ -74,13 +75,14 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   playerSessions,
   deaths,
   crashEvents,
-  serverSessions
+  serverSessions,
+  capturedAt
 }) => {
   const theme = useTheme();
   const tooltipRef = useRef<HTMLDivElement>(null);
 
   const { chartData, options, ganttEvents, hasEvents } = useMemo(() => {
-    const now = new Date();
+    const now = capturedAt && !isNaN(capturedAt.getTime()) ? capturedAt : new Date();
 
     // Build GanttSession list from pre-computed player_sessions
     const sessions: GanttSession[] = (playerSessions || [])
@@ -348,7 +350,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
     }) as ChartOptions;
 
     return { chartData: data, options: opts, ganttEvents: events, hasEvents };
-  }, [allPlayers, playerSessions, deaths, crashEvents, serverSessions, theme]);
+  }, [allPlayers, playerSessions, deaths, crashEvents, serverSessions, capturedAt, theme]);
 
   const findNearestEvent = useCallback(
     (
