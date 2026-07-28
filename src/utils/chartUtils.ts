@@ -16,6 +16,12 @@ export function damageToHearts(damage: number): number {
   return Math.round((damage / 2) * 10) / 10;
 }
 
+export function compactNum(value: number): string {
+  if (value >= 1_000_000) return (value / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+  if (value >= 1_000) return (value / 1_000).toFixed(1).replace(/\.0$/, '') + 'K';
+  return value.toLocaleString();
+}
+
 export function seededRandom(seed: number): number {
   const x = Math.sin(seed) * 10000;
   return x - Math.floor(x);

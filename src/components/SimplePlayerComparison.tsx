@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import { getHorizontalBarOptions } from '../utils/chartOptions';
+import { compactNum } from '../utils/chartUtils';
 import { ChartWithTable } from './ChartWithTable';
 import { PlayerLink } from './PlayerLink';
 
@@ -28,7 +29,7 @@ export function SimplePlayerComparison({
   data,
   color,
   avatar,
-  format = (v) => v.toLocaleString(),
+  format = compactNum,
   category,
   nameLabel = 'Player'
 }: SimplePlayerComparisonProps) {
@@ -63,7 +64,10 @@ export function SimplePlayerComparison({
       },
       scales: {
         x: {
-          beginAtZero: true
+          beginAtZero: true,
+          ticks: {
+            callback: (value) => format(value as number)
+          }
         }
       }
     });

@@ -42,7 +42,6 @@ import { ThemedSection } from './ThemedSection';
 
 interface PlayerComparisonSectionProps {
   players: Record<string, PlayerStats>;
-  topDeathCauses: { name: string; value: number }[];
 }
 
 type SortMode = 'name' | 'count' | 'player_count' | 'lead_average';
@@ -104,10 +103,7 @@ const CATEGORY_ICONS: Record<string, React.ReactNode> = {
   Other: <HelpOutlineIcon />
 };
 
-export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = ({
-  players,
-  topDeathCauses
-}) => {
+export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = ({ players }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [activeTab, setActiveTab] = useState(0);
@@ -452,12 +448,7 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
           {filteredStats.length > itemsPerPage && paginator()}
         </>
       )}
-      {activeTab === 1 && (
-        <ServerTotalsSection
-          players={players}
-          topDeathCauses={topDeathCauses}
-        />
-      )}
+      {activeTab === 1 && <ServerTotalsSection players={players} />}
     </ThemedSection>
   );
 };

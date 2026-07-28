@@ -34,19 +34,6 @@ export default function HomePage() {
     [stats?.logs]
   );
 
-  const topDeathCauses = useMemo(() => {
-    if (!deaths || deaths.length === 0) return [];
-    const causeCounts: Record<string, number> = {};
-    deaths.forEach((e) => {
-      const msg = e.message;
-      causeCounts[msg] = (causeCounts[msg] || 0) + 1;
-    });
-    return Object.entries(causeCounts)
-      .sort(([, a], [, b]) => b - a)
-      .slice(0, 5)
-      .map(([cause, count]) => ({ name: cause, value: count }));
-  }, [deaths]);
-
   if (statsLoading) {
     return null;
   }
@@ -112,10 +99,7 @@ export default function HomePage() {
       </ThemedSection>
 
       {/* Player Comparison & Server Totals */}
-      <PlayerComparisonSection
-        players={players}
-        topDeathCauses={topDeathCauses}
-      />
+      <PlayerComparisonSection players={players} />
 
       {/* Player Favorites */}
       <PlayerFavoritesSection players={players} />
