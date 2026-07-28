@@ -1,6 +1,16 @@
-import { Box, CardContent, CardHeader, useTheme } from '@mui/material';
+import {
+  Box,
+  CardContent,
+  CardHeader,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  useMediaQuery,
+  useTheme
+} from '@mui/material';
 import type { ChartData, ChartOptions, Plugin } from 'chart.js';
-import React, { useCallback, useMemo, useRef } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import { ChartEmptyState } from '../components/ChartEmptyState';
@@ -43,7 +53,7 @@ interface EventsGanttChartProps {
   capturedAt?: Date | null;
 }
 
-const TIME_WINDOW = 8;
+const TIME_WINDOW_OPTIONS = [4, 8, 12] as const;
 const DOT_RADIUS = 5;
 const HIT_RADIUS = 8;
 
@@ -79,7 +89,9 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   capturedAt
 }) => {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const tooltipRef = useRef<HTMLDivElement>(null);
+  const [timeWindow, setTimeWindow] = useState<number>(isMobile ? 4 : 8);
 
   const { chartData, options, ganttEvents, hasEvents } = useMemo(() => {
     const now = capturedAt && !isNaN(capturedAt.getTime()) ? capturedAt : new Date();
@@ -89,13 +101,13 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
       .map((s) => {
         const loginDate = new Date(s.login_time);
         const loginH = (now.getTime() - loginDate.getTime()) / (1000 * 60 * 60);
-        if (loginH > TIME_WINDOW || loginH < 0) return null;
+        if (loginH > timeWindow || loginH < 0) return null;
 
         let logoutH = 0;
         if (s.logout_time) {
           const logoutDate = new Date(s.logout_time);
           logoutH = (now.getTime() - logoutDate.getTime()) / (1000 * 60 * 60);
-          if (logoutH > TIME_WINDOW || logoutH < 0) return null;
+          if (logoutH > timeWindow || logoutH < 0) return null;
         }
 
         return {
@@ -133,7 +145,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
             try {
               const advTime = new Date(adv.time);
               const hoursAgo = (now.getTime() - advTime.getTime()) / (1000 * 60 * 60);
-              if (hoursAgo <= TIME_WINDOW && hoursAgo >= 0) {
+              if (hoursAgo <= timeWindow && hoursAgo >= 0) {
                 const name = getPlayerDisplayName(player, uuid);
                 events.push({
                   x: hoursAgo,
@@ -158,7 +170,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
           try {
             const deathTime = new Date(event.timestamp);
             const hoursAgo = (now.getTime() - deathTime.getTime()) / (1000 * 60 * 60);
-            if (hoursAgo <= TIME_WINDOW && hoursAgo >= 0) {
+            if (hoursAgo <= timeWindow && hoursAgo >= 0) {
               const isNpc = !!event.entity_type;
               let targetPlayer = event.player;
               let eventType: GanttEvent['type'] = 'death';
@@ -192,7 +204,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
         try {
           const crashTime = new Date(event.timestamp);
           const hoursAgo = (now.getTime() - crashTime.getTime()) / (1000 * 60 * 60);
-          if (hoursAgo <= TIME_WINDOW && hoursAgo >= 0) {
+          if (hoursAgo <= timeWindow && hoursAgo >= 0) {
             events.push({
               x: hoursAgo,
               y: 'Server',
@@ -222,7 +234,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
           const end = new Date(ss.endTime);
           const startH = (now.getTime() - start.getTime()) / (1000 * 60 * 60);
           const endH = (now.getTime() - end.getTime()) / (1000 * 60 * 60);
-          if (startH <= TIME_WINDOW && startH >= 0) {
+          if (startH <= timeWindow && startH >= 0) {
             serverDowntimeData.push({
               x: [Math.max(endH, 0), startH],
               y: 'Server',
@@ -274,7 +286,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
         x: {
           display: true,
           min: 0,
-          max: TIME_WINDOW,
+          max: timeWindow,
           title: {
             display: true,
             text: 'Hours Ago'
@@ -350,7 +362,16 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
     }) as ChartOptions;
 
     return { chartData: data, options: opts, ganttEvents: events, hasEvents };
-  }, [allPlayers, playerSessions, deaths, crashEvents, serverSessions, capturedAt, theme]);
+  }, [
+    allPlayers,
+    playerSessions,
+    deaths,
+    crashEvents,
+    serverSessions,
+    capturedAt,
+    theme,
+    timeWindow
+  ]);
 
   const findNearestEvent = useCallback(
     (
@@ -385,7 +406,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   );
 
   if (!hasEvents || !chartData || !options) {
-    return <ChartEmptyState title={`Sessions & Events (Last ${TIME_WINDOW} Hours)`} />;
+    return <ChartEmptyState title={`Sessions & Events (Last ${timeWindow} Hours)`} />;
   }
 
   const eventDotsPlugin: Plugin<'bar'> = {
@@ -467,9 +488,32 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   return (
     <ThemedCard elevation={1}>
       <CardHeader
-        title={`Sessions & Events (Last ${TIME_WINDOW} Hours)`}
+        title={`Sessions & Events (Last ${timeWindow} Hours)`}
         subheader="Bars = session duration · Dots = events during session"
       />
+      <Box sx={{ px: 2, pb: 1, display: 'flex', justifyContent: 'flex-end' }}>
+        <FormControl
+          size="small"
+          sx={{ minWidth: 90 }}
+        >
+          <InputLabel id="time-window-label">Hours</InputLabel>
+          <Select
+            labelId="time-window-label"
+            value={timeWindow}
+            label="Hours"
+            onChange={(e) => setTimeWindow(e.target.value as number)}
+          >
+            {TIME_WINDOW_OPTIONS.map((h) => (
+              <MenuItem
+                key={h}
+                value={h}
+              >
+                {h}h
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Box>
       <CardContent>
         <Box sx={{ height: 350, position: 'relative' }}>
           <div
