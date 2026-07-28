@@ -6,7 +6,6 @@ import { EventsGanttChart } from '../charts/EventsGanttChart';
 import { PlayerChips } from '../components/PlayerChips';
 import { PlayerComparisonSection } from '../components/PlayerComparisonSection';
 import { PlayerFavoritesSection } from '../components/PlayerFavoritesSection';
-import { ServerTotalsSection } from '../components/ServerTotalsSection';
 import { StatCards } from '../components/StatCards';
 import { ThemedSection } from '../components/ThemedSection';
 import { useStats } from '../context/StatsContext';
@@ -112,11 +111,8 @@ export default function HomePage() {
         </Box>
       </ThemedSection>
 
-      {/* Player Comparison */}
-      <PlayerComparisonSection players={players} />
-
-      {/* Server Totals */}
-      <ServerTotalsSection
+      {/* Player Comparison & Server Totals */}
+      <PlayerComparisonSection
         players={players}
         topDeathCauses={topDeathCauses}
       />

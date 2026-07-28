@@ -20,6 +20,8 @@ import {
   Pagination,
   Paper,
   Select,
+  Tab,
+  Tabs,
   TextField,
   Tooltip,
   Typography,
@@ -34,11 +36,13 @@ import { cmToKm, damageToHearts, getPlayerDisplayName, ticksToHours } from '../u
 import { buildComparisonCategories } from '../utils/playerComparisonCategories';
 import { MinecraftIcon } from './MinecraftIcon';
 import { ResponsiveGrid } from './SectionHeading';
+import { ServerTotalsSection } from './ServerTotalsSection';
 import { SimplePlayerComparison } from './SimplePlayerComparison';
 import { ThemedSection } from './ThemedSection';
 
 interface PlayerComparisonSectionProps {
   players: Record<string, PlayerStats>;
+  topDeathCauses: { name: string; value: number }[];
 }
 
 type SortMode = 'name' | 'count' | 'player_count' | 'lead_average';
@@ -100,9 +104,13 @@ const CATEGORY_ICONS: Record<string, React.ReactNode> = {
   Other: <HelpOutlineIcon />
 };
 
-export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = ({ players }) => {
+export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = ({
+  players,
+  topDeathCauses
+}) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const [activeTab, setActiveTab] = useState(0);
   const playerEntries = useMemo(
     () =>
       Object.entries(players).sort((a, b) =>
@@ -249,180 +257,207 @@ export const PlayerComparisonSection: React.FC<PlayerComparisonSectionProps> = (
   );
 
   return (
-    <ThemedSection title="Player Comparison">
-      <Autocomplete
-        size="small"
-        freeSolo
-        fullWidth
-        options={autocompleteOptions}
-        filterOptions={(options, state) => {
-          const input = state.inputValue.toLowerCase();
-          const filtered = input ? options.filter((o) => o.toLowerCase().includes(input)) : options;
-          return filtered.slice(0, 25);
-        }}
-        inputValue={searchQuery}
-        onInputChange={(_e, value) => {
-          setSearchQuery(value);
-          setPage(1);
-        }}
+    <ThemedSection title="Player/Server Statistics">
+      <Tabs
+        value={activeTab}
+        onChange={(_e, v) => setActiveTab(v)}
         sx={{ mb: 2 }}
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            label="Search stats..."
-            placeholder="Type to filter..."
-          />
-        )}
-      />
-      <Box sx={{ display: 'flex', gap: 1, mb: 2, flexWrap: 'wrap' }}>
-        <Chip
-          label="All"
-          color={activeCategories.size === 0 ? 'primary' : 'default'}
-          variant={activeCategories.size === 0 ? 'filled' : 'outlined'}
-          onClick={() => {
-            setActiveCategories(new Set());
-            setPage(1);
-          }}
-        />
-        {categoryLabels.map((label) => {
-          const count = categoryCounts.get(label) ?? 0;
-          return (
-            <Chip
-              key={label}
-              label={`${label} (${count})`}
-              color={activeCategories.has(label) ? 'primary' : 'default'}
-              variant={activeCategories.has(label) ? 'filled' : 'outlined'}
-              disabled={count === 0}
-              onClick={() => toggleCategory(label)}
-            />
-          );
-        })}
-      </Box>
-      <Paper
-        variant="outlined"
-        sx={{ p: 1.5, mb: 2, display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap' }}
       >
-        <FormControl
-          size="small"
-          sx={{ minWidth: 140 }}
-        >
-          <InputLabel id="player-label">Player</InputLabel>
-          <Select
-            labelId="player-label"
-            value={selectedPlayer}
-            label="Player"
-            onChange={(e) => {
-              const val = e.target.value;
-              setSelectedPlayer(val);
-              if (!val && (sortMode === 'player_count' || sortMode === 'lead_average')) {
-                setSortMode('name');
-              }
-              setPage(1);
-            }}
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            {playerEntries.map(([id, p]) => (
-              <MenuItem
-                key={id}
-                value={id}
-              >
-                {getPlayerDisplayName(p, id)}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <FormControl
-          size="small"
-          sx={{ minWidth: 170 }}
-        >
-          <InputLabel id="sort-label">Sort by</InputLabel>
-          <Select
-            labelId="sort-label"
-            value={sortMode}
-            label="Sort by"
-            onChange={(e) => {
-              setSortMode(e.target.value as SortMode);
-              setPage(1);
-            }}
-          >
-            <MenuItem value="name">Name</MenuItem>
-            <MenuItem value="count">Count</MenuItem>
-            <MenuItem
-              value="player_count"
-              disabled={!selectedPlayer}
-            >
-              {selectedPlayerName ? `${selectedPlayerName}'s Count` : "Player's Count"}
-            </MenuItem>
-            <MenuItem
-              value="lead_average"
-              disabled={!selectedPlayer}
-            >
-              {selectedPlayerName
-                ? `${selectedPlayerName}'s Lead over Average`
-                : 'Lead over Average'}
-            </MenuItem>
-          </Select>
-        </FormControl>
-        <Tooltip title={sortAsc ? 'Ascending' : 'Descending'}>
-          <IconButton
+        <Tab label="Player Comparison" />
+        <Tab label="Server Totals" />
+      </Tabs>
+      {activeTab === 0 && (
+        <>
+          <Autocomplete
             size="small"
-            onClick={() => {
-              setSortAsc((prev) => !prev);
+            freeSolo
+            fullWidth
+            options={autocompleteOptions}
+            filterOptions={(options, state) => {
+              const input = state.inputValue.toLowerCase();
+              const filtered = input
+                ? options.filter((o) => o.toLowerCase().includes(input))
+                : options;
+              return filtered.slice(0, 25);
+            }}
+            inputValue={searchQuery}
+            onInputChange={(_e, value) => {
+              setSearchQuery(value);
               setPage(1);
             }}
-          >
-            {sortAsc ? (
-              <ArrowUpwardIcon fontSize="small" />
-            ) : (
-              <ArrowDownwardIcon fontSize="small" />
+            sx={{ mb: 2 }}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Search stats..."
+                placeholder="Type to filter..."
+              />
             )}
-          </IconButton>
-        </Tooltip>
-      </Paper>
-      {filteredStats.length === 0 && (
-        <Typography
-          variant="body2"
-          color="text.secondary"
-          sx={{ textAlign: 'center', py: 4 }}
-        >
-          No stats match your filters.
-        </Typography>
-      )}
-      {filteredStats.length > itemsPerPage && paginator()}
-      <ResponsiveGrid columns={3}>
-        {paginatedStats.map((stat, i) => {
-          const rows = playerEntries
-            .map(([id, p]) => ({
-              playerId: id,
-              name: getPlayerDisplayName(p, id),
-              value: getStatValue(stat.key, p)
-            }))
-            .sort((a, b) => b.value - a.value);
-          return (
-            <SimplePlayerComparison
-              key={stat.key}
-              title={stat.title}
-              data={rows}
-              color={getPaletteColor(i)}
-              avatar={
-                <MinecraftIcon
-                  statKey={stat.key}
-                  fallback={
-                    <Avatar variant="rounded">
-                      {CATEGORY_ICONS[stat.category] ?? <HelpOutlineIcon />}
-                    </Avatar>
-                  }
-                />
-              }
-              format={stat.format}
-              category={stat.category}
+          />
+          <Box sx={{ display: 'flex', gap: 1, mb: 2, flexWrap: 'wrap' }}>
+            <Chip
+              label="All"
+              color={activeCategories.size === 0 ? 'primary' : 'default'}
+              variant={activeCategories.size === 0 ? 'filled' : 'outlined'}
+              onClick={() => {
+                setActiveCategories(new Set());
+                setPage(1);
+              }}
             />
-          );
-        })}
-      </ResponsiveGrid>
-      {filteredStats.length > itemsPerPage && paginator()}
+            {categoryLabels.map((label) => {
+              const count = categoryCounts.get(label) ?? 0;
+              return (
+                <Chip
+                  key={label}
+                  label={`${label} (${count})`}
+                  color={activeCategories.has(label) ? 'primary' : 'default'}
+                  variant={activeCategories.has(label) ? 'filled' : 'outlined'}
+                  disabled={count === 0}
+                  onClick={() => toggleCategory(label)}
+                />
+              );
+            })}
+          </Box>
+          <Paper
+            variant="outlined"
+            sx={{
+              p: 1.5,
+              mb: 2,
+              display: 'flex',
+              gap: 2,
+              alignItems: 'center',
+              flexWrap: 'wrap'
+            }}
+          >
+            <FormControl
+              size="small"
+              sx={{ minWidth: 140 }}
+            >
+              <InputLabel id="player-label">Player</InputLabel>
+              <Select
+                labelId="player-label"
+                value={selectedPlayer}
+                label="Player"
+                onChange={(e) => {
+                  const val = e.target.value;
+                  setSelectedPlayer(val);
+                  if (!val && (sortMode === 'player_count' || sortMode === 'lead_average')) {
+                    setSortMode('name');
+                  }
+                  setPage(1);
+                }}
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                {playerEntries.map(([id, p]) => (
+                  <MenuItem
+                    key={id}
+                    value={id}
+                  >
+                    {getPlayerDisplayName(p, id)}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+            <FormControl
+              size="small"
+              sx={{ minWidth: 170 }}
+            >
+              <InputLabel id="sort-label">Sort by</InputLabel>
+              <Select
+                labelId="sort-label"
+                value={sortMode}
+                label="Sort by"
+                onChange={(e) => {
+                  setSortMode(e.target.value as SortMode);
+                  setPage(1);
+                }}
+              >
+                <MenuItem value="name">Name</MenuItem>
+                <MenuItem value="count">Count</MenuItem>
+                <MenuItem
+                  value="player_count"
+                  disabled={!selectedPlayer}
+                >
+                  {selectedPlayerName ? `${selectedPlayerName}'s Count` : "Player's Count"}
+                </MenuItem>
+                <MenuItem
+                  value="lead_average"
+                  disabled={!selectedPlayer}
+                >
+                  {selectedPlayerName
+                    ? `${selectedPlayerName}'s Lead over Average`
+                    : 'Lead over Average'}
+                </MenuItem>
+              </Select>
+            </FormControl>
+            <Tooltip title={sortAsc ? 'Ascending' : 'Descending'}>
+              <IconButton
+                size="small"
+                onClick={() => {
+                  setSortAsc((prev) => !prev);
+                  setPage(1);
+                }}
+              >
+                {sortAsc ? (
+                  <ArrowUpwardIcon fontSize="small" />
+                ) : (
+                  <ArrowDownwardIcon fontSize="small" />
+                )}
+              </IconButton>
+            </Tooltip>
+          </Paper>
+          {filteredStats.length === 0 && (
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ textAlign: 'center', py: 4 }}
+            >
+              No stats match your filters.
+            </Typography>
+          )}
+          {filteredStats.length > itemsPerPage && paginator()}
+          <ResponsiveGrid columns={3}>
+            {paginatedStats.map((stat, i) => {
+              const rows = playerEntries
+                .map(([id, p]) => ({
+                  playerId: id,
+                  name: getPlayerDisplayName(p, id),
+                  value: getStatValue(stat.key, p)
+                }))
+                .sort((a, b) => b.value - a.value);
+              return (
+                <SimplePlayerComparison
+                  key={stat.key}
+                  title={stat.title}
+                  data={rows}
+                  color={getPaletteColor(i)}
+                  avatar={
+                    <MinecraftIcon
+                      statKey={stat.key}
+                      fallback={
+                        <Avatar variant="rounded">
+                          {CATEGORY_ICONS[stat.category] ?? <HelpOutlineIcon />}
+                        </Avatar>
+                      }
+                    />
+                  }
+                  format={stat.format}
+                  category={stat.category}
+                />
+              );
+            })}
+          </ResponsiveGrid>
+          {filteredStats.length > itemsPerPage && paginator()}
+        </>
+      )}
+      {activeTab === 1 && (
+        <ServerTotalsSection
+          players={players}
+          topDeathCauses={topDeathCauses}
+        />
+      )}
     </ThemedSection>
   );
 };
