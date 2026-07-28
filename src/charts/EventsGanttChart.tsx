@@ -330,7 +330,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
               if (raw?.startTime) {
                 // Server downtime
                 const [start, end] = raw.x;
-                const duration = Math.round((start - end) * 10) / 10;
+                const duration = Math.round((end - start) * 10) / 10;
                 const h = Math.floor(duration);
                 const m = Math.round((duration - h) * 60);
                 const durationStr = h > 0 ? (m > 0 ? `${h}h ${m}m` : `${h}h`) : `${m}m`;
