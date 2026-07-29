@@ -661,19 +661,19 @@
         },
         "custom_stats": {
           "minecraft:talked_to_villager": 154,
-          "minecraft:time_since_rest": 692,
-          "minecraft:leave_game": 91,
+          "minecraft:time_since_rest": 900,
+          "minecraft:leave_game": 92,
           "minecraft:damage_taken": 29389,
           "minecraft:mob_kills": 2520,
           "minecraft:boat_one_cm": 2619053,
           "minecraft:damage_absorbed": 123,
-          "minecraft:time_since_death": 76751,
+          "minecraft:time_since_death": 76959,
           "minecraft:interact_with_furnace": 432,
           "minecraft:sleep_in_bed": 204,
           "minecraft:inspect_dispenser": 2,
           "minecraft:happy_ghast_one_cm": 427562,
           "minecraft:swim_one_cm": 291467,
-          "minecraft:total_world_time": 4461436,
+          "minecraft:total_world_time": 4461644,
           "minecraft:pot_flower": 1,
           "minecraft:crouch_one_cm": 129084,
           "minecraft:climb_one_cm": 217587,
@@ -688,7 +688,7 @@
           "minecraft:walk_under_water_one_cm": 653562,
           "minecraft:horse_one_cm": 239,
           "minecraft:damage_dealt": 272132,
-          "minecraft:play_time": 4461436,
+          "minecraft:play_time": 4461644,
           "minecraft:jump": 38419,
           "minecraft:play_record": 2,
           "minecraft:drop": 1843,
@@ -28038,7 +28038,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 11094089,
+    "time": 11095497,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -28090,9 +28090,18 @@
       {
         "startTime": "2026-07-28T21:48:11",
         "endTime": "2026-07-28T21:57:51"
+      },
+      {
+        "startTime": "2026-07-28T22:09:35",
+        "endTime": "2026-07-28T22:22:53"
       }
     ],
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-07-28T22:22:53",
+        "logout_time": "2026-07-28T22:23:03"
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-07-28T21:57:51",
@@ -28251,5 +28260,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-07-29T02:15:00.792776+00:00"
+  "captured_at": "2026-07-29T02:30:00.881191+00:00"
 }
