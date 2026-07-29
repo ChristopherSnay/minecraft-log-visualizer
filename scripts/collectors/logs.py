@@ -1,7 +1,7 @@
 import gzip
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 def _read_lines(path):
@@ -16,6 +16,22 @@ def _read_lines(path):
                 yield line.strip()
 
 
+def _strip_entity_metadata(text):
+    """Remove entity metadata brackets like ['Villager'/828484, ...] from death messages."""
+    result = []
+    depth = 0
+    for ch in text:
+        if ch == "[":
+            depth += 1
+        elif ch == "]":
+            depth = max(0, depth - 1)
+        elif depth == 0:
+            result.append(ch)
+    text = "".join(result)
+    text = re.sub(r"\s+", " ", text).strip().rstrip(".").strip()
+    return text
+
+
 def _clean_villager_message(raw):
     """Extract job and clean message from villager death log.
 
@@ -27,8 +43,8 @@ def _clean_villager_message(raw):
     msg = msg_match.group(1) if msg_match else raw
     if job:
         msg = re.sub(rf"^{re.escape(job)}\s+", "", msg)
-        return f"{job} {msg}", "Villager"
-    return msg, "Villager"
+        return f"{job} {_strip_entity_metadata(msg)}", "Villager"
+    return _strip_entity_metadata(msg), "Villager"
 
 
 def _clean_entity_message(raw):
@@ -38,12 +54,11 @@ def _clean_entity_message(raw):
     """
     entity_match = re.search(r"entity (\w+)\['(\w+)'/", raw)
     if not entity_match:
-        return raw, None
+        return _strip_entity_metadata(raw), None
     entity_type = entity_match.group(1)
-    # Extract the death message after "died: "
     msg_match = re.search(r"died:\s*(.+)$", raw)
     msg = msg_match.group(1) if msg_match else raw
-    return msg, entity_type
+    return _strip_entity_metadata(msg), entity_type
 
 
 def _extract_time(line):
@@ -52,93 +67,93 @@ def _extract_time(line):
     return m.group(1) if m else None
 
 
-def _parse_log_file(path, log_date, death_markers, join_re, leave_re, death_re):
-    """Parse a single log file and return events, sessions, and shutdown info.
+def _parse_log_file(path, log_date, death_markers, join_re, leave_re, death_re, now=None):
+    """Parse a single log file.
 
     Returns:
-        events: list of event dicts
-        sessions: dict of player -> {joins, leaves}
-        had_stopping_server: bool — whether the log contained 'Stopping server'
+        events: list of event dicts (join, leave, death)
+        had_stopping_server: bool
         last_timestamp: str or None — timestamp of the last log line
-        online_players: dict of currently online players
-        pause_sessions: list of server pause session dicts
+        online_players: dict of player name -> last join timestamp
+        server_start_time: str or None — timestamp of first 'Done (' line
+        pause_sessions: list of {startTime, endTime}
     """
     events = []
-    sessions = {}
     had_stopping_server = False
     last_timestamp = None
-    online_players = {}  # player -> last join timestamp
-    pause_start = None  # timestamp when server paused
+    online_players = {}
+    server_start_time = None
+    pause_start = None
     pause_sessions = []
 
+    now = now or datetime.now()
+    current_date = log_date
+    prev_hour = None
+
     for line in _read_lines(path):
-        # Track server shutdown
+        time_str = _extract_time(line)
+
+        ts = None
+        if time_str:
+            h = int(time_str[:2])
+            m = int(time_str[3:5])
+            now_minutes = now.hour * 60 + now.minute
+            event_minutes = h * 60 + m
+
+            # First timestamp: if the event time is well ahead of the current
+            # time (e.g. we're at 1 PM and the log says 10 PM), the session
+            # started on the previous day.
+            if prev_hour is None and event_minutes > now_minutes + 180:
+                d = datetime.fromisoformat(log_date) - timedelta(days=1)
+                current_date = d.strftime("%Y-%m-%d")
+            # Midnight rollover: hour jumps from late evening to early morning
+            if prev_hour is not None and h < 6 and prev_hour >= 20:
+                d = datetime.fromisoformat(current_date) + timedelta(days=1)
+                current_date = d.strftime("%Y-%m-%d")
+            prev_hour = h
+            ts = f"{current_date}T{time_str}"
+
         if "Stopping server" in line:
             had_stopping_server = True
 
-        # Track server pause
-        if "pausing" in line and pause_start is None:
-            time_str = _extract_time(line)
-            if time_str:
-                pause_start = f"{log_date}T{time_str}"
+        if "pausing" in line and pause_start is None and ts:
+            pause_start = ts
 
         # Player join
         m = join_re.search(line)
         if m:
             player = m.group(1)
-            time_str = _extract_time(line)
-            ts = f"{log_date}T{time_str}" if time_str else None
-
-            # If the player is already tracked as online, their previous
-            # session ended without a leave (e.g. crash disconnect).
-            # Close it first so joins and leaves stay balanced.
-            if player in online_players and ts:
-                synth_event = {
-                    "type": "leave",
-                    "player": player,
-                    "timestamp": ts,
-                    "synthetic": True,
-                    "reason": "reconnect",
-                }
-                events.append(synth_event)
-                sessions.setdefault(player, {"joins": 0, "leaves": 0})
-                sessions[player]["leaves"] += 1
-
             event = {"type": "join", "player": player, "line": line}
             if ts:
                 event["timestamp"] = ts
             events.append(event)
-            sessions.setdefault(player, {"joins": 0, "leaves": 0})
-            sessions[player]["joins"] += 1
             if ts:
                 online_players[player] = ts
 
-            # End any active server pause
             if pause_start and ts:
                 pause_sessions.append({"startTime": pause_start, "endTime": ts})
                 pause_start = None
-
             continue
 
         # Player leave
         m = leave_re.search(line)
         if m:
             player = m.group(1)
-            time_str = _extract_time(line)
-            ts = f"{log_date}T{time_str}" if time_str else None
             event = {"type": "leave", "player": player, "line": line}
             if ts:
                 event["timestamp"] = ts
             events.append(event)
-            sessions.setdefault(player, {"joins": 0, "leaves": 0})
-            sessions[player]["leaves"] += 1
             online_players.pop(player, None)
             continue
+
+        # Server start
+        if server_start_time is None and "Done (" in line and ts:
+            server_start_time = ts
 
         # Death
         m = death_re.match(line)
         if m:
-            time_str, player, rest = m.groups()
+            time_str2, player, rest = m.groups()
             if any(marker in rest for marker in death_markers):
                 entity_type = None
                 if player == "Villager":
@@ -147,7 +162,6 @@ def _parse_log_file(path, log_date, death_markers, join_re, leave_re, death_re):
                     message, entity_type = _clean_entity_message(rest)
                 else:
                     message = rest
-                ts = f"{log_date}T{time_str}"
                 event = {
                     "type": "death",
                     "player": player,
@@ -158,15 +172,15 @@ def _parse_log_file(path, log_date, death_markers, join_re, leave_re, death_re):
                 if entity_type:
                     event["entity_type"] = entity_type
                 events.append(event)
-                last_timestamp = ts
+                if ts:
+                    last_timestamp = ts
                 continue
 
-        # Track last timestamp from any line with a time
-        time_str = _extract_time(line)
-        if time_str:
-            last_timestamp = f"{log_date}T{time_str}"
+        # Track last timestamp from non-event lines
+        if ts:
+            last_timestamp = ts
 
-    return events, sessions, had_stopping_server, last_timestamp, online_players, pause_sessions
+    return events, had_stopping_server, last_timestamp, online_players, server_start_time, pause_sessions
 
 
 def collect_logs():
@@ -174,10 +188,8 @@ def collect_logs():
     if not mc_root:
         return {
             "events": [],
-            "sessions": {},
+            "files": [],
             "log_date": None,
-            "crashes": [],
-            "server_sessions": [],
         }
 
     logs_dir = os.path.join(mc_root, "logs")
@@ -186,15 +198,13 @@ def collect_logs():
     if not os.path.isfile(latest):
         return {
             "events": [],
-            "sessions": {},
+            "files": [],
             "log_date": None,
-            "crashes": [],
-            "server_sessions": [],
         }
 
-    log_date = datetime.fromtimestamp(os.path.getmtime(latest)).strftime("%Y-%m-%d")
+    now = datetime.now()
+    log_date = now.strftime("%Y-%m-%d")
 
-    # Regex patterns
     join_re = re.compile(r": ([A-Za-z0-9_]+) joined the game")
     leave_re = re.compile(r": ([A-Za-z0-9_]+) left the game")
     death_re = re.compile(
@@ -222,43 +232,32 @@ def collect_logs():
     ]
 
     events = []
-    sessions = {}
-    crashes = []
-    server_sessions = []
+    files = []
 
     # Parse latest.log
-    new_events, new_sessions, had_stop, last_ts, online, new_pauses = _parse_log_file(
-        latest, log_date, death_markers, join_re, leave_re, death_re
+    result = _parse_log_file(
+        latest, log_date, death_markers, join_re, leave_re, death_re, now
     )
+    new_events, had_stop, last_ts, online, server_start, pauses = result
     events.extend(new_events)
-    server_sessions.extend(new_pauses)
-    for player, counts in new_sessions.items():
-        sessions.setdefault(player, {"joins": 0, "leaves": 0})
-        sessions[player]["joins"] += counts["joins"]
-        sessions[player]["leaves"] += counts["leaves"]
+    files.append({
+        "is_latest": True,
+        "had_stop": had_stop,
+        "last_timestamp": last_ts,
+        "online_players": online,
+        "server_start_time": server_start,
+        "pause_sessions": pauses,
+    })
 
-    # latest.log without 'Stopping server' means the server is still running
-    # or was killed. If players are still online, we don't generate synthetic
-    # leaves — they're genuinely still playing.
-    latest_crash = None
-    if not had_stop and online:
-        # Server may have been killed — but since latest.log is the current
-        # session, players are likely still connected. Only flag as crash
-        # if there's a previous log that also ended without stop (see below).
-        pass
-
-    # Parse rotated log files (oldest first so we can build server sessions)
+    # Parse rotated log files (oldest first)
     rotated_files = sorted(
         (
             f
             for f in os.listdir(logs_dir)
             if re.match(r"\d{4}-\d{2}-\d{2}-\d+_?\.log(?:\.gz)?$", f)
         ),
-        reverse=False,  # oldest first
     )
 
-    # Collect parsed results for rotated files in order
-    rotated_results = []
     for fname in rotated_files:
         m = re.match(r"(\d{4}-\d{2}-\d{2})", fname)
         file_date = m.group(1) if m else log_date
@@ -269,101 +268,21 @@ def collect_logs():
             join_re,
             leave_re,
             death_re,
+            now,
         )
-        rotated_results.append((fname, file_date, result))
-
-    # Process rotated files and detect crashes
-    for i, (fname, file_date, (f_events, f_sessions, had_stop, last_ts, online, f_pauses)) in enumerate(
-        rotated_results
-    ):
+        f_events, had_stop, last_ts, online, server_start, pauses = result
         events.extend(f_events)
-        server_sessions.extend(f_pauses)
-        for player, counts in f_sessions.items():
-            sessions.setdefault(player, {"joins": 0, "leaves": 0})
-            sessions[player]["joins"] += counts["joins"]
-            sessions[player]["leaves"] += counts["leaves"]
-
-        # When a log ends without 'Stopping server' and players were still
-        # online, generate synthetic leaves to close their sessions.
-        # Only flag as a crash if there is no subsequent log (server never came back).
-        if not had_stop and online and last_ts:
-            next_log_exists = (
-                (i + 1 < len(rotated_results))
-                or os.path.isfile(latest)
-            )
-
-            if not next_log_exists:
-                crash_time = last_ts
-                crashes.append({"type": "crash", "timestamp": crash_time})
-
-                # Find the next server start (the next rotated file or latest.log)
-                restart_time = None
-                if i + 1 < len(rotated_results):
-                    # Next rotated file — find its first 'Done' line
-                    next_fname = rotated_results[i + 1][0]
-                    for line in _read_lines(os.path.join(logs_dir, next_fname)):
-                        if "Done (" in line:
-                            time_str = _extract_time(line)
-                            if time_str:
-                                restart_time = f"{rotated_results[i + 1][1]}T{time_str}"
-                            break
-                else:
-                    # This is the last rotated file — look in latest.log
-                    for line in _read_lines(latest):
-                        if "Done (" in line:
-                            time_str = _extract_time(line)
-                            if time_str:
-                                restart_time = f"{log_date}T{time_str}"
-                            break
-
-                if restart_time:
-                    server_sessions.append({
-                        "startTime": crash_time,
-                        "endTime": restart_time,
-                    })
-
-            # Generate synthetic leave events for online players
-            for player in online:
-                event = {
-                    "type": "leave",
-                    "player": player,
-                    "timestamp": last_ts,
-                    "synthetic": True,
-                    "reason": "server_crash" if not next_log_exists else "server_restart",
-                }
-                events.append(event)
-                sessions.setdefault(player, {"joins": 0, "leaves": 0})
-                sessions[player]["leaves"] += 1
-
-        # Detect graceful stop followed by restart → server session
-        if had_stop and last_ts:
-            restart_time = None
-            if i + 1 < len(rotated_results):
-                next_fname = rotated_results[i + 1][0]
-                for line in _read_lines(os.path.join(logs_dir, next_fname)):
-                    if "Done (" in line:
-                        time_str = _extract_time(line)
-                        if time_str:
-                            restart_time = f"{rotated_results[i + 1][1]}T{time_str}"
-                        break
-            else:
-                for line in _read_lines(latest):
-                    if "Done (" in line:
-                        time_str = _extract_time(line)
-                        if time_str:
-                            restart_time = f"{log_date}T{time_str}"
-                        break
-
-            if restart_time:
-                server_sessions.append({
-                    "startTime": last_ts,
-                    "endTime": restart_time,
-                })
+        files.append({
+            "is_latest": False,
+            "had_stop": had_stop,
+            "last_timestamp": last_ts,
+            "online_players": online,
+            "server_start_time": server_start,
+            "pause_sessions": pauses,
+        })
 
     return {
         "events": events,
-        "sessions": sessions,
+        "files": files,
         "log_date": log_date,
-        "crashes": crashes,
-        "server_sessions": server_sessions,
     }

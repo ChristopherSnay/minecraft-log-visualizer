@@ -10,7 +10,7 @@ from collectors.playerdata import collect_playerdata
 # Collectors
 from collectors.stats import collect_stats
 from collectors.usercache import collect_usercache
-from build_sessions import main as build_sessions
+from build_sessions import build_sessions
 from dotenv import load_dotenv
 
 
@@ -109,19 +109,18 @@ def main():
     captured_at = datetime.now(timezone.utc).isoformat()
     world = parse_world(world_path, captured_at)
 
+    # Build pre-computed log structures in-memory and discard raw events
+    built = build_sessions(world["logs"], captured_at)
+    world["logs"].update(built)
+    world["logs"].pop("events", None)
+    world["logs"].pop("files", None)
+
     # Write unified world model into public/data for React
     output_dir = os.path.join("public", "data")
     os.makedirs(output_dir, exist_ok=True)
 
     output_path = os.path.join(output_dir, "stats.json")
     write_json(output_path, world)
-
-    # Filter events/sessions to the last 24h and drop raw data
-    build_sessions()
-
-    # Re-read the cleaned stats.json for the backup
-    with open(output_path) as f:
-        cleaned = json.load(f)
 
     # Write timestamped backup
     backup_dir = os.path.join("data", "backups")
@@ -130,7 +129,7 @@ def main():
     ts = captured_at.replace(":", "-").replace("+", "-").replace(".", "-")
     backup_path = os.path.join(backup_dir, f"stats-{ts}.zip")
     with zipfile.ZipFile(backup_path, "w", zipfile.ZIP_DEFLATED) as zf:
-        zf.writestr("stats.json", json.dumps(cleaned, indent=2))
+        zf.writestr("stats.json", json.dumps(world, indent=2))
 
     print(f"Generated {output_path}")
     print(f"Backup  {backup_path}")

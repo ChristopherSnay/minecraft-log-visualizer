@@ -10,7 +10,10 @@ export function useWorldData() {
   useEffect(() => {
     (async () => {
       try {
-        const statsRes = await fetch(`${import.meta.env.BASE_URL}data/stats.json?t=${Date.now()}`);
+        const statsUrl =
+          import.meta.env.VITE_STATS_URL ??
+          `${import.meta.env.BASE_URL}data/stats.json?t=${Date.now()}`;
+        const statsRes = await fetch(statsUrl);
         const json = await statsRes.json();
         setStats(json);
       } catch {
