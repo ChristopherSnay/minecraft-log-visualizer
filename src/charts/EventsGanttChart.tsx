@@ -53,7 +53,7 @@ interface EventsGanttChartProps {
   capturedAt?: Date | null;
 }
 
-const TIME_WINDOW_OPTIONS = [4, 8, 12] as const;
+const TIME_WINDOW_OPTIONS = [4, 8, 12, 24] as const;
 const DOT_RADIUS = 5;
 const HIT_RADIUS = 8;
 
@@ -91,7 +91,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const tooltipRef = useRef<HTMLDivElement>(null);
-  const [timeWindow, setTimeWindow] = useState<number>(isMobile ? 4 : 8);
+  const [timeWindow, setTimeWindow] = useState<number>(isMobile ? 4 : 24);
 
   const { chartData, options, ganttEvents, hasEvents } = useMemo(() => {
     const now = capturedAt && !isNaN(capturedAt.getTime()) ? capturedAt : new Date();
@@ -101,13 +101,14 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
       .map((s) => {
         const loginDate = new Date(s.login_time);
         const loginH = (now.getTime() - loginDate.getTime()) / (1000 * 60 * 60);
-        if (loginH > timeWindow || loginH < 0) return null;
+        if (loginH < 0) return null;
 
         let logoutH = 0;
         if (s.logout_time) {
           const logoutDate = new Date(s.logout_time);
           logoutH = (now.getTime() - logoutDate.getTime()) / (1000 * 60 * 60);
-          if (logoutH > timeWindow || logoutH < 0) return null;
+          if (logoutH < 0) return null;
+          if (logoutH > timeWindow) return null;
         }
 
         return {
@@ -253,10 +254,11 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
 
     const barData = [
       ...sessions.map((s) => ({
-        x: [s.logoutHoursAgo, s.loginHoursAgo] as [number, number],
+        x: [s.logoutHoursAgo, Math.min(s.loginHoursAgo, timeWindow)] as [number, number],
         y: s.player,
         loginTime: s.loginTime,
-        logoutTime: s.logoutTime
+        logoutTime: s.logoutTime,
+        loginHoursAgo: s.loginHoursAgo
       })),
       ...serverDowntimeData
     ];
@@ -326,6 +328,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
                 logoutTime?: string;
                 startTime?: string;
                 endTime?: string;
+                loginHoursAgo?: number;
               };
               if (raw?.startTime) {
                 // Server downtime
@@ -340,13 +343,14 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
               }
               if (raw?.x) {
                 const [start, end] = raw.x;
-                const duration = Math.round((end - start) * 10) / 10;
+                const actualEnd = raw.loginHoursAgo ?? end;
+                const duration = Math.round((actualEnd - start) * 10) / 10;
                 const h = Math.floor(duration);
                 const m = Math.round((duration - h) * 60);
                 const durationStr = h > 0 ? (m > 0 ? `${h}h ${m}m` : `${h}h`) : `${m}m`;
                 const loginStr = raw.loginTime
                   ? formatTime(raw.loginTime)
-                  : `${Math.round(end * 10) / 10}h ago`;
+                  : `${Math.round(actualEnd * 10) / 10}h ago`;
                 const logoutStr = raw.logoutTime
                   ? formatTime(raw.logoutTime)
                   : raw.x[0] === 0
@@ -534,6 +538,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
             }}
           />
           <Bar
+            key={timeWindow}
             data={chartData as unknown as ChartData<'bar'>}
             options={
               {

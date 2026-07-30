@@ -67,7 +67,7 @@ def _extract_time(line):
     return m.group(1) if m else None
 
 
-def _parse_log_file(path, log_date, death_markers, join_re, leave_re, death_re, now=None):
+def _parse_log_file(path, log_date, death_markers, join_re, leave_re, death_re, now=None, is_latest=False):
     """Parse a single log file.
 
     Returns:
@@ -100,10 +100,12 @@ def _parse_log_file(path, log_date, death_markers, join_re, leave_re, death_re, 
             now_minutes = now.hour * 60 + now.minute
             event_minutes = h * 60 + m
 
-            # First timestamp: if the event time is well ahead of the current
-            # time (e.g. we're at 1 PM and the log says 10 PM), the session
-            # started on the previous day.
-            if prev_hour is None and event_minutes > now_minutes + 180:
+            # First-timestamp adjustment: only applies to latest.log.
+            # If the first event time is well ahead of the current time
+            # (e.g. it's 1 PM local and the log says 10 PM), the session
+            # started on the previous day.  Rotated files already carry
+            # the correct date in their filename.
+            if is_latest and prev_hour is None and event_minutes > now_minutes + 180:
                 d = datetime.fromisoformat(log_date) - timedelta(days=1)
                 current_date = d.strftime("%Y-%m-%d")
             # Midnight rollover: hour jumps from late evening to early morning
@@ -236,7 +238,7 @@ def collect_logs():
 
     # Parse latest.log
     result = _parse_log_file(
-        latest, log_date, death_markers, join_re, leave_re, death_re, now
+        latest, log_date, death_markers, join_re, leave_re, death_re, now, is_latest=True
     )
     new_events, had_stop, last_ts, online, server_start, pauses = result
     events.extend(new_events)

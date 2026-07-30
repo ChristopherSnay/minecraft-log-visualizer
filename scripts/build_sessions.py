@@ -210,10 +210,12 @@ def build_sessions(log_data, captured_at):
     # ── 6. Filter to 24h window ──
     cutoff = parse_ts(captured_at) - timedelta(hours=WINDOW_HOURS)
 
-    player_sessions = [
-        s for s in player_sessions
-        if within_window(s["login_time"], cutoff)
-    ]
+    def _session_overlaps(s, cutoff):
+        return within_window(s["login_time"], cutoff) or (
+            s.get("logout_time") is not None and within_window(s["logout_time"], cutoff)
+        )
+
+    player_sessions = [s for s in player_sessions if _session_overlaps(s, cutoff)]
     deaths = [
         d for d in deaths
         if within_window(d["timestamp"], cutoff)
