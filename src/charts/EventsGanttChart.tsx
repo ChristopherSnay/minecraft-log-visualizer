@@ -91,7 +91,7 @@ export const EventsGanttChart: React.FC<EventsGanttChartProps> = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const tooltipRef = useRef<HTMLDivElement>(null);
-  const [timeWindow, setTimeWindow] = useState<number>(isMobile ? 4 : 24);
+  const [timeWindow, setTimeWindow] = useState<number>(isMobile ? 4 : 12);
 
   const { chartData, options, ganttEvents, hasEvents } = useMemo(() => {
     const now = capturedAt && !isNaN(capturedAt.getTime()) ? capturedAt : new Date();
