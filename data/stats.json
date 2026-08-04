@@ -88,7 +88,7 @@
           "minecraft:stonecutter": 3,
           "minecraft:gray_carpet": 1,
           "minecraft:potted_cactus": 1,
-          "minecraft:polished_granite": 138,
+          "minecraft:polished_granite": 151,
           "minecraft:waxed_cut_copper_slab": 10,
           "minecraft:lapis_ore": 2,
           "minecraft:black_bed": 6,
@@ -218,7 +218,7 @@
           "minecraft:shroomlight": 9,
           "minecraft:mangrove_leaves": 3,
           "minecraft:red_mushroom_block": 280,
-          "minecraft:polished_diorite": 122,
+          "minecraft:polished_diorite": 145,
           "minecraft:furnace": 9,
           "minecraft:yellow_terracotta": 3,
           "minecraft:waxed_oxidized_chiseled_copper": 2,
@@ -529,7 +529,7 @@
           "minecraft:cobbled_deepslate_stairs": 78,
           "minecraft:cherry_button": 5,
           "minecraft:cobbled_deepslate": 1502,
-          "minecraft:polished_diorite": 928,
+          "minecraft:polished_diorite": 963,
           "minecraft:mossy_cobblestone": 2,
           "minecraft:deepslate_brick_slab": 84,
           "minecraft:pale_oak_trapdoor": 3,
@@ -540,7 +540,7 @@
           "minecraft:anvil": 4,
           "minecraft:spruce_fence_gate": 6,
           "minecraft:goat_horn": 8,
-          "minecraft:polished_granite": 502,
+          "minecraft:polished_granite": 567,
           "minecraft:sand": 14,
           "minecraft:wind_charge": 3,
           "minecraft:lodestone": 6,
@@ -725,7 +725,7 @@
           "minecraft:cherry_sapling": 34,
           "minecraft:brown_banner": 1,
           "minecraft:bookshelf": 56,
-          "minecraft:diamond_pickaxe": 30965,
+          "minecraft:diamond_pickaxe": 31001,
           "minecraft:ladder": 375,
           "minecraft:crossbow": 12,
           "minecraft:dark_oak_fence": 39,
@@ -820,40 +820,40 @@
           "minecraft:blaze": 4
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 10754,
+          "minecraft:time_since_rest": 2418,
           "minecraft:leave_game": 158,
           "minecraft:boat_one_cm": 3008456,
           "minecraft:damage_absorbed": 444,
-          "minecraft:time_since_death": 2722940,
+          "minecraft:time_since_death": 2740940,
           "minecraft:interact_with_furnace": 523,
           "minecraft:happy_ghast_one_cm": 427562,
-          "minecraft:total_world_time": 7761185,
-          "minecraft:crouch_one_cm": 203800,
-          "minecraft:climb_one_cm": 274093,
+          "minecraft:total_world_time": 7779185,
+          "minecraft:crouch_one_cm": 207401,
+          "minecraft:climb_one_cm": 275623,
           "minecraft:deaths": 11,
           "minecraft:interact_with_stonecutter": 50,
           "minecraft:animals_bred": 37,
           "minecraft:traded_with_villager": 1263,
           "minecraft:damage_resisted": 44,
           "minecraft:interact_with_crafting_table": 506,
-          "minecraft:walk_one_cm": 10474633,
+          "minecraft:walk_one_cm": 10484772,
           "minecraft:walk_under_water_one_cm": 1136446,
           "minecraft:horse_one_cm": 70612,
           "minecraft:damage_dealt": 571171,
-          "minecraft:play_time": 7761185,
-          "minecraft:jump": 55446,
+          "minecraft:play_time": 7779185,
+          "minecraft:jump": 55536,
           "minecraft:play_record": 3,
-          "minecraft:sprint_one_cm": 41058333,
+          "minecraft:sprint_one_cm": 41095895,
           "minecraft:inspect_hopper": 26,
-          "minecraft:fly_one_cm": 6741864,
+          "minecraft:fly_one_cm": 6747962,
           "minecraft:walk_on_water_one_cm": 518545,
           "minecraft:interact_with_grindstone": 4,
           "minecraft:talked_to_villager": 667,
-          "minecraft:damage_taken": 38805,
+          "minecraft:damage_taken": 38839,
           "minecraft:mob_kills": 5022,
           "minecraft:interact_with_beacon": 4,
           "minecraft:interact_with_smithing_table": 15,
-          "minecraft:sleep_in_bed": 291,
+          "minecraft:sleep_in_bed": 293,
           "minecraft:inspect_dispenser": 7,
           "minecraft:swim_one_cm": 548798,
           "minecraft:pot_flower": 2,
@@ -865,11 +865,11 @@
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 119,
-          "minecraft:open_chest": 3934,
+          "minecraft:open_chest": 3937,
           "minecraft:interact_with_smoker": 2,
-          "minecraft:fall_one_cm": 942935,
+          "minecraft:fall_one_cm": 946185,
           "minecraft:interact_with_anvil": 112,
-          "minecraft:sneak_time": 86077
+          "minecraft:sneak_time": 87648
         },
         "items_picked_up": {
           "minecraft:enchanting_table": 2,
@@ -1028,7 +1028,7 @@
           "minecraft:waxed_copper_block": 778,
           "minecraft:poppy": 39,
           "minecraft:potion": 12,
-          "minecraft:polished_granite": 107,
+          "minecraft:polished_granite": 115,
           "minecraft:deepslate_tile_slab": 8,
           "minecraft:mangrove_planks": 121,
           "minecraft:ladder": 275,
@@ -1118,7 +1118,7 @@
           "minecraft:oak_button": 30,
           "minecraft:oak_sign": 3,
           "minecraft:golden_sword": 1,
-          "minecraft:polished_diorite": 114,
+          "minecraft:polished_diorite": 127,
           "minecraft:nether_wart_block": 21,
           "minecraft:pale_oak_trapdoor": 3,
           "minecraft:cornflower": 9,
@@ -5220,15 +5220,15 @@
           }
         ],
         "position": [
-          -243.82905457805174,
-          77.0,
-          -102.04930341304632
+          -245.08654243660828,
+          79.0,
+          -102.22873423687113
         ],
         "dimension": "minecraft:overworld",
         "xp": 39,
         "health": 20.0,
-        "food": 20,
-        "saturation": 15.0,
+        "food": 15,
+        "saturation": 0.0,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -5255,7 +5255,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:deepslate_bricks",
+            "id": "minecraft:polished_granite",
             "count": 1
           },
           {
@@ -5307,11 +5307,23 @@
             "count": 1
           },
           {
+            "id": "minecraft:deepslate_bricks",
+            "count": 1
+          },
+          {
+            "id": "minecraft:polished_granite",
+            "count": 1
+          },
+          {
             "id": "minecraft:mace",
             "count": 1
           },
           {
-            "id": "minecraft:polished_diorite",
+            "id": "minecraft:polished_granite",
+            "count": 1
+          },
+          {
+            "id": "minecraft:polished_granite",
             "count": 1
           },
           {
@@ -32200,7 +32212,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 17565802,
+    "time": 17583802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -32396,5 +32408,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-04T17:15:01.476634+00:00"
+  "captured_at": "2026-08-04T17:30:01.335612+00:00"
 }
