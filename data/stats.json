@@ -841,14 +841,14 @@
           "minecraft:blaze": 4
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 6260,
+          "minecraft:time_since_rest": 12260,
           "minecraft:leave_game": 167,
           "minecraft:boat_one_cm": 3008456,
           "minecraft:damage_absorbed": 444,
-          "minecraft:time_since_death": 3175755,
+          "minecraft:time_since_death": 3181755,
           "minecraft:interact_with_furnace": 553,
           "minecraft:happy_ghast_one_cm": 427562,
-          "minecraft:total_world_time": 8214000,
+          "minecraft:total_world_time": 8220000,
           "minecraft:crouch_one_cm": 222155,
           "minecraft:climb_one_cm": 295599,
           "minecraft:deaths": 11,
@@ -857,14 +857,14 @@
           "minecraft:traded_with_villager": 1263,
           "minecraft:damage_resisted": 44,
           "minecraft:interact_with_crafting_table": 521,
-          "minecraft:walk_one_cm": 11209565,
+          "minecraft:walk_one_cm": 11210009,
           "minecraft:walk_under_water_one_cm": 1167266,
           "minecraft:horse_one_cm": 85732,
           "minecraft:damage_dealt": 580592,
-          "minecraft:play_time": 8214000,
+          "minecraft:play_time": 8220000,
           "minecraft:jump": 58186,
           "minecraft:play_record": 3,
-          "minecraft:sprint_one_cm": 43400287,
+          "minecraft:sprint_one_cm": 43401263,
           "minecraft:inspect_hopper": 26,
           "minecraft:fly_one_cm": 6980419,
           "minecraft:walk_on_water_one_cm": 551491,
@@ -5321,9 +5321,9 @@
           }
         ],
         "position": [
-          -243.33640305388906,
+          -243.16182909068934,
           68.0,
-          -67.85991970367377
+          -82.02517228038006
         ],
         "dimension": "minecraft:overworld",
         "xp": 40,
@@ -32446,7 +32446,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 18330550,
+    "time": 18333802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -32470,6 +32470,11 @@
   "logs": {
     "log_date": "2026-08-05",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-05T12:37:26",
+        "logout_time": null
+      },
       {
         "player": "R3B3X",
         "login_time": "2026-08-05T09:47:03",
@@ -32605,6 +32610,10 @@
         "endTime": "2026-08-05T08:56:21"
       },
       {
+        "startTime": "2026-08-05T10:00:58",
+        "endTime": "2026-08-05T12:37:26"
+      },
+      {
         "startTime": "2026-08-04T17:04:33",
         "endTime": "2026-08-04T17:06:25"
       },
@@ -32635,8 +32644,8 @@
     ]
   },
   "usercache": {
-    "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
+    "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
@@ -32646,5 +32655,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-05T16:30:02.407451+00:00"
+  "captured_at": "2026-08-05T16:45:02.392936+00:00"
 }
