@@ -770,7 +770,7 @@
           "minecraft:carrot": 10,
           "minecraft:cherry_stairs": 194,
           "minecraft:birch_boat": 6,
-          "minecraft:white_bed": 65,
+          "minecraft:white_bed": 66,
           "minecraft:gold_block": 136,
           "minecraft:trident": 1,
           "minecraft:waxed_oxidized_copper": 7,
@@ -841,14 +841,14 @@
           "minecraft:blaze": 4
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 12260,
-          "minecraft:leave_game": 167,
+          "minecraft:time_since_rest": 2447,
+          "minecraft:leave_game": 168,
           "minecraft:boat_one_cm": 3008456,
           "minecraft:damage_absorbed": 444,
-          "minecraft:time_since_death": 3181755,
+          "minecraft:time_since_death": 3185031,
           "minecraft:interact_with_furnace": 553,
           "minecraft:happy_ghast_one_cm": 427562,
-          "minecraft:total_world_time": 8220000,
+          "minecraft:total_world_time": 8223276,
           "minecraft:crouch_one_cm": 222155,
           "minecraft:climb_one_cm": 295599,
           "minecraft:deaths": 11,
@@ -857,16 +857,16 @@
           "minecraft:traded_with_villager": 1263,
           "minecraft:damage_resisted": 44,
           "minecraft:interact_with_crafting_table": 521,
-          "minecraft:walk_one_cm": 11210009,
+          "minecraft:walk_one_cm": 11210809,
           "minecraft:walk_under_water_one_cm": 1167266,
           "minecraft:horse_one_cm": 85732,
           "minecraft:damage_dealt": 580592,
-          "minecraft:play_time": 8220000,
-          "minecraft:jump": 58186,
+          "minecraft:play_time": 8223276,
+          "minecraft:jump": 58187,
           "minecraft:play_record": 3,
-          "minecraft:sprint_one_cm": 43401263,
+          "minecraft:sprint_one_cm": 43405628,
           "minecraft:inspect_hopper": 26,
-          "minecraft:fly_one_cm": 6980419,
+          "minecraft:fly_one_cm": 6980526,
           "minecraft:walk_on_water_one_cm": 551491,
           "minecraft:interact_with_grindstone": 4,
           "minecraft:talked_to_villager": 668,
@@ -874,7 +874,7 @@
           "minecraft:damage_taken": 39366,
           "minecraft:interact_with_beacon": 4,
           "minecraft:interact_with_smithing_table": 15,
-          "minecraft:sleep_in_bed": 323,
+          "minecraft:sleep_in_bed": 324,
           "minecraft:inspect_dispenser": 7,
           "minecraft:swim_one_cm": 593651,
           "minecraft:pot_flower": 3,
@@ -5321,14 +5321,14 @@
           }
         ],
         "position": [
-          -243.16182909068934,
+          -242.5,
           68.0,
-          -82.02517228038006
+          -81.5
         ],
         "dimension": "minecraft:overworld",
         "xp": 40,
         "health": 20.0,
-        "food": 9,
+        "food": 7,
         "saturation": 0.0,
         "inventory": [
           {
@@ -5357,10 +5357,6 @@
           },
           {
             "id": "minecraft:pale_oak_sign",
-            "count": 1
-          },
-          {
-            "id": "minecraft:white_bed",
             "count": 1
           },
           {
@@ -32446,7 +32442,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 18333802,
+    "time": 18341026,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -32473,7 +32469,7 @@
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-05T12:37:26",
-        "logout_time": null
+        "logout_time": "2026-08-05T12:45:09"
       },
       {
         "player": "R3B3X",
@@ -32579,12 +32575,6 @@
     "deaths": [
       {
         "player": "Villager",
-        "message": "Villager was slain by Zombie",
-        "timestamp": "2026-08-04T16:47:10",
-        "entity_type": "Villager"
-      },
-      {
-        "player": "Villager",
         "message": "Leatherworker was slain by Zombie",
         "timestamp": "2026-08-05T08:57:55",
         "entity_type": "Villager"
@@ -32655,5 +32645,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-05T16:45:02.392936+00:00"
+  "captured_at": "2026-08-05T17:00:02.582797+00:00"
 }
