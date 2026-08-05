@@ -32428,7 +32428,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 18253007,
+    "time": 18255802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -32452,6 +32452,11 @@
   "logs": {
     "log_date": "2026-08-05",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-05T08:56:21",
+        "logout_time": null
+      },
       {
         "player": "R3B3X",
         "login_time": "2026-08-05T08:35:38",
@@ -32571,11 +32576,6 @@
         "player": "ZodiacalLight",
         "login_time": "2026-08-04T12:37:38",
         "logout_time": "2026-08-04T13:40:16"
-      },
-      {
-        "player": "R3B3X",
-        "login_time": "2026-08-04T11:43:07",
-        "logout_time": "2026-08-04T12:58:33"
       }
     ],
     "deaths": [
@@ -32583,6 +32583,12 @@
         "player": "Villager",
         "message": "Villager was slain by Zombie",
         "timestamp": "2026-08-04T16:47:10",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Leatherworker was slain by Zombie",
+        "timestamp": "2026-08-05T08:57:55",
         "entity_type": "Villager"
       }
     ],
@@ -32600,6 +32606,10 @@
       {
         "startTime": "2026-08-05T08:28:48",
         "endTime": "2026-08-05T08:35:38"
+      },
+      {
+        "startTime": "2026-08-05T08:38:35",
+        "endTime": "2026-08-05T08:56:21"
       },
       {
         "startTime": "2026-08-04T13:41:16",
@@ -32644,10 +32654,10 @@
     ]
   },
   "usercache": {
+    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
-    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
@@ -32655,5 +32665,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-05T12:45:01.419763+00:00"
+  "captured_at": "2026-08-05T13:00:01.336796+00:00"
 }
