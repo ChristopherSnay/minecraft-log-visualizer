@@ -29883,7 +29883,7 @@
           "minecraft:stonecutter": 4,
           "minecraft:flowering_azalea": 1,
           "minecraft:tinted_glass": 173,
-          "minecraft:light_gray_bed": 1,
+          "minecraft:light_gray_bed": 2,
           "minecraft:grindstone": 2,
           "minecraft:pale_oak_door": 4,
           "minecraft:nether_wart": 2,
@@ -30074,11 +30074,11 @@
         },
         "custom_stats": {
           "minecraft:talked_to_villager": 242,
-          "minecraft:time_since_rest": 109627,
-          "minecraft:leave_game": 58,
+          "minecraft:time_since_rest": 111297,
+          "minecraft:leave_game": 59,
           "minecraft:damage_taken": 9803,
           "minecraft:mob_kills": 646,
-          "minecraft:time_since_death": 2686610,
+          "minecraft:time_since_death": 2688280,
           "minecraft:interact_with_brewingstand": 3,
           "minecraft:interact_with_furnace": 580,
           "minecraft:interact_with_smithing_table": 23,
@@ -30086,7 +30086,7 @@
           "minecraft:inspect_dispenser": 7,
           "minecraft:happy_ghast_one_cm": 31529,
           "minecraft:swim_one_cm": 44972,
-          "minecraft:total_world_time": 4180331,
+          "minecraft:total_world_time": 4182001,
           "minecraft:crouch_one_cm": 384092,
           "minecraft:climb_one_cm": 154453,
           "minecraft:deaths": 6,
@@ -30097,11 +30097,11 @@
           "minecraft:animals_bred": 75,
           "minecraft:traded_with_villager": 191,
           "minecraft:interact_with_crafting_table": 301,
-          "minecraft:walk_one_cm": 17758841,
+          "minecraft:walk_one_cm": 17767525,
           "minecraft:walk_under_water_one_cm": 189025,
           "minecraft:horse_one_cm": 461018,
           "minecraft:damage_dealt": 94347,
-          "minecraft:play_time": 4180331,
+          "minecraft:play_time": 4182001,
           "minecraft:jump": 17141,
           "minecraft:play_record": 1,
           "minecraft:drop": 315,
@@ -30109,8 +30109,8 @@
           "minecraft:interact_with_cartography_table": 5,
           "minecraft:bell_ring": 174,
           "minecraft:open_barrel": 1,
-          "minecraft:sprint_one_cm": 5642324,
-          "minecraft:open_chest": 2433,
+          "minecraft:sprint_one_cm": 5643781,
+          "minecraft:open_chest": 2439,
           "minecraft:fill_cauldron": 1,
           "minecraft:inspect_hopper": 275,
           "minecraft:interact_with_smoker": 4,
@@ -33307,9 +33307,9 @@
           }
         ],
         "position": [
-          -28.532402770216525,
-          64.0,
-          -24.07187592143604
+          -27.412346056305374,
+          70.0,
+          -24.256410633845196
         ],
         "dimension": "minecraft:overworld",
         "xp": 21,
@@ -33346,14 +33346,6 @@
             "count": 1
           },
           {
-            "id": "minecraft:deepslate_tile_stairs",
-            "count": 1
-          },
-          {
-            "id": "minecraft:iron_block",
-            "count": 1
-          },
-          {
             "id": "minecraft:bone",
             "count": 1
           },
@@ -33366,43 +33358,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:quartz_stairs",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cobbled_deepslate",
-            "count": 1
-          },
-          {
             "id": "minecraft:totem_of_undying",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cobbled_deepslate",
-            "count": 1
-          },
-          {
-            "id": "minecraft:crimson_planks",
-            "count": 1
-          },
-          {
-            "id": "minecraft:quartz_block",
-            "count": 1
-          },
-          {
-            "id": "minecraft:crimson_pressure_plate",
-            "count": 1
-          },
-          {
-            "id": "minecraft:iron_ingot",
-            "count": 1
-          },
-          {
-            "id": "minecraft:light_gray_bed",
-            "count": 1
-          },
-          {
-            "id": "minecraft:smooth_stone_slab",
             "count": 1
           },
           {
@@ -33414,23 +33370,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:iron_block",
-            "count": 1
-          },
-          {
             "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:smooth_stone",
-            "count": 1
-          },
-          {
-            "id": "minecraft:smooth_stone",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cherry_pressure_plate",
             "count": 1
           },
           {
@@ -33444,22 +33384,6 @@
           {
             "id": "minecraft:coal",
             "count": 1
-          },
-          {
-            "id": "minecraft:crimson_stairs",
-            "count": 1
-          },
-          {
-            "id": "minecraft:quartz_block",
-            "count": 1
-          },
-          {
-            "id": "minecraft:polished_deepslate",
-            "count": 1
-          },
-          {
-            "id": "minecraft:quartz_slab",
-            "count": 1
           }
         ],
         "effects": []
@@ -33471,7 +33395,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 21141802,
+    "time": 21144795,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -33513,7 +33437,7 @@
       {
         "player": "BobEvansSausage",
         "login_time": "2026-08-08T11:38:55",
-        "logout_time": null
+        "logout_time": "2026-08-08T13:30:19"
       },
       {
         "player": "R3B3X",
@@ -33670,5 +33594,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-08T17:30:00.729195+00:00"
+  "captured_at": "2026-08-08T17:45:00.656447+00:00"
 }
