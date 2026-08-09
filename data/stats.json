@@ -6000,7 +6000,7 @@
           "minecraft:hay_block": 2,
           "minecraft:spruce_trapdoor": 28,
           "minecraft:oak_trapdoor": 54,
-          "minecraft:white_bed": 238,
+          "minecraft:white_bed": 239,
           "minecraft:bee_nest": 1,
           "minecraft:mud_brick_wall": 4,
           "minecraft:cherry_sapling": 15,
@@ -6037,7 +6037,7 @@
         "items_crafted": {
           "minecraft:firework_rocket": 6,
           "minecraft:gold_ingot": 40,
-          "minecraft:book": 19,
+          "minecraft:book": 21,
           "minecraft:iron_chestplate": 2,
           "minecraft:melon": 1,
           "minecraft:polished_diorite_stairs": 12,
@@ -6095,7 +6095,7 @@
           "minecraft:candle": 3,
           "minecraft:light_gray_bed": 5,
           "minecraft:diamond_leggings": 1,
-          "minecraft:enchanted_book": 18,
+          "minecraft:enchanted_book": 20,
           "minecraft:spruce_stairs": 140,
           "minecraft:bamboo_planks": 24,
           "minecraft:iron_axe": 10,
@@ -6300,7 +6300,7 @@
           "minecraft:spruce_trapdoor": 130,
           "minecraft:potion": 7,
           "minecraft:bush": 208,
-          "minecraft:white_bed": 240,
+          "minecraft:white_bed": 241,
           "minecraft:apple": 8,
           "minecraft:polished_diorite_slab": 1,
           "minecraft:scaffolding": 4075,
@@ -6329,7 +6329,7 @@
           "minecraft:white_wool": 379,
           "minecraft:lily_of_the_valley": 6,
           "minecraft:oak_stairs": 185,
-          "minecraft:cooked_beef": 43,
+          "minecraft:cooked_beef": 44,
           "minecraft:flint_and_steel": 2,
           "minecraft:amethyst_block": 9,
           "minecraft:chest": 68,
@@ -6357,18 +6357,18 @@
           "minecraft:cow": 36
         },
         "custom_stats": {
-          "minecraft:talked_to_villager": 315,
-          "minecraft:time_since_rest": 18715,
+          "minecraft:talked_to_villager": 324,
+          "minecraft:time_since_rest": 281,
           "minecraft:leave_game": 93,
           "minecraft:damage_taken": 10383,
           "minecraft:mob_kills": 972,
           "minecraft:boat_one_cm": 687129,
           "minecraft:interact_with_beacon": 5,
-          "minecraft:time_since_death": 2333313,
+          "minecraft:time_since_death": 2345313,
           "minecraft:aviate_one_cm": 55816,
           "minecraft:interact_with_furnace": 162,
-          "minecraft:sleep_in_bed": 340,
-          "minecraft:total_world_time": 5483485,
+          "minecraft:sleep_in_bed": 341,
+          "minecraft:total_world_time": 5495485,
           "minecraft:crouch_one_cm": 39772,
           "minecraft:climb_one_cm": 924974,
           "minecraft:deaths": 2,
@@ -6376,21 +6376,21 @@
           "minecraft:enchant_item": 18,
           "minecraft:interact_with_loom": 1,
           "minecraft:animals_bred": 34,
-          "minecraft:traded_with_villager": 379,
-          "minecraft:interact_with_crafting_table": 318,
-          "minecraft:walk_one_cm": 24047569,
+          "minecraft:traded_with_villager": 381,
+          "minecraft:interact_with_crafting_table": 319,
+          "minecraft:walk_one_cm": 24075329,
           "minecraft:walk_under_water_one_cm": 245788,
           "minecraft:damage_dealt": 110410,
-          "minecraft:play_time": 5483485,
-          "minecraft:jump": 45112,
+          "minecraft:play_time": 5495485,
+          "minecraft:jump": 45166,
           "minecraft:drop": 636,
           "minecraft:use_cauldron": 2,
           "minecraft:open_barrel": 47,
-          "minecraft:sprint_one_cm": 6240873,
-          "minecraft:open_chest": 1962,
+          "minecraft:sprint_one_cm": 6281647,
+          "minecraft:open_chest": 1979,
           "minecraft:fall_one_cm": 440963,
-          "minecraft:fly_one_cm": 1697954,
-          "minecraft:interact_with_anvil": 27,
+          "minecraft:fly_one_cm": 1703702,
+          "minecraft:interact_with_anvil": 30,
           "minecraft:walk_on_water_one_cm": 223304,
           "minecraft:sneak_time": 71250,
           "minecraft:interact_with_grindstone": 5
@@ -6456,7 +6456,7 @@
           "minecraft:spruce_sapling": 169,
           "minecraft:spruce_fence_gate": 1,
           "minecraft:flowering_azalea": 36,
-          "minecraft:white_bed": 240,
+          "minecraft:white_bed": 241,
           "minecraft:fishing_rod": 1,
           "minecraft:bucket": 5,
           "minecraft:stripped_oak_log": 8,
@@ -9182,8 +9182,20 @@
             "time": "2026-08-08 12:54:28 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/end_crystal",
-            "time": "2026-08-08 18:42:46 -0400"
+            "id": "minecraft:recipes/building_blocks/jack_o_lantern",
+            "time": "2026-08-08 18:09:15 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/soul_torch",
+            "time": "2026-08-08 18:15:38 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/soul_campfire",
+            "time": "2026-08-08 18:15:38 -0400"
+          },
+          {
+            "id": "minecraft:story/follow_ender_eye",
+            "time": "2026-08-08 18:29:49 -0400"
           },
           {
             "id": "minecraft:recipes/decorations/mossy_stone_brick_wall",
@@ -9198,14 +9210,6 @@
             "time": "2026-08-08 18:37:35 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/soul_torch",
-            "time": "2026-08-08 18:15:38 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/jack_o_lantern",
-            "time": "2026-08-08 18:09:15 -0400"
-          },
-          {
             "id": "minecraft:recipes/building_blocks/mossy_stone_brick_slab_from_mossy_stone_bricks_stonecutting",
             "time": "2026-08-08 18:37:35 -0400"
           },
@@ -9214,51 +9218,47 @@
             "time": "2026-08-08 18:37:35 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/soul_campfire",
-            "time": "2026-08-08 18:15:38 -0400"
+            "id": "minecraft:recipes/building_blocks/mossy_stone_brick_stairs_from_mossy_stone_bricks_stonecutting",
+            "time": "2026-08-08 18:37:35 -0400"
           },
           {
-            "id": "minecraft:end/elytra",
-            "time": "2026-08-08 19:28:47 -0400"
-          },
-          {
-            "id": "minecraft:story/follow_ender_eye",
-            "time": "2026-08-08 18:29:49 -0400"
-          },
-          {
-            "id": "minecraft:end/root",
-            "time": "2026-08-08 18:51:56 -0400"
+            "id": "minecraft:recipes/decorations/end_crystal",
+            "time": "2026-08-08 18:42:46 -0400"
           },
           {
             "id": "minecraft:recipes/decorations/ender_chest",
             "time": "2026-08-08 18:42:46 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/mossy_stone_brick_stairs_from_mossy_stone_bricks_stonecutting",
-            "time": "2026-08-08 18:37:35 -0400"
+            "id": "minecraft:end/root",
+            "time": "2026-08-08 18:51:56 -0400"
           },
           {
             "id": "minecraft:story/enter_the_end",
             "time": "2026-08-08 18:51:56 -0400"
+          },
+          {
+            "id": "minecraft:end/elytra",
+            "time": "2026-08-08 19:28:47 -0400"
           }
         ],
         "position": [
-          77.41638931913445,
-          74.0,
-          -72.54697666295155
+          -179.8059097189556,
+          78.0,
+          22.639423157591185
         ],
         "dimension": "minecraft:overworld",
-        "xp": 20,
+        "xp": 16,
         "health": 20.0,
-        "food": 19,
-        "saturation": 0.0,
+        "food": 20,
+        "saturation": 6.800000190734863,
         "inventory": [
           {
             "id": "minecraft:white_bed",
             "count": 1
           },
           {
-            "id": "minecraft:diamond_sword",
+            "id": "minecraft:enchanted_book",
             "count": 1
           },
           {
@@ -9290,7 +9290,15 @@
             "count": 1
           },
           {
+            "id": "minecraft:emerald",
+            "count": 1
+          },
+          {
             "id": "minecraft:cooked_chicken",
+            "count": 1
+          },
+          {
+            "id": "minecraft:diamond_sword",
             "count": 1
           },
           {
@@ -9315,6 +9323,10 @@
           },
           {
             "id": "minecraft:diamond_pickaxe",
+            "count": 1
+          },
+          {
+            "id": "minecraft:enchanted_book",
             "count": 1
           },
           {
@@ -34478,7 +34490,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 21790908,
+    "time": 21801802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -34502,6 +34514,11 @@
   "logs": {
     "log_date": "2026-08-09",
     "player_sessions": [
+      {
+        "player": "Drewyknot",
+        "login_time": "2026-08-09T06:17:21",
+        "logout_time": null
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-09T01:01:17",
@@ -34776,6 +34793,10 @@
     ],
     "server_sessions": [
       {
+        "startTime": "2026-08-09T01:49:06",
+        "endTime": "2026-08-09T06:17:21"
+      },
+      {
         "startTime": "2026-08-08T11:27:39",
         "endTime": "2026-08-08T11:38:55"
       },
@@ -34794,16 +34815,16 @@
     ]
   },
   "usercache": {
+    "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
-    "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-09T10:00:01.317403+00:00"
+  "captured_at": "2026-08-09T10:30:01.246227+00:00"
 }
