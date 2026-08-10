@@ -35167,7 +35167,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 22959759,
+    "time": 22959802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -35191,6 +35191,11 @@
   "logs": {
     "log_date": "2026-08-10",
     "player_sessions": [
+      {
+        "player": "Kimyknot",
+        "login_time": "2026-08-10T12:26:51",
+        "logout_time": null
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-10T10:02:24",
@@ -35355,15 +35360,19 @@
         "endTime": "2026-08-10T09:07:47"
       },
       {
+        "startTime": "2026-08-10T10:08:45",
+        "endTime": "2026-08-10T12:26:51"
+      },
+      {
         "startTime": "2026-08-09T18:00:47",
         "endTime": "2026-08-09T18:02:43"
       }
     ]
   },
   "usercache": {
+    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
-    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
@@ -35372,5 +35381,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-10T16:15:01.145829+00:00"
+  "captured_at": "2026-08-10T16:30:01.515350+00:00"
 }
