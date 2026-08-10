@@ -19279,7 +19279,7 @@
           "minecraft:anvil": 1,
           "minecraft:pink_glazed_terracotta": 22,
           "minecraft:axolotl_spawn_egg": 2,
-          "minecraft:dirt": 4903,
+          "minecraft:dirt": 4938,
           "minecraft:compass": 1,
           "minecraft:obsidian": 11,
           "minecraft:sand": 132,
@@ -19310,7 +19310,7 @@
           "minecraft:andesite": 53,
           "minecraft:bamboo": 25,
           "minecraft:firework_rocket": 2,
-          "minecraft:iron_sword": 253,
+          "minecraft:iron_sword": 314,
           "minecraft:cherry_sapling": 17,
           "minecraft:stone_brick_slab": 804,
           "minecraft:cactus_flower": 1,
@@ -19357,7 +19357,7 @@
           "minecraft:yellow_terracotta": 65,
           "minecraft:cobblestone_slab": 44,
           "minecraft:beacon": 2,
-          "minecraft:cooked_chicken": 235,
+          "minecraft:cooked_chicken": 241,
           "minecraft:oak_stairs": 27,
           "minecraft:cherry_log": 2,
           "minecraft:frog_spawn_egg": 10,
@@ -19373,7 +19373,7 @@
           "minecraft:vex_spawn_egg": 29,
           "minecraft:egg": 531,
           "minecraft:ravager_spawn_egg": 1,
-          "minecraft:ender_pearl": 6
+          "minecraft:ender_pearl": 11
         },
         "mobs_killed": {
           "minecraft:zombified_piglin": 3,
@@ -19389,27 +19389,27 @@
           "minecraft:rabbit": 1,
           "minecraft:chicken": 17,
           "minecraft:sheep": 37,
-          "minecraft:enderman": 11,
+          "minecraft:enderman": 21,
           "minecraft:cow": 109
         },
         "custom_stats": {
-          "minecraft:talked_to_villager": 290,
-          "minecraft:time_since_rest": 213043,
-          "minecraft:leave_game": 56,
-          "minecraft:damage_taken": 14837,
-          "minecraft:mob_kills": 676,
+          "minecraft:talked_to_villager": 292,
+          "minecraft:time_since_rest": 592,
+          "minecraft:leave_game": 57,
+          "minecraft:damage_taken": 15156,
+          "minecraft:mob_kills": 686,
           "minecraft:boat_one_cm": 34040,
-          "minecraft:time_since_death": 567764,
+          "minecraft:time_since_death": 577802,
           "minecraft:aviate_one_cm": 87827,
           "minecraft:interact_with_brewingstand": 1,
           "minecraft:interact_with_furnace": 575,
-          "minecraft:sleep_in_bed": 149,
+          "minecraft:sleep_in_bed": 150,
           "minecraft:inspect_dispenser": 1,
           "minecraft:happy_ghast_one_cm": 240907,
           "minecraft:swim_one_cm": 98999,
-          "minecraft:total_world_time": 3340807,
+          "minecraft:total_world_time": 3350845,
           "minecraft:pot_flower": 1,
-          "minecraft:crouch_one_cm": 316742,
+          "minecraft:crouch_one_cm": 316967,
           "minecraft:raid_win": 2,
           "minecraft:climb_one_cm": 211001,
           "minecraft:deaths": 6,
@@ -19419,25 +19419,25 @@
           "minecraft:animals_bred": 376,
           "minecraft:traded_with_villager": 480,
           "minecraft:interact_with_crafting_table": 395,
-          "minecraft:walk_one_cm": 11100370,
+          "minecraft:walk_one_cm": 11130469,
           "minecraft:walk_under_water_one_cm": 326444,
           "minecraft:horse_one_cm": 1796960,
-          "minecraft:damage_dealt": 69171,
-          "minecraft:play_time": 3340807,
-          "minecraft:jump": 17879,
+          "minecraft:damage_dealt": 72391,
+          "minecraft:play_time": 3350845,
+          "minecraft:jump": 17971,
           "minecraft:drop": 380,
           "minecraft:use_cauldron": 38,
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:bell_ring": 9,
           "minecraft:open_barrel": 16,
-          "minecraft:sprint_one_cm": 13765571,
+          "minecraft:sprint_one_cm": 13846371,
           "minecraft:open_chest": 2154,
           "minecraft:interact_with_smoker": 1,
-          "minecraft:fall_one_cm": 425806,
-          "minecraft:fly_one_cm": 2454206,
+          "minecraft:fall_one_cm": 427933,
+          "minecraft:fly_one_cm": 2462601,
           "minecraft:interact_with_anvil": 16,
           "minecraft:walk_on_water_one_cm": 184847,
-          "minecraft:sneak_time": 119474
+          "minecraft:sneak_time": 119623
         },
         "items_picked_up": {
           "minecraft:pale_oak_log": 1,
@@ -19492,7 +19492,7 @@
           "minecraft:snowball": 20,
           "minecraft:oak_sign": 6,
           "minecraft:beetroot_seeds": 440,
-          "minecraft:ender_pearl": 7,
+          "minecraft:ender_pearl": 12,
           "minecraft:string": 8,
           "minecraft:golden_sword": 1,
           "minecraft:stone_bricks": 709,
@@ -19581,7 +19581,7 @@
           "minecraft:mossy_stone_bricks": 4,
           "minecraft:beetroot": 142,
           "minecraft:spruce_planks": 1,
-          "minecraft:dirt": 5521,
+          "minecraft:dirt": 5530,
           "minecraft:blue_egg": 4,
           "minecraft:diamond_helmet": 2,
           "minecraft:iron_shovel": 5,
@@ -22509,15 +22509,15 @@
           }
         ],
         "position": [
-          -9.103633438641634,
-          59.0,
-          -44.40993792084996
+          28.50783443451152,
+          71.0,
+          -97.4212565427171
         ],
-        "dimension": "minecraft:the_end",
-        "xp": 17,
+        "dimension": "minecraft:overworld",
+        "xp": 18,
         "health": 20.0,
         "food": 20,
-        "saturation": 4.200000286102295,
+        "saturation": 1.200000286102295,
         "inventory": [
           {
             "id": "minecraft:iron_sword",
@@ -22561,10 +22561,6 @@
           },
           {
             "id": "minecraft:end_stone",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dirt",
             "count": 1
           },
           {
@@ -35146,7 +35142,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 23071222,
+    "time": 23082460,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -35173,7 +35169,7 @@
       {
         "player": "Spenc4r_",
         "login_time": "2026-08-10T15:58:41",
-        "logout_time": null
+        "logout_time": "2026-08-10T16:07:03"
       },
       {
         "player": "Kimyknot",
@@ -35254,12 +35250,6 @@
     "deaths": [
       {
         "player": "Villager",
-        "message": "Toolsmith was slain by Zombie",
-        "timestamp": "2026-08-09T20:12:53",
-        "entity_type": "Villager"
-      },
-      {
-        "player": "Villager",
         "message": "Villager hit the ground too hard",
         "timestamp": "2026-08-10T12:35:04",
         "entity_type": "Villager"
@@ -35317,5 +35307,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-10T20:00:01.319883+00:00"
+  "captured_at": "2026-08-10T20:15:01.300944+00:00"
 }
