@@ -952,15 +952,15 @@
           "minecraft:vex": 3
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 6354,
+          "minecraft:time_since_rest": 12354,
           "minecraft:leave_game": 215,
           "minecraft:boat_one_cm": 3008456,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 582166,
+          "minecraft:time_since_death": 588166,
           "minecraft:aviate_one_cm": 5175871,
           "minecraft:interact_with_furnace": 565,
           "minecraft:happy_ghast_one_cm": 3120192,
-          "minecraft:total_world_time": 10082879,
+          "minecraft:total_world_time": 10088879,
           "minecraft:crouch_one_cm": 317918,
           "minecraft:climb_one_cm": 303037,
           "minecraft:deaths": 13,
@@ -969,16 +969,16 @@
           "minecraft:traded_with_villager": 1803,
           "minecraft:damage_resisted": 98,
           "minecraft:interact_with_crafting_table": 612,
-          "minecraft:walk_one_cm": 13354771,
+          "minecraft:walk_one_cm": 13358177,
           "minecraft:walk_under_water_one_cm": 1585008,
           "minecraft:horse_one_cm": 1102650,
           "minecraft:damage_dealt": 730547,
-          "minecraft:play_time": 10082879,
-          "minecraft:jump": 68336,
+          "minecraft:play_time": 10088879,
+          "minecraft:jump": 68339,
           "minecraft:play_record": 3,
-          "minecraft:sprint_one_cm": 52298103,
+          "minecraft:sprint_one_cm": 52300109,
           "minecraft:inspect_hopper": 31,
-          "minecraft:fly_one_cm": 8404603,
+          "minecraft:fly_one_cm": 8404630,
           "minecraft:walk_on_water_one_cm": 710696,
           "minecraft:interact_with_grindstone": 5,
           "minecraft:talked_to_villager": 940,
@@ -1000,7 +1000,7 @@
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 119,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 5125,
+          "minecraft:open_chest": 5128,
           "minecraft:interact_with_smoker": 2,
           "minecraft:fall_one_cm": 1217353,
           "minecraft:interact_with_anvil": 150,
@@ -5879,15 +5879,15 @@
           }
         ],
         "position": [
-          37.033726233290786,
-          71.9375,
-          -90.46394451324245
+          6.675015617091308,
+          72.0,
+          -70.24517056054835
         ],
         "dimension": "minecraft:overworld",
         "xp": 17,
         "health": 20.0,
         "food": 20,
-        "saturation": 2.0,
+        "saturation": 1.0,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -35284,7 +35284,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 23582864,
+    "time": 23589802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -35308,6 +35308,11 @@
   "logs": {
     "log_date": "2026-08-11",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-11T11:53:31",
+        "logout_time": null
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-11T09:50:45",
@@ -35423,6 +35428,10 @@
         "endTime": "2026-08-11T09:50:45"
       },
       {
+        "startTime": "2026-08-11T10:08:09",
+        "endTime": "2026-08-11T11:53:31"
+      },
+      {
         "startTime": "2026-08-10T16:08:03",
         "endTime": "2026-08-10T16:33:29"
       },
@@ -35468,5 +35477,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-11T15:45:01.390896+00:00"
+  "captured_at": "2026-08-11T16:00:01.346323+00:00"
 }
