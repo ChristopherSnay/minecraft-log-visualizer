@@ -11088,9 +11088,9 @@
           "minecraft:spruce_log": 655,
           "minecraft:red_tulip": 1,
           "minecraft:chest": 28,
-          "minecraft:nether_quartz_ore": 268,
+          "minecraft:nether_quartz_ore": 281,
           "minecraft:pumpkin": 91,
-          "minecraft:netherrack": 5152,
+          "minecraft:netherrack": 5221,
           "minecraft:spruce_sapling": 2,
           "minecraft:brown_bed": 1,
           "minecraft:bone_block": 115,
@@ -11225,7 +11225,7 @@
           "minecraft:bee_nest": 7,
           "minecraft:white_stained_glass": 15,
           "minecraft:cherry_door": 5,
-          "minecraft:soul_sand": 381,
+          "minecraft:soul_sand": 394,
           "minecraft:fire_coral_wall_fan": 5,
           "minecraft:soul_soil": 300,
           "minecraft:crying_obsidian": 4,
@@ -11838,13 +11838,13 @@
           "minecraft:oak_door": 1,
           "minecraft:tropical_fish_spawn_egg": 12,
           "minecraft:torchflower": 1,
-          "minecraft:netherrack": 281,
+          "minecraft:netherrack": 285,
           "minecraft:mangrove_roots": 33,
           "minecraft:lilac": 19,
           "minecraft:spruce_boat": 5,
           "minecraft:yellow_bed": 1,
           "minecraft:spruce_shelf": 7,
-          "minecraft:diamond_shovel": 10579,
+          "minecraft:diamond_shovel": 10592,
           "minecraft:dried_ghast": 2,
           "minecraft:deepslate_diamond_ore": 9,
           "minecraft:bone_meal": 502,
@@ -11891,7 +11891,7 @@
           "minecraft:closed_eyeblossom": 2,
           "minecraft:packed_mud": 244,
           "minecraft:bookshelf": 8,
-          "minecraft:diamond_pickaxe": 16638,
+          "minecraft:diamond_pickaxe": 16720,
           "minecraft:orange_tulip": 2,
           "minecraft:crossbow": 1,
           "minecraft:mossy_stone_bricks": 26,
@@ -11972,14 +11972,14 @@
           "minecraft:magma_cube": 2
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 17364,
-          "minecraft:leave_game": 158,
+          "minecraft:time_since_rest": 20618,
+          "minecraft:leave_game": 159,
           "minecraft:boat_one_cm": 1894961,
           "minecraft:damage_absorbed": 52,
-          "minecraft:time_since_death": 237140,
+          "minecraft:time_since_death": 240394,
           "minecraft:aviate_one_cm": 20643,
           "minecraft:interact_with_furnace": 613,
-          "minecraft:total_world_time": 6578373,
+          "minecraft:total_world_time": 6581627,
           "minecraft:crouch_one_cm": 163194,
           "minecraft:climb_one_cm": 56319,
           "minecraft:deaths": 8,
@@ -11988,17 +11988,17 @@
           "minecraft:animals_bred": 53,
           "minecraft:traded_with_villager": 725,
           "minecraft:interact_with_crafting_table": 806,
-          "minecraft:walk_one_cm": 35229956,
+          "minecraft:walk_one_cm": 35240230,
           "minecraft:walk_under_water_one_cm": 825417,
           "minecraft:horse_one_cm": 671308,
           "minecraft:damage_dealt": 262664,
-          "minecraft:play_time": 6578373,
-          "minecraft:jump": 35128,
+          "minecraft:play_time": 6581627,
+          "minecraft:jump": 35147,
           "minecraft:play_record": 10,
-          "minecraft:sprint_one_cm": 3962621,
+          "minecraft:sprint_one_cm": 3962735,
           "minecraft:fill_cauldron": 3,
           "minecraft:inspect_hopper": 19,
-          "minecraft:fly_one_cm": 453375,
+          "minecraft:fly_one_cm": 453401,
           "minecraft:walk_on_water_one_cm": 986237,
           "minecraft:interact_with_grindstone": 1,
           "minecraft:talked_to_villager": 790,
@@ -12118,7 +12118,7 @@
           "minecraft:white_dye": 6,
           "minecraft:cherry_planks": 164,
           "minecraft:spruce_shelf": 1,
-          "minecraft:netherrack": 3605,
+          "minecraft:netherrack": 3673,
           "minecraft:stone": 1567,
           "minecraft:gravel": 437,
           "minecraft:jungle_planks": 2,
@@ -12278,7 +12278,7 @@
           "minecraft:raw_copper_block": 7,
           "minecraft:sulfur_spike": 1,
           "minecraft:music_disc_13": 4,
-          "minecraft:quartz": 479,
+          "minecraft:quartz": 504,
           "minecraft:diamond_sword": 2,
           "minecraft:warped_slab": 18,
           "minecraft:fox_spawn_egg": 1,
@@ -12398,7 +12398,7 @@
           "minecraft:brain_coral_block": 3,
           "minecraft:raw_iron_block": 15,
           "minecraft:copper_ingot": 13,
-          "minecraft:soul_sand": 250,
+          "minecraft:soul_sand": 259,
           "minecraft:carrot": 2016,
           "minecraft:golden_dandelion": 2,
           "minecraft:soul_soil": 171,
@@ -16339,9 +16339,9 @@
           }
         ],
         "position": [
-          -9.047834486145806,
-          66.0,
-          3.3634826641010527
+          -23.064769130993948,
+          62.0,
+          14.67531894042815
         ],
         "dimension": "minecraft:the_nether",
         "xp": 10,
@@ -16366,7 +16366,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:cobblestone_stairs",
+            "id": "minecraft:netherrack",
             "count": 1
           },
           {
@@ -16434,6 +16434,10 @@
             "count": 1
           },
           {
+            "id": "minecraft:quartz",
+            "count": 1
+          },
+          {
             "id": "minecraft:water_bucket",
             "count": 1
           },
@@ -16447,6 +16451,10 @@
           },
           {
             "id": "minecraft:spruce_planks",
+            "count": 1
+          },
+          {
+            "id": "minecraft:cobblestone_stairs",
             "count": 1
           },
           {
@@ -35324,7 +35332,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 23495869,
+    "time": 23500323,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -35348,6 +35356,11 @@
   "logs": {
     "log_date": "2026-08-11",
     "player_sessions": [
+      {
+        "player": "R3B3X",
+        "login_time": "2026-08-11T08:01:20",
+        "logout_time": "2026-08-11T08:04:02"
+      },
       {
         "player": "Drewyknot",
         "login_time": "2026-08-11T06:04:38",
@@ -35426,6 +35439,12 @@
         "message": "Cleric was slain by Drowned",
         "timestamp": "2026-08-10T19:49:12",
         "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager hit the ground too hard",
+        "timestamp": "2026-08-11T08:01:27",
+        "entity_type": "Villager"
       }
     ],
     "crashes": [
@@ -35438,6 +35457,10 @@
       {
         "startTime": "2026-08-11T00:01:55",
         "endTime": "2026-08-11T06:04:38"
+      },
+      {
+        "startTime": "2026-08-11T07:31:20",
+        "endTime": "2026-08-11T08:01:20"
       },
       {
         "startTime": "2026-08-10T13:46:41",
@@ -35482,10 +35505,10 @@
     ]
   },
   "usercache": {
+    "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
-    "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
@@ -35493,5 +35516,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-11T12:00:05.288370+00:00"
+  "captured_at": "2026-08-11T12:15:00.827890+00:00"
 }
