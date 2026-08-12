@@ -12132,14 +12132,14 @@
           "minecraft:magma_cube": 2
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 10546,
-          "minecraft:leave_game": 166,
+          "minecraft:time_since_rest": 11491,
+          "minecraft:leave_game": 167,
           "minecraft:boat_one_cm": 1894961,
           "minecraft:damage_absorbed": 52,
-          "minecraft:time_since_death": 397902,
+          "minecraft:time_since_death": 398847,
           "minecraft:aviate_one_cm": 20643,
           "minecraft:interact_with_furnace": 667,
-          "minecraft:total_world_time": 6739135,
+          "minecraft:total_world_time": 6740080,
           "minecraft:crouch_one_cm": 165707,
           "minecraft:climb_one_cm": 63202,
           "minecraft:deaths": 8,
@@ -12148,11 +12148,11 @@
           "minecraft:animals_bred": 53,
           "minecraft:traded_with_villager": 725,
           "minecraft:interact_with_crafting_table": 834,
-          "minecraft:walk_one_cm": 36020106,
+          "minecraft:walk_one_cm": 36020127,
           "minecraft:walk_under_water_one_cm": 844752,
           "minecraft:horse_one_cm": 671308,
           "minecraft:damage_dealt": 283289,
-          "minecraft:play_time": 6739135,
+          "minecraft:play_time": 6740080,
           "minecraft:jump": 35523,
           "minecraft:play_record": 10,
           "minecraft:sprint_one_cm": 4142013,
@@ -16543,9 +16543,9 @@
           }
         ],
         "position": [
-          -9.752960420156596,
-          64.5,
-          10.163047923550415
+          -9.886737101720481,
+          64.0,
+          10.337933682538674
         ],
         "dimension": "minecraft:the_nether",
         "xp": 11,
@@ -35601,7 +35601,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 24339748,
+    "time": 24341893,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -35625,6 +35625,11 @@
   "logs": {
     "log_date": "2026-08-12",
     "player_sessions": [
+      {
+        "player": "R3B3X",
+        "login_time": "2026-08-12T17:23:28",
+        "logout_time": "2026-08-12T17:24:15"
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-12T16:52:14",
@@ -35786,12 +35791,16 @@
       {
         "startTime": "2026-08-12T14:49:42",
         "endTime": "2026-08-12T15:10:32"
+      },
+      {
+        "startTime": "2026-08-12T17:11:36",
+        "endTime": "2026-08-12T17:23:28"
       }
     ]
   },
   "usercache": {
-    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
+    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
@@ -35801,5 +35810,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-12T21:15:01.290901+00:00"
+  "captured_at": "2026-08-12T21:30:00.902873+00:00"
 }
