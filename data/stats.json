@@ -984,15 +984,15 @@
           "minecraft:vex": 3
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 16417,
+          "minecraft:time_since_rest": 22418,
           "minecraft:leave_game": 240,
           "minecraft:boat_one_cm": 3008456,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 226902,
+          "minecraft:time_since_death": 232903,
           "minecraft:aviate_one_cm": 10551227,
           "minecraft:interact_with_furnace": 565,
           "minecraft:happy_ghast_one_cm": 39092482,
-          "minecraft:total_world_time": 11192053,
+          "minecraft:total_world_time": 11198054,
           "minecraft:crouch_one_cm": 330939,
           "minecraft:climb_one_cm": 315656,
           "minecraft:deaths": 19,
@@ -1005,7 +1005,7 @@
           "minecraft:walk_under_water_one_cm": 1704577,
           "minecraft:horse_one_cm": 1102650,
           "minecraft:damage_dealt": 799293,
-          "minecraft:play_time": 11192053,
+          "minecraft:play_time": 11198054,
           "minecraft:jump": 71665,
           "minecraft:play_record": 3,
           "minecraft:sprint_one_cm": 56082420,
@@ -36096,7 +36096,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 25746369,
+    "time": 25749802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -36120,6 +36120,11 @@
   "logs": {
     "log_date": "2026-08-14",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-14T11:07:39",
+        "logout_time": null
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-14T08:56:16",
@@ -36252,6 +36257,10 @@
         "endTime": "2026-08-14T08:56:16"
       },
       {
+        "startTime": "2026-08-14T10:00:30",
+        "endTime": "2026-08-14T11:07:39"
+      },
+      {
         "startTime": "2026-08-13T15:43:15",
         "endTime": "2026-08-13T17:08:15"
       },
@@ -36281,5 +36290,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-14T15:00:01.294707+00:00"
+  "captured_at": "2026-08-14T15:15:01.264388+00:00"
 }
