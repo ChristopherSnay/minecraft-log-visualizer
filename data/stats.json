@@ -1004,15 +1004,15 @@
           "minecraft:vex": 3
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 44455,
-          "minecraft:leave_game": 249,
+          "minecraft:time_since_rest": 55584,
+          "minecraft:leave_game": 250,
           "minecraft:boat_one_cm": 3008456,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 112795,
+          "minecraft:time_since_death": 123924,
           "minecraft:aviate_one_cm": 14840761,
           "minecraft:interact_with_furnace": 566,
           "minecraft:happy_ghast_one_cm": 39092482,
-          "minecraft:total_world_time": 11577869,
+          "minecraft:total_world_time": 11588998,
           "minecraft:crouch_one_cm": 334079,
           "minecraft:climb_one_cm": 315800,
           "minecraft:deaths": 25,
@@ -1023,11 +1023,11 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 687,
           "minecraft:inspect_dropper": 1,
-          "minecraft:walk_one_cm": 14509466,
+          "minecraft:walk_one_cm": 14518862,
           "minecraft:walk_under_water_one_cm": 1740613,
           "minecraft:horse_one_cm": 1150386,
           "minecraft:damage_dealt": 811644,
-          "minecraft:play_time": 11577869,
+          "minecraft:play_time": 11588998,
           "minecraft:jump": 73060,
           "minecraft:play_record": 3,
           "minecraft:sprint_one_cm": 57154499,
@@ -1038,9 +1038,9 @@
           "minecraft:talked_to_villager": 1013,
           "minecraft:mob_kills": 9148,
           "minecraft:damage_taken": 58610,
-          "minecraft:open_shulker_box": 198,
+          "minecraft:open_shulker_box": 207,
           "minecraft:interact_with_beacon": 4,
-          "minecraft:open_enderchest": 93,
+          "minecraft:open_enderchest": 98,
           "minecraft:interact_with_brewingstand": 1,
           "minecraft:interact_with_smithing_table": 21,
           "minecraft:sleep_in_bed": 397,
@@ -1055,7 +1055,7 @@
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 141,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 6458,
+          "minecraft:open_chest": 6502,
           "minecraft:interact_with_smoker": 2,
           "minecraft:fall_one_cm": 1430940,
           "minecraft:interact_with_anvil": 195,
@@ -6144,9 +6144,9 @@
           }
         ],
         "position": [
-          1.551499818954219,
+          2.7392365197350603,
           72.0625,
-          -100.37297773176599
+          -97.59088366675459
         ],
         "dimension": "minecraft:overworld",
         "xp": 13,
@@ -6191,11 +6191,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:white_wool",
+            "id": "minecraft:diamond_chestplate",
             "count": 1
           },
           {
-            "id": "minecraft:diamond_chestplate",
+            "id": "minecraft:iron_boots",
+            "count": 1
+          },
+          {
+            "id": "minecraft:diamond_axe",
             "count": 1
           },
           {
@@ -6203,15 +6207,15 @@
             "count": 1
           },
           {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          {
+            "id": "minecraft:blue_ice",
+            "count": 1
+          },
+          {
             "id": "minecraft:warped_fungus",
-            "count": 1
-          },
-          {
-            "id": "minecraft:light_gray_wool",
-            "count": 1
-          },
-          {
-            "id": "minecraft:rotten_flesh",
             "count": 1
           },
           {
@@ -6223,7 +6227,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:lead",
+            "id": "minecraft:potion",
             "count": 1
           },
           {
@@ -6239,7 +6243,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:trial_key",
+            "id": "minecraft:potion",
             "count": 1
           },
           {
@@ -36478,7 +36482,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 26487802,
+    "time": 26497611,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -36505,7 +36509,7 @@
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-15T10:30:32",
-        "logout_time": null
+        "logout_time": "2026-08-15T11:04:49"
       },
       {
         "player": "ZodiacalLight",
@@ -36599,18 +36603,6 @@
       }
     ],
     "deaths": [
-      {
-        "player": "Villager",
-        "message": "Cartographer went up in flames",
-        "timestamp": "2026-08-14T15:05:11",
-        "entity_type": "Villager"
-      },
-      {
-        "player": "Villager",
-        "message": "Cartographer went up in flames",
-        "timestamp": "2026-08-14T15:11:33",
-        "entity_type": "Villager"
-      },
       {
         "player": "Villager",
         "message": "Fisherman was impaled by Drowned",
@@ -36756,5 +36748,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-15T15:00:00.969552+00:00"
+  "captured_at": "2026-08-15T15:15:01.363375+00:00"
 }
