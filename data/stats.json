@@ -1059,15 +1059,15 @@
           "minecraft:vex": 3
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 78655,
-          "minecraft:leave_game": 280,
+          "minecraft:time_since_rest": 82569,
+          "minecraft:leave_game": 281,
           "minecraft:boat_one_cm": 3008456,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 759116,
+          "minecraft:time_since_death": 763030,
           "minecraft:aviate_one_cm": 23310937,
           "minecraft:interact_with_furnace": 586,
           "minecraft:happy_ghast_one_cm": 39092482,
-          "minecraft:total_world_time": 12763248,
+          "minecraft:total_world_time": 12767162,
           "minecraft:crouch_one_cm": 515622,
           "minecraft:climb_one_cm": 332411,
           "minecraft:deaths": 27,
@@ -1078,11 +1078,11 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 744,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 16470021,
+          "minecraft:walk_one_cm": 16472495,
           "minecraft:walk_under_water_one_cm": 1861302,
           "minecraft:horse_one_cm": 1150386,
           "minecraft:damage_dealt": 931820,
-          "minecraft:play_time": 12763248,
+          "minecraft:play_time": 12767162,
           "minecraft:jump": 79657,
           "minecraft:play_record": 6,
           "minecraft:target_hit": 2,
@@ -1094,7 +1094,7 @@
           "minecraft:talked_to_villager": 1038,
           "minecraft:mob_kills": 10199,
           "minecraft:damage_taken": 64582,
-          "minecraft:open_shulker_box": 412,
+          "minecraft:open_shulker_box": 414,
           "minecraft:interact_with_beacon": 4,
           "minecraft:open_enderchest": 157,
           "minecraft:interact_with_brewingstand": 8,
@@ -1111,7 +1111,7 @@
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 150,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 7312,
+          "minecraft:open_chest": 7322,
           "minecraft:interact_with_smoker": 2,
           "minecraft:fall_one_cm": 1588859,
           "minecraft:interact_with_anvil": 200,
@@ -6388,9 +6388,9 @@
           }
         ],
         "position": [
-          3.1926542407468173,
+          1.628881804001687,
           72.0625,
-          -98.52305135634703
+          -99.79623349059193
         ],
         "dimension": "minecraft:overworld",
         "xp": 15,
@@ -6427,11 +6427,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:arrow",
+            "id": "minecraft:bucket",
             "count": 1
           },
           {
             "id": "minecraft:arrow",
+            "count": 1
+          },
+          {
+            "id": "minecraft:music_disc_precipice",
             "count": 1
           },
           {
@@ -6443,7 +6447,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:bucket",
+            "id": "minecraft:arrow",
             "count": 1
           },
           {
@@ -36766,7 +36770,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 28220954,
+    "time": 28226068,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -36790,6 +36794,11 @@
   "logs": {
     "log_date": "2026-08-18",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-18T16:06:59",
+        "logout_time": "2026-08-18T16:10:14"
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-18T13:42:49",
@@ -36868,6 +36877,10 @@
         "endTime": "2026-08-18T13:42:49"
       },
       {
+        "startTime": "2026-08-18T13:51:31",
+        "endTime": "2026-08-18T16:06:59"
+      },
+      {
         "startTime": "2026-08-17T20:28:08",
         "endTime": "2026-08-17T21:51:55"
       },
@@ -36889,5 +36902,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-18T20:00:01.484827+00:00"
+  "captured_at": "2026-08-18T20:15:01.833932+00:00"
 }
