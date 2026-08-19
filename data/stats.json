@@ -36804,7 +36804,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 28394260,
+    "time": 28395802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -36828,6 +36828,11 @@
   "logs": {
     "log_date": "2026-08-18",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-18T20:26:48",
+        "logout_time": null
+      },
       {
         "player": "Kimyknot",
         "login_time": "2026-08-18T18:19:36",
@@ -36877,11 +36882,6 @@
         "player": "Drewyknot",
         "login_time": "2026-08-18T05:53:43",
         "logout_time": "2026-08-18T06:34:25"
-      },
-      {
-        "player": "ZodiacalLight",
-        "login_time": "2026-08-17T23:42:57",
-        "logout_time": "2026-08-18T00:22:54"
       }
     ],
     "deaths": [
@@ -36907,10 +36907,6 @@
     "crashes": [],
     "server_sessions": [
       {
-        "startTime": "2026-08-18T00:23:54",
-        "endTime": "2026-08-18T05:53:43"
-      },
-      {
         "startTime": "2026-08-18T07:09:58",
         "endTime": "2026-08-18T07:11:37"
       },
@@ -36933,12 +36929,16 @@
       {
         "startTime": "2026-08-18T17:33:22",
         "endTime": "2026-08-18T18:14:25"
+      },
+      {
+        "startTime": "2026-08-18T19:18:20",
+        "endTime": "2026-08-18T20:26:48"
       }
     ]
   },
   "usercache": {
-    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
+    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
@@ -36948,5 +36948,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-19T00:15:01.565605+00:00"
+  "captured_at": "2026-08-19T00:30:01.604457+00:00"
 }
