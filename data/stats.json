@@ -1067,18 +1067,18 @@
           "minecraft:vex": 3
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 99667,
+          "minecraft:time_since_rest": 20,
           "minecraft:leave_game": 288,
           "minecraft:boat_one_cm": 3008456,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 1081308,
+          "minecraft:time_since_death": 0,
           "minecraft:aviate_one_cm": 26220513,
           "minecraft:interact_with_furnace": 587,
           "minecraft:happy_ghast_one_cm": 39092482,
-          "minecraft:total_world_time": 13085440,
+          "minecraft:total_world_time": 13087463,
           "minecraft:crouch_one_cm": 535261,
           "minecraft:climb_one_cm": 355587,
-          "minecraft:deaths": 27,
+          "minecraft:deaths": 28,
           "minecraft:interact_with_stonecutter": 66,
           "minecraft:animals_bred": 49,
           "minecraft:traded_with_villager": 2133,
@@ -1086,12 +1086,12 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 760,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 16886519,
+          "minecraft:walk_one_cm": 16887220,
           "minecraft:walk_under_water_one_cm": 1903701,
           "minecraft:horse_one_cm": 1150386,
           "minecraft:damage_dealt": 946610,
-          "minecraft:play_time": 13085440,
-          "minecraft:jump": 80696,
+          "minecraft:play_time": 13087463,
+          "minecraft:jump": 80697,
           "minecraft:play_record": 6,
           "minecraft:target_hit": 2,
           "minecraft:sprint_one_cm": 61563858,
@@ -1101,7 +1101,7 @@
           "minecraft:interact_with_grindstone": 10,
           "minecraft:talked_to_villager": 1040,
           "minecraft:mob_kills": 10815,
-          "minecraft:damage_taken": 67207,
+          "minecraft:damage_taken": 67480,
           "minecraft:open_shulker_box": 460,
           "minecraft:interact_with_beacon": 4,
           "minecraft:open_enderchest": 167,
@@ -6400,161 +6400,16 @@
           }
         ],
         "position": [
-          48.063528565594545,
-          69.5,
-          -58.135357565448246
+          55.66848794064747,
+          68.0,
+          -41.30000001192093
         ],
         "dimension": "minecraft:overworld",
         "xp": 25,
-        "health": 20.0,
-        "food": 20,
-        "saturation": 10.0,
-        "inventory": [
-          {
-            "id": "minecraft:diamond_pickaxe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_pickaxe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_sword",
-            "count": 1
-          },
-          {
-            "id": "minecraft:firework_rocket",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cooked_chicken",
-            "count": 1
-          },
-          {
-            "id": "minecraft:bow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_hoe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:sculk_sensor",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_axe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:music_disc_5",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:emerald",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_chestplate",
-            "count": 1
-          },
-          {
-            "id": "minecraft:shulker_box",
-            "count": 1
-          },
-          {
-            "id": "minecraft:bone",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:compass",
-            "count": 1
-          },
-          {
-            "id": "minecraft:ominous_bottle",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_shovel",
-            "count": 1
-          },
-          {
-            "id": "minecraft:gunpowder",
-            "count": 1
-          },
-          {
-            "id": "minecraft:firework_rocket",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cherry_log",
-            "count": 1
-          },
-          {
-            "id": "minecraft:ender_chest",
-            "count": 1
-          },
-          {
-            "id": "minecraft:arrow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:water_bucket",
-            "count": 1
-          }
-        ],
+        "health": 0.0,
+        "food": 17,
+        "saturation": 0.0,
+        "inventory": [],
         "effects": []
       },
       "23b54c6c-93fc-463b-b62b-6edba1773641": {
@@ -36853,7 +36708,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 28773802,
+    "time": 28791802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37013,5 +36868,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-19T19:45:01.246529+00:00"
+  "captured_at": "2026-08-19T20:00:01.234571+00:00"
 }
