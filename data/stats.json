@@ -450,7 +450,7 @@
           "minecraft:diamond_helmet": 12,
           "minecraft:resin_bricks": 42,
           "minecraft:diamond_leggings": 8,
-          "minecraft:enchanted_book": 86,
+          "minecraft:enchanted_book": 88,
           "minecraft:baked_potato": 46,
           "minecraft:deepslate_brick_slab": 126,
           "minecraft:clay": 1,
@@ -619,7 +619,7 @@
           "minecraft:polished_tuff": 16,
           "minecraft:bamboo_block": 18,
           "minecraft:dark_oak_door": 3,
-          "minecraft:emerald": 2833,
+          "minecraft:emerald": 2860,
           "minecraft:birch_boat": 2,
           "minecraft:pale_oak_planks": 1388,
           "minecraft:gold_block": 11,
@@ -668,7 +668,7 @@
           "minecraft:spawner": 1,
           "minecraft:oak_hanging_sign": 1,
           "minecraft:fletching_table": 7,
-          "minecraft:anvil": 9,
+          "minecraft:anvil": 10,
           "minecraft:goat_horn": 9,
           "minecraft:endermite_spawn_egg": 58,
           "minecraft:shears": 224,
@@ -688,7 +688,7 @@
           "minecraft:bamboo": 184,
           "minecraft:iron_sword": 497,
           "minecraft:oak_boat": 4,
-          "minecraft:golden_carrot": 111,
+          "minecraft:golden_carrot": 114,
           "minecraft:sculk_shrieker": 5,
           "minecraft:stone_brick_slab": 17,
           "minecraft:cooked_mutton": 13,
@@ -894,7 +894,7 @@
           "minecraft:polished_deepslate": 150,
           "minecraft:dark_oak_log": 122,
           "minecraft:copper_hoe": 4,
-          "minecraft:firework_rocket": 1557,
+          "minecraft:firework_rocket": 1564,
           "minecraft:tnt": 226,
           "minecraft:waxed_copper_block": 536,
           "minecraft:warped_hyphae": 11,
@@ -1086,42 +1086,42 @@
           "minecraft:vex": 3
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 26181,
+          "minecraft:time_since_rest": 32181,
           "minecraft:leave_game": 299,
           "minecraft:boat_one_cm": 3008456,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 435619,
-          "minecraft:aviate_one_cm": 29730939,
+          "minecraft:time_since_death": 441619,
+          "minecraft:aviate_one_cm": 29865518,
           "minecraft:interact_with_furnace": 683,
           "minecraft:happy_ghast_one_cm": 39092482,
-          "minecraft:total_world_time": 13523083,
+          "minecraft:total_world_time": 13529083,
           "minecraft:crouch_one_cm": 562880,
           "minecraft:climb_one_cm": 363986,
           "minecraft:deaths": 28,
           "minecraft:interact_with_stonecutter": 66,
           "minecraft:animals_bred": 49,
-          "minecraft:traded_with_villager": 2192,
+          "minecraft:traded_with_villager": 2194,
           "minecraft:damage_resisted": 98,
           "minecraft:damage_blocked_by_shield": 288,
-          "minecraft:interact_with_crafting_table": 796,
+          "minecraft:interact_with_crafting_table": 797,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 17773965,
+          "minecraft:walk_one_cm": 17791594,
           "minecraft:walk_under_water_one_cm": 1925259,
           "minecraft:horse_one_cm": 1150386,
           "minecraft:damage_dealt": 964761,
-          "minecraft:play_time": 13523083,
-          "minecraft:jump": 82772,
+          "minecraft:play_time": 13529083,
+          "minecraft:jump": 82784,
           "minecraft:play_record": 7,
           "minecraft:target_hit": 34,
-          "minecraft:sprint_one_cm": 63068254,
+          "minecraft:sprint_one_cm": 63069826,
           "minecraft:inspect_hopper": 54,
-          "minecraft:fly_one_cm": 9675681,
-          "minecraft:walk_on_water_one_cm": 811109,
+          "minecraft:fly_one_cm": 9675778,
+          "minecraft:walk_on_water_one_cm": 811129,
           "minecraft:interact_with_grindstone": 10,
-          "minecraft:talked_to_villager": 1050,
+          "minecraft:talked_to_villager": 1053,
           "minecraft:mob_kills": 11152,
           "minecraft:damage_taken": 68936,
-          "minecraft:open_shulker_box": 514,
+          "minecraft:open_shulker_box": 516,
           "minecraft:interact_with_beacon": 4,
           "minecraft:open_enderchest": 175,
           "minecraft:interact_with_brewingstand": 8,
@@ -1138,10 +1138,10 @@
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 155,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 7813,
+          "minecraft:open_chest": 7826,
           "minecraft:interact_with_smoker": 2,
-          "minecraft:fall_one_cm": 1698855,
-          "minecraft:interact_with_anvil": 204,
+          "minecraft:fall_one_cm": 1699056,
+          "minecraft:interact_with_anvil": 206,
           "minecraft:sneak_time": 285015,
           "minecraft:raid_trigger": 2
         },
@@ -6440,15 +6440,15 @@
           }
         ],
         "position": [
-          48.542613345984655,
-          70.9375,
-          -173.2978447496678
+          97.9059927459699,
+          70.0,
+          -42.02667876837096
         ],
         "dimension": "minecraft:overworld",
-        "xp": 27,
-        "health": 12.751518249511719,
-        "food": 6,
-        "saturation": 0.0,
+        "xp": 21,
+        "health": 20.0,
+        "food": 20,
+        "saturation": 7.0,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -6471,7 +6471,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:diamond",
+            "id": "minecraft:anvil",
             "count": 1
           },
           {
@@ -6495,11 +6495,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:shears",
-            "count": 1
-          },
-          {
-            "id": "minecraft:sculk_sensor",
+            "id": "minecraft:emerald",
             "count": 1
           },
           {
@@ -6523,19 +6519,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:sculk",
-            "count": 1
-          },
-          {
-            "id": "minecraft:rotten_flesh",
-            "count": 1
-          },
-          {
             "id": "minecraft:bucket",
-            "count": 1
-          },
-          {
-            "id": "minecraft:iron_ingot",
             "count": 1
           },
           {
@@ -6544,34 +6528,6 @@
           },
           {
             "id": "minecraft:potato",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_axe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:stick",
-            "count": 1
-          },
-          {
-            "id": "minecraft:firework_rocket",
-            "count": 1
-          },
-          {
-            "id": "minecraft:coal",
-            "count": 1
-          },
-          {
-            "id": "minecraft:waxed_copper_grate",
-            "count": 1
-          },
-          {
-            "id": "minecraft:leather",
-            "count": 1
-          },
-          {
-            "id": "minecraft:lead",
             "count": 1
           },
           {
@@ -36967,7 +36923,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 29580116,
+    "time": 29583802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -36991,6 +36947,11 @@
   "logs": {
     "log_date": "2026-08-20",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-20T23:23:00",
+        "logout_time": null
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-20T21:55:45",
@@ -37119,6 +37080,10 @@
       {
         "startTime": "2026-08-20T21:12:29",
         "endTime": "2026-08-20T21:55:45"
+      },
+      {
+        "startTime": "2026-08-20T22:49:56",
+        "endTime": "2026-08-20T23:23:00"
       }
     ]
   },
@@ -37134,5 +37099,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-21T03:15:01.275834+00:00"
+  "captured_at": "2026-08-21T03:30:01.304001+00:00"
 }
