@@ -27942,7 +27942,7 @@
           "minecraft:cartography_table": 2,
           "minecraft:white_banner": 4,
           "minecraft:shulker_box": 1,
-          "minecraft:diamond_sword": 1968,
+          "minecraft:diamond_sword": 1973,
           "minecraft:cherry_planks": 46,
           "minecraft:wheat_seeds": 4449,
           "minecraft:pink_wool": 78,
@@ -28084,7 +28084,7 @@
           "minecraft:exposed_copper_bars": 14,
           "minecraft:cherry_door": 8,
           "minecraft:warped_stairs": 52,
-          "minecraft:bread": 322,
+          "minecraft:bread": 324,
           "minecraft:torch": 1051,
           "minecraft:black_bed": 35,
           "minecraft:sunflower": 51,
@@ -28286,7 +28286,7 @@
           "minecraft:witch": 4,
           "minecraft:piglin": 2,
           "minecraft:villager": 1,
-          "minecraft:spider": 11,
+          "minecraft:spider": 15,
           "minecraft:salmon": 1,
           "minecraft:zombie": 89,
           "minecraft:creeper": 80,
@@ -28301,44 +28301,44 @@
           "minecraft:ghast": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 13637,
-          "minecraft:leave_game": 169,
+          "minecraft:time_since_rest": 64,
+          "minecraft:leave_game": 170,
           "minecraft:boat_one_cm": 2612029,
-          "minecraft:time_since_death": 1984111,
+          "minecraft:time_since_death": 1988188,
           "minecraft:aviate_one_cm": 733283,
           "minecraft:interact_with_furnace": 315,
           "minecraft:happy_ghast_one_cm": 21073,
-          "minecraft:total_world_time": 12347957,
+          "minecraft:total_world_time": 12352034,
           "minecraft:crouch_one_cm": 32452,
-          "minecraft:climb_one_cm": 180446,
+          "minecraft:climb_one_cm": 180746,
           "minecraft:deaths": 8,
           "minecraft:interact_with_stonecutter": 6,
           "minecraft:fish_caught": 19,
           "minecraft:animals_bred": 240,
           "minecraft:traded_with_villager": 923,
           "minecraft:interact_with_crafting_table": 933,
-          "minecraft:walk_one_cm": 51121038,
+          "minecraft:walk_one_cm": 51136394,
           "minecraft:walk_under_water_one_cm": 1386259,
           "minecraft:horse_one_cm": 18076956,
-          "minecraft:damage_dealt": 138649,
-          "minecraft:play_time": 12347957,
-          "minecraft:jump": 63462,
+          "minecraft:damage_dealt": 139289,
+          "minecraft:play_time": 12352034,
+          "minecraft:jump": 63555,
           "minecraft:play_record": 2,
-          "minecraft:sprint_one_cm": 16836347,
+          "minecraft:sprint_one_cm": 16846070,
           "minecraft:fill_cauldron": 9,
           "minecraft:inspect_hopper": 6,
-          "minecraft:fly_one_cm": 2374701,
-          "minecraft:walk_on_water_one_cm": 1588100,
+          "minecraft:fly_one_cm": 2376959,
+          "minecraft:walk_on_water_one_cm": 1588759,
           "minecraft:interact_with_blast_furnace": 2,
           "minecraft:interact_with_grindstone": 6,
           "minecraft:talked_to_villager": 564,
-          "minecraft:damage_taken": 16116,
-          "minecraft:mob_kills": 3043,
+          "minecraft:damage_taken": 16171,
+          "minecraft:mob_kills": 3047,
           "minecraft:open_shulker_box": 4,
           "minecraft:open_enderchest": 3,
           "minecraft:interact_with_brewingstand": 2,
           "minecraft:interact_with_smithing_table": 2,
-          "minecraft:sleep_in_bed": 738,
+          "minecraft:sleep_in_bed": 739,
           "minecraft:swim_one_cm": 247509,
           "minecraft:pot_flower": 41,
           "minecraft:enchant_item": 11,
@@ -28346,9 +28346,9 @@
           "minecraft:use_cauldron": 2,
           "minecraft:bell_ring": 1,
           "minecraft:open_barrel": 1659,
-          "minecraft:open_chest": 2981,
+          "minecraft:open_chest": 2982,
           "minecraft:interact_with_smoker": 5,
-          "minecraft:fall_one_cm": 456248,
+          "minecraft:fall_one_cm": 456723,
           "minecraft:interact_with_anvil": 54,
           "minecraft:sneak_time": 47571
         },
@@ -28411,7 +28411,7 @@
           "minecraft:snowball": 56,
           "minecraft:beetroot_seeds": 1940,
           "minecraft:ender_pearl": 1,
-          "minecraft:string": 33,
+          "minecraft:string": 35,
           "minecraft:stone_bricks": 21,
           "minecraft:obsidian": 4,
           "minecraft:iron_helmet": 1,
@@ -32561,18 +32561,18 @@
           }
         ],
         "position": [
-          30.352635112457136,
-          -2.0,
-          -69.30000001192093
+          63.5,
+          80.0,
+          -173.5
         ],
         "dimension": "minecraft:overworld",
         "xp": 14,
-        "health": 18.85759925842285,
-        "food": 14,
+        "health": 20.0,
+        "food": 17,
         "saturation": 0.0,
         "inventory": [
           {
-            "id": "minecraft:bow",
+            "id": "minecraft:bread",
             "count": 1
           },
           {
@@ -32597,6 +32597,10 @@
           },
           {
             "id": "minecraft:spider_eye",
+            "count": 1
+          },
+          {
+            "id": "minecraft:string",
             "count": 1
           },
           {
@@ -32672,7 +32676,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:bread",
+            "id": "minecraft:bow",
             "count": 1
           },
           {
@@ -37190,7 +37194,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 30903802,
+    "time": 30910299,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37217,7 +37221,7 @@
       {
         "player": "Kimyknot",
         "login_time": "2026-08-22T16:42:14",
-        "logout_time": null
+        "logout_time": "2026-08-22T17:00:38"
       },
       {
         "player": "Kimyknot",
@@ -37395,5 +37399,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-22T21:00:00.666577+00:00"
+  "captured_at": "2026-08-22T21:15:00.635272+00:00"
 }
