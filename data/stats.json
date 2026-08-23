@@ -28409,33 +28409,33 @@
           "minecraft:ghast": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 1854,
-          "minecraft:leave_game": 171,
+          "minecraft:time_since_rest": 2736,
+          "minecraft:leave_game": 172,
           "minecraft:boat_one_cm": 2612029,
-          "minecraft:time_since_death": 2142861,
+          "minecraft:time_since_death": 2146366,
           "minecraft:aviate_one_cm": 733283,
           "minecraft:interact_with_furnace": 315,
           "minecraft:happy_ghast_one_cm": 21073,
-          "minecraft:total_world_time": 12506707,
+          "minecraft:total_world_time": 12510212,
           "minecraft:crouch_one_cm": 32452,
-          "minecraft:climb_one_cm": 180768,
+          "minecraft:climb_one_cm": 180862,
           "minecraft:deaths": 8,
           "minecraft:interact_with_stonecutter": 6,
           "minecraft:fish_caught": 19,
           "minecraft:animals_bred": 240,
           "minecraft:traded_with_villager": 924,
           "minecraft:interact_with_crafting_table": 944,
-          "minecraft:walk_one_cm": 51721347,
+          "minecraft:walk_one_cm": 51746903,
           "minecraft:walk_under_water_one_cm": 1395935,
           "minecraft:horse_one_cm": 18282420,
           "minecraft:damage_dealt": 150859,
-          "minecraft:play_time": 12506707,
-          "minecraft:jump": 64200,
+          "minecraft:play_time": 12510212,
+          "minecraft:jump": 64222,
           "minecraft:play_record": 2,
-          "minecraft:sprint_one_cm": 16900034,
+          "minecraft:sprint_one_cm": 16905876,
           "minecraft:fill_cauldron": 9,
           "minecraft:inspect_hopper": 6,
-          "minecraft:fly_one_cm": 2379915,
+          "minecraft:fly_one_cm": 2379969,
           "minecraft:walk_on_water_one_cm": 1589366,
           "minecraft:interact_with_blast_furnace": 2,
           "minecraft:interact_with_grindstone": 6,
@@ -28446,7 +28446,7 @@
           "minecraft:open_enderchest": 3,
           "minecraft:interact_with_brewingstand": 2,
           "minecraft:interact_with_smithing_table": 2,
-          "minecraft:sleep_in_bed": 747,
+          "minecraft:sleep_in_bed": 748,
           "minecraft:swim_one_cm": 247509,
           "minecraft:pot_flower": 41,
           "minecraft:enchant_item": 11,
@@ -32694,15 +32694,15 @@
           }
         ],
         "position": [
-          -287.49881300815986,
+          -284.9355862031382,
           67.0,
-          -180.65446972245766
+          -195.7444358911399
         ],
         "dimension": "minecraft:overworld",
         "xp": 20,
         "health": 20.0,
         "food": 20,
-        "saturation": 0.40000057220458984,
+        "saturation": 0.0,
         "inventory": [
           {
             "id": "minecraft:diamond_sword",
@@ -37319,7 +37319,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 31305878,
+    "time": 31310583,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37343,6 +37343,11 @@
   "logs": {
     "log_date": "2026-08-23",
     "player_sessions": [
+      {
+        "player": "Kimyknot",
+        "login_time": "2026-08-23T02:10:29",
+        "logout_time": "2026-08-23T02:13:24"
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-22T23:47:19",
@@ -37536,6 +37541,10 @@
     ],
     "server_sessions": [
       {
+        "startTime": "2026-08-23T00:21:01",
+        "endTime": "2026-08-23T02:10:29"
+      },
+      {
         "startTime": "2026-08-22T06:23:47",
         "endTime": "2026-08-22T07:00:36"
       },
@@ -37590,9 +37599,9 @@
     ]
   },
   "usercache": {
+    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
-    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
@@ -37601,5 +37610,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-23T06:00:00.929214+00:00"
+  "captured_at": "2026-08-23T06:15:00.924711+00:00"
 }
