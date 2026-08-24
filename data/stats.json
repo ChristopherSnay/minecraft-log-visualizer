@@ -252,7 +252,7 @@
           "minecraft:waxed_copper_block": 1090,
           "minecraft:deepslate_tile_slab": 20,
           "minecraft:jungle_sign": 1,
-          "minecraft:shulker_box": 79,
+          "minecraft:shulker_box": 83,
           "minecraft:soul_fire": 50,
           "minecraft:sand": 2101,
           "minecraft:seagrass": 18,
@@ -872,7 +872,7 @@
           "minecraft:ender_pearl": 35,
           "minecraft:polished_tuff": 1129,
           "minecraft:kelp": 72,
-          "minecraft:shulker_box": 83,
+          "minecraft:shulker_box": 89,
           "minecraft:diamond_sword": 17343,
           "minecraft:campfire": 25,
           "minecraft:wheat_seeds": 451,
@@ -953,7 +953,7 @@
           "minecraft:potion": 23,
           "minecraft:tuff_bricks": 1411,
           "minecraft:pink_carpet": 5,
-          "minecraft:bone_block": 219,
+          "minecraft:bone_block": 220,
           "minecraft:chorus_fruit": 23,
           "minecraft:apple": 4,
           "minecraft:scaffolding": 124,
@@ -1037,7 +1037,7 @@
           "minecraft:brown_banner": 1,
           "minecraft:packed_mud": 43,
           "minecraft:bookshelf": 99,
-          "minecraft:diamond_pickaxe": 64986,
+          "minecraft:diamond_pickaxe": 64990,
           "minecraft:crimson_planks": 62,
           "minecraft:ladder": 415,
           "minecraft:crossbow": 28,
@@ -1065,7 +1065,7 @@
           "minecraft:crimson_nylium": 4,
           "minecraft:cherry_log": 82,
           "minecraft:waxed_oxidized_cut_copper": 25,
-          "minecraft:ender_chest": 59,
+          "minecraft:ender_chest": 60,
           "minecraft:cornflower": 9,
           "minecraft:light_blue_bed": 1,
           "minecraft:sulfur_cube_bucket": 8,
@@ -1130,15 +1130,15 @@
           "minecraft:vex": 3
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 399083,
+          "minecraft:time_since_rest": 417083,
           "minecraft:leave_game": 319,
           "minecraft:boat_one_cm": 3251012,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 1617988,
+          "minecraft:time_since_death": 1635988,
           "minecraft:aviate_one_cm": 39227126,
           "minecraft:interact_with_furnace": 975,
           "minecraft:happy_ghast_one_cm": 39092482,
-          "minecraft:total_world_time": 14705452,
+          "minecraft:total_world_time": 14723452,
           "minecraft:crouch_one_cm": 620254,
           "minecraft:climb_one_cm": 382240,
           "minecraft:deaths": 28,
@@ -1149,30 +1149,30 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 882,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 20073751,
-          "minecraft:walk_under_water_one_cm": 2140549,
+          "minecraft:walk_one_cm": 20096709,
+          "minecraft:walk_under_water_one_cm": 2147065,
           "minecraft:horse_one_cm": 1186570,
           "minecraft:damage_dealt": 1012023,
-          "minecraft:play_time": 14705452,
-          "minecraft:jump": 87821,
+          "minecraft:play_time": 14723452,
+          "minecraft:jump": 87827,
           "minecraft:play_record": 8,
           "minecraft:target_hit": 35,
-          "minecraft:sprint_one_cm": 67211523,
+          "minecraft:sprint_one_cm": 67255142,
           "minecraft:inspect_hopper": 55,
-          "minecraft:fly_one_cm": 10063854,
-          "minecraft:walk_on_water_one_cm": 923316,
+          "minecraft:fly_one_cm": 10064737,
+          "minecraft:walk_on_water_one_cm": 923594,
           "minecraft:interact_with_grindstone": 10,
           "minecraft:talked_to_villager": 1071,
           "minecraft:mob_kills": 11986,
           "minecraft:damage_taken": 73690,
-          "minecraft:open_shulker_box": 675,
+          "minecraft:open_shulker_box": 691,
           "minecraft:interact_with_beacon": 4,
-          "minecraft:open_enderchest": 235,
+          "minecraft:open_enderchest": 240,
           "minecraft:interact_with_brewingstand": 12,
           "minecraft:interact_with_smithing_table": 21,
           "minecraft:sleep_in_bed": 444,
           "minecraft:inspect_dispenser": 155,
-          "minecraft:swim_one_cm": 1082258,
+          "minecraft:swim_one_cm": 1082764,
           "minecraft:pot_flower": 3,
           "minecraft:player_kills": 11,
           "minecraft:enchant_item": 64,
@@ -1182,7 +1182,7 @@
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 160,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 8748,
+          "minecraft:open_chest": 8865,
           "minecraft:interact_with_smoker": 2,
           "minecraft:fall_one_cm": 1841534,
           "minecraft:interact_with_anvil": 209,
@@ -1296,7 +1296,7 @@
           "minecraft:item_frame": 4,
           "minecraft:stone_brick_wall": 5,
           "minecraft:raw_iron": 466,
-          "minecraft:shulker_box": 81,
+          "minecraft:shulker_box": 85,
           "minecraft:birch_fence": 10,
           "minecraft:honeycomb": 3,
           "minecraft:tall_dry_grass": 8,
@@ -6635,15 +6635,15 @@
           }
         ],
         "position": [
-          7.841440205670517,
-          47.0,
-          -80.0855494644891
+          2.799570480871593,
+          72.0625,
+          -98.36794731413384
         ],
         "dimension": "minecraft:overworld",
         "xp": 22,
         "health": 20.0,
         "food": 20,
-        "saturation": 19.0,
+        "saturation": 7.0,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -6654,19 +6654,23 @@
             "count": 1
           },
           {
-            "id": "minecraft:compass",
+            "id": "minecraft:enchanted_book",
             "count": 1
           },
           {
-            "id": "minecraft:golden_carrot",
+            "id": "minecraft:enchanted_book",
             "count": 1
           },
           {
-            "id": "minecraft:polished_diorite_stairs",
+            "id": "minecraft:enchanted_book",
             "count": 1
           },
           {
-            "id": "minecraft:torch",
+            "id": "minecraft:enchanted_book",
+            "count": 1
+          },
+          {
+            "id": "minecraft:enchanted_book",
             "count": 1
           },
           {
@@ -6674,35 +6678,15 @@
             "count": 1
           },
           {
+            "id": "minecraft:enchanted_book",
+            "count": 1
+          },
+          {
             "id": "minecraft:diamond_chestplate",
             "count": 1
           },
           {
-            "id": "minecraft:granite",
-            "count": 1
-          },
-          {
-            "id": "minecraft:copper_ore",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dark_oak_button",
-            "count": 1
-          },
-          {
-            "id": "minecraft:shulker_box",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cherry_boat",
-            "count": 1
-          },
-          {
-            "id": "minecraft:shulker_box",
-            "count": 1
-          },
-          {
-            "id": "minecraft:bucket",
+            "id": "minecraft:compass",
             "count": 1
           },
           {
@@ -6710,15 +6694,23 @@
             "count": 1
           },
           {
-            "id": "minecraft:ender_chest",
-            "count": 1
-          },
-          {
             "id": "minecraft:firework_rocket",
             "count": 1
           },
           {
-            "id": "minecraft:quartz_slab",
+            "id": "minecraft:music_disc_5",
+            "count": 1
+          },
+          {
+            "id": "minecraft:potion",
+            "count": 1
+          },
+          {
+            "id": "minecraft:nether_wart",
+            "count": 1
+          },
+          {
+            "id": "minecraft:nether_wart",
             "count": 1
           },
           {
@@ -6734,11 +6726,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:diorite",
+            "id": "minecraft:enchanted_book",
             "count": 1
           },
           {
-            "id": "minecraft:potion",
+            "id": "minecraft:enchanted_book",
+            "count": 1
+          },
+          {
+            "id": "minecraft:enchanted_book",
             "count": 1
           },
           {
@@ -37600,7 +37596,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 32145802,
+    "time": 32163802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37672,18 +37668,6 @@
     ],
     "deaths": [
       {
-        "player": "Villager",
-        "message": "Butcher hit the ground too hard",
-        "timestamp": "2026-08-23T18:48:36",
-        "entity_type": "Villager"
-      },
-      {
-        "player": "Villager",
-        "message": "Leatherworker was poked to death by a sweet berry bush",
-        "timestamp": "2026-08-23T18:59:16",
-        "entity_type": "Villager"
-      },
-      {
         "player": "Named",
         "message": "Yertle discovered the floor was lava",
         "timestamp": "2026-08-24T13:50:21",
@@ -37724,5 +37708,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-24T18:45:01.526862+00:00"
+  "captured_at": "2026-08-24T19:00:01.427151+00:00"
 }
