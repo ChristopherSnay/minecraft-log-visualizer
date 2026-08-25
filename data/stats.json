@@ -37633,7 +37633,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 32334007,
+    "time": 32337802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37657,6 +37657,11 @@
   "logs": {
     "log_date": "2026-08-24",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-24T19:55:34",
+        "logout_time": null
+      },
       {
         "player": "Kimyknot",
         "login_time": "2026-08-24T18:39:59",
@@ -37721,6 +37726,12 @@
         "message": "Villager hit the ground too hard",
         "timestamp": "2026-08-24T15:41:48",
         "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager suffocated in a wall",
+        "timestamp": "2026-08-24T19:56:45",
+        "entity_type": "Villager"
       }
     ],
     "crashes": [],
@@ -37748,12 +37759,16 @@
       {
         "startTime": "2026-08-24T17:23:43",
         "endTime": "2026-08-24T17:24:13"
+      },
+      {
+        "startTime": "2026-08-24T19:13:26",
+        "endTime": "2026-08-24T19:55:34"
       }
     ]
   },
   "usercache": {
-    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
+    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
@@ -37763,5 +37778,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-24T23:30:01.528355+00:00"
+  "captured_at": "2026-08-25T00:00:01.234854+00:00"
 }
