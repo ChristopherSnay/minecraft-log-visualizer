@@ -885,7 +885,7 @@
           "minecraft:polished_tuff": 1129,
           "minecraft:kelp": 72,
           "minecraft:shulker_box": 114,
-          "minecraft:diamond_sword": 17549,
+          "minecraft:diamond_sword": 17557,
           "minecraft:campfire": 25,
           "minecraft:wheat_seeds": 451,
           "minecraft:ocelot_spawn_egg": 1,
@@ -1100,7 +1100,7 @@
           "minecraft:drowned": 21,
           "minecraft:endermite": 3,
           "minecraft:slime": 172,
-          "minecraft:skeleton": 6862,
+          "minecraft:skeleton": 6863,
           "minecraft:zombie_nautilus": 1,
           "minecraft:iron_golem": 30,
           "minecraft:strider": 1,
@@ -1125,7 +1125,7 @@
           "minecraft:shulker": 55,
           "minecraft:happy_ghast": 3,
           "minecraft:salmon": 7,
-          "minecraft:zombie": 1369,
+          "minecraft:zombie": 1372,
           "minecraft:chicken": 20,
           "minecraft:creaking": 1,
           "minecraft:tadpole": 1,
@@ -1141,21 +1141,21 @@
           "minecraft:cave_spider": 28,
           "minecraft:wither_skeleton": 10,
           "minecraft:trader_llama": 13,
-          "minecraft:creeper": 1223,
+          "minecraft:creeper": 1230,
           "minecraft:hoglin": 23,
           "minecraft:vex": 3,
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 8838,
-          "minecraft:leave_game": 328,
+          "minecraft:time_since_rest": 9898,
+          "minecraft:leave_game": 329,
           "minecraft:boat_one_cm": 3254948,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 1976697,
+          "minecraft:time_since_death": 1977757,
           "minecraft:aviate_one_cm": 42047094,
           "minecraft:interact_with_furnace": 977,
           "minecraft:happy_ghast_one_cm": 39092482,
-          "minecraft:total_world_time": 15064161,
+          "minecraft:total_world_time": 15065221,
           "minecraft:crouch_one_cm": 627625,
           "minecraft:climb_one_cm": 389388,
           "minecraft:deaths": 28,
@@ -1169,8 +1169,8 @@
           "minecraft:walk_one_cm": 20538875,
           "minecraft:walk_under_water_one_cm": 2226560,
           "minecraft:horse_one_cm": 1186570,
-          "minecraft:damage_dealt": 1018706,
-          "minecraft:play_time": 15064161,
+          "minecraft:damage_dealt": 1018786,
+          "minecraft:play_time": 15065221,
           "minecraft:jump": 88753,
           "minecraft:play_record": 8,
           "minecraft:target_hit": 35,
@@ -1180,7 +1180,7 @@
           "minecraft:walk_on_water_one_cm": 940871,
           "minecraft:interact_with_grindstone": 10,
           "minecraft:talked_to_villager": 1073,
-          "minecraft:mob_kills": 12225,
+          "minecraft:mob_kills": 12236,
           "minecraft:damage_taken": 74665,
           "minecraft:open_shulker_box": 769,
           "minecraft:interact_with_beacon": 4,
@@ -6697,7 +6697,7 @@
           -108.76249998807907
         ],
         "dimension": "minecraft:overworld",
-        "xp": 29,
+        "xp": 30,
         "health": 20.0,
         "food": 20,
         "saturation": 6.0,
@@ -37580,7 +37580,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 32528241,
+    "time": 32530501,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37604,6 +37604,16 @@
   "logs": {
     "log_date": "2026-08-25",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-25T15:25:50",
+        "logout_time": null
+      },
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-25T15:22:21",
+        "logout_time": "2026-08-25T15:23:14"
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-25T14:24:00",
@@ -37675,6 +37685,14 @@
         "endTime": "2026-08-25T14:24:00"
       },
       {
+        "startTime": "2026-08-25T14:30:05",
+        "endTime": "2026-08-25T15:22:21"
+      },
+      {
+        "startTime": "2026-08-25T15:24:14",
+        "endTime": "2026-08-25T15:25:50"
+      },
+      {
         "startTime": "2026-08-24T20:31:06",
         "endTime": "2026-08-24T23:37:51"
       }
@@ -37692,5 +37710,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-25T19:15:01.226357+00:00"
+  "captured_at": "2026-08-25T19:30:01.383355+00:00"
 }
