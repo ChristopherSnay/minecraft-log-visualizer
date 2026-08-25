@@ -1147,15 +1147,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 2117,
-          "minecraft:leave_game": 326,
+          "minecraft:time_since_rest": 2748,
+          "minecraft:leave_game": 327,
           "minecraft:boat_one_cm": 3254948,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 1969976,
+          "minecraft:time_since_death": 1970607,
           "minecraft:aviate_one_cm": 42020798,
           "minecraft:interact_with_furnace": 977,
           "minecraft:happy_ghast_one_cm": 39092482,
-          "minecraft:total_world_time": 15057440,
+          "minecraft:total_world_time": 15058071,
           "minecraft:crouch_one_cm": 627625,
           "minecraft:climb_one_cm": 389388,
           "minecraft:deaths": 28,
@@ -1166,11 +1166,11 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 893,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 20535532,
+          "minecraft:walk_one_cm": 20536845,
           "minecraft:walk_under_water_one_cm": 2226560,
           "minecraft:horse_one_cm": 1186570,
           "minecraft:damage_dealt": 1018436,
-          "minecraft:play_time": 15057440,
+          "minecraft:play_time": 15058071,
           "minecraft:jump": 88752,
           "minecraft:play_record": 8,
           "minecraft:target_hit": 35,
@@ -6692,9 +6692,9 @@
           }
         ],
         "position": [
-          -55.43957096849009,
-          63.0,
-          -30.213499078454383
+          -47.91629674136278,
+          62.9375,
+          -34.624514654689705
         ],
         "dimension": "minecraft:overworld",
         "xp": 28,
@@ -37580,7 +37580,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 32519120,
+    "time": 32520951,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37604,6 +37604,11 @@
   "logs": {
     "log_date": "2026-08-25",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-08-25T13:00:16",
+        "logout_time": "2026-08-25T13:00:47"
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-25T12:05:55",
@@ -37677,6 +37682,10 @@
         "endTime": "2026-08-25T12:05:55"
       },
       {
+        "startTime": "2026-08-25T12:47:11",
+        "endTime": "2026-08-25T13:00:16"
+      },
+      {
         "startTime": "2026-08-24T17:23:43",
         "endTime": "2026-08-24T17:24:13"
       },
@@ -37702,5 +37711,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-25T17:00:02.488934+00:00"
+  "captured_at": "2026-08-25T17:15:01.258886+00:00"
 }
