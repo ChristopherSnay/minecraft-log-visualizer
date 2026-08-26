@@ -460,6 +460,7 @@
           "minecraft:cobbled_deepslate_slab": 18,
           "minecraft:cherry_door": 6,
           "minecraft:cinnabar_bricks": 33,
+          "minecraft:gray_harness": 1,
           "minecraft:redstone_block": 2,
           "minecraft:netherite_upgrade_smithing_template": 8,
           "minecraft:comparator": 1,
@@ -809,7 +810,7 @@
           "minecraft:dandelion": 28,
           "minecraft:stone_pressure_plate": 9,
           "minecraft:mangrove_roots": 11,
-          "minecraft:spruce_boat": 13,
+          "minecraft:spruce_boat": 14,
           "minecraft:lingering_potion": 3,
           "minecraft:chiseled_tuff": 154,
           "minecraft:chiseled_resin_bricks": 30,
@@ -1152,15 +1153,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 24045,
+          "minecraft:time_since_rest": 42045,
           "minecraft:leave_game": 334,
-          "minecraft:boat_one_cm": 3265239,
+          "minecraft:boat_one_cm": 3268642,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 36148,
+          "minecraft:time_since_death": 54148,
           "minecraft:aviate_one_cm": 45969797,
           "minecraft:interact_with_furnace": 977,
           "minecraft:happy_ghast_one_cm": 49699323,
-          "minecraft:total_world_time": 15368272,
+          "minecraft:total_world_time": 15386272,
           "minecraft:crouch_one_cm": 632254,
           "minecraft:climb_one_cm": 394256,
           "minecraft:deaths": 31,
@@ -1169,20 +1170,20 @@
           "minecraft:traded_with_villager": 2252,
           "minecraft:damage_resisted": 98,
           "minecraft:damage_blocked_by_shield": 288,
-          "minecraft:interact_with_crafting_table": 911,
+          "minecraft:interact_with_crafting_table": 912,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 20774426,
-          "minecraft:walk_under_water_one_cm": 2282950,
+          "minecraft:walk_one_cm": 20778347,
+          "minecraft:walk_under_water_one_cm": 2285202,
           "minecraft:horse_one_cm": 1186570,
           "minecraft:damage_dealt": 1037183,
-          "minecraft:play_time": 15368272,
-          "minecraft:jump": 89747,
+          "minecraft:play_time": 15386272,
+          "minecraft:jump": 89790,
           "minecraft:play_record": 8,
           "minecraft:target_hit": 35,
-          "minecraft:sprint_one_cm": 69190397,
+          "minecraft:sprint_one_cm": 69242904,
           "minecraft:inspect_hopper": 56,
-          "minecraft:fly_one_cm": 10235796,
-          "minecraft:walk_on_water_one_cm": 949364,
+          "minecraft:fly_one_cm": 10240676,
+          "minecraft:walk_on_water_one_cm": 949973,
           "minecraft:interact_with_grindstone": 10,
           "minecraft:talked_to_villager": 1075,
           "minecraft:mob_kills": 12398,
@@ -1194,7 +1195,7 @@
           "minecraft:interact_with_smithing_table": 21,
           "minecraft:sleep_in_bed": 457,
           "minecraft:inspect_dispenser": 155,
-          "minecraft:swim_one_cm": 1148871,
+          "minecraft:swim_one_cm": 1149089,
           "minecraft:pot_flower": 4,
           "minecraft:player_kills": 11,
           "minecraft:enchant_item": 64,
@@ -1204,9 +1205,9 @@
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 177,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 9865,
+          "minecraft:open_chest": 9873,
           "minecraft:interact_with_smoker": 2,
-          "minecraft:fall_one_cm": 1912250,
+          "minecraft:fall_one_cm": 1912517,
           "minecraft:interact_with_anvil": 210,
           "minecraft:sneak_time": 320342,
           "minecraft:raid_trigger": 2
@@ -6699,15 +6700,15 @@
           }
         ],
         "position": [
-          40.20082316925749,
-          59.0,
-          -23.196575393041076
+          42.62275327903844,
+          58.0,
+          -27.99755188727508
         ],
         "dimension": "minecraft:the_end",
         "xp": 7,
         "health": 20.0,
-        "food": 20,
-        "saturation": 10.40000057220459,
+        "food": 16,
+        "saturation": 0.0,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -6734,11 +6735,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:ender_pearl",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_axe",
+            "id": "minecraft:gray_wool",
             "count": 1
           },
           {
@@ -6755,6 +6752,14 @@
           },
           {
             "id": "minecraft:dirt",
+            "count": 1
+          },
+          {
+            "id": "minecraft:diamond_axe",
+            "count": 1
+          },
+          {
+            "id": "minecraft:leather",
             "count": 1
           },
           {
@@ -6786,15 +6791,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:snowball",
-            "count": 1
-          },
-          {
-            "id": "minecraft:snowball",
-            "count": 1
-          },
-          {
-            "id": "minecraft:snowball",
+            "id": "minecraft:ender_pearl",
             "count": 1
           },
           {
@@ -37645,7 +37642,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 32931802,
+    "time": 32949802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37772,6 +37769,12 @@
         "player": "ZodiacalLight",
         "message": "fell from a high place",
         "timestamp": "2026-08-26T00:55:45"
+      },
+      {
+        "player": "Villager",
+        "message": "Fisherman was impaled by Drowned",
+        "timestamp": "2026-08-26T09:27:03",
+        "entity_type": "Villager"
       }
     ],
     "crashes": [
@@ -37831,5 +37834,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-26T13:15:01.430073+00:00"
+  "captured_at": "2026-08-26T13:30:01.425830+00:00"
 }
