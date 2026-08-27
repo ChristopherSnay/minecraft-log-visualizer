@@ -1157,15 +1157,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 183395,
-          "minecraft:leave_game": 344,
+          "minecraft:time_since_rest": 188351,
+          "minecraft:leave_game": 345,
           "minecraft:boat_one_cm": 3288896,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 606066,
+          "minecraft:time_since_death": 611022,
           "minecraft:aviate_one_cm": 52305949,
           "minecraft:interact_with_furnace": 982,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 16011586,
+          "minecraft:total_world_time": 16016542,
           "minecraft:crouch_one_cm": 647351,
           "minecraft:climb_one_cm": 394753,
           "minecraft:deaths": 32,
@@ -1176,15 +1176,15 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 944,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 21332729,
+          "minecraft:walk_one_cm": 21333242,
           "minecraft:walk_under_water_one_cm": 2439134,
           "minecraft:horse_one_cm": 1186570,
           "minecraft:damage_dealt": 1093592,
-          "minecraft:play_time": 16011586,
+          "minecraft:play_time": 16016542,
           "minecraft:jump": 91436,
           "minecraft:play_record": 8,
           "minecraft:target_hit": 35,
-          "minecraft:sprint_one_cm": 70664472,
+          "minecraft:sprint_one_cm": 70669792,
           "minecraft:inspect_hopper": 57,
           "minecraft:fly_one_cm": 10388688,
           "minecraft:walk_on_water_one_cm": 965390,
@@ -1194,7 +1194,7 @@
           "minecraft:damage_taken": 78900,
           "minecraft:open_shulker_box": 852,
           "minecraft:interact_with_beacon": 4,
-          "minecraft:open_enderchest": 349,
+          "minecraft:open_enderchest": 354,
           "minecraft:interact_with_brewingstand": 15,
           "minecraft:interact_with_smithing_table": 25,
           "minecraft:sleep_in_bed": 465,
@@ -1209,7 +1209,7 @@
           "minecraft:bell_ring": 46,
           "minecraft:open_barrel": 177,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 10428,
+          "minecraft:open_chest": 10441,
           "minecraft:interact_with_smoker": 2,
           "minecraft:fall_one_cm": 1962054,
           "minecraft:interact_with_anvil": 231,
@@ -6707,30 +6707,18 @@
           }
         ],
         "position": [
-          -1.2364252591826221,
+          4.405240913005521,
           47.0,
-          -85.66624542377802
+          -78.3602040766118
         ],
         "dimension": "minecraft:overworld",
         "xp": 24,
         "health": 20.0,
         "food": 20,
-        "saturation": 3.40000057220459,
+        "saturation": 1.4000005722045898,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_pickaxe",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_sword",
-            "count": 1
-          },
-          {
-            "id": "minecraft:shulker_box",
             "count": 1
           },
           {
@@ -6758,31 +6746,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:shulker_shell",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_chestplate",
-            "count": 1
-          },
-          {
             "id": "minecraft:diamond_helmet",
             "count": 1
           },
           {
-            "id": "minecraft:iron_boots",
-            "count": 1
-          },
-          {
-            "id": "minecraft:water_bucket",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_spear",
-            "count": 1
-          },
-          {
-            "id": "minecraft:golden_boots",
+            "id": "minecraft:diamond_leggings",
             "count": 1
           },
           {
@@ -6790,15 +6758,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:iron_leggings",
+            "id": "minecraft:water_bucket",
             "count": 1
           },
           {
             "id": "minecraft:golden_carrot",
-            "count": 1
-          },
-          {
-            "id": "minecraft:chorus_fruit",
             "count": 1
           },
           {
@@ -6814,35 +6778,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:iron_ingot",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_leggings",
-            "count": 1
-          },
-          {
             "id": "minecraft:saddle",
             "count": 1
           },
           {
-            "id": "minecraft:diamond_helmet",
-            "count": 1
-          },
-          {
             "id": "minecraft:firework_rocket",
             "count": 1
           },
           {
-            "id": "minecraft:gold_ingot",
-            "count": 1
-          },
-          {
             "id": "minecraft:firework_rocket",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_helmet",
             "count": 1
           },
           {
@@ -37844,7 +37788,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 33675802,
+    "time": 33681960,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37871,7 +37815,7 @@
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-27T00:27:24",
-        "logout_time": null
+        "logout_time": "2026-08-27T00:46:32"
       },
       {
         "player": "ZodiacalLight",
@@ -38059,5 +38003,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-27T04:45:02.959753+00:00"
+  "captured_at": "2026-08-27T05:00:03.103405+00:00"
 }
