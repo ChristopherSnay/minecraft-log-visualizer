@@ -896,7 +896,7 @@
           "minecraft:polished_tuff": 1129,
           "minecraft:kelp": 72,
           "minecraft:shulker_box": 166,
-          "minecraft:diamond_sword": 18836,
+          "minecraft:diamond_sword": 18848,
           "minecraft:campfire": 26,
           "minecraft:wheat_seeds": 451,
           "minecraft:ocelot_spawn_egg": 1,
@@ -954,7 +954,7 @@
           "minecraft:polished_deepslate": 150,
           "minecraft:dark_oak_log": 122,
           "minecraft:copper_hoe": 4,
-          "minecraft:firework_rocket": 2766,
+          "minecraft:firework_rocket": 2770,
           "minecraft:tnt": 263,
           "minecraft:waxed_copper_block": 536,
           "minecraft:warped_hyphae": 11,
@@ -1114,7 +1114,7 @@
           "minecraft:drowned": 35,
           "minecraft:endermite": 3,
           "minecraft:slime": 172,
-          "minecraft:skeleton": 7615,
+          "minecraft:skeleton": 7645,
           "minecraft:zombie_nautilus": 1,
           "minecraft:iron_golem": 30,
           "minecraft:strider": 1,
@@ -1161,15 +1161,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 13678,
-          "minecraft:leave_game": 346,
+          "minecraft:time_since_rest": 19969,
+          "minecraft:leave_game": 347,
           "minecraft:boat_one_cm": 3297096,
           "minecraft:damage_absorbed": 727,
-          "minecraft:time_since_death": 713921,
-          "minecraft:aviate_one_cm": 53654359,
+          "minecraft:time_since_death": 720212,
+          "minecraft:aviate_one_cm": 53726894,
           "minecraft:interact_with_furnace": 982,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 16119441,
+          "minecraft:total_world_time": 16125732,
           "minecraft:crouch_one_cm": 647752,
           "minecraft:climb_one_cm": 394769,
           "minecraft:deaths": 32,
@@ -1180,22 +1180,22 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 947,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 21415526,
-          "minecraft:walk_under_water_one_cm": 2467860,
+          "minecraft:walk_one_cm": 21416632,
+          "minecraft:walk_under_water_one_cm": 2477572,
           "minecraft:horse_one_cm": 1186570,
-          "minecraft:damage_dealt": 1100906,
-          "minecraft:play_time": 16119441,
-          "minecraft:jump": 91604,
+          "minecraft:damage_dealt": 1101956,
+          "minecraft:play_time": 16125732,
+          "minecraft:jump": 91618,
           "minecraft:play_record": 8,
           "minecraft:target_hit": 35,
-          "minecraft:sprint_one_cm": 70929304,
+          "minecraft:sprint_one_cm": 70937360,
           "minecraft:inspect_hopper": 59,
-          "minecraft:fly_one_cm": 10408693,
-          "minecraft:walk_on_water_one_cm": 967240,
+          "minecraft:fly_one_cm": 10410334,
+          "minecraft:walk_on_water_one_cm": 967430,
           "minecraft:interact_with_grindstone": 10,
           "minecraft:talked_to_villager": 1373,
-          "minecraft:mob_kills": 13430,
-          "minecraft:damage_taken": 79319,
+          "minecraft:mob_kills": 13461,
+          "minecraft:damage_taken": 79321,
           "minecraft:open_shulker_box": 868,
           "minecraft:interact_with_beacon": 4,
           "minecraft:open_enderchest": 373,
@@ -1215,7 +1215,7 @@
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:open_chest": 10604,
           "minecraft:interact_with_smoker": 2,
-          "minecraft:fall_one_cm": 1967998,
+          "minecraft:fall_one_cm": 1968223,
           "minecraft:interact_with_anvil": 235,
           "minecraft:sneak_time": 326425,
           "minecraft:raid_trigger": 2
@@ -1250,7 +1250,7 @@
           "minecraft:shroomlight": 9,
           "minecraft:pale_oak_button": 8,
           "minecraft:birch_boat": 6,
-          "minecraft:arrow": 4664,
+          "minecraft:arrow": 4679,
           "minecraft:smooth_basalt": 377,
           "minecraft:cactus": 54,
           "minecraft:azalea": 48,
@@ -1523,7 +1523,7 @@
           "minecraft:cherry_sign": 5,
           "minecraft:bee_nest": 6,
           "minecraft:sugar_cane": 378,
-          "minecraft:bone": 4927,
+          "minecraft:bone": 4970,
           "minecraft:quartz_slab": 17,
           "minecraft:diamond_shovel": 15,
           "minecraft:iron_sword": 7,
@@ -6711,15 +6711,15 @@
           }
         ],
         "position": [
-          -141.4575596464801,
-          -47.5,
-          -13.109617288247112
+          -1.300000011920929,
+          47.0,
+          -100.52973888213779
         ],
         "dimension": "minecraft:overworld",
-        "xp": 17,
+        "xp": 21,
         "health": 20.0,
         "food": 20,
-        "saturation": 13.40000057220459,
+        "saturation": 8.40000057220459,
         "inventory": [
           {
             "id": "minecraft:diamond_pickaxe",
@@ -6803,6 +6803,10 @@
           },
           {
             "id": "minecraft:emerald",
+            "count": 1
+          },
+          {
+            "id": "minecraft:bone",
             "count": 1
           },
           {
@@ -37833,7 +37837,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 33825802,
+    "time": 33830652,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -37860,7 +37864,7 @@
       {
         "player": "ZodiacalLight",
         "login_time": "2026-08-27T11:16:35",
-        "logout_time": null
+        "logout_time": "2026-08-27T11:31:50"
       },
       {
         "player": "Drewyknot",
@@ -37936,20 +37940,9 @@
         "player": "ZodiacalLight",
         "login_time": "2026-08-26T16:09:09",
         "logout_time": "2026-08-26T16:25:42"
-      },
-      {
-        "player": "ZodiacalLight",
-        "login_time": "2026-08-26T14:41:39",
-        "logout_time": "2026-08-26T15:41:48"
       }
     ],
     "deaths": [
-      {
-        "player": "Villager",
-        "message": "Librarian was burned to a crisp while fighting ZodiacalLight",
-        "timestamp": "2026-08-26T15:39:14",
-        "entity_type": "Villager"
-      },
       {
         "player": "Villager",
         "message": "Librarian was slain by ZodiacalLight",
@@ -38003,10 +37996,6 @@
         "endTime": "2026-08-27T11:16:35"
       },
       {
-        "startTime": "2026-08-26T15:42:48",
-        "endTime": "2026-08-26T16:09:09"
-      },
-      {
         "startTime": "2026-08-26T16:26:42",
         "endTime": "2026-08-26T16:32:13"
       },
@@ -38036,5 +38025,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-27T15:30:05.803878+00:00"
+  "captured_at": "2026-08-27T15:45:07.920714+00:00"
 }
