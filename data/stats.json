@@ -28391,7 +28391,7 @@
           "minecraft:poppy": 32,
           "minecraft:deepslate_lapis_ore": 19,
           "minecraft:deepslate_iron_ore": 46,
-          "minecraft:green_bed": 86,
+          "minecraft:green_bed": 87,
           "minecraft:brain_coral": 5,
           "minecraft:allium": 37,
           "minecraft:stone": 2634,
@@ -28804,7 +28804,7 @@
           "minecraft:moss_carpet": 62,
           "minecraft:pale_hanging_moss": 34,
           "minecraft:soul_soil": 12,
-          "minecraft:sniffer_egg": 2,
+          "minecraft:sniffer_egg": 3,
           "minecraft:stone_hoe": 531,
           "minecraft:spruce_log": 5,
           "minecraft:horn_coral_fan": 10,
@@ -28992,8 +28992,8 @@
           "minecraft:warped_fungus": 1,
           "minecraft:cobblestone_slab": 79,
           "minecraft:copper_sword": 145,
-          "minecraft:torchflower_seeds": 2,
-          "minecraft:green_bed": 92,
+          "minecraft:torchflower_seeds": 4,
+          "minecraft:green_bed": 94,
           "minecraft:composter": 10,
           "minecraft:deepslate_brick_stairs": 5,
           "minecraft:crimson_nylium": 24,
@@ -29034,33 +29034,33 @@
           "minecraft:ghast": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 11263,
+          "minecraft:time_since_rest": 39,
           "minecraft:leave_game": 194,
           "minecraft:boat_one_cm": 2859361,
-          "minecraft:time_since_death": 3874057,
+          "minecraft:time_since_death": 3892057,
           "minecraft:aviate_one_cm": 5914852,
           "minecraft:interact_with_furnace": 327,
           "minecraft:happy_ghast_one_cm": 21073,
-          "minecraft:total_world_time": 14237903,
+          "minecraft:total_world_time": 14255903,
           "minecraft:crouch_one_cm": 35266,
           "minecraft:climb_one_cm": 194030,
           "minecraft:deaths": 8,
           "minecraft:interact_with_stonecutter": 6,
           "minecraft:fish_caught": 19,
-          "minecraft:animals_bred": 256,
+          "minecraft:animals_bred": 257,
           "minecraft:traded_with_villager": 1123,
           "minecraft:interact_with_crafting_table": 1029,
-          "minecraft:walk_one_cm": 58640499,
+          "minecraft:walk_one_cm": 58686314,
           "minecraft:walk_under_water_one_cm": 1805665,
           "minecraft:horse_one_cm": 20697316,
           "minecraft:damage_dealt": 173591,
-          "minecraft:play_time": 14237903,
-          "minecraft:jump": 71233,
+          "minecraft:play_time": 14255903,
+          "minecraft:jump": 71244,
           "minecraft:play_record": 3,
-          "minecraft:sprint_one_cm": 18413427,
+          "minecraft:sprint_one_cm": 18433108,
           "minecraft:fill_cauldron": 9,
           "minecraft:inspect_hopper": 6,
-          "minecraft:fly_one_cm": 2533289,
+          "minecraft:fly_one_cm": 2534868,
           "minecraft:walk_on_water_one_cm": 1896282,
           "minecraft:interact_with_blast_furnace": 2,
           "minecraft:interact_with_grindstone": 6,
@@ -29071,7 +29071,7 @@
           "minecraft:open_enderchest": 3,
           "minecraft:interact_with_brewingstand": 3,
           "minecraft:interact_with_smithing_table": 2,
-          "minecraft:sleep_in_bed": 847,
+          "minecraft:sleep_in_bed": 849,
           "minecraft:swim_one_cm": 276088,
           "minecraft:pot_flower": 41,
           "minecraft:enchant_item": 15,
@@ -29079,11 +29079,11 @@
           "minecraft:use_cauldron": 2,
           "minecraft:bell_ring": 1,
           "minecraft:open_barrel": 1703,
-          "minecraft:open_chest": 3535,
+          "minecraft:open_chest": 3537,
           "minecraft:interact_with_smoker": 5,
           "minecraft:fall_one_cm": 541831,
-          "minecraft:interact_with_anvil": 71,
-          "minecraft:sneak_time": 51689
+          "minecraft:interact_with_anvil": 72,
+          "minecraft:sneak_time": 51704
         },
         "items_picked_up": {
           "minecraft:sweet_berries": 32,
@@ -29135,7 +29135,7 @@
           "minecraft:oak_door": 10,
           "minecraft:wheat_seeds": 10300,
           "minecraft:black_bed": 10,
-          "minecraft:sniffer_egg": 2,
+          "minecraft:sniffer_egg": 3,
           "minecraft:egg": 2060,
           "minecraft:iron_leggings": 1,
           "minecraft:red_bed": 10,
@@ -29238,7 +29238,7 @@
           "minecraft:dirt": 16945,
           "minecraft:bone_block": 333,
           "minecraft:torch": 472,
-          "minecraft:pitcher_pod": 6,
+          "minecraft:pitcher_pod": 7,
           "minecraft:cherry_log": 74,
           "minecraft:bread": 31,
           "minecraft:iron_boots": 1,
@@ -29302,7 +29302,7 @@
           "minecraft:leaf_litter": 686,
           "minecraft:grass_block": 13,
           "minecraft:fire_coral": 2,
-          "minecraft:torchflower_seeds": 7,
+          "minecraft:torchflower_seeds": 10,
           "minecraft:bone_meal": 221,
           "minecraft:fire_coral_block": 30,
           "minecraft:decorated_pot": 2,
@@ -29356,7 +29356,7 @@
           "minecraft:light_blue_carpet": 1,
           "minecraft:mushroom_stem": 11,
           "minecraft:oak_sign": 10,
-          "minecraft:green_bed": 85,
+          "minecraft:green_bed": 86,
           "minecraft:golden_sword": 2,
           "minecraft:oxidized_copper_bars": 27,
           "minecraft:polished_diorite": 3,
@@ -33379,22 +33379,18 @@
           }
         ],
         "position": [
-          -352.93414361795783,
-          70.0625,
-          -146.86916905986965
+          -365.5,
+          69.0,
+          -124.5
         ],
         "dimension": "minecraft:overworld",
-        "xp": 25,
+        "xp": 24,
         "health": 20.0,
-        "food": 20,
-        "saturation": 3.40000057220459,
+        "food": 19,
+        "saturation": 0.0,
         "inventory": [
           {
             "id": "minecraft:diamond_sword",
-            "count": 1
-          },
-          {
-            "id": "minecraft:green_bed",
             "count": 1
           },
           {
@@ -33411,10 +33407,6 @@
           },
           {
             "id": "minecraft:lead",
-            "count": 1
-          },
-          {
-            "id": "minecraft:torchflower_seeds",
             "count": 1
           },
           {
@@ -38008,7 +38000,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 35757802,
+    "time": 35775802,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -38162,5 +38154,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-08-29T20:45:16.392797+00:00"
+  "captured_at": "2026-08-29T21:00:13.142328+00:00"
 }
