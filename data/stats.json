@@ -1214,15 +1214,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 13678,
-          "minecraft:leave_game": 391,
+          "minecraft:time_since_rest": 14778,
+          "minecraft:leave_game": 392,
           "minecraft:boat_one_cm": 3501398,
           "minecraft:damage_absorbed": 771,
-          "minecraft:time_since_death": 692602,
+          "minecraft:time_since_death": 693702,
           "minecraft:aviate_one_cm": 77296402,
           "minecraft:interact_with_furnace": 1028,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 18235077,
+          "minecraft:total_world_time": 18236177,
           "minecraft:crouch_one_cm": 908037,
           "minecraft:climb_one_cm": 416836,
           "minecraft:raid_win": 7,
@@ -1238,7 +1238,7 @@
           "minecraft:walk_under_water_one_cm": 2884342,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1224978,
-          "minecraft:play_time": 18235077,
+          "minecraft:play_time": 18236177,
           "minecraft:jump": 99767,
           "minecraft:play_record": 12,
           "minecraft:target_hit": 36,
@@ -38178,7 +38178,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 37362200,
+    "time": 37366898,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -38202,6 +38202,11 @@
   "logs": {
     "log_date": "2026-09-01",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-09-01T15:19:12",
+        "logout_time": "2026-09-01T15:20:09"
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-09-01T13:50:06",
@@ -38261,11 +38266,6 @@
         "player": "ZodiacalLight",
         "login_time": "2026-08-31T20:13:39",
         "logout_time": "2026-08-31T21:11:22"
-      },
-      {
-        "player": "ZodiacalLight",
-        "login_time": "2026-08-31T18:35:29",
-        "logout_time": "2026-08-31T19:19:24"
       }
     ],
     "deaths": [
@@ -38285,14 +38285,6 @@
     "crashes": [],
     "server_sessions": [
       {
-        "startTime": "2026-09-01T13:33:39",
-        "endTime": "2026-09-01T13:44:59"
-      },
-      {
-        "startTime": "2026-08-31T19:20:24",
-        "endTime": "2026-08-31T20:13:39"
-      },
-      {
         "startTime": "2026-08-31T21:12:22",
         "endTime": "2026-08-31T23:29:00"
       },
@@ -38311,6 +38303,18 @@
       {
         "startTime": "2026-09-01T12:54:28",
         "endTime": "2026-09-01T13:02:01"
+      },
+      {
+        "startTime": "2026-09-01T13:33:39",
+        "endTime": "2026-09-01T13:44:59"
+      },
+      {
+        "startTime": "2026-09-01T14:02:16",
+        "endTime": "2026-09-01T15:19:12"
+      },
+      {
+        "startTime": "2026-09-01T15:23:57",
+        "endTime": "2026-09-01T15:24:43"
       }
     ]
   },
@@ -38326,5 +38330,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-01T19:15:34.529908+00:00"
+  "captured_at": "2026-09-01T19:30:35.723428+00:00"
 }
