@@ -38096,7 +38096,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 37581699,
+    "time": 37582898,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -38197,12 +38197,13 @@
       }
     ],
     "deaths": [],
-    "crashes": [],
-    "server_sessions": [
+    "crashes": [
       {
-        "startTime": "2026-09-01T15:28:52",
-        "endTime": "2026-09-01T15:30:37"
-      },
+        "type": "crash",
+        "timestamp": "2026-09-01T18:35:11"
+      }
+    ],
+    "server_sessions": [
       {
         "startTime": "2026-09-01T08:09:26",
         "endTime": "2026-09-01T08:45:33"
@@ -38228,8 +38229,20 @@
         "endTime": "2026-09-01T15:19:12"
       },
       {
+        "startTime": "2026-09-01T15:28:52",
+        "endTime": "2026-09-01T15:30:37"
+      },
+      {
+        "startTime": "2026-09-01T18:35:11",
+        "endTime": "2026-09-01T19:00:41"
+      },
+      {
         "startTime": "2026-09-01T15:23:57",
         "endTime": "2026-09-01T15:24:43"
+      },
+      {
+        "startTime": "2026-09-01T15:26:50",
+        "endTime": "2026-09-01T15:27:52"
       }
     ]
   },
@@ -38245,5 +38258,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-01T23:00:04.372269+00:00"
+  "captured_at": "2026-09-01T23:15:02.451842+00:00"
 }
