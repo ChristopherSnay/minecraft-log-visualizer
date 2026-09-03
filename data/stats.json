@@ -12,7 +12,7 @@
           "minecraft:bone_block": 99,
           "minecraft:waxed_oxidized_cut_copper": 58,
           "minecraft:cracked_deepslate_bricks": 14,
-          "minecraft:brown_mushroom": 2,
+          "minecraft:brown_mushroom": 79,
           "minecraft:spruce_planks": 32,
           "minecraft:birch_log": 152,
           "minecraft:pale_hanging_moss": 18,
@@ -47,7 +47,7 @@
           "minecraft:lantern": 73,
           "minecraft:oak_wall_sign": 2,
           "minecraft:waxed_oxidized_copper_trapdoor": 1,
-          "minecraft:brown_mushroom_block": 128,
+          "minecraft:brown_mushroom_block": 244,
           "minecraft:light_weighted_pressure_plate": 2,
           "minecraft:clay": 1360,
           "minecraft:fletching_table": 8,
@@ -160,7 +160,7 @@
           "minecraft:deepslate_coal_ore": 6,
           "minecraft:waxed_cut_copper": 8,
           "minecraft:packed_mud": 19,
-          "minecraft:dirt": 8502,
+          "minecraft:dirt": 8509,
           "minecraft:cobblestone_wall": 49,
           "minecraft:sulfur": 117,
           "minecraft:ladder": 380,
@@ -230,7 +230,7 @@
           "minecraft:nether_quartz_ore": 442,
           "minecraft:blue_ice": 73,
           "minecraft:netherrack": 17069,
-          "minecraft:mycelium": 17,
+          "minecraft:mycelium": 37,
           "minecraft:dark_oak_fence_gate": 4,
           "minecraft:honey_block": 2,
           "minecraft:redstone_torch": 9,
@@ -328,7 +328,7 @@
           "minecraft:crying_obsidian": 13,
           "minecraft:snow_block": 129,
           "minecraft:lapis_block": 16,
-          "minecraft:grass_block": 8069,
+          "minecraft:grass_block": 8076,
           "minecraft:smooth_quartz_slab": 1,
           "minecraft:tuff_bricks": 2305,
           "minecraft:white_wool": 156,
@@ -354,7 +354,7 @@
           "minecraft:pink_carpet": 3,
           "minecraft:oak_fence": 18,
           "minecraft:smooth_stone_slab": 25,
-          "minecraft:mushroom_stem": 55,
+          "minecraft:mushroom_stem": 65,
           "minecraft:bamboo": 52,
           "minecraft:fern": 3,
           "minecraft:blue_carpet": 2,
@@ -544,6 +544,7 @@
           "minecraft:emerald_block": 362,
           "minecraft:wooden_pickaxe": 2,
           "minecraft:recovery_compass": 1,
+          "minecraft:fermented_spider_eye": 45,
           "minecraft:diamond_chestplate": 11,
           "minecraft:jungle_boat": 2,
           "minecraft:iron_nugget": 1195,
@@ -735,6 +736,7 @@
           "minecraft:cobbled_deepslate_slab": 8,
           "minecraft:cherry_planks": 79,
           "minecraft:pink_wool": 59,
+          "minecraft:mycelium": 8,
           "minecraft:cherry_boat": 32,
           "minecraft:diamond_spear": 1,
           "minecraft:sea_lantern": 1,
@@ -744,7 +746,7 @@
           "minecraft:potent_sulfur": 22,
           "minecraft:seagrass": 34,
           "minecraft:end_stone_bricks": 42,
-          "minecraft:brown_mushroom_block": 112,
+          "minecraft:brown_mushroom_block": 138,
           "minecraft:calcite": 577,
           "minecraft:pointed_dripstone": 132,
           "minecraft:armor_stand": 13,
@@ -835,7 +837,7 @@
           "minecraft:polished_andesite_stairs": 25,
           "minecraft:sandstone": 66,
           "minecraft:repeater": 11,
-          "minecraft:diamond_hoe": 2026,
+          "minecraft:diamond_hoe": 2159,
           "minecraft:cherry_fence_gate": 5,
           "minecraft:sculk_vein": 3,
           "minecraft:glow_berries": 12,
@@ -875,7 +877,7 @@
           "minecraft:experience_bottle": 20,
           "minecraft:dark_oak_planks": 485,
           "minecraft:acacia_sapling": 4,
-          "minecraft:dirt": 5785,
+          "minecraft:dirt": 5792,
           "minecraft:honey_bottle": 1,
           "minecraft:compass": 44,
           "minecraft:snow": 1,
@@ -919,6 +921,7 @@
           "minecraft:pale_oak_slab": 71,
           "minecraft:ominous_bottle": 21,
           "minecraft:oak_slab": 6,
+          "minecraft:brown_mushroom": 9,
           "minecraft:mace": 30,
           "minecraft:hopper": 52,
           "minecraft:polished_andesite": 4,
@@ -972,7 +975,7 @@
           "minecraft:oak_log": 25,
           "minecraft:stonecutter": 15,
           "minecraft:cinnabar_brick_slab": 31,
-          "minecraft:diamond_axe": 13435,
+          "minecraft:diamond_axe": 13513,
           "minecraft:poppy": 4,
           "minecraft:snowball": 20,
           "minecraft:pale_oak_stairs": 192,
@@ -1013,7 +1016,7 @@
           "minecraft:polished_deepslate": 150,
           "minecraft:dark_oak_log": 124,
           "minecraft:copper_hoe": 4,
-          "minecraft:firework_rocket": 4275,
+          "minecraft:firework_rocket": 4291,
           "minecraft:tnt": 263,
           "minecraft:waxed_copper_block": 536,
           "minecraft:warped_hyphae": 11,
@@ -1097,7 +1100,7 @@
           "minecraft:deepslate_diamond_ore": 96,
           "minecraft:nether_quartz_ore": 20,
           "minecraft:birch_planks": 82,
-          "minecraft:bone_meal": 1089,
+          "minecraft:bone_meal": 1108,
           "minecraft:item_frame": 6,
           "minecraft:glowstone": 109,
           "minecraft:obsidian": 297,
@@ -1229,16 +1232,16 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 52290,
+          "minecraft:time_since_rest": 70290,
           "minecraft:leave_game": 403,
           "minecraft:boat_one_cm": 3501398,
           "minecraft:damage_absorbed": 812,
-          "minecraft:time_since_death": 1361590,
-          "minecraft:aviate_one_cm": 84168786,
+          "minecraft:time_since_death": 1379590,
+          "minecraft:aviate_one_cm": 84520033,
           "minecraft:interact_with_furnace": 1289,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 18904065,
-          "minecraft:crouch_one_cm": 1235047,
+          "minecraft:total_world_time": 18922065,
+          "minecraft:crouch_one_cm": 1235627,
           "minecraft:climb_one_cm": 446334,
           "minecraft:raid_win": 18,
           "minecraft:deaths": 35,
@@ -1247,32 +1250,32 @@
           "minecraft:traded_with_villager": 3278,
           "minecraft:damage_resisted": 98,
           "minecraft:damage_blocked_by_shield": 288,
-          "minecraft:interact_with_crafting_table": 1079,
+          "minecraft:interact_with_crafting_table": 1080,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 24520319,
-          "minecraft:walk_under_water_one_cm": 2962450,
+          "minecraft:walk_one_cm": 24547066,
+          "minecraft:walk_under_water_one_cm": 2962491,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1263863,
-          "minecraft:play_time": 18904065,
-          "minecraft:jump": 102422,
+          "minecraft:play_time": 18922065,
+          "minecraft:jump": 102529,
           "minecraft:play_record": 13,
           "minecraft:target_hit": 36,
-          "minecraft:sprint_one_cm": 78889789,
+          "minecraft:sprint_one_cm": 78964042,
           "minecraft:inspect_hopper": 68,
-          "minecraft:fly_one_cm": 11211102,
-          "minecraft:walk_on_water_one_cm": 1103949,
+          "minecraft:fly_one_cm": 11218584,
+          "minecraft:walk_on_water_one_cm": 1104081,
           "minecraft:interact_with_grindstone": 10,
           "minecraft:talked_to_villager": 1891,
           "minecraft:mob_kills": 16672,
-          "minecraft:damage_taken": 94719,
+          "minecraft:damage_taken": 94729,
           "minecraft:open_shulker_box": 1255,
           "minecraft:interact_with_beacon": 4,
           "minecraft:open_enderchest": 618,
-          "minecraft:interact_with_brewingstand": 22,
+          "minecraft:interact_with_brewingstand": 24,
           "minecraft:interact_with_smithing_table": 30,
           "minecraft:sleep_in_bed": 514,
           "minecraft:inspect_dispenser": 156,
-          "minecraft:swim_one_cm": 1399145,
+          "minecraft:swim_one_cm": 1401532,
           "minecraft:pot_flower": 4,
           "minecraft:player_kills": 11,
           "minecraft:enchant_item": 81,
@@ -1282,11 +1285,11 @@
           "minecraft:bell_ring": 47,
           "minecraft:open_barrel": 197,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 13267,
+          "minecraft:open_chest": 13277,
           "minecraft:interact_with_smoker": 2,
-          "minecraft:fall_one_cm": 2323245,
+          "minecraft:fall_one_cm": 2324790,
           "minecraft:interact_with_anvil": 275,
-          "minecraft:sneak_time": 498854,
+          "minecraft:sneak_time": 499025,
           "minecraft:raid_trigger": 20
         },
         "items_picked_up": {
@@ -1376,7 +1379,7 @@
           "minecraft:yellow_terracotta": 97,
           "minecraft:flowering_azalea": 45,
           "minecraft:honey_bottle": 16,
-          "minecraft:brown_mushroom": 3,
+          "minecraft:brown_mushroom": 111,
           "minecraft:polished_andesite_stairs": 16,
           "minecraft:stripped_cherry_log": 15,
           "minecraft:glass_pane": 11,
@@ -1484,7 +1487,7 @@
           "minecraft:crying_obsidian": 13,
           "minecraft:pale_oak_sign": 11,
           "minecraft:oak_wood": 3,
-          "minecraft:dirt": 12201,
+          "minecraft:dirt": 12215,
           "minecraft:basalt": 137,
           "minecraft:bone_block": 194,
           "minecraft:torch": 1168,
@@ -1518,7 +1521,7 @@
           "minecraft:mangrove_planks": 126,
           "minecraft:diamond_hoe": 4,
           "minecraft:chiseled_resin_bricks": 6,
-          "minecraft:mycelium": 32,
+          "minecraft:mycelium": 52,
           "minecraft:nether_brick_slab": 87,
           "minecraft:ladder": 308,
           "minecraft:sandstone": 107,
@@ -1646,7 +1649,7 @@
           "minecraft:emerald_ore": 1,
           "minecraft:warped_wart_block": 253,
           "minecraft:closed_eyeblossom": 10,
-          "minecraft:mushroom_stem": 57,
+          "minecraft:mushroom_stem": 59,
           "minecraft:chiseled_tuff_bricks": 624,
           "minecraft:oak_button": 31,
           "minecraft:warped_planks": 1,
@@ -1853,7 +1856,7 @@
           "minecraft:wet_sponge": 2,
           "minecraft:flower_pot": 4,
           "minecraft:pale_moss_block": 44,
-          "minecraft:brown_mushroom_block": 120,
+          "minecraft:brown_mushroom_block": 147,
           "minecraft:golden_helmet": 3,
           "minecraft:crafting_table": 25,
           "minecraft:ominous_trial_key": 7,
@@ -6976,15 +6979,15 @@
           }
         ],
         "position": [
-          2515.286511008247,
-          70.23152379758702,
-          -1017.0638976016179
+          6.558129483884993,
+          47.0,
+          -83.49575407333163
         ],
         "dimension": "minecraft:overworld",
         "xp": 35,
-        "health": 20.0,
-        "food": 20,
-        "saturation": 10.0,
+        "health": 19.0,
+        "food": 8,
+        "saturation": 0.0,
         "inventory": [
           {
             "id": "minecraft:netherite_pickaxe",
@@ -6999,7 +7002,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:golden_carrot",
+            "id": "minecraft:bone_meal",
             "count": 1
           },
           {
@@ -7007,11 +7010,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:ominous_bottle",
+            "id": "minecraft:diamond_axe",
             "count": 1
           },
           {
-            "id": "minecraft:torch",
+            "id": "minecraft:mycelium",
+            "count": 1
+          },
+          {
+            "id": "minecraft:dirt",
             "count": 1
           },
           {
@@ -7019,19 +7026,19 @@
             "count": 1
           },
           {
-            "id": "minecraft:shulker_box",
+            "id": "minecraft:potion",
             "count": 1
           },
           {
-            "id": "minecraft:compass",
+            "id": "minecraft:potion",
             "count": 1
           },
           {
-            "id": "minecraft:coal",
+            "id": "minecraft:potion",
             "count": 1
           },
           {
-            "id": "minecraft:diamond_axe",
+            "id": "minecraft:potion",
             "count": 1
           },
           {
@@ -7039,11 +7046,55 @@
             "count": 1
           },
           {
+            "id": "minecraft:brown_mushroom_block",
+            "count": 1
+          },
+          {
+            "id": "minecraft:mushroom_stem",
+            "count": 1
+          },
+          {
+            "id": "minecraft:coal",
+            "count": 1
+          },
+          {
             "id": "minecraft:netherite_chestplate",
             "count": 1
           },
           {
+            "id": "minecraft:potion",
+            "count": 1
+          },
+          {
+            "id": "minecraft:potion",
+            "count": 1
+          },
+          {
+            "id": "minecraft:potion",
+            "count": 1
+          },
+          {
+            "id": "minecraft:compass",
+            "count": 1
+          },
+          {
+            "id": "minecraft:redstone",
+            "count": 1
+          },
+          {
+            "id": "minecraft:shulker_box",
+            "count": 1
+          },
+          {
+            "id": "minecraft:torch",
+            "count": 1
+          },
+          {
             "id": "minecraft:brown_mushroom",
+            "count": 1
+          },
+          {
+            "id": "minecraft:bone",
             "count": 1
           },
           {
@@ -7056,6 +7107,10 @@
           },
           {
             "id": "minecraft:sponge",
+            "count": 1
+          },
+          {
+            "id": "minecraft:golden_carrot",
             "count": 1
           },
           {
@@ -38377,7 +38432,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 38355260,
+    "time": 38373260,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -38534,5 +38589,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-03T13:30:00.747476+00:00"
+  "captured_at": "2026-09-03T13:45:00.822241+00:00"
 }
