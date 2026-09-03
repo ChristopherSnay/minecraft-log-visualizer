@@ -273,7 +273,8 @@
           "minecraft:waxed_copper_block": 1145,
           "minecraft:deepslate_tile_slab": 27,
           "minecraft:jungle_sign": 1,
-          "minecraft:shulker_box": 315,
+          "minecraft:wet_sponge": 1,
+          "minecraft:shulker_box": 317,
           "minecraft:soul_fire": 51,
           "minecraft:sand": 2115,
           "minecraft:seagrass": 18,
@@ -466,6 +467,7 @@
           "minecraft:bookshelf": 59,
           "minecraft:blue_carpet": 3,
           "minecraft:bow": 15,
+          "minecraft:sponge": 1,
           "minecraft:repeater": 6,
           "minecraft:bucket": 75,
           "minecraft:ladder": 213,
@@ -832,7 +834,7 @@
           "minecraft:polished_andesite_stairs": 25,
           "minecraft:sandstone": 66,
           "minecraft:repeater": 11,
-          "minecraft:diamond_hoe": 2022,
+          "minecraft:diamond_hoe": 2023,
           "minecraft:cherry_fence_gate": 5,
           "minecraft:sculk_vein": 3,
           "minecraft:glow_berries": 12,
@@ -948,7 +950,7 @@
           "minecraft:ender_pearl": 72,
           "minecraft:polished_tuff": 1129,
           "minecraft:kelp": 72,
-          "minecraft:shulker_box": 318,
+          "minecraft:shulker_box": 320,
           "minecraft:diamond_sword": 19726,
           "minecraft:campfire": 35,
           "minecraft:wheat_seeds": 451,
@@ -1071,7 +1073,7 @@
           "minecraft:oak_sign": 14,
           "minecraft:lantern": 217,
           "minecraft:cat_spawn_egg": 1,
-          "minecraft:netherite_pickaxe": 5776,
+          "minecraft:netherite_pickaxe": 5778,
           "minecraft:granite": 455,
           "minecraft:dark_oak_button": 29,
           "minecraft:copper_ore": 10,
@@ -1226,15 +1228,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 16290,
+          "minecraft:time_since_rest": 34290,
           "minecraft:leave_game": 403,
           "minecraft:boat_one_cm": 3501398,
           "minecraft:damage_absorbed": 812,
-          "minecraft:time_since_death": 1325590,
-          "minecraft:aviate_one_cm": 83378020,
-          "minecraft:interact_with_furnace": 1287,
+          "minecraft:time_since_death": 1343590,
+          "minecraft:aviate_one_cm": 83383681,
+          "minecraft:interact_with_furnace": 1289,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 18868065,
+          "minecraft:total_world_time": 18886065,
           "minecraft:crouch_one_cm": 1235047,
           "minecraft:climb_one_cm": 446334,
           "minecraft:raid_win": 18,
@@ -1244,25 +1246,25 @@
           "minecraft:traded_with_villager": 3278,
           "minecraft:damage_resisted": 98,
           "minecraft:damage_blocked_by_shield": 288,
-          "minecraft:interact_with_crafting_table": 1077,
+          "minecraft:interact_with_crafting_table": 1078,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 24499020,
-          "minecraft:walk_under_water_one_cm": 2957183,
+          "minecraft:walk_one_cm": 24512084,
+          "minecraft:walk_under_water_one_cm": 2959502,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1263663,
-          "minecraft:play_time": 18868065,
-          "minecraft:jump": 102317,
+          "minecraft:play_time": 18886065,
+          "minecraft:jump": 102342,
           "minecraft:play_record": 13,
           "minecraft:target_hit": 36,
-          "minecraft:sprint_one_cm": 78825066,
+          "minecraft:sprint_one_cm": 78832031,
           "minecraft:inspect_hopper": 68,
-          "minecraft:fly_one_cm": 11202674,
-          "minecraft:walk_on_water_one_cm": 1103652,
+          "minecraft:fly_one_cm": 11203461,
+          "minecraft:walk_on_water_one_cm": 1103785,
           "minecraft:interact_with_grindstone": 10,
           "minecraft:talked_to_villager": 1891,
           "minecraft:mob_kills": 16671,
-          "minecraft:damage_taken": 94665,
-          "minecraft:open_shulker_box": 1252,
+          "minecraft:damage_taken": 94670,
+          "minecraft:open_shulker_box": 1254,
           "minecraft:interact_with_beacon": 4,
           "minecraft:open_enderchest": 618,
           "minecraft:interact_with_brewingstand": 22,
@@ -1279,9 +1281,9 @@
           "minecraft:bell_ring": 47,
           "minecraft:open_barrel": 188,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 13229,
+          "minecraft:open_chest": 13242,
           "minecraft:interact_with_smoker": 2,
-          "minecraft:fall_one_cm": 2319456,
+          "minecraft:fall_one_cm": 2320154,
           "minecraft:interact_with_anvil": 275,
           "minecraft:sneak_time": 498854,
           "minecraft:raid_trigger": 20
@@ -1397,7 +1399,7 @@
           "minecraft:item_frame": 11,
           "minecraft:stone_brick_wall": 42,
           "minecraft:raw_iron": 471,
-          "minecraft:shulker_box": 317,
+          "minecraft:shulker_box": 319,
           "minecraft:birch_fence": 10,
           "minecraft:honeycomb": 3,
           "minecraft:tall_dry_grass": 8,
@@ -1847,7 +1849,7 @@
           "minecraft:pink_wool": 28,
           "minecraft:tipped_arrow": 162,
           "minecraft:diorite": 2078,
-          "minecraft:wet_sponge": 1,
+          "minecraft:wet_sponge": 2,
           "minecraft:flower_pot": 4,
           "minecraft:pale_moss_block": 44,
           "minecraft:brown_mushroom_block": 120,
@@ -6912,32 +6914,8 @@
             "time": "2026-09-01 15:36:36 -0400"
           },
           {
-            "id": "minecraft:recipes/decorations/prismarine_wall_from_prismarine_stonecutting",
-            "time": "2026-09-03 00:24:23 -0400"
-          },
-          {
-            "id": "minecraft:recipes/food/cooked_cod_from_smoking",
-            "time": "2026-09-03 00:24:35 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/sponge",
-            "time": "2026-09-03 00:24:36 -0400"
-          },
-          {
-            "id": "minecraft:recipes/decorations/prismarine_wall",
-            "time": "2026-09-03 00:24:23 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/prismarine_slab_from_prismarine_stonecutting",
-            "time": "2026-09-03 00:24:23 -0400"
-          },
-          {
             "id": "minecraft:recipes/transportation/tnt_minecart",
             "time": "2026-09-02 23:39:05 -0400"
-          },
-          {
-            "id": "minecraft:recipes/building_blocks/prismarine_stairs_from_prismarine_stonecutting",
-            "time": "2026-09-03 00:24:23 -0400"
           },
           {
             "id": "minecraft:recipes/transportation/chest_minecart",
@@ -6952,8 +6930,36 @@
             "time": "2026-09-02 23:39:05 -0400"
           },
           {
+            "id": "minecraft:recipes/transportation/rail",
+            "time": "2026-09-02 23:39:05 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/prismarine_wall_from_prismarine_stonecutting",
+            "time": "2026-09-03 00:24:23 -0400"
+          },
+          {
+            "id": "minecraft:recipes/decorations/prismarine_wall",
+            "time": "2026-09-03 00:24:23 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/prismarine_slab_from_prismarine_stonecutting",
+            "time": "2026-09-03 00:24:23 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/prismarine_stairs_from_prismarine_stonecutting",
+            "time": "2026-09-03 00:24:23 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/prismarine_stairs",
             "time": "2026-09-03 00:24:23 -0400"
+          },
+          {
+            "id": "minecraft:recipes/building_blocks/prismarine_slab",
+            "time": "2026-09-03 00:24:23 -0400"
+          },
+          {
+            "id": "minecraft:recipes/food/cooked_cod_from_smoking",
+            "time": "2026-09-03 00:24:35 -0400"
           },
           {
             "id": "minecraft:recipes/food/cooked_cod_from_campfire_cooking",
@@ -6964,24 +6970,20 @@
             "time": "2026-09-03 00:24:35 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/prismarine_slab",
-            "time": "2026-09-03 00:24:23 -0400"
-          },
-          {
-            "id": "minecraft:recipes/transportation/rail",
-            "time": "2026-09-02 23:39:05 -0400"
+            "id": "minecraft:recipes/building_blocks/sponge",
+            "time": "2026-09-03 00:24:36 -0400"
           }
         ],
         "position": [
-          4.607560388576196,
+          -1.6971903801554504,
           47.0,
-          -91.8276201521805
+          -86.49992130604514
         ],
         "dimension": "minecraft:overworld",
         "xp": 35,
-        "health": 19.313060760498047,
+        "health": 20.0,
         "food": 18,
-        "saturation": 12.0,
+        "saturation": 5.0,
         "inventory": [
           {
             "id": "minecraft:netherite_pickaxe",
@@ -6989,6 +6991,10 @@
           },
           {
             "id": "minecraft:netherite_pickaxe",
+            "count": 1
+          },
+          {
+            "id": "minecraft:sponge",
             "count": 1
           },
           {
@@ -7004,11 +7010,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:firework_rocket",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_shovel",
+            "id": "minecraft:diamond_hoe",
             "count": 1
           },
           {
@@ -7020,7 +7022,19 @@
             "count": 1
           },
           {
+            "id": "minecraft:coal",
+            "count": 1
+          },
+          {
             "id": "minecraft:ender_chest",
+            "count": 1
+          },
+          {
+            "id": "minecraft:enchanted_book",
+            "count": 1
+          },
+          {
+            "id": "minecraft:enchanted_book",
             "count": 1
           },
           {
@@ -7032,6 +7046,22 @@
             "count": 1
           },
           {
+            "id": "minecraft:brown_mushroom_block",
+            "count": 1
+          },
+          {
+            "id": "minecraft:enchanted_book",
+            "count": 1
+          },
+          {
+            "id": "minecraft:enchanted_book",
+            "count": 1
+          },
+          {
+            "id": "minecraft:enchanted_book",
+            "count": 1
+          },
+          {
             "id": "minecraft:netherite_sword",
             "count": 1
           },
@@ -7040,11 +7070,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:diamond_hoe",
+            "id": "minecraft:firework_rocket",
             "count": 1
           },
           {
             "id": "minecraft:candle",
+            "count": 1
+          },
+          {
+            "id": "minecraft:diamond_shovel",
             "count": 1
           },
           {
@@ -38350,7 +38384,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 38321408,
+    "time": 38337260,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -38507,5 +38541,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-03T13:00:00.811717+00:00"
+  "captured_at": "2026-09-03T13:15:00.719492+00:00"
 }
