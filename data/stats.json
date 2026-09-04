@@ -1015,7 +1015,7 @@
           "minecraft:gray_wool": 119,
           "minecraft:nether_wart_block": 4,
           "minecraft:dark_oak_fence_gate": 6,
-          "minecraft:bucket": 859,
+          "minecraft:bucket": 889,
           "minecraft:nether_brick_slab": 185,
           "minecraft:flower_pot": 4,
           "minecraft:diamond_block": 145,
@@ -1059,7 +1059,7 @@
           "minecraft:apple": 4,
           "minecraft:scaffolding": 124,
           "minecraft:purple_carpet": 4,
-          "minecraft:water_bucket": 767,
+          "minecraft:water_bucket": 802,
           "minecraft:golden_sword": 46,
           "minecraft:cherry_door": 3,
           "minecraft:torch": 6056,
@@ -1250,16 +1250,16 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 3289,
-          "minecraft:leave_game": 415,
+          "minecraft:time_since_rest": 9183,
+          "minecraft:leave_game": 416,
           "minecraft:boat_one_cm": 3514846,
           "minecraft:damage_absorbed": 812,
-          "minecraft:time_since_death": 1926695,
+          "minecraft:time_since_death": 1932589,
           "minecraft:aviate_one_cm": 89284944,
           "minecraft:interact_with_furnace": 1289,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 19469170,
-          "minecraft:crouch_one_cm": 1727460,
+          "minecraft:total_world_time": 19475064,
+          "minecraft:crouch_one_cm": 1727894,
           "minecraft:climb_one_cm": 460708,
           "minecraft:raid_win": 20,
           "minecraft:deaths": 35,
@@ -1271,18 +1271,18 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 1091,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 25056414,
+          "minecraft:walk_one_cm": 25059126,
           "minecraft:walk_under_water_one_cm": 3083135,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1282277,
-          "minecraft:play_time": 19469170,
-          "minecraft:jump": 104985,
+          "minecraft:play_time": 19475064,
+          "minecraft:jump": 105000,
           "minecraft:play_record": 13,
           "minecraft:target_hit": 36,
-          "minecraft:sprint_one_cm": 80222325,
+          "minecraft:sprint_one_cm": 80229677,
           "minecraft:inspect_hopper": 68,
-          "minecraft:fly_one_cm": 11352767,
-          "minecraft:walk_on_water_one_cm": 1126092,
+          "minecraft:fly_one_cm": 11354520,
+          "minecraft:walk_on_water_one_cm": 1137603,
           "minecraft:interact_with_grindstone": 11,
           "minecraft:talked_to_villager": 2020,
           "minecraft:mob_kills": 16990,
@@ -1306,9 +1306,9 @@
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:open_chest": 13553,
           "minecraft:interact_with_smoker": 2,
-          "minecraft:fall_one_cm": 2403286,
+          "minecraft:fall_one_cm": 2403511,
           "minecraft:interact_with_anvil": 280,
-          "minecraft:sneak_time": 587069,
+          "minecraft:sneak_time": 587177,
           "minecraft:raid_trigger": 22
         },
         "items_picked_up": {
@@ -7068,15 +7068,15 @@
           }
         ],
         "position": [
-          -84.28908378070238,
-          137.0,
-          -87.3217875036461
+          -83.2496512655973,
+          138.0,
+          -80.9926232207332
         ],
         "dimension": "minecraft:overworld",
         "xp": 24,
         "health": 20.0,
         "food": 20,
-        "saturation": 6.0,
+        "saturation": 3.0,
         "inventory": [
           {
             "id": "minecraft:netherite_pickaxe",
@@ -7119,27 +7119,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:water_bucket",
-            "count": 1
-          },
-          {
-            "id": "minecraft:water_bucket",
-            "count": 1
-          },
-          {
             "id": "minecraft:shulker_box",
             "count": 1
           },
           {
-            "id": "minecraft:water_bucket",
-            "count": 1
-          },
-          {
             "id": "minecraft:firework_rocket",
-            "count": 1
-          },
-          {
-            "id": "minecraft:water_bucket",
             "count": 1
           },
           {
@@ -7155,15 +7139,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:water_bucket",
-            "count": 1
-          },
-          {
             "id": "minecraft:netherrack",
             "count": 1
           },
           {
             "id": "minecraft:torch",
+            "count": 1
+          },
+          {
+            "id": "minecraft:bucket",
             "count": 1
           },
           {
@@ -38684,7 +38668,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 39153260,
+    "time": 39160342,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -38711,7 +38695,7 @@
       {
         "player": "ZodiacalLight",
         "login_time": "2026-09-04T11:05:17",
-        "logout_time": null
+        "logout_time": "2026-09-04T11:30:12"
       },
       {
         "player": "ZodiacalLight",
@@ -38860,5 +38844,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-04T15:30:01.582314+00:00"
+  "captured_at": "2026-09-04T15:45:00.585339+00:00"
 }
