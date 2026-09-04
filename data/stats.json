@@ -108,7 +108,7 @@
           "minecraft:cracked_deepslate_tiles": 6,
           "minecraft:flowering_azalea_leaves": 1,
           "minecraft:pale_oak_leaves": 350,
-          "minecraft:calcite": 3477,
+          "minecraft:calcite": 3492,
           "minecraft:spruce_slab": 2,
           "minecraft:emerald_block": 100,
           "minecraft:cherry_sign": 2,
@@ -759,7 +759,7 @@
           "minecraft:seagrass": 34,
           "minecraft:end_stone_bricks": 42,
           "minecraft:brown_mushroom_block": 138,
-          "minecraft:calcite": 986,
+          "minecraft:calcite": 1336,
           "minecraft:pointed_dripstone": 132,
           "minecraft:armor_stand": 13,
           "minecraft:cobbled_deepslate_stairs": 78,
@@ -790,7 +790,7 @@
           "minecraft:bamboo": 187,
           "minecraft:iron_sword": 633,
           "minecraft:oak_boat": 20,
-          "minecraft:golden_carrot": 757,
+          "minecraft:golden_carrot": 759,
           "minecraft:sculk_shrieker": 5,
           "minecraft:stone_brick_slab": 112,
           "minecraft:cooked_mutton": 13,
@@ -1029,7 +1029,7 @@
           "minecraft:polished_deepslate": 150,
           "minecraft:dark_oak_log": 124,
           "minecraft:copper_hoe": 4,
-          "minecraft:firework_rocket": 4499,
+          "minecraft:firework_rocket": 4503,
           "minecraft:tnt": 272,
           "minecraft:waxed_copper_block": 536,
           "minecraft:warped_hyphae": 11,
@@ -1062,7 +1062,7 @@
           "minecraft:water_bucket": 750,
           "minecraft:golden_sword": 46,
           "minecraft:cherry_door": 3,
-          "minecraft:torch": 6007,
+          "minecraft:torch": 6015,
           "minecraft:black_bed": 10,
           "minecraft:chiseled_stone_bricks": 3,
           "minecraft:pale_moss_block": 16,
@@ -1091,7 +1091,7 @@
           "minecraft:oak_sign": 14,
           "minecraft:lantern": 217,
           "minecraft:cat_spawn_egg": 1,
-          "minecraft:netherite_pickaxe": 10331,
+          "minecraft:netherite_pickaxe": 10346,
           "minecraft:granite": 456,
           "minecraft:dark_oak_button": 29,
           "minecraft:copper_ore": 10,
@@ -1250,16 +1250,16 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 33471,
+          "minecraft:time_since_rest": 51471,
           "minecraft:leave_game": 412,
           "minecraft:boat_one_cm": 3514846,
           "minecraft:damage_absorbed": 812,
-          "minecraft:time_since_death": 1772513,
-          "minecraft:aviate_one_cm": 88443277,
+          "minecraft:time_since_death": 1790513,
+          "minecraft:aviate_one_cm": 88498023,
           "minecraft:interact_with_furnace": 1289,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 19314988,
-          "minecraft:crouch_one_cm": 1391952,
+          "minecraft:total_world_time": 19332988,
+          "minecraft:crouch_one_cm": 1439939,
           "minecraft:climb_one_cm": 460708,
           "minecraft:raid_win": 20,
           "minecraft:deaths": 35,
@@ -1271,17 +1271,17 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 1090,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 24946885,
+          "minecraft:walk_one_cm": 24954481,
           "minecraft:walk_under_water_one_cm": 3074363,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1282277,
-          "minecraft:play_time": 19314988,
-          "minecraft:jump": 104203,
+          "minecraft:play_time": 19332988,
+          "minecraft:jump": 104260,
           "minecraft:play_record": 13,
           "minecraft:target_hit": 36,
-          "minecraft:sprint_one_cm": 79872881,
+          "minecraft:sprint_one_cm": 79908099,
           "minecraft:inspect_hopper": 68,
-          "minecraft:fly_one_cm": 11305233,
+          "minecraft:fly_one_cm": 11308721,
           "minecraft:walk_on_water_one_cm": 1118123,
           "minecraft:interact_with_grindstone": 11,
           "minecraft:talked_to_villager": 2020,
@@ -1306,9 +1306,9 @@
           "minecraft:interact_with_cartography_table": 1,
           "minecraft:open_chest": 13534,
           "minecraft:interact_with_smoker": 2,
-          "minecraft:fall_one_cm": 2381035,
+          "minecraft:fall_one_cm": 2383610,
           "minecraft:interact_with_anvil": 280,
-          "minecraft:sneak_time": 532356,
+          "minecraft:sneak_time": 540080,
           "minecraft:raid_trigger": 22
         },
         "items_picked_up": {
@@ -1755,7 +1755,7 @@
           "minecraft:warped_door": 3,
           "minecraft:cherry_trapdoor": 3,
           "minecraft:blue_carpet": 2,
-          "minecraft:calcite": 3316,
+          "minecraft:calcite": 3323,
           "minecraft:smooth_sandstone": 1,
           "minecraft:cracked_stone_bricks": 35,
           "minecraft:iron_door": 10,
@@ -7068,15 +7068,15 @@
           }
         ],
         "position": [
-          -86.59708416238117,
-          130.0,
-          -81.53174293470082
+          -78.16770114746694,
+          133.0,
+          -66.224493879041
         ],
         "dimension": "minecraft:overworld",
         "xp": 24,
         "health": 20.0,
-        "food": 18,
-        "saturation": 0.0,
+        "food": 20,
+        "saturation": 17.0,
         "inventory": [
           {
             "id": "minecraft:netherite_pickaxe",
@@ -7147,22 +7147,6 @@
             "count": 1
           },
           {
-            "id": "minecraft:calcite",
-            "count": 1
-          },
-          {
-            "id": "minecraft:calcite",
-            "count": 1
-          },
-          {
-            "id": "minecraft:calcite",
-            "count": 1
-          },
-          {
-            "id": "minecraft:calcite",
-            "count": 1
-          },
-          {
             "id": "minecraft:firework_rocket",
             "count": 1
           },
@@ -7180,10 +7164,6 @@
           },
           {
             "id": "minecraft:bow",
-            "count": 1
-          },
-          {
-            "id": "minecraft:calcite",
             "count": 1
           },
           {
@@ -38651,7 +38631,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 38913260,
+    "time": 38931260,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -38882,5 +38862,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-04T04:30:01.486978+00:00"
+  "captured_at": "2026-09-04T04:45:01.295251+00:00"
 }
