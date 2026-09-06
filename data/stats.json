@@ -927,7 +927,7 @@
           "minecraft:end_rod": 115,
           "minecraft:purple_wool": 44,
           "minecraft:trial_key": 31,
-          "minecraft:netherite_sword": 3079,
+          "minecraft:netherite_sword": 3082,
           "minecraft:blaze_spawn_egg": 82,
           "minecraft:purple_bed": 4,
           "minecraft:magma_block": 32,
@@ -1003,7 +1003,7 @@
           "minecraft:snowball": 20,
           "minecraft:pale_oak_stairs": 192,
           "minecraft:moss_block": 737,
-          "minecraft:bow": 3203,
+          "minecraft:bow": 3224,
           "minecraft:cobbled_deepslate": 4075,
           "minecraft:gilded_blackstone": 3,
           "minecraft:polished_diorite": 1430,
@@ -1246,7 +1246,7 @@
           "minecraft:creaking": 1,
           "minecraft:tadpole": 1,
           "minecraft:guardian": 29,
-          "minecraft:pillager": 1801,
+          "minecraft:pillager": 1825,
           "minecraft:phantom": 3,
           "minecraft:panda": 2,
           "minecraft:witch": 114,
@@ -1264,17 +1264,17 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 66090,
+          "minecraft:time_since_rest": 72090,
           "minecraft:leave_game": 426,
           "minecraft:boat_one_cm": 3514846,
           "minecraft:damage_absorbed": 812,
-          "minecraft:time_since_death": 2320131,
+          "minecraft:time_since_death": 2326131,
           "minecraft:aviate_one_cm": 95379118,
           "minecraft:interact_with_furnace": 1314,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 19862606,
-          "minecraft:crouch_one_cm": 1812519,
-          "minecraft:climb_one_cm": 477415,
+          "minecraft:total_world_time": 19868606,
+          "minecraft:crouch_one_cm": 1837980,
+          "minecraft:climb_one_cm": 483359,
           "minecraft:raid_win": 23,
           "minecraft:deaths": 35,
           "minecraft:interact_with_stonecutter": 70,
@@ -1285,12 +1285,12 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 1102,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 25602462,
+          "minecraft:walk_one_cm": 25611539,
           "minecraft:walk_under_water_one_cm": 3206295,
           "minecraft:horse_one_cm": 1190386,
-          "minecraft:damage_dealt": 1293868,
-          "minecraft:play_time": 19862606,
-          "minecraft:jump": 106510,
+          "minecraft:damage_dealt": 1294048,
+          "minecraft:play_time": 19868606,
+          "minecraft:jump": 106515,
           "minecraft:play_record": 13,
           "minecraft:target_hit": 36,
           "minecraft:sprint_one_cm": 80869369,
@@ -1299,7 +1299,7 @@
           "minecraft:walk_on_water_one_cm": 1211845,
           "minecraft:interact_with_grindstone": 13,
           "minecraft:talked_to_villager": 2043,
-          "minecraft:mob_kills": 17336,
+          "minecraft:mob_kills": 17365,
           "minecraft:damage_taken": 98331,
           "minecraft:open_shulker_box": 1384,
           "minecraft:interact_with_beacon": 4,
@@ -1318,11 +1318,11 @@
           "minecraft:bell_ring": 47,
           "minecraft:open_barrel": 198,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 13796,
+          "minecraft:open_chest": 13797,
           "minecraft:interact_with_smoker": 2,
           "minecraft:fall_one_cm": 2452281,
           "minecraft:interact_with_anvil": 283,
-          "minecraft:sneak_time": 608153,
+          "minecraft:sneak_time": 612303,
           "minecraft:raid_trigger": 25
         },
         "items_picked_up": {
@@ -1668,7 +1668,7 @@
           "minecraft:pale_oak_stairs": 116,
           "minecraft:spruce_slab": 8,
           "minecraft:cherry_stairs": 21,
-          "minecraft:crossbow": 73,
+          "minecraft:crossbow": 74,
           "minecraft:heavy_core": 1,
           "minecraft:golden_leggings": 4,
           "minecraft:firework_rocket": 623,
@@ -7111,14 +7111,14 @@
           }
         ],
         "position": [
-          89.39839270783473,
-          55.0,
-          -328.1237555731116
+          90.94431726176327,
+          84.0,
+          -330.2822245995287
         ],
         "dimension": "minecraft:overworld",
-        "xp": 32,
+        "xp": 33,
         "health": 19.799999237060547,
-        "food": 17,
+        "food": 16,
         "saturation": 0.0,
         "inventory": [
           {
@@ -7162,6 +7162,10 @@
             "count": 1
           },
           {
+            "id": "minecraft:crossbow",
+            "count": 1
+          },
+          {
             "id": "minecraft:ender_chest",
             "count": 1
           },
@@ -7183,6 +7187,14 @@
           },
           {
             "id": "minecraft:trident",
+            "count": 1
+          },
+          {
+            "id": "minecraft:white_banner",
+            "count": 1
+          },
+          {
+            "id": "minecraft:ominous_bottle",
             "count": 1
           },
           {
@@ -38791,7 +38803,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 39915012,
+    "time": 39921260,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -38815,6 +38827,11 @@
   "logs": {
     "log_date": "2026-09-05",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-09-05T23:38:43",
+        "logout_time": null
+      },
       {
         "player": "ZodiacalLight",
         "login_time": "2026-09-05T19:36:40",
@@ -38898,6 +38915,10 @@
       {
         "startTime": "2026-09-05T19:10:44",
         "endTime": "2026-09-05T19:19:43"
+      },
+      {
+        "startTime": "2026-09-05T20:01:08",
+        "endTime": "2026-09-05T23:38:43"
       }
     ]
   },
@@ -38913,5 +38934,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-06T03:30:00.733952+00:00"
+  "captured_at": "2026-09-06T03:45:00.727567+00:00"
 }
