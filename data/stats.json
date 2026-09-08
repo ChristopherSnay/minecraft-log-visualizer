@@ -38980,89 +38980,119 @@
     }
   },
   "logs": {
-    "log_date": "2026-09-07",
+    "log_date": "2026-09-08",
     "player_sessions": [
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-07T20:11:11",
-        "logout_time": "2026-09-07T22:26:34"
+        "login_time": "2026-09-08T20:11:11",
+        "logout_time": "2026-09-08T22:26:34"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-07T17:25:15",
-        "logout_time": "2026-09-07T18:07:21"
+        "login_time": "2026-09-08T17:25:15",
+        "logout_time": "2026-09-08T18:07:21"
       },
       {
         "player": "Kimyknot",
-        "login_time": "2026-09-07T16:35:42",
-        "logout_time": "2026-09-07T17:15:56"
+        "login_time": "2026-09-08T16:35:42",
+        "logout_time": "2026-09-08T17:15:56"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-07T16:22:58",
-        "logout_time": "2026-09-07T16:39:45"
+        "login_time": "2026-09-08T16:22:58",
+        "logout_time": "2026-09-08T16:39:45"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-07T12:32:39",
-        "logout_time": "2026-09-07T14:45:06"
+        "login_time": "2026-09-08T12:32:39",
+        "logout_time": "2026-09-08T14:45:06"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-07T11:09:41",
-        "logout_time": "2026-09-07T11:15:29"
+        "login_time": "2026-09-08T11:09:41",
+        "logout_time": "2026-09-08T11:15:29"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-07T11:08:51",
-        "logout_time": "2026-09-07T11:09:12"
+        "login_time": "2026-09-08T11:08:51",
+        "logout_time": "2026-09-08T11:09:12"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-07T09:40:53",
-        "logout_time": "2026-09-07T11:07:04"
+        "login_time": "2026-09-08T09:40:53",
+        "logout_time": "2026-09-08T11:07:04"
       },
       {
         "player": "Kimyknot",
-        "login_time": "2026-09-07T09:32:11",
-        "logout_time": "2026-09-07T10:16:23"
+        "login_time": "2026-09-08T09:32:11",
+        "logout_time": "2026-09-08T10:16:23"
+      },
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-09-08T00:16:43",
+        "logout_time": "2026-09-08T00:57:06"
+      },
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-09-06T23:36:43",
+        "logout_time": "2026-09-08T00:11:21"
       }
     ],
     "deaths": [
       {
         "player": "Villager",
+        "message": "Fisherman was impaled by Drowned",
+        "timestamp": "2026-09-08T00:06:52",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager hit the ground too hard",
+        "timestamp": "2026-09-08T00:54:34",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
         "message": "Fisherman was slain by Drowned",
-        "timestamp": "2026-09-07T17:54:55",
+        "timestamp": "2026-09-08T17:54:55",
         "entity_type": "Villager"
       },
       {
         "player": "Villager",
         "message": "Villager burned to death",
-        "timestamp": "2026-09-07T18:01:41",
+        "timestamp": "2026-09-08T18:01:41",
         "entity_type": "Villager"
       }
     ],
     "crashes": [],
     "server_sessions": [
       {
-        "startTime": "2026-09-07T11:08:04",
-        "endTime": "2026-09-07T11:08:51"
+        "startTime": "2026-09-08T00:12:21",
+        "endTime": "2026-09-08T00:16:43"
       },
       {
-        "startTime": "2026-09-07T11:16:29",
-        "endTime": "2026-09-07T12:32:39"
+        "startTime": "2026-09-08T00:58:06",
+        "endTime": "2026-09-08T09:32:11"
       },
       {
-        "startTime": "2026-09-07T14:46:06",
-        "endTime": "2026-09-07T16:22:58"
+        "startTime": "2026-09-08T11:08:04",
+        "endTime": "2026-09-08T11:08:51"
       },
       {
-        "startTime": "2026-09-07T17:16:56",
-        "endTime": "2026-09-07T17:25:15"
+        "startTime": "2026-09-08T11:16:29",
+        "endTime": "2026-09-08T12:32:39"
       },
       {
-        "startTime": "2026-09-07T18:08:21",
-        "endTime": "2026-09-07T20:11:11"
+        "startTime": "2026-09-08T14:46:06",
+        "endTime": "2026-09-08T16:22:58"
+      },
+      {
+        "startTime": "2026-09-08T17:16:56",
+        "endTime": "2026-09-08T17:25:15"
+      },
+      {
+        "startTime": "2026-09-08T18:08:21",
+        "endTime": "2026-09-08T20:11:11"
       }
     ]
   },
@@ -39078,5 +39108,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-08T03:45:01.336939+00:00"
+  "captured_at": "2026-09-08T04:00:01.347352+00:00"
 }
