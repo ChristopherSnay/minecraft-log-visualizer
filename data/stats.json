@@ -1273,15 +1273,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 34992,
+          "minecraft:time_since_rest": 52992,
           "minecraft:leave_game": 440,
           "minecraft:boat_one_cm": 3514846,
           "minecraft:damage_absorbed": 836,
-          "minecraft:time_since_death": 2996528,
+          "minecraft:time_since_death": 3014528,
           "minecraft:aviate_one_cm": 101435613,
           "minecraft:interact_with_furnace": 1424,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 20539003,
+          "minecraft:total_world_time": 20557003,
           "minecraft:crouch_one_cm": 1974961,
           "minecraft:climb_one_cm": 487722,
           "minecraft:raid_win": 25,
@@ -1298,7 +1298,7 @@
           "minecraft:walk_under_water_one_cm": 3266752,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1328063,
-          "minecraft:play_time": 20539003,
+          "minecraft:play_time": 20557003,
           "minecraft:jump": 110358,
           "minecraft:play_record": 13,
           "minecraft:target_hit": 36,
@@ -38974,7 +38974,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 41079260,
+    "time": 41097260,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -39042,20 +39042,9 @@
         "player": "Kimyknot",
         "login_time": "2026-09-07T09:32:11",
         "logout_time": "2026-09-07T10:16:23"
-      },
-      {
-        "player": "ZodiacalLight",
-        "login_time": "2026-09-07T00:16:43",
-        "logout_time": "2026-09-07T00:57:06"
       }
     ],
     "deaths": [
-      {
-        "player": "Villager",
-        "message": "Villager hit the ground too hard",
-        "timestamp": "2026-09-07T00:54:34",
-        "entity_type": "Villager"
-      },
       {
         "player": "Villager",
         "message": "Fisherman was slain by Drowned",
@@ -39071,10 +39060,6 @@
     ],
     "crashes": [],
     "server_sessions": [
-      {
-        "startTime": "2026-09-07T00:58:06",
-        "endTime": "2026-09-07T09:32:11"
-      },
       {
         "startTime": "2026-09-07T11:08:04",
         "endTime": "2026-09-07T11:08:51"
@@ -39109,5 +39094,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-08T00:45:01.458461+00:00"
+  "captured_at": "2026-09-08T01:00:01.226527+00:00"
 }
