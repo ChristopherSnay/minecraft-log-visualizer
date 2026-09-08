@@ -1046,7 +1046,7 @@
           "minecraft:polished_deepslate": 150,
           "minecraft:dark_oak_log": 124,
           "minecraft:copper_hoe": 4,
-          "minecraft:firework_rocket": 5175,
+          "minecraft:firework_rocket": 5178,
           "minecraft:tnt": 272,
           "minecraft:waxed_copper_block": 536,
           "minecraft:warped_hyphae": 11,
@@ -1273,15 +1273,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 249617,
+          "minecraft:time_since_rest": 261617,
           "minecraft:leave_game": 442,
           "minecraft:boat_one_cm": 3514846,
           "minecraft:damage_absorbed": 836,
-          "minecraft:time_since_death": 3211153,
-          "minecraft:aviate_one_cm": 102902116,
+          "minecraft:time_since_death": 3223153,
+          "minecraft:aviate_one_cm": 102956868,
           "minecraft:interact_with_furnace": 1443,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 20753628,
+          "minecraft:total_world_time": 20765628,
           "minecraft:crouch_one_cm": 1978636,
           "minecraft:climb_one_cm": 489846,
           "minecraft:raid_win": 25,
@@ -1294,12 +1294,12 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 1138,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 26675781,
+          "minecraft:walk_one_cm": 26676539,
           "minecraft:walk_under_water_one_cm": 3291830,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1334085,
-          "minecraft:play_time": 20753628,
-          "minecraft:jump": 111076,
+          "minecraft:play_time": 20765628,
+          "minecraft:jump": 111078,
           "minecraft:play_record": 13,
           "minecraft:target_hit": 36,
           "minecraft:sprint_one_cm": 82836617,
@@ -1309,7 +1309,7 @@
           "minecraft:interact_with_grindstone": 13,
           "minecraft:talked_to_villager": 2055,
           "minecraft:mob_kills": 17815,
-          "minecraft:damage_taken": 104172,
+          "minecraft:damage_taken": 104175,
           "minecraft:open_shulker_box": 1589,
           "minecraft:interact_with_beacon": 4,
           "minecraft:open_enderchest": 694,
@@ -7129,9 +7129,9 @@
           }
         ],
         "position": [
-          -4.813411417477532,
-          72.0,
-          -96.8515186322022
+          -97.57568328518245,
+          205.0,
+          -345.2979541947918
         ],
         "dimension": "minecraft:overworld",
         "xp": 46,
@@ -39005,7 +39005,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 41379743,
+    "time": 41391260,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -39029,6 +39029,11 @@
   "logs": {
     "log_date": "2026-09-08",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-09-08T12:03:37",
+        "logout_time": null
+      },
       {
         "player": "Kimyknot",
         "login_time": "2026-09-08T09:14:21",
@@ -39100,6 +39105,10 @@
         "endTime": "2026-09-08T08:42:51"
       },
       {
+        "startTime": "2026-09-08T10:12:27",
+        "endTime": "2026-09-08T12:03:37"
+      },
+      {
         "startTime": "2026-09-07T17:16:56",
         "endTime": "2026-09-07T17:25:15"
       },
@@ -39110,9 +39119,9 @@
     ]
   },
   "usercache": {
+    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
-    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
@@ -39121,5 +39130,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-08T16:00:00.804117+00:00"
+  "captured_at": "2026-09-08T16:15:01.109025+00:00"
 }
