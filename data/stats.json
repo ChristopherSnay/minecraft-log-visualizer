@@ -38980,6 +38980,11 @@
     "player_sessions": [
       {
         "player": "ZodiacalLight",
+        "login_time": "2026-09-07T20:11:11",
+        "logout_time": null
+      },
+      {
+        "player": "ZodiacalLight",
         "login_time": "2026-09-07T17:25:15",
         "logout_time": "2026-09-07T18:07:21"
       },
@@ -39022,20 +39027,9 @@
         "player": "ZodiacalLight",
         "login_time": "2026-09-07T00:16:43",
         "logout_time": "2026-09-07T00:57:06"
-      },
-      {
-        "player": "ZodiacalLight",
-        "login_time": "2026-09-06T23:36:43",
-        "logout_time": "2026-09-07T00:11:21"
       }
     ],
     "deaths": [
-      {
-        "player": "Villager",
-        "message": "Fisherman was impaled by Drowned",
-        "timestamp": "2026-09-07T00:06:52",
-        "entity_type": "Villager"
-      },
       {
         "player": "Villager",
         "message": "Villager hit the ground too hard",
@@ -39058,10 +39052,6 @@
     "crashes": [],
     "server_sessions": [
       {
-        "startTime": "2026-09-07T00:12:21",
-        "endTime": "2026-09-07T00:16:43"
-      },
-      {
         "startTime": "2026-09-07T00:58:06",
         "endTime": "2026-09-07T09:32:11"
       },
@@ -39080,6 +39070,10 @@
       {
         "startTime": "2026-09-07T17:16:56",
         "endTime": "2026-09-07T17:25:15"
+      },
+      {
+        "startTime": "2026-09-07T18:08:21",
+        "endTime": "2026-09-07T20:11:11"
       }
     ]
   },
@@ -39095,5 +39089,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-07T23:45:01.189902+00:00"
+  "captured_at": "2026-09-08T00:15:01.266179+00:00"
 }
