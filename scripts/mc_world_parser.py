@@ -122,17 +122,18 @@ def main():
     output_path = os.path.join(output_dir, "stats.json")
     write_json(output_path, world)
 
-    # Write timestamped backup
-    backup_dir = os.path.join("data", "backups")
-    os.makedirs(backup_dir, exist_ok=True)
-
-    ts = captured_at.replace(":", "-").replace("+", "-").replace(".", "-")
-    backup_path = os.path.join(backup_dir, f"stats-{ts}.zip")
-    with zipfile.ZipFile(backup_path, "w", zipfile.ZIP_DEFLATED) as zf:
-        zf.writestr("stats.json", json.dumps(world, indent=2))
-
     print(f"Generated {output_path}")
-    print(f"Backup  {backup_path}")
+
+    if os.getenv("STORE_BACKUPS", "true").lower() in ("true", "1", "yes"):
+        backup_dir = os.path.join("data", "backups")
+        os.makedirs(backup_dir, exist_ok=True)
+
+        ts = captured_at.replace(":", "-").replace("+", "-").replace(".", "-")
+        backup_path = os.path.join(backup_dir, f"stats-{ts}.zip")
+        with zipfile.ZipFile(backup_path, "w", zipfile.ZIP_DEFLATED) as zf:
+            zf.writestr("stats.json", json.dumps(world, indent=2))
+
+        print(f"Backup  {backup_path}")
 
 
 load_dotenv()
