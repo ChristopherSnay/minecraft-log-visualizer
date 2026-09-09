@@ -1047,7 +1047,7 @@
           "minecraft:polished_deepslate": 150,
           "minecraft:dark_oak_log": 124,
           "minecraft:copper_hoe": 4,
-          "minecraft:firework_rocket": 5265,
+          "minecraft:firework_rocket": 5267,
           "minecraft:tnt": 272,
           "minecraft:waxed_copper_block": 536,
           "minecraft:warped_hyphae": 11,
@@ -1275,15 +1275,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 482206,
+          "minecraft:time_since_rest": 500206,
           "minecraft:leave_game": 445,
           "minecraft:boat_one_cm": 3514846,
           "minecraft:damage_absorbed": 836,
-          "minecraft:time_since_death": 3443742,
-          "minecraft:aviate_one_cm": 104909531,
+          "minecraft:time_since_death": 3461742,
+          "minecraft:aviate_one_cm": 104942395,
           "minecraft:interact_with_furnace": 1443,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 20986217,
+          "minecraft:total_world_time": 21004217,
           "minecraft:crouch_one_cm": 2208770,
           "minecraft:climb_one_cm": 490698,
           "minecraft:raid_win": 25,
@@ -1296,17 +1296,17 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 1140,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 26761631,
+          "minecraft:walk_one_cm": 26762367,
           "minecraft:walk_under_water_one_cm": 3300901,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1335305,
-          "minecraft:play_time": 20986217,
-          "minecraft:jump": 112192,
+          "minecraft:play_time": 21004217,
+          "minecraft:jump": 112199,
           "minecraft:play_record": 13,
           "minecraft:target_hit": 36,
-          "minecraft:sprint_one_cm": 83061879,
+          "minecraft:sprint_one_cm": 83064113,
           "minecraft:inspect_hopper": 69,
-          "minecraft:fly_one_cm": 11766040,
+          "minecraft:fly_one_cm": 11766245,
           "minecraft:walk_on_water_one_cm": 1251524,
           "minecraft:interact_with_grindstone": 13,
           "minecraft:talked_to_villager": 2056,
@@ -1329,9 +1329,9 @@
           "minecraft:bell_ring": 48,
           "minecraft:open_barrel": 202,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 14552,
+          "minecraft:open_chest": 14555,
           "minecraft:interact_with_smoker": 2,
-          "minecraft:fall_one_cm": 2623285,
+          "minecraft:fall_one_cm": 2623585,
           "minecraft:interact_with_anvil": 288,
           "minecraft:sneak_time": 678895,
           "minecraft:raid_trigger": 26
@@ -7141,14 +7141,14 @@
           }
         ],
         "position": [
-          -97.67181993738456,
+          -97.54285914441684,
           205.0,
-          -345.6076619918236
+          -345.17829677731316
         ],
         "dimension": "minecraft:overworld",
         "xp": 36,
         "health": 20.0,
-        "food": 20,
+        "food": 19,
         "saturation": 0.0,
         "inventory": [
           {
@@ -7192,7 +7192,31 @@
             "count": 1
           },
           {
+            "id": "minecraft:gunpowder",
+            "count": 1
+          },
+          {
             "id": "minecraft:trident",
+            "count": 1
+          },
+          {
+            "id": "minecraft:gunpowder",
+            "count": 1
+          },
+          {
+            "id": "minecraft:gunpowder",
+            "count": 1
+          },
+          {
+            "id": "minecraft:gunpowder",
+            "count": 1
+          },
+          {
+            "id": "minecraft:gunpowder",
+            "count": 1
+          },
+          {
+            "id": "minecraft:gunpowder",
             "count": 1
           },
           {
@@ -38978,7 +39002,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 41769260,
+    "time": 41787260,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -39132,5 +39156,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-09T01:45:01.035945+00:00"
+  "captured_at": "2026-09-09T02:00:01.037491+00:00"
 }
