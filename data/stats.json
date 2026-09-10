@@ -1050,7 +1050,7 @@
           "minecraft:polished_deepslate": 150,
           "minecraft:dark_oak_log": 124,
           "minecraft:copper_hoe": 4,
-          "minecraft:firework_rocket": 5522,
+          "minecraft:firework_rocket": 5525,
           "minecraft:tnt": 272,
           "minecraft:waxed_copper_block": 536,
           "minecraft:warped_hyphae": 11,
@@ -1278,15 +1278,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 3847,
-          "minecraft:leave_game": 458,
+          "minecraft:time_since_rest": 4407,
+          "minecraft:leave_game": 459,
           "minecraft:boat_one_cm": 3514846,
           "minecraft:damage_absorbed": 836,
-          "minecraft:time_since_death": 4001956,
-          "minecraft:aviate_one_cm": 111405694,
+          "minecraft:time_since_death": 4002516,
+          "minecraft:aviate_one_cm": 111457557,
           "minecraft:interact_with_furnace": 1542,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 21544431,
+          "minecraft:total_world_time": 21544991,
           "minecraft:crouch_one_cm": 3002641,
           "minecraft:climb_one_cm": 500404,
           "minecraft:raid_win": 27,
@@ -1299,12 +1299,12 @@
           "minecraft:damage_blocked_by_shield": 288,
           "minecraft:interact_with_crafting_table": 1159,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 27211395,
+          "minecraft:walk_one_cm": 27211705,
           "minecraft:walk_under_water_one_cm": 3380176,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1344514,
-          "minecraft:play_time": 21544431,
-          "minecraft:jump": 116038,
+          "minecraft:play_time": 21544991,
+          "minecraft:jump": 116041,
           "minecraft:play_record": 14,
           "minecraft:target_hit": 36,
           "minecraft:sprint_one_cm": 84114928,
@@ -7169,9 +7169,9 @@
           }
         ],
         "position": [
-          -84.78452263237024,
-          78.0,
-          -345.6202391717334
+          -4.300000011920929,
+          72.0,
+          -101.96183602543482
         ],
         "dimension": "minecraft:overworld",
         "xp": 40,
@@ -39193,6 +39193,11 @@
     "player_sessions": [
       {
         "player": "ZodiacalLight",
+        "login_time": "2026-09-10T13:29:07",
+        "logout_time": "2026-09-10T13:29:35"
+      },
+      {
+        "player": "ZodiacalLight",
         "login_time": "2026-09-10T11:20:36",
         "logout_time": "2026-09-10T11:27:19"
       },
@@ -39269,6 +39274,10 @@
         "endTime": "2026-09-10T11:20:36"
       },
       {
+        "startTime": "2026-09-10T11:28:19",
+        "endTime": "2026-09-10T13:29:07"
+      },
+      {
         "startTime": "2026-09-09T21:14:07",
         "endTime": "2026-09-09T23:31:29"
       }
@@ -39286,5 +39295,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-10T17:15:01.280610+00:00"
+  "captured_at": "2026-09-10T17:30:01.363832+00:00"
 }
