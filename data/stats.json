@@ -598,6 +598,7 @@
           "minecraft:chiseled_stone_bricks": 22,
           "minecraft:iron_leggings": 6,
           "minecraft:stone_sword": 3,
+          "minecraft:wooden_axe": 5,
           "minecraft:firework_rocket": 10518,
           "minecraft:mace": 1,
           "minecraft:copper_leggings": 2,
@@ -1057,7 +1058,7 @@
           "minecraft:polished_deepslate": 150,
           "minecraft:dark_oak_log": 124,
           "minecraft:copper_hoe": 4,
-          "minecraft:firework_rocket": 5746,
+          "minecraft:firework_rocket": 5749,
           "minecraft:tnt": 272,
           "minecraft:waxed_copper_block": 536,
           "minecraft:warped_hyphae": 11,
@@ -1138,7 +1139,7 @@
           "minecraft:orange_wool": 46,
           "minecraft:netherrack": 2390,
           "minecraft:acacia_planks": 1,
-          "minecraft:yellow_bed": 17,
+          "minecraft:yellow_bed": 18,
           "minecraft:diamond_shovel": 23893,
           "minecraft:dried_ghast": 7,
           "minecraft:deepslate_diamond_ore": 96,
@@ -1285,15 +1286,15 @@
           "minecraft:camel_husk": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 76689,
+          "minecraft:time_since_rest": 1669,
           "minecraft:leave_game": 466,
           "minecraft:boat_one_cm": 3515748,
           "minecraft:damage_absorbed": 836,
-          "minecraft:time_since_death": 4405675,
-          "minecraft:aviate_one_cm": 116493538,
+          "minecraft:time_since_death": 4411675,
+          "minecraft:aviate_one_cm": 116555143,
           "minecraft:interact_with_furnace": 1542,
           "minecraft:happy_ghast_one_cm": 52717855,
-          "minecraft:total_world_time": 21948150,
+          "minecraft:total_world_time": 21954150,
           "minecraft:crouch_one_cm": 3618877,
           "minecraft:climb_one_cm": 504795,
           "minecraft:raid_win": 28,
@@ -1304,20 +1305,20 @@
           "minecraft:traded_with_villager": 3840,
           "minecraft:damage_resisted": 98,
           "minecraft:damage_blocked_by_shield": 288,
-          "minecraft:interact_with_crafting_table": 1171,
+          "minecraft:interact_with_crafting_table": 1172,
           "minecraft:inspect_dropper": 3,
-          "minecraft:walk_one_cm": 27789689,
-          "minecraft:walk_under_water_one_cm": 3416552,
+          "minecraft:walk_one_cm": 27799201,
+          "minecraft:walk_under_water_one_cm": 3418855,
           "minecraft:horse_one_cm": 1190386,
           "minecraft:damage_dealt": 1353232,
-          "minecraft:play_time": 21948150,
-          "minecraft:jump": 119462,
+          "minecraft:play_time": 21954150,
+          "minecraft:jump": 119472,
           "minecraft:play_record": 15,
           "minecraft:target_hit": 36,
-          "minecraft:sprint_one_cm": 84889870,
+          "minecraft:sprint_one_cm": 84897298,
           "minecraft:inspect_hopper": 69,
-          "minecraft:fly_one_cm": 12019715,
-          "minecraft:walk_on_water_one_cm": 1299464,
+          "minecraft:fly_one_cm": 12020322,
+          "minecraft:walk_on_water_one_cm": 1299576,
           "minecraft:interact_with_grindstone": 13,
           "minecraft:talked_to_villager": 2144,
           "minecraft:mob_kills": 18244,
@@ -1327,12 +1328,12 @@
           "minecraft:open_enderchest": 878,
           "minecraft:interact_with_brewingstand": 126,
           "minecraft:interact_with_smithing_table": 30,
-          "minecraft:sleep_in_bed": 572,
+          "minecraft:sleep_in_bed": 573,
           "minecraft:inspect_dispenser": 184,
           "minecraft:swim_one_cm": 2034387,
           "minecraft:pot_flower": 8,
           "minecraft:player_kills": 11,
-          "minecraft:enchant_item": 86,
+          "minecraft:enchant_item": 91,
           "minecraft:interact_with_loom": 1,
           "minecraft:play_noteblock": 6,
           "minecraft:drop": 5243,
@@ -1340,7 +1341,7 @@
           "minecraft:bell_ring": 48,
           "minecraft:open_barrel": 202,
           "minecraft:interact_with_cartography_table": 1,
-          "minecraft:open_chest": 15222,
+          "minecraft:open_chest": 15234,
           "minecraft:interact_with_smoker": 2,
           "minecraft:fall_one_cm": 2956097,
           "minecraft:interact_with_anvil": 296,
@@ -7189,14 +7190,14 @@
           }
         ],
         "position": [
-          -95.85566528939076,
-          98.0,
-          84.6263212369026
+          -1.925000011920929,
+          72.0,
+          -129.50496730862358
         ],
         "dimension": "minecraft:overworld",
-        "xp": 53,
+        "xp": 44,
         "health": 19.200000762939453,
-        "food": 13,
+        "food": 11,
         "saturation": 0.0,
         "inventory": [
           {
@@ -7212,11 +7213,11 @@
             "count": 1
           },
           {
-            "id": "minecraft:clay",
+            "id": "minecraft:firework_rocket",
             "count": 1
           },
           {
-            "id": "minecraft:firework_rocket",
+            "id": "minecraft:stick",
             "count": 1
           },
           {
@@ -7224,19 +7225,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:lead",
-            "count": 1
-          },
-          {
             "id": "minecraft:ender_chest",
             "count": 1
           },
           {
-            "id": "minecraft:dark_oak_planks",
+            "id": "minecraft:diamond_axe",
             "count": 1
           },
           {
-            "id": "minecraft:wheat_seeds",
+            "id": "minecraft:diamond_axe",
             "count": 1
           },
           {
@@ -7244,15 +7241,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:dark_oak_boat",
-            "count": 1
-          },
-          {
             "id": "minecraft:shulker_box",
             "count": 1
           },
           {
             "id": "minecraft:shulker_box",
+            "count": 1
+          },
+          {
+            "id": "minecraft:emerald_block",
             "count": 1
           },
           {
@@ -7260,39 +7257,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:cooked_beef",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dark_oak_door",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dark_oak_boat",
-            "count": 1
-          },
-          {
             "id": "minecraft:shulker_box",
             "count": 1
           },
           {
-            "id": "minecraft:dark_oak_planks",
-            "count": 1
-          },
-          {
-            "id": "minecraft:cooked_chicken",
-            "count": 1
-          },
-          {
-            "id": "minecraft:yellow_bed",
+            "id": "minecraft:book",
             "count": 1
           },
           {
             "id": "minecraft:golden_carrot",
-            "count": 1
-          },
-          {
-            "id": "minecraft:dark_oak_door",
             "count": 1
           },
           {
@@ -39134,7 +39107,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 43181360,
+    "time": 43191260,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -39158,6 +39131,11 @@
   "logs": {
     "log_date": "2026-09-11",
     "player_sessions": [
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-09-11T14:50:55",
+        "logout_time": null
+      },
       {
         "player": "Drewyknot",
         "login_time": "2026-09-11T09:07:16",
@@ -39205,12 +39183,6 @@
       }
     ],
     "deaths": [
-      {
-        "player": "Villager",
-        "message": "Villager hit the ground too hard",
-        "timestamp": "2026-09-10T18:50:14",
-        "entity_type": "Villager"
-      },
       {
         "player": "Villager",
         "message": "Villager was impaled by ZodiacalLight",
@@ -39282,6 +39254,10 @@
         "endTime": "2026-09-11T08:58:34"
       },
       {
+        "startTime": "2026-09-11T10:24:13",
+        "endTime": "2026-09-11T14:50:55"
+      },
+      {
         "startTime": "2026-09-10T19:52:31",
         "endTime": "2026-09-10T20:09:52"
       },
@@ -39296,9 +39272,9 @@
     ]
   },
   "usercache": {
+    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "f84c6a79-0a4e-45e0-879b-cd49ebd4c4e2": "Herobrine",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
-    "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "39699a64-ec67-4e61-8b28-bf0a0a48cdf8": "R3B3X",
@@ -39308,5 +39284,5 @@
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-11T18:45:03.607201+00:00"
+  "captured_at": "2026-09-11T19:00:01.906067+00:00"
 }
