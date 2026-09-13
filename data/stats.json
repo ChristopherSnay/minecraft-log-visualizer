@@ -39303,117 +39303,185 @@
     }
   },
   "logs": {
-    "log_date": "2026-09-12",
+    "log_date": "2026-09-13",
     "player_sessions": [
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-12T22:25:28",
-        "logout_time": "2026-09-12T23:28:02"
+        "login_time": "2026-09-13T22:25:28",
+        "logout_time": "2026-09-13T23:28:02"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-12T22:10:09",
-        "logout_time": "2026-09-12T22:11:31"
+        "login_time": "2026-09-13T22:10:09",
+        "logout_time": "2026-09-13T22:11:31"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-12T22:03:59",
-        "logout_time": "2026-09-12T22:09:52"
+        "login_time": "2026-09-13T22:03:59",
+        "logout_time": "2026-09-13T22:09:52"
       },
       {
         "player": "Kimyknot",
-        "login_time": "2026-09-12T19:46:59",
-        "logout_time": "2026-09-12T19:49:48"
+        "login_time": "2026-09-13T19:46:59",
+        "logout_time": "2026-09-13T19:49:48"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-12T18:56:23",
-        "logout_time": "2026-09-12T19:34:21"
+        "login_time": "2026-09-13T18:56:23",
+        "logout_time": "2026-09-13T19:34:21"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-12T17:58:31",
-        "logout_time": "2026-09-12T18:39:55"
+        "login_time": "2026-09-13T17:58:31",
+        "logout_time": "2026-09-13T18:39:55"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-12T12:42:42",
-        "logout_time": "2026-09-12T13:23:30"
+        "login_time": "2026-09-13T12:42:42",
+        "logout_time": "2026-09-13T13:23:30"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-12T10:35:08",
-        "logout_time": "2026-09-12T10:41:53"
+        "login_time": "2026-09-13T10:35:08",
+        "logout_time": "2026-09-13T10:41:53"
       },
       {
         "player": "ZodiacalLight",
-        "login_time": "2026-09-12T10:21:57",
-        "logout_time": "2026-09-12T10:34:46"
+        "login_time": "2026-09-13T10:21:57",
+        "logout_time": "2026-09-13T10:34:46"
+      },
+      {
+        "player": "Spenc4r_",
+        "login_time": "2026-09-13T01:11:18",
+        "logout_time": "2026-09-13T01:39:26"
+      },
+      {
+        "player": "ZodiacalLight",
+        "login_time": "2026-09-13T00:46:24",
+        "logout_time": "2026-09-13T01:39:22"
       }
     ],
     "deaths": [
       {
         "player": "Villager",
+        "message": "Villager hit the ground too hard",
+        "timestamp": "2026-09-13T00:51:14",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
         "message": "Villager was slain by ZodiacalLight",
-        "timestamp": "2026-09-12T13:02:41",
+        "timestamp": "2026-09-13T01:06:41",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Butcher was slain by Drowned",
+        "timestamp": "2026-09-13T01:16:27",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager was slain by Drowned",
+        "timestamp": "2026-09-13T01:17:51",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager was slain by Trader Llama",
+        "timestamp": "2026-09-13T01:18:21",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager was slain by Trader Llama",
+        "timestamp": "2026-09-13T01:18:41",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager was slain by Drowned",
+        "timestamp": "2026-09-13T01:21:26",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager was slain by Drowned",
+        "timestamp": "2026-09-13T01:22:00",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager was slain by ZodiacalLight",
+        "timestamp": "2026-09-13T01:22:07",
+        "entity_type": "Villager"
+      },
+      {
+        "player": "Villager",
+        "message": "Villager was slain by ZodiacalLight",
+        "timestamp": "2026-09-13T13:02:41",
         "entity_type": "Villager"
       },
       {
         "player": "Villager",
         "message": "Mason was impaled by Drowned",
-        "timestamp": "2026-09-12T18:06:45",
+        "timestamp": "2026-09-13T18:06:45",
         "entity_type": "Villager"
       },
       {
         "player": "Villager",
         "message": "Farmer was burned to a crisp while fighting Zombie",
-        "timestamp": "2026-09-12T22:30:54",
+        "timestamp": "2026-09-13T22:30:54",
         "entity_type": "Villager"
       },
       {
         "player": "Villager",
         "message": "Fisherman was impaled by Drowned",
-        "timestamp": "2026-09-12T23:25:47",
+        "timestamp": "2026-09-13T23:25:47",
         "entity_type": "Villager"
       },
       {
         "player": "Villager",
         "message": "Villager was impaled by ZodiacalLight",
-        "timestamp": "2026-09-12T23:27:51",
+        "timestamp": "2026-09-13T23:27:51",
         "entity_type": "Villager"
       },
       {
         "player": "Villager",
         "message": "Villager was slain by ZodiacalLight",
-        "timestamp": "2026-09-12T23:27:56",
+        "timestamp": "2026-09-13T23:27:56",
         "entity_type": "Villager"
       }
     ],
     "crashes": [],
     "server_sessions": [
       {
-        "startTime": "2026-09-12T10:42:53",
-        "endTime": "2026-09-12T12:42:42"
+        "startTime": "2026-09-13T01:40:26",
+        "endTime": "2026-09-13T10:21:57"
       },
       {
-        "startTime": "2026-09-12T13:24:30",
-        "endTime": "2026-09-12T17:58:31"
+        "startTime": "2026-09-13T10:42:53",
+        "endTime": "2026-09-13T12:42:42"
       },
       {
-        "startTime": "2026-09-12T18:40:55",
-        "endTime": "2026-09-12T18:56:23"
+        "startTime": "2026-09-13T13:24:30",
+        "endTime": "2026-09-13T17:58:31"
       },
       {
-        "startTime": "2026-09-12T19:35:21",
-        "endTime": "2026-09-12T19:46:59"
+        "startTime": "2026-09-13T18:40:55",
+        "endTime": "2026-09-13T18:56:23"
       },
       {
-        "startTime": "2026-09-12T19:50:48",
-        "endTime": "2026-09-12T22:03:59"
+        "startTime": "2026-09-13T19:35:21",
+        "endTime": "2026-09-13T19:46:59"
       },
       {
-        "startTime": "2026-09-12T22:12:31",
-        "endTime": "2026-09-12T22:25:28"
+        "startTime": "2026-09-13T19:50:48",
+        "endTime": "2026-09-13T22:03:59"
+      },
+      {
+        "startTime": "2026-09-13T22:12:31",
+        "endTime": "2026-09-13T22:25:28"
       }
     ]
   },
@@ -39430,5 +39498,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-13T03:30:00.968000+00:00"
+  "captured_at": "2026-09-13T04:00:01.323878+00:00"
 }
