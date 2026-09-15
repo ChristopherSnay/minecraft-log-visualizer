@@ -30235,14 +30235,14 @@
           "minecraft:ghast": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 5421,
+          "minecraft:time_since_rest": 597,
           "minecraft:leave_game": 236,
           "minecraft:boat_one_cm": 2859361,
-          "minecraft:time_since_death": 50210,
+          "minecraft:time_since_death": 62210,
           "minecraft:aviate_one_cm": 16329771,
           "minecraft:interact_with_furnace": 341,
           "minecraft:happy_ghast_one_cm": 21073,
-          "minecraft:total_world_time": 16982251,
+          "minecraft:total_world_time": 16994251,
           "minecraft:crouch_one_cm": 51833,
           "minecraft:climb_one_cm": 209992,
           "minecraft:raid_win": 2,
@@ -30252,12 +30252,12 @@
           "minecraft:animals_bred": 299,
           "minecraft:traded_with_villager": 1338,
           "minecraft:interact_with_crafting_table": 1231,
-          "minecraft:walk_one_cm": 69650631,
+          "minecraft:walk_one_cm": 69676734,
           "minecraft:walk_under_water_one_cm": 2075070,
           "minecraft:horse_one_cm": 23316798,
           "minecraft:damage_dealt": 213966,
-          "minecraft:play_time": 16982251,
-          "minecraft:jump": 80666,
+          "minecraft:play_time": 16994251,
+          "minecraft:jump": 80676,
           "minecraft:play_record": 7,
           "minecraft:sprint_one_cm": 19765983,
           "minecraft:fill_cauldron": 10,
@@ -30273,7 +30273,7 @@
           "minecraft:open_enderchest": 12,
           "minecraft:interact_with_brewingstand": 3,
           "minecraft:interact_with_smithing_table": 2,
-          "minecraft:sleep_in_bed": 1019,
+          "minecraft:sleep_in_bed": 1020,
           "minecraft:swim_one_cm": 349255,
           "minecraft:pot_flower": 64,
           "minecraft:enchant_item": 15,
@@ -30282,7 +30282,7 @@
           "minecraft:use_cauldron": 2,
           "minecraft:bell_ring": 1,
           "minecraft:open_barrel": 1787,
-          "minecraft:open_chest": 5085,
+          "minecraft:open_chest": 5095,
           "minecraft:interact_with_smoker": 6,
           "minecraft:fall_one_cm": 682254,
           "minecraft:tune_noteblock": 3,
@@ -34785,9 +34785,9 @@
           }
         ],
         "position": [
-          -289.9706819632302,
+          -289.95395597200354,
           67.0,
-          -180.20297867113808
+          -182.01644797047476
         ],
         "dimension": "minecraft:overworld",
         "xp": 0,
@@ -34800,11 +34800,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:dirt",
-            "count": 1
-          },
-          {
-            "id": "minecraft:diamond_axe",
+            "id": "minecraft:azalea",
             "count": 1
           },
           {
@@ -34812,11 +34808,23 @@
             "count": 1
           },
           {
-            "id": "minecraft:oak_trapdoor",
+            "id": "minecraft:azalea",
+            "count": 1
+          },
+          {
+            "id": "minecraft:azalea",
+            "count": 1
+          },
+          {
+            "id": "minecraft:azalea",
             "count": 1
           },
           {
             "id": "minecraft:dirt",
+            "count": 1
+          },
+          {
+            "id": "minecraft:oak_trapdoor",
             "count": 1
           },
           {
@@ -34848,11 +34856,15 @@
             "count": 1
           },
           {
-            "id": "minecraft:black_carpet",
+            "id": "minecraft:diamond_axe",
             "count": 1
           },
           {
             "id": "minecraft:diamond_hoe",
+            "count": 1
+          },
+          {
+            "id": "minecraft:azalea",
             "count": 1
           },
           {
@@ -34876,11 +34888,15 @@
             "count": 1
           },
           {
+            "id": "minecraft:dirt",
+            "count": 1
+          },
+          {
             "id": "minecraft:firework_rocket",
             "count": 1
           },
           {
-            "id": "minecraft:apple",
+            "id": "minecraft:azalea",
             "count": 1
           },
           {
@@ -34897,6 +34913,10 @@
           },
           {
             "id": "minecraft:scaffolding",
+            "count": 1
+          },
+          {
+            "id": "minecraft:slime_ball",
             "count": 1
           },
           {
@@ -39390,7 +39410,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 44536878,
+    "time": 44548806,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -39414,6 +39434,11 @@
   "logs": {
     "log_date": "2026-09-15",
     "player_sessions": [
+      {
+        "player": "Kimyknot",
+        "login_time": "2026-09-15T08:19:00",
+        "logout_time": null
+      },
       {
         "player": "Drewyknot",
         "login_time": "2026-09-15T06:55:44",
@@ -39475,6 +39500,10 @@
     "crashes": [],
     "server_sessions": [
       {
+        "startTime": "2026-09-15T07:21:37",
+        "endTime": "2026-09-15T08:19:00"
+      },
+      {
         "startTime": "2026-09-14T13:43:21",
         "endTime": "2026-09-14T16:03:18"
       },
@@ -39493,9 +39522,9 @@
     ]
   },
   "usercache": {
+    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
-    "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
     "2ab43fb9-fb1d-474c-ba3d-725082f0d9c7": "PnelloP",
     "9e59c850-a01c-40e4-bf9c-141d139651e4": "Crazy_brosik",
@@ -39505,5 +39534,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-15T12:15:00.835468+00:00"
+  "captured_at": "2026-09-15T12:30:00.946842+00:00"
 }
