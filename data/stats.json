@@ -29668,7 +29668,7 @@
           "minecraft:cherry_stairs": 20,
           "minecraft:hay_block": 33,
           "minecraft:mangrove_door": 2,
-          "minecraft:white_bed": 147,
+          "minecraft:white_bed": 148,
           "minecraft:smoker": 10,
           "minecraft:cherry_sapling": 1,
           "minecraft:pitcher_plant": 2,
@@ -29828,7 +29828,7 @@
           "minecraft:gold_ingot": 113,
           "minecraft:book": 59,
           "minecraft:iron_chestplate": 1,
-          "minecraft:glass_pane": 288,
+          "minecraft:glass_pane": 384,
           "minecraft:yellow_terracotta": 40,
           "minecraft:lever": 10,
           "minecraft:stone_bricks": 230,
@@ -29850,7 +29850,7 @@
           "minecraft:brown_dye": 5,
           "minecraft:diamond_shovel": 2,
           "minecraft:pale_oak_sign": 3,
-          "minecraft:glass": 1245,
+          "minecraft:glass": 1309,
           "minecraft:jungle_button": 4,
           "minecraft:jungle_door": 3,
           "minecraft:mossy_cobblestone": 9,
@@ -30070,7 +30070,7 @@
           "minecraft:black_carpet": 8,
           "minecraft:jungle_planks": 5,
           "minecraft:sea_pickle": 17,
-          "minecraft:glass_pane": 354,
+          "minecraft:glass_pane": 379,
           "minecraft:cooked_porkchop": 3,
           "minecraft:golden_chestplate": 1,
           "minecraft:iron_shovel": 1816,
@@ -30134,7 +30134,7 @@
           "minecraft:crimson_roots": 42,
           "minecraft:hopper": 25,
           "minecraft:carrot": 1150,
-          "minecraft:white_bed": 162,
+          "minecraft:white_bed": 163,
           "minecraft:tube_coral_block": 11,
           "minecraft:cyan_bed": 6,
           "minecraft:bell": 1,
@@ -30388,14 +30388,14 @@
           "minecraft:ghast": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 15025,
-          "minecraft:leave_game": 255,
+          "minecraft:time_since_rest": 2754,
+          "minecraft:leave_game": 256,
           "minecraft:boat_one_cm": 2944764,
-          "minecraft:time_since_death": 817449,
+          "minecraft:time_since_death": 820537,
           "minecraft:aviate_one_cm": 21756256,
-          "minecraft:interact_with_furnace": 394,
+          "minecraft:interact_with_furnace": 395,
           "minecraft:happy_ghast_one_cm": 21073,
-          "minecraft:total_world_time": 18174179,
+          "minecraft:total_world_time": 18177267,
           "minecraft:crouch_one_cm": 56480,
           "minecraft:climb_one_cm": 216867,
           "minecraft:raid_win": 4,
@@ -30404,13 +30404,13 @@
           "minecraft:fish_caught": 31,
           "minecraft:animals_bred": 300,
           "minecraft:traded_with_villager": 1366,
-          "minecraft:interact_with_crafting_table": 1328,
-          "minecraft:walk_one_cm": 74207553,
+          "minecraft:interact_with_crafting_table": 1329,
+          "minecraft:walk_one_cm": 74225115,
           "minecraft:walk_under_water_one_cm": 2179072,
           "minecraft:horse_one_cm": 23323246,
           "minecraft:damage_dealt": 282679,
-          "minecraft:play_time": 18174179,
-          "minecraft:jump": 84842,
+          "minecraft:play_time": 18177267,
+          "minecraft:jump": 84846,
           "minecraft:play_record": 8,
           "minecraft:sprint_one_cm": 20337789,
           "minecraft:fill_cauldron": 10,
@@ -30426,7 +30426,7 @@
           "minecraft:open_enderchest": 22,
           "minecraft:interact_with_brewingstand": 3,
           "minecraft:interact_with_smithing_table": 2,
-          "minecraft:sleep_in_bed": 1093,
+          "minecraft:sleep_in_bed": 1094,
           "minecraft:swim_one_cm": 350900,
           "minecraft:pot_flower": 85,
           "minecraft:enchant_item": 16,
@@ -30767,7 +30767,7 @@
           "minecraft:oak_fence_gate": 14,
           "minecraft:tripwire_hook": 3,
           "minecraft:mangrove_log": 142,
-          "minecraft:white_bed": 152,
+          "minecraft:white_bed": 153,
           "minecraft:fishing_rod": 1,
           "minecraft:stripped_oak_log": 40,
           "minecraft:bucket": 11,
@@ -35001,9 +35001,9 @@
           }
         ],
         "position": [
-          -87.85679162686745,
+          -89.55956718514244,
           67.0,
-          -166.96902261894508
+          -165.46754066174572
         ],
         "dimension": "minecraft:overworld",
         "xp": 18,
@@ -35013,6 +35013,10 @@
         "inventory": [
           {
             "id": "minecraft:firework_rocket",
+            "count": 1
+          },
+          {
+            "id": "minecraft:white_bed",
             "count": 1
           },
           {
@@ -35036,6 +35040,10 @@
             "count": 1
           },
           {
+            "id": "minecraft:glass_pane",
+            "count": 1
+          },
+          {
             "id": "minecraft:chest",
             "count": 1
           },
@@ -35045,10 +35053,6 @@
           },
           {
             "id": "minecraft:stick",
-            "count": 1
-          },
-          {
-            "id": "minecraft:white_bed",
             "count": 1
           },
           {
@@ -35076,6 +35080,10 @@
             "count": 1
           },
           {
+            "id": "minecraft:glass",
+            "count": 1
+          },
+          {
             "id": "minecraft:diamond_sword",
             "count": 1
           },
@@ -35097,6 +35105,10 @@
           },
           {
             "id": "minecraft:painting",
+            "count": 1
+          },
+          {
+            "id": "minecraft:glass_pane",
             "count": 1
           },
           {
@@ -39620,7 +39632,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 46417823,
+    "time": 46422111,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -39644,6 +39656,11 @@
   "logs": {
     "log_date": "2026-09-18",
     "player_sessions": [
+      {
+        "player": "Kimyknot",
+        "login_time": "2026-09-18T20:10:52",
+        "logout_time": "2026-09-18T20:13:26"
+      },
       {
         "player": "Kimyknot",
         "login_time": "2026-09-18T18:51:04",
@@ -39727,6 +39744,10 @@
       {
         "startTime": "2026-09-18T18:20:24",
         "endTime": "2026-09-18T18:51:04"
+      },
+      {
+        "startTime": "2026-09-18T19:49:18",
+        "endTime": "2026-09-18T20:10:52"
       }
     ]
   },
@@ -39743,5 +39764,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-19T00:00:01.792967+00:00"
+  "captured_at": "2026-09-19T00:15:01.994239+00:00"
 }
