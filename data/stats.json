@@ -7594,6 +7594,7 @@
           "minecraft:polished_diorite": 6,
           "minecraft:furnace": 3,
           "minecraft:bamboo_block": 29,
+          "minecraft:mangrove_trapdoor": 1,
           "minecraft:cracked_stone_bricks": 7,
           "minecraft:deepslate_coal_ore": 9,
           "minecraft:wildflowers": 52,
@@ -7665,7 +7666,7 @@
           "minecraft:short_dry_grass": 19,
           "minecraft:candle": 1,
           "minecraft:crimson_nylium": 100,
-          "minecraft:glow_lichen": 275,
+          "minecraft:glow_lichen": 278,
           "minecraft:dark_oak_fence": 14,
           "minecraft:powder_snow": 6,
           "minecraft:oak_stairs": 411,
@@ -7814,7 +7815,7 @@
           "minecraft:blast_furnace": 1,
           "minecraft:jungle_fence": 21,
           "minecraft:loom": 1,
-          "minecraft:mangrove_trapdoor": 18,
+          "minecraft:mangrove_trapdoor": 26,
           "minecraft:oak_button": 27,
           "minecraft:lapis_lazuli": 12,
           "minecraft:oak_planks": 3220,
@@ -7899,7 +7900,7 @@
           "minecraft:golden_hoe": 46,
           "minecraft:diorite_wall": 26,
           "minecraft:light_gray_bed": 151,
-          "minecraft:diamond_axe": 7530,
+          "minecraft:diamond_axe": 7531,
           "minecraft:white_carpet": 3,
           "minecraft:stripped_oak_log": 25,
           "minecraft:poppy": 3,
@@ -7949,7 +7950,7 @@
           "minecraft:dark_oak_log": 31,
           "minecraft:bamboo": 87,
           "minecraft:waxed_copper_block": 18,
-          "minecraft:firework_rocket": 784,
+          "minecraft:firework_rocket": 785,
           "minecraft:iron_sword": 209,
           "minecraft:tnt": 1,
           "minecraft:oak_boat": 19,
@@ -7980,7 +7981,7 @@
           "minecraft:bush": 433,
           "minecraft:baked_potato": 43,
           "minecraft:apple": 22,
-          "minecraft:scaffolding": 7942,
+          "minecraft:scaffolding": 7949,
           "minecraft:light_blue_banner": 3,
           "minecraft:moss_carpet": 1,
           "minecraft:red_banner": 16,
@@ -8111,7 +8112,7 @@
           "minecraft:diorite_stairs": 13,
           "minecraft:purple_bed": 1,
           "minecraft:packed_mud": 16,
-          "minecraft:mangrove_trapdoor": 18,
+          "minecraft:mangrove_trapdoor": 27,
           "minecraft:bookshelf": 15,
           "minecraft:diamond_pickaxe": 9126,
           "minecraft:orange_tulip": 4,
@@ -8135,7 +8136,7 @@
           "minecraft:carrot": 615,
           "minecraft:birch_boat": 5,
           "minecraft:copper_trapdoor": 84,
-          "minecraft:white_bed": 408,
+          "minecraft:white_bed": 409,
           "minecraft:oxidized_copper": 21,
           "minecraft:polished_diorite_slab": 23,
           "minecraft:cherry_wood": 360,
@@ -8198,25 +8199,25 @@
         },
         "custom_stats": {
           "minecraft:talked_to_villager": 518,
-          "minecraft:time_since_rest": 13291,
+          "minecraft:time_since_rest": 0,
           "minecraft:leave_game": 235,
           "minecraft:damage_taken": 18145,
           "minecraft:mob_kills": 1982,
           "minecraft:boat_one_cm": 1441196,
           "minecraft:open_shulker_box": 104,
           "minecraft:interact_with_beacon": 5,
-          "minecraft:time_since_death": 5005190,
-          "minecraft:aviate_one_cm": 24832792,
+          "minecraft:time_since_death": 5011190,
+          "minecraft:aviate_one_cm": 24869818,
           "minecraft:open_enderchest": 19,
           "minecraft:interact_with_furnace": 312,
           "minecraft:interact_with_smithing_table": 4,
-          "minecraft:sleep_in_bed": 781,
+          "minecraft:sleep_in_bed": 782,
           "minecraft:swim_one_cm": 6609,
-          "minecraft:total_world_time": 11967964,
+          "minecraft:total_world_time": 11973964,
           "minecraft:pot_flower": 1,
           "minecraft:crouch_one_cm": 115603,
           "minecraft:raid_win": 2,
-          "minecraft:climb_one_cm": 1857333,
+          "minecraft:climb_one_cm": 1858035,
           "minecraft:deaths": 3,
           "minecraft:interact_with_stonecutter": 52,
           "minecraft:fish_caught": 58,
@@ -8224,23 +8225,23 @@
           "minecraft:interact_with_loom": 10,
           "minecraft:animals_bred": 92,
           "minecraft:traded_with_villager": 876,
-          "minecraft:interact_with_crafting_table": 537,
-          "minecraft:walk_one_cm": 47961263,
+          "minecraft:interact_with_crafting_table": 538,
+          "minecraft:walk_one_cm": 47977528,
           "minecraft:walk_under_water_one_cm": 1224998,
           "minecraft:horse_one_cm": 1354636,
           "minecraft:damage_dealt": 229413,
-          "minecraft:play_time": 11967964,
-          "minecraft:jump": 88440,
+          "minecraft:play_time": 11973964,
+          "minecraft:jump": 88509,
           "minecraft:play_record": 2,
           "minecraft:drop": 1371,
           "minecraft:use_cauldron": 2,
           "minecraft:target_hit": 7,
           "minecraft:open_barrel": 92,
-          "minecraft:sprint_one_cm": 14974194,
+          "minecraft:sprint_one_cm": 14983620,
           "minecraft:open_chest": 4675,
           "minecraft:fill_cauldron": 1,
-          "minecraft:fall_one_cm": 882683,
-          "minecraft:fly_one_cm": 2798877,
+          "minecraft:fall_one_cm": 883783,
+          "minecraft:fly_one_cm": 2800686,
           "minecraft:interact_with_anvil": 49,
           "minecraft:walk_on_water_one_cm": 641172,
           "minecraft:sneak_time": 160291,
@@ -8266,6 +8267,7 @@
           "minecraft:blaze_rod": 4,
           "minecraft:emerald": 310,
           "minecraft:sugar": 4,
+          "minecraft:mangrove_trapdoor": 1,
           "minecraft:ink_sac": 52,
           "minecraft:crimson_fungus": 9,
           "minecraft:shroomlight": 2,
@@ -12478,6 +12480,10 @@
             "time": "2026-09-19 15:53:29 -0400"
           },
           {
+            "id": "minecraft:recipes/building_blocks/mangrove_wood",
+            "time": "2026-09-19 15:53:29 -0400"
+          },
+          {
             "id": "minecraft:recipes/building_blocks/mangrove_stairs",
             "time": "2026-09-19 15:58:10 -0400"
           },
@@ -12506,10 +12512,6 @@
             "time": "2026-09-19 15:58:10 -0400"
           },
           {
-            "id": "minecraft:recipes/building_blocks/mangrove_wood",
-            "time": "2026-09-19 15:53:29 -0400"
-          },
-          {
             "id": "minecraft:recipes/redstone/mangrove_button",
             "time": "2026-09-19 15:58:10 -0400"
           },
@@ -12519,20 +12521,16 @@
           }
         ],
         "position": [
-          -174.52259345653772,
-          78.0,
-          22.941253726865227
+          -293.5,
+          64.6875,
+          -328.5
         ],
         "dimension": "minecraft:overworld",
         "xp": 17,
         "health": 20.0,
-        "food": 20,
-        "saturation": 2.40000057220459,
+        "food": 19,
+        "saturation": 0.0,
         "inventory": [
-          {
-            "id": "minecraft:white_bed",
-            "count": 1
-          },
           {
             "id": "minecraft:diamond_pickaxe",
             "count": 1
@@ -12542,7 +12540,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:diamond_sword",
+            "id": "minecraft:diamond_axe",
             "count": 1
           },
           {
@@ -12602,10 +12600,6 @@
             "count": 1
           },
           {
-            "id": "minecraft:mangrove_planks",
-            "count": 1
-          },
-          {
             "id": "minecraft:birch_planks",
             "count": 1
           },
@@ -12614,7 +12608,7 @@
             "count": 1
           },
           {
-            "id": "minecraft:diamond_axe",
+            "id": "minecraft:diamond_sword",
             "count": 1
           },
           {
@@ -39638,7 +39632,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 46737066,
+    "time": 46739507,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -39663,85 +39657,44 @@
     "log_date": "2026-09-20",
     "player_sessions": [
       {
+        "player": "Drewyknot",
+        "login_time": "2026-09-20T07:54:49",
+        "logout_time": null
+      },
+      {
         "player": "BobEvansSausage",
-        "login_time": "2026-09-20T16:14:33",
-        "logout_time": "2026-09-20T16:24:20"
+        "login_time": "2026-09-19T16:14:33",
+        "logout_time": "2026-09-19T16:24:20"
       },
       {
         "player": "Drewyknot",
-        "login_time": "2026-09-20T15:47:41",
-        "logout_time": "2026-09-20T16:45:40"
+        "login_time": "2026-09-19T15:47:41",
+        "logout_time": "2026-09-19T16:45:40"
       },
       {
         "player": "Drewyknot",
-        "login_time": "2026-09-20T15:41:14",
-        "logout_time": "2026-09-20T15:46:37"
+        "login_time": "2026-09-19T15:41:14",
+        "logout_time": "2026-09-19T15:46:37"
       },
       {
         "player": "Kimyknot",
-        "login_time": "2026-09-20T15:19:28",
-        "logout_time": "2026-09-20T17:23:57"
-      },
-      {
-        "player": "Kimyknot",
-        "login_time": "2026-09-20T09:53:09",
-        "logout_time": "2026-09-20T10:05:15"
-      },
-      {
-        "player": "Kimyknot",
-        "login_time": "2026-09-20T08:46:03",
-        "logout_time": "2026-09-20T09:49:29"
-      },
-      {
-        "player": "Drewyknot",
-        "login_time": "2026-09-20T07:39:57",
-        "logout_time": "2026-09-20T08:33:59"
+        "login_time": "2026-09-19T15:19:28",
+        "logout_time": "2026-09-19T17:23:57"
       }
     ],
     "deaths": [
       {
-        "player": "Villager",
-        "message": "Farmer was slain by Zombie",
-        "timestamp": "2026-09-20T09:04:48",
-        "entity_type": "Villager"
-      },
-      {
-        "player": "Named",
-        "message": "Tanker was pricked to death",
-        "timestamp": "2026-09-20T09:17:06",
-        "entity_type": "Turtle"
-      },
-      {
-        "player": "Villager",
-        "message": "Villager hit the ground too hard",
-        "timestamp": "2026-09-20T09:35:37",
-        "entity_type": "Villager"
-      },
-      {
         "player": "BobEvansSausage",
         "message": "experienced kinetic energy",
-        "timestamp": "2026-09-20T16:21:54"
+        "timestamp": "2026-09-19T16:21:54"
       }
     ],
     "crashes": [],
-    "server_sessions": [
-      {
-        "startTime": "2026-09-20T08:34:59",
-        "endTime": "2026-09-20T08:46:03"
-      },
-      {
-        "startTime": "2026-09-20T09:50:29",
-        "endTime": "2026-09-20T09:53:09"
-      },
-      {
-        "startTime": "2026-09-20T10:06:15",
-        "endTime": "2026-09-20T15:19:28"
-      }
-    ]
+    "server_sessions": []
   },
   "usercache": {
-    "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "23b54c6c-93fc-463b-b62b-6edba1773641": "Drewyknot",
+    "b2b10ee0-e5c0-45c5-afa5-38fac4709d0c": "BobEvansSausage",
     "a8117cde-26b9-41f8-9605-7bfacbe62882": "Kimyknot",
     "1b8c8163-5bc3-4cef-b645-14cd33fa1125": "ZodiacalLight",
     "73e692ec-cc2e-4306-a40d-755b9781c7e1": "Spenc4r_",
@@ -39752,5 +39705,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-20T11:45:00.642938+00:00"
+  "captured_at": "2026-09-20T12:00:02.319574+00:00"
 }
