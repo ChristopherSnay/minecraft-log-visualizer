@@ -29478,7 +29478,7 @@
           "minecraft:sunflower": 58,
           "minecraft:light_blue_carpet": 1,
           "minecraft:weeping_vines": 3,
-          "minecraft:short_grass": 9966,
+          "minecraft:short_grass": 9973,
           "minecraft:red_mushroom": 12,
           "minecraft:potted_pale_oak_sapling": 1,
           "minecraft:mangrove_wall_sign": 1,
@@ -29626,7 +29626,7 @@
           "minecraft:packed_mud": 1,
           "minecraft:tall_seagrass": 37,
           "minecraft:rail": 126,
-          "minecraft:dirt": 8546,
+          "minecraft:dirt": 8554,
           "minecraft:cobblestone_wall": 13,
           "minecraft:hopper": 2,
           "minecraft:deepslate": 787,
@@ -29936,7 +29936,7 @@
           "minecraft:redstone_torch": 7,
           "minecraft:oak_button": 5,
           "minecraft:lapis_lazuli": 4,
-          "minecraft:oak_planks": 5446,
+          "minecraft:oak_planks": 5546,
           "minecraft:gold_nugget": 135,
           "minecraft:melon_seeds": 44,
           "minecraft:red_bed": 16,
@@ -30119,7 +30119,7 @@
           "minecraft:light_blue_carpet": 16,
           "minecraft:dark_oak_planks": 989,
           "minecraft:acacia_sapling": 22,
-          "minecraft:dirt": 20129,
+          "minecraft:dirt": 20133,
           "minecraft:compass": 1,
           "minecraft:magenta_bed": 3,
           "minecraft:glow_lichen": 16,
@@ -30174,7 +30174,7 @@
           "minecraft:cobblestone_slab": 79,
           "minecraft:copper_sword": 145,
           "minecraft:torchflower_seeds": 46,
-          "minecraft:green_bed": 101,
+          "minecraft:green_bed": 102,
           "minecraft:deepslate_brick_stairs": 5,
           "minecraft:oak_stairs": 316,
           "minecraft:frog_spawn_egg": 7,
@@ -30337,7 +30337,7 @@
           "minecraft:iron_trapdoor": 2,
           "minecraft:deepslate_tiles": 48,
           "minecraft:brain_coral": 5,
-          "minecraft:oak_planks": 1020,
+          "minecraft:oak_planks": 1034,
           "minecraft:sugar_cane": 149,
           "minecraft:warped_wart_block": 25,
           "minecraft:stone_axe": 1619,
@@ -30413,14 +30413,14 @@
           "minecraft:ghast": 1
         },
         "custom_stats": {
-          "minecraft:time_since_rest": 12437,
-          "minecraft:leave_game": 259,
+          "minecraft:time_since_rest": 3045,
+          "minecraft:leave_game": 260,
           "minecraft:boat_one_cm": 2944764,
-          "minecraft:time_since_death": 1114554,
+          "minecraft:time_since_death": 1119023,
           "minecraft:aviate_one_cm": 22401321,
           "minecraft:interact_with_furnace": 410,
           "minecraft:happy_ghast_one_cm": 21073,
-          "minecraft:total_world_time": 18471284,
+          "minecraft:total_world_time": 18475753,
           "minecraft:crouch_one_cm": 60093,
           "minecraft:climb_one_cm": 216867,
           "minecraft:raid_win": 4,
@@ -30429,18 +30429,18 @@
           "minecraft:fish_caught": 31,
           "minecraft:animals_bred": 300,
           "minecraft:traded_with_villager": 1366,
-          "minecraft:interact_with_crafting_table": 1351,
-          "minecraft:walk_one_cm": 75371125,
+          "minecraft:interact_with_crafting_table": 1352,
+          "minecraft:walk_one_cm": 75389040,
           "minecraft:walk_under_water_one_cm": 2188758,
           "minecraft:horse_one_cm": 23323246,
           "minecraft:damage_dealt": 292129,
-          "minecraft:play_time": 18471284,
-          "minecraft:jump": 85824,
+          "minecraft:play_time": 18475753,
+          "minecraft:jump": 85847,
           "minecraft:play_record": 8,
-          "minecraft:sprint_one_cm": 20362287,
+          "minecraft:sprint_one_cm": 20367150,
           "minecraft:fill_cauldron": 10,
           "minecraft:inspect_hopper": 7,
-          "minecraft:fly_one_cm": 2751173,
+          "minecraft:fly_one_cm": 2751647,
           "minecraft:walk_on_water_one_cm": 2126513,
           "minecraft:interact_with_blast_furnace": 3,
           "minecraft:interact_with_grindstone": 6,
@@ -30451,7 +30451,7 @@
           "minecraft:open_enderchest": 29,
           "minecraft:interact_with_brewingstand": 3,
           "minecraft:interact_with_smithing_table": 2,
-          "minecraft:sleep_in_bed": 1113,
+          "minecraft:sleep_in_bed": 1114,
           "minecraft:swim_one_cm": 350900,
           "minecraft:pot_flower": 85,
           "minecraft:enchant_item": 16,
@@ -30460,7 +30460,7 @@
           "minecraft:use_cauldron": 2,
           "minecraft:bell_ring": 1,
           "minecraft:open_barrel": 1790,
-          "minecraft:open_chest": 5717,
+          "minecraft:open_chest": 5719,
           "minecraft:interact_with_smoker": 6,
           "minecraft:fall_one_cm": 718197,
           "minecraft:tune_noteblock": 3,
@@ -30642,7 +30642,7 @@
           "minecraft:spruce_planks": 248,
           "minecraft:pale_oak_sign": 5,
           "minecraft:exposed_copper_bars": 14,
-          "minecraft:dirt": 23918,
+          "minecraft:dirt": 23926,
           "minecraft:cooked_rabbit": 1,
           "minecraft:bone_block": 403,
           "minecraft:torch": 659,
@@ -35027,14 +35027,14 @@
           }
         ],
         "position": [
-          -66.57703419644328,
-          71.0,
-          -175.20662308932646
+          -87.78603997429573,
+          75.0,
+          -175.94030369183372
         ],
         "dimension": "minecraft:overworld",
         "xp": 29,
         "health": 20.0,
-        "food": 16,
+        "food": 14,
         "saturation": 0.0,
         "inventory": [
           {
@@ -35159,6 +35159,10 @@
           },
           {
             "id": "minecraft:stick",
+            "count": 1
+          },
+          {
+            "id": "minecraft:oak_planks",
             "count": 1
           },
           {
@@ -39623,7 +39627,7 @@
     "game_mode": "survival",
     "difficulty": "normal",
     "hardcore": false,
-    "time": 46877507,
+    "time": 46884292,
     "day_time": 0,
     "raining": false,
     "thundering": false,
@@ -39650,7 +39654,7 @@
       {
         "player": "Kimyknot",
         "login_time": "2026-09-20T10:43:44",
-        "logout_time": null
+        "logout_time": "2026-09-20T11:32:28"
       },
       {
         "player": "ZodiacalLight",
@@ -39743,5 +39747,5 @@
     "5c94cc0f-5eb7-4575-9800-50dfcff783c8": "HappyPotato67",
     "2dc01a89-b021-4427-8c64-8636a5470518": "mr_evrything"
   },
-  "captured_at": "2026-09-20T15:30:01.047626+00:00"
+  "captured_at": "2026-09-20T15:45:00.736769+00:00"
 }
